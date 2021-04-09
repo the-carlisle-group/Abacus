@@ -11,7 +11,7 @@
      _←p Add'blah blah'
      b←p New'b' 'This is Bold.'
      _←p Add' More non bold text'
-     m←↑ConstructQuadXMLInput h
+     m←↑H.ConstructQuadXMLInput h
      x←⎕XML m
      m2←⎕XML x
      m≡¨4↑[1]m2
