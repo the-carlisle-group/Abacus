@@ -1,0 +1,10 @@
+ NewDocument←{
+     h←New'html'
+     h.Class←'HTMLDocument'
+     h.lang←'en'
+     hd←h New'head'
+     l←hd New'link'
+     mt←hd New'meta'
+     mt.charset←'utf-8'
+     h
+ }

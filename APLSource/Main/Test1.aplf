@@ -1,8 +1,5 @@
  Test1←{
-     H←##.Main
-     New←H.New
-     Add←H.Add
-     h←H.New'html'
+     h←New'html'
      h.att1←'Att1'
      h.att2←'Att2'
      h1←h New'h1' 'Header1'

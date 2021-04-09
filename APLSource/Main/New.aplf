@@ -1,0 +1,10 @@
+ New←{
+     ⍝ ⍺ ←→ [Parent]
+     ⍝ ⍵ ←→ Type [Content]
+     ⍝ ← ←→ Element
+     ⍺←0
+     s←IsString ⍵
+     t c←s⊃⍵(⍵'')
+     e←NewElement t
+     e⊣Add/⍺ e c
+ }

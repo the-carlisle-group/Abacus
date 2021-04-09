@@ -1,0 +1,9 @@
+ ComposeAttributes←{
+     n←⍵.⎕NL ¯2
+     k←~(⊃¨n)∊⎕A,'_'
+     ~∨/k:0 2⍴⊂''
+     m←k/n
+     v←⍵⍎¨m
+     p←'-'@('_'∘=)¨m
+     ⍉↑p v
+ }

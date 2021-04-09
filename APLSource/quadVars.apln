@@ -1,5 +1,5 @@
 :Namespace quadVars
-    ##.(⎕IO ⎕ML ⎕WX ⎕FR)←0 3 3 645
+    ##.(⎕IO ⎕ML ⎕WX ⎕FR)←0 1 3 645
 ⍝ This script was fixed by acre
 ⍝ it can be kept, cloned, renamed, amended or ]erased.
 ⍝ its purpose is to set the environment for the project.

@@ -1,0 +1,10 @@
+ Add←{
+     ⍝ ⍺ ←→ HTML Element
+     ⍝ ⍵ ←→ Additional Content
+     ⍝   ←→ ⍺
+     ⍺=0:⍺
+     0=≢⍵:⍺
+     c←ForceElement ⍵
+     ⍺.Content,←c
+     ⍺
+ }

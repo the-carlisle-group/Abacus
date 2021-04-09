@@ -1,0 +1,7 @@
+ Condense←{
+     w←⊃⍵
+     ⍺.Type≢'':⍺,⍵
+     w.Type≢'':⍺,⍵
+     ⍺.Content,←w.Content
+     ⍺,1↓⍵
+ }

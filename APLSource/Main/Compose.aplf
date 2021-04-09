@@ -1,0 +1,4 @@
+ Compose←{
+     v←ConstructQuadXMLInput ⍵
+     ⎕XML↑v
+ }
