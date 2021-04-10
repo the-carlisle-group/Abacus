@@ -1,6 +1,7 @@
  ForceElement←{
      ~IsString ⍵:⍵
      e←NewElement''
-     e.Content←⍵
+     ⍝ e.Content←⍵
+     e.Text←⍵
      e
  }

@@ -1,0 +1,8 @@
+ ElementsWhere←{
+     ⍝ ⍺ ←→ Element (or result of Elements ⍺)
+     ⍝ ⍵ ←→ attribute value
+     ⍝ ← ←→ elements where attribute is value
+     e←{1=⍴⍴⍵:⍵ ⋄ Elements ⍵}⍺
+     r←e{6::'' ⋄ ⍺⍎⍵}¨⍵[0]
+     e/⍨r∊⍵[1]
+ }

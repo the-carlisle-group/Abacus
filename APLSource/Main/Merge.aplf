@@ -1,0 +1,11 @@
+ Merge←{
+     ⍝ ⍺ ←→ Existing content
+     ⍝ ⍵ ←→ New content
+     ⍝ ← ←→ New content only if needed
+     ⍵.Type≢'':⍵
+     l←⊃⌽⍺
+     l=0:⍵
+     l.Type≢'':⍵
+     l.Text,←⍵.Text
+     ⍬
+ }

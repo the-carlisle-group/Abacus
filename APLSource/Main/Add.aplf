@@ -5,6 +5,7 @@
      ⍺=0:⍺
      0=≢⍵:⍺
      c←ForceElement ⍵
-     ⍺.Content,←c
+     n←⍺.Content Merge c
+     ⍺.Content,←n
      ⍺
  }

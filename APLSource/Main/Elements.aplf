@@ -1,0 +1,5 @@
+ Elements←{
+     ⍝ ⍵ ←→ Element
+     ⍝ ← ←→ Vector of ⍵ and all sub elements
+     ⍬,trav{⍵.Content}⍵
+ }

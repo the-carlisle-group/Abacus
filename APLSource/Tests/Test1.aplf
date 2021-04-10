@@ -6,11 +6,15 @@
      h.att1←'Att1'
      h.att2←'Att2'
      h1←h New'h1' 'Header1'
+     h1.class←'c1'
      p←h New'p' 'blah'
      p.class←'c1'
      _←p Add'blah blah'
      b←p New'b' 'This is Bold.'
      _←p Add' More non bold text'
+     e←H.Elements h
+     c1←h H.ElementsWhere'class' 'c1'
+     type←h H.ElementsWhere'Type' 'h1'
      m←↑H.ConstructQuadXMLInput h
      x←⎕XML m
      m2←⎕XML x

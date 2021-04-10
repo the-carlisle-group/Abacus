@@ -2,6 +2,6 @@
      w←⊃⍵
      ⍺.Type≢'':⍺,⍵
      w.Type≢'':⍺,⍵
-     ⍺.Content,←w.Content
+     ⍺.Text,←w.Text
      ⍺,1↓⍵
  }
