@@ -6,6 +6,7 @@
      h.att1←'Att1'
      h.att2←'Att2'
      h1←h New'h1' 'Header1'
+     h2←h New'h2' ''
      h1.class←'c1'
      p←h New'p' 'blah'
      p.class←'c1'

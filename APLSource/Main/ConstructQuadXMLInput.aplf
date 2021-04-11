@@ -1,9 +1,9 @@
  ConstructQuadXMLInput←{
      ⍺←0
      ⍵.Type≡'':⊂⍺''⍵.Text(0 2⍴⊂'')
-     c←,⊃Condense/⍵.Content
-     ⍵.Content←c
      a←ComposeAttributes ⍵
+     c←⍵.Content
+     0=≢c:⊂⍺ ⍵.Type''a
      c.Type≡,⊂'':⊂⍺ ⍵.Type(⊃c.Text)a
      r←⊂⍺ ⍵.Type''a
      r,⊃,/(⍺+1)∇¨c

@@ -1,4 +1,6 @@
  Compose←{
      v←ConstructQuadXMLInput ⍵
-     ⎕XML↑v
+     t←⎕XML↑v
+     ⍵.Type≢'html':t
+     '<!DOCTYPE html>',(⎕UCS 13),t
  }
