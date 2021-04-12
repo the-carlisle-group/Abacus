@@ -1,6 +1,6 @@
- DOM2XML←{
+ DOM2HTML←{
      ⍝ ⍵ ←→ DOM
-     ⍝ ← ←→ XML
+     ⍝ ← ←→ HTML
      v←ConstructQuadXMLInput ⍵
      t←⎕XML↑v
      ⍵.Type≢'html':t

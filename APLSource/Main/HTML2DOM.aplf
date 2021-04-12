@@ -1,5 +1,5 @@
- XML2DOM←{
-     ⍝ ⍵ ←→ XML
+ HTML2DOM←{
+     ⍝ ⍵ ←→ HTML
      ⍝ ← ←→ DOM
      {⍵⌷⍨⍳1=⍴⍵}0{
          m←⍵
