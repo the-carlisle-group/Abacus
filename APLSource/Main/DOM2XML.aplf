@@ -1,4 +1,6 @@
- Compose←{
+ DOM2XML←{
+     ⍝ ⍵ ←→ DOM
+     ⍝ ← ←→ XML
      v←ConstructQuadXMLInput ⍵
      t←⎕XML↑v
      ⍵.Type≢'html':t

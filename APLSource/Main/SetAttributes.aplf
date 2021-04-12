@@ -1,0 +1,9 @@
+ SetAttributes←{
+     ⍝ ⍺ ←→ Attributes
+     ⍝ ⍵ ←→ Element
+     0=≢⍺:⍵
+     n v←↓⍉⍺
+     p←'_'@('-'∘=)¨n
+     _←p ⍵.{⍎⍺,'←⍵'}¨v
+     ⍵
+ }

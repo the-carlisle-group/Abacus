@@ -1,10 +1,11 @@
  New←{
      ⍝ ⍺ ←→ [Parent]
-     ⍝ ⍵ ←→ Type [Content]
+     ⍝ ⍵ ←→ Type [Content] [Attributes]
      ⍝ ← ←→ Element
      ⍺←0
      s←IsString ⍵
-     t c←s⊃⍵(⍵'')
+     t c a←s⊃(3↑⍵,⊂⍬)(⍵''⍬)
      e←NewElement t
+     _←a SetAttributes e
      e⊣Add/⍺ e c
  }

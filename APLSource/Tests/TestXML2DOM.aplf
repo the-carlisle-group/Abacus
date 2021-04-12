@@ -1,0 +1,8 @@
+ TestXML2DOM←{
+     H←##.Main
+     x←TestTable 0
+     d←H.XML2DOM x
+     x2←H.DOM2XML d
+     x2≢x:1
+     0
+ }

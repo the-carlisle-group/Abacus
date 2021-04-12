@@ -9,7 +9,7 @@
      d⍪←'Three' '3' 'Blake'
      ⍝ Utils
      newRow←{⍺ New'tr'}
-     newHeaderCell←{⍺ New'th'}
+     newHeaderCell←{⍺ New'th'⍵}
      newCell←{New'td'⍵}
      ⍝ Build up table
      t←New'table'
@@ -22,5 +22,5 @@
      r←tb newRow¨⍳≢d
      r.Content←↓cd
      r.Content.class←⊂c
-     H.Compose t
+     H.DOM2XML t
  }
