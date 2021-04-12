@@ -1,5 +1,6 @@
  Elements←{
      ⍝ ⍵ ←→ Element
      ⍝ ← ←→ Vector of ⍵ and all sub elements
-     ⍬,trav{⍵.Content}⍵
+     0=≢⍵.Content:⍬
+     ⍵.Content,⊃,/∇¨⍵.Content
  }

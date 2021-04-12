@@ -1,0 +1,23 @@
+ TestBigTable←{
+     H←##.Main
+     ⍺←3 2
+     r c←⍺
+     p←⎕NS''
+     p.Titles←'Column'∘,¨⍕¨⍳c
+     p.Values←r c⍴⍕¨⍳×/r c
+     p.Classes←'class'∘,¨⍕¨⍳c
+     t←H.NewTable p
+     e←H.Elements t
+     edf←H.Elements2 t
+     ebf←H.Elements3 t
+     h←H.DOM2HTML t
+     d←H.HTML2DOM h
+
+     ed←H.Elements d
+     ed2←H.Elements2 d
+     ed3←H.Elements3 d
+
+
+
+     0
+ }

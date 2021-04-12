@@ -14,7 +14,7 @@
      tb←t New'tbody'
      cd←newCell¨⍵.Values
      r←tb newRow¨⍳≢⍵.Values
-     r.Content←↓⍵.Values
+     r.Content←↓cd
      r.Content.class←⊂⍵.Classes
      t
  }

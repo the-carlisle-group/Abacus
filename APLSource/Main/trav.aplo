@@ -1,3 +1,0 @@
- trav←{                      ⍝ Generic depth-first tree traversal.
-     ⊃∇⍨/⌽(⊂⍺ ⍺⍺ ⍵),⍺ ⍵⍵ ⍵   ⍝ visits parent before children.
- }
