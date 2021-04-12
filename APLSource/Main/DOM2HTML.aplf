@@ -1,7 +1,7 @@
  DOM2HTML←{
      ⍝ ⍵ ←→ DOM
      ⍝ ← ←→ HTML
-     v←ConstructQuadXMLInput ⍵
+     v←ConstructQXI ⍵
      t←⎕XML↑v
      ⍵.Type≢'html':t
      '<!DOCTYPE html>',(⎕UCS 13),t

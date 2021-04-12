@@ -1,4 +1,6 @@
- ConstructQuadXMLInput←{
+ ConstructQXI←{
+     ⍝ ⍵ ←→ DOM
+     ⍝ ← ←→ ⎕XML input as v/v
      ⍺←0
      ⍵.Type≡'':⊂⍺''⍵.Text(0 2⍴⊂'')
      a←ComposeAttributes ⍵
