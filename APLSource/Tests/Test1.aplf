@@ -16,7 +16,7 @@
      e←H.Elements h
      c1←h H.ElementsWhere'class' 'c1'
      type←h H.ElementsWhere'Type' 'h1'
-     m←↑H.ConstructQuadXMLInput h
+     m←↑H.ConstructQXI h
      x←⎕XML m
      m2←⎕XML x
      m≡¨4↑[1]m2

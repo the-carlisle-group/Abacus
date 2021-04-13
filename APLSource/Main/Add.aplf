@@ -4,8 +4,7 @@
      ⍝   ←→ ⍺
      ⍺=0:⍺
      0=≢⍵:⍺
-     c←ForceElement ⍵
-     n←⍺.Content Merge c
-     ⍺.Content,←n
+     s←IsString ⍵
+     ⍺.Content,←(⊂⍣s)⍵
      ⍺
  }

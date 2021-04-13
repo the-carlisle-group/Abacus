@@ -1,6 +1,0 @@
- ForceElement←{
-     ~IsString ⍵:⍵
-     e←NewElement''
-     e.Text←⍵
-     e
- }

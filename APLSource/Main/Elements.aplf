@@ -1,6 +1,7 @@
  Elements←{
      ⍝ ⍵ ←→ Element
      ⍝ ← ←→ Vector of ⍵ and all sub elements
-     0=≢⍵.Content:⍬
-     ⍵.Content,⊃,/∇¨⍵.Content
+     c←{⍵/⍨326=⎕DR¨⍵}⍵.Content
+     0=≢c:⍬
+     c,⊃,/∇¨c
  }
