@@ -1,0 +1,51 @@
+ GettingStarted←{
+
+
+
+
+     H←#.HTML.Main
+⍝ The `New` function creates a new HTML element:
+
+     d←H.New'html'
+
+     The `New `function optionally takes a left argument to be
+     the parent of the newly created element:
+
+     hd←d H.New'head'
+     mt←hd H.New'meta'
+     b←d H.New'body'
+
+     Attributes are direclty assigned into an element:
+
+     mt.charset←'utf-8'
+
+     A second item may be provided to the argument to add content to
+     an element when it is created:
+
+     h1←b H.New'h1' 'Introduction'
+
+     Additional content may be added to an existing element using
+     the Add function:
+
+     _←h1 H.Add' to Writing HTML'
+
+     Content is simple text or one or more elements.Content can be directly added
+     to an element:
+
+     p←New¨{'p'⍵}¨'This is a paragraph.' 'This is another paragraph.'
+     b.Content,←p
+
+     The DOM2HTML function composes HTML from an element and all its children:
+
+     ~~~
+     DOM2HTML d
+
+
+
+
+
+
+
+
+
+ }
