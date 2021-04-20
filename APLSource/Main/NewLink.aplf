@@ -1,0 +1,5 @@
+ NewLink←{
+     l←⍺ New'a'(0⊃⍵)
+     l.href←1⊃⍵
+     l
+ }

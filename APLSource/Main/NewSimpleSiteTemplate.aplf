@@ -1,0 +1,28 @@
+ NewSimpleSiteTemplate←{
+     ⍝ ⍵ ←→ Namespace
+     ⍝ ⍵.Title    ←→ Site title
+     ⍝ ⍵.Subtitle ←→ Site subtitle
+     ⍝ ⍵.Menu     ←→ Main Nav Menu items (n/v pairs)
+     ⍝            ←→ e.g. ('Home' '/') ('Projects' '/projects')...
+     ⍝ ⍵.Footer   ←→ Footer text
+     ⍝ ← ←→ A Thornton Melon Web Page
+     d←New'html'
+     d.lang←'en'
+     hd←d New'head'
+     mt←hd New'meta'
+     mt.charset←'utf-8'
+     l←hd New'link'
+     l.rel←'stylesheet'
+     l.type←'text/css'
+     l.href←'/ThorntonMelon.css'
+     b←d New'body'
+     h←b New'header'
+     _←h New'h1'⍵.Title
+     _←h New'h2'⍵.Subtitle
+     n←h New'nav'
+     _←n NewLink¨⍵.Menu
+     m←b New'main'
+     f←b New'footer'
+     _←f New'p'⍵.Footer
+     d
+ }

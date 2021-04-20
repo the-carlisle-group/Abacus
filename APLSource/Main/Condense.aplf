@@ -1,8 +1,7 @@
  Condense←{
      ⍝ ⍵ ←→ Content
      ⍝ ← ←→ Simple string (possibly empty) or array of content
-     ⍝ WHAT A MESS!
-     t←326≠⎕DR¨⍵
+     t←0=80|⎕DR¨⍵
      ∧/t:⊃,/⍵
      b←{⍵≠¯1↓⍵,⍨~⊃⍵}t
      ⊃,/(b/t){(,/⍣⍺)⍵}¨b⊂⍵

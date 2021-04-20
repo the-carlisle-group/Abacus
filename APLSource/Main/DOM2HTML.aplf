@@ -2,7 +2,8 @@
      ⍝ ⍵ ←→ DOM
      ⍝ ← ←→ HTML
      v←ConstructQXI ⍵
-     t←⎕XML↑v
+     t←(⎕XML⍠'Whitespace' 'Preserve')↑v
+     ⍝ t←⎕XML↑v
      ⍵.Type≢'html':t
      '<!DOCTYPE html>',(⎕UCS 13),t
  }
