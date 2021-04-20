@@ -1,0 +1,15 @@
+ ProcessLine←{
+     ⍝ ⍵ ←→ Line of MarkDown
+     ⍝ ⍺ ←→ State
+     ⍝   ←→ Partition Vector
+     ⍺.InParagraph:''(⍺.InParagraph←⍵≢'')
+     ⍺.InCode:''(1⊣⍺.InCode←'~~~'≢3↑⍵)
+     ⍺.InTable:''(⍺.InTable←'|'=⊃⍵)
+     ⍺.InBlockQuote:''(⍺.InBlockQuote←'> '≡2↑⍵)
+     ''≡⍵:'' 0
+     '~~~'≡3↑⍵:'Code'(⍺.InCode←1)
+     '|'=⊃⍵:'Table'(⍺.InTable←1)
+     '> '≡2↑⍵:'BlockQuote'(⍺.InBlockQuote←1)
+     '#'=⊃⍵:'Header' 1
+     1:'Paragraph'(⍺.InParagraph←1)
+ }

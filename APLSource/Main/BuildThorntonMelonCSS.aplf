@@ -112,6 +112,7 @@
      r.background_color←'LightGray'
      r.margin←'2em 0'
      r.padding←'2em 2em'
+     r.overflow←'auto'
      ⍝ **************************
      s,←r←Rule'blockquote'
      r.font_family←'Time New Roman'

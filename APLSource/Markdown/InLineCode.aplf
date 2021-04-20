@@ -1,0 +1,8 @@
+ InLineCode←{
+     9=⎕NC'⍵':⍵
+     s←'`(.*?)`'
+     p←s PartitionByRegex ⍵
+     {'`'≠⊃⍵:⍵
+         H.New'code'(¯1↓1↓⍵)
+     }¨p
+ }

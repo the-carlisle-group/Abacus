@@ -1,0 +1,4 @@
+ Paragraph←{
+     l←1↓⊃,/' ',¨⍵
+     H.New'p'(InLine l)
+ }

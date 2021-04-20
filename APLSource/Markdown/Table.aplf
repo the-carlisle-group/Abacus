@@ -1,0 +1,18 @@
+ Table←{
+     v←(⍵≠'|')⊆¨⍵
+     f←1⊃v
+     b←'`'=⊃¨f
+     j←{2⊥1⌽⍵}¨':'=b↓¨1⊃v
+     c←'left' 'right' 'center'[j-1]
+     t←H.New'table'
+     th←t H.New'thead'
+     tr←th H.New'tr'
+     ch←tr∘H.New¨{'th'⍵}¨⊃v
+     ch.class←c
+     tb←t H.New'tbody'
+     br←{tb H.New'tr'}¨2↓v
+     m←2↓v
+     td←br{⍺ H.New¨{'td'(InLine ⍵)}¨⍵}¨m
+     td.class←⊂c,¨'' ' code'[b]
+     t
+ }

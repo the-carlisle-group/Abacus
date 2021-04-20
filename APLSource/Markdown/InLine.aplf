@@ -1,0 +1,8 @@
+ InLine←{
+     ⍝ ⍵ ←→ MarkDown line
+     r←InLineStrongEmphasis ⍵
+     r←⊃,/InLineStrong¨r
+     r←⊃,/InLineEmphasis¨r
+     r←⊃,/InLineCode¨r
+     ⊃,/InLineLink¨r
+ }

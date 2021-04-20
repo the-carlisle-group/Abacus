@@ -1,0 +1,11 @@
+ Parse←{
+     ⍝ ⍵ ←→ MarkDown
+     ⍝   ←→ Array of HTML obs
+     ⍝ f ←→ Paragraph|Table|Code|Header
+     ⎕THIS.H←##.Main
+     s←InitState 0
+     t b←↓⍉↑s ProcessLine¨⍵
+     p←b⊆⍵
+     f←(b>¯1↓0,b)/t
+     f{(⍎⍺)⍵}¨p
+ }

@@ -1,0 +1,4 @@
+ BlockQuote←{
+     c←Parse 2↓¨⍵
+     H.New'blockquote'c
+ }

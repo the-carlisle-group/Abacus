@@ -1,0 +1,8 @@
+ InLineEmphasis←{
+     9=⎕NC'⍵':⍵
+     s←'(\*)(.*?)\1'
+     p←s PartitionByRegex ⍵
+     {'*'≠⊃⍵:⍵
+         H.New'em'(InLineCode ¯2↓2↓⍵)
+     }¨p
+ }

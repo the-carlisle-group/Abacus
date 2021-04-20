@@ -1,0 +1,8 @@
+ InLineStrong←{
+     9=⎕NC'⍵':⍵
+     s←'(\*\*|__)(.*?)\1'
+     p←s PartitionByRegex ⍵
+     {'*'≠⊃⍵:⍵
+         H.New'strong'(InLineCode ¯2↓2↓⍵)
+     }¨p
+ }

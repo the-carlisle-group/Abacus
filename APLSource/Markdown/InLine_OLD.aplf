@@ -1,0 +1,25 @@
+ InLine_OLD←{
+     ⍝ ⍵ ←→ MarkDown line
+     ⍵
+
+     r←⍵
+     r←('\[([^\[]+)\]\(([^\)]+)\)'⎕R'<a href="\2">\1</a>')r
+     r←('(\*\*\*)(.*?)\1'⎕R'<strong><em>\2</em></strong>')r
+     r←('(\*\*)(.*?)\1'⎕R'<strong>\2</strong>')r
+     r←('(\*)(.*?)\1'⎕R'<em>\2</em>')r
+     r←('`(.*?)`'⎕R'<code>\1</code>')r
+     ⍝ r
+     ⍝ These are noT THE SAME.
+     ⍝ Does not search what has already been found/replaced
+     p←''
+     p,←⊂'\[([^\[]+)\]\(([^\)]+)\)' '<a href="\2">\1</a>'
+     p,←⊂'(\*\*\*)(.*?)\1' '<strong><em>\2</em></strong>'
+     p,←⊂'(\*\*|__)(.*?)\1' '<strong>\2</strong>'
+     p,←⊂'(\*|_)(.*?)\1' '<em>\2</em>'
+     p,←⊂'`(.*?)`' '<code>\1</code>'
+     s r←↓⍉↑p
+
+     ⊃{s r←⍺ ⋄ (s ⎕R r)⍵}/(⌽p),⊂⍵  ⍝ Does same as above
+
+     ⍝ (s ⎕R r)⍵ //wont work, not same as abov
+ }

@@ -1,0 +1,10 @@
+ PartitionByRegex←{
+     ⍝ ⍺ ←→ Search Pattern
+     ⍝ ⍵ ←→ String
+     ⍝ ← ←→ Partitioned
+     i←(⍺ ⎕S 0 1)⍵
+     s l←↓⍉↑i
+     b←(≢⍵)⍴0
+     b[(s,s+l)~≢⍵]←1
+     (1++\b)⊆⍵
+ }

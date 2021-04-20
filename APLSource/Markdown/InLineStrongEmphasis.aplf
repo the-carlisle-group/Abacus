@@ -1,0 +1,8 @@
+ InLineStrongEmphasis←{
+     9=⎕NC'⍵':⍵
+     s←'(\*\*\*)(.*?)\1'
+     p←s PartitionByRegex ⍵
+     {'*'≠⊃⍵:⍵
+         H.New'strong'(H.New'em'(InLineCode ¯3↓3↓⍵))
+     }¨p
+ }

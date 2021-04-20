@@ -1,0 +1,13 @@
+ InLineLink←{
+     ⍝ ⍵ ←→ text
+     ⍝ ← ←→ Array of content, text, and
+     9=⎕NC'⍵':⍵
+     s←'\[([^\[]+)\]\(([^\)]+)\)'
+     p←s PartitionByRegex ⍵
+     {'['≠⊃⍵:⍵
+         t r←{(~⍵∊'[]()')⊆⍵}⍵
+         l←H.New'a't
+         l.href←r
+         l
+     }¨p
+ }
