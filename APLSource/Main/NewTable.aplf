@@ -9,7 +9,7 @@
      t←New'table'
      th←t New'thead'
      tr←th newRow 0
-     hc←tr{⍺ New'th'}¨⍵.Titles
+     hc←tr{⍺ New'th'⍵}¨⍵.Titles
      hc.class←⍵.Classes
      tb←t New'tbody'
      cd←newCell¨⍵.Values
