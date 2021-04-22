@@ -1,6 +1,7 @@
  DOM2HTML←{
      ⍝ ⍵ ←→ DOM
      ⍝ ← ←→ HTML
+     0<⍴⍴⍵:⊃,/∇¨⍵
      v←ConstructQXI ⍵
      ⍝ t←(⎕XML⍠'Whitespace' 'Preserve')↑v
      t←⎕XML↑v
