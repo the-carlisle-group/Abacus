@@ -1,0 +1,40 @@
+ Table←{
+     s←⍬
+     ⍝ *******************
+     s,←r←Rule'table'
+     r.margin_left←'4rem'
+     r.margin_top←'1rem'
+     r.margin_bottom←'1rem'
+     r.border_collapse←'collapse'
+     ⍝ *********************
+     s,←r←Rule'td'
+     r.text_align←'left'
+     r.padding←'.3rem .75rem'
+     r.font_weight←'normal'
+     r.border←'none'
+     ⍝ *************************
+     s,←r←Rule'th'
+     r.padding←'.3rem .75rem'
+     r.font_family←'Arial'
+     r.font_weight←'bold'
+     ⍝ *************************
+     s,←r←Rule'thead'
+     r.word_wrap←'break-word'
+     r.vertical_align←'bottom'
+     r.border_bottom←'1px solid black'
+     ⍝ **************************
+     s,←r←Rule'tbody tr'
+     r.border_bottom←'1px solid'
+     r.border_color←'LightGray'
+     ⍝ *************************
+     s,←r←Rule'.right'
+     r.text_align←'right'
+     ⍝ *******************
+     s,←r←Rule'.center'
+     r.text_align←'center'
+     ⍝ *******************
+     s,←r←Rule'.left'
+     r.text_align←'left'
+     ⍝ *******************
+     s
+ }

@@ -3,7 +3,7 @@
      f←1⊃v
      b←'`'=⊃¨f
      j←{2⊥1⌽⍵}¨':'=b↓¨1⊃v
-     c←'left' 'right' 'center'[j-1]
+     c←'center' 'left' 'right' 'center'[j]
      t←H.New'table'
      th←t H.New'thead'
      tr←th H.New'tr'

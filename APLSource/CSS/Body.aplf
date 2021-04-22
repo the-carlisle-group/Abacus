@@ -1,0 +1,11 @@
+ Body←{
+     r←Rule'body'
+     r.background_color←'White'
+     r.max_width←'900px'
+     r.margin_left←'auto'
+     r.margin_right←'auto'
+     r.display←'flex'
+     r.min_height←'100vh'
+     r.flex_direction←'column'
+     r
+ }

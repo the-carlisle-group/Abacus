@@ -1,4 +1,4 @@
- ComposeCSS←{
+ Compose←{
      ⍝ ⍵ ←→ Vector of CSS Rules
      nl←⎕UCS 13
      ⊃,/{

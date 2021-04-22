@@ -1,0 +1,28 @@
+ BodyHeader←{
+     ⍝ **************************
+     s←r←Rule'body>header'
+     r.background_color←'CadetBlue'
+     ⍝ ****************************
+     s,←r←Rule'body>header>h1'
+     r.font_family←'American Typewriter'
+     r.font_size←'3.5rem'
+     r.text_align←'center'
+     r.padding_top←'1rem'
+     ⍝ ****************
+     s,←r←Rule'body>header>h2'
+     r.font_family←'Brush Script MT'
+     r.text_align←'center'
+     r.font_size←'2rem'
+     ⍝ ******************************
+     s,←r←Rule'body>header>nav'
+     r.display←'flex'
+     r.justify_content←'center'
+     ⍝ ********************
+     s,←r←Rule'body>header>nav>a'
+     r.font_family←'Arial'
+     r.font_size←'1.25em'
+     r.font_weight←'bold'
+     r.padding←'.5em'
+     ⍝ ****************************
+     s
+ }

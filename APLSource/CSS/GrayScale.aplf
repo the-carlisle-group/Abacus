@@ -1,0 +1,4 @@
+ GrayScale←{
+     ⍝ ⍵ ←→ 0 for black, 100 for white
+     'hsla(0, 0%, ',(⍕⍵),'%, 1)'
+ }

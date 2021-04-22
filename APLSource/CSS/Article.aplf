@@ -1,0 +1,11 @@
+ Article←{
+     s←⍬
+     ⍝ ************************
+     s,←r←Rule'article>header'
+     r.margin←'2rem 0 1rem 0'
+     ⍝ ****************************
+     s,←r←Rule'article>header>time'
+     r.font_weight←'bold'
+     ⍝ ****************
+     s
+ }

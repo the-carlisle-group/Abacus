@@ -1,0 +1,11 @@
+ ThorntonMelon←{
+     ⍝ ⍵  Color Theme?
+     s←Reset ⍵
+     s,←Layout ⍵
+     s,←Basic ⍵
+     s,←Table ⍵
+     s,←BodyHeader ⍵
+     s,←BodyFooter ⍵
+     s,←Article ⍵
+     Compose s
+ }

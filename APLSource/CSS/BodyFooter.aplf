@@ -1,0 +1,12 @@
+ BodyFooter←{
+     ⍝ **************************
+     s←r←Rule'body>footer'
+     r.background_color←'CadetBlue'
+     r.min_height←'5rem'
+     r.margin_top←'2rem'
+     ⍝ *************************
+     s,←r←Rule'body>footer>p'
+     r.text_align←'center'
+     r.padding_top←'2rem'
+     s
+ }

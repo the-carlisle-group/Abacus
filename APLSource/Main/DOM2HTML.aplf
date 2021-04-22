@@ -4,8 +4,8 @@
      v←ConstructQXI ⍵
      ⍝ t←(⎕XML⍠'Whitespace' 'Preserve')↑v
      t←⎕XML↑v
-     t[⍸'∘'=t]←' '
-     t[⍸'⋄'=t]←⎕UCS 13
+     t[⍸t='⍘']←' '
+     t[⍸t='⌺']←⎕UCS 13
      ⍵.Type≢'html':t
      '<!DOCTYPE html>',(⎕UCS 13),t
  }

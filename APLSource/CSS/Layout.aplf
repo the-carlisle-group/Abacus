@@ -1,0 +1,20 @@
+ Layout←{
+     ⍝ ***********************
+     s←r←Rule'html'
+     r.background_color←'Black'
+     ⍝ ***************
+     s,←r←Rule'body'
+     r.background_color←'White'
+     r.max_width←'900px'
+     r.margin_left←'auto'
+     r.margin_right←'auto'
+     r.display←'flex'
+     r.min_height←'100vh'
+     r.flex_direction←'column'
+     ⍝ ***********************
+     s,←r←Rule'main'
+     r.padding←'0 4em'
+     r.flex←'1'
+     ⍝ *********************
+     s
+ }
