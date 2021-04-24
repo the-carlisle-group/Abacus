@@ -4,9 +4,10 @@
      ⍝      ⍵.Values (Matrix of char vecs)
      ⍝      ⍵.Classes (vec of char vecs)
      ⍝ ← ←→ Table
+     ⍺←0
      newRow←{⍺ New'tr'}
      newCell←{New'td'⍵}
-     t←New'table'
+     t←⍺ New'table'
      th←t New'thead'
      tr←th newRow 0
      hc←tr{⍺ New'th'⍵}¨⍵.Titles

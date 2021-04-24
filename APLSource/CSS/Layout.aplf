@@ -5,16 +5,21 @@
      ⍝ ***************
      s,←r←Rule'body'
      r.background_color←'White'
-     r.max_width←'900px'
+     ⍝ r.max_width←'900px'
      r.margin_left←'auto'
      r.margin_right←'auto'
-     r.display←'flex'
      r.min_height←'100vh'
+     r.display←'flex'
+     r.flex_wrap←'wrap'
      r.flex_direction←'column'
      ⍝ ***********************
      s,←r←Rule'main'
      r.padding←'0 4em'
-     r.flex←'1'
+     r.flex←'1'         ⍝ For sticky footer?
+     ⍝ *****************
+     s,←r←Rule'.cards'
+     r.display←'flex'
+     r.flex_wrap←'wrap'
      ⍝ *********************
      s
  }

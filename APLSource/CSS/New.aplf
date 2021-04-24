@@ -1,7 +1,9 @@
  New←{
      ⍝ ⍵ ←→ Selector
      ⍝      e.g. 'h1' 'h1 h2' 'header>h1', etc.
+     ⍺←''
      r←⎕NS''
+     r.Media←⍺
      r.Selector←⍵
      r
  }

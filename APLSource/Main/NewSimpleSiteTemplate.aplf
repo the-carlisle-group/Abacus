@@ -16,8 +16,10 @@
      mt.content←'width=device-width, initial-scale=1.0'
      l←hd New'link'
      l.rel←'stylesheet'
+     ⍝ l.media←'screen'
      l.type←'text/css'
      l.href←'/ThorntonMelon.css'
+
      b←d New'body'
      h←b New'header'
      _←h New'h1'⍵.Title

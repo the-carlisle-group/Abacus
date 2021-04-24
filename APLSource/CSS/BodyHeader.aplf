@@ -23,6 +23,11 @@
      r.font_size←'1.25em'
      r.font_weight←'bold'
      r.padding←'.5em'
+
+
+     ⍝ ************************
+     s,←r←'Print'Rule'body>header'
+     r.display←'none'
      ⍝ ****************************
      s
  }
