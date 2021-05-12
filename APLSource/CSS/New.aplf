@@ -1,12 +1,4 @@
  New←{
-     ⍝ ⍺ ←→ [Parent]
-     ⍝ ⍵ ←→ Selector
-     ⍝      e.g. 'h1' 'h1 h2' 'header>h1', etc.
      ⍺←0
-     r←⎕NS''
-     r.Selector←⍵
-     r.Rules←⍬
-     ⍺=0:r
-     ⍺.Rules,←r
-     r
+     ⍺ ##.Main.NewRule ⍵
  }

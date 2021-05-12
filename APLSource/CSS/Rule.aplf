@@ -1,4 +1,4 @@
  Rule←{
-     ⍺←''
-     ⍺ New ⍵
+     ⍺←0
+     ⍺ ##.Main.NewRule ⍵
  }
