@@ -8,18 +8,25 @@
      ⍝ r.max_width←'900px'
      r.margin_left←'auto'
      r.margin_right←'auto'
-     r.min_height←'100vh'
-     r.display←'flex'
-     r.flex_wrap←'wrap'
-     r.flex_direction←'column'
+     ⍝⍝ r.min_height←'100vh'
+⍝     r.display←'flex'
+⍝     r.flex_wrap←'wrap'
+⍝     r.flex_direction←'column'
      ⍝ ***********************
      s,←r←Rule'main'
      r.padding←'0 4em'
      r.flex←'1'         ⍝ For sticky footer?
      ⍝ *****************
      s,←r←Rule'.cards'
-     r.display←'flex'
-     r.flex_wrap←'wrap'
+     ⍝r.display←'flex'
+⍝     r.flex_flow←'column wrap'
+⍝     r.height←'900px'
+     r.column_count←'2'
+     r.column_fill←'auto'
+     ⍝ r.flex_wrap←'wrap'
      ⍝ *********************
+     s,←r←Rule'.cards>header'
+     r.column_span←'all'
+
      s
  }

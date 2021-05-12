@@ -2,6 +2,7 @@
      ⍝ ⍵ ←→ Namepace
      ⍝      ⍵.Titles (vec of char vecs)
      ⍝      ⍵.Values (Matrix of char vecs)
+     ⍝      ⍵.Footer (v/v of footer values)
      ⍝      ⍵.Classes (vec of char vecs)
      ⍝ ← ←→ Table
      ⍺←0
@@ -9,13 +10,19 @@
      newCell←{New'td'⍵}
      t←⍺ New'table'
      th←t New'thead'
-     tr←th newRow 0
-     hc←tr{⍺ New'th'⍵}¨⍵.Titles
+     hr←th newRow 0
+     hc←hr{⍺ New'th'⍵}¨⍵.Titles
      hc.class←⍵.Classes
      tb←t New'tbody'
      cd←newCell¨⍵.Values
      r←tb newRow¨⍳≢⍵.Values
      r.Content←↓cd
      r.Content.class←⊂⍵.Classes
+     0=⍵.⎕NC'Footer':t
+     0=≢⍵.Footer:t
+     tf←t New'tfoot'
+     fr←tf newRow 0
+     fc←fr{⍺ New'th'⍵}¨⍵.Footer
+     fc.class←⍵.Classes
      t
  }

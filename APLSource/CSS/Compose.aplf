@@ -1,14 +1,18 @@
  Compose←{
      ⍝ ⍵ ←→ Vector of CSS Rules
+     ⍺←0
+     0=≢⍵:''
      nl←⎕UCS 13
-     ⊃,/{
-         s←⍵.Selector,' {',nl
-         n←(⍵.⎕NL ¯2)~'Selector' 'Media'
+     ⊃,/((⍺>0)/nl),⍺{
+         b1←(4×⍺)⍴' '
+         s←b1,⍵.Selector,' {',nl
+         n←(⍵.⎕NL ¯2)~'Selector' 'Rules'
          v←⍕¨⍵⍎¨n
          p←'-'@('_'∘=)¨n
-         s←s,⊃,/p{'    ',⍺,': ',⍵,';',nl}¨v
-         s←s,'}',2⍴nl
-         0=≢⍵.Media:s
-         '@media ',⍵.Media,' {',nl,s,nl,'}',nl
+         b←(4×⍺+1)⍴' '
+         s←s,⊃,/p{b,⍺,': ',⍵,';',nl}¨v
+         s,←¯1↓(⍺+1)Compose ⍵.Rules
+         s←s,b1,'}',2⍴nl
+         s
      }¨⍵
  }
