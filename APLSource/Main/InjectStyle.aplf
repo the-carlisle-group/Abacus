@@ -1,0 +1,11 @@
+ InjectStyle←{
+     0=⍺.⎕NC'Style':⍵
+     i←1⍳⍨'<head>'⍷⍵
+     i=≢⍵:⍵
+     j←i+6
+     p←4⍴' '
+     nl←⎕UCS 13
+     s←{IsString ⍵:⍵ ⋄ ComposeRules ⍵}⍺.Style
+     t←nl,p,'<style>',nl,s,nl,p,'</style>'
+     (j↑⍵),t,j↓⍵
+ }

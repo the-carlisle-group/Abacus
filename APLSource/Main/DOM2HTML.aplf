@@ -8,5 +8,6 @@
      t[⍸t='⍘']←' '
      t[⍸t='⌺']←⎕UCS 13
      ⍵.Type≢'html':t
+     t←⍵ InjectStyle t
      '<!DOCTYPE html>',(⎕UCS 13),t
  }
