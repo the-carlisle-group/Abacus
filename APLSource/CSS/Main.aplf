@@ -1,6 +1,0 @@
- Main←{
-     r←Rule'main'
-     r.padding←'0 4em'
-     r.flex←'1'
-     r
- }

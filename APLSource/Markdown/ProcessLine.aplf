@@ -6,10 +6,12 @@
      ⍺.InCode:''(1⊣⍺.InCode←'~~~'≢3↑⍵)
      ⍺.InTable:''(⍺.InTable←'|'=⊃⍵)
      ⍺.InBlockQuote:''(⍺.InBlockQuote←'> '≡2↑⍵)
+     ⍺.InPullQuote:''(⍺.InPullQuote←'^ '≡2↑⍵)
      ''≡⍵:'' 0
      '~~~'≡3↑⍵:'Code'(⍺.InCode←1)
      '|'=⊃⍵:'Table'(⍺.InTable←1)
      '> '≡2↑⍵:'BlockQuote'(⍺.InBlockQuote←1)
+     '∧ '≡2↑⍵:'PullQuote'(⍺.InPullQuote←1)
      '#'=⊃⍵:'Header' 1
      1:'Paragraph'(⍺.InParagraph←1)
  }

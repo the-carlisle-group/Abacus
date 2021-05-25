@@ -5,5 +5,6 @@
      s.InCode←0
      s.InList←0
      s.InBlockQuote←0
+     s.InPullQuote←0
      s
  }

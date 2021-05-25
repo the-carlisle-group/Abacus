@@ -1,0 +1,6 @@
+ PullQuote←{
+     c←Parse 2↓¨⍵
+     a←H.New'aside'c
+     a
+     ⍝ a⊣a H.New'blockquote'c
+ }

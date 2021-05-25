@@ -9,7 +9,7 @@
      r.text_decoration←'none'
      ⍝ *******************
      s,←r←Rule'h1'
-     r.margin←'2rem 0 .5rem 0'
+     r.margin←'1rem 0 .5rem 0'
      r.font_weight←'bold'
      r.font_family←'Arial'
      r.font_size←'2rem'
@@ -19,15 +19,26 @@
      r.font_weight←'bold'
      r.font_family←'Arial'
      r.font_size←'1.25rem'
+     ⍝ ************************
+     s,←r←Rule'article>header'
+     r.margin←'2rem 0 1rem 0'
+     ⍝ ****************************
+     s,←r←Rule'article>header>time'
+     r.font_weight←'bold'
      ⍝ *****************
      s,←r←Rule'code'
      r.font_family←'APL385 Unicode'
      ⍝ ****************
+     s,←r←Rule'pre'
+     r.margin←0
+     r.whitespace←'pre'
+     r.padding←0
+     ⍝ ****************
      s,←r←Rule'pre>code'
      r.display←'block'
      r.background_color←'LightGray'
-     r.margin←'2em 0'
-     r.padding←'2em 2em'
+     r.padding←'2rem 2rem'
+     r.max_width←'38rem'
      r.overflow←'auto'
      ⍝ **************************
      s,←r←Rule'blockquote'
@@ -35,6 +46,11 @@
      r.border_left←'.5em solid DarkGray'
      r.margin←'2em 6em'
      r.padding_left←'1rem'
+     ⍝ ***************************
+     s,←r←Rule'aside'
+     r.width←'20rem'
+     r.float←'right'
+     r.background_color←'LightGray'
      ⍝ ***************************
      s
  }

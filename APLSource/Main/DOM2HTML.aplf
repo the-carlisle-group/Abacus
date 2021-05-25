@@ -9,5 +9,6 @@
      t[⍸t='⌺']←⎕UCS 13
      ⍵.Type≢'html':t
      t←⍵ InjectStyle t
+     t←⍵ InjectScript t
      '<!DOCTYPE html>',(⎕UCS 13),t
  }

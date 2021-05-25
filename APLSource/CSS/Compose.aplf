@@ -1,4 +1,0 @@
- Compose←{
-     ⍝ ⍵ ←→ Vector of CSS Rules
-     ##.Main.ComposeCSS ⍵
- }

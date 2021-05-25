@@ -1,12 +1,9 @@
  ThorntonMelon←{
      ⍝ ⍵  Color Theme?
-     s←Reset ⍵
+     s←⍬
      s,←Layout ⍵
      s,←Basic ⍵
      s,←Table ⍵
      s,←BodyHeader ⍵
-     s,←BodyFooter ⍵
-     s,←Article ⍵
-     s,←Card ⍵
-     Compose s
+     ##.Main.ComposeRules s
  }

@@ -1,32 +1,32 @@
  Layout←{
+     s←⍬
      ⍝ ***********************
-     s←r←Rule'html'
+     s,←r←Rule'html'
+     r.font_size←'20px'
      r.background_color←'Black'
      ⍝ ***************
      s,←r←Rule'body'
      r.background_color←'White'
-     ⍝ r.max_width←'900px'
+     r.max_width←'50rem'
      r.margin_left←'auto'
      r.margin_right←'auto'
-     ⍝⍝ r.min_height←'100vh'
-⍝     r.display←'flex'
-⍝     r.flex_wrap←'wrap'
-⍝     r.flex_direction←'column'
+     r.min_height←'100vh'
+     r.display←'flex'
+     r.flex_wrap←'wrap'
+     r.flex_direction←'column'
      ⍝ ***********************
      s,←r←Rule'main'
-     r.padding←'0 4em'
-     r.flex←'1'         ⍝ For sticky footer?
-     ⍝ *****************
-     s,←r←Rule'.cards'
-     ⍝r.display←'flex'
-⍝     r.flex_flow←'column wrap'
-⍝     r.height←'900px'
-     r.column_count←'2'
-     r.column_fill←'auto'
-     ⍝ r.flex_wrap←'wrap'
-     ⍝ *********************
-     s,←r←Rule'.cards>header'
-     r.column_span←'all'
-
+     r.padding←'0 4rem'
+     r.flex←1
+     ⍝ **************************
+     s,←r←Rule'body>footer'
+     r.background_color←'CadetBlue'
+     r.min_height←'5rem'
+     r.margin_top←'2rem'
+     ⍝ *************************
+     s,←r←Rule'body>footer>p'
+     r.text_align←'center'
+     r.padding_top←'2rem'
+     ⍝ *************************
      s
  }

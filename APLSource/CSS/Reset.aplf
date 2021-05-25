@@ -1,7 +1,0 @@
- Reset←{
-     r←New'*'
-     r.margin←0
-     r.padding←0
-     r.box_sizing←'border-box'
-     r
- }
