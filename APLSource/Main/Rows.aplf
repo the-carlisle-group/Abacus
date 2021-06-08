@@ -1,0 +1,5 @@
+ Rows←{
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ Vector of all tr
+     ⊃,/⍵.Content.Content
+ }

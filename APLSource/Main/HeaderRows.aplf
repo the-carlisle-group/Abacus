@@ -1,0 +1,7 @@
+ HeaderRows←{
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ Vector of <tr> elements in <thead>
+     e←⊃⍵.Content
+     e.Type≢'thead':⍬
+     e.Content
+ }

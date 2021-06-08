@@ -1,0 +1,5 @@
+ Cells←{
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ Matrix of <td> <th> <td> elements
+     ⊃⍪/↑¨⍵.Content.Content.Content
+ }

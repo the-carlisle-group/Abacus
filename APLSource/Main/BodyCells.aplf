@@ -1,0 +1,7 @@
+ BodyCells←{
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ Matrix of <td> elements
+     c←⍵.Content
+     i←c.Type⍳⊂'tbody'
+     ↑(i⊃c).Content.Content
+ }

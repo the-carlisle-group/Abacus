@@ -1,0 +1,7 @@
+ BodyRows←{
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ Vector of <tr> elements in <tbody>
+     c←⍵.Content
+     i←c.Type⍳⊂'tbody'
+     (i⊃c).Content
+ }

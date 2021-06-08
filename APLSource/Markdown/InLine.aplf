@@ -1,6 +1,7 @@
  InLine←{
      ⍝ ⍵ ←→ MarkDown line
-     r←InLineStrongEmphasis ⍵
+     r←InLineExtraStrong ⍵
+     r←⊃,/InLineStrongEmphasis¨r
      r←⊃,/InLineStrong¨r
      r←⊃,/InLineEmphasis¨r
      r←⊃,/InLineCode¨r

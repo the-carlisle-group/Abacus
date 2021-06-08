@@ -1,0 +1,8 @@
+ InLineExtraStrong←{
+     9=⎕NC'⍵':⍵
+     s←'(\*\*\*\*)(.*?)\1'
+     p←s PartitionByRegex ⍵
+     {'*'≠⊃⍵:⍵
+         H.New'span'(InLineCode ¯4↓4↓⍵)(↑,↓'class' 'extrastrong')
+     }¨p
+ }

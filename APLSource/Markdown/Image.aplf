@@ -1,0 +1,5 @@
+ Image←{
+     i←H.New'img'
+     i.(alt src)←{⍵⊆⍨~⍵∊'![]()'}∊⍵
+     i
+ }

@@ -4,9 +4,9 @@
      b←'`'=⊃¨f
      j←{2⊥1⌽⍵}¨':'=b↓¨1⊃v
      c←'center' 'left' 'right' 'center'[j]
-     t←⎕NS ⍬
-     t.Titles←⊃v
-     t.Values←InLine¨↑2↓v
-     t.Classes←c
-     H.NewTable t
+     d←InLine¨↑2↓v
+     t←H.NewTable d(⊃v)
+     m←H.Cells t
+     m.class←(⍴m)⍴c
+     t
  }

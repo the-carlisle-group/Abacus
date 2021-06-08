@@ -1,6 +1,6 @@
  New←{
-     ⍝ ⍺ ←→ [Parent]
-     ⍝ ⍵ ←→ Type [Content] [Attributes]
+     ⍝ ⍺ ←→ [Parent, 0 - no parent]
+     ⍝ ⍵ ←→ Type [Content [Attributes]]
      ⍝ ← ←→ Element
      ⍺←0
      s←IsString ⍵

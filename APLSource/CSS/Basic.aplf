@@ -52,5 +52,14 @@
      r.float←'right'
      r.background_color←'LightGray'
      ⍝ ***************************
+     s,←r←Rule'img'
+     r.display←'block'
+     r.margin_left←'auto'
+     r.margin_right←'auto'
+     r.max_width←'100%'
+     r.height←'auto'
+
+
+
      s
  }

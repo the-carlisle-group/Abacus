@@ -1,0 +1,7 @@
+ HeaderCells←{
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ Matrix of <th> elements
+     e←⊃⍵.Content
+     e.Type≢'thead':⍬
+     ↑e.Content.Content
+ }
