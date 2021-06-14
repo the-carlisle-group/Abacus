@@ -1,0 +1,7 @@
+ InjectHTML←{
+     ⍝ ⍺ ←→ XML with markers for ex-post HTML injection
+     ⍝ ⍵ ←→ HTML
+     z←⍺
+     z[⍸z='⍃']←⍵
+     ⊃,/z
+ }

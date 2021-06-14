@@ -1,10 +1,6 @@
  Code←{
-     nl←⊂⎕UCS 13 10
-     ⍝ c←⊃,/nl,¨⍨⍵~⊂'~~~'
-     l←'⌺'
-     s←'⍘'
-     c←⊃,/l,¨⍨⍵~⊂'~~~'
-     c[⍸c=' ']←s
+     nl←⎕UCS 13
+     c←H.EncodePre⊃,/nl,¨⍨⍵~⊂'~~~'
      h←H.New'pre'
      _←h H.New'code'c
      h

@@ -2,9 +2,10 @@
      ⍝ ⍵ ←→ DOM
      ⍝ ← ←→ ⎕XML input as v/v
      ⍺←0
-     IsString ⍵:⊂⍺''⍵(0 2⍴⊂'')
+     IsString ⍵:⊂⍺''⍵(0 2⍴⊂'')0
      a←ComposeAttributes ⍵
+     3=≡⍵.Content:⊂⍺ ⍵.Type'⍃'a(⊃⊃⍵.Content)
      c←Condense ⍵.Content
-     IsString c:⊂⍺ ⍵.Type c a
-     (⊂⍺ ⍵.Type''a),⊃,/(⍺+1)∇¨c
+     IsString c:⊂⍺ ⍵.Type c a 0
+     (⊂⍺ ⍵.Type''a 0),⊃,/(⍺+1)∇¨c
  }

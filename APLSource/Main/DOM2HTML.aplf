@@ -2,11 +2,9 @@
      ⍝ ⍵ ←→ DOM
      ⍝ ← ←→ HTML
      0<⍴⍴⍵:⊃,/∇¨⍵
-     v←ConstructQXI ⍵
-     ⍝ t←(⎕XML⍠'Whitespace' 'Preserve')↑v
-     t←⎕XML↑v
-     t[⍸t='⍘']←' '
-     t[⍸t='⌺']←⎕UCS 13
+     m←↑,ConstructQXI ⍵
+     t←1 EncodePre ⎕XML 4↑[1]m
+     t←t InjectHTML m[;4]~0
      ⍵.Type≢'html':t
      t←⍵ InjectStyle t
      t←⍵ InjectScript t
