@@ -1,0 +1,10 @@
+ HandleAPLResponse←{
+     p←⎕NS''
+     c←⎕JSON 9⊃⍵
+     _←c.value ⎕TPUT c.token
+     z←⍵
+     z[3]←1
+     z[4]←204
+     z[5]←⊂'No Content'
+     z
+ }

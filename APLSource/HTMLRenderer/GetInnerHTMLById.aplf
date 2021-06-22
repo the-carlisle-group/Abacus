@@ -1,0 +1,6 @@
+ GetInnerHTMLById←{
+     ⍝ ⍺ ←→ HTMLRenderer
+     ⍝ ⍵ ←→ id
+     j←'document.getElementById("',⍵,'").innerHTML'
+     ⍺ ExecuteJavaScript j
+ }

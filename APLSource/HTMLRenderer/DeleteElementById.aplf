@@ -1,0 +1,7 @@
+ DeleteElementById←{
+     ⍝ ⍺ ←→ HTMLRenderer
+     ⍝ ⍵ ←→ id
+     j←'document.getElementById("',⍵,'").remove ();'
+     _←⍺.ExecuteJavaScript j
+     0
+ }

@@ -1,0 +1,5 @@
+ Run←{
+     hr←##.HTMLRenderer.NewStandAlone 0
+     hr.HTML←BuildPage 0
+     hr
+ }

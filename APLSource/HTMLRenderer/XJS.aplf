@@ -1,0 +1,6 @@
+ XJS←{
+     t←⎕TID
+     j←'sendAPLResponse (',(⍕t),',',⍵,')'
+     _←⍺.ExecuteJavaScript j
+     ⊃⎕TGET t
+ }

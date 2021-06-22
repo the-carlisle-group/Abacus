@@ -1,0 +1,22 @@
+ OnHTTPRequest←{
+     'http://dyalog_root/aplresponse'≡7⊃⍵:HandleAPLResponse ⍵
+     'http://dyalog_root/gui'≢7⊃⍵:⍵
+     p←⎕NS''
+     h←⊃⍵
+     c←⎕JSON 9⊃⍵
+     p.HTMLRenderer←h
+     p.RequestContent←c
+     p.innerHTML←⍬
+     p.outerHTML←⍬
+     _←(h._Context⍎c.aplcallback)p
+     r←⎕NS''
+     r.innerHTML←p.innerHTML
+     r.outerHTML←p.outerHTML
+     z←⍵
+     z[3]←1
+     z[4]←200                       ⍝ Test for removal
+     z[5]←⊂'OK'                     ⍝
+     z[6]←⊂'application/javascript' ⍝
+     z[9]←⊂⎕JSON r
+     z
+ }

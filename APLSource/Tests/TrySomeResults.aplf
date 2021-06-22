@@ -1,0 +1,15 @@
+ TrySomeResults←{
+
+   ⍝ The HTTPRequest space
+     r←⎕NS''
+   ⍝ Set one thing
+     r.innerHTML←'id1' '<p>Hello</p>'
+
+     r.outerHTML←'id2' '<h1>Hello<h1>'
+     r.innerHTML←('id3' '<p>Hello</p>')('id4' '<p>World</p>')
+
+
+
+
+
+ }

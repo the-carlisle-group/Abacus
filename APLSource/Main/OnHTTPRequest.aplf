@@ -1,0 +1,16 @@
+ OnHTTPRequest←{
+     p←⎕NS''
+     h←⊃⍵
+     c←⎕JSON 9⊃⍵
+     p.HTMLRenderer←h
+     p.RequestContent←c
+     p.ResponseContent←⍬
+     _←(h._Context⍎c.aplcallback)p
+     z←⍵
+     z[3]←1
+     z[4]←200                       ⍝ Test for removal
+     z[5]←⊂'OK'                     ⍝
+     z[6]←⊂'application/javascript' ⍝
+     z[9]←⊂⎕JSON p.ResponseContent
+     z
+ }

@@ -1,0 +1,32 @@
+ Pace1←{
+     ⍝ Table
+     ⎕THIS.HR←##.HTMLRenderer
+     ⎕THIS.H←##.Main
+     ⍺←100 20
+     r c←⍺
+     h←HR.NewStandAlone 0
+     p←NewPage 0
+     m←⊃p H.ElementsWhere'Type' 'main'
+     td←{'Cell ',⍕⍵}¨⍳r c
+     th←'Column'∘,¨⍕¨⍳c
+     t←m H.NewTable td th
+     t.id←'table1'
+     tr←H.BodyRows t
+     tr.id←'row'∘,¨⍕¨⍳r
+     h1←H.DOM2HTML p
+     h.HTML←h1
+     dr←h HR.GetOuterHTMLById¨tr.id
+
+
+
+     _←h HR.DeleteElementById¨(r⍴0 1)/tr.id
+
+     _←h HR.DeleteElementById¨tr.id
+
+     ⍝ Won't work, HTML not 2-way
+     ⍝ d←H.HTML2DOM h.HTML
+     ⍝ t1←d H.ElementById'table1'
+     ⍝ br←H.BodyRows t1
+
+     0
+ }
