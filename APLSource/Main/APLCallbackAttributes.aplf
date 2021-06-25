@@ -1,5 +1,12 @@
  APLCallbackAttributes←{
-     0=⍵.⎕NC'OnClick':0 2⍴⊂''
-     a←⊂'onclick' 'sendAPLRequest(this)'
-     ↑a,⊂'data-apl-callback'⍵.OnClick
+     q←''''
+     n←'O'⍵.⎕NL ¯2
+     0=≢n:0 2⍴⊂''
+     ↑⍵{
+         e←q,⍵,q
+         m←⎕C
+         c←q,(⍺⍎⍵),q
+         (⎕C ⍵)('sendAPLRequest(event,',c,')')
+         ⍝ (⎕C ⍵)('sendAPLRequest(event, )')
+     }¨n
  }

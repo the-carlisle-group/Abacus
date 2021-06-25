@@ -1,5 +1,5 @@
  NewStandAlone←{
-     h←⍎'HTMLMain3'⎕WC'HTMLRenderer'
+     h←⍎'HTMLMain2'⎕WC'HTMLRenderer'
      h.InterceptedURLs←1 2⍴'*' 1
      h.onHTTPRequest←'OnHTTPRequest'
      h._Context←⊃⎕RSI

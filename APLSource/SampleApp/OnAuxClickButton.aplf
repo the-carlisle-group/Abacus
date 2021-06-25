@@ -1,0 +1,4 @@
+ OnAuxClickButton←{
+     ⎕←'Aux Button Click!'
+     0
+ }

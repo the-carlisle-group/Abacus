@@ -1,5 +1,4 @@
  BuildPage←{
-     ⎕THIS.H←##.Main
      New←H.New
      d←New'html'
      d.lang←'en'
@@ -11,8 +10,15 @@
      _←h New'h1' 'Sample HTML Renderer App'
      _←h New'h2' 'Trying out various techniques'
      m←b New'main'
-     id←{'Element',⍕⍵}¨⍳1000
-     _←m{e←⍺ New'h1'⍵ ⋄ e.id←⍵}¨id
+     bn1←m New'button' 'Button 1'
+     bn2←m New'button' 'Button 2'
+     bn1.type←'button'
+     bn1.id←'button1'
+     bn1.OnClick←'OnClickButton'
+     bn1.OnDblClick←'OnDblClickButton'
+     bn2.OnAuxClick←'OnAuxClickButton'
+     bn2.OnContextMenu←'OnContextMenu'
+     bn1.OnKeyDown←'OnKeyDown'
      f←b New'footer'
      _←f New'p' 'This is the footer'
      d.Style←##.CSS.ThorntonMelon 0

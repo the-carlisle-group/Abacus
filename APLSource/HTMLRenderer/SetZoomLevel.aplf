@@ -1,0 +1,4 @@
+ SetZoomLevel←{
+     j←'document.body.style.zoom="',(⍕⍵),'%"'
+     ⍺.ExecuteJavaScript j
+ }

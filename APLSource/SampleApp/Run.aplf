@@ -1,4 +1,6 @@
  Run←{
+     ⎕THIS.H←##.Main
+     ⎕THIS.HR←##.HTMLRenderer
      hr←##.HTMLRenderer.NewStandAlone 0
      hr.HTML←BuildPage 0
      hr

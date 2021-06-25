@@ -1,0 +1,8 @@
+ OnKeyDown←{
+     ⎕←'Key down!'
+     ⎕←'Key:'⍵.key
+     ⎕←'ctrlKey:'⍵.ctrlKey
+     ⎕←'altKey:'⍵.altKey
+     ⎕←'shiftKey:'⍵.shiftKey
+     0
+ }

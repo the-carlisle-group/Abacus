@@ -1,5 +1,5 @@
  Pace1←{
-     ⍝ Table
+     ⍝ Sending over many small content calls with an each
      ⎕THIS.HR←##.HTMLRenderer
      ⎕THIS.H←##.Main
      ⍺←100 20

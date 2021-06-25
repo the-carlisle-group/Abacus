@@ -1,0 +1,6 @@
+ OnClickButton←{
+
+     ⎕←'On Click!'
+
+     0
+ }

@@ -1,0 +1,4 @@
+ OnDblClickButton←{
+     ⎕←'On Dbl Click!'
+     0
+ }

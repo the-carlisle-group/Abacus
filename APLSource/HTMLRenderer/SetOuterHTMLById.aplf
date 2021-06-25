@@ -1,0 +1,7 @@
+ SetOuterHTMLById←{
+     ⍝ ⍺ ←→ HTMLRenderer
+     ⍝ ⍵ ←→ id, html
+     i t←⍵
+     j←'document.getElementById("',i,'").outerHTML = "',t,'";'
+     ⍺.ExecuteJavaScript j
+ }

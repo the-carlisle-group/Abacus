@@ -1,40 +1,23 @@
-// Main callback
-function processAPLResponse(v){
-     const e = document.getElementById (v.id);
-     e.innerHTML = v.innerHTML         
-}
-
-
-// Send a JSON payload in a POST, get JSON back
-async function sendAPLRequest(e){
+// Send GUI call to APL
+// Response is always 204-No Content
+//          and does not need to be handled.
+function sendAPLRequest(e,f){
+      e.preventDefault();                   // Maybe  only for certain events
       const u = 'http://dyalog_root/gui';
-      const c = e.getAttribute('data-apl-callback')
       const b = {
-                event: 'click',
-                id: e.id,
-                aplcallback: c 
+                event: e.type,
+                id: e.target.id,
+                aplcallback: f,
+                key: e.key, 
+                ctrlKey: e.ctrlKey,
+                altKey: e.altKey,
+                shiftKey: e.shiftKey
       };
       const i = {
            method: 'POST',
            body: JSON.stringify(b) 
       };
      const q = new Request(u,i);
-     const r = await fetch(q);
-     const j = await r.json();
-     j.forEach (processAPLResponse)
-}
-
-function sendAPLResponse(t,v){
-      const u = 'http://dyalog_root/aplresponse';
-      const b = {
-                token: t,
-                value: v
-      };
-      const i = {
-           method: 'POST',
-           body: JSON.stringify(b) 
-      };
-     const q = new Request(u,i);
-     const r = fetch(q)
+     fetch(q)
 }
 

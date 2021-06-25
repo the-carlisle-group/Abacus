@@ -1,6 +1,0 @@
- GetOuterHTMLById←{
-     ⍝ ⍺ ←→ HTMLRenderer
-     ⍝ ⍵ ←→ id
-     j←'document.getElementById("',⍵,'").outerHTML'
-     ⍺ ExecuteJavaScript j
- }

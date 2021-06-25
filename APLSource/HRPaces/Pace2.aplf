@@ -1,0 +1,27 @@
+ Pace2←{
+     ⍝ Sending over a lot of HTML in one call
+     ⍝ Table
+     ⎕THIS.HR←##.HTMLRenderer
+     ⎕THIS.H←##.Main
+     ⍺←100 20
+     r c←⍺
+     h←HR.NewStandAlone 0
+     p←NewPage 0
+     m←⊃p H.ElementsWhere'Type' 'main'
+     m.id←'main1'
+     h1←H.DOM2HTML p
+     h.HTML←h1
+     td←{'Cell ',⍕⍵}¨⍳r c
+     th←'Column'∘,¨⍕¨⍳c
+     t←H.NewTable td th
+     ⍝ t.id←'table1'
+     tr←H.BodyRows t
+     ⍝ tr.id←'row'∘,¨⍕¨⍳r
+     ht←(H.DOM2HTML t)~⎕UCS 13
+
+     _←h HR.SetInnerHTMLById'main1' ''
+     _←h HR.SetInnerHTMLById'main1'ht
+     _←h HR.SetInnerHTMLById'main1' ''
+     _←h HR.SetInnerHTMLById'main1'(∊{'<h1>hello ',⍵,'</h1>'}¨⍕¨⍳10000)
+     0
+ }

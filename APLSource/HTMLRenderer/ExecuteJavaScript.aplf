@@ -1,9 +1,0 @@
- ExecuteJavaScript←{
-     ⍝ ⍺ ←→ HTMLRenderer
-     ⍝ ⍵ ←→ JavaScript
-     ⍝ ← ←→ Result of JS expression
-     t←{}&0
-     j←'sendAPLResponse (',(⍕t),',',⍵,')'
-     _←⍺.ExecuteJavaScript j
-     ⊃⎕TGET t
- }
