@@ -1,0 +1,8 @@
+ ElementByTag←{
+     ⍝ ⍺ ←→ Element (or result of Elements ⍺)
+     ⍝ ⍵ ←→ Tag
+     ⍝ ← ←→ element
+     r←⍺ ElementsWhere'Tag'⍵
+     0=≢r:('tag not found: ',⍵)⎕SIGNAL 6
+     ⊃r
+ }

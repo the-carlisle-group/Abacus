@@ -2,6 +2,6 @@
      ⍝ ⍵ ←→ Table
      ⍝ ← ←→ Vector of <tr> elements in <tbody>
      c←⍵.Content
-     i←c.Type⍳⊂'tbody'
+     i←c.Tag⍳⊂'tbody'
      (i⊃c).Content
  }

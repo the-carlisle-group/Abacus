@@ -2,6 +2,6 @@
      ⍝ ⍵ ←→ Table
      ⍝ ← ←→ Vector of <tr> elements under <tfoot>
      e←⊃⌽⍵.Content
-     e.Type≢'tfoot':⍬
+     e.Tag≢'tfoot':⍬
      e.Content
  }

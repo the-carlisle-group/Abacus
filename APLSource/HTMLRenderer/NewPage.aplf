@@ -1,0 +1,5 @@
+ NewPage←{
+     h←##.Main.NewDocument 0
+     h.Script←JavaScript
+     h
+ }

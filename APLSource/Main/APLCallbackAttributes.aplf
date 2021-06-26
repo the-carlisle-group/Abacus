@@ -7,6 +7,5 @@
          m←⎕C
          c←q,(⍺⍎⍵),q
          (⎕C ⍵)('sendAPLRequest(event,',c,')')
-         ⍝ (⎕C ⍵)('sendAPLRequest(event, )')
      }¨n
  }

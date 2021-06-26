@@ -1,0 +1,6 @@
+ ElementsByTag←{
+     ⍝ ⍺ ←→ Element (or result of Elements ⍺)
+     ⍝ ⍵ ←→ Tag
+     ⍝ ← ←→ element
+     ⍺ ElementsWhere'Tag'⍵
+ }

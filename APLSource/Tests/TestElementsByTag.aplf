@@ -1,0 +1,16 @@
+ TestElementsByTag←{
+     H←##.Main
+     d←H.NewDocument 0
+     b←d H.ElementByTag'body'
+     h1←b H.New'h1' 'Header 1'
+     h2←b H.New'h2' 'Header 2'
+     p1←b H.New'p' 'Paragraph 1'
+     p2←b H.New'p' 'Paragraph 2'
+     p3←b H.New'p' 'Paragraph 3'
+     p←d H.ElementsByTag'p'
+     p≢p1 p2 p3:1
+     p1≠d H.ElementByTag'p':1
+     0≠≢d H.ElementsByTag'nosuch':1
+     h1 h2≢d H.ElementByTag¨'h1' 'h2':1
+     0
+ }

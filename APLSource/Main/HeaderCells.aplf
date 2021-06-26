@@ -2,6 +2,6 @@
      ⍝ ⍵ ←→ Table
      ⍝ ← ←→ Matrix of <th> elements
      e←⊃⍵.Content
-     e.Type≢'thead':⍬
+     e.Tag≢'thead':⍬
      ↑e.Content.Content
  }

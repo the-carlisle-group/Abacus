@@ -6,7 +6,7 @@
      r c←⍺
      h←HR.NewStandAlone 0
      p←NewPage 0
-     m←⊃p H.ElementsWhere'Type' 'main'
+     m←p H.ElementByTag'main'
      td←{'Cell ',⍕⍵}¨⍳r c
      th←'Column'∘,¨⍕¨⍳c
      t←m H.NewTable td th

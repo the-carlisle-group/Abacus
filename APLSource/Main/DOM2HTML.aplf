@@ -5,7 +5,7 @@
      m←↑,ConstructQXI ⍵
      t←1 EncodePre ⎕XML 4↑[1]m
      t←t InjectHTML m[;4]~0
-     ⍵.Type≢'html':t
+     ⍵.Tag≢'html':t
      t←⍵ InjectStyle t
      t←⍵ InjectScript t
      '<!DOCTYPE html>',(⎕UCS 13),t

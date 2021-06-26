@@ -1,6 +1,0 @@
- TestDocument←{
-     H←##.Main
-     d←H.NewDocument''
-     r←H.Compose d
-     r
- }

@@ -5,8 +5,8 @@
      IsString ⍵:⊂⍺''⍵(0 2⍴⊂'')0
      a←APLCallbackAttributes ⍵
      a←a⍪ComposeAttributes ⍵
-     3=≡⍵.Content:⊂⍺ ⍵.Type'⍃'a(⊃⊃⍵.Content)
+     3=≡⍵.Content:⊂⍺ ⍵.Tag'⍃'a(⊃⊃⍵.Content)
      c←Condense ⍵.Content
-     IsString c:⊂⍺ ⍵.Type c a 0
-     (⊂⍺ ⍵.Type''a 0),⊃,/(⍺+1)∇¨c
+     IsString c:⊂⍺ ⍵.Tag c a 0
+     (⊂⍺ ⍵.Tag''a 0),⊃,/(⍺+1)∇¨c
  }

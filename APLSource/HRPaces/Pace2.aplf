@@ -7,7 +7,7 @@
      r c←⍺
      h←HR.NewStandAlone 0
      p←NewPage 0
-     m←⊃p H.ElementsWhere'Type' 'main'
+     m←p H.ElementByTag'main'
      m.id←'main1'
      h1←H.DOM2HTML p
      h.HTML←h1
@@ -19,9 +19,4 @@
      ⍝ tr.id←'row'∘,¨⍕¨⍳r
      ht←(H.DOM2HTML t)~⎕UCS 13
 
-     _←h HR.SetInnerHTMLById'main1' ''
-     _←h HR.SetInnerHTMLById'main1'ht
-     _←h HR.SetInnerHTMLById'main1' ''
-     _←h HR.SetInnerHTMLById'main1'(∊{'<h1>hello ',⍵,'</h1>'}¨⍕¨⍳10000)
-     0
  }

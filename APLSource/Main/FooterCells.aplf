@@ -2,6 +2,6 @@
      ⍝ ⍵ ←→ Table
      ⍝ ← ←→ Matrix of <th> elements
      e←⊃⌽⍵.Content
-     e.Type≢'tfoot':⍬
+     e.Tag≢'tfoot':⍬
      ↑e.Content.Content
  }

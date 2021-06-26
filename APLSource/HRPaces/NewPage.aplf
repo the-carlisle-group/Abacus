@@ -1,11 +1,7 @@
  NewPage←{
-     New←H.New
-     d←New'html'
-     d.lang←'en'
-     hd←d New'head'
-     mt←hd New'meta'
-     mt.charset←'utf-8'
-     b←d New'body'
+     d←HR.NewPage 0
+     b←H.GetBodyElement d
+     ##.Main.ElementById
      h←b New'header'
      _←h New'h1' 'Sample HTML Renderer App'
      _←h New'h2' 'Trying out various techniques'
@@ -13,6 +9,6 @@
      f←b New'footer'
      _←f New'p' 'This is the footer'
      d.Style←##.CSS.ThorntonMelon 0
-     d.Script←H.JavaScript
+
      d
  }

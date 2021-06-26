@@ -2,16 +2,17 @@
 // Response is always 204-No Content
 //          and does not need to be handled.
 function sendAPLRequest(e,f){
-      e.preventDefault();                   // Maybe  only for certain events
+      e.preventDefault();              
       const u = 'http://dyalog_root/gui';
       const b = {
-                event: e.type,
-                id: e.target.id,
-                aplcallback: f,
-                key: e.key, 
-                ctrlKey: e.ctrlKey,
-                altKey: e.altKey,
-                shiftKey: e.shiftKey
+                Event: e.type,
+                Id: e.target.id,
+                Tag: e.target.tagName,
+                APLCallBack: f,
+                Key: e.key, 
+                CtrlKey: e.ctrlKey,
+                AltKey: e.altKey,
+                ShiftKey: e.shiftKey
       };
       const i = {
            method: 'POST',

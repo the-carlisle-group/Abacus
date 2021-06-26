@@ -1,0 +1,18 @@
+ TestNewTable←{
+     ⎕THIS.H←##.Main
+     bd←⊂'One' '1' 'Smith'
+     bd,←⊂'Two' '2' 'Jones'
+     bd,←⊂'Three' '3' 'Blake'
+     bd,←⊂'Four' '4' 'Codd'
+     bd←,¨↑bd
+     t←H.NewTable bd
+     bd≢⊃¨(H.Cells t).Content:1
+     hd←'Col' 'Col2' 'Col3'
+     t←H.NewTable bd hd
+     bd≢⊃¨(H.BodyCells t).Content:1
+     hd≢,⊃¨(H.HeaderCells t).Content:1
+     h←H.DOM2HTML t
+     t2←H.HTML2DOM h
+     ≢/(H.BodyCells¨t t2).Content:1
+     0
+ }
