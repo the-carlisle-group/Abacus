@@ -1,0 +1,8 @@
+ TestSuite←{
+     t←Run&0
+     _←⎕DL 1                         ⍝ Start app in thread
+     hr←##.HTMLRenderer.HTMLMain2    ⍝
+     _←hr ##.HTMLRenderer.FireClickOnId'button1'
+     _←⎕DL 5
+     'Done'
+ }

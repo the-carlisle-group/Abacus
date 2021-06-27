@@ -1,0 +1,5 @@
+ TestClickingButton1←{
+     _←⍺ HR.FireClickOnId'button1'
+
+     ⍝ How do we test the results?
+ }

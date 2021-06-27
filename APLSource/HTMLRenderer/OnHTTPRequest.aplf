@@ -3,7 +3,7 @@
      h←⊃⍵
      c←⎕JSON 9⊃⍵
      c.HTMLRenderer←h
-     _←(h._Context⍎c.aplcallback)c
+     _←(h._Context⍎c.APLCallBack)c
      z←⍵
      z[3 4 5]←1 204 'No Content'
      z
