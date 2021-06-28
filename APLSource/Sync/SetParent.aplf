@@ -1,0 +1,8 @@
+ SetParent←{
+     ⍝ ⍵ ←→ DOM
+     ⍺←0
+     e←{⍵/⍨326=⎕DR¨⍵}⍵.Content
+     0=≢e:0
+     e.Parent←⍵
+     ⍵ ∇¨e
+ }

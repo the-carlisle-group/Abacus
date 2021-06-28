@@ -1,0 +1,10 @@
+ SetOuterHTML←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ DOM content
+     _←⍺ SetProperty'outerHTML'⍵
+     n←H.HTML2DOM ⍵
+     p←⍺.Parent
+     i←p.Content⍳⍺
+     p.Content←(i↑p.Content),(i+1)↓p.Content
+     0
+ }

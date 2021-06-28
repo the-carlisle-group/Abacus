@@ -1,0 +1,6 @@
+ SetProperty←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Name,Value
+     n v←⍵
+     ⍺ ExecuteOnElement n,' = "',v,'"'
+ }

@@ -1,0 +1,3 @@
+ TagIndex←{
+     ⍵⍳⍨⍵.Document H.ElementsByTag ⍵.Tag
+ }

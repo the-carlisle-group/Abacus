@@ -19,9 +19,15 @@
      bn2.OnAuxClick←'OnAuxClickButton'
      bn2.OnContextMenu←'OnContextMenu'
      bn1.OnKeyDown←'OnKeyDown'
+     ⍝
+     a1←m New'article'
+     _←a1 New'h1' 'Article 1'
+     a2←m New'article'
+     _←a2 New'h1' 'Article 2'
+     ⍝
      f←b New'footer'
      _←f New'p' 'This is the footer'
      d.Style←##.CSS.ThorntonMelon 0
      d.Script←HR.JavaScript
-     H.DOM2HTML d
+     d
  }

@@ -2,6 +2,8 @@
      ⎕THIS.H←##.Main
      ⎕THIS.HR←##.HTMLRenderer
      hr←##.HTMLRenderer.NewStandAlone 0
-     hr.HTML←BuildPage 0
+     d←BuildPage 0
+     _←hr ##.Sync.Init d
+     hr.HTML←H.DOM2HTML d
      hr
  }

@@ -1,0 +1,7 @@
+ SetInnerHTML←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ DOM content
+     _←⍺ SetProperty'innerHTML'⍵
+     ⍺.Content←H.HTML2DOM ⍵
+     0
+ }

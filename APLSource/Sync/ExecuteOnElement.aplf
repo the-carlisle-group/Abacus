@@ -1,0 +1,9 @@
+ ExecuteOnElement←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ JS to follow e.[here]
+     i←TagIndex ⍺
+     t←⍺.Tag
+     j←'document.getElementsByTagName'
+     j,←'("',t,'").item(',(⍕i),').',⍵,';'
+     ⍺.Document.HTMLRenderer.ExecuteJavaScript j
+ }

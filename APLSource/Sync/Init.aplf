@@ -1,0 +1,11 @@
+ Init←{
+     ⍝ Connect APLDOM to HTMLRender
+     ⍝ ⍺ ←→ HR
+     ⍝ ⍵ ←→ DOM
+     _←SetParent ⍵
+     e←##.Main.Elements ⍵
+     e.Document←⍵
+     ⍺.APLDOM←⍵
+     ⍵.HTMLRenderer←⍺
+     ⍵
+ }
