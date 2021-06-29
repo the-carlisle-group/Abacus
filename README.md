@@ -6,7 +6,7 @@ Easy, catenate-free construction and manipulation of HTML with a document object
 
 ## HTMLRenderer
 
-Cross-platform desktop HTML UI usings Dyalog's HTMLRenderer,
+Cross-platform desktop HTML UI using Dyalog's HTMLRenderer,
 with JavaScript-free APLDOM-to-Browser synchronization. 
 
 ## CSS
