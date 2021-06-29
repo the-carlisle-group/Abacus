@@ -1,10 +1,13 @@
-# HTML, CSS, and Markdown for Dyalog APL
-
-It's just what it says:
+# HTML Framework for Dyalog APL
 
 ## HTML
 
-Easy, catenate-free construction of HTML with a document object model. 
+Easy, catenate-free construction and manipulation of HTML with a document object model - an APLDOM.
+
+## HTMLRenderer
+
+Cross-platform desktop HTML UI usings Dyalog's HTMLRenderer,
+with JavaScript-free APLDOM-to-Browser synchronization. 
 
 ## CSS
 
