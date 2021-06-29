@@ -16,6 +16,7 @@
      bn1.id←'button1'
      bn1.OnClick←'OnClickButton'
      bn1.OnDblClick←'OnDblClickButton'
+     bn2.OnClick←'OnClickButton'
      bn2.OnAuxClick←'OnAuxClickButton'
      bn2.OnContextMenu←'OnContextMenu'
      bn1.OnKeyDown←'OnKeyDown'

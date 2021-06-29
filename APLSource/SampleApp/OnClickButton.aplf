@@ -1,6 +1,7 @@
  OnClickButton←{
 
      ⎕←'On Click!'
-
+     ⎕←'Tag: ',⍵.Element.Tag
+     ⎕←'Context: ',⍵.Element.Content
      0
  }

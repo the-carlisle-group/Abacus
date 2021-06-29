@@ -2,13 +2,18 @@
 // Response is always 204-No Content
 //          and does not need to be handled.
 function sendAPLRequest(e,f){
-      e.preventDefault();              
+      e.preventDefault();   
+      const n = e.target.tagName;
+      const c = document.getElementsByTagName(n);
+      const a = Array.from(c);
+      const k = a.indexOf(e.target);
       const u = 'http://dyalog_root/gui';
       const b = {
                 Event: e.type,
-                Id: e.target.id,
-                Tag: e.target.tagName,
+                Tag: n,
+                TagIndex: k,
                 APLCallBack: f,
+                // Below should only be for key press events
                 Key: e.key, 
                 CtrlKey: e.ctrlKey,
                 AltKey: e.altKey,
@@ -18,7 +23,7 @@ function sendAPLRequest(e,f){
            method: 'POST',
            body: JSON.stringify(b) 
       };
-     const q = new Request(u,i);
-     fetch(q)
+      const q = new Request(u,i);
+      fetch(q)
 }
 

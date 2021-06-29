@@ -5,7 +5,7 @@
      _←SetParent ⍵
      e←##.Main.Elements ⍵
      e.Document←⍵
-     ⍺.APLDOM←⍵
+     ⍺.Document←⍵
      ⍵.HTMLRenderer←⍺
      ⍵
  }
