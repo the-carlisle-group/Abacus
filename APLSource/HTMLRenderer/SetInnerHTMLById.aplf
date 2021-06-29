@@ -1,8 +1,0 @@
- SetInnerHTMLById←{
-     ⍝ ⍺ ←→ HTMLRenderer
-     ⍝ ⍵ ←→ id, html
-     i←0⊃⍵
-     t←(1⊃⍵)~⎕UCS 10
-     j←'document.getElementById("',i,'").innerHTML = "',t,'";'
-     ⍺.ExecuteJavaScript j
- }

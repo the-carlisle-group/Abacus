@@ -1,8 +1,0 @@
- SetClassById←{
-     ⍝ ⍺ ←→ HTMLRenderer
-     ⍝ ⍵ ←→ id, class
-     i c←⍵
-     j←'document.getElementById("',i,'").className = "',c,'";'
-     _←⍺.ExecuteJavaScript j
-     0
- }

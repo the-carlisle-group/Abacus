@@ -1,6 +1,6 @@
  ExecuteOnElement←{
      ⍝ ⍺ ←→ Element
-     ⍝ ⍵ ←→ JS to follow e.[here]
+     ⍝ ⍵ ←→ Javascript
      i←TagIndex ⍺
      t←⍺.Tag
      j←'document.getElementsByTagName'

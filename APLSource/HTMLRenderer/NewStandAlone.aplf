@@ -1,8 +1,15 @@
  NewStandAlone←{
+     ⍝ ⍵ ←→ Document (APLDOM)
      ⎕THIS.H←##.Main
      h←⍎'HTMLMain2'⎕WC'HTMLRenderer'
      h.InterceptedURLs←1 2⍴'*' 1
      h.onHTTPRequest←'OnHTTPRequest'
      h._Context←⊃⎕RSI
+     _←SetParent ⍵
+     e←H.Elements ⍵
+     e.Document←⍵
+     h.Document←⍵
+     ⍵.HTMLRenderer←h
+     h.HTML←H.DOM2HTML ⍵
      h
  }
