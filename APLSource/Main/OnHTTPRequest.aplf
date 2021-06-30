@@ -5,7 +5,7 @@
      c.HTMLRenderer←h
      c.Tag←⎕C c.Tag
      d←h.Document
-     c.Element←c.TagIndex⊃d H.ElementsByTag c.Tag
+     c.Element←c.TagIndex⊃d ElementsByTag c.Tag
      _←(h._Context⍎c.APLCallBack)c
      z←⍵
      z[3 4 5]←1 204 'No Content'

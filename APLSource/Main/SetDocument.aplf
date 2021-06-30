@@ -1,0 +1,12 @@
+ SetDocument←{
+     ⍝ ⍺ ←→ HTMLRenderer
+     ⍝ ⍵ ←→ Document
+     ⍵=0:0
+     _←SetParent ⍵
+     e←Elements ⍵
+     e.Document←⍵
+     ⍺.Document←⍵
+     ⍵.HTMLRenderer←⍺
+     ⍺.HTML←DOM2HTML ⍵
+     0
+ }
