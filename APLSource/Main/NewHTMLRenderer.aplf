@@ -1,12 +1,10 @@
  NewHTMLRenderer←{
      ⍝ ⍺ ←→ [Parent Form]
      ⍝ ⍵ ←→ Document
-     ⍺←0
-     c←⍺≠0
+     ⍺←⎕THIS
+     c←⍺≠⎕THIS
      p←⊂'HTMLRenderer'
      p,←⊂'AsChild'c
-     p,←c/⊂'Posn'(0 0)
-     p,←c/⊂'Size'⍺.Size
      h←⍎'HTMLControl'⍺.⎕WC p
      h.InterceptedURLs←1 2⍴'*' 1
      h.onHTTPRequest←'OnHTTPRequest'

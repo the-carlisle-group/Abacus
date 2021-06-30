@@ -29,6 +29,5 @@
      f←b New'footer'
      _←f New'p' 'This is the footer'
      d.Style←##.CSS.ThorntonMelon 0
-     d.Script←HR.JavaScript
      d
  }
