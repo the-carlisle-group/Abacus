@@ -3,10 +3,14 @@
      h←⊃⍵
      c←⎕JSON 9⊃⍵
      c.HTMLRenderer←h
-     c.Tag←⎕C c.Tag
+     j←c.TargetIndex
+     k←c.CurrentTargetIndex
      d←h.Document
-     c.Element←c.TagIndex⊃d ElementsByTag c.Tag
-     _←(h._Context⍎c.APLCallBack)c
+     te ce←(Elements d)[j k]
+     c.Target←te
+     c.CurrentTarget←ce
+     s←GetContext ce
+     _←(s⍎ce⍎'On',c.Event)c
      z←⍵
      z[3 4 5]←1 204 'No Content'
      z

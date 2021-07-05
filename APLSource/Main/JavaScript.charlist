@@ -1,18 +1,17 @@
 // Send GUI call to APL
 // Response is always 204-No Content
 //          and does not need to be handled.
-function sendAPLRequest(e,f){
+function sendAPLRequest(e){
       e.preventDefault();   
-      const n = e.target.tagName;
-      const c = document.getElementsByTagName(n);
+      const c = document.getElementsByTagName("*");
       const a = Array.from(c);
-      const k = a.indexOf(e.target);
+      const j = a.indexOf(e.target);
+      const k = a.indexOf(e.currentTarget);
       const u = 'http://dyalog_root/gui';
       const b = {
                 Event: e.type,
-                Tag: n,
-                TagIndex: k,
-                APLCallBack: f,
+                TargetIndex: j,
+                CurrentTargetIndex: k,
                 // Below should only be for key press events
                 Key: e.key, 
                 CtrlKey: e.ctrlKey,
@@ -26,4 +25,3 @@ function sendAPLRequest(e,f){
       const q = new Request(u,i);
       fetch(q)
 }
-

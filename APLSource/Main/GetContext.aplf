@@ -1,0 +1,4 @@
+ GetContext←{
+     9=⍵.⎕NC'Context':⍵.Context
+     ∇ ⍵.Parent
+ }

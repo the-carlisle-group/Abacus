@@ -1,5 +1,8 @@
  TestClickingButton1←{
-     _←⍺ HR.FireClickOnId'button1'
-
-     ⍝ How do we test the results?
+     hr←⍵
+     d←hr.Document
+     e←d H.ElementById'button1'
+     _←e H.SimulateEvent'Click'
+     ⎕←'This happens after callback executes.'
+     0
  }

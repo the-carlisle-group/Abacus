@@ -1,7 +1,7 @@
  OnClickButton←{
-
-     ⎕←'On Click!'
-     ⎕←'Tag: ',⍵.Element.Tag
-     ⎕←'Context: ',⍵.Element.Content
+     ⎕THIS.ButtonCount+←1
+     ⍝ ⎕←'On Click!'
+     ⍝ ⎕←'Tag: ',⍵.Target.Tag
+     ⍝ ⎕←'Context: ',⍵.Target.Content
      0
  }

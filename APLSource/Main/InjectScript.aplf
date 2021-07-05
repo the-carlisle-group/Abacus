@@ -1,11 +1,10 @@
  InjectScript←{
      0=⍺.⎕NC'Script':⍵
-     i←1⍳⍨'<head>'⍷⍵
-     i=≢⍵:⍵
-     j←i+6
+     i←1⍳⍨'<script></script>'⍷⍵
+     j←i+8
      p←4⍴' '
      nl←⎕UCS 13
      s←⊃,/⍺.Script,¨nl
-     t←nl,p,'<script>',nl,s,p,'</script>'
+     t←p,nl,s,p
      (j↑⍵),t,j↓⍵
  }

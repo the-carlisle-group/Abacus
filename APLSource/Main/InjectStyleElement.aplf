@@ -1,0 +1,5 @@
+ InjectStyleElement←{
+     0=⍵.⎕NC'Style':0
+     h←⊃⍵ ElementsByTag'head'
+     h New'style'
+ }

@@ -1,0 +1,5 @@
+ InjectScriptElement←{
+     0=⍵.⎕NC'Script':0
+     h←⊃⍵ ElementsByTag'head'
+     h New'script'
+ }

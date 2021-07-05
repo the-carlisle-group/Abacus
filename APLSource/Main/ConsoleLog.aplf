@@ -1,0 +1,7 @@
+ ConsoleLog←{
+     ⍝ ⍺ ←→ HTMLRenderer
+     ⍝ ⍵ ←→ Javascript
+     ⍝ _←⍺.ShowDevTools 1
+     j←'console.log(',⍵,')'
+     ⍺.ExecuteJavaScript j
+ }

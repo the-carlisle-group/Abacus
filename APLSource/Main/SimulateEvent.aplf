@@ -1,0 +1,12 @@
+ SimulateEvent←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Event e,g. 'click'
+     n←'On',⍵
+     0=⍺.⎕NC n:0
+     h←⍺.Document.HTMLRenderer
+     p←⎕NS''
+     p.Event←⎕C ⍵
+     p.Element←⍺
+     p.HTMLRenderer←h
+     (h._Context⍎⍺⍎n)p
+ }

@@ -1,5 +1,5 @@
  ElementById←{
-     ⍝ ⍺ ←→ Element (or result of Elements ⍺)
+     ⍝ ⍺ ←→ Document, Element (or result of Elements ⍺)
      ⍝ ⍵ ←→ Id
      ⍝ ← ←→ element
      r←⍺ ElementsWhere'id'⍵

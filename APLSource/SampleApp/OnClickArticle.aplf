@@ -1,0 +1,4 @@
+ OnClickArticle←{
+     ⎕←'Article clicked.'
+     0
+ }

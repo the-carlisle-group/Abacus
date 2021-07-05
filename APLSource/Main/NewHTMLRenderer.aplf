@@ -8,6 +8,6 @@
      h←⍎'HTMLControl'⍺.⎕WC p
      h.InterceptedURLs←1 2⍴'*' 1
      h.onHTTPRequest←'OnHTTPRequest'
-     h._Context←⊃⎕RSI
+     ⍵.Context←⊃⎕RSI
      h⊣h SetDocument ⍵
  }

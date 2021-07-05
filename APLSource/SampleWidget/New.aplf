@@ -1,0 +1,15 @@
+ New←{
+     ⍝ Model for creating a custom HTML controls
+     ⍝ Maybe some CSS too?
+     ⍝ All the callbacks are located here
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ List items
+     ⎕THIS.H←##.Main
+     l←⍺ H.NewControl'ol'
+     l.Onclick←'OnClickList'
+     i←{H.New'li'⍵}¨⍵
+     i.Onclick←⊂'OnClickItem'
+     l.Content←i
+     l.class←'carlislelist'
+     l
+ }

@@ -1,0 +1,5 @@
+ OnClickItem←{
+     ⍝ ⍵.Element
+     ⎕←'Clicked item:',⍕∊⍵.Target.Content
+     0
+ }

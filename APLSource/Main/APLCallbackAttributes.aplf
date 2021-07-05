@@ -1,11 +1,6 @@
  APLCallbackAttributes←{
-     q←''''
      n←'O'⍵.⎕NL ¯2
      0=≢n:0 2⍴⊂''
-     ↑⍵{
-         e←q,⍵,q
-         m←⎕C
-         c←q,(⍺⍎⍵),q
-         (⎕C ⍵)('sendAPLRequest(event,',c,')')
-     }¨n
+     j←'sendAPLRequest(event)'
+     ↑⍵{(⎕C ⍵)j}¨n
  }
