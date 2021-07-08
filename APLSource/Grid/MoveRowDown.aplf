@@ -1,0 +1,8 @@
+ MoveRowDown←{
+     n←⊃⍺.CurCell
+     r1 r2←(H.BodyRows ⍺)[n,n+1]
+     c←r1.Content
+     _←r1 H.SetInnerHTML r2.Content
+     _←r2 H.SetInnerHTML c
+     ⍺ MoveCellTo ⍺.CurCell+1 0
+ }

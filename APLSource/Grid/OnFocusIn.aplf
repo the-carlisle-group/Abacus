@@ -1,0 +1,6 @@
+ OnFocusIn←{
+     e←⍵.Target
+     t←e.Parent.Parent.Parent
+     c←H.BodyCells t
+     t MoveCell⊃⍸c=e
+ }

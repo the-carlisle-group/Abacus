@@ -2,7 +2,7 @@
 // Response is always 204-No Content
 //          and does not need to be handled.
 function sendAPLRequest(e){
-      e.preventDefault();   
+      // e.preventDefault();   
       const c = document.getElementsByTagName("*");
       const a = Array.from(c);
       const j = a.indexOf(e.target);
@@ -12,6 +12,7 @@ function sendAPLRequest(e){
                 Event: e.type,
                 TargetIndex: j,
                 CurrentTargetIndex: k,
+                InnerHTML: e.target.innerHTML,
                 // Below should only be for key press events
                 Key: e.key, 
                 CtrlKey: e.ctrlKey,

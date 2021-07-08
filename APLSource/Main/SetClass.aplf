@@ -1,7 +1,7 @@
  SetClass←{
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ DOM content
-     _←⍺ SetProperty'class'⍵
+     _←⍺ SetProperty'className'⍵
      ⍺.class←⍵
      0
  }

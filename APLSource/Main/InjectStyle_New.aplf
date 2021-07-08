@@ -1,4 +1,5 @@
- InjectStyle←{
+ InjectStyle_New←{
+     ⍝ 0=⍺.⎕NC'Style':⍵
      e←Elements ⍺
      s←∊{6::⍬ ⋄ ⍵.Style}¨e
      0=≢s:⍵
@@ -6,7 +7,7 @@
      j←i+7
      p←4⍴' '
      nl←⎕UCS 13
-     v←ComposeRules s
-     t←p,nl,v,nl,p
+     s←{IsString ⍵:⍵ ⋄ ComposeRules ⍵}⍺.Style
+     t←p,nl,s,nl,p
      (j↑⍵),t,j↓⍵
  }

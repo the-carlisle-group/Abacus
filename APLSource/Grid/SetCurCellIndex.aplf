@@ -1,0 +1,4 @@
+ SetCurCellIndex←{
+     SetCurCell c
+
+ }

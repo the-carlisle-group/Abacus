@@ -1,0 +1,23 @@
+ New←{
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ Table Data
+     ⍝   ←→
+     ⎕THIS.H←##.Main
+     t←⍺ H.NewTable ⍵
+     t.CurCell←0 0
+     t.InCellMode←0
+     t.Context←⎕THIS
+     ⍝ t.Onclick←'OnClick'
+     t.Oninput←'OnInput'
+     t.Onchange←'OnChange'
+     t.Onkeydown←'OnKeyDown'
+     t.Onfocusout←'OnFocusOut'
+     t.Onfocusin←'OnFocusIn'
+     t.class←'tcgrid'
+     c←H.BodyCells t
+     c.tabIndex←'0'
+     c.class←⊂'notcurcell'
+     c[0;0].class←'curcell'
+     t.Style←BuildCSS 0
+     t
+ }

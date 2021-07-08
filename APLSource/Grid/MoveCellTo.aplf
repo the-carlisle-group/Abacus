@@ -1,0 +1,7 @@
+ MoveCellTo←{
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ New Location
+     m←H.BodyCells ⍺
+     e←⍺{3::0 ⋄ m[⍵]}⊂⍵
+     e H.FireEvent'focus'
+ }

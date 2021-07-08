@@ -1,0 +1,17 @@
+ OnKeyUp←{
+
+     e←⍵.Target
+     e.Tag≢'li':0
+     p←e.Parent
+
+
+     k←e.Key
+
+
+     i←p H.ElementsByTag'li'
+     _←(i~e)H.SetClass¨⊂''
+     _←e H.SetClass'selecteditem'
+     0
+
+
+ }

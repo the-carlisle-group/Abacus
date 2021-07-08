@@ -1,0 +1,6 @@
+ FinishEditing←{
+
+     _←⍵ H.SetProperty'contentEditable' 'false'
+     ⍺.InCellMode←0
+     ⍺ MoveCellTo ⍵
+ }

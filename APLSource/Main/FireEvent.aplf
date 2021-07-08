@@ -1,0 +1,6 @@
+ FireEvent←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Event
+     ⍺=0:0
+     ⍺ ExecuteOnElement ⍵,'()'
+ }

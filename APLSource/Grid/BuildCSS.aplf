@@ -1,0 +1,14 @@
+ BuildCSS←{
+     s←⍬
+     s,←r←H.NewRule'.tcgrid'
+     r.max_width←'38rem'
+     r.overflow←'auto'
+     r.font_family←'APL385 Unicode'
+     r.padding←'1rem'
+     r.font_size←'1rem'
+     r.background_color←'yellow'
+     s,←r←H.NewRule'.curcell'
+     r.background_color←'white'
+     r.border←'.1rem solid black'
+     s
+ }

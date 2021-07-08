@@ -1,0 +1,3 @@
+ Restore←{
+     ⍺ H.SetProperty'innerHTML'(⊃⍺.Content)
+ }

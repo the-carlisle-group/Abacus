@@ -1,8 +1,8 @@
  OnKeyDown←{
      ⎕←'Key down!'
-     ⎕←'Key:'⍵.key
-     ⎕←'ctrlKey:'⍵.ctrlKey
-     ⎕←'altKey:'⍵.altKey
-     ⎕←'shiftKey:'⍵.shiftKey
+     ⎕←'Key:'⍵.Key
+     ⎕←'ctrlKey:'⍵.CtrlKey
+     ⎕←'altKey:'⍵.AltKey
+     ⎕←'shiftKey:'⍵.ShiftKey
      0
  }

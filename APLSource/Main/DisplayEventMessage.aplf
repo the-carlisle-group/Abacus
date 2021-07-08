@@ -1,0 +1,4 @@
+ DisplayEventMessage←{
+     ⎕←('Event: ',⍵.Event)('Current: ',⍵.CurrentTarget.Tag)('Target: ',⍵.Target.Tag)
+     1:z←0
+ }

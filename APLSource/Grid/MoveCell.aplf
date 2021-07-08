@@ -1,0 +1,10 @@
+ MoveCell←{
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ New Location
+     m←H.BodyCells ⍺
+     c←⍺{3::0 ⋄ m[⍺.CurCell ⍵]}⍵
+     c≡0:0
+     _←c H.SetClass¨'notcurcell' 'curcell'
+     ⍺.CurCell←⍵
+     0
+ }

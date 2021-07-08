@@ -1,0 +1,7 @@
+ SetCurCell←{
+     ⍝ ⍵ ←→ Element
+     t←⍵.Parent.Parent.Parent
+     c←H.BodyCells t
+     l←(⍸c.class∊⊂'curcell')⊃c
+     l ⍵ H.SetClass¨'notcurcell' 'curcell'
+ }

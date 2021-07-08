@@ -1,0 +1,12 @@
+ BuildCSS←{
+     s←⍬
+     s,←r←H.NewRule'.carlislelist'
+     r.padding←'3rem'
+     r.font_size←'2rem'
+     r.background_color←'yellow'
+     r.border_radius←'1rem'
+     s,←r←H.NewRule'.carlislelist>.selected'
+     r.background_color←'white'
+     r.border←'.2rem black'
+     s
+ }

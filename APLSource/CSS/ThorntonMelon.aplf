@@ -5,5 +5,5 @@
      s,←Basic ⍵
      s,←Table ⍵
      s,←BodyHeader ⍵
-     ##.Main.ComposeRules s
+     s
  }

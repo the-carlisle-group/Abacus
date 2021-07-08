@@ -1,7 +1,8 @@
  DeleteElement←{
      ⍝ ⍵ ←→ Element
      ⍝ ← ←→ 0
+     _←⍵ ExecuteOnElement'remove()'
      p←⍵.Parent
      p.Content~←⍵
-     ⍵ ExecuteOnElement'remove()'
+     0
  }

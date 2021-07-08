@@ -1,0 +1,5 @@
+ GetCurCell←{
+     ⍝ ⍺ ←→ table
+     c←H.BodyCells ⍺
+     (⍸c.class∊⊂'curcell')⊃c
+ }

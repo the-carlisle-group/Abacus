@@ -1,0 +1,12 @@
+ StartInCellMode←{
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ Element
+     ⍺.InCellMode←1
+     _←⍵ H.SetProperty'contentEditable' 'true'
+
+     ⍝ ⍵.OnInput←'OnInput'
+     ⍝ ⍵ H.ExecuteOnElement'oninput="sendAPLRequest(event)"'
+     ⍝ Set change event               ##.Main.APLCallbackAttributes
+     ⍝ and/or input event
+     0
+ }

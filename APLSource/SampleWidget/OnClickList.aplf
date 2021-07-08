@@ -1,5 +1,0 @@
- OnClickList←{
-     ⍝ ⍵.Element
-     ⎕←'Clicked the list'
-     0
- }

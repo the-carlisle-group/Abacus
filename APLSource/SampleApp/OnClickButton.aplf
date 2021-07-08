@@ -1,4 +1,5 @@
  OnClickButton←{
+     0
      ⎕THIS.ButtonCount+←1
      ⍝ ⎕←'On Click!'
      ⍝ ⎕←'Tag: ',⍵.Target.Tag

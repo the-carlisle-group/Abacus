@@ -1,0 +1,18 @@
+ OnKeyDownInCell←{
+     t←⍵.CurrentTarget
+     e←⍵.Target
+     k←⍵.Key
+     c←⍵.CtrlKey≡⊂'true'
+     s←⍵.ShiftKey≡⊂'true'
+     a←⍵.AltKey≡⊂'true'
+     u←~c∨s∨a
+     i←t.CurCell
+     k≡'Escape':e Restore 0
+
+     u∧k≡'ArrowUp':e FinishEditing i-1 0
+     u∧k≡'ArrowDown':e FinishEditing i+1 0
+     u∧k≡'Enter':e FinishEditing i+1 0
+     c∧k≡'Enter':e FinishEditing i
+
+     0
+ }

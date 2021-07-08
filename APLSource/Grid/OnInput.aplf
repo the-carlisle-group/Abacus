@@ -1,0 +1,6 @@
+ OnInput←{
+     e←⍵.Target
+     e.CurrentValue←⍵.InnerHTML
+     ⎕←'New value: ',⍵.InnerHTML
+     0
+ }

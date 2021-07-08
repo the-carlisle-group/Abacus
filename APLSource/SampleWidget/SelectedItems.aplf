@@ -1,0 +1,5 @@
+ SelectedItems←{
+     ⍝ ⍺ ←→ List Object
+     ⍝ ← ←→ Boolean of selected items
+     (⍺ H.ElementsByTag'li').class∊⊂'selected'
+ }
