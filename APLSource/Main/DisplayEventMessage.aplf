@@ -1,4 +1,13 @@
  DisplayEventMessage←{
-     ⎕←('Event: ',⍵.Event)('Current: ',⍵.CurrentTarget.Tag)('Target: ',⍵.Target.Tag)
+
+     m←⊂'Event:'⍵.Event
+     m,←⊂'Current target tag:'⍵.CurrentTargetTag
+     m,←⊂'Target tag:'⍵.TargetTag
+     m,←⊂'APL current targetTag:'⍵.CurrentTarget.Tag
+     m,←⊂'APL target tag:'⍵.Target.Tag
+     m,←⊂'InnerHTML:'⍵.InnerHTML
+     ⍝ m,←⊂'Value:'⍵.Value
+     ⍝ m,←⊂'Key:'⍵.Key
+     ⎕←'-'⍪(⍕↑m)⍪'-'
      1:z←0
  }

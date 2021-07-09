@@ -1,0 +1,6 @@
+ TabCell←{
+     ⍺←1
+     i←,⍳⍴H.BodyCells ⍵
+     3::⍵.CurCell
+     (⍺+i⍳⊂⍵.CurCell)⊃i
+ }

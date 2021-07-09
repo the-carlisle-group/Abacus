@@ -1,0 +1,3 @@
+ GetAutoID←{
+     'table-',⍕{}&0
+ }

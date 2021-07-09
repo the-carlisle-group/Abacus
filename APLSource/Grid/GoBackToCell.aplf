@@ -1,0 +1,10 @@
+ GoBackToCell←{
+     ⍝ ⍵ ←→ Input
+     e←⍵.Parent
+     t←e.Parent.Parent.Parent
+     c←H.BodyCells t
+     _←c H.SetClass¨⊂'notcurcell'
+     _←e H.SetClass'curcell'
+     t.CurCell←∊⍸c=e
+     ⍵ H.FireEvent'focus'
+ }

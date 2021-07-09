@@ -1,18 +1,20 @@
  OnKeyDownInCell←{
      t←⍵.CurrentTarget
-     e←⍵.Target
+     i←⍵.Target               ⍝ Input element
+     e←i.Parent               ⍝ td element
+     t←e.Parent.Parent.Parent ⍝ Table  Yikes!
      k←⍵.Key
      c←⍵.CtrlKey≡⊂'true'
      s←⍵.ShiftKey≡⊂'true'
      a←⍵.AltKey≡⊂'true'
      u←~c∨s∨a
-     i←t.CurCell
-     k≡'Escape':e Restore 0
-
-     u∧k≡'ArrowUp':e FinishEditing i-1 0
-     u∧k≡'ArrowDown':e FinishEditing i+1 0
-     u∧k≡'Enter':e FinishEditing i+1 0
-     c∧k≡'Enter':e FinishEditing i
-
+     k≡'Escape':Restore i
+     u∧k≡'Enter':t MoveCell t.CurCell+1 0
+     s∧k≡'Enter':t MoveCell t.CurCell-1 0
+     c∧k≡'Enter':t MoveCell t.CurCell
+     u∧k≡'ArrowUp':t MoveCell t.CurCell-1 0
+     u∧k≡'ArrowDown':t MoveCell t.CurCell+1 0
+     u∧k≡'Tab':t MoveCell TabCell t
+     s∧k≡'Tab':t MoveCell ¯1 TabCell t
      0
  }

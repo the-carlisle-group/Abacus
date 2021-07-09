@@ -1,0 +1,8 @@
+ OnInputBlur←{
+     i←⍵.Target
+     e←i.Parent
+     i.CurrentValue≡'crap':GoBackToCell i
+     e.Content←⊂i.CurrentValue
+     _←e H.SetProperty'innerHTML'i.CurrentValue
+     0
+ }

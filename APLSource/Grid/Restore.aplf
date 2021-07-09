@@ -1,3 +1,6 @@
  Restore←{
-     ⍺ H.SetProperty'innerHTML'(⊃⍺.Content)
+     e←⍵.Parent
+     v←⍵.OriginalValue
+     ⍵.CurrentValue←v
+     ⍵ H.ExecuteOnElement'value = "',v,'"'
  }

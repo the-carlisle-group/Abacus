@@ -1,0 +1,5 @@
+ DisplayTable←{
+     m←⍕(H.BodyCells ⍵).Content
+     ⎕←'-'⍪m⍪'-'
+     0
+ }
