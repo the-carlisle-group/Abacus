@@ -1,0 +1,6 @@
+ GridData←{
+     n←'Name' 'Expression'
+     c1←'NumberOfLoans' 'TotalBalance' 'Percent' 'WAC'
+     c2←'count LoanID' 'sum Balance' 'percentDown Balance' 'weightedAverage Rate Balance'
+     (⍉↑c1 c2)n
+ }

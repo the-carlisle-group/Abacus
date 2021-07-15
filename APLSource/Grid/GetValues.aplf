@@ -1,0 +1,4 @@
+ GetValues←{
+     ⍝ ⍵ ←→ Table
+     ⊃¨(H.BodyCells ⍵).Content
+ }

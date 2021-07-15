@@ -1,0 +1,12 @@
+ Run←{
+     ⎕THIS.H←##.Main
+     p←⎕NS''
+     p.Caption←'Sample Form'
+     p.Title←'A Sample Dialog Box'
+     p.Subtitle←'This is a resizable, modal dialog box.'
+     p.OnOK←'OnOK'
+     p.OnCancel←'OnCancel'
+     p.Content←##.Grid.New GridData 0
+     f←##.DialogForm.New p
+     f.Wait
+ }

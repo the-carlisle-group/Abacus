@@ -1,0 +1,4 @@
+ OnClickMenuItem←{
+     ⎕←'MenuItemClicked!'
+     0
+ }

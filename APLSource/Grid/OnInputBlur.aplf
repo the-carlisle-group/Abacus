@@ -2,6 +2,8 @@
      i←⍵.Target
      e←i.Parent
      i.CurrentValue≡'crap':GoBackToCell i
+     t←e.Parent.Parent.Parent
+     t.Changed←1
      e.Content←⊂i.CurrentValue
      _←e H.SetProperty'innerHTML'i.CurrentValue
      0

@@ -1,4 +1,0 @@
- OnContextMenu←{
-     ⎕←'On Context menu!'
-     0
- }

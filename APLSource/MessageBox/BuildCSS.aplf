@@ -1,0 +1,20 @@
+ BuildCSS←{
+     s←⍬
+     ⍝ Message
+     s,←r←H.NewRule'p'
+     r.padding←'1rem'
+     r.text_align←'center'
+     r.font_size←'2rem'
+     r.font_family←'Arial'
+     ⍝ Buttons
+     s,←r←H.NewRule'.buttons'
+     r.display←'flex'
+     r.justify_content←'center'
+     ⍝ Buttons
+     s,←r←H.NewRule'button'
+     r.margin←'.25rem'
+     r.width←'8rem'
+     r.height←'2.5rem'
+     r.font_size←'1.25rem'
+     s
+ }

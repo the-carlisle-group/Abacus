@@ -1,4 +1,4 @@
- BuildCSS←{
+ BuildCSS_orig←{
      ⍝ ⍵ ←→ Table
      ⍝ Each tcgrid id needs its own CSS, as cols differ.
      ⍝ But some rules could be common - use class
@@ -21,28 +21,17 @@
 
      ⍝ Table
      s,←r←H.NewRule id
-     r.border_collapse←'collapse'
+     ⍝ r.margin←'4rem'
      r.table_layout←'fixed'
      r.overflow←'inherit'
      position←'inherit'
      (top left bottom right)←⊂'inherit'
 
-     ⍝ Cells: th td
-     s,←r←H.NewRule'th,td'
-     r.padding←'.2rem .5rem'
-     r.border←'solid .5px gray'
-
-     ⍝ thead
-     s,←r←H.NewRule'thead'
-     r.font_family←'Arial'
-     r.font_size←'1.1rem'
-
-     ⍝ Body
-     s,←r←H.NewRule'tbody'
      r.font_family←'APL385 Unicode'
-     r.font_size←'1.25rem'
+     ⍝ r.padding←'1rem'
+     r.font_size←'2rem'
 
-  ⍝   ⍝ Columns
+     ⍝ Columns
      n←1⊃⍴H.BodyCells ⍵
      cs←{id,' td:nth-child(',⍵,')'}¨⍕¨1+⍳n
      s,←r←H.NewRule¨cs

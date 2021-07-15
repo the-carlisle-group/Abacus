@@ -2,9 +2,11 @@
      ⍝ ⍺ ←→ Parent
      ⍝ ⍵ ←→ Table Data
      ⍝   ←→
+     ⍺←⊣
      ⎕THIS.H←##.Main
      t←⍺ H.NewTable ⍵
      t.id←GetAutoID 0
+     t.Changed←0
      t.CurCell←0 0
      t.Context←⎕THIS
      t.Onclick←'OnClick'

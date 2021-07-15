@@ -1,5 +1,4 @@
  DisplayTable←{
-     m←⍕(H.BodyCells ⍵).Content
-     ⎕←'-'⍪m⍪'-'
+     ⎕←'-'⍪(⍕GetValues ⍵)⍪'-'
      0
  }

@@ -1,5 +1,6 @@
  NewDocument←{
      h←New'html'
+     h.Size←900 1200
      h.lang←'en'
      hd←h New'head'
      mt←hd New'meta'

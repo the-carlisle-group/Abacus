@@ -1,0 +1,19 @@
+ New←{
+     p←⍵
+     ⎕THIS.H←##.Main
+     f←H.NewDocument 0
+     b←f H.ElementByTag'body'
+     hd←b H.New'header'
+     h1←hd H.New'h1'p.Title
+     h2←hd H.New'h2'p.Subtitle
+     m←b H.New'main'p.Content
+     ft←b H.New'footer'
+     ok←ft H.New'button' 'OK'
+     ok.Onclick←(⊃⎕NSI),'.',p.OnOK
+     cl←ft H.New'button' 'Cancel'
+     cl.Onclick←(⊃⎕NSI),'.',p.OnCancel
+     f.Style←BuildCSS 0
+     r←1 H.NewModalForm f
+     r.Caption←p.Caption
+     r
+ }

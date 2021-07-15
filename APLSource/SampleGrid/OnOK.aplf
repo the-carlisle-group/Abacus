@@ -1,0 +1,12 @@
+ OnOK←{
+     ⍝ Add ⍵.Document
+     ⍝     ⍵.Form
+     ⍝
+     ⎕←'The OK Button was pressed!'
+     d←⍵.Target.Document
+     t←d H.ElementByTag'table'
+     v←##.Grid.GetValues t
+     _←##.Grid.DisplayTable t
+     _←⎕NQ ⍵.HTMLRenderer'Close' ⍝ 1 or .Close gives weird error
+     0
+ }

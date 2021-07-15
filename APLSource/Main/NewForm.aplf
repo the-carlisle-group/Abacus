@@ -1,13 +1,10 @@
- NewHTMLRenderer←{
-     ⍝ ⍺ ←→ [Parent Form]
+ NewForm←{
      ⍝ ⍵ ←→ Document
-     ⍺←⎕THIS
-     c←⍺≠⎕THIS
      p←⊂'HTMLRenderer'
-     p,←⊂'AsChild'c
      p,←⊂'Coord' 'RealPixel'
      p,←⊂'Size'⍵.Size
-     h←⍎'HTMLControl'⍺.⎕WC p
+     n←NextFormName 0
+     h←⍎n ⎕WC p
      h.InterceptedURLs←1 2⍴'*' 1
      h.onHTTPRequest←'OnHTTPRequest'
      ⍵.Context←⊃⎕RSI

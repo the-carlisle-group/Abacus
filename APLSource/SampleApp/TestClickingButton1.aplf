@@ -1,8 +1,0 @@
- TestClickingButton1←{
-     hr←⍵
-     d←hr.Document
-     e←d H.ElementById'button1'
-     _←e H.SimulateEvent'Click'
-     ⎕←'This happens after callback executes.'
-     0
- }

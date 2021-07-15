@@ -1,0 +1,3 @@
+ NextFormName←{
+     ⊃(↓'G<hr99>'⎕FMT⍳100)~⎕NL ¯9
+ }

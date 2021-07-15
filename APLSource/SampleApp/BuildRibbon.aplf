@@ -1,0 +1,12 @@
+ BuildRibbon←{
+
+
+
+     'File'
+     'Open' 'OnOpen'
+     'Save' 'OnSave'
+     'Close' 'OnClose'
+
+
+
+ }
