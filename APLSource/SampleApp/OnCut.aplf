@@ -1,0 +1,4 @@
+ OnCut←{
+     ⎕←'The cut callback!'
+     0
+ }

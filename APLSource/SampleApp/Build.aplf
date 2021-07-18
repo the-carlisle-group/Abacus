@@ -1,11 +1,10 @@
  Build←{
      New←H.New
-     d←H.NewDocument 0
-     b←d H.ElementByTag'body'
-     hd←b H.New'header'
-     r←hd ##.Ribbon.New''
-     m←b H.New'main'
-     ft←b H.New'footer'
-     d.Style←BuildStyle 0
+     d←##.TriDocument.New 0
+     d.Caption←'Sample Application'
+     hd←H.GetHeader d
+     r←hd BuildRibbon''
+     ft←H.GetFooter d
+     _←ft H.New'h1' 'This is some content in the footer, it must have content, or it will not show up.'
      d
  }

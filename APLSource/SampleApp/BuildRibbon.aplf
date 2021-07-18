@@ -1,12 +1,6 @@
  BuildRibbon←{
-
-
-
-     'File'
-     'Open' 'OnOpen'
-     'Save' 'OnSave'
-     'Close' 'OnClose'
-
-
-
+     p←⎕NS''
+     p.Menus←'File' 'Edit' 'Help'
+     p.MenuItems←('New' 'Open' 'Save' 'SaveAs')('Grid' 'Cut' 'Copy' 'Paste' 'Delete')('About' 'Info')
+     ⍺ ##.Ribbon.New p
  }

@@ -2,49 +2,20 @@
      s←⍬
      ⍝ Body
      s,←r←H.NewRule'body'
+     r.display←'flex'
+     r.min_height←'97vh'
+     r.max_height←'97vh'
+     r.flex_direction←'column'
      ⍝ Header
-     s,←r←H.NewRule'header'
-     r.padding←'1rem'
-     r.position←'fixed'
-     r.(top left right)←⊂'0'
-     r.height←'6rem'
-     r.background_color←'blue'
-     ⍝ Header/h1
-     s,←r←H.NewRule'header>h1'
-     r.margin←0
-     r.padding←0
-     r.font_size←'2rem'
-     r.font_family←'Arial'
-     r.font_weight←'normal'
-     ⍝ Header/h2
-     s,←r←H.NewRule'header>h2'
-     r.font_size←'1.25rem'
-     r.font_family←'Arial'
-     r.font_weight←'normal'
-     r.margin_left←'3rem'
-     r.margin_top←'.1rem'
+     s,←r←H.NewRule'body>header'
+     r.background_color←'gray'
      ⍝ Main
-     s,←r←H.NewRule'main'
-     r.padding←'2rem'
-     r.position←'fixed'
-     r.(top left bottom right)←'6rem' '0' '4rem' '0'
+     s,←r←H.NewRule'body>main'
+     r.flex←1
      r.background_color←'lightgray'
      r.overflow←'auto'
      ⍝ Footer
-     s,←r←H.NewRule'footer'
-     r.position←'fixed'
-     r.(left right bottom)←0
-     r.height←'4rem'
-     r.background_color←'whitesmoke'
-     r.padding←'0 2rem'
-     r.display←'flex'
-     r.align_items←'center'
-     r.justify_content←'flex-end'
-     ⍝ Buttons
-     s,←r←H.NewRule'footer>button'
-     r.margin←'.5rem'
-     r.width←'8rem'
-     r.height←'2.5rem'
-     r.font_size←'1.25rem'
+     s,←r←H.NewRule'body>footer'
+     r.background_color←'gray'
      s
  }

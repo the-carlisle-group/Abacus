@@ -1,0 +1,6 @@
+ CreateMenuItems←{
+     i←{H.New'li'}¨⍵
+     b←i{⍺ H.New'button'⍵}¨⍵
+     b.Onclick←'On'∘,¨⍵
+     i
+ }

@@ -1,0 +1,3 @@
+ GetMain←{
+     ⍵ ElementByTag'main'
+ }

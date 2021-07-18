@@ -1,0 +1,4 @@
+ OnDelete←{
+     ⎕←'The delete callback!'
+     0
+ }

@@ -1,5 +1,9 @@
  Run←{
      ⎕THIS.H←##.Main
      d←Build 0
-     H.NewHTMLRenderer d
+     r←H.NewForm d
+     r.Wait
+
+
+
  }

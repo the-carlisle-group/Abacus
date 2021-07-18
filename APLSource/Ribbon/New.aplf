@@ -1,19 +1,19 @@
  New←{
      ⍺←0
-     m←'File' 'Edit' 'Help'
-     i←⊂'Open' 'Save' 'Save As'
-     i,←⊂'Cut' 'Copy' 'Paste'
-     i,←⊂'User Guide' 'Reference' 'About' 'Info'
+     p←⍵
+     m←p.Menus
+     i←p.MenuItems
      ⎕THIS.H←##.Main
      r←⍺ H.NewControl'nav'
      r.class←'ribbon'
      mb←r H.New'ul'
-     mb.class←'menubar'
-     m←{mb H.New'li'⍵}¨m
-     m.Onclick←⊂'OnClickMenu'
-     mi←r H.New'ul'
-     i←{mi H.New'li'⍵}¨⊃i
-     i.OnClick←⊂'OnClickMenuItem'
-     ⍝ r.Style←BuildCSS''
+     li←{mb H.New'li'}¨m
+     bn←li{⍺ H.New'button'⍵}¨m
+     bn.Onclick←⊂'OnClickMenu'
+     bn.MenuItems←i
+     mi←r H.New'ul'(CreateMenuItems⊃i)
+     mi.Context←⊃⎕RSI
+     bn.MenuItemList←mi
+     r.Style←BuildCSS''
      r
  }

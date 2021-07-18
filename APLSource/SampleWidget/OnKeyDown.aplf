@@ -1,8 +1,0 @@
- OnKeyDown←{
-     e←⍵.Target
-     e.Tag≢'li':0
-     ⍵.Key≡'Delete':OnDelete e
-     ⍵.Key≡'      :
-
-     0
- }

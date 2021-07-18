@@ -11,6 +11,7 @@ function sendAPLRequest(e){
       const b = {
                 Event: e.type,
                 Value: e.target.value,
+                Name: e.target.name,
                 TargetTag: e.target.tagName,
                 CurrentTargetTag: e.currentTarget.tagName, 
                 TargetIndex: j,

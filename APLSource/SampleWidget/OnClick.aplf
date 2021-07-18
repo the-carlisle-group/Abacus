@@ -1,5 +1,0 @@
- OnClick←{
-     e←⍵.Target
-     e.Tag≢'li':0
-     Select e
- }

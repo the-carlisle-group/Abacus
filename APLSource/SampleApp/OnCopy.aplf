@@ -1,0 +1,4 @@
+ OnCopy←{
+     ⎕←'The copy callback!'
+     0
+ }

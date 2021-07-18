@@ -1,0 +1,4 @@
+ OnSaveAs←{
+     ⎕←'The save as callback!'
+     0
+ }

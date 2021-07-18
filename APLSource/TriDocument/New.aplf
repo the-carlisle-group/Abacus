@@ -1,0 +1,11 @@
+ New←{
+     ⎕THIS.H←##.Main
+     d←H.NewDocument 0
+     d.Size←900 1200
+     b←d H.ElementByTag'body'
+     hd←b H.New'header'
+     m←b H.New'main'
+     ft←b H.New'footer'
+     d.Style←BuildCSS 0
+     d
+ }

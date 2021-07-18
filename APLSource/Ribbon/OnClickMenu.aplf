@@ -1,4 +1,7 @@
  OnClickMenu←{
-     ⎕←'Menu clicked'
+     b←⍵.Target
+     c←CreateMenuItems b.MenuItems
+     l←b.MenuItemList
+     _←l H.SetInnerHTML c
      0
  }

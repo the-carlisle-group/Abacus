@@ -7,6 +7,5 @@
      p.OnOK←'OnOK'
      p.OnCancel←'OnCancel'
      p.Content←##.Grid.New GridData 0
-     f←##.DialogForm.New p
-     f.Wait
+     ##.DialogForm.Run p
  }

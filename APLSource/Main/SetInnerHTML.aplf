@@ -2,7 +2,8 @@
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ DOM or HTML
      d h←DOMandHTML ⍵
-     _←⍺ SetProperty'innerHTML'h
+     _←⍺ SetProperty'innerHTML'(h~⎕UCS 13)
      ⍺.Content←d
+     _←SetParent ⍺
      0
  }

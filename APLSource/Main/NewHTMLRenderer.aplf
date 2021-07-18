@@ -1,6 +1,7 @@
  NewHTMLRenderer←{
      ⍝ ⍺ ←→ [Parent Form]
      ⍝ ⍵ ←→ Document
+     OBSOLETE
      ⍺←⎕THIS
      c←⍺≠⎕THIS
      p←⊂'HTMLRenderer'

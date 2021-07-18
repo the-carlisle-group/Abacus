@@ -1,7 +1,0 @@
- Select←{
-     ⍝ ⍵ ←→ Element
-     p←⍵.Parent
-     i←p H.ElementsByTag'li'
-     _←i H.SetClass¨⊂'unselected'
-     ⍵ H.SetClass'selected'
- }

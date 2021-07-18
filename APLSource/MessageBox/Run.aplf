@@ -1,20 +1,21 @@
  Run←{
      ⍺←1
      ~⍺:0
-     m bn←2↑(⊆⍵),⊂'OK' 'Cancel'
+     t bn←2↑(⊆⍵),⊂'OK' 'Cancel'
      ⎕THIS.H←##.Main
-     f←H.NewDocument 0
-     b←f H.ElementByTag'body'
+     d←##.TriDocument.New 0
+     b←H.GetBody d
      b.Onkeydown←'OnKeyDown'
-     p←b H.New'p'm
-     d←b H.New'div'
-     d.class←'buttons'
-     be←{d H.New'button'⍵}¨bn
+     m←H.GetMain d
+     _←m H.New'p't
+     f←H.GetFooter d
+     be←{f H.New'button'⍵}¨bn
      (⊃be).autofocus←'autofocus'
      be.Onclick←⊂'OnClick'
-     f.Style←BuildCSS 0
-     f.Size←400 900
-     r←H.NewModalForm f
+     d.Style,←BuildCSS 0
+     d.Size←400 900
+     d.Context←⎕THIS
+     r←H.NewModalForm d
      r.Result←¯1
      r.Caption←'Warning'
      rc←r.Wait

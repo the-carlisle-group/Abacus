@@ -1,0 +1,20 @@
+ Run←{
+     p←⍵
+     ⎕THIS.H←##.Main
+     f←##.TriDocument.New 0
+     f.Context←⊃⎕RSI
+     hd←H.GetHeader f
+     h1←hd H.New'h1'p.Title
+     h2←hd H.New'h2'p.Subtitle
+     m←H.GetMain f
+     m.Content←p.Content
+     ft←H.GetFooter f
+     ok←ft H.New'button' 'OK'
+     ok.Onclick←p.OnOK
+     cl←ft H.New'button' 'Cancel'
+     cl.Onclick←p.OnCancel
+     f.Style,←BuildCSS 0
+     r←1 H.NewModalForm f
+     r.Caption←p.Caption
+     r.Wait
+ }

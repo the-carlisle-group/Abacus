@@ -1,0 +1,7 @@
+ Maximize←{
+     ⍝ DOES Not WORK!
+     j←'window.resizeTo(window.screen.availWidth,window.screen.availHeight);'
+     j←'window.resizeTo(400,500);'
+
+     ⍵.ExecuteJavaScript j
+ }
