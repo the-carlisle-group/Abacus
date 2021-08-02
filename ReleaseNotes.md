@@ -1,4 +1,21 @@
-# HTML Release 0.0.2                    
+# HTML Release 0.0.3                    
+1. Restore NewHTMLRenderer function
+2. Changes
+3. Exploratory work on components, dialog boxes, and application architecture
+4. Exploratory work on grid, continued.
+5. Exploratory work on HTML grid and custom controls
+6. Rework event handling
+7. Fix up sample app
+8. Update README.md
+9. Refactor Sync space into HTMLRenderer space
+10. Update README.md
+11. More work on synchronized DOM
+12. Start work on synchronzed DOM
+13. Fix OnHTTPRequest
+14. Rename Type property to Tag
+15. Add general event handling
+
+# HTML Release 0.0.2 2021-06-22 07:36:22
 1. Add support for HTMLRenderer
 2. Add support for preformatted HTML
 3. Rewrite NewTable, add table helper methods
