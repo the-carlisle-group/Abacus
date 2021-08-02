@@ -1,16 +1,11 @@
  NewHTMLRenderer←{
-     ⍝ ⍺ ←→ [Parent Form]
-     ⍝ ⍵ ←→ Document
-     OBSOLETE
-     ⍺←⎕THIS
-     c←⍺≠⎕THIS
+     ⍝ For HTMLRenderer embedded under ⎕WC Forms
+     ⍝ ⍺ ←→ Parent Form/Subform
+     ⍝ ⍵ ←→ Name
      p←⊂'HTMLRenderer'
-     p,←⊂'AsChild'c
-     p,←⊂'Coord' 'RealPixel'
-     p,←⊂'Size'⍵.Size
-     h←⍎'HTMLControl'⍺.⎕WC p
+     p,←⊂'AsChild' 1
+     h←⍎⍵ ⍺.⎕WC p
      h.InterceptedURLs←1 2⍴'*' 1
      h.onHTTPRequest←'OnHTTPRequest'
-     ⍵.Context←⊃⎕RSI
-     h⊣h SetDocument ⍵
+     h
  }
