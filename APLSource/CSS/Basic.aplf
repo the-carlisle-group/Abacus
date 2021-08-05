@@ -8,6 +8,10 @@
      r.color←'black'
      r.text_decoration←'none'
      ⍝ *******************
+     s,←r←Rule'p>a'
+     r.color←'blue'
+     r.text_decoration←'none'
+     ⍝ *******************
      s,←r←Rule'h1'
      r.margin←'1rem 0 .25rem 0'
      r.font_weight←'bold'
@@ -59,8 +63,8 @@
      r.margin_right←'auto'
      r.max_width←'100%'
      r.height←'auto'
-
-
+     r.margin_top←'1rem'
+     r.margin_bottom←'1rem'
 
      s
  }

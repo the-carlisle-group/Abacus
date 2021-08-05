@@ -1,6 +1,5 @@
  NewDocument←{
      h←New'html'
-
      h.lang←'en'
      hd←h New'head'
      mt←hd New'meta'

@@ -1,0 +1,8 @@
+ LoadingAnimation←{
+     ⍝ ← ←→  HTML
+     b←New¨5⍴⊂'div' 'blah'
+     b.class←'rect'∘,¨⍕¨1+⍳5
+     sp←New'div'b
+     sp.class←'spinner'
+     DOM2HTML sp
+ }
