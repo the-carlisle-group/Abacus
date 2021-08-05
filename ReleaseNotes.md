@@ -1,4 +1,7 @@
-# HTML Release 0.0.3                    
+# HTML Release 0.0.4                    
+1. Add loading animation page
+
+# HTML Release 0.0.3 2021-08-02 12:15:56
 1. Restore NewHTMLRenderer function
 2. Changes
 3. Exploratory work on components, dialog boxes, and application architecture
