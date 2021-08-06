@@ -1,0 +1,4 @@
+ ScrollIntoView←{
+     ⍝ ⍵ ←→ Element
+     ⍵ ExecuteOnElement'scrollIntoViewIfNeeded()'
+ }
