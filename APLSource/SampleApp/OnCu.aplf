@@ -1,4 +1,0 @@
- OnCu←{
-     ⎕←'The cut callback!'
-     0
- }
