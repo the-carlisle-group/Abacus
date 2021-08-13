@@ -1,4 +1,4 @@
-# HTML Framework for Dyalog APL
+# Abacus, an HTML Framework for Dyalog APL
 
 ## HTML
 
