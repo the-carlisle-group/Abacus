@@ -1,10 +1,14 @@
  InjectScript←{
      0=⍺.⎕NC'Script':⍵
+     e←Elements ⍺
+     v←⊃,/{6::⍬ ⋄ ⍵.PreventDefault}¨e
+     k←(⎕JSON⍠'Compact' 0)v
+     d←'const PreventDefaultList = ',k,';'
      i←1⍳⍨'<script></script>'⍷⍵
      j←i+8
      p←4⍴' '
      nl←⎕UCS 13
      s←⊃,/⍺.Script,¨nl
-     t←p,nl,s,p
+     t←p,nl,d,nl,s,p
      (j↑⍵),t,j↓⍵
  }

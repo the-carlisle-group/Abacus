@@ -1,0 +1,10 @@
+ PreventDefault←{
+     ⍝ A list of events to prevent default
+     ⍝ Current Target class, Target tag, Event, Key
+     r←⍬
+     r,←⊂'tcgrid,TD,keydown,ArrowLeft'
+     r,←⊂'tcgrid,TD,keydown,ArrowRight'
+     r,←⊂'tcgrid,TD,keydown,ArrowUp'
+     r,←⊂'tcgrid,TD,keydown,ArrowDown'
+     r
+ }

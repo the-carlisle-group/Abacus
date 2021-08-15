@@ -6,5 +6,6 @@
      c≡0:0
      _←c H.SetClass¨'notcurcell' 'curcell'
      ⍺.CurCell←⍵
-     (1⊃c)H.FireEvent'focus'
+     _←(1⊃c)H.FireEvent'focus'
+     0
  }

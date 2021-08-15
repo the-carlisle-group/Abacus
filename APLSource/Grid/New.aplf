@@ -12,6 +12,7 @@
      t.Onclick←'OnClick'
      t.Oninput←'OnInput'
      t.Onkeydown←'OnKeyDown'
+     t.PreventDefault←PreventDefault 0
      t.class←'tcgrid'
      c←H.BodyCells t
      c.tabIndex←'0'

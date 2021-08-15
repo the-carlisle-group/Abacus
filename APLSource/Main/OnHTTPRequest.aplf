@@ -10,7 +10,7 @@
      c.Target←te
      c.CurrentTarget←ce
      s←GetContext ce
-     ⍝ _←DisplayEventMessage c
+     ⍝_←DisplayEventMessage c
      _←(s⍎ce⍎'On',c.Event)c
      z←⍵
      z[3 4 5]←1 204 'No Content'

@@ -1,8 +1,14 @@
-/// Send GUI call to APL
+// Send GUI call to APL
 // Response is always 204-No Content
 //          and does not need to be handled.
+
 function sendAPLRequest(e){
-      //e.preventDefault();   
+      const ce=[e.currentTarget.className,e.target.tagName,e.type,e.key].join();
+      const pd=PreventDefaultList.includes(ce);
+      // alert (ce)
+      if (pd){
+                e.preventDefault();
+       }     
       const c = document.getElementsByTagName("*");
       const a = Array.from(c);
       const j = a.indexOf(e.target);
@@ -17,7 +23,6 @@ function sendAPLRequest(e){
                 TargetIndex: j,
                 CurrentTargetIndex: k,
                 InnerHTML: e.target.innerHTML,
-                // Below should only be for key press events
                 Key: e.key, 
                 CtrlKey: e.ctrlKey,
                 AltKey: e.altKey,
