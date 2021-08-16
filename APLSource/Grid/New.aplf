@@ -5,6 +5,7 @@
      ⍺←⊣
      ⎕THIS.H←##.Main
      t←⍺ H.NewTable ⍵
+     t.class←'tcgrid'
      t.id←GetAutoID 0
      t.Changed←0
      t.CurCell←0 0
@@ -12,8 +13,7 @@
      t.Onclick←'OnClick'
      t.Oninput←'OnInput'
      t.Onkeydown←'OnKeyDown'
-     t.PreventDefault←PreventDefault 0
-     t.class←'tcgrid'
+     t.PreventDefault←⊂'TD' 'keydown'('ArrowLeft' 'ArrowRight' 'ArrowUp' 'ArrowDown')
      c←H.BodyCells t
      c.tabIndex←'0'
      c.class←⊂'notcurcell'

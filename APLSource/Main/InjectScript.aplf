@@ -1,7 +1,9 @@
  InjectScript←{
      0=⍺.⎕NC'Script':⍵
      e←Elements ⍺
-     v←⊃,/{6::⍬ ⋄ ⍵.PreventDefault}¨e
+     v←⊃,/{6::⍬ ⋄ (⊂⍵.class)∘,¨⍵.PreventDefault}¨e
+     l←⊃,/{,⊃∘.,/⊂¨¨⊆¨⍵}¨v
+     v←∪{¯1↓∊⍵,¨','}¨l
      k←(⎕JSON⍠'Compact' 0)v
      d←'const PreventDefaultList = ',k,';'
      i←1⍳⍨'<script></script>'⍷⍵
