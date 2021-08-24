@@ -1,7 +1,16 @@
-# HTML Release 0.0.4                    
+# Abacus Release 0.0.5                    
+1. Cleanup
+2. Enhance prevent-default functionality
+3. Provide mechanism from preventing default event behavior
+4. Update README.md
+5. Rename repository to Abacus
+6. Rename control DyalogForm to DyalogBox
+7. Add ScrollIntoView function
+
+# Abacus Release 0.0.4 2021-08-05 07:37:24
 1. Add loading animation page
 
-# HTML Release 0.0.3 2021-08-02 12:15:56
+# Abacus Release 0.0.3 2021-08-02 12:15:56
 1. Restore NewHTMLRenderer function
 2. Changes
 3. Exploratory work on components, dialog boxes, and application architecture
@@ -18,7 +27,7 @@
 14. Rename Type property to Tag
 15. Add general event handling
 
-# HTML Release 0.0.2 2021-06-22 07:36:22
+# Abacus Release 0.0.2 2021-06-22 07:36:22
 1. Add support for HTMLRenderer
 2. Add support for preformatted HTML
 3. Rewrite NewTable, add table helper methods
@@ -42,10 +51,10 @@
 21. Add NewTable function
 22. Add functionality for extracting elements from the DOM
 
-# HTML Release 0.0.1 2021-04-09 13:03:33
+# Abacus Release 0.0.1 2021-04-09 13:03:33
 1. Cleanup
 
-# HTML Release 0.0.0 2021-04-09 12:59:58
+# Abacus Release 0.0.0 2021-04-09 12:59:58
 1. Setup details
 2. Create README.md
 3. Fix first test
