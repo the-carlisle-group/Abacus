@@ -1,0 +1,20 @@
+ Init←{
+     ⍝ ⍺ ←→ Input element, Parent for Autocomplete
+     ⍝ ⍵ ←→ Autocomplete Items
+     ⎕THIS.H←##.Main
+     p i←⍺
+     ai←⍵
+     i.autocomplete←'off'
+     i.Onkeydown←'##.AutoComplete.OnKeyDown'
+     l←p H.New'div'  ⍝ Pre build the autocomplete thing and hide it!
+     l.class←'autocompletelist'  ⍝ Different  Classes needed
+     l.Items←ai
+     ⍝ li←l H.New¨{'div'⍵}¨ai ⍝ Don't really need to do this here!
+     i.AutoCompleteElement←l  ⍝ Note for callback
+
+
+
+
+
+     0
+ }

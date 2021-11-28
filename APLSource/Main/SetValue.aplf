@@ -1,0 +1,7 @@
+ SetValue←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ DOM content
+     _←⍺ SetProperty'value'⍵
+     ⍺.value←⍵
+     0
+ }

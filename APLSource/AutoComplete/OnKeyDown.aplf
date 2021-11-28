@@ -1,0 +1,130 @@
+ OnKeyDown←{
+     e←⍵.Target
+     k←⍵.Key
+     ⎕←k
+     l←e.AutoCompleteElement ⍝ Associated autocomplete element
+     i←l.Items               ⍝ Autocomplete Items
+     aa←0<≢l.Content         ⍝ Is autocomplete active?
+     aa∧k≡'ArrowRight':SelectItem ⍵
+     aa∧k≡'Enter':SelectItem
+     aa∧k≡'Escape':l H.SetInnerHTML''
+     ~(⊂k)∊,¨TriggerKeys 0:l H.SetInnerHTML'' ⍝ Not a trigger key, get out, pass thru keystroke
+     rc st←GetStartText ⍵
+     rc:l H.SetInnerHTML''
+     b←((≢st)↑¨i)∊⊂st        ⍝ filter
+     ~∨/b:l H.SetInnerHTML'' ⍝ No match
+     l.Mask←b                ⍝ Note for selection
+     l.StartText←st
+     c←H.New¨{'div'⍵}¨b/i    ⍝ New content
+     _←l H.SetInnerHTML c    ⍝ Could set outer instead
+
+
+
+
+     ⍝ What key was pressed?
+     ⍝ What is the current value of the input?
+     ⍝ Is the list up?
+     ⍝ Put the list up?
+     ⍝ Put in the right items?
+     ⍝ Position the list
+
+⍝ *******************************************************
+⍝ FLIPDB CODE:
+⍝     Run←{                              ⍝ Autocomplete
+⍝     em←⍵                           ⍝ KeyPress event message
+⍝     e←↑em                          ⍝ Edit object
+⍝     p←e._AutoCompleteProps         ⍝ p.Depth, p.Name, p.Type
+⍝     p=0:1
+⍝     pf←#.GUI.getform e             ⍝ Parent Form
+⍝     kv kc ss←em[2 4 5]             ⍝ Key Value, Key Code, shift state
+⍝     fn←'fmAutoComplete'            ⍝ Form name
+⍝     aa←9=pf.⎕NC fn                 ⍝ Is auto complete active (ie, form is up)?
+⍝     pt←aa∧kc∊33 34 38 40           ⍝ Pass thru if
+⍝     pt:PassThru pf fn em           ⍝ Pass thru navigational keys PgUp, PgDn, Up, Down
+⍝     aa∧kc=39:em SelectItem pf fn   ⍝ Right arrow, pick selected item, do NOT pass thru key stroke
+⍝     aa∧kc=13:1+em SelectItem pf fn ⍝ Enter, pick selected item, PASS thru <enter> as well
+⍝     aa∧kc=27:↑0,pf.⎕EX fn          ⍝ Escape, close auto complete, do NOT pass thru
+⍝     ~(⊂kv)∊TriggerKeys'':↑1,pf.⎕EX fn⍝ Not a trigger key, get out, pass thru keystroke
+⍝     rc tb←GetStartText em          ⍝ Starting text
+⍝     n←≢tb                          ⍝ Number of characters
+⍝
+⍝     d←+/'.'=tb
+⍝     b←(d=p.Depth)∧(⊂tb)≡¨n↑¨p.FQN  ⍝ Item list
+⍝     ri←b/p.DisplayName             ⍝ Relevent Items for display (Extended info)
+⍝     e._RelevantMask←b
+⍝
+⍝     rc∨0=↑⍴ri:↑1,pf.⎕EX fn         ⍝ Nothing, delete item
+⍝     fo←{''≡⍵:e.##.FontObj ⋄ ⍵}e.FontObj⍝ Font
+⍝     f←pf fn fo BuildForm ri        ⍝ Createpopup list
+⍝     f.lsL._EditObj←e               ⍝ Note for selection via mouse
+⍝     f.Posn←2 25+e GetCaretPosition SumPosition e
+⍝     f.Posn←(⌊↑f.Posn⌊pf.Size-f.Size),1⊃f.Posn
+⍝     f._StartText←tb                ⍝ Note for later in SelectItem
+⍝     1
+⍝ }
+
+⍝
+⍝ SelectItem←{
+⍝     pf fn←⍵
+⍝     em←⍺
+⍝     e←↑⍺
+⍝     p←e._AutoCompleteProps
+⍝     f←pf⍎fn
+⍝     l←f.lsL
+⍝     v←↑l.SelItems/e._RelevantMask/p.FQN
+⍝     n←≢f._StartText
+⍝     _←pf.⎕EX fn                  ⍝ Delete form
+⍝     cb←⎕NS''
+⍝     _←'cb'⎕WC'ClipBoard'
+⍝     t←n↓v
+⍝     cb.Text←t
+⍝     gp←e.##.Type≡'Grid'           ⍝ Grid parent?
+⍝     ~gp:{0}e.KeyPress'PT' 0 45 1  ⍝ For the grid?
+⍝     s←e.SelText
+⍝     c←¯1+↑s
+⍝     e.Text←(c↑e.Text),t,c↓e.Text
+⍝     e.SelText←s+↑⍴t
+⍝     0
+⍝ }
+⍝
+⍝     TriggerKeys←{                       ⍝ Keys that can trigger autocomplete
+⍝     k←⎕A                            ⍝ Uppercase letters
+⍝     k,←'abcdefghijklmnopqrstuvwxyz' ⍝ Lower case letters
+⍝     k,←⎕D,'_.[]!'                   ⍝ Digits, '_', etc.
+⍝     k,⊂'DB'                         ⍝ (Deleting) Back space
+⍝ }
+⍝ GetStartText←{                  ⍝ Get text tidbit
+⍝     e←↑⍵                        ⍝ Edit
+⍝     kv kc←⍵[2 4]                ⍝ Key Value, Key Code
+⍝     m←e.Style≡'Multi'           ⍝ Multi-line
+⍝     s←e.SelText                 ⍝ Selected Text
+⍝     t←s{~m:⍵                    ⍝ Simple
+⍝         0=↑⍴⍵:''                ⍝ Nothing
+⍝         (¯1+↑↑⍺)⊃⍵              ⍝ Single Line of text
+⍝     }e.Text                     ⍝ Line of text
+⍝     db←kv≡'DB'                  ⍝ Deleting backspace
+⍝     sc ec←∊¯1↑¨s                ⍝ Start cursor, end cursor
+⍝     sc←sc-db∧sc=ec              ⍝ Deleting backspace will remove a char
+⍝     st←(sc-1)↑t                 ⍝ Text up to cursor
+⍝     et←(ec-1)↓t                 ⍝ What comes after the cursor
+⍝     tk←TriggerKeys''            ⍝ TriggerKeys
+⍝     (↑et)∊tk:1 ''               ⍝ Mid word, get out
+⍝     b←st∊tk                     ⍝ Track back...
+⍝     r←(⌽∧\⌽st∊tk)/st            ⍝ Track back to last blank
+⍝     0(r,(~db)/kv)               ⍝ Tack on keystroke
+⍝ }
+⍝ *********************************************************
+
+
+
+
+
+
+
+
+
+
+
+     0
+
+ }

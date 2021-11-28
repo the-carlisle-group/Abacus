@@ -26,7 +26,8 @@ function sendAPLRequest(e){
                 Key: e.key, 
                 CtrlKey: e.ctrlKey,
                 AltKey: e.altKey,
-                ShiftKey: e.shiftKey
+                ShiftKey: e.shiftKey,
+                SelectionStart: e.target.selectionStart
       };
       const i = {
            method: 'POST',

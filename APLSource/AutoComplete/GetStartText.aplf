@@ -1,0 +1,35 @@
+ GetStartText←{
+     ⍝ ⍵ ←→ Event Mesage
+     ⍝ ← ←→ Return code, start text
+     t←⍵.Value                    ⍝ Complete Text
+     kv←⍵.Key                     ⍝ Key
+     db←kv≡'Backspace'            ⍝ Deleting Backspace?
+     sc←⍵.SelectionStart          ⍝ Start Cursor location
+     ec←sc ⍝ ⍵.SelectionEnd?      ⍝ End selection
+     sc←sc-db∧sc=ec               ⍝ Deleting backspace will remove a char
+     st←sc↑t                      ⍝ Text up to cursor/selection
+     et←ec↓t                      ⍝ Text after selection
+     tk←TriggerKeys 0             ⍝ Trigger keys
+     (⊃et)∊tk:1 ''                ⍝ Mid word, get out
+     r←(⌽∧\⌽st∊tk)/st             ⍝ Track back to last blank
+     0(r,(~db)/kv)                ⍝ Tack on keystroke
+
+⍝     e←↑⍵                        ⍝ Edit
+⍝     kv kc←⍵[2 4]                ⍝ Key Value, Key Code
+⍝     m←e.Style≡'Multi'           ⍝ Multi-line
+⍝     s←e.SelText                 ⍝ Selected Text
+⍝     t←s{~m:⍵                    ⍝ Simple
+⍝         0=↑⍴⍵:''                ⍝ Nothing
+⍝         (¯1+↑↑⍺)⊃⍵              ⍝ Single Line of text
+⍝     }e.Text                     ⍝ Line of text
+⍝     db←kv≡'DB'                  ⍝ Deleting backspace
+⍝     sc ec←∊¯1↑¨s                ⍝ Start cursor, end cursor
+⍝     sc←sc-db∧sc=ec              ⍝ Deleting backspace will remove a char
+⍝     st←(sc-1)↑t                 ⍝ Text up to cursor
+⍝     et←(ec-1)↓t                 ⍝ What comes after the cursor
+⍝     tk←TriggerKeys''            ⍝ TriggerKeys
+⍝     (↑et)∊tk:1 ''               ⍝ Mid word, get out
+⍝     b←st∊tk                     ⍝ Track back...
+⍝     r←(⌽∧\⌽st∊tk)/st            ⍝ Track back to last blank
+⍝     0(r,(~db)/kv)               ⍝ Tack on keystroke
+ }
