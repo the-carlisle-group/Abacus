@@ -1,0 +1,6 @@
+ AutoCompleteElements←{
+     ⍝ ⍵ ←→ AutoCompleteElement
+     ⍝ ← ←→ AutoComplteElements
+     ⍝ ,H.Cells ⍵.Content
+     ⍵.Content
+ }

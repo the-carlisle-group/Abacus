@@ -13,7 +13,7 @@
      i.Onblur←'OnInputBlur'
      ⍝ i.Onkeydown←'##.AutoComplete.OnKeyDown'
      j←'one' 'only' 'two' 'twice' 'three'
-
+     j←{⍵[⍋⍵]}#.PropList
      _←m i ##.AutoComplete.Init j
 
      f←H.GetFooter d

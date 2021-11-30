@@ -1,13 +1,16 @@
  OnKeyDown←{
      e←⍵.Target
      k←⍵.Key
-     ⎕←k
+     ⎕←⍵.Padding
      l←e.AutoCompleteElement ⍝ Associated autocomplete element
      i←l.Items               ⍝ Autocomplete Items
      aa←0<≢l.Content         ⍝ Is autocomplete active?
      aa∧k≡'ArrowRight':SelectItem ⍵
-     aa∧k≡'Enter':SelectItem
+     aa∧k≡'Enter':SelectItem ⍵
      aa∧k≡'Escape':l H.SetInnerHTML''
+     aa∧k≡'ArrowDown':OnArrowDown ⍵
+     aa∧k≡'ArrowUp':OnArrowUp ⍵
+
      ~(⊂k)∊,¨TriggerKeys 0:l H.SetInnerHTML'' ⍝ Not a trigger key, get out, pass thru keystroke
      rc st←GetStartText ⍵
      rc:l H.SetInnerHTML''
@@ -15,8 +18,28 @@
      ~∨/b:l H.SetInnerHTML'' ⍝ No match
      l.Mask←b                ⍝ Note for selection
      l.StartText←st
+
+     ⍝ t←H.NewTable⍪b/i
+     ⍝ c←t.Content
      c←H.New¨{'div'⍵}¨b/i    ⍝ New content
-     _←l H.SetInnerHTML c    ⍝ Could set outer instead
+     ⍝ cc←H.Cells t
+     cc←c
+     cc.class←⊂'acItem'
+     (0⊃cc).class←'acItem acItemActive'
+
+   ⍝  _←l H.SetProperty'style.fontSize'⍵.FontSize
+   ⍝  _←l H.SetProperty'style.fontFamily'⍵.FontFamily
+
+     _←l H.SetProperty'style.font'⍵.Font
+     ⍝ _←l H.SetProperty'style.padding'⍵.Padding
+
+     ⍝ Add padding to top left below, probably margin too
+     pt pl←2↑⍎⍵.Padding~'px'
+
+     lp←(⍕pl+⍵.BoundingClientRect[1]+⍵.TextWidthAtCursor×⍵.SelectionStart+2),'px'
+     _←l H.SetProperty'style.top'((⍕pt+0⊃⍵.BoundingClientRect),'px')
+     _←l H.SetProperty'style.left'lp   ⍝ ((⍕1⊃⍵.BoundingClientRect),'px')
+     _←l H.SetInnerHTML cc    ⍝ Could set outer instead
 
 
 

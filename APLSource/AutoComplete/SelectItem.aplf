@@ -1,19 +1,15 @@
  SelectItem←{
      e←⍵.Target
      l←e.AutoCompleteElement
-     j←0                                ⍝ The active item number
-     v←(≢l.StartText)↓j⊃l.Mask/l.Items ⍝ What to insert
+     b←ActiveItemMask l
+     v←(≢l.StartText)↓⊃b/l.Mask/l.Items ⍝ What to insert
      t←⍵.Value                          ⍝ Existing value
-     ⎕←'Before :',t
      s←⍵.SelectionStart
      t2←(s↑t),v,s↓t   ⍝ (s←s-1?)
-     ⎕←'After: ',t2
-
-     ⍝ Could try firing a paste event too
      _←e H.SetValue t2
      _←e H.SetProperty'selectionStart'(⍕s+≢v)
      _←e H.SetProperty'selectionEnd'(⍕s+≢v)
-     _←l H.SetInnerHTML'' ⍝ Clear
+     _←l H.SetInnerHTML''  ⍝ Clear
      0
 
 ⍝     pf fn←⍵
