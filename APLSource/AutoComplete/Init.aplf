@@ -1,19 +1,13 @@
  Init←{
      ⍝ ⍺ ←→ Input element, Parent for Autocomplete
      ⍝ ⍵ ←→ Autocomplete Items
-
-     ⍝ To do: Long list, max height, scroll, overflow, etc.
-
-
      ⎕THIS.H←##.Main
-     p i←⍺
-     ai←⍵
-     i.autocomplete←'off'
-     i.Onkeydown←'##.AutoComplete.OnKeyDown'
-     l←p H.New'div'
+     ⍺.autocomplete←'off'
+     ⍺.Onkeydown←'##.AutoComplete.OnKeyDown'
+     l←⍺.Parent H.New'div'
      l.class←'acList'
-     l.Items←ai
+     l.Items←⍵
      l.Style←BuildCSS 0
-     i.AutoCompleteElement←l
+     ⍺.AutoCompleteElement←l
      0
  }

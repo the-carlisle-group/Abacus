@@ -28,7 +28,7 @@ function sendAPLRequest(e){
       const s = window.getComputedStyle(e.target);
       const t = e.target.value.slice(0, e.target.selectionStart); 
       // const w = getTextWidth(t, s['font']);
-      const w = getTextWidth("x", s['font']);
+      const cw = getTextWidth("9", s['font']);
       const b = {
                 Event: e.type,
                 Value: e.target.value,
@@ -47,7 +47,7 @@ function sendAPLRequest(e){
                 FontFamily: s['font-family'],
                 Font: s['font'],
                 Padding: s['padding'],
-                TextWidthAtCursor: w,
+                CharacterWidth: cw,
                 BoundingClientRect: [r.top,r.left,r.bottom,r.right]
       };
       const i = {

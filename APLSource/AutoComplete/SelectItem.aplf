@@ -2,34 +2,11 @@
      e←⍵.Target
      l←e.AutoCompleteElement
      b←ActiveItemMask l
-     v←(≢l.StartText)↓⊃b/l.Mask/l.Items ⍝ What to insert
-     t←⍵.Value                          ⍝ Existing value
+     v←(≢l.StartText)↓⊃b/l.Mask/l.Items
+     t←⍵.Value
      s←⍵.SelectionStart
-     t2←(s↑t),v,s↓t   ⍝ (s←s-1?)
+     t2←(s↑t),v,s↓t
      _←e H.SetValue t2
-     _←e H.SetProperty'selectionStart'(⍕s+≢v)
-     _←e H.SetProperty'selectionEnd'(⍕s+≢v)
-     _←l H.SetInnerHTML''  ⍝ Clear
-     0
-
-⍝     pf fn←⍵
-⍝     em←⍺
-⍝     e←↑⍺
-⍝     p←e._AutoCompleteProps
-⍝     f←pf⍎fn
-⍝     l←f.lsL
-⍝     v←↑l.SelItems/e._RelevantMask/p.FQN
-⍝     n←≢f._StartText
-⍝     _←pf.⎕EX fn                  ⍝ Delete form
-⍝     cb←⎕NS''
-⍝     _←'cb'⎕WC'ClipBoard'
-⍝     t←n↓v
-⍝     cb.Text←t
-⍝     gp←e.##.Type≡'Grid'           ⍝ Grid parent?
-⍝     ~gp:{0}e.KeyPress'PT' 0 45 1  ⍝ For the grid?
-⍝     s←e.SelText
-⍝     c←¯1+↑s
-⍝     e.Text←(c↑e.Text),t,c↓e.Text
-⍝     e.SelText←s+↑⍴t
-⍝     0
+     _←e SetCursor s+≢v
+     Clear l
  }

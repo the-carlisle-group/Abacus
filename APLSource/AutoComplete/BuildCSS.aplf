@@ -2,21 +2,13 @@
      s←⍬
      ⍝ List
      s,←r←H.NewRule'.acList'
-     r.background_color←'yellow'
+     r.background_color←'lightyellow'
      r.max_height←'8rem'
      r.position←'absolute'
-     r.top←'0'
-     r.left←'0'
      r.overflow←'auto'
      ⍝ Items
      s,←r←H.NewRule'.acItem'
      r.padding←'.1rem .2rem'
-
-     ⍝ DO NOT DO FONT HERE (picks up class 'editorfont')
-     ⍝ r.font_size←'1rem'
-     ⍝ r.font_family←'APL385 Unicode'
-
-
      ⍝ Selected Item
      s,←r←H.NewRule'.acItemActive'
      r.color←'white'

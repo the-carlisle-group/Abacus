@@ -1,0 +1,15 @@
+ SetPosition←{
+     ⍝ Character based positioning of autocomplete list
+     ⍝ Font must be fixed width (for now)
+     e←⍵.Target.AutoCompleteElement
+     bt bl←2↑⍵.BoundingClientRect
+     pt pl←2↑⍎⍵.Padding~'px'
+     cw←⍵.CharacterWidth
+     ss←⍵.SelectionStart
+     f←'px',⍨⍕
+     t←f pt+bt
+     l←f pl+bl+cw×ss+2
+     _←e H.SetProperty'style.top't
+     _←e H.SetProperty'style.left'l
+     0
+ }

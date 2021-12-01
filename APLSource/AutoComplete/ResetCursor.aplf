@@ -1,0 +1,3 @@
+ ResetCursor←{
+     ⍵.Target SetCursor ⍵.SelectionStart
+ }

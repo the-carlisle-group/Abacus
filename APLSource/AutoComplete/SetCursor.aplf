@@ -1,0 +1,7 @@
+ SetCursor←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Start [End]
+     s e←⍕¨2⍴⍵
+     _←⍺ H.SetProperty'selectionStart's
+     ⍺ H.SetProperty'selectionEnd'e
+ }

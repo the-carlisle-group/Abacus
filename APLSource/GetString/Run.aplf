@@ -14,7 +14,7 @@
      ⍝ i.Onkeydown←'##.AutoComplete.OnKeyDown'
      j←'one' 'only' 'two' 'twice' 'three'
      j←{⍵[⍋⍵]}#.PropList
-     _←m i ##.AutoComplete.Init j
+     _←i ##.AutoComplete.Init j
 
      f←H.GetFooter d
      be←{f H.New'button'⍵}¨'OK' 'Cancel'
