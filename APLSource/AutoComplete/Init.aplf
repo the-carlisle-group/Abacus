@@ -1,5 +1,5 @@
  Init←{
-     ⍝ ⍺ ←→ Input element, Parent for Autocomplete
+     ⍝ ⍺ ←→ Input element
      ⍝ ⍵ ←→ Autocomplete Items
      ⎕THIS.H←##.Main
      ⍺.autocomplete←'off'
