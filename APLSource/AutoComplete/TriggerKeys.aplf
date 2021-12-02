@@ -1,5 +1,0 @@
- TriggerKeys←{       ⍝ Keys that can trigger autocomplete
-     k←(⊢,⎕C)⎕A      ⍝ Upper and lower case letters
-     k,←⎕D,'_.[]!'   ⍝ `Digits, '_', etc.
-     k,⊂'Backspace'  ⍝ (Deleting) Back space
- }

@@ -7,7 +7,7 @@
      a∧k≡'Escape':Clear l
      a∧k≡'ArrowDown':ResetCursor ⍵⊣1 OnArrowUpDown ⍵
      a∧k≡'ArrowUp':ResetCursor ⍵⊣¯1 OnArrowUpDown ⍵
-     ~(⊂k)∊,¨TriggerKeys 0:Clear l
+     ~(⊂k)∊,¨l.TriggerKeys:Clear l
      rc st←GetStartText ⍵
      rc:Clear l
      i←l.Items

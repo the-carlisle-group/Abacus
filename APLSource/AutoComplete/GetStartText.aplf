@@ -1,16 +1,14 @@
  GetStartText←{
      ⍝ ⍵ ←→ Event Mesage
-     ⍝ ← ←→ Return code, start text
-     t←⍵.Value                    ⍝ Complete Text
-     kv←⍵.Key                     ⍝ Key
-     db←kv≡'Backspace'            ⍝ Deleting Backspace?
-     sc←⍵.SelectionStart          ⍝ Start Cursor location
-     ec←sc ⍝ ⍵.SelectionEnd?      ⍝ End selection
-     sc←sc-db∧sc=ec               ⍝ Deleting backspace will remove a char
-     st←sc↑t                      ⍝ Text up to cursor/selection
-     et←ec↓t                      ⍝ Text after selection
-     tk←TriggerKeys 0             ⍝ Trigger keys
-     (⊃et)∊tk:1 ''                ⍝ Mid word, get out
-     r←(⌽∧\⌽st∊tk)/st             ⍝ Track back to last blank
-     0(r,(~db)/kv)                ⍝ Tack on keystroke
+     ⍝ ← ←→ Return code, starting text
+     t←⍵.Value
+     l←⍵.Target.AutoCompleteElement
+     k←⍵.Key
+     bs←k≡'Backspace'
+     s←⍵.SelectionStart
+     st et←(t↑⍨s-bs)(s↓t)
+     tk←l.TriggerKeys
+     tk∊⍨⊃et:1 ''
+     r←(⌽∧\⌽st∊tk)/st
+     0(r,k⍴⍨~bs)
  }

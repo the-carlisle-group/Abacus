@@ -7,6 +7,7 @@
      l←⍺.Parent H.New'div'
      l.class←'acList'
      l.Items←⍵
+     l.TriggerKeys←(⊂'Backspace'),∪∊⍵
      l.Style←BuildCSS 0
      ⍺.AutoCompleteElement←l
      0
