@@ -1,9 +1,15 @@
  Init←{
      ⍝ ⍺ ←→ Input element
      ⍝ ⍵ ←→ Autocomplete Items
+     0=≢⍵:0
      ⎕THIS.H←##.Main
      ⍺.autocomplete←'off'
+
+     ⍝ THIS IS CRAP, have tp find a way to fix this FQP?
+     ⍝ Maybe something like H.SetHandler 'OnKeyDown'
      ⍺.Onkeydown←'##.AutoComplete.OnKeyDown'
+     ⍝ ⍺.Onkeydown←'OnKeyDown'      ⍝ This MUST be able to work
+     ⍝ ⍺.Context←⎕THIS              ⍝ NO GOOD, cannot cahnge Without this.
      l←⍺.Parent H.New'div'
      l.class←'acList'
      l.Items←⍵

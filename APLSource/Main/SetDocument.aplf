@@ -7,6 +7,7 @@
      e←Elements ⍵
      e.Document←⍵
      ⍺.Document←⍵
+     ⍵.StopPropagation←0
      ⍵.HTMLRenderer←⍺
      ⍺.HTML←DOM2HTML ⍵
      0

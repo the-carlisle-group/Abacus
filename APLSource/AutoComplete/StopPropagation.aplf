@@ -1,0 +1,5 @@
+ StopPropagation←{
+     d←⍵.HTMLRenderer.Document
+     d.StopPropagation←1
+     0
+ }

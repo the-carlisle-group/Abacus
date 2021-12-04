@@ -1,0 +1,7 @@
+ GetString←{
+     t←'Example of GetString' ⍝ Title
+     c←'Root Methods:'        ⍝ Caption
+     v←''                     ⍝ Initial Value
+     i←#.⎕NL ¯3               ⍝ AutoCompete items
+     ##.GetString.Run t c v i ⍝ Run GetString
+ }

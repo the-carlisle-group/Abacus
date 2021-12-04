@@ -1,10 +1,11 @@
  OnKeyDown←{
      k←⍵.Key
+     k≡'Shift':0
      l←⍵.Target.AutoCompleteElement
      a←0<≢AutoCompleteElements l
      a∧k≡'ArrowRight':SelectItem ⍵
-     a∧k≡'Enter':SelectItem ⍵
-     a∧k≡'Escape':Clear l
+     a∧k≡'Enter':StopPropagation ⍵⊣1 SelectItem ⍵
+     a∧k≡'Escape':StopPropagation ⍵⊣1 Clear l
      a∧k≡'ArrowDown':ResetCursor ⍵⊣1 OnArrowUpDown ⍵
      a∧k≡'ArrowUp':ResetCursor ⍵⊣¯1 OnArrowUpDown ⍵
      ~(⊂k)∊,¨l.TriggerKeys:Clear l

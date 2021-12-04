@@ -1,31 +1,27 @@
  Run←{
-     ⍝ Title, Caption, Value
-     t c v←'Save As' 'Name:' 'Rock and Roll'
+     ⍝ Caption, Label, Value, AutoComplete Items
+     c l v a←4↑⍵,4⍴⊂''
      ⎕THIS.H←##.Main
      d←##.TriDocument.New 0
      b←H.GetBody d
      b.Onkeydown←'OnKeyDown'
      m←H.GetMain d
-     _←m H.New'p't
+     _←m H.New'p'l
      i←m H.New'input'
      i.autofocus←'autofocus'
      i.value←v
      i.Onblur←'OnInputBlur'
-     ⍝ i.Onkeydown←'##.AutoComplete.OnKeyDown'
-     j←'one' 'only' 'two' 'twice' 'three'
-     j←{⍵[⍋⍵]}#.PropList
-     _←i ##.AutoComplete.Init j
-
+     _←i ##.AutoComplete.Init a
      f←H.GetFooter d
      be←{f H.New'button'⍵}¨'OK' 'Cancel'
-     (⊃be).autofocus←'autofocus'
+     ⍝ (⊃be).autofocus←'autofocus'
      be.Onclick←⊂'OnClick'
-     d.Style,←BuildCSS 0
-     d.Size←400 900
+     d.Style,←CSS 0
+     d.Size←400 1200
      d.Context←⎕THIS
      r←H.NewModalForm d
      r.Result←¯1 ''
-     r.Caption←'Warning'
+     r.Caption←c
      rc←r.Wait
      r.Result i.value
  }

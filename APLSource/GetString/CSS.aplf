@@ -1,4 +1,4 @@
- BuildCSS←{
+ CSS←{
      s←⍬
      ⍝ Main
      s,←r←H.NewRule'main'
@@ -12,10 +12,9 @@
      r.font_size←'1.5rem'
      r.font_family←'Arial'
 
-
      ⍝ Input
      s,←r←H.NewRule'input'
-     r.padding←'.5rem 1rem'
+     r.padding←'.5rem 1.5rem'
      r.font_size←'1.5rem'
      r.font_family←'APL385 Unicode'
 
@@ -24,6 +23,7 @@
      r.display←'flex'
      r.justify_content←'center'
      r.align_items←'center'
+     r.padding←'.5rem'
      ⍝
      s
  }
