@@ -4,8 +4,8 @@
      p.Caption←'Sample Form'
      p.Title←'A Sample Dialog Box'
      p.Subtitle←'This is a resizable, modal dialog box.'
-     p.OnOK←'OnOK'
-     p.OnCancel←'OnCancel'
+     p.OnOK←H.FQP'OnOK'
+     p.OnCancel←H.FQP'OnCancel'
      p.Content←##.Grid.New GridDataLarge 0
      ##.DialogBox.Run p
  }
