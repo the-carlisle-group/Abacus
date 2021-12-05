@@ -4,21 +4,19 @@
      ⎕THIS.H←##.Main
      d←##.TriDocument.New 0
      b←H.GetBody d
-     b.Onkeydown←'OnKeyDown'
+     b.Onkeydown←H.FQP'OnKeyDown'
      m←H.GetMain d
      _←m H.New'p'l
      i←m H.New'input'
      i.autofocus←'autofocus'
      i.value←v
-     i.Onblur←'OnInputBlur'
+     i.Onblur←H.FQP'OnInputBlur'
      _←i ##.AutoComplete.Init a
      f←H.GetFooter d
      be←{f H.New'button'⍵}¨'OK' 'Cancel'
-     ⍝ (⊃be).autofocus←'autofocus'
-     be.Onclick←⊂'OnClick'
+     be.Onclick←⊂H.FQP'OnClick'
      d.Style,←CSS 0
      d.Size←400 1200
-     d.Context←⎕THIS
      r←H.NewModalForm d
      r.Result←¯1 ''
      r.Caption←c

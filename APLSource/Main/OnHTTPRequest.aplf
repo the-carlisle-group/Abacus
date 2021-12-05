@@ -12,8 +12,7 @@
      te ce←(Elements d)[j k]
      c.Target←te
      c.CurrentTarget←ce
-     s←GetContext ce
      ⍝ _←DisplayEventMessage c
-     _←(s⍎ce⍎'On',c.Event)c
+     _←(⍎ce⍎'On',c.Event)c
      Return ⍵
  }

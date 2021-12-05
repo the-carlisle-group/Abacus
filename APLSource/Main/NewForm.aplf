@@ -8,6 +8,5 @@
      h.InterceptedURLs←1 2⍴'*' 1
      h.onHTTPRequest←'OnHTTPRequest'
      h.Caption←⍵.Caption
-     ⍝ ⍵.Context←⊃⎕RSI
      h⊣h SetDocument ⍵
  }

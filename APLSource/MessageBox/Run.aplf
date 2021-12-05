@@ -5,16 +5,15 @@
      ⎕THIS.H←##.Main
      d←##.TriDocument.New 0
      b←H.GetBody d
-     b.Onkeydown←'OnKeyDown'
+     b.Onkeydown←H.FQP'OnKeyDown'
      m←H.GetMain d
      _←m H.New'p't
      f←H.GetFooter d
      be←{f H.New'button'⍵}¨bn
      (⊃be).autofocus←'autofocus'
-     be.Onclick←⊂'OnClick'
+     be.Onclick←⊂H.FQP'OnClick'
      d.Style,←BuildCSS 0
      d.Size←400 900
-     d.Context←⎕THIS
      r←H.NewModalForm d
      r.Result←¯1
      r.Caption←'Warning'

@@ -2,7 +2,6 @@
      p←⍵
      ⎕THIS.H←##.Main
      f←##.TriDocument.New 0
-     f.Context←⊃⎕RSI
      hd←H.GetHeader f
      h1←hd H.New'h1'p.Title
      h2←hd H.New'h2'p.Subtitle

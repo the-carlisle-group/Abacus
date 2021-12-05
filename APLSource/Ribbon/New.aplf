@@ -9,10 +9,9 @@
      mb←r H.New'ul'
      li←{mb H.New'li'}¨m
      bn←li{⍺ H.New'button'⍵}¨m
-     bn.Onclick←⊂'OnClickMenu'
+     bn.Onclick←⊂H.FQP'OnClickMenu'
      bn.MenuItems←i
      mi←r H.New'ul'(CreateMenuItems⊃i)
-     mi.Context←⊃⎕RSI
      bn.MenuItemList←mi
      r.Style←BuildCSS''
      r

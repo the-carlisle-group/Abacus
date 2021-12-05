@@ -9,10 +9,9 @@
      t.id←GetAutoID 0
      t.Changed←0
      t.CurCell←0 0
-     t.Context←⎕THIS
-     t.Onclick←'OnClick'
-     t.Oninput←'OnInput'
-     t.Onkeydown←'OnKeyDown'
+     t.Onclick←H.FQP'OnClick'
+     t.Oninput←H.FQP'OnInput'
+     t.Onkeydown←H.FQP'OnKeyDown'
      t.PreventDefault←⊂'TD' 'keydown'('ArrowLeft' 'ArrowRight' 'ArrowUp' 'ArrowDown')
      c←H.BodyCells t
      c.tabIndex←'0'
