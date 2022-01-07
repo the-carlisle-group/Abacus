@@ -1,5 +1,6 @@
  InjectStyleElement←{
+     ⍵.Tag≢'html':0
      0=⍵.⎕NC'Style':0
-     h←⊃⍵ ElementsByTag'head'
+     h←⍵ ElementByTag'head'
      h New'style'
  }
