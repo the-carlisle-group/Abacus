@@ -1,10 +1,14 @@
  SetOuterHTML←{
      ⍝ ⍺ ←→ Element
-     ⍝ ⍵ ←→ DOM content
-     _←⍺ SetProperty'outerHTML'⍵
-     n←H.HTML2DOM ⍵
+     ⍝ ⍵ ←→ DOM or HTML
+     d h←DOMandHTML ⍵
+     _←⍺ SetProperty'outerHTML'(h~⎕UCS 13)
      p←⍺.Parent
+     _←SetParent p
      i←p.Content⍳⍺
-     p.Content←(i↑p.Content),(i+1)↓p.Content
+     p.Content←(i↑p.Content),d,(i+1)↓p.Content
+     0=≢d:0
+     e←Elements¨d
+     e.Document←⍺.Document
      0
  }
