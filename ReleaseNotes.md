@@ -1,4 +1,15 @@
-# Abacus Release 0.0.5                    
+# Abacus Release 0.0.6                    
+1. Fix style/script injection in DOM2HTML
+2. Small fixes
+3. Require specifying FQP for handlers
+4. Fixes to AutoComplete
+5. Remove need for explicit trigger keys in autocomplete
+6. Adjust list location on backspace
+7. Third pass at AutoCompete
+8. Second pass at auto complete
+9. First pass at AutoComplete
+
+# Abacus Release 0.0.5 2021-08-23 19:46:07
 1. Cleanup
 2. Enhance prevent-default functionality
 3. Provide mechanism from preventing default event behavior
