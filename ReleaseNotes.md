@@ -1,4 +1,8 @@
-# Abacus Release 0.0.6                    
+# Abacus Release 0.0.7                    
+1. Fix SetOuterHTML function
+2. Fix demo
+
+# Abacus Release 0.0.6 2022-01-06 18:16:07
 1. Fix style/script injection in DOM2HTML
 2. Small fixes
 3. Require specifying FQP for handlers
