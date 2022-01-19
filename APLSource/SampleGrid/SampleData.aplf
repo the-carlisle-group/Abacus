@@ -1,0 +1,11 @@
+ SampleData←{
+     p←⎕NS''
+     p.ColumnTitles←'Name' 'City' 'DOB' 'Age' 'Mortgage Rate' 'Favorite Float'
+     p.ColumnTypes←'Char' 'Char' 'Date' 'Int' 'Dec(3)' 'Float'
+     p.Values←'Josh' 'Norbert' 'Paul' 'Steve'
+     p.Values,[0.5]←'Scranton' 'Austin' 'Bozeman' 'Scranton'
+     p.Values,←19640724 19801107 19891231 19521003
+     p.Values,←25 32 58 68
+     p.Values,←3.124 4 2.785 5.5
+     p.Values,←2.7182818 3.14 1.619232 2.7182818
+     p}

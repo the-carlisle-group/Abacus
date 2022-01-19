@@ -14,5 +14,6 @@
      c.CurrentTarget←ce
      ⍝ _←DisplayEventMessage c
      _←(⍎ce⍎'On',c.Event)c
+     _←⎕TPUT{⍵×⍵∊⎕TREQ ⎕TNUMS}EventToken
      Return ⍵
  }

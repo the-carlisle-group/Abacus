@@ -1,0 +1,10 @@
+ TestHelpRibbon←{
+     hr←⍵
+     d←hr.Document
+     H←##.Main
+     bn←2⊃d H.ElementsByTag'button'
+     _←bn H.FireEventAndWait'click'
+     ul2←1⊃d H.ElementsByTag'ul'
+     mt←'About' 'INFO'
+     mt≢{⊃¨⍵.Content}ul2 H.ElementsByTag'button'
+ }

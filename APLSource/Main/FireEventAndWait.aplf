@@ -1,0 +1,8 @@
+ FireEventAndWait←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Event
+     ⍺=0:0
+     _←⍺ ExecuteOnElement ⍵,'()'
+     _←⎕TGET EventToken
+     0
+ }

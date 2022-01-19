@@ -1,0 +1,12 @@
+ ExecuteJavaScript←{
+     ⍝ ⍺ ← hr
+     ⍝ ⍵ ←→ Expression "2 + 2"
+     ⍺←hr
+     tk←1+⎕TID
+     _←⍺.ExecuteJavaScript'execCode(',(⍕tk),',"',⍵,'")'
+     ⎕←'Getting token...'
+     r←⎕TGET tk
+     ⎕←'Got token!'
+     ⎕THIS.Result←r.r
+     0
+ }

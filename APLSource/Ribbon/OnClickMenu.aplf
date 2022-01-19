@@ -1,4 +1,5 @@
  OnClickMenu←{
+     ⍝ ⎕←'OnClickMenu Callback is running!'
      b←⍵.Target
      c←CreateMenuItems b.MenuItems
      l←b.MenuItemList

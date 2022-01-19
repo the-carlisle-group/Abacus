@@ -1,0 +1,10 @@
+ DefaultParameters←{
+     p←⎕NS''
+     p.
+     p.
+     p.
+
+
+
+
+ }

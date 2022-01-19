@@ -1,0 +1,11 @@
+ Example2←{
+     A←##.Main
+     p←SampleData 0
+     d←##.TriDocument.New''
+     m←A.GetMain d
+     t←m ##.Grid.New2 p
+     d.Size←500 800
+     d.Caption←'Grid Sample'
+
+     A.NewForm d
+ }

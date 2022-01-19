@@ -2,7 +2,8 @@
      ⎕THIS.H←##.Main
      d←Build 0
      r←H.NewForm d
-     r.Wait
+     r
+     ⍝ r.Wait
 
 
 

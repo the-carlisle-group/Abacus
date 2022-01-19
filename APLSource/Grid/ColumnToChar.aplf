@@ -1,0 +1,9 @@
+ ColumnToChar←{
+     ⍝ ⍺ ←→ Column Type
+     ⍝ ⍵ ←→ Column Values
+     'Char'≡⍺:⍵
+     'Date'≡⍺:⍕¨⍵
+     'Int'≡⍺:⍕¨⍵
+     'Float'≡⍺:⍕¨⍵
+     'Dec'≡3↑⍺:⍕¨⍵
+ }
