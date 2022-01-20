@@ -1,0 +1,4 @@
+ Run←{
+     ⎕THIS.A←##.Main
+     A.NewForm Build 0
+ }

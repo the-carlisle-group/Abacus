@@ -2,5 +2,6 @@
      ⍝ ⍵ ←→ DOM or HTML
      ⍝ ← ←→ DOM and HTML
      326=⎕DR ⍵:⍵(DOM2HTML ⍵)
+     '<'≢⊃⍵:(,⊂⍵)⍵
      (HTML2DOM ⍵)⍵
  }

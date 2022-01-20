@@ -1,13 +1,14 @@
  RunTests←{
-     ⍝ ⍺ ←→ HTMLRenderer
-     ⍝ ⍵ ←→ Namespace of tests
+     ⍝ ⍺ ←→ [Namespace of tests]
+     ⍝ ⍵ ←→ HTMLRenderer
+     ⍺←⊃⎕RSI
      ⎕TID=0:⍺ ∇&⍵
-     h s←⍺ ⍵
+     s h←⍺ ⍵
      c←'Passed' 'Failed' 'Broken' 'N/A' 'Disabled'
      r←{
          b←{0::2 ⋄ ⎕TSYNC(s⍎⍵)&h}⍵
          b⊣⎕←⍵,': ',⍕b⊃c
      }¨'T's.⎕NL ¯3
-     n←(⊣,+/)¯1+{≢⍵}⌸r,⍨⍳≢c
-     ⍉↑(c,⊂'Total')n
+     n←¯1+{≢⍵}⌸r,⍨⍳≢c
+     ⍉↑(c,⊂'Total')(n,+/n)
  }

@@ -5,8 +5,8 @@
      _←⍺ SetProperty'innerHTML'(h~⎕UCS 13)
      ⍺.Content←d
      _←SetParent ⍺
-     0=≢d:0
-     e←Elements¨d
+     e←∊Elements¨d
+     0=≢e:0
      e.Document←⍺.Document
      0
  }

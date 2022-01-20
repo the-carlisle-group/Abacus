@@ -1,0 +1,6 @@
+ OnIncrement←{
+     h←⍵.HTMLRenderer
+     d←h.Document
+     r←d A.ElementById'result'
+     r A.SetInnerHTML⍕1+⍎⊃r.Content
+ }

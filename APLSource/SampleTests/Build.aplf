@@ -1,0 +1,16 @@
+ Build←{
+     New←A.New
+     d←A.NewDocument 0
+     d.Caption←'Testing Framework Example'
+     b←A.GetBody d
+     ib←b New'button' 'Increment'
+     ib.id←'increment'
+     ib.Onclick←A.FQP'OnIncrement'
+     db←b New'button' 'Decrement'
+     db.id←'decrement'
+     db.Onclick←A.FQP'OnDecrement'
+     _←b New'p' 'The current value is:'
+     r←b New'p'(,'0')
+     r.id←'result'
+     d
+ }

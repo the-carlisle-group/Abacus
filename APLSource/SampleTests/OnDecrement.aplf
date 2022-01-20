@@ -1,0 +1,6 @@
+ OnDecrement←{
+     h←⍵.HTMLRenderer
+     d←h.Document
+     r←d A.ElementById'result'
+     r A.SetInnerHTML⍕¯2+⍎⊃r.Content
+ }

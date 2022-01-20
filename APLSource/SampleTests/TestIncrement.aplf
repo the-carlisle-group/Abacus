@@ -1,0 +1,8 @@
+ TestIncrement←{
+     d←⍵.Document
+     r←d A.ElementById'result'
+     v←⍎⊃r.Content
+     b←d A.ElementById'increment'
+     e←b A.FireEventAndWait'click'
+     (v+1)≠⍎⊃r.Content
+ }
