@@ -2,6 +2,17 @@
 // Response is always 204-No Content
 //          and does not need to be handled.
 
+function execCode(id,code) { 
+  const b = {id: id, result: eval(code) }; 
+  const u = 'http://dyalog_root/sjs';
+  const i = {
+           method: 'POST',
+           body: JSON.stringify(b) 
+      };
+  const q = new Request(u,i);
+  fetch(q)
+}
+
 function sendAPLRequest(e){
       const ce=[e.currentTarget.className,e.target.tagName,e.type,e.key].join();
       const pd=PreventDefaultList.includes(ce);
@@ -43,4 +54,3 @@ function sendAPLRequest(e){
       const q = new Request(u,i);
       fetch(q)
 }
-

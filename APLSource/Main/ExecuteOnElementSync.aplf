@@ -1,0 +1,13 @@
+ ExecuteOnElementSync←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Javascript
+     ⍝ ← ←→ Result
+     i←TagIndex ⍺
+     t←⍺.Tag
+     c←'document.getElementsByTagName'
+     c,←'("',t,'").item(',(⍕i),').',⍵,';'
+     c←'''',c,''''
+     j←'execCode(',(⍕⎕TID),',',c,')'
+     _←⍺.Document.HTMLRenderer.ExecuteJavaScript j
+     ⎕TGET ⎕TID
+ }

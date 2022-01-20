@@ -1,5 +1,7 @@
  OnHTTPRequest←{
-     'http://dyalog_root/gui'≢7⊃⍵:⍵
+     u←7⊃⍵
+     u≡'http://dyalog_root/sjs':OnHTTPRequestSJS ⍵
+     u≢'http://dyalog_root/gui':⍵
      h←⊃⍵
      d←h.Document
      q←d.StopPropagation

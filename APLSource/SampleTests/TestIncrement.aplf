@@ -4,5 +4,8 @@
      v←⍎⊃r.Content
      b←d A.ElementById'increment'
      e←b A.FireEventAndWait'click'
-     (v+1)≠⍎⊃r.Content
+     (v+1)≠⍎⊃r.Content:1
+     ih←⊃r A.ExecuteOnElementSync'innerHTML'
+     (⍕v+1)≢ih:1
+     0
  }

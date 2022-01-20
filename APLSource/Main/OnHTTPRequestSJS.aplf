@@ -1,0 +1,5 @@
+ OnHTTPRequestSJS←{
+     c←⎕JSON 9⊃⍵
+     _←c.result ⎕TPUT c.id
+     Return ⍵
+ }
