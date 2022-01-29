@@ -10,6 +10,8 @@ function APLInit(){
  // ws.onerror = function(evt) { onError(evt) };
  }
  
+window.onload = APLInit;
+
 function onMessage(evt){
          eval (evt.data);
    }  
