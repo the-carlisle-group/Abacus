@@ -6,6 +6,7 @@
      p,←⊂'AsChild' 1
      h←⍎⍵ ⍺.⎕WC p
      h.InterceptedURLs←1 2⍴'*' 1
-     h.onHTTPRequest←'OnHTTPRequest'
+     h.onWebSocketUpgrade←'OnWebSocketUpgrade'
+     h.onWebSocketRecieve←'OnWebSocketReceive'
      h
  }

@@ -1,9 +1,0 @@
- NewControl←{
-     ⍝ ⍺ ←→ [Parent, 0 - no parent]
-     ⍝ ⍵ ←→ Tag [Content [Attributes]]
-     ⍝ ← ←→ Element
-     ⍺←0
-     e←⍺ New ⍵
-     e.Context←⊃⎕RSI
-     e
- }

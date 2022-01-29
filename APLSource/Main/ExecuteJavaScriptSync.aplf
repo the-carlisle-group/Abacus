@@ -1,10 +1,9 @@
  ExecuteJavaScriptSync←{
-     ⍝ ⍺ ←→ HTMLRenderer
+     ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ Javascript
      ⍝ ← ←→ Result
-     0=⎕TID:⎕TSYNC ⍺ ∇&⍵
      c←'"',⍵,'"'
      j←'execCode(',(⍕⎕TID),',',c,')'
-     _←⍺.Document.HTMLRenderer.ExecuteJavaScript j
+     _←⍺ ExecuteJavaScript j
      ⎕TGET ⎕TID
  }

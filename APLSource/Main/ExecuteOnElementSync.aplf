@@ -8,6 +8,6 @@
      c,←'("',t,'").item(',(⍕i),').',⍵,';'
      c←'''',c,''''
      j←'execCode(',(⍕⎕TID),',',c,')'
-     _←⍺.Document.HTMLRenderer.ExecuteJavaScript j
+     _←⍺.Document ExecuteJavaScript j
      ⎕TGET ⎕TID
  }

@@ -6,7 +6,7 @@
      s h←⍺ ⍵
      c←'Passed' 'Failed' 'Broken' 'N/A' 'Disabled'
      r←{
-         b←{0::2 ⋄ ⎕TSYNC(s⍎⍵)&h}⍵
+         b←{0::2 ⋄ (s⍎⍵)h}⍵
          b⊣⎕←⍵,': ',⍕b⊃c
      }¨'T's.⎕NL ¯3
      n←¯1+{≢⍵}⌸r,⍨⍳≢c

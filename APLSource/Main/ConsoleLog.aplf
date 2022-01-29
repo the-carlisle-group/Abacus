@@ -3,5 +3,5 @@
      ⍝ ⍵ ←→ Javascript
      ⍝ _←⍺.ShowDevTools 1
      j←'console.log(',⍵,')'
-     ⍺.ExecuteJavaScript j
+     ⍺.Document ExecuteJavaScript j
  }

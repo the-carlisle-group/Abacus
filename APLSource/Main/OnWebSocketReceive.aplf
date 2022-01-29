@@ -1,13 +1,11 @@
- OnHTTPRequest←{
-     u←7⊃⍵
-     u≡'http://dyalog_root/sjs':OnHTTPRequestSJS ⍵
-     u≢'http://dyalog_root/gui':⍵
+ OnWebSocketReceive←{
      h←⊃⍵
      d←h.Document
+     c←⎕JSON 3⊃⍵
+     c.Event≡'SJSR':c.result ⎕TPUT c.id
      q←d.StopPropagation
      d.StopPropagation←0
-     q:Return ⍵
-     c←⎕JSON 9⊃⍵
+     q:0
      c.HTMLRenderer←h
      j←c.TargetIndex
      k←c.CurrentTargetIndex
@@ -17,5 +15,5 @@
      ⍝ _←DisplayEventMessage c
      _←(⍎ce⍎'On',c.Event)c
      _←c ⎕TPUT{⍵×⍵∊⎕TREQ ⎕TNUMS}EventToken
-     Return ⍵
+     0
  }

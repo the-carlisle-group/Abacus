@@ -5,8 +5,9 @@
      ⍝ p,←⊂'Size'⍵.Size
      n←NextFormName 0
      h←⍎n ⎕WC p
-     h.InterceptedURLs←1 2⍴'*' 1
-     h.onHTTPRequest←'OnHTTPRequest'
+     h.InterceptedURLs←1 2⍴'ws://dyalog_root' 1
+     h.onWebSocketUpgrade←'OnWebSocketUpgrade'
+     h.onWebSocketReceive←'OnWebSocketReceive'
      h.Caption←⍵.Caption
      h⊣h SetDocument ⍵
  }

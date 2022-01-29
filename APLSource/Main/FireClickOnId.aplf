@@ -1,6 +1,0 @@
- FireClickOnId←{
-     ⍝ ⍺ ←→ HTMLRenderer
-     ⍝ ⍵ ←→ id
-     j←'document.getElementById("',⍵,'").click()'
-     ⍺.ExecuteJavaScript j
- }

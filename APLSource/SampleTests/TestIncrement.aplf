@@ -7,5 +7,6 @@
      (v+1)≠⍎⊃r.Content:1
      ih←⊃r A.ExecuteOnElementSync'innerHTML'
      (⍕v+1)≢ih:1
+     4≠d A.ExecuteJavaScriptSync'2+2':1
      0
  }

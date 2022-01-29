@@ -4,7 +4,7 @@
      m←p.Menus
      i←p.MenuItems
      ⎕THIS.H←##.Main
-     r←⍺ H.NewControl'nav'
+     r←⍺ H.New'nav'
      r.class←'ribbon'
      mb←r H.New'ul'
      li←{mb H.New'li'}¨m

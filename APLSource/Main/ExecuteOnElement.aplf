@@ -5,5 +5,5 @@
      t←⍺.Tag
      j←'document.getElementsByTagName'
      j,←'("',t,'").item(',(⍕i),').',⍵,';'
-     ⍺.Document.HTMLRenderer.ExecuteJavaScript j
+     ⍺.Document ExecuteJavaScript j
  }

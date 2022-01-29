@@ -2,7 +2,7 @@
      d←⍵.Document
      r←d A.ElementById'result'
      v←⍎⊃r.Content
-     b←d A.ElementById'increment'
+     b←d A.ElementById'decrement'
      _←b A.FireEventAndWait'click'
      (v-1)≠⍎⊃r.Content
  }
