@@ -4,6 +4,6 @@
      hd←h New'head'
      mt←hd New'meta'
      mt.charset←'utf-8'
-     b←h New'body'
+     b←h New'body'⍵
      h
  }
