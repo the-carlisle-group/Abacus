@@ -1,6 +1,6 @@
  LoadingAnimationPage←{
      ⍝ ← ←→
-     d←NewDocument 0
+     d←NewDocument ⍬
      b←New¨5⍴⊂'div'
      b.class←'rect'∘,¨⍕¨1+⍳5
      bd←GetBody d

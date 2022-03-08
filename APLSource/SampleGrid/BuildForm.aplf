@@ -1,5 +1,5 @@
  BuildForm←{
-     d←H.NewDocument 0
+     d←H.NewDocument ⍬
      b←d H.ElementByTag'body'
      hd←b H.New'header'
      h1←hd H.New'h1' 'Sample Grid'

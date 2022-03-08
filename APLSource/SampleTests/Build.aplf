@@ -1,6 +1,6 @@
  Build←{
      New←A.New
-     d←A.NewDocument 0
+     d←A.NewDocument ⍬
      d.Caption←'Testing Framework Example'
      b←A.GetBody d
      ib←b New'button' 'Increment'

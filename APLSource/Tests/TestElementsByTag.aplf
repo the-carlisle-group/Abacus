@@ -1,6 +1,6 @@
  TestElementsByTag←{
      H←##.Main
-     d←H.NewDocument 0
+     d←H.NewDocument ⍬
      b←d H.ElementByTag'body'
      h1←b H.New'h1' 'Header 1'
      h2←b H.New'h2' 'Header 2'

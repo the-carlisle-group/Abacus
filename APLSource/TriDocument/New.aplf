@@ -1,6 +1,6 @@
  New←{
      ⎕THIS.H←##.Main
-     d←H.NewDocument 0
+     d←H.NewDocument ⍬
      d.Size←900 1200
      b←d H.ElementByTag'body'
      hd←b H.New'header'
