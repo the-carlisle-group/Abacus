@@ -1,4 +1,13 @@
-# Abacus Release 0.0.7                    
+# Abacus Release 0.0.8                    
+1. Fix calls to NewDocument wrt right argument
+2. Fix markdown links
+3. Initialize websocket on page load
+4. websocket
+5. Add sychronous JavaScript execution (only works in test framework)
+6. Add sample of test framework
+7. First pass at test framework
+
+# Abacus Release 0.0.7 2022-01-07 16:51:27
 1. Fix SetOuterHTML function
 2. Fix demo
 
