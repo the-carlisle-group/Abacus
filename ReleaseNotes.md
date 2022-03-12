@@ -1,4 +1,6 @@
-# Abacus Release 0.0.8                    
+# Abacus Release 0.0.9                    
+
+# Abacus Release 0.0.8 2022-03-12 14:14:55
 1. Fix calls to NewDocument wrt right argument
 2. Fix markdown links
 3. Initialize websocket on page load
