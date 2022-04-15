@@ -1,6 +1,5 @@
  OnWebSocketUpgrade←{
      h←⊃⍵
-     d←h.Document
-     d.WebSocketID←2⊃⍵
+     h.WebSocketID←2⊃⍵
      0
  }
