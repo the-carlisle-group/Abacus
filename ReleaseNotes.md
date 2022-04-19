@@ -1,4 +1,8 @@
-# Abacus Release 0.0.9                    
+# Abacus Release 0.0.10                    
+1. Move location of WebSocketID storage from Document to HTMLRenderer
+2. Fix typo
+
+# Abacus Release 0.0.9 2022-03-12 15:09:21
 
 # Abacus Release 0.0.8 2022-03-12 14:14:55
 1. Fix calls to NewDocument wrt right argument
