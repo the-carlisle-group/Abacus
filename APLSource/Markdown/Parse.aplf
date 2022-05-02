@@ -2,6 +2,7 @@
      ⍝ ⍵ ←→ MarkDown
      ⍝   ←→ Array of HTML obs
      ⍝ f ←→ Paragraph|Table|Code|Header
+     0=≢⍵:''
      ⎕THIS.H←##.Main
      s←InitState 0
      t b←↓⍉↑s ProcessLine¨⍵
