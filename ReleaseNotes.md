@@ -1,4 +1,8 @@
-# Abacus Release 0.0.10                    
+# Abacus Release 0.0.11                    
+1. Fix to NewHTMLRenderer function
+2. Fix modal form
+
+# Abacus Release 0.0.10 2022-04-19 11:40:13
 1. Move location of WebSocketID storage from Document to HTMLRenderer
 2. Fix typo
 
