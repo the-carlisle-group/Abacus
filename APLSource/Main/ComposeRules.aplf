@@ -4,6 +4,7 @@
      0=≢⍵:''
      nl←⎕UCS 13
      ⊃,/((⍺>0)/nl),⍺{
+         0=≢⍵.Selector:⍺ ComposeRules ⍵.Rules
          b←(4×⍺)⍴' '
          s←b,⍵.Selector,' {',nl
          s,←⍺ ComposeDeclarations ⍵
