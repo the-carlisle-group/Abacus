@@ -1,6 +1,7 @@
  ThorntonMelon←{
      ⍝ ⍵  Color Theme?
      s←⍬
+     s,←Font ⍵
      s,←Layout ⍵
      s,←Basic ⍵
      s,←Table ⍵

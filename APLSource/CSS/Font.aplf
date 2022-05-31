@@ -1,0 +1,8 @@
+ Font←{
+     s←⍬
+     ⍝ ***********************
+     s,←r←Rule'@font-face'
+     r.font_family←'"APL385 Unicode"'
+     r.src←'url("/images/apl385.ttf")'
+     s
+ }
