@@ -1,8 +1,8 @@
  OnWebSocketReceive←{
      h←⊃⍵
-     d←h.Document
      c←⎕JSON 3⊃⍵
      c.Event≡'SJSR':c.result ⎕TPUT c.id
+     d←h.Document
      q←d.StopPropagation
      d.StopPropagation←0
      q:0
@@ -12,8 +12,6 @@
      te ce←(Elements d)[j k]
      c.Target←te
      c.CurrentTarget←ce
-     ⍝ _←DisplayEventMessage c
-     _←(⍎ce⍎'On',c.Event)c
-     _←c ⎕TPUT{⍵×⍵∊⎕TREQ ⎕TNUMS}EventToken
+     h.LastTID←h.LastTID HandleRequest&c
      0
  }

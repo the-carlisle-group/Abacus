@@ -1,6 +1,11 @@
- OnIncrement←{
+ OnIncrement←{  ⍝ OnIncrementTrad
+     ⎕←'OnIncrement Running'
+     ⍝ _←⎕DL 5
      h←⍵.HTMLRenderer
      d←h.Document
      r←d A.ElementById'result'
-     r A.SetInnerHTML⍕1+⍎⊃r.Content
+     n←d A.ExecuteJavaScriptSync'1+',⊃r.Content
+     _←r A.SetInnerHTML⍕n
+     ⎕THIS.AAA←d A.ExecuteOnElementSync'outerHTML'
+     0
  }

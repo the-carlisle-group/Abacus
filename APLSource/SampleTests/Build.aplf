@@ -10,7 +10,7 @@
      db.id←'decrement'
      db.Onclick←A.FQP'OnDecrement'
      _←b New'p' 'The current value is:'
-     r←b New'p'(,'0')
+     r←b New'p'(,'1000')
      r.id←'result'
      d
  }

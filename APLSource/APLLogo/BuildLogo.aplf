@@ -1,0 +1,17 @@
+ BuildLogo←{
+     l←⍺
+     l.class←'APLLogo'
+     A←##.Main
+     New←A.New
+     s←l New'span'(,'↑')
+     s.class←'logoArrow arrowUp'
+     s←l New'span'(,'A')
+     s.class←'logoLetter letterA'
+     s←l New'span'(,'P')
+     s.class←'logoLetter letterP'
+     s←l New'span'(,'L')
+     s.class←'logoLetter letterL'
+     s←l New'span'(,⎕UCS 129046)
+     s.class←'arrowRight'
+     l
+ }

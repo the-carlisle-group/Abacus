@@ -5,9 +5,6 @@
      i←TagIndex ⍺
      t←⍺.Tag
      c←'document.getElementsByTagName'
-     c,←'("',t,'").item(',(⍕i),').',⍵,';'
-     c←'''',c,''''
-     j←'execCode(',(⍕⎕TID),',',c,')'
-     _←⍺.Document ExecuteJavaScript j
-     ⎕TGET ⎕TID
+     c,←'(''',t,''').item(',(⍕i),').',⍵,';'
+     ⍺.Document ExecuteJavaScriptSync c
  }

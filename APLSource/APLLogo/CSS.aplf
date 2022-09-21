@@ -1,0 +1,36 @@
+ CSS←{
+     NewRule←##.Main.NewRule
+     s←NewRule''
+
+     r←s NewRule'.APLLogo'
+     r.padding←'2rem 2rem'
+     r.letter_spacing←'-5px'
+     r←s NewRule'.logoLetter'
+     r.font_size←'4rem'
+     r.font_family←'Times New Roman'
+     r.font_weight←'bold'
+     r.font_style←'italic'
+   ⍝
+⍝     r←s NewRule'.letterL'
+⍝     r.letter_spacing←'-8px'
+⍝     r.margin_left←'-.1em'
+⍝
+
+
+     r←s NewRule'.arrowRight'
+     r.font_size←'6rem'
+     ⍝ r.font_family←'APL385 Unicode'
+     r.display←'block'
+     ⍝ r.margin_top←'-4rem'
+     ⍝ r.transform←'translate(1rem , 10rem)'
+     ⍝ r.scale←'2 1'
+     r.transform←'scaleX(2 1.5)'
+     r.width←'5rem'
+     s
+
+
+  ⍝ s,←⊂'display' 'inline-block'
+  ⍝       s,←⊂'transform' 'rotate(-2deg)'
+  ⍝       s,←⊂'margin-left' '-.25em'
+
+ }

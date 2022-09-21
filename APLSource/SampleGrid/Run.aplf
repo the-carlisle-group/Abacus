@@ -6,6 +6,6 @@
      p.Subtitle←'This is a resizable, modal dialog box.'
      p.OnOK←H.FQP'OnOK'
      p.OnCancel←H.FQP'OnCancel'
-     p.Content←##.Grid.New GridDataLarge 0
+     p.Content←##.Grid.New GridData 0
      ##.DialogBox.Run p
  }
