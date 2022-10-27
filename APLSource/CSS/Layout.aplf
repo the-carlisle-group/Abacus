@@ -2,7 +2,7 @@
      s←⍬
      ⍝ ***********************
      s,←r←Rule'html'
-     r.font_size←'20px'
+     r.font_size←'16px'
      r.background_color←'Black'
      ⍝ ***************
      s,←r←Rule'body'

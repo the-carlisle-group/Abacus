@@ -41,7 +41,7 @@
      n←1⊃⍴H.HeaderCells ⍵
      cs←{id,' th:nth-child(',⍵,')'}¨⍕¨1+⍳n
      s,←r←H.NewRule¨cs
-     r.text_align←'left' 'left' 'right' 'right' 'right' 'right'
+     r.text_align←2⍴⊂'left'
 
 
 
@@ -56,7 +56,7 @@
      n←1⊃⍴H.BodyCells ⍵
      cs←{id,' td:nth-child(',⍵,')'}¨⍕¨1+⍳n
      s,←r←H.NewRule¨cs
-     r.text_align←'left' 'left' 'right' 'right' 'right' 'right'
+     r.text_align←2⍴⊂'left'
 
 
      ⍝ Current Cell

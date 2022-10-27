@@ -1,4 +1,4 @@
- ComposeRules←{
+ ComposeRules_New←{
      ⍝ ⍵ ←→ Vector of CSS Rules
      ⍺←0
      0=≢⍵:''

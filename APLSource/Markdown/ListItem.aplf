@@ -1,0 +1,7 @@
+ ListItem←{
+     t←{⍵↓⍨1+⍵⍳' '}⊃⍵
+     i←H.New'li't
+     1=≢⍵:i
+     i.Content,←Parse 4↓¨1↓⍵
+     i
+ }

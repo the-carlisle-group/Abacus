@@ -16,14 +16,14 @@
      r.margin←'1rem 0 .25rem 0'
      r.font_weight←'bold'
      r.font_family←'Arial'
-     r.font_size←'2rem'
+     r.font_size←'1.5rem'
      r.font_weight←'bold'
      ⍝ ****************
      s,←r←Rule'h2'
      r.font_weight←'bold'
      r.font_family←'Arial'
-     r.font_size←'1.25rem'
-     r.margin←'1rem 0 .15rem 0'
+     r.font_size←'1.1rem'
+     r.margin←'.5rem 0 .15rem 0'
      ⍝ ************************
      s,←r←Rule'article>header'
      r.margin←'2rem 0 1rem 0'

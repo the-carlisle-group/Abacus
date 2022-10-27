@@ -9,6 +9,7 @@
      ⍺.Document←⍵
      ⍵.StopPropagation←0
      ⍵.HTMLRenderer←⍺
-     ⍺.HTML←DOM2HTML ⍵
-     0
+     h←DOM2HTML ⍵
+     ⍺.HTML←h
+     h
  }

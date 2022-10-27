@@ -1,18 +1,21 @@
  ProcessLine←{
-     ⍝ ⍵ ←→ Line of MarkDown
+     ⍝ ⍵ ←→ Line Number
      ⍝ ⍺ ←→ State
      ⍝   ←→ Partition Vector
-     ⍺.InParagraph:''(⍺.InParagraph←⍵≢'')
-     ⍺.InCode:''(1⊣⍺.InCode←'~~~'≢3↑⍵)
-     ⍺.InTable:''(⍺.InTable←'|'=⊃⍵)
-     ⍺.InBlockQuote:''(⍺.InBlockQuote←'> '≡2↑⍵)
-     ⍺.InPullQuote:''(⍺.InPullQuote←'^ '≡2↑⍵)
-     ''≡⍵:'' 0
-     '~~~'≡3↑⍵:'Code'(⍺.InCode←1)
-     '|'=⊃⍵:'Table'(⍺.InTable←1)
-     '> '≡2↑⍵:'BlockQuote'(⍺.InBlockQuote←1)
-     '∧ '≡2↑⍵:'PullQuote'(⍺.InPullQuote←1)
-     '#'=⊃⍵:'Header' 1
-     '!'=⊃⍵:'Image' 1
+     l←⍵⊃⍺.Lines
+     ⍺.InParagraph:''(⍺.InParagraph←l≢'')
+     ⍺.InCode:''(1⊣⍺.InCode←'~~~'≢3↑l)
+     ⍺.InTable:''(⍺.InTable←'|'=⊃l)
+     ⍺.InBlockQuote:''(⍺.InBlockQuote←'> '≡2↑l)
+     ⍺.InPullQuote:''(⍺.InPullQuote←'^ '≡2↑l)
+     ⍺.InList:''(⍺.InList←⍺ StillInList ⍵)
+     ''≡l:'' 0
+     '~~~'≡3↑l:'Code'(⍺.InCode←1)
+     '|'=⊃l:'Table'(⍺.InTable←1)
+     '> '≡2↑l:'BlockQuote'(⍺.InBlockQuote←1)
+     '∧ '≡2↑l:'PullQuote'(⍺.InPullQuote←1)
+     '#'=⊃l:'Header' 1
+     '!'=⊃l:'Image' 1
+     IsListItem l:'List'(⍺.InList←1)
      1:'Paragraph'(⍺.InParagraph←1)
  }

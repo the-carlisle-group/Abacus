@@ -1,0 +1,6 @@
+ List←{
+     t←↑⍵
+     p←(' '≠t[;0])⊂⍵
+     l←('-'∊t[;0])⊃'ol' 'ul'
+     H.New l(ListItem¨p)
+ }

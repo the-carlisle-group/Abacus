@@ -1,0 +1,8 @@
+ StillInList←{
+     ⍝ ⍺ ←→ State
+     ⍝ ⍵ ←→ Line Number
+     c n←(⍺.Lines,⊂'')[⍵+0 1]
+     ∨/IsListItem¨c n:1
+     ∨/IsIndented¨c n:1
+     0
+ }

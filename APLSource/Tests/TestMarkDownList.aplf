@@ -1,0 +1,87 @@
+ TestMarkDownList←{
+     ⍝ Simple List
+     m←⊂'# MarkDown List'
+     m,←⊂''
+     m,←⊂'A list follows:'
+     m,←⊂''
+     m,←⊂'- Item 1'
+     m,←⊂'- Item 2'
+     m,←⊂'- Item 3'
+     m,←⊂''
+     m,←⊂'This is a trailing paragraph'
+     h←##.Markdown.Parse m
+     ⍝ Test h here.
+
+     ⍝ List with items in content, blank lines separating
+     m←⊂'# MarkDown List'
+     m,←⊂''
+     m,←⊂'A list follows:'
+     m,←⊂''
+     m,←⊂'- Item 1'
+     m,←⊂''
+     m,←⊂'    This is detail on item 1.'
+     m,←⊂''
+     m,←⊂'- Item 2'
+     m,←⊂''
+     m,←⊂'    This is detail on item 2,'
+     m,←⊂'    and note there is no detail on the following item 3.'
+     m,←⊂''
+     m,←⊂'- Item 3'
+     m,←⊂''
+     m,←⊂'This is a trailing paragraph,'
+     m,←⊂'it should not be lost!'
+     h←##.Markdown.Parse m
+
+     ⍝ List with items in content, no blank lines
+     m←⊂'# MarkDown List'
+     m,←⊂''
+     m,←⊂'A list follows:'
+     m,←⊂''
+     m,←⊂'- Item 1'
+     m,←⊂'    This is detail on item 1.'
+     m,←⊂'- Item 2'
+     m,←⊂'    This is detail on item 2,'
+     m,←⊂'    and note there is no detail on the following item 3.'
+     m,←⊂'- Item 3'
+     m,←⊂''
+     m,←⊂'This is a trailing paragraph,'
+     m,←⊂'it should not be lost'
+     h←##.Markdown.Parse m
+
+     ⍝ List with sub lists
+     m←⊂'# MarkDown List with Sub lists'
+     m,←⊂''
+     m,←⊂'A list follows'
+     m,←⊂''
+     m,←⊂'- Item 1'
+     m,←⊂''
+     m,←⊂'    1. Sub Item a'
+     m,←⊂'    12. Sub Item b'
+     m,←⊂'    199. Sub Item c'
+     m,←⊂''
+     m,←⊂'- Item 2'
+     m,←⊂'- Item 3'
+     m,←⊂''
+     m,←⊂'This is a trailing paragraph'
+     h←##.Markdown.Parse m
+
+     ⍝ Back to back lists
+     m←⊂'# MarkDown List'
+     m,←⊂''
+     m,←⊂'A list follows'
+     m,←⊂''
+     m,←⊂'1. Item 1'
+     m,←⊂'1. Item 2'
+     m,←⊂'1. Item 3'
+     m,←⊂''
+     m,←⊂'1. Item 4'
+     m,←⊂''
+     m,←⊂''
+     m,←⊂'1. Item 1 in List 2'
+     m,←⊂'1. Item 2 in List 2'
+     m,←⊂'1. Item 2 in List 2'
+     m,←⊂'This is a trailing paragraph.'
+     h←##.Markdown.Parse m
+
+
+ }

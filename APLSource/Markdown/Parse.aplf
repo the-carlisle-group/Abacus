@@ -4,8 +4,8 @@
      ⍝ f ←→ Paragraph|Table|Code|Header
      0=≢⍵:''
      ⎕THIS.H←##.Main
-     s←InitState 0
-     t b←↓⍉↑s ProcessLine¨⍵
+     s←InitState ⍵
+     t b←↓⍉↑s ProcessLine¨⍳≢⍵
      ~1∊b:''
      p←b⊆⍵
      f←(b>¯1↓0,b)/t

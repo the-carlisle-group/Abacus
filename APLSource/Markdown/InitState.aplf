@@ -1,5 +1,6 @@
  InitState←{
      s←⎕NS''
+     s.Lines←⍵
      s.InParagraph←0
      s.InTable←0
      s.InCode←0
