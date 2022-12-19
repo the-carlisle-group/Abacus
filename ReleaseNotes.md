@@ -1,4 +1,12 @@
-# Abacus Release 0.0.11                    
+# Abacus Release 0.0.12                    
+1. Handles lists in markdown
+2. Cleanup
+3. Thread event handlers
+4. Add downloadable font to CSS
+5. Fix markdown issue
+6. Enhance ComposeRules to handle blank/empty selector
+
+# Abacus Release 0.0.11 2022-05-04 11:59:24
 1. Fix to NewHTMLRenderer function
 2. Fix modal form
 
