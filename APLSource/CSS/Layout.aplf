@@ -3,19 +3,22 @@
      ⍝ ***********************
      s,←r←Rule'html'
      r.font_size←'16px'
-     r.background_color←'Black'
+     r.background_color←'White' ⍝ 'Black'
      ⍝ ***************
      s,←r←Rule'body'
      r.background_color←'White'
-     r.max_width←'50rem'
-     r.margin_left←'auto'
-     r.margin_right←'auto'
+     ⍝ r.max_width←'50rem'
+     ⍝ r.margin_left←'auto'
+     ⍝ r.margin_right←'auto'
      r.min_height←'100vh'
      r.display←'flex'
      r.flex_wrap←'wrap'
      r.flex_direction←'column'
      ⍝ ***********************
      s,←r←Rule'main'
+     r.max_width←'40rem'
+     r.margin_left←'auto'
+     r.margin_right←'auto'
      r.padding←'0 4rem'
      r.flex←1
      ⍝ **************************

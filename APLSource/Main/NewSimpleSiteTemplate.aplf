@@ -11,6 +11,13 @@
      hd←d New'head'
      mt←hd New'meta'
      mt.charset←'utf-8'
+
+     ⍝ Try this
+     mt←hd New'meta'
+     mt.name←'viewport'
+     mt.content←'width=device-width, initial-scale=1'
+     ⍝ ↑↑↑↑
+
      l←hd New'link'
      l.rel←'stylesheet'
      l.href←'/ThorntonMelon.css'

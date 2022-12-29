@@ -3,6 +3,7 @@
      ⍝ *********************
      s,←r←Rule'p'
      r.margin←'0 0 .75rem 0'
+     r.text_align←'justify'
      ⍝ *******************
      s,←r←Rule'a'
      r.color←'black'
@@ -43,7 +44,7 @@
      r.display←'block'
      r.background_color←'LightGray'
      r.padding←'2rem 2rem'
-     r.max_width←'38rem'
+     ⍝ r.max_width←'38rem'
      r.overflow←'auto'
      ⍝ **************************
      s,←r←Rule'blockquote'
