@@ -1,9 +1,0 @@
- EncodePre←{
-     ⍝ ⍺ ←→ 0 for Encode, 1 for Decode
-     ⍝ ⍵ ←→ Char vec
-     ⍺←0
-     z←⍵
-     rep←{z←⍺ ⋄ z[⍸z=0⊃⍵]←1⊃⍵ ⋄ z}
-     z←z rep ⍺⌽' ⍘'
-     z rep ⍺⌽(⎕UCS 13),'⍚'
- }

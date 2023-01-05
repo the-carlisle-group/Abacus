@@ -3,6 +3,6 @@
      s←'`(.*?)`'
      p←s PartitionByRegex ⍵
      {'`'≠⊃⍵:⍵
-         H.New'code'(¯1↓1↓⍵)
+         H.New'code'(1↓¯1↓⍵)
      }¨p
  }

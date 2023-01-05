@@ -1,8 +1,9 @@
  Elements←{
      ⍝ ⍵ ←→ Element
      ⍝ ← ←→ Vector of ⍵ and all sub elements
-     326≠⎕DR ⍵:⍬
-     ⍵,{c←{0=≢⍵:⍬ ⋄ ⍵/⍨326=⎕DR¨⍵}⍵.Content
+     IsElement←{⊃9=⎕NC'⍵'}
+     ~IsElement ⍵:⍬
+     ⍵,{c←{0=≢⍵:⍬ ⋄ ⍵/⍨IsElement¨⍵}⍵.Content
          0=≢c:⍬
          ⊃,/c,¨∇¨c}⍵
  }

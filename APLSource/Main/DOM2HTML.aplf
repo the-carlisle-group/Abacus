@@ -4,8 +4,8 @@
      0<⍴⍴⍵:⊃,/∇¨⍵
      _←InjectStyleElement ⍵
      _←InjectScriptElement ⍵
-     m←↑,ConstructQXI ⍵
-     t←1 EncodePre ⎕XML 4↑[1]m
+     m←AddXMLSpace↑,ConstructQXI ⍵
+     t←RemoveXMLSpace ⎕XML 4↑[1]m
      t←t InjectHTML m[;4]~0
      ⍵.Tag≢'html':t
      t←⍵ InjectStyle t

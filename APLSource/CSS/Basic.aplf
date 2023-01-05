@@ -34,16 +34,16 @@
      ⍝ *****************
      s,←r←Rule'code'
      r.font_family←'APL385 Unicode'
+     r.white_space←'pre'
      ⍝ ****************
      s,←r←Rule'pre'
-     r.margin←0
-     r.whitespace←'pre'
+     r.margin←'0 0 .75rem 0'
      r.padding←0
      ⍝ ****************
      s,←r←Rule'pre>code'
      r.display←'block'
      r.background_color←'LightGray'
-     r.padding←'2rem 2rem'
+     r.padding←'1.5rem 2rem'
      ⍝ r.max_width←'38rem'
      r.overflow←'auto'
      ⍝ **************************
