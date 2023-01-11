@@ -1,5 +1,4 @@
  RemoveXMLSpace←{
      t←' xml:space="preserve"'
-     n←≢t
-     ⍵/⍨~n∨/(t⍷⍵),⍨1↓n⍴0
+     ⍵/⍨~1↓(≢t)∨/t⍷t,⍵
  }
