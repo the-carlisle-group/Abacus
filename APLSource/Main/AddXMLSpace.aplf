@@ -1,6 +1,6 @@
  AddXMLSpace←{
      m←⍵
-     i←⍸m[;1]∊,¨'p' 'pre' 'tr'
+     i←⍸m[;1]∊,¨'p' 'pre' 'tr' 'li'
      m[i;3]←'xml:space' 'preserve'∘⍪¨m[i;3]
      m
  }

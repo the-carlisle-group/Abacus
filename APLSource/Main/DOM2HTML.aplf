@@ -1,7 +1,8 @@
  DOM2HTML←{
      ⍝ ⍵ ←→ DOM
      ⍝ ← ←→ HTML
-     0<⍴⍴⍵:⊃,/∇¨⍵
+     nl←⎕UCS 13
+     0<⍴⍴⍵:1↓⊃,/nl,¨∇¨⍵
      _←InjectStyleElement ⍵
      _←InjectScriptElement ⍵
      m←AddXMLSpace↑,ConstructQXI ⍵
@@ -10,5 +11,5 @@
      ⍵.Tag≢'html':t
      t←⍵ InjectStyle t
      t←⍵ InjectScript t
-     '<!DOCTYPE html>',(⎕UCS 13),t
+     '<!DOCTYPE html>',nl,t
  }
