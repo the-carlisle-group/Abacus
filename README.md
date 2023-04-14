@@ -1,5 +1,7 @@
 # Abacus, an HTML Framework for Dyalog APL
 
+(See the wiki for documentation) 
+
 ## HTML
 
 Easy, catenate-free construction and manipulation of HTML with a document object model - an APLDOM.
@@ -16,3 +18,6 @@ Classless CSS to pleasingly display semantic HTML.
 ## Markdown
 
 Convert markdown to HTML.
+
+
+See the wiki for documentation 
