@@ -1,4 +1,14 @@
-# Abacus Release 0.0.12                    
+# Abacus Release 0.0.13                    
+1. Fix SetDocument
+2. Fix for SetDocument
+3. Add optional temp file name to SetDocument argument
+4. Update README.md
+5. Fix issue #4
+6. Small improvement to RemoveXMLSpace function
+7. Fix issue with XML formatting
+8. Minor changes to blog layout
+
+# Abacus Release 0.0.12 2022-12-19 11:17:38
 1. Handles lists in markdown
 2. Cleanup
 3. Thread event handlers
