@@ -13,6 +13,7 @@
      h←DOM2HTML d
      0=≢f:h⊣⍺.HTML←h
      _←h ⎕NPUT f 1
+     ⍺.InterceptedURLs←0 2⍴⊂''
      ⍺.URL←f
      h
  }
