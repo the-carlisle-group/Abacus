@@ -1,7 +1,8 @@
  SetDocument←{
      ⍝ ⍺ ←→ HTMLRenderer
-     ⍝ ⍵ ←→ Document
-     ⍵=0:0
+     ⍝ ⍵ ←→ Document [Target temp file name]
+     d f←2↑⍵,⊂''
+     d=0:0
      ⍵.Script←JavaScript
      _←SetParent ⍵
      e←Elements ⍵
@@ -10,6 +11,8 @@
      ⍵.StopPropagation←0
      ⍵.HTMLRenderer←⍺
      h←DOM2HTML ⍵
-     ⍺.HTML←h
+     0=≢f:h⊣⍺.HTML←h
+     _←h ⎕NPUT f 1
+     ⍺.URL←f
      h
  }
