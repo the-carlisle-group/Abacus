@@ -3,14 +3,14 @@
      ⍝ ⍵ ←→ Document [Target temp file name]
      d f←2↑⍵,⊂''
      d=0:0
-     ⍵.Script←JavaScript
-     _←SetParent ⍵
-     e←Elements ⍵
-     e.Document←⍵
-     ⍺.Document←⍵
-     ⍵.StopPropagation←0
-     ⍵.HTMLRenderer←⍺
-     h←DOM2HTML ⍵
+     d.Script←JavaScript
+     _←SetParent d
+     e←Elements d
+     e.Document←d
+     ⍺.Document←d
+     d.StopPropagation←0
+     d.HTMLRenderer←⍺
+     h←DOM2HTML d
      0=≢f:h⊣⍺.HTML←h
      _←h ⎕NPUT f 1
      ⍺.URL←f
