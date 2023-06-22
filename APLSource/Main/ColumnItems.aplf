@@ -1,0 +1,7 @@
+ ColumnItems←{
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ Vector of <col> elements in <colgroup>
+     e←⊃⍵.Content
+     e.Tag≢'colgroup':⍬
+     e.Content
+ }

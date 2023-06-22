@@ -11,5 +11,9 @@
          t←(⍺≡'tbody')⊃'th' 'td'
          e⊣r.Content←↓New¨{t ⍵}¨d
      }¨(⊂1 0 2)⌷3↑⍬ ⍬,⍨(⊂⍣(2=≡⍵))⍵
-     ⍺ New'table'c
+
+     cg←New'colgroup'
+     _←cg New¨(≢⊃c[0].Content.Content)⍴⊂'col'
+
+     ⍺ New'table'(cg,c)
  }
