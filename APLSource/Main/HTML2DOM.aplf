@@ -2,6 +2,8 @@
      ⍝ ⍵ ←→ HTML
      ⍝ ← ←→ DOM
      0=≢⍵:⍬
+     xml←(⎕XML⍠('Whitespace' 'Preserve')('UnknownEntity' 'Preserve'))⍵
+     xml[;2]←('\x1B'⎕R'\&')xml[;2]
      {⍵⌷⍨⍳1=⍴⍵}0{
          m←⍵
          0=≢m:⍺
@@ -9,5 +11,5 @@
          p←⍺{⍺ New 3↑1↓⍵}¨↓b⌿m
          m[;0]-←1
          p⊣p ∇¨1↓¨b⊂[0]m
-     }⎕XML ⍵
+     }xml
  }

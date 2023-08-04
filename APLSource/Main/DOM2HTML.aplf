@@ -6,7 +6,8 @@
      _←InjectStyleElement ⍵
      _←InjectScriptElement ⍵
      m←AddXMLSpace↑,ConstructQXI ⍵
-     t←RemoveXMLSpace ⎕XML 4↑[1]m
+     m[;2]←('\&(.+;)'⎕R((⎕UCS 27),'\1'))m[;2]   ⍝ Esacpe EntityName start
+     t←RemoveXMLSpace(⎕XML⍠('UnknownEntity' 'Preserve'))4↑[1]m
      t←t InjectHTML m[;4]~0
      ⍵.Tag≢'html':t
      t←⍵ InjectStyle t
