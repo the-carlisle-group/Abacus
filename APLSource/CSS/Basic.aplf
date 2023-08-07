@@ -50,7 +50,7 @@
      s,←r←Rule'blockquote'
      r.font_family←'Time New Roman'
      r.border_left←'.5em solid DarkGray'
-     r.margin←'2em 6em'
+     r.margin←'2em 3em'
      r.padding_left←'1rem'
      ⍝ ***************************
      s,←r←Rule'aside'
