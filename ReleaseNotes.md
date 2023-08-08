@@ -1,4 +1,8 @@
-# Abacus Release 0.0.13                    
+# Abacus Release 0.0.14                    
+1. Preserve unknown entities and whitespace
+2. Add style and script to AddXMLSpace
+
+# Abacus Release 0.0.13 2023-04-27 12:32:48
 1. Fix SetDocument
 2. Fix for SetDocument
 3. Add optional temp file name to SetDocument argument
