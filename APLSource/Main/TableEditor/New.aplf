@@ -1,0 +1,20 @@
+ New←{
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ Table Space
+     ⍝   ←→
+     ⍺←⊣
+     ⎕THIS.A←##
+     p←⍵
+     t←⍺ A.NewTable p.Data p.ColumnNames
+     t.class←'tableeditor'
+     t.Changed←0
+     t.CurCell←0 0
+     t.Onclick←A.FQP'OnClick'
+     t.Oninput←A.FQP'OnInput'
+     t.Onkeydown←A.FQP'OnKeyDown'
+     t.PreventDefault←⊂'TABLE' 'keydown'('ArrowLeft' 'ArrowRight' 'ArrowUp' 'ArrowDown')
+     c←A.BodyCells t
+     c.tabIndex←'0'
+     c[0;0].class←'curcell'
+     t
+ }

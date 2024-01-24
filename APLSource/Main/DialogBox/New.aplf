@@ -1,0 +1,19 @@
+ New←{
+     ⍝ ⍵ ←→ Propspace: Title,Subtitle,Content,OnOK
+     p←⍵
+     A←##
+     d←A.New'dialog'
+     d.class←'dialogbox'
+     ⍝ d.Onclose←A.FQP'OnClose'
+     h←d A.New'header'
+     h1←h A.New'h1'p.Title
+     ⍝ h2←h A.New'h2'p.Subtitle
+     s←d A.New'section'
+     s.class←'dialogcontent'
+     s.Content←p.Content
+     b←A.New¨{'button'⍵}¨'OK' 'Cancel'
+     b.Onclick←p.OnOK(A.FQP'OnClose')
+     li←A.New¨{'li'⍵}¨b
+     m←d A.New'menu'li
+     d
+ }

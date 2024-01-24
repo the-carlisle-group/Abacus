@@ -1,0 +1,4 @@
+ SetFocus←{
+     ⍝ ⍵ ←→ Element
+     ⍵ ExecuteOnElement'focus()'
+ }

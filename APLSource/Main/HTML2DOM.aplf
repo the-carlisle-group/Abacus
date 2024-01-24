@@ -2,7 +2,9 @@
      ⍝ ⍵ ←→ HTML
      ⍝ ← ←→ DOM
      0=≢⍵:⍬
-     xml←⎕XML⍠('Whitespace' 'Preserve')('UnknownEntity' 'Preserve')
+     ⍝ PROBLEM!!!!!! Add lots of phantom elements to DOM! No tag, blank data
+     ⍝ xml←⎕XML⍠('Whitespace' 'Preserve')('UnknownEntity' 'Preserve')
+     xml←⎕XML⍠'UnknownEntity' 'Preserve'
      {⍵⌷⍨⍳1=⍴⍵}0{
          m←⍵
          0=≢m:⍺

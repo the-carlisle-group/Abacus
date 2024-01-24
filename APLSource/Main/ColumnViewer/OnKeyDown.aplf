@@ -1,0 +1,13 @@
+ OnKeyDown←{
+     t←⍵.CurrentTarget
+     e←⍵.Target
+     k←⍵.Key
+     c←⍵.CtrlKey≡⊂'true'
+     s←⍵.ShiftKey≡⊂'true'
+     a←⍵.AltKey≡⊂'true'
+     u←~c∨s∨a
+     i←t.CurCol
+     u∧k≡'ArrowLeft':t MoveCol i-1
+     u∧k≡'ArrowRight':t MoveCol i+1
+     0
+ }

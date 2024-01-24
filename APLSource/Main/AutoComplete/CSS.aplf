@@ -1,0 +1,19 @@
+ CSS←{
+     Rule←##.NewRule
+     s←Rule''
+     r←s Rule'.acList'
+     r.background_color←'lightyellow'
+     r.max_height←'15rem'
+     r.position←'fixed'⍝ Why does not fixed work? ⍝ 'absolute'
+     ⍝ Does not matter which, as top, left always work in context of containing block
+     r.overflow←'auto'
+     ⍝ Items
+     r←s Rule'.acItem'
+     r.padding←'.1rem .2rem'
+     ⍝ Selected Item
+     r←s Rule'.acItemActive'
+     r.color←'white'
+     r.background_color←'blue'
+     ⍝
+     s
+ }

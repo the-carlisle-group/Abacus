@@ -1,5 +1,7 @@
  Image←{
+     a s←{⍵⊆⍨~⍵∊'![]()'}∊⍵
+     '#'=⊃s:##.Main.HTML2DOM⍎s ⍝ Embedd SVG Use get value of function that checkes that ⎕NL is 2 before executing!
      i←H.New'img'
-     i.(alt src)←{⍵⊆⍨~⍵∊'![]()'}∊⍵
+     i.(alt src)←a s
      i
  }

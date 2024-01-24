@@ -1,0 +1,4 @@
+ GetNearest←{
+     ⍺.Tag≡⍵:⍺
+     ⍺.Parent ∇ ⍵
+ }

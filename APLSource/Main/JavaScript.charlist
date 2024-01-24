@@ -23,7 +23,7 @@ function execCode(id,code) {
 }
 
 function sendAPLRequest(e){
-      const ce=[e.currentTarget.className,e.target.tagName,e.type,e.key].join();
+      const ce=[e.currentTarget.className,e.currentTarget.tagName,e.type,e.key].join();
       const pd=PreventDefaultList.includes(ce);
       // alert (ce)
       if (pd){
@@ -53,9 +53,10 @@ function sendAPLRequest(e){
                 FontFamily: s['font-family'],
                 Font: s['font'],
                 Padding: s['padding'],
+                OffsetTop: e.target.offsetTop,
+                OffsetLeft: e.target.offsetLeft,
                 BoundingClientRect: [r.top,r.left,r.bottom,r.right]
       };
       const m = JSON.stringify(b); 
       ws.send (m)
 }
-

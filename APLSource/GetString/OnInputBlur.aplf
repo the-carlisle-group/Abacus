@@ -1,6 +1,0 @@
- OnInputBlur←{
-     i←⍵.Target        ⍝ Or on Oninput
-     e←i.Parent
-     i.value←⍵.Value
-     0
- }

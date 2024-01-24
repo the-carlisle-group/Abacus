@@ -1,4 +1,0 @@
- OnKeyDown←{
-     ⍵.Key≢'Escape':0
-     H.Close ⍵.HTMLRenderer
- }

@@ -1,0 +1,24 @@
+ Test←{
+     ⍺←4 4
+     r c←⍺
+
+     h←c⍴'Number' 'Name' 'Address' 'State' 'Rate'
+    ⍝  h[0]←⊂''
+     v←⊂⍕¨1+⍳r
+     v,←⊂r⍴'Paul' 'Samuel' 'Sophia' 'Olivia'
+     v,←⊂r⍴'435 West 43rd Street' '855 Braveheart Loop' '115 S Debardeleben' '920 Johnson Street'
+     v,←⊂r⍴'NY' 'MT' 'GA' 'FL'
+     v,←⊂r⍴'9.123' '2.435' '4.125' '6.500'
+     t←⎕NS''
+     t.Names←h
+     t.Values←⍉↑c⍴v
+     t.TextAlign←c⍴'right' 'left' 'Left' 'left' 'right'
+     t.Width←c⍴'5rem' '5rem' '15rem' '3rem' '4rem'
+     tv←New t
+
+     d←A.NewDocument tv
+     d.Style←''
+     d.Caption←'Test 2-row Table'
+     A.NewForm d
+
+ }

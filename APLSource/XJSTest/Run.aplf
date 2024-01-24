@@ -1,8 +1,0 @@
- Run←{
-     _←⎕TGET ⎕TPOOL
-     _←'hr'⎕WC'HTMLRenderer'
-     hr.HTML←∊JavaScript,¨⎕UCS 10
-     hr.onHTTPRequest←'OnHttpRequest'
-     hr.InterceptedURLs←1 2⍴'*' 1
-     hr
- }

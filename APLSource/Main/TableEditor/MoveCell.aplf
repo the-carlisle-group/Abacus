@@ -1,0 +1,15 @@
+ MoveCell←{
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ New Location
+     m←A.BodyCells ⍺
+     c←⍺{3::0 ⋄ m[⍺.CurCell ⍵]}⍵
+     c≡0:0
+     oc nc←c
+     _←nc A.SetClass'tableeditor--curcell'
+     _←oc A.RemoveClass'tableeditor--curcell'
+     ⍺.CurCell←⍵
+     _←A.ScrollIntoView 1⊃c
+
+     ⍝ (1⊃c)H.FireEvent'focus' ⍝ MAY NOT NEED THIS!
+     0
+ }

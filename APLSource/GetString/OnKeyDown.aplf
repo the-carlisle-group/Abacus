@@ -1,6 +1,0 @@
- OnKeyDown←{
-     ~'Escape' 'Enter'∊⍨⊂⍵.Key:0
-     f←⍵.HTMLRenderer
-     f.Result←'Enter' 'Escape'⍳⊂⍵.Key
-     H.Close f
- }

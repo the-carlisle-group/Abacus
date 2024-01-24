@@ -1,0 +1,8 @@
+ ShowModal←{
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ dialog element
+     b←GetBody ⍺
+     _←b AppendChild ⍵
+     _←⍵ ExecuteOnElement'style.(maxHeight=offsetHeight)'
+     ⍵ ExecuteOnElement'showModal()'
+ }

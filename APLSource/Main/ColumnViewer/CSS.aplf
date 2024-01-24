@@ -1,0 +1,55 @@
+ CSS←{
+     ⍝ ⍵ ←→ Table
+     Rule←##.NewRule
+     s←Rule''
+     ⍝ Table
+     r←s Rule'.columnviewer'
+     r.border_collapse←'collapse'
+     r.table_layout←'fixed'
+
+     ⍝ Cells: th
+     r←s Rule'.columnviewer th'
+     r.padding←'.5rem 1rem'
+     r.border←'solid .5px black'
+     r.font_family←'Arial'
+     r.font_size←'1.1rem'
+     r.font_weight←'normal'
+⍝    r.position←'sticky'
+⍝    r.top←0
+⍝    r.background_color←'lightgray'
+⍝
+
+     ⍝ Cells: td
+     r←s Rule'.columnviewer td'
+     r.padding←'.5rem .75rem'
+     r.border←'solid .5px gray'
+
+     ⍝ thead
+     r←s Rule'.columnviewer thead'
+     r.position←'sticky'
+     r.top←0
+     r.background_color←'lightgray'
+
+     ⍝ Col aligbment
+     r←s Rule'.colleft'
+     r.text_align←'left'
+     r←s Rule'.colright'
+     r.text_align←'right'
+
+     ⍝ Pre
+     r←s Rule'pre'
+     r.font_size←'1.25rem'
+
+     ⍝ Current Cell
+     r←s Rule'.curcol'
+     r.background_color←'LightSteelBlue'
+     r.color←'white'
+
+     ⍝ Current Header
+     r←s Rule'.curheader'
+     r.color←'white'
+     r.background_color←'orange'
+     r.border←'.1rem solid black'
+
+     s
+ }

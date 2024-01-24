@@ -1,10 +1,9 @@
- ElementsWhere←{
+ ElementsWhereContent←{
      ⍝ ⍺ ←→ Element (or result of Elements ⍺)
      ⍝ ⍵ ←→ Name,Value
      ⍝ ← ←→ elements where attribute is value
      n v←,¨⍵
      e←{1=⍴⍴⍵:⍵ ⋄ Elements ⍵}⍺
      r←e{6::'' ⋄ ⍺⍎⍵}¨⊂n
-     n≡'Content':e/⍨r≡¨⊂,⊂v
      e/⍨r∊⊂v
  }

@@ -1,0 +1,7 @@
+ SetSVGClass←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ DOM content
+     _←⍺ SetProperty'className.baseVal'⍵
+     ⍺.class←⍵
+     0
+ }

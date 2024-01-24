@@ -5,7 +5,7 @@
      l←⊃,/{,⊃∘.,/⊂¨¨⊆¨⍵}¨v
      v←∪{¯1↓∊⍵,¨','}¨l
      k←(⎕JSON⍠'Compact' 0)v
-     d←'const PreventDefaultList = ',k,';'
+     d←'var PreventDefaultList = ',k,';' ⍝ Was const
      i←1⍳⍨'<script></script>'⍷⍵
      j←i+8
      p←4⍴' '

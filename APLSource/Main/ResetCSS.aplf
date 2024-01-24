@@ -1,0 +1,9 @@
+ ResetCSS←{
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ CSS object
+     d←⍺
+     e←d ElementByTag'style'
+     t←ComposeRules ⍵
+     e.Document←d
+     e SetProperty'innerHTML'(t~⎕UCS 13)
+ }

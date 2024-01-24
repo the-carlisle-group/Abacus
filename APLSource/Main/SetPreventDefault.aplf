@@ -1,0 +1,12 @@
+ SetPreventDefault←{
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ Object with class and PreventDefault def
+     ⍝ Rewrite, as e is one thing!
+     e←⍵
+     v←⊃,/{6::⍬ ⋄ (⊂⍵.class)∘,¨⍵.PreventDefault}¨e
+     l←⊃,/{,⊃∘.,/⊂¨¨⊆¨⍵}¨v
+     v←∪{¯1↓∊⍵,¨','}¨l
+     k←(⎕JSON⍠'Compact' 1)v
+     j←'PreventDefaultList = ',k
+     ⍺ ExecuteJavaScript j
+ }

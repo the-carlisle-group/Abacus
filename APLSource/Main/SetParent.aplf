@@ -1,8 +1,9 @@
  SetParent←{
-     ⍝ ⍵ ←→ DOM
+     ⍝ ←→ DOM
      ⍺←0
      e←{⍵/⍨326=⎕DR¨⍵}⍵.Content
      0=≢e:0
+     326≠⎕DR⊃⊃e:0⍝ KLUGE for nested data treated as raw HTML  which has been double enclosed!!
      e.Parent←⍵
      ⍵ ∇¨e
  }

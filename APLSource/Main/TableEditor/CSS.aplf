@@ -1,0 +1,48 @@
+ CSS←{
+     Rule←##.NewRule
+     s←Rule''
+     ⍝ Table
+     r←s Rule'.tableeditor'
+     r.border_collapse←'collapse'
+     r.table_layout←'fixed'
+
+     ⍝ thead
+     r←s Rule'.tableeditor thead'
+     r.font_family←'Arial'
+     r.font_size←'1.1rem'
+     r.position←'sticky'
+     r.top←0
+
+     ⍝ Cells: th
+     r←s Rule'.tableeditor th'
+     r.padding←'1rem .75rem'
+     r.border←'solid 3px black'
+     r.Margin←'6px'
+     ⍝r.background_color←'lightgray'
+
+     ⍝ Cells: td
+     r←s Rule'.tableeditor td'
+     r.padding←'.5rem .75rem'
+     r.border←'solid .5px gray'
+
+     ⍝ Body
+     r←s Rule'.tableeditor tbody'
+     r.font_family←'APL385 Unicode'
+     r.font_size←'1.25rem'
+
+     ⍝ Current Cell
+     r←s Rule'.tableeditor .curcell'
+     r.background_color←'orange'
+     r.border←'.1rem solid black'
+
+      ⍝ Input
+⍝     s,←r←H.NewRule'td > input'
+⍝     ⍝ r.box_sizing←'border-box'
+⍝     r.font_family←'APL385 Unicode'
+⍝     r.font_size←'1rem'
+⍝     r.height←'100%'
+⍝     r.width←'100%'
+
+
+     s
+ }

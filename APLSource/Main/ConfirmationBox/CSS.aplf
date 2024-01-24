@@ -1,0 +1,41 @@
+ CSS←{                       ⍝ Try nesting THIS!
+     Rule←##.NewRule
+     s←Rule''
+     ⍝ ************************
+     r←s Rule'.messagebox'
+     r.width←'40rem'
+     r.border←'none'
+     r.border_radius←'.5rem'
+     r.padding←0  ⍝ '1rem'
+     r.position←'fixed'
+     r.left←'50%'
+     r.top←'50%'
+     r.transform←'translate(-50%, -50%)' ⍝ Need this?
+     ⍝ ************************
+     r←s Rule'.messagebox::backdrop'
+     r.backdrop_filter←'blur(3px)'
+     ⍝ ************************
+     r←s Rule'.messagebox h1'
+     r.font_family←'Arial'
+     r.padding←'1rem'
+     r.background_color←'steelblue'
+     ⍝ ************************
+     r←s Rule'dialog p'
+     r.padding←'2rem'
+     r.font_family←'Arial'
+     r.font_size←'1.5rem'
+     r.font_weight←'normal'
+     ⍝ ************************
+     r←s Rule'.messagebox menu'
+     r.list_style_type←'none'
+     r.display←'flex'
+     r.justify_content←'center'
+     r.gap←'1rem'
+     r.padding←'0rem 2rem 2rem 2rem'
+     ⍝ ************************
+     r←s Rule'.messagebox button'
+     r.width←'10rem'
+     r.border_radius←'.25rem'
+     ⍝ ************************
+     s
+ }

@@ -1,0 +1,7 @@
+ RemoveAttribute←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ DOM content
+     _←⍺ ExecuteOnElement'removeAttribute("',⍵,'")'
+     _←⍺.⎕EX ⍵
+     0
+ }

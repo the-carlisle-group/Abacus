@@ -1,0 +1,6 @@
+ OnInputBlur←{
+
+     i←⍵.Target
+     i.value←⍵.Value    ⍝ ???? THS DOES NOT LOOK RIGHT!
+     0
+ }

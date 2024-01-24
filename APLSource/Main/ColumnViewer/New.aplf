@@ -1,0 +1,30 @@
+ New←{
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ Namespace with Names, Values, etc.
+     ⍝ 1 row for headers, 1 row for data
+     ⍺←⊣
+     ⎕THIS.A←##
+     n←≢⍵.Names
+     cn←GetColTitles¨⍵.Names
+     t←A.NewTable(n⍴⊂'')cn
+     t.CurCol←0
+     t.class←'columnviewer'
+     ⍝ t.id←##.Grid.GetAutoID 0
+     t.tabindex←0
+     t.TextAlign←⍵.TextAlign
+     t.Onclick←A.FQP'OnClick'
+     t.Onkeydown←A.FQP'OnKeyDown'
+     t.PreventDefault←⊂'TABLE' 'keydown'('ArrowLeft' 'ArrowRight')
+     h←A.HeaderCells t
+     h[0;].class←'col'∘,¨⍵.TextAlign
+     h[0;0].class,←' curheader'
+     c←A.BodyCells t
+     c[0;].class←'col'∘,¨⍵.TextAlign
+     c[0;].Content←{A.New'pre'⍵}¨{∊⍵,¨⊂'\u000D'}¨↓⍉⍵.Values
+     ⍝c.tabIndex←'0'
+
+     c[0;0].class,←' curcol'
+     t.autofocus←''
+     ⍝ t.Style←BuildCSS t
+     t
+ }

@@ -1,0 +1,7 @@
+ ComponentStyles←{
+     ⍝ ⍺ List of components, default to all.
+     ⍝ ⍵ Is some space with default or global things, a theme maybe?
+     ⍺←⎕NL ¯9
+     c←⍎¨⍺
+     c.CSS ⍵
+ }

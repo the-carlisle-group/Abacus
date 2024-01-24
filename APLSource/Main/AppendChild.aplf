@@ -1,0 +1,10 @@
+ AppendChild←{
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ Element
+     _←⍺ ExecuteOnElement'appendChild(document.createElement("',⍵.Tag,'"))'
+     ⍵.Parent←⍺
+     ⍺.Content,←⍵
+     ⍵.Document←⍺.Document
+     ⍝ ⍵ SetInnerHTML ⍵.Content
+     ⍵ SetOuterHTML ⍵
+ }

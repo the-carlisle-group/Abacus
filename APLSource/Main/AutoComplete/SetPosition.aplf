@@ -1,0 +1,27 @@
+ SetPosition←{
+     ⍝ Character based positioning of autocomplete list
+     ⍝ Font must be fixed width
+     e←⍵.Target.AutoCompleteElement
+     nb←⍵.Key≢'Backspace'
+     pt pl←2↑⍎⍵.Padding~'px'
+     cw←0.6×⍎⍵.FontSize~'px'
+     ss←⍵.SelectionStart
+     f←'px',⍨⍕
+     t←f pt+⍵.OffsetTop
+     l←f pl+⍵.OffsetLeft+cw×ss+2×nb
+
+
+     ⍝ Problem:
+     ⍝ BoundingClientRect is with respect to Viewport
+     ⍝ AC Div is position absolute (does not matter if relative)and the containing block
+     ⍝ is the dialog element. We need to subtract
+     ⍝ the upper left coord of dialog to make this work,
+     ⍝ or get a better measure than BoundingClientRect
+     ⍝ maybe we get actual coord wrt containing block?
+     ⍝ Maybe "offset" something or other????
+     ⍝ t←(⍕⍵.OffsetTop),'px'
+     ⍝ l←(⍕⍵.OffsetLeft),'px'
+     _←e ##.SetProperty'style.top't
+     _←e ##.SetProperty'style.left'l
+     0
+ }

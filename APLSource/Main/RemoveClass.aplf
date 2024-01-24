@@ -1,0 +1,7 @@
+ RemoveClass←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ DOM content
+     _←⍺ ExecuteOnElement'classList.remove("',⍵,'")'
+     _←⍺.⎕EX'class'
+     0
+ }

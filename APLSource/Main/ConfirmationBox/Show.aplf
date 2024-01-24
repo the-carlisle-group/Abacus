@@ -1,0 +1,5 @@
+ Show←{
+     e c m←⍵
+     d←e.Target.Document
+     d ##.ShowModal New c m
+ }

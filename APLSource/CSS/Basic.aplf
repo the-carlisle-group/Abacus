@@ -67,5 +67,16 @@
      r.margin_top←'1rem'
      r.margin_bottom←'1rem'
 
+     ⍝ ***************************
+     s,←r←Rule'svg'
+     r.display←'block'
+     r.margin_left←'auto'
+     r.margin_right←'auto'
+     r.max_width←'100%'
+     r.height←'auto'
+     r.margin_top←'2rem'
+     r.margin_bottom←'2rem'
+
+
      s
  }

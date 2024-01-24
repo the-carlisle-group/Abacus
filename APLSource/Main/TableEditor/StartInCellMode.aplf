@@ -1,0 +1,18 @@
+ StartInCellMode←{
+     ⍝ ⍺ ←→ Starting text
+     ⍝ ⍵ ←→ <td> element
+     ⍺←⊃⍵.Content
+     i←A.New'input'
+     i.value←⍺
+     i.CurrentValue←⍺
+     i.OriginalValue←⊃⍵.Content
+     i.Onkeydown←A.FQP'OnKeyDownInCell'
+     i.Onblur←A.FQP'OnInputBlur'
+     i.Parent←⍵
+     i.Document←⍵.Document
+     ⍵.Content←i
+     _←⍵ A.SetProperty'innerHTML'(A.DOM2HTML i)
+     n←⍕≢⍺
+     _←i A.ExecuteOnElement'setSelectionRange(',n,',',n,')'
+     i A.FireEvent'focus'
+ }

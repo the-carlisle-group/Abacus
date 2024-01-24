@@ -1,0 +1,7 @@
+ AddClass←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ DOM content
+     _←⍺ ExecuteOnElement'classList.add("',⍵,'")'
+     ⍝ Add to ⍺.class
+     0
+ }

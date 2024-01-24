@@ -1,6 +1,0 @@
- OnClick←{
-     f←⍵.HTMLRenderer
-     e←⍵.Target
-     f.Result←e.Parent.Content⍳e
-     H.Close f
- }
