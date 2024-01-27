@@ -13,11 +13,12 @@ with JavaScript-free APLDOM-to-Browser synchronization.
 
 ## CSS
 
-Classless CSS to pleasingly display semantic HTML.    
+Easy, dynamic construction of CSS.
+
+## Component Library
+
+Encapsulate HTML, CSS and functionality for reusable web components.
 
 ## Markdown
 
 Convert markdown to HTML.
-
-
-See the wiki for documentation 
