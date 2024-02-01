@@ -1,0 +1,16 @@
+ TestDataEntry←{
+     f←⍵
+     d←⍵.Document
+     t←d A.ElementByTag'table'
+     b←d A.BodyCells t
+     _←(⊃b)A.FireEventAndWait'click'
+     _←t A.FireKeyDownAndWait'H'
+     i←t A.ElementByTag'input'
+     i.value≢,'H':1
+     _←i A.FireKeyDownOnInput¨'ello World'
+     i.value≢,'Hello World':1
+     _←⎕NQ'f' 'GotFocus'
+     _←t A.FireKeyDownAndWait'Enter'
+     _←A.Wait 0
+     0
+ }

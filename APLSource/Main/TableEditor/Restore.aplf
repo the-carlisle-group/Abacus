@@ -1,6 +1,8 @@
  Restore←{
-     e←⍵.Parent
-     v←⍵.OriginalValue
-     ⍵.CurrentValue←v
-     ⍵ H.ExecuteOnElement'value = "',v,'"'
+     WORK ON THIS
+     i←⍵
+     _←i A.SetValue i.OriginalValue
+     e←i A.GetNearest'td'
+     OnInputBlur
+     A.SetFocus e
  }

@@ -1,16 +1,3 @@
  OnInputBlur←{
-     i←⍵.Target
-     e←i.Parent
-
-
-     i.CurrentValue≡'crap':GoBackToCell i
-     t←e.Parent.Parent.Parent
-     t.Changed←1
-     ⍝ Must look at i.CurrentValue
-     ⍝ Verify, reformatt, etc
-     ⍝ Convert to numeric possibly
-     ⍝ Then set content
-     e.Content←⊂i.CurrentValue  ⍝ Analyzed and reformatted!
-     _←e H.SetProperty'innerHTML'i.CurrentValue
-     0
+     Blur ⍵.CurrentTarget
  }

@@ -1,0 +1,10 @@
+ Enter←{
+     t←⍺
+     v k←2↑(⊆⍵),⊂'Enter'
+     _←t A.FireKeyDownAndWait(⊃v)       ⍝ Fire first on Table
+     i←t A.ElementByTag'input'           ⍝ Must wait or this will not be here
+     _←i A.FireKeyDownOnInputAndWait¨1↓v ⍝ Then on the input, but no wait as no callback!
+     _←⎕NQ'f' 'GotFocus'
+     _←t A.FireKeyDownAndWait k          ⍝ Must be on table
+     0
+ }

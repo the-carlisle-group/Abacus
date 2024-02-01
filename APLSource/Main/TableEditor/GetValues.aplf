@@ -1,4 +1,4 @@
  GetValues←{
      ⍝ ⍵ ←→ Table
-     ⊃¨(H.BodyCells ⍵).Content
+     ⊃¨(A.BodyCells ⍵).Content
  }

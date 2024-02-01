@@ -15,11 +15,13 @@
      b←((≢st)↑¨i)∊⊂st
      ~∨/b:Clear l
      l.(Mask StartText)←b st
-     c←##.New¨{'div'⍵}¨b/i
-     c.class←⊂'acItem'
-     (0⊃c).class←'acItem acItemActive'
+     c←##.New¨{'div'⍵}¨b/i ⍝ div or <p> doesnt really matter
+     c.class←⊂''
+     (0⊃c).class←'active-item'
      _←SetPosition ⍵
      _←l ##.SetProperty'style.font'⍵.Font
      _←l ##.SetInnerHTML c
+     t←⍵.CurrentTarget A.GetNearest'table'
+     t.AutoCompleteActive←1
      0
  }

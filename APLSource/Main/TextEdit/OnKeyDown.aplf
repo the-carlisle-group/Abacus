@@ -1,0 +1,4 @@
+ OnKeyDown←{
+     ⎕←'Key Down in input element'
+     0
+ }

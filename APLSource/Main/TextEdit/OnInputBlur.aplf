@@ -1,6 +1,5 @@
  OnInputBlur←{
-
      i←⍵.Target
-     i.value←⍵.Value    ⍝ ???? THS DOES NOT LOOK RIGHT!
+     i.value←⍵.Value
      0
  }

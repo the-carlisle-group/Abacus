@@ -21,9 +21,10 @@
      i←l A.New'input'
      i.id←c           ⍝ Or name?
      i.Onblur←A.FQP'OnInputBlur'
+     i.Oninput←A.FQP'OnInput'
+     i.Onkeydown←A.FQP'OnKeyDown'
      i.value←v
      i.CurrentValue←v
      i.OriginalValue←v
-     _←i ##.AutoComplete.Init a
-     l
+     l⊣l A.AutoComplete.New i a
  }

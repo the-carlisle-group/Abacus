@@ -2,9 +2,10 @@
      ⍝ ⍵ ←→ Input
      e←⍵.Parent
      t←e.Parent.Parent.Parent
-     c←H.BodyCells t
-     _←c H.SetClass¨⊂'notcurcell'
-     _←e H.SetClass'curcell'
+
+     c←A.BodyCells t
+     _←c A.SetClass¨⊂'notcurcell'
+     _←e A.SetClass'curcell'
      t.CurCell←∊⍸c=e
      ⍵ H.FireEvent'focus'
  }

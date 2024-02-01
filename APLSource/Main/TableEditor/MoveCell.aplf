@@ -5,11 +5,10 @@
      c←⍺{3::0 ⋄ m[⍺.CurCell ⍵]}⍵
      c≡0:0
      oc nc←c
-     _←nc A.SetClass'tableeditor--curcell'
-     _←oc A.RemoveClass'tableeditor--curcell'
+     _←nc A.SetClass'curcell'
+     _←oc A.RemoveClass'curcell'
      ⍺.CurCell←⍵
      _←A.ScrollIntoView 1⊃c
-
-     ⍝ (1⊃c)H.FireEvent'focus' ⍝ MAY NOT NEED THIS!
+     (1⊃c)A.FireEvent'focus'
      0
  }

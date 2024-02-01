@@ -1,0 +1,14 @@
+ FireKeyPress←{
+     ⍝ ⍺ Element
+     ⍝ ⍵← 'ArrowUp' | 'Ctrl' 'ArrowUp
+     w←⊆⍵
+     k←⊃⌽w
+     (c s a)←⊂¨'false' 'true'['Ctrl' 'Shift' 'Alt'∊w]
+     n←⎕NS''
+     n.key←k
+     n.ctrlKey←c
+     n.shiftKey←s
+     n.altKey←a
+     j←⎕JSON n
+     ⍺ ExecuteOnElement'dispatchEvent(new KeyboardEvent(''keydown'',',j,'))'
+ }

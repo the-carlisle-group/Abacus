@@ -1,0 +1,12 @@
+ TestTableEditor2←{
+     A←##.Main
+     p←⎕NS''
+     p.ColumnNames←'Name' 'Address' 'City' 'State'
+     p.Data←10 4⍴⊂''
+     d←A.NewDocument''
+     d.Caption←'Test Table Editor'
+     b←A.GetBody d
+     t←b A.TableEditor.New p
+     d.Style←A.ComponentStyles 0
+     A.NewForm d
+ }

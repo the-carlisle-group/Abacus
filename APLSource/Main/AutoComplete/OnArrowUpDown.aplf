@@ -5,8 +5,8 @@
      j k←0 ⍺+⍸ActiveItemMask l
      i←AutoCompleteElements l
      (k=¯1)∨k=≢i:0
-     c←i[j k]
-     _←c ##.SetClass¨⌽c.class
+     _←i[j]##.RemoveClass'active-item'
+     _←i[k]##.AddClass'active-item'
      _←##.ScrollIntoView k⊃i
      0
  }

@@ -2,5 +2,5 @@
      ⍝ ⍵ ←→ Autocomplete Element
      ⍝ ← ←→ Boolean mask marking active item
      e←AutoCompleteElements ⍵
-     e.class∊⊂'acItem acItemActive'
+     e.class∊⊂'active-item'
  }

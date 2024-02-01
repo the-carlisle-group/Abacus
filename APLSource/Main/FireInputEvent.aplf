@@ -1,0 +1,7 @@
+ FireInputEvent←{
+     ⍝ ⍺ Element
+     ⍝ ⍵ Data
+     ⍝ DOES NOT WORK . NO IDEA HTO TO CREATE INPT
+     k←⍵
+     ⍺ ExecuteOnElement'dispatchEvent(new InputEvent(''input'',{data:''',k,'''}))'
+ }

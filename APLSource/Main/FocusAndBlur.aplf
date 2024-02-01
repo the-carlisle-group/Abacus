@@ -1,0 +1,20 @@
+ FocusAndBlur←{
+     ⍝ ⍵ ←→ Element
+     i←TagIndex ⍵
+     t←⍵.Tag
+     s←'document.getElementsByTagName'
+     j←s,'("',t,'").item(',(⍕i),').focus();'
+     j,←s,'("',t,'").item(',(⍕i),').blur();'
+     ⍵.Document ExecuteJavaScript j
+
+
+
+
+     document.getElementById(target_field).value=currentDate ();
+     document.getElementById(target_field).focus ();
+     document.getElementById(target_field).blur ();
+
+
+
+
+ }

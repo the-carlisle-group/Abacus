@@ -1,0 +1,11 @@
+ FireKeyPressAndWait←{
+     ⍝ ⍺ Element
+     ⍝ ⍵← 'ArrowUp' | 'Ctrl' 'ArrowUp
+     w←⊆⍵
+     m←'Ctrl' 'Shift' 'Alt'
+     n←⎕NS''
+     n.(key ctrlKey shiftKey altKey)←(w~m),⊂¨'false' 'true'[m∊w]
+     j←⎕JSON n
+     _←⍺ ExecuteOnElement'dispatchEvent(new KeyboardEvent(''keydown'',',j,'))'
+     ⎕TGET EventToken
+ }

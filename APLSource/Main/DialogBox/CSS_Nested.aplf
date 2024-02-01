@@ -1,0 +1,52 @@
+ CSS_Nested←{
+     Rule←##.NewRule
+     ⍝ ************************
+     r←Rule'.dialog-box'
+     ⍝ ↓↓↓↓↓
+     s.overflow←'visible'
+     ⍝ ↑↑↑↑↑↑
+     ⍝ For autocomplete, dyamic content not bounded by dialog box
+     ⍝ But it also squares off color header or footer
+     ⍝ This is why both top and bottom elements must have
+     ⍝ top and bottom corners explicitly rounded as well.
+     s.min_width←'60rem'
+     s.border←'none'
+     s.border_radius←'1em'
+     s.padding←0
+     s.position←'fixed'
+     s.left←'50%'
+     s.top←'50%'
+     s.transform←'translate(-50%, -50%)' ⍝ Need this?
+     ⍝ ************************
+     r←s Rule'::backdrop'
+     r.backdrop_filter←'blur(2px)'
+     ⍝ ************************
+     r←s Rule'> header'
+     r.font_family←'Arial'
+     r.padding←'1rem'
+     r.background_color←'steelblue'
+     r.border_radius←'1em 1em 0 0'
+     ⍝ ************************
+     r←s Rule'> header > h1'
+     r.font_family←'Arial'
+     r.padding←'1rem'
+     ⍝ ************************
+     r←s Rule'> header > h2'
+     r.font_family←'Arial'
+     r.padding←'1rem'
+     ⍝ ************************
+     r←s Rule'> menu'
+     r.list_style_type←'none'
+     r.display←'flex'
+     r.justify_content←'center'
+     r.gap←'1rem'
+     r.padding←'1rem'
+     r.background_color←'silver'
+     r.border_radius←'0 0 1em 1em'
+     ⍝ ************************
+     r←s Rule'> menu button'
+     r.width←'10rem'
+     r.border_radius←'.25rem'
+
+     s
+ }

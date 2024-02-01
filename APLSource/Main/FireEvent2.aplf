@@ -1,0 +1,10 @@
+ FireEvent2←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Event
+     ⍺=0:0
+
+     _←⍺ ExecuteOnElement'dispatchEvent(new FocusEvent(''keydown'',{key:''',k,'''}))'
+
+     FireKeyDown
+     ⍺ ExecuteOnElement ⍵,'()'
+ }

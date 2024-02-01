@@ -1,0 +1,4 @@
+ Run←{
+     ⎕THIS.A←#.Abacus.Main
+     A.NewForm Build 0
+ }

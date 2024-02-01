@@ -1,6 +1,8 @@
  OnClick←{
      e←⍵.Target
-     t←e.Parent.Parent.Parent
+     t←e A.GetNearest'table'
      c←A.BodyCells t
-     t MoveCell⊃⍸c=e
+     i←⊃⍸c=e
+     i≡t.CurCell:0
+     t MoveCell i
  }

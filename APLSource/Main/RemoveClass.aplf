@@ -2,6 +2,7 @@
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ DOM content
      _←⍺ ExecuteOnElement'classList.remove("',⍵,'")'
-     _←⍺.⎕EX'class'
+     c←{⍵⊆⍨' '≠⍵}⍺.class
+     ⍺.class←1↓∊' ',¨c~⊂⍵
      0
  }

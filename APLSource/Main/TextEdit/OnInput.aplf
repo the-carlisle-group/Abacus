@@ -1,0 +1,4 @@
+ OnInput←{
+     ⎕←'Key Input in input element'
+     0
+ }

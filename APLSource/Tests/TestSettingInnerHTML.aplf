@@ -1,0 +1,20 @@
+ TestSettingInnerHTML←{
+     A←##.Main
+     d←A.NewDocument''
+     d.Caption←'Testing single quote in content'
+     b←A.GetBody d
+     t←'It''s a single quote!'
+     h1←b A.New'h1't
+     f←A.NewForm d
+     _←h1 A.SetInnerHTML'No quote'
+     _←h1 A.SetInnerHTML'Let''s try using innerHTML'     ⍝ Fails
+     _←h1 A.SetInnerHTML'Let&#39;s try using innerHTML'  ⍝ Works
+
+     _←h1 A.SetInnerHTML'How about a lone double quote: "'      ⍝ Works
+     _←h1 A.SetInnerHTML'How about a "pair" of double quote?"'  ⍝ Works
+     _←h1 A.SetInnerHTML'How about a ''pair'' of single quotes?'⍝ Fails
+     _←h1 A.SetInnerHTML'How about a &#39;pair&#39; of single quotes?'⍝ works
+
+     0
+
+ }

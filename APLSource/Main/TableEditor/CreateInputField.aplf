@@ -1,0 +1,24 @@
+ CreateInputField←{
+     t←⍵.CurrentTarget
+     td←t.CurCell⌷A.BodyCells t
+     ⍝ w←-/⍵.BoundingClientRect[3 1] ⍝ Maybe not right!!
+     ⍝ h←-/⍵.BoundingClientRect[2 0]
+     ⍺←⊃td.Content
+     d←A.New'div'
+     d.class←'input-cell'
+     i←d A.New'input'
+     ⍝ i.style←'width:',(⍕w),'px;height:',(⍕h),'px;'
+     i.value←⍺
+     i.OriginalValue←⊃td.Content
+     i.Oninput←A.FQP'OnInput'
+     i.Onblur←A.FQP'OnInputBlur'
+     ⍝ i.Onkeydown←A.FQP'OnKeyDownInCell'
+     ai←(1⊃t.CurCell)⊃t.AutoCompleteItems
+     a←d A.AutoComplete.New i ai
+     _←td A.SetInnerHTML d
+     n←⍕≢⍺
+     _←i A.ExecuteOnElement'setSelectionRange(',n,',',n,')'
+     _←td A.AddClass'incell'
+     _←i A.FireEvent'focus'
+     i
+ }

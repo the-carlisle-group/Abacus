@@ -23,7 +23,8 @@ function execCode(id,code) {
 }
 
 function sendAPLRequest(e){
-      const ce=[e.currentTarget.className,e.currentTarget.tagName,e.type,e.key].join();
+      // const ce=[e.currentTarget.className,e.currentTarget.tagName,e.type,e.key].join();
+      const ce=[e.target.tagName,e.type,e.key].join();
       const pd=PreventDefaultList.includes(ce);
       // alert (ce)
       if (pd){
@@ -34,8 +35,11 @@ function sendAPLRequest(e){
       const j = a.indexOf(e.target);
       const k = a.indexOf(e.currentTarget);
       const r = e.target.getBoundingClientRect();
+      const q = e.target.offsetParent.getBoundingClientRect();
       const s = window.getComputedStyle(e.target);
       const b = {
+                
+                OffsetParentTag: e.target.offsetParent.tagName,
                 Event: e.type,
                 Value: e.target.value,
                 Name: e.target.name,
@@ -55,6 +59,7 @@ function sendAPLRequest(e){
                 Padding: s['padding'],
                 OffsetTop: e.target.offsetTop,
                 OffsetLeft: e.target.offsetLeft,
+                ParentBoundingClientRect: [q.top,q.left,q.bottom,q.right],
                 BoundingClientRect: [r.top,r.left,r.bottom,r.right]
       };
       const m = JSON.stringify(b); 

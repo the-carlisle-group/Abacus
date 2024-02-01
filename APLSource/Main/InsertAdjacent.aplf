@@ -1,0 +1,12 @@
+ InsertAdjacent←{
+     ⍝ ⍺ ←→ Target element
+     ⍝ ⍵ ←→ New Element
+     _←⍺ ExecuteOnElement'insertAdjacentElement("beforebegin",(document.createElement("',⍵.Tag,'")))'
+     p←⍺.Parent
+     c←p.Content
+     ⍵.Parent←p
+     ⍵.Document←⍺.Document
+     i←c⍳⍺
+     p.Content←(i↑c),⍵,i↓c
+     ⍵ SetOuterHTML ⍵
+ }

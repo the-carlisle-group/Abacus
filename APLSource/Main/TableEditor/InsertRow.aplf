@@ -1,0 +1,16 @@
+ InsertRow←{
+     t←⍺
+     ri ci←t.CurCell
+     b←1⊃t.Content
+     n←≢(0⊃b.Content).Content
+     tr←A.New'tr'
+     td←A.New¨n⍴⊂'td'
+     cc←ci⊃td
+     cc.class←'curcell'
+     td.tabindex←0
+     tr.Content←td
+     cr←ri⊃b.Content
+     _←(ci⊃cr.Content)A.RemoveClass'curcell'
+     _←cr A.InsertAdjacent tr
+     0
+ }

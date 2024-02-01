@@ -6,13 +6,15 @@
      ⎕THIS.A←##
      p←⍵
      t←⍺ A.NewTable p.Data p.ColumnNames
-     t.class←'tableeditor'
+     t.class←'table-editor'
+     t.CellMode←0
+     t.AutoCompleteActive←0
      t.Changed←0
      t.CurCell←0 0
      t.Onclick←A.FQP'OnClick'
-     t.Oninput←A.FQP'OnInput'
      t.Onkeydown←A.FQP'OnKeyDown'
-     t.PreventDefault←⊂'TABLE' 'keydown'('ArrowLeft' 'ArrowRight' 'ArrowUp' 'ArrowDown')
+     t.PreventDefault←⊂'TD' 'keydown'('ArrowLeft' 'ArrowRight' 'ArrowUp' 'ArrowDown')
+     t.AutoCompleteItems←p.AutoCompleteItems
      c←A.BodyCells t
      c.tabIndex←'0'
      c[0;0].class←'curcell'

@@ -1,0 +1,9 @@
+ FireKeyDownAndWait←{
+     ⍝ ⍺ Element
+     ⍝ ⍵ Key:  'Enter', 'ArrowUp' etc
+     ⍝ ⍺ Element
+     ⍝ ⍵ Key:  'Enter', 'ArrowUp' etc
+     k←⍵
+     _←⍺ ExecuteOnElement'dispatchEvent(new KeyboardEvent(''keydown'',{key:''',k,'''}))'
+     ⎕TGET EventToken
+ }

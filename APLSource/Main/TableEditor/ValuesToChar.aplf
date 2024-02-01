@@ -1,3 +1,0 @@
- ValuesToChar←{
-     ⍉↑⍵.ColumnTypes ColumnToChar¨↓⍉⍵.Values
- }
