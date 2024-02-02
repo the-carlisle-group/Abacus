@@ -1,4 +1,0 @@
- OnPaste←{
-     ⎕←'The paste callback!'
-     0
- }

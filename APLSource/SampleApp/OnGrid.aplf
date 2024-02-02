@@ -1,6 +1,0 @@
- OnGrid←{
-     ⍵.HTMLRenderer.Active←0
-     _←##.SampleGrid.Run 0
-     ⍵.HTMLRenderer.Active←1
-     0
- }

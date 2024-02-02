@@ -1,4 +1,0 @@
- OnSave←{
-     ⎕←'The save callback!'
-     0
- }

@@ -1,4 +1,0 @@
- OnOpen←{
-     ⎕←'The open callback!'
-     0
- }

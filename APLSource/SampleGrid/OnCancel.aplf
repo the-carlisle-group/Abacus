@@ -1,8 +1,0 @@
- OnCancel←{
-     d←⍵.Target.Document
-     t←d H.ElementByTag'table'
-     m←'Changes to grid will be lost. Close anyway?'
-     r←t.Changed ##.MessageBox.Run m('Yes' 'No')
-     r≠0:0
-     H.Close ⍵.HTMLRenderer
- }

@@ -1,5 +1,0 @@
- GridDataLarge←{
-     d←('Cell'∘,¨⍕¨⍳20 30)~¨' '
-     h←'Column'∘,¨⍕¨⍳30
-     d h
- }

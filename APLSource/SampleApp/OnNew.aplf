@@ -1,4 +1,0 @@
- OnNew←{
-     ⎕←'The new callback!'
-     0
- }
