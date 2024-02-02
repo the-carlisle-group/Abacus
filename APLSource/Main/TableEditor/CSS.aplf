@@ -25,6 +25,7 @@
      r←s Rule'td'
      r.padding←'.5rem .75rem'
      r.border←'solid .5px gray'
+     ⍝ r.min_width←'25rem'
 
      r←s Rule'tbody'
      r.font_family←'APL385 Unicode'
@@ -40,14 +41,15 @@
      r←s Rule'.input-cell'
      r.position←'relative'
 
+
      r←s Rule'input'
      r.box_sizing←'border-box'
      r.padding←'.5rem .75rem'
      r.font_family←'APL385 Unicode'
      r.font_size←'1.25rem'
      r.border←'none'
-     r.height←'100%'  ⍝ Needed?
-     r.width←'100%'   ⍝ Needed?
+     r.position←'absolute'
+     r.width←'100%'
 
      ##.UnNestCSS s
  }

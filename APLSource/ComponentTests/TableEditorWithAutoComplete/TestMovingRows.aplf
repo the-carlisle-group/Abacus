@@ -7,16 +7,16 @@
      n←≢b
      Up←'Ctrl' 'Shift' 'ArrowUp'
      Down←'Ctrl' 'Shift' 'ArrowDown'
-     _←t A.FireKeyPressAndWait¨n⍴⊂Down
-     _←t A.FireKeyPressAndWait¨n⍴⊂Up
+     _←t A.FireKeyDownAndWait¨n⍴⊂Down
+     _←t A.FireKeyDownAndWait¨n⍴⊂Up
      v≢A.TableEditor.GetValues t:1
-     _←t A.FireKeyPressAndWait Down
+     _←t A.FireKeyDownAndWait Down
      p←A.TableEditor.GetValues t
      p[⍳2;]≢v[⌽⍳2;]:1
-     _←t A.FireKeyPressAndWait¨4⍴⊂Down
+     _←t A.FireKeyDownAndWait¨4⍴⊂Down
      p←A.TableEditor.GetValues t
      p[⍳6;]≢v[1⌽⍳6;]:1
-     _←t A.FireKeyPressAndWait¨5⍴⊂Up
+     _←t A.FireKeyDownAndWait¨5⍴⊂Up
      v≢A.TableEditor.GetValues t:1
      0
  }

@@ -1,6 +1,10 @@
  FireKeyDown←{
      ⍝ ⍺ Element
-     ⍝ ⍵ Key:  'Enter', 'ArrowUp' etc
-     k←⍵
-     ⍺ ExecuteOnElement'dispatchEvent(new KeyboardEvent(''keydown'',{key:''',k,'''}))'
+     ⍝ ⍵← 'ArrowUp' | 'Ctrl' 'ArrowUp
+     w←⊆⍵
+     m←'Ctrl' 'Shift' 'Alt'
+     n←⎕NS''
+     n.(key ctrlKey shiftKey altKey)←(w~m),⊂¨'false' 'true'[m∊w]
+     j←⎕JSON n
+     ⍺ ExecuteOnElement'dispatchEvent(new KeyboardEvent(''keydown'',',j,'))'
  }
