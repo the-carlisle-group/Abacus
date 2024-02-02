@@ -6,5 +6,5 @@
      t.Changed←1
      e←i A.GetNearest'td'
      _←e A.SetInnerHTML i.value
-     e A.RemoveClass'incell'
+     e A.RemoveClass'in-cell'
  }

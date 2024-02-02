@@ -1,6 +1,7 @@
  CSS←{
      Rule←##.NewRule
-     ⍝ Table
+     CellPadding←'.5rem .75rem'
+
      s←Rule'.table-editor'
      s.border_collapse←'collapse'
      s.table_layout←'fixed'
@@ -23,9 +24,8 @@
      r.height←'2.25rem'            ⍝ 1.25+.5+.5
 
      r←s Rule'td'
-     r.padding←'.5rem .75rem'
+     r.padding←CellPadding
      r.border←'solid .5px gray'
-     ⍝ r.min_width←'25rem'
 
      r←s Rule'tbody'
      r.font_family←'APL385 Unicode'
@@ -33,18 +33,19 @@
 
      r←s Rule'.curcell'
      r.background_color←'orange'
-     ⍝ r.border←'2px solid black'
 
-     r←s Rule'.incell'
+     r←s Rule'.in-cell'
      r.padding←0
+
+     r←s Rule'.input-temp'
+     r.padding←CellPadding
 
      r←s Rule'.input-cell'
      r.position←'relative'
 
-
      r←s Rule'input'
      r.box_sizing←'border-box'
-     r.padding←'.5rem .75rem'
+     r.padding←CellPadding
      r.font_family←'APL385 Unicode'
      r.font_size←'1.25rem'
      r.border←'none'

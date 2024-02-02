@@ -1,5 +1,4 @@
  OnWebSocketUpgrade←{
-     ⎕←'Web socket upgrade!'
      h←⊃⍵
      h.WebSocketID←2⊃⍵
      0

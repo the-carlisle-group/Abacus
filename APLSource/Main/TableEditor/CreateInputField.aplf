@@ -1,4 +1,14 @@
  CreateInputField←{
+     ⍝ Inside <td>:
+     ⍝ 1. Remove the padding of td
+     ⍝ 2. Create a new div (input-cell) to hold <input> element
+     ⍝    This div is positioned "relative", so input can be absolute with respect to it.
+     ⍝    The input element is positioned "absolute", 100% width.
+     ⍝ 3. Create a new div (input-temp) with existing content,
+     ⍝    and original td padding to maintain column width.
+     ⍝    If this is not done, and the widest content cell is being edited
+     ⍝    the column will resize to the next widest content cell.
+     ⍝ 4. Set the outerHMTL of <td> so class is changed too.
      t←⍵.CurrentTarget
      td←t.CurCell⌷A.BodyCells t
      ⍺←⊃td.Content
@@ -11,10 +21,13 @@
      i.Onblur←A.FQP'OnInputBlur'
      ai←(1⊃t.CurCell)⊃t.AutoCompleteItems
      a←d A.AutoComplete.New i ai
-     _←td A.SetInnerHTML d
+     c←A.New'div'(⊃td.Content)
+     c.class←'input-temp'
+     td.Content←d,c
+     td.class←'in-cell'
+     _←td A.SetOuterHTML td
      n←⍕≢⍺
      _←i A.ExecuteOnElement'setSelectionRange(',n,',',n,')'
-     _←td A.AddClass'incell'
      _←i A.FireEvent'focus'
      i
  }
