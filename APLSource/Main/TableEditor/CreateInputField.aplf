@@ -19,12 +19,13 @@
      i.OriginalValue←⊃td.Content
      i.Oninput←A.FQP'OnInput'
      i.Onblur←A.FQP'OnInputBlur'
+     t.InputElement←i ⍝ Note it.  ⍝ Could create once and reuse
      ai←(1⊃t.CurCell)⊃t.AutoCompleteItems
      a←d A.AutoComplete.New i ai
      c←A.New'div'(⊃td.Content)
      c.class←'input-temp'
      td.Content←d,c
-     td.class←'in-cell'
+     td.class←'curcell in-cell'
      _←td A.SetOuterHTML td
      n←⍕≢⍺
      _←i A.ExecuteOnElement'setSelectionRange(',n,',',n,')'

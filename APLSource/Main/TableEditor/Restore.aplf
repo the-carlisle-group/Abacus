@@ -1,8 +1,9 @@
  Restore←{
-     WORK ON THIS
-     i←⍵
-     _←i A.SetValue i.OriginalValue
-     e←i A.GetNearest'td'
-     OnInputBlur
-     A.SetFocus e
+     t←⍵.CurrentTarget
+     t.CellMode←0
+     td←t.CurCell⌷A.BodyCells t
+     v←⊃(⊃⌽td.Content).Content
+     _←td A.SetInnerHTML v
+     _←td A.RemoveClass'in-cell'
+     A.SetFocus td
  }
