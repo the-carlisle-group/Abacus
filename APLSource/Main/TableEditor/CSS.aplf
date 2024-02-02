@@ -24,7 +24,11 @@
      r.height←'2.25rem'            ⍝ 1.25+.5+.5
 
      r←s Rule'td'
+     r.white_space←'nowrap'
+     r.overflow←'hidden'
      r.padding←CellPadding
+     r.min_width←'6em'
+     r.max_width←'30em'
      r.border←'solid .5px gray'
 
      r←s Rule'tbody'

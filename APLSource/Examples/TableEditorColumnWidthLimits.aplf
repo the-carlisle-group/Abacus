@@ -1,0 +1,13 @@
+ TableEditorColumnWidthLimits←{
+     ⎕THIS.A←#.Abacus.Main
+     p←⎕NS''
+     p.ColumnNames←'A' 'WideColumn'
+     p.Data←10 2⍴'' 'This is a really wide column with lots and lots of data it goes on and on. This is the end.'
+     p.AutoCompleteItems←⍬ ⍬
+     d←A.NewDocument''
+     d.Caption←'Test Column Width limits'
+     b←A.GetBody d
+     t←b A.TableEditor.New p
+     d.Style←A.ComponentStyles 0
+     A.NewForm d
+ }
