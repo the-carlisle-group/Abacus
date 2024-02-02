@@ -1,6 +1,6 @@
  Blur←{
      i←⍵
-     i.value≡'crap':GoBackToCell i
+     i.value≡'InvalidData':GoBackToCell i
      t←i A.GetNearest'table'
      t.CellMode←0
      t.Changed←1

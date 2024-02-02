@@ -1,11 +1,12 @@
  GoBackToCell←{
      ⍝ ⍵ ←→ Input
-     e←⍵.Parent
-     t←e.Parent.Parent.Parent
-
-     c←A.BodyCells t
-     _←c A.SetClass¨⊂'notcurcell'
-     _←e A.SetClass'curcell'
-     t.CurCell←∊⍸c=e
-     ⍵ H.FireEvent'focus'
+     i←⍵
+     t←i A.GetNearest'table'
+     td←i A.GetNearest'td'
+     b←A.BodyCells t
+     nc←t.CurCell⌷b
+     t.CurCell←∊⍸td=b
+     _←td A.AddClass'curcell'
+     _←nc A.RemoveClass'curcell'
+     A.SetFocus i
  }
