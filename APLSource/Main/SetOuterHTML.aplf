@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ DOM or HTML
      d h←DOMandHTML ⍵
-     _←⍺ SetProperty'outerHTML'(h~⎕UCS 13)
+     _←⍺ SetProperty'outerHTML'(Sanitize h)
      p←⍺.Parent
      _←SetParent p
      i←p.Content⍳⍺

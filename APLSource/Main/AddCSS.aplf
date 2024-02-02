@@ -1,9 +1,0 @@
- AddCSS←{
-     OBSOLETE
-     ⍝ BAD IDEA!!!
-     ⍝ ⍺ ←→ Document
-     ⍝ ⍵ ←→ CSS Object
-     d←⍺
-     t←(ComposeRules ⍵)~⎕UCS 13
-     d ExecuteJavaScript'document.head.appendChild(document.createElement("style")).innerHTML=''',t,''''
- }

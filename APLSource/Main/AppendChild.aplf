@@ -5,6 +5,5 @@
      ⍵.Parent←⍺
      ⍺.Content,←⍵
      ⍵.Document←⍺.Document
-     ⍝ ⍵ SetInnerHTML ⍵.Content
      ⍵ SetOuterHTML ⍵
  }
