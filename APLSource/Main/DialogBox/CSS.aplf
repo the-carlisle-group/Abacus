@@ -3,6 +3,7 @@
      ⍝ ************************
      s←Rule'.dialog-box'
      ⍝ ↓↓↓↓↓
+     ⍝ Cant do this hear
      s.overflow←'visible'
      ⍝ ↑↑↑↑↑↑
      ⍝ For autocomplete, dyamic content not bounded by dialog box
@@ -18,7 +19,7 @@
      s.top←'50%'
      s.transform←'translate(-50%, -50%)' ⍝ Need this?
      ⍝ ************************
-     r←s Rule'::backdrop'
+     r←s Rule'::backdrop'  ⍝ does not work the way I nest/unest
      r.backdrop_filter←'blur(2px)'
      ⍝ ************************
      r←s Rule'> header'
@@ -34,6 +35,10 @@
      r←s Rule'> header > h2'
      r.font_family←'Arial'
      r.padding←'1rem'
+     ⍝ ***********************
+     r←s Rule' > Section'
+     r.max_height←'20rem'
+     r.overflow←'auto'
      ⍝ ************************
      r←s Rule'> menu'
      r.list_style_type←'none'

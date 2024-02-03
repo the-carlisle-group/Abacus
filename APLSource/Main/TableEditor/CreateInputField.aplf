@@ -21,7 +21,7 @@
      i.Onblur←A.FQP'OnInputBlur'
      t.InputElement←i ⍝ Note it.  ⍝ Could create once and reuse
      ai←(1⊃t.CurCell)⊃t.AutoCompleteItems
-     a←d A.AutoComplete.New i ai
+     a←d A.AutoComplete.New i ai  ⍝ Try not adding to Div, but to td
      c←A.New'div'(⊃td.Content)
      c.class←'input-temp'
      td.Content←d,c

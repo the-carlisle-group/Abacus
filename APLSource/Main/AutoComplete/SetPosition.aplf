@@ -3,12 +3,21 @@
      ⍝ Font must be fixed width
      e←⍵.Target.AutoCompleteElement
      nb←⍵.Key≢'Backspace'
+
+     top left←2↑⍵.BoundingClientRect
+
      pt pl←2↑⍎⍵.Padding~'px'
      cw←0.6×⍎⍵.FontSize~'px'
      ss←⍵.SelectionStart
      f←'px',⍨⍕
      t←f pt+⍵.OffsetTop
      l←f pl+⍵.OffsetLeft+cw×ss+2×nb
+
+     t←f pt+top
+     l←f pl+left+cw×ss+2×nb
+
+
+
      _←e ##.SetProperty'style.top't
      _←e ##.SetProperty'style.left'l
      0

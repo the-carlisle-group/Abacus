@@ -1,6 +1,7 @@
  Clear←{
      _←⍵ ##.SetInnerHTML''
      t←⍵ A.GetNearest'table'
+     t=0:0
      t.AutoCompleteActive←0
      0
  }

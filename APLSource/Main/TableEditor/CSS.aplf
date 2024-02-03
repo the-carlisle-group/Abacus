@@ -4,6 +4,7 @@
 
      s←Rule'.table-editor'
      s.border_collapse←'collapse'
+     s.overflow←'auto'
      s.table_layout←'fixed'
 
      r←s Rule'thead'

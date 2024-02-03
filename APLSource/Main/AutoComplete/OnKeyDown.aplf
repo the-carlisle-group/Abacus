@@ -22,6 +22,7 @@
      _←l ##.SetProperty'style.font'⍵.Font
      _←l ##.SetInnerHTML c
      t←⍵.CurrentTarget A.GetNearest'table'
+     0=t:0
      t.AutoCompleteActive←1
      0
  }
