@@ -9,7 +9,6 @@
      t←A.NewTable(n⍴⊂'')cn
      t.CurCol←0
      t.class←'columnviewer'
-     ⍝ t.id←##.Grid.GetAutoID 0
      t.tabindex←0
      t.TextAlign←⍵.TextAlign
      t.Onclick←A.FQP'OnClick'
@@ -22,9 +21,8 @@
      c[0;].class←'col'∘,¨⍵.TextAlign
      c[0;].Content←{A.New'pre'⍵}¨{∊⍵,¨⊂'\u000D'}¨↓⍉⍵.Values
      ⍝c.tabIndex←'0'
-
+     c.Content.id←(⍴c)⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/⍴c
      c[0;0].class,←' curcol'
      t.autofocus←''
-     ⍝ t.Style←BuildCSS t
      t
  }

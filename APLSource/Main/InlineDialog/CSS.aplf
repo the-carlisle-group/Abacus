@@ -5,33 +5,24 @@
      ⍝ ************************
      r←s Rule'> header'
      r.font_family←'Arial'
-     r.padding←'1rem'
+     r.display←'flex'
+     r.align_items←'center'
+     r.padding←'.5em'
      r.background_color←'steelblue'
      ⍝ ************************
      r←s Rule'> header > h1'
+     r.flex←1
      r.font_family←'Arial'
-     r.padding←'1rem'
-     ⍝ ************************
-     r←s Rule'> header > h2'
-     r.font_family←'Arial'
-     r.padding←'1rem'
+     ⍝ Button
+     r←s Rule'> header button'
+     r.background_color←'limegreen'
+     r.border_radius←'.25em'
+     r.color←'white'
+     r.font_weight←'bold'
      ⍝ ***********************
      r←s Rule' > Section'
-     r.max_height←'20rem'
+     r.max_height←'10rem'
      r.overflow←'auto'
      ⍝ ************************
-     r←s Rule'> menu'
-     r.list_style_type←'none'
-     r.display←'flex'
-     r.justify_content←'center'
-     r.gap←'1rem'
-     r.padding←'1rem'
-     r.background_color←'silver'
-     r.border_radius←'0 0 1em 1em'
-     ⍝ ************************
-     r←s Rule'> menu button'
-     r.width←'10rem'
-     r.border_radius←'.25rem'
-
      ##.UnNestCSS s
  }

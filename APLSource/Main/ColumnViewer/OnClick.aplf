@@ -1,6 +1,6 @@
  OnClick←{
      e←⍵.Target
-     t←e.Parent.Parent.Parent.Parent
+     t←⍵.CurrentTarget
      c←,A.BodyCells t
      t MoveCol c⍳e.Parent
  }

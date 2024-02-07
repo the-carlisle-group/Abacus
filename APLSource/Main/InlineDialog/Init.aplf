@@ -6,13 +6,9 @@
      d←⍺ A.ElementById'inline-dialog'
      h←A.New'header'
      h1←h A.New'h1'p.Title
-     b←A.New¨{'button'⍵}¨'Apply' 'Cancel'
+     b←h A.New¨{'button'⍵}¨'Apply' 'x'
      b.Onclick←p.OnApply(A.FQP'OnClose')
-
-     li←A.New¨{'li'⍵}¨b
-     m←h A.New'menu'li
      s←A.New'section'
      s.Content←p.Content
-
      d A.SetInnerHTML h,s
  }
