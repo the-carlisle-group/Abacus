@@ -1,10 +1,11 @@
  CSS←{
      Rule←##.NewRule
-     s←Rule'.auto-complete'
+     s←Rule'#auto-complete'
+     s.z_index←9
      s.background_color←'lightyellow'
      s.max_height←'15em'
      s.min_width←'6em'
-     s.position←'fixed' ⍝ Was 'absolute'.
+     s.position←'fixed'
      s.overflow←'auto'
      r←s Rule'div'
      r.padding←'.1rem .2rem'

@@ -1,0 +1,3 @@
+ Eval←{
+     r←A.ExecuteJavaScriptSync ⍵
+ }

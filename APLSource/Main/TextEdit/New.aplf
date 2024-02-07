@@ -13,7 +13,7 @@
      ⍝ p.Styles←'horizontal' 'red'  ⍝ Modifiers   Com
 
 
-     c v a←⍵
+     c v a d←⍵
      A←##
      l←A.New'label'c
      l.class←'textedit'                   ⍝ CSS
@@ -26,5 +26,5 @@
      i.value←v
      i.CurrentValue←v
      i.OriginalValue←v
-     l⊣l A.AutoComplete.New i a
+     l⊣d A.AutoComplete.Init i a
  }

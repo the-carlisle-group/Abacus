@@ -1,0 +1,15 @@
+ Init←{
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ (Input element) (Autocomplete Items)
+     ⎕THIS.A←##
+     ie ai←⍵
+     0=≢ai:0
+     a←⍺ A.ElementById'auto-complete'
+     a.InputElement←ie
+     a.Items←ai
+     a.TriggerKeys←(⊂'Backspace'),∪' '~⍨∊ai
+     ie.AutoCompleteElement←a
+     ie.autocomplete←'off'
+     ie.Onkeydown←A.FQP'OnKeyDown'
+     a
+ }

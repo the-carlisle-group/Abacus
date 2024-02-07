@@ -1,0 +1,11 @@
+ CompareDOMs←{
+     ⍝ ⍵ ←→  Document
+     0=⎕TID:∇&⍵
+     b←GetBody ⍵
+     h←∊b ExecuteOnElementSync'outerHTML'
+     bb←HTML2DOM h
+     ea←Elements b
+     eb←Elements bb
+     m←ea.Tag≢eb.Tag
+     'DOMS ',(m/'do NOT '),'match'
+ }

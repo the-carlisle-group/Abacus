@@ -1,12 +1,14 @@
  DisplayEventMessage←{
      m←⊂'Event:'⍵.Event
+     m,←⊂'Current target id:'⍵.CurrentTargetId
      m,←⊂'Current target tag:'⍵.CurrentTargetTag
+     m,←⊂'Target tag:'⍵.TargetId
      m,←⊂'Target tag:'⍵.TargetTag
-     m,←⊂'APL current targetTag:'⍵.CurrentTarget.Tag
-     m,←⊂'APL target tag:'⍵.Target.Tag
-     m,←⊂'InnerHTML:'⍵.InnerHTML
-     m,←⊂'Value:'⍵.Value
-     m,←⊂'Key:'⍵.Key
+     ⍝ m,←⊂'APL current targetTag:'⍵.CurrentTarget.Tag
+     ⍝ m,←⊂'APL target tag:'⍵.Target.Tag
+     ⍝ m,←⊂'InnerHTML:'⍵.InnerHTML
+     ⍝ m,←⊂'Value:'⍵.Value
+     ⍝ m,←⊂'Key:'⍵.Key
      ⎕←'-'⍪(⍕↑m)⍪'-'
      1:z←0
  }

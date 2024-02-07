@@ -1,6 +1,7 @@
  AppendChild←{
      ⍝ ⍺ ←→ Parent
      ⍝ ⍵ ←→ Element
+     ⍵=0:0
      _←⍺ ExecuteOnElement'appendChild(document.createElement("',⍵.Tag,'"))'
      ⍵.Parent←⍺
      ⍺.Content,←⍵

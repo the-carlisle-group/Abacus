@@ -17,6 +17,7 @@
      t.AutoCompleteItems←p.AutoCompleteItems
      c←A.BodyCells t
      c.tabIndex←'0'
+     c.id←(⍴c)⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/⍴c
      c[0;0].class←'curcell'
      t
  }

@@ -1,5 +1,5 @@
  OnInput←{
-     e←⍵.Target
+     e←⍵.CurrentTarget
      e.value←⍵.Value
      0
  }

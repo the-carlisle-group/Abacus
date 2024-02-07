@@ -30,9 +30,17 @@ function sendAPLRequest(e){
       if (pd){
                 e.preventDefault();
        }     
+      const c = document.getElementsByTagName("*");
+      // const a = Array.from(c);
+      // const j = a.indexOf(e.target);
+      // const k = a.indexOf(e.currentTarget);
       const r = e.target.getBoundingClientRect();
+      const q = e.target.offsetParent.getBoundingClientRect();
       const s = window.getComputedStyle(e.target);
       const b = {
+                
+                ElementCount: c.length,
+                OffsetParentTag: e.target.offsetParent.tagName,
                 Event: e.type,
                 Value: e.target.value,
                 Name: e.target.name,
@@ -40,6 +48,9 @@ function sendAPLRequest(e){
                 CurrentTargetTag: e.currentTarget.tagName, 
                 TargetId: e.target.id, 
                 CurrentTargetId: e.currentTarget.id, 
+                // TargetIndex: j,
+                // CurrentTargetIndex: k,
+                InnerHTML: e.target.innerHTML,
                 Key: e.key, 
                 CtrlKey: e.ctrlKey,
                 AltKey: e.altKey,
@@ -49,6 +60,9 @@ function sendAPLRequest(e){
                 FontFamily: s['font-family'],
                 Font: s['font'],
                 Padding: s['padding'],
+                OffsetTop: e.target.offsetTop,
+                OffsetLeft: e.target.offsetLeft,
+                ParentBoundingClientRect: [q.top,q.left,q.bottom,q.right],
                 BoundingClientRect: [r.top,r.left,r.bottom,r.right]
       };
       const m = JSON.stringify(b); 

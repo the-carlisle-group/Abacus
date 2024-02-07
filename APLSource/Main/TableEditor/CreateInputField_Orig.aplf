@@ -1,4 +1,4 @@
- CreateInputField←{
+ CreateInputField_Orig←{
      ⍝ Inside <td>:
      ⍝ 1. Remove the padding of td
      ⍝ 2. Create a new div (input-cell) to hold <input> element
@@ -16,26 +16,18 @@
      d.class←'input-cell'
      i←d A.New'input'
      i.value←⍺
-     i.OriginalValue←⊃td.Content ⍝ O here makes it thinks its OnThis....
+     i.OriginalValue←⊃td.Content
      i.Oninput←A.FQP'OnInput'
      i.Onblur←A.FQP'OnInputBlur'
+     ⍝ DONT NEED THIS!
+     ⍝ t.InputElement←i ⍝ Note it.  ⍝ Could create once and reuse
      ai←(1⊃t.CurCell)⊃t.AutoCompleteItems
-
-
-
-     _←t.Document A.AutoComplete.Init i ai
-
-
-
+     a←d A.AutoComplete.New i ai  ⍝ Try not adding to Div, but to td
      c←A.New'div'(⊃td.Content)
      c.class←'input-temp'
      td.Content←d,c
      td.class←'curcell in-cell'
-
      _←td A.SetOuterHTML td
-
-
-
      n←⍕≢⍺
      _←i A.ExecuteOnElement'setSelectionRange(',n,',',n,')'
      _←i A.FireEvent'focus'

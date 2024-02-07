@@ -2,7 +2,7 @@
      ⎕THIS.A←#.Abacus.Main
      p←⎕NS''
      p.ColumnNames←'Name' 'Address' 'City' 'State'
-     p.Data←10 4⍴⊂''
+     p.Data←100 4⍴⊂''
      p.AutoCompleteItems←⍬ ⍬ ⍬ ⍬
      d←A.NewDocument''
      d.Caption←'Test Table Editor'
