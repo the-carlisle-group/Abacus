@@ -1,5 +1,5 @@
  OnInputBlur←{
-     i←⍵.Target
+     i←⍵.CurrentTarget
      i.value←⍵.Value
      0
  }

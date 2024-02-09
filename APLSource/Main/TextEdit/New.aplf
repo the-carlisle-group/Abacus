@@ -16,7 +16,7 @@
      c v a d←⍵
      A←##
      l←A.New'label'c
-     l.class←'textedit'                   ⍝ CSS
+     l.class←'text-edit'                   ⍝ CSS
      ⍝ l.class←'textedit textedit--horizontal' ⍝ Is the suffix needed???
      i←l A.New'input'
      i.id←c           ⍝ Or name?

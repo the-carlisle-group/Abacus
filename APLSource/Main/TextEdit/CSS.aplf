@@ -1,32 +1,19 @@
  CSS←{
      Rule←##.NewRule
-     s←Rule''
      ⍝ ************************
-     r←s Rule'.textedit'
-     r.font_family←'Arial'
-     r.font_size←'2rem'
-     r.padding←'2em'
-     r.display←'block'
+     s←Rule'.text-edit'
+     s.font_family←'Arial'
+     s.font_size←'1.25'
+     s.padding←'2em'
      ⍝ ************************
-     r←s Rule'.textedit>input'          ⍝ What is the downside of this?
-     r.font_family←'APL385 Unicode'     ⍝ If we redesign the HTML, input may not be a
-                                        ⍝ Direct child. We may not even use the same
-     r.font_size←'1.75rem'              ⍝ element tag. So we could set a class
-     r.padding←'.5em 2em'               ⍝ Do we really need to name the class  textedit__input
-     ⍝ r.margin←'2rem'                  ⍝ Seems retarded. We could just name it
-     ⍝ r.border←'none'                  ⍝ If we are changing the HTML, we can just change
-     r.border_radius←'.5rem'            ⍝ The CSS too. If someoneis dropping in their
-     r.width←'60rem'                    ⍝ CSS, then they can modify if there is a breaking
-
-     r.display←'block'                  ⍝ Change
-
-
-     r←s Rule'.textedit--horizontal'
-     r.display←'inline'
-
-     r←s Rule'.textedit--horizontal>input'
-     r.display←'inline'
-
-     s
-
+     r←s Rule'> input'
+     r.font_family←'APL385 Unicode'
+     r.font_size←'1.25rem'
+     r.padding←'.5em 2em'
+     r.margin←'2rem'
+     r.placeholder←'enter a selection expression, e.g. State in "NY"'
+     r.border←'none'
+     r.border_radius←'.5rem'
+     r.width←'60rem'
+     ##.UnNestCSS s
  }

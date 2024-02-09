@@ -1,0 +1,14 @@
+ Light←{
+     s←⎕NS''
+     s.HeaderBackgroundColor←'siler'
+     s.BodyColor←##.CSS.GrayScale 5
+     s.BodyBackgroundColor←##.CSS.GrayScale 95
+     s
+
+
+
+
+
+
+
+ }

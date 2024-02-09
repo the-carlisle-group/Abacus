@@ -2,6 +2,9 @@
      n←'O'⍵.⎕NL ¯2
      0=≢n:0 2⍴⊂''
      j←'sendAPLRequest(event)'
+     a←↑⍵{(⎕C ⍵)j}¨n
+     2=⍵.⎕NC'id':a
      ⍵.id←GetNextId 0
-     'id'⍵.id⍪↑⍵{(⎕C ⍵)j}¨n
+     a
+     ⍝ 'id'⍵.id⍪↑⍵{(⎕C ⍵)j}¨n   ⍝ Will get added later
  }

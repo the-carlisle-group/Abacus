@@ -1,4 +1,5 @@
  OnKeyDown←{
+     ⎕←'OnKeyDown in AutoComplete'
      k←⍵.Key
      k≡'Shift':0
      l←⍵.Target.AutoCompleteElement

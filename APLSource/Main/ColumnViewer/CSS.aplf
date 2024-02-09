@@ -6,6 +6,7 @@
      r←s Rule'.columnviewer'
      r.border_collapse←'collapse'
      r.table_layout←'fixed'
+     ⍝ r.background_color←⍵.MainBackgroundColor
 
      ⍝ Cells: th
      r←s Rule'.columnviewer th'
@@ -28,7 +29,7 @@
      r←s Rule'.columnviewer thead'
      r.position←'sticky'
      r.top←0
-     r.background_color←'lightgray'
+     ⍝ r.background_color←'lightgray'
 
      ⍝ Col aligbment
      r←s Rule'.colleft'
@@ -42,13 +43,13 @@
 
      ⍝ Current Cell
      r←s Rule'.curcol'
-     r.background_color←'LightSteelBlue'
-     r.color←'white'
+     r.background_color←⍵.HighlightBackgroundColor
+     r.color←⍵.HighlightColor
 
      ⍝ Current Header
      r←s Rule'.curheader'
-     r.color←'white'
-     r.background_color←'orange'
+     r.background_color←⍵.HighlightBackgroundColor
+     r.color←⍵.HighlightColor
      r.border←'.1rem solid black'
 
      s
