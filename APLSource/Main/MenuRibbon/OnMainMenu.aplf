@@ -1,0 +1,15 @@
+ OnMainMenu←{
+     ⍝ Put up the sub menu
+     A←##
+     b←⍵.Target
+     m←b.Parent
+     m.Parent.ActiveMenuItem←∊b.Content
+     m.Content.class←⊂'inactive-menu-item'
+     b.class←'active-menu-item'
+     sm←1⊃m.Parent.Content
+     sb←{A.New'button'⍵}¨⍵.Target.SubItems
+     sm.Content←sb
+     sb.Onclick←⊂A.FQP'OnSubMenu'
+     sb.class←⊂'inactive-menu-subitem'
+     m.Parent A.SetInnerHTML m.Parent.Content
+ }

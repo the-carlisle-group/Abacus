@@ -1,0 +1,16 @@
+ Put←{
+     ⍝ Put data into table element
+     ⍝ ⍺ ←→ Table Element
+     ⍝ ⍵ ←→ Table Space
+     v←{⍵}⍵.Values
+     n←{⍵}⍵.Names
+     t←A.NewTable v n
+     td←A.BodyCells t
+     td.Value←⍵.Values
+     th←,A.HeaderCells t
+     th.Name←⍵.Names
+     th.Type←⍵.Types
+     th.Format←⍵.Formats
+     ⍺.Content←t.Content
+     ⍺
+ }

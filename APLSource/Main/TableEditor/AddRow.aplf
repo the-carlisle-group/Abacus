@@ -6,6 +6,7 @@
      n←≢(0⊃b.Content).Content
      tr←##.New'tr'
      td←##.New¨n⍴⊂'td'
+     td.Value←⊂''
      td.tabindex←0
      tr.Content←td
      b A.AppendChild tr

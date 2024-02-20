@@ -1,25 +1,21 @@
- OnKeyDown←{
+ OnKeyDown_OLD←{
      ⍝ ⎕←'OnKeyDown in AutoComplete'
      k←⍵.Key
-     e←⍵.CurrentTarget ⍝ Input element
      k≡'Shift':0
      ck←⍵.CtrlKey≡⊂'true'
-     l←⍵.Document.AutoCompleteElement
+     l←⍵.Target.AutoCompleteElement
      a←0<≢AutoCompleteElements l
-     (~a)∧k≡'Enter':OnEnter ⍵
-     (~a)∧k≡'ArrowDown':¯1 History ⍵
-     (~a)∧k≡'ArrowUp':1 History ⍵
-     ⍝ ck∧k≡'Enter':(⍎e.OnCtrlEnter)⍵
+     ck∧k≡'Enter':(⍎l.OnCtrlEnter)⍵
      ⍝ a∧k≡'ArrowRight':SelectItem ⍵
      a∧k≡'Enter':StopPropagation ⍵⊣1 SelectItem ⍵
      a∧k≡'Tab':StopPropagation ⍵⊣1 SelectItem ⍵
      a∧k≡'Escape':StopPropagation ⍵⊣1 Clear l
      a∧k≡'ArrowDown':ResetCursor ⍵⊣1 OnArrowUpDown ⍵
      a∧k≡'ArrowUp':ResetCursor ⍵⊣¯1 OnArrowUpDown ⍵
-     ~(⊂k)∊,¨e.TriggerKeys:Clear l
+     ~(⊂k)∊,¨l.TriggerKeys:Clear l
      rc st←GetStartText ⍵
      rc:Clear l
-     i←e.AutoCompleteItems
+     i←l.Items
      b←((≢st)↑¨i)∊⊂st
      ~∨/b:Clear l
      l.(Mask StartText)←b st

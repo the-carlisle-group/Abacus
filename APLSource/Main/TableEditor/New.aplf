@@ -5,7 +5,8 @@
      ⍺←⊣
      ⎕THIS.A←##
      p←⍵
-     t←⍺ A.NewTable p.Data p.ColumnNames
+     t←⍺ A.New'table'
+     _←t Put p
      t.class←'table-editor'
      t.CellMode←0
      t.AutoCompleteActive←0
@@ -13,10 +14,10 @@
      t.CurCell←0 0
      t.Onclick←A.FQP'OnClick'
      t.Onkeydown←A.FQP'OnKeyDown'
-     t.PreventDefault←⊂'TD' 'keydown'('ArrowLeft' 'ArrowRight' 'ArrowUp' 'ArrowDown')
+     t.PreventDefault←⊂'TABLE' 'keydown'('ArrowLeft' 'ArrowRight' 'ArrowUp' 'ArrowDown')
      t.AutoCompleteItems←p.AutoCompleteItems
      c←A.BodyCells t
-     c.tabIndex←'0'
+     c.tabindex←'0'
      c.id←(⍴c)⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/⍴c
      c[0;0].class←'curcell'
      t

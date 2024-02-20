@@ -5,8 +5,10 @@
      ⍺←⊣
      ⎕THIS.A←##
      n←≢⍵.Names
-     cn←GetColTitles¨⍵.Names
-     t←A.NewTable(n⍴⊂'')cn
+     cn←⍵.SortOrder GetColTitles¨⍵.Names
+     cnd←{A.New'div'⍵}¨cn
+     t←A.NewTable(n⍴⊂'')cnd
+     t.ColumnNames←⍵.Names
      t.CurCol←0
      t.class←'columnviewer'
      t.tabindex←0
@@ -14,9 +16,13 @@
      t.Onclick←A.FQP'OnClick'
      t.Onkeydown←A.FQP'OnKeyDown'
      t.PreventDefault←⊂'TABLE' 'keydown'('ArrowLeft' 'ArrowRight')
-     h←A.HeaderCells t
-     h[0;].class←'col'∘,¨⍵.TextAlign
-     h[0;0].class,←' curheader'
+     h←,A.HeaderCells t
+     h.class←'col'∘,¨⍵.TextAlign
+     h.Content.id←⊂¨(A.GetNextId 0)∘,¨'-',¨⍕¨⍳≢h
+
+     h[0].class,←' curheader'
+
+
      c←A.BodyCells t
      c[0;].class←'col'∘,¨⍵.TextAlign
      c[0;].Content←{A.New'pre'⍵}¨{∊⍵,¨⊂'\u000D'}¨↓⍉⍵.Values

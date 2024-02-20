@@ -2,27 +2,24 @@
      Rule←##.NewRule
      ⍝ ************************
      s←Rule'.inline-dialog'
-     ⍝ ************************
-     r←s Rule'> header'
-     r.font_family←'Arial'
-     r.display←'flex'
-     r.align_items←'center'
-     r.padding←'.5em'
-     r.background_color←'steelblue'
-     ⍝ ************************
-     r←s Rule'> header > h1'
-     r.flex←1
-     r.font_family←'Arial'
+     s.display←'flex'
+     s.justify_content←'space-between'
      ⍝ Button
-     r←s Rule'> header button'
-     r.background_color←'limegreen'
-     r.border_radius←'.25em'
+     r←s Rule'>.actions>button'
+     r.background_color←⍵.AccentColor1
      r.color←'white'
+     r.border←'none'
+     r.border_radius←'10px'
      r.font_weight←'bold'
+     r.padding←'.75rem 1rem'
+     r.font_size←'1.25rem'
+     r.font_size←'1rem'
      ⍝ ***********************
      r←s Rule' > Section'
      r.max_height←'10rem'
      r.overflow←'auto'
+     r.border_bottom←'1px solid gray'
+     r.display←'inline-block'
      ⍝ ************************
      ##.UnNestCSS s
  }

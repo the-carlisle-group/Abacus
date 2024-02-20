@@ -1,14 +1,16 @@
  Build←{
      ⎕THIS.A←#.Abacus.Main
      p←⎕NS''
-     p.ColumnNames←'Brewery' 'City' 'State'
-     p.Data←30↑1 1↓⎕CSV'c:\datasets\kaggle\breweries.csv'
-     p.AutoCompleteItems←⍬(∪p.Data[;1])(∪p.Data[;2])
+     p.Names←'Brewery' 'City' 'State'
+     p.Types←'Char' 'Char' 'Char'
+     p.Formats←'' '' ''
+     p.Values←30↑1 1↓⎕CSV'c:\datasets\kaggle\breweries.csv'
+     p.AutoCompleteItems←⍬(∪p.Values[;1])(∪p.Values[;2])
      d←A.NewDocument''
      d.Caption←'Test Table Editor'
      b←A.GetBody d
      _←b A.AutoComplete.New''
      t←b A.TableEditor.New p
-     d.Style←A.ComponentStyles 0
+     d.Style←A.ComponentStyles #.Abacus.Themes.Dark 0
      d
  }

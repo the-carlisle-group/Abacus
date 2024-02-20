@@ -1,7 +1,9 @@
  UnNestCSS←{
      r←⍵.Rules
      ⍵.Rules←⍬
-     r.Selector←r.Selector,¨⍨⊂⍵.Selector,' '
+     p←':'=⊃¨r.Selector
+     r.Selector←r.Selector,¨⍨(⊂⍵.Selector),¨' ' ''[p]
+     ⍝ r.Selector←r.Selector,¨⍨⊂⍵.Selector,' '
      s←NewRule''
      s.Rules←⍵,r
      s

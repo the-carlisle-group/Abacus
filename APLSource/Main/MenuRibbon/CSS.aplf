@@ -1,0 +1,53 @@
+ CSS←{
+     Rule←##.NewRule
+     s0←Rule'.menu-ribbon'
+
+     s1←Rule'.menu-ribbon-main'
+
+     r←s1 Rule'>button'
+     r.padding←'.5em .5em'
+     r.font_size←'1rem'
+     r.color←⍵.BodyColor
+     ⍝ r.background_color←⍵.BodyBackgroundColor
+     r.font_family←'Verdana'
+     r.border_radius←'2px 2px 0 0'
+     r.border←'none'
+
+     ⍝ r←s1 Rule'button:hover'
+     ⍝ r.background_color←⍵.HighlightBackgroundColor
+
+     s3←Rule'.active-menu-item'
+     s3.background_color←⍵.BodyBackgroundColor2
+
+     s4←Rule'.inactive-menu-item'
+     s4.background_color←⍵.BodyBackgroundColor
+
+
+     s5←Rule'.active-menu-subitem'
+     s5.color←'white'
+     s5.background_color←'red'
+
+     s6←Rule'.inactive-menu-subitem'
+     s6.color←⍵.BodyColor
+
+
+
+
+
+     s2←Rule'.menu-ribbon-sub'
+     s2.background_color←⍵.BodyBackgroundColor2
+
+     r←s2 Rule'>button'
+     r.padding←'.5em .5em'
+     r.font_size←'1.25rem'
+     r.color←⍵.BodyColor
+     r.background_color←⍵.BodyBackgroundColor2
+     r.font_family←'Verdana'
+     r.border_radius←'10px'
+     r.border←'none'
+     ⍝r←s2 Rule'button:hover'
+⍝     r.background_color←⍵.HighlightBackgroundColor
+⍝
+
+     s3,s4,s5,s6,∊##.UnNestCSS¨s1 s2
+ }

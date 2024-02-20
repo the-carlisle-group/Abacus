@@ -1,0 +1,7 @@
+ OnSubMenu←{
+     m←⍵.Target.Parent.Parent
+     a←m.ActiveMenuItem
+     n←'On',a,∊⍵.Target.Content
+     s←m.Context
+     (s⍎n)⍵
+ }

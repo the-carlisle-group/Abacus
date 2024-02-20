@@ -1,0 +1,20 @@
+ New←{
+     A←##
+     m←A.New'div'
+     m.Context←⊃⎕RSI
+     m.class←'menu-ribbon'
+     m.ActiveMenuItem←⊃⍵.Items
+     mm←m A.New'div'
+     mm.class←'menu-ribbon-main'
+     mb←mm{⍺ A.New'button'⍵}¨⍵.Items
+     mb.class←⊂'inactive-menu-item'
+     (0⊃mb).class←'active-menu-item'
+     mb.SubItems←⍵.SubItems
+     mb.Onclick←⊂A.FQP'OnMainMenu'
+     sm←m A.New'div'
+     sm.class←'menu-ribbon-sub'
+     sb←sm{⍺ A.New'button'⍵}¨0⊃⍵.SubItems
+     sb.class←⊂'inactive-menu-subitem'
+     sb.OnClick←⊂A.FQP'OnSubMenu'
+     m
+ }

@@ -4,11 +4,11 @@
      A←##
      p←⍵
      d←⍺ A.ElementById'inline-dialog'
-     h←A.New'header'
-     h1←h A.New'h1'p.Title
-     b←h A.New¨{'button'⍵}¨'Apply' 'x'
-     b.Onclick←p.OnApply(A.FQP'OnClose')
      s←A.New'section'
-     s.Content←p.Content
-     d A.SetInnerHTML h,s
+     s.Content←p.Content   ⍝ Maybe just add p.Content directly, no need for extra section
+     a←A.New'div'
+     a.class←'actions'
+     b←a A.New¨{'button'⍵}¨'Apply' 'x'
+     b.Onclick←p.OnApply(A.FQP'OnClose')
+     d A.SetInnerHTML s,a
  }

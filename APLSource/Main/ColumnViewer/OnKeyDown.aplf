@@ -9,5 +9,16 @@
      i←t.CurCol
      u∧k≡'ArrowLeft':t MoveCol i-1
      u∧k≡'ArrowRight':t MoveCol i+1
+
+     ⍝ This must go back in home space
+     ⍝ Need to handle multiple listeners
+
+     c∧s∧k≡'ArrowUp':#.FlipDBDesktop.Main.TabEx.OnSortUpAdd ⍵
+     c∧k≡'ArrowUp':#.FlipDBDesktop.Main.TabEx.OnSortUp ⍵
+     c∧s∧k≡'ArrowDown':#.FlipDBDesktop.Main.TabEx.OnSortDownAdd ⍵
+     c∧k≡'ArrowDown':#.FlipDBDesktop.Main.TabEx.OnSortDown ⍵
+
+
+
      0
  }

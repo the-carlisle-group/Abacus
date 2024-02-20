@@ -6,7 +6,7 @@
      s.font_size←'1.25'
      s.padding←'2em'
      ⍝ ************************
-     r←s Rule'> input'
+     r←s Rule'>input'
      r.font_family←'APL385 Unicode'
      r.font_size←'1.25rem'
      r.padding←'.5em 2em'

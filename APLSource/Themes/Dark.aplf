@@ -3,9 +3,11 @@
      s.HeaderBackgroundColor←'darkslategray'
      s.BodyColor←##.CSS.GrayScale 90
      s.BodyBackgroundColor←##.CSS.GrayScale 18          ⍝ 0 255 scale as well
+     s.BodyBackgroundColor2←##.CSS.GrayScale 25
      s.HighlightColor←##.CSS.GrayScale 100
-     s.HighlightBackgroundColor←##.CSS.GrayScale 50
-
+     s.HighlightBackgroundColor←##.CSS.GrayScale 30
+     s.AccentColor1←'royalblue'
+     s.AccentColor2←'orange'
      s
 
 

@@ -6,7 +6,8 @@
      q←d.StopPropagation
      d.StopPropagation←0
      q:0
-     c.HTMLRenderer←h
+     c.HTMLRenderer←h    ⍝ May not have this!!!!
+     c.Document←d
      ⍝ j←c.TargetIndex
      ⍝ k←c.CurrentTargetIndex
      ⍝ te ce←(Elements d)[j k]

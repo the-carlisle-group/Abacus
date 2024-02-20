@@ -5,6 +5,7 @@
      t.CellMode←0
      t.Changed←1
      e←i A.GetNearest'td'
-     _←e A.SetInnerHTML i.value
+     e.Value←{⍵}i.value               ⍝ Convert to numeric, etc,
+     _←e A.SetInnerHTML{⍵}i.value   ⍝ Format the value!
      e A.RemoveClass'in-cell'
  }

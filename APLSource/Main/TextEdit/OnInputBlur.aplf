@@ -1,5 +1,6 @@
  OnInputBlur←{
      i←⍵.CurrentTarget
      i.value←⍵.Value
-     0
+     a←i.Document.AutoCompleteElement
+     ##.AutoComplete.Clear a
  }

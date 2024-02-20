@@ -2,15 +2,22 @@
      Rule←##.NewRule
      s←Rule'#auto-complete'
      s.z_index←9
-     s.background_color←'lightyellow'
-     s.max_height←'15em'
+     s.background_color←⍵.BodyBackgroundColor
+     ⍝ s.box_sizing←'border-box'
+     s.border←'.5px solid gray'
+     s.border_radius←'10px'
+     s.max_height←'20em'
      s.min_width←'6em'
      s.position←'fixed'
-     s.overflow←'auto'
+     s.overflow←'hidden' ⍝ 'auto'
+     s.padding←'1em'
+     r←s Rule':empty'
+     r.display←'none'
      r←s Rule'div'
-     r.padding←'.1rem .2rem'
+     ⍝ r.padding←'.1rem .2rem'
+     ⍝ r.padding←'.2em' '1em' '.2em' '1em'
      r←s Rule'.active-item'
-     r.color←'white'
-     r.background_color←'blue'
+     r.color←⍵.HighlightColor
+     r.background_color←#.Abacus.CSS.GrayScale 30
      ##.UnNestCSS s
  }

@@ -1,0 +1,10 @@
+ History←{
+     ⍝ ⍺ ←→ 1 back or ¯1 for forward
+     e←⍵.CurrentTarget
+     i←e.HistoryIndex
+     (i=1)∧⍺=¯1:0
+     (i=≢e.History)∧⍺=1:0
+     e.HistoryIndex+←⍺
+     _←e A.SetValue(e.HistoryIndex-1)⊃⌽e.History
+     0
+ }

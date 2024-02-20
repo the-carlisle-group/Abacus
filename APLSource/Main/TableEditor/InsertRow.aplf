@@ -5,6 +5,7 @@
      n←≢(0⊃b.Content).Content
      tr←A.New'tr'
      td←A.New¨n⍴⊂'td'
+     td.Value←⊂''
      cc←ci⊃td
      cc.class←'curcell'
      td.tabindex←0

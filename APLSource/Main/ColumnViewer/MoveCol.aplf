@@ -5,6 +5,7 @@
      c←⍺{3::0 ⋄ m[0;⍺.CurCol ⍵]}⍵
      c≡0:0
      oc nc←c
+     oc=nc:0
      _←nc A.AddClass'curcol'
      _←oc A.RemoveClass'curcol'
 

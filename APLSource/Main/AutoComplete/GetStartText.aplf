@@ -1,13 +1,14 @@
  GetStartText←{
      ⍝ ⍵ ←→ Event Mesage
      ⍝ ← ←→ Return code, starting text
+     i←⍵.Target
      t←⍵.Value
-     l←⍵.Target.AutoCompleteElement
+     l←⍵.Document.AutoCompleteElement
      k←⍵.Key
      bs←k≡'Backspace'
      s←⍵.SelectionStart
      st et←(t↑⍨s-bs)(s↓t)
-     tk←l.TriggerKeys
+     tk←i.TriggerKeys
      tk∊⍨⊃et:1 ''
      r←(⌽∧\⌽st∊tk)/st
      0(r,k⍴⍨~bs)

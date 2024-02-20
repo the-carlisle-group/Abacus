@@ -5,13 +5,15 @@
      ⍝ Table
      r←s Rule'.columnviewer'
      r.border_collapse←'collapse'
+     ⍝ r.border_spacing←0
+     r.color←'silver' ⍝ ⍵.BodyColor
      r.table_layout←'fixed'
      ⍝ r.background_color←⍵.MainBackgroundColor
 
      ⍝ Cells: th
      r←s Rule'.columnviewer th'
-     r.padding←'.5rem 1rem'
-     r.border←'solid .5px black'
+     ⍝ r.padding←'.5rem 1rem'
+     r.border←'1px solid black'
      r.font_family←'Arial'
      r.font_size←'1.1rem'
      r.font_weight←'normal'
@@ -20,10 +22,17 @@
 ⍝    r.background_color←'lightgray'
 ⍝
 
+     r←s Rule'.columnviewer th div'
+     r.padding←'.5rem 1rem'
+     r.height←'3rem'
+
+
+
      ⍝ Cells: td
      r←s Rule'.columnviewer td'
-     r.padding←'.5rem .75rem'
-     r.border←'solid .5px gray'
+     ⍝ r.padding←'.5rem .75rem'
+     ⍝ r.border←'solid .5px gray'
+     r.border←'1px solid black'
 
      ⍝ thead
      r←s Rule'.columnviewer thead'
@@ -40,17 +49,30 @@
      ⍝ Pre
      r←s Rule'pre'
      r.font_size←'1.25rem'
-
+     r.padding←'.5rem 1rem'
+     r.border←'3px'
      ⍝ Current Cell
-     r←s Rule'.curcol'
-     r.background_color←⍵.HighlightBackgroundColor
-     r.color←⍵.HighlightColor
+     ⍝ r←s Rule'.curcol'
+     ⍝ r.border←'3px solid orange'
+     r←s Rule'.curcol>pre'
+     r.border←'3px solid ',⍵.AccentColor1
+     r.color←'white'
+     r.border_radius←'5px'
+
+     r←s Rule'.curheader div'
+     r.border←'3px solid ',⍵.AccentColor1
+     r.border_radius←'5px'
+     r.color←'white'
+
+
+     ⍝ r.background_color←⍵.HighlightBackgroundColor
+     ⍝ r.color←'green' ⍝ ⍵.HighlightColor
 
      ⍝ Current Header
-     r←s Rule'.curheader'
-     r.background_color←⍵.HighlightBackgroundColor
-     r.color←⍵.HighlightColor
-     r.border←'.1rem solid black'
+     ⍝ r←s Rule'.curheader'
+     ⍝ r.background_color←⍵.HighlightBackgroundColor
+     ⍝ r.color←'green' ⍝ ⍵.HighlightColor
+     ⍝ r.border←'5px double orange'
 
      s
  }
