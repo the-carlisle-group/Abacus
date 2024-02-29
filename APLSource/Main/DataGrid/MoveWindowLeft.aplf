@@ -1,0 +1,7 @@
+ MoveWindowLeft←{
+     t←⍵.CurrentTarget
+     c←1⊃t.DataCell
+     t.WindowSize[1]←c⊃t.ColumnsPerIndex
+     t.WindowIndex-←0 1
+     Refresh t
+ }

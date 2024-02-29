@@ -1,0 +1,11 @@
+ MoveToColumn←{
+     t←⍵.CurrentTarget
+     n←(⍺=¯1)⊃⍺,⍺+1⊃t.DataSize    ⍝ Goto Nth column
+     c←1⊃t.DataCell               ⍝ Current column
+     n=c:0
+     t.DataCell[1]←n
+     o←n∊(1⊃t.WindowIndex)+⍳1⊃t.WindowSize
+     o:n MoveToColumnInWindow ⍵
+     n<c:n MoveToColumnLeft ⍵
+     n>c:n MoveToColumnRight ⍵
+ }

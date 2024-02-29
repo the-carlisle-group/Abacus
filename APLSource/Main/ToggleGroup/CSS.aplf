@@ -1,0 +1,24 @@
+ CSS←{
+     A←##
+     Rule←A.NewRule
+     s←Rule'.toggle-group'
+     ⍝ s.display←'flex'
+     ⍝ Buttons
+     r←s Rule'>button'
+     ⍝ r.font_family←'Arial'
+     r.font_size←'1.5rem'
+     r.padding←'.25em'
+     r.border←'none'
+     r.border_radius←'5px'
+     r.color←⍵.BodyColor
+     r.background_color←⍵.BodyBackgroundColor
+     r.width←'2em'
+     r.font_weight←'bold'
+     ⍝ Hover
+     r←s Rule'>button:hover'
+     r.background_color←⍵.HighlightBackgroundColor
+     ⍝ Selected
+     r←s Rule'.selected'
+     r.border←'2px solid ',⍵.AccentColor1
+     A.UnNestCSS s
+ }

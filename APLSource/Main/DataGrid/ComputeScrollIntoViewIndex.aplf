@@ -1,0 +1,4 @@
+ ComputeScrollIntoViewIndex←{
+     n←⍳≢⍵
+     (⍵/n)[n⍳⍨∊n+⍳¨⍵]
+ }

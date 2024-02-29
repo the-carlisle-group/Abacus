@@ -1,0 +1,6 @@
+ GetTestData←{
+     r c←⍵
+     t←#.FlipDBDesktop.Main.TabEx.GetTestTable2''
+     dt←t.ToDataTable 0
+     dt.∆FormattedValuesAsMatrix[r⍴⍳10000;c⍴⍳44]
+ }

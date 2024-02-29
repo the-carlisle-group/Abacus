@@ -1,6 +1,0 @@
- OnClose←{
-     A←##
-     d←⍵.HTMLRenderer.Document
-     e←d A.ElementById'inline-dialog'
-     e A.SetInnerHTML''
- }

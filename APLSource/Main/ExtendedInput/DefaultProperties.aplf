@@ -1,0 +1,12 @@
+ DefaultProperties←{
+     d←⎕NS''
+     d.Id←##.GetNextId 0
+     d.Label←''
+     d.Placeholder←''
+     d.History←''
+     d.OnEnter←''
+     d.OnClear←''
+     d.AutoCompleteItems←''
+     d.ToggleButtons←''
+     d⊣'d'⎕NS ⍵
+ }

@@ -1,0 +1,20 @@
+ Test←{
+     ⍝ ⍵ ←→ Rows to display, total number of actual columns
+     ⎕THIS.A←##
+     p←⎕NS''
+     p.Values←GetTestData ⍵
+     p.Names←'Column'∘,¨⍕¨⍳1⊃⍴p.Values
+     p.SortOrder←⊂''
+     ⍝ p.Widths←8⌈⌈⌿≢¨p.Values
+     p.TextAlign←⊂'left'
+     d←A.NewDocument''
+     d.Caption←'Test Horizontal Scrolling'
+     b←A.GetBody d
+     b.style←'overflow:clip'
+
+     m←b A.New'main'
+     m.style←'overflow:clip'
+     t←m A.DataGrid.New p
+     d.Style←CSS #.Abacus.Themes.Dark 0
+     A.NewForm d
+ }

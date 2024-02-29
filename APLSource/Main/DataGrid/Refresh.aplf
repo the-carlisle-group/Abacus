@@ -1,0 +1,6 @@
+ Refresh←{
+     t←⍵
+     c←t GetContent''
+     _←t A.SetInnerHTML c
+     t A.FireEvent'focus'
+ }

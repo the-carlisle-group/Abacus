@@ -1,0 +1,19 @@
+ OnKeyDown←{
+     t←⍵.CurrentTarget
+     k←⍵.Key
+     c←⍵.CtrlKey≡⊂'true'
+     s←⍵.ShiftKey≡⊂'true'
+     a←⍵.AltKey≡⊂'true'
+     u←~c∨s∨a
+     k≡'ArrowRight':0 1 Move ⍵
+     k≡'ArrowLeft':0 ¯1 Move ⍵
+     k≡'ArrowUp':¯1 0 Move ⍵
+     k≡'ArrowDown':1 0 Move ⍵
+     k≡'PageUp':MovePageUp ⍵
+     k≡'PageDown':1 MovePageDown ⍵
+     u∧k≡'Home':0 MoveToColumn ⍵
+     u∧k≡'End':¯1 MoveToColumn ⍵
+     c∧k≡'Home':MoveHome ⍵
+     c∧k≡'End':MoveEnd ⍵               ⍝ ##.TableEditor.OnKeyDown
+     0
+ }

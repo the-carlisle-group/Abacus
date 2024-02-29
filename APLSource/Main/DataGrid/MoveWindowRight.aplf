@@ -1,0 +1,10 @@
+ MoveWindowRight←{
+     t←⍵.CurrentTarget
+     c←1⊃t.DataCell
+     i←c⊃t.ScrollIntoViewIndex
+     t.WindowIndex[1]←i
+     t.WindowSize[1]←i⊃t.ColumnsPerIndex
+     t.WindowCell[1]←c-i        ⍝ t.DataCell-t.WindowIndex
+     _←Refresh t
+     0
+ }

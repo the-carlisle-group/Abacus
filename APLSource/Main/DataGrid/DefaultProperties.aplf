@@ -1,0 +1,6 @@
+ DefaultProperties←{
+     d←⎕NS''
+     d.WindowIndex←0 0
+     d.WindowCell←0 0
+     d⊣'d'⎕NS ⍵
+ }

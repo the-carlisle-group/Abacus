@@ -1,12 +1,11 @@
  Init←{
-     ⍝ ⍵ ←→ (Input element) (Autocomplete Items) (Callback for ctrl+enter)
+     i←⍺
      ⎕THIS.A←##
-     ie ai cb←3↑⍵,⊂''
-     0=≢ai:0
-     ie.OnEnter←cb
-     ie.AutoCompleteItems←ai
-     ie.TriggerKeys←(⊂'Backspace'),∪' '~⍨∊ai
-     ie.autocomplete←'off'
-     ie.Onkeydown←A.FQP'OnKeyDown'
+     a←⍵.AutoCompleteItems
+     ⍝ 0=≢a:0
+     i.AutoCompleteItems←a
+     i.TriggerKeys←(⊂'Backspace'),∪' '~⍨∊a
+     i.autocomplete←'off'
+     i.Onkeydown←A.FQP'OnKeyDown'
      0
  }

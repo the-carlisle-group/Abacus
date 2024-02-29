@@ -1,0 +1,7 @@
+ MoveToColumnLeft←{
+     t←⍵.CurrentTarget
+     t.WindowIndex[1]←⍺
+     t.WindowSize[1]←⍺⊃t.ColumnsPerIndex
+     t.WindowCell[1]←0
+     Refresh t
+ }

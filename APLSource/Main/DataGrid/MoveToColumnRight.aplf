@@ -1,0 +1,8 @@
+ MoveToColumnRight←{
+     t←⍵.CurrentTarget
+     i←⍺⊃t.ScrollIntoViewIndex
+     t.WindowIndex[1]←i
+     t.WindowSize[1]←i⊃t.ColumnsPerIndex
+     t.WindowCell[1]←⍺-i        ⍝ t.DataCell-t.WindowIndex
+     Refresh t
+ }

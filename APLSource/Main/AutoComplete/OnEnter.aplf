@@ -1,6 +1,7 @@
  OnEnter←{
      k←⍵.Key
      e←⍵.CurrentTarget
+     0=≢e.OnEnter:0
      e.History←⌽∪⌽e.History,⊂⍵.Value ⍝ Nicer way??
      e.HistoryIndex←0
      (⍎e.OnEnter)⍵

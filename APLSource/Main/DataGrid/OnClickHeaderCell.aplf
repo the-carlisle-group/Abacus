@@ -1,0 +1,16 @@
+ OnClickHeaderCell←{
+     e←⍵.Target
+     t←⍵.CurrentTarget
+     h←,A.HeaderCells t
+     i←h⍳e
+     i=1⊃t.WindowCell:0
+     c←A.BodyCells t
+     lc←t.WindowCell⌷c
+     j←i,⍨0⊃t.WindowCell
+     nc←j⌷c
+     _←lc A.RemoveClass'window-cell'
+     _←nc A.SetClass'window-cell'
+     t.WindowCell←j
+     t.DataCell←j+t.WindowIndex
+     0
+ }

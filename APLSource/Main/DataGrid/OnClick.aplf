@@ -1,0 +1,16 @@
+ OnClick←{
+     ⎕←'On click in datagrid'
+     e←⍵.Target
+     e.Tag≡'th':OnClickHeaderCell ⍵
+     t←⍵.CurrentTarget
+     c←A.BodyCells t
+     i←⊃⍸c=e
+     i≡t.WindowCell:0
+     lc←t.WindowCell⌷c
+     nc←e
+     _←lc A.RemoveClass'window-cell'
+     _←nc A.SetClass'window-cell'
+     t.DataCell←i+t.WindowIndex
+     t.WindowCell←i
+     0
+ }

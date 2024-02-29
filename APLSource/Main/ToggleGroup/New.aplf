@@ -1,0 +1,14 @@
+ New←{
+     ⍺←0
+     ⎕THIS.A←##
+     p←DefaultProperties ⍵
+     d←⍺ A.New'div'
+     d.Multi←p.Multi
+     d.class←'toggle-group'
+     d.id←p.Id
+     b←d A.New¨{'button'⍵}¨p.Labels
+     b.State←0
+     b.class←⊂''
+     b.Onclick←⊂A.FQP'OnClick'
+     d
+ }

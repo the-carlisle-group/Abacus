@@ -1,9 +1,0 @@
- New←{
-     ⍝ ⍵ ←→ Propspace: Title,Subtitle,Content,OnApply
-     ⍺←0
-     A←##
-     d←⍺ A.New'div'
-     d.class←'inline-dialog'
-     d.id←'inline-dialog'
-     d
- }

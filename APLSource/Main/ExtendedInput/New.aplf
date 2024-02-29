@@ -1,0 +1,23 @@
+ New←{
+     A←##
+     ⍺←0
+     p←DefaultProperties ⍵
+     d←⍺ A.New'div'
+     d.class←'extended-input'
+     d.id←⍵.Id
+     l←d A.New'label'p.Label
+     l.id←⍵.Id,'-label'
+     i←d A.New'input'
+     i.id←⍵.Id,'-input'
+     i.placeholder←p.Placeholder
+     i.History←p.History
+     i.HistoryIndex←0
+     i.Onblur←A.FQP'OnInputBlur'
+     i.Oninput←A.FQP'OnInput'
+     i.OnEnter←p.OnEnter
+     _←i ##.AutoComplete.Init p
+     _←d AddToggleGroup p
+     b←d A.New'button' 'x'
+     b.Onclick←p.OnClear
+     d
+ }

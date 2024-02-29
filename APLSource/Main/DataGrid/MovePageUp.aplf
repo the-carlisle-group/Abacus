@@ -1,0 +1,9 @@
+ MovePageUp←{
+     t←⍵.CurrentTarget
+     0=0⊃t.WindowIndex:0
+     i←-0⊃t.WindowSize
+     t.WindowIndex[0]←0⌈i+0⊃t.WindowIndex
+     t.DataCell[0]←0⌈i+0⊃t.DataCell
+     t.WindowCell←t.DataCell-t.WindowIndex
+     Refresh t
+ }

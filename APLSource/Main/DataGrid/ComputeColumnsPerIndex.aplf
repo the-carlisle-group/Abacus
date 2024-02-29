@@ -1,0 +1,4 @@
+ ComputeColumnsPerIndex←{
+     s←+\¨(⍳≢⍵)↓¨⊂⍵
+     1+s⍸¨⍺
+ }

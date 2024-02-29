@@ -41,6 +41,7 @@ function sendAPLRequest(e){
                 TargetId: e.target.id, 
                 CurrentTargetId: e.currentTarget.id, 
                 Key: e.key, 
+                Repeat: e.repeat,
                 CtrlKey: e.ctrlKey,
                 AltKey: e.altKey,
                 ShiftKey: e.shiftKey,

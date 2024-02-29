@@ -1,0 +1,17 @@
+ Move←{
+     t←⍵.CurrentTarget
+     i←⍺+t.DataCell
+     ∨/(i<0)∨i=t.DataSize:0
+     t.DataCell←i
+     j←⍺+t.WindowCell
+     s←∨/(j<0)∨j≥t.WindowSize
+     s:⍺ MoveWindow ⍵
+     l←t.WindowCell
+     t.WindowCell+←⍺
+     bc←A.BodyCells t
+     lc←l⌷bc
+     nc←t.WindowCell⌷bc
+     _←lc A.RemoveClass'window-cell'
+     _←nc A.SetClass'window-cell'
+     0
+ }

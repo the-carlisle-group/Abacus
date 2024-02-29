@@ -1,0 +1,15 @@
+ OnClick←{
+     t←⍵.CurrentTarget
+     b←t.State
+     p←t.Parent
+     m←p.Multi
+     s←~m
+     a←p.Content
+     s∧b:0
+     t.State←~b
+     c←'selected'
+     m∧b:t A.RemoveClass c
+     m∧~b:t A.AddClass c
+     _←a A.RemoveClass¨⊂c
+     t A.AddClass c
+ }

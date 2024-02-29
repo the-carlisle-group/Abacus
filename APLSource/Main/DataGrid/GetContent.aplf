@@ -1,0 +1,30 @@
+ GetContent←{
+     d←⍺.TableData
+
+     ⍝ Don't need partial on last row/col obviously
+     ⍝ ALSO don't need partial if all remaining columns fit on screen
+     ⍝ One more test for if parital needed
+
+     p←⍺.DataCell≠⍺.DataSize-1 ⍝ Show partial row/col partial!!
+     i j←⍺.WindowIndex+⍳¨⍺.WindowSize+p
+     i j←i j~¨⍺.DataSize ⍝ Temp kluge. Somehow we miscalulate and can get an extra column because there is in fact no partial
+     ⍝ Probly need to pay closer attention to width.
+     v←i j⌷d.Values
+     n←d.ColumnTitles[j]
+     t←A.NewTable v n
+
+     h←,A.HeaderCells t
+     ⍝ h.class←'col'∘,¨⍵.TextAlign
+     h.id←(A.GetNextId 0)∘,¨'-',¨⍕¨⍳≢h
+     ⍝ h[0].class,←' curheader'
+
+
+
+     c←A.BodyCells t
+     c.style←(⍴c)⍴⍺.ColumnStyles[j]
+     ⍝ c.tabindex←'0'
+     c.id←(⍴c)⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/⍴c
+     cc←⍺.WindowCell⌷c
+     cc.class←'window-cell'
+     t.Content
+ }

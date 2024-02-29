@@ -1,0 +1,9 @@
+ DefaultProperties←{
+     d←⎕NS''
+     d.Id←##.GetNextId 0
+     d.Labels←''
+     d.SVGs←''
+     d.Multi←0
+     d.OnClick←''
+     d⊣'d'⎕NS ⍵
+ }
