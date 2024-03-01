@@ -1,12 +1,7 @@
  Test←{
      ⍝ ⍵ ←→ Rows to display, total number of actual columns
      ⎕THIS.A←##
-     p←⎕NS''
-     p.Values←GetTestData ⍵
-     p.Names←'Column'∘,¨⍕¨⍳1⊃⍴p.Values
-     p.SortOrder←⊂''
-     ⍝ p.Widths←8⌈⌈⌿≢¨p.Values
-     p.TextAlign←⊂'left'
+     p←GetTestData ⍵
      d←A.NewDocument''
      d.Caption←'Test Horizontal Scrolling'
      b←A.GetBody d

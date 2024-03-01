@@ -1,0 +1,10 @@
+ StartInCellMode←{
+     ⍝ ⍺ ←→ Starting text
+     ⍝ ⍵ ←→ <td> element
+     t←⍵.CurrentTarget
+     m←t.CellMode
+     t.CellMode←2
+     m=1:0
+     i←CreateInputField ⍵
+     0
+ }

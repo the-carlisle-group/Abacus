@@ -10,10 +10,10 @@
 
      p.ColumnTitles←p.SortOrder GetColTitles¨p.Names
 
-
      t←⍺ A.New'table'
      t.TableData←p
      t.class←'data-grid'
+     t.ReadOnly←p.ReadOnly
      t.Width←0⊃1488 2544   ⍝ My laptop, big mon
                                  ⍝ Width in pixels of entire table. Dynamic, will change when viewport/parent is resized
      t.Widths←p.Widths                         ⍝ Column widths in pixels. This is fixed
@@ -26,12 +26,9 @@
      t.DataCell←t.WindowIndex+t.WindowCell
      t.DataSize←⍴p.Values
 
-     t.WindowSize←15,(1⊃t.DataCell)⊃t.ColumnsPerIndex    ⍝ This is dynamcic
+     t.WindowSize←13,(1⊃t.DataCell)⊃t.ColumnsPerIndex    ⍝ This is dynamcic
 
 
-     t.RepeatTotal←0
-     t.RepeatMarginal←0
-     t.RepeatThrottle←0
 
 
      t.tabindex←0
@@ -40,7 +37,7 @@
      t.AutoCompleteActive←0
      t.Changed←0
 
-
+     t.HeaderStyles←ComputeHeaderStyles p
      t.ColumnStyles←ComputeColumnStyles p
 
      t.Onclick←A.FQP'OnClick'

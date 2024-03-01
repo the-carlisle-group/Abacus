@@ -15,7 +15,6 @@
      ⍝ te ce←(Elements d)[j k]
      ⍝ c.CurrentTargetTag≢1 ⎕C ce.Tag:0⊣⎕←'DOM not synced - wrong element selected - event aborted !!!!!'
      ⍝ c.ElementCount≢≢Elements d:⎕←'DOM not synced - element count mismatch - event aborted !!!!!'
-     0::0⊣⎕←'error!'
      c.Target←d{⍵≡'':0 ⋄ ⍺ ElementById ⍵}c.TargetId
      c.CurrentTarget←d ElementById c.CurrentTargetId
      ⍝ _←DisplayEventMessage c

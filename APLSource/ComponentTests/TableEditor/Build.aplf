@@ -1,8 +1,10 @@
  Build←{
      ⎕THIS.A←#.Abacus.Main
      p←⎕NS''
-     p.ColumnNames←'Name' 'Address' 'City' 'State'
-     p.Data←100 4⍴⊂''
+     p.Names←'Name' 'Address' 'City' 'State'
+     p.Values←100 4⍴⊂''
+     p.Types←4⍴⊂'Char'
+     p.Formats←4⍴⊂''
      p.AutoCompleteItems←⍬ ⍬ ⍬ ⍬
      d←A.NewDocument''
      d.Caption←'Test Table Editor'

@@ -13,7 +13,6 @@
      r←s Rule'th'
      r.padding←'1rem .75rem'
      r.border←Border
-     r.text_align←'left'
      r.font_family←'Arial'
      r.font_size←'1.1rem'
      r.font_weight←'normal'
@@ -38,7 +37,19 @@
 
      r←s Rule'.window-cell'
      r.background_color←'orange'
+     r.position←'relative'
 
+     r←s Rule'.in-cell'
+     r.padding←0
+
+     r←s Rule'input'
+     r.box_sizing←'border-box'
+     r.padding←CellPadding
+     r.font_family←'APL385 Unicode'
+     r.font_size←'1.25rem'
+     r.border←'none'
+     r.position←'absolute'
+     r.width←'100%'
 
      ##.UnNestCSS s
  }

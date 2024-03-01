@@ -1,4 +1,4 @@
- ComputeColumnStyles←{
+ ComputeHeaderStyles←{
      w←(⍕¨⍵.Widths),¨⊂'px'
      s←'width:'∘,¨w
      s←s,¨';max-width:'∘,¨w

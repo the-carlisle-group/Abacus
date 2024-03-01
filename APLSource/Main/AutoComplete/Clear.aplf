@@ -1,10 +1,7 @@
  Clear←{
      _←⍵ ##.SetInnerHTML''
-     0
-     ⍝ NEED ANTOHER WAY TO DO THIS! ⍵.InputElement not available@
-     ⍝ AutoComplete element does not know input element
-     ⍝ Just pass as left arg
-     t←⍵.InputElement A.GetNearest'table'
+     i←⍵.InputElement
+     t←i A.GetNearest'table'
      t=0:0
      t.AutoCompleteActive←0
      0

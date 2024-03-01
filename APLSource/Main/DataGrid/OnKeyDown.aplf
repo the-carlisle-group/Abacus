@@ -1,10 +1,17 @@
  OnKeyDown←{
      t←⍵.CurrentTarget
+     t.AutoCompleteActive:0
+     m←t.CellMode
      k←⍵.Key
      c←⍵.CtrlKey≡⊂'true'
      s←⍵.ShiftKey≡⊂'true'
      a←⍵.AltKey≡⊂'true'
      u←~c∨s∨a
+     u∧k≡'Enter':1 0 Move ⍵
+     s∧k≡'Enter':¯1 0 Move ⍵
+     u∧k≡'Tab':0 1 Move ⍵
+     s∧k≡'Tab':0 ¯1 Move ⍵
+     m=2:0
      k≡'ArrowRight':0 1 Move ⍵
      k≡'ArrowLeft':0 ¯1 Move ⍵
      k≡'ArrowUp':¯1 0 Move ⍵
@@ -14,6 +21,15 @@
      u∧k≡'Home':0 MoveToColumn ⍵
      u∧k≡'End':¯1 MoveToColumn ⍵
      c∧k≡'Home':MoveHome ⍵
-     c∧k≡'End':MoveEnd ⍵               ⍝ ##.TableEditor.OnKeyDown
+     c∧k≡'End':MoveEnd ⍵
+     t.ReadOnly:0
+     k≡'F2':StartInCellMode ⍵
+     m=1:0
+     (1=≢k)∧(⊃k)∊⎕D,(⊣,⎕C)⎕A:k StartEditMode ⍵
+     c∧s∧k≡'Insert':t InsertRow 0
+     k≡'F9':t InsertRow 0
+     c∧s∧k≡'Delete':t DeleteRow 0
+     c∧s∧k≡'ArrowUp':t MoveRowUp 0
+     c∧s∧k≡'ArrowDown':t MoveRowDown 0
      0
  }

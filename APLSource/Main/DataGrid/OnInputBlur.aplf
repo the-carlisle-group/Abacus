@@ -1,4 +1,5 @@
  OnInputBlur←{
+     ⎕←'OnInputBlur...'
      i←⍵.CurrentTarget
      i.value≡'InvalidData':GoBackToCell i
      t←i A.GetNearest'table'

@@ -14,15 +14,12 @@
      t←A.NewTable v n
 
      h←,A.HeaderCells t
-     ⍝ h.class←'col'∘,¨⍵.TextAlign
+     h.style←⍺.HeaderStyles[j]
      h.id←(A.GetNextId 0)∘,¨'-',¨⍕¨⍳≢h
-     ⍝ h[0].class,←' curheader'
-
-
 
      c←A.BodyCells t
      c.style←(⍴c)⍴⍺.ColumnStyles[j]
-     ⍝ c.tabindex←'0'
+     ⍝ c.tabindex←'0' ⍝ Need this maybe?
      c.id←(⍴c)⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/⍴c
      cc←⍺.WindowCell⌷c
      cc.class←'window-cell'

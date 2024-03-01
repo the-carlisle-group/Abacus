@@ -2,5 +2,14 @@
      r c←⍵
      t←#.FlipDBDesktop.Main.TabEx.GetTestTable2''
      dt←t.ToDataTable 0
-     dt.∆FormattedValuesAsMatrix[r⍴⍳10000;c⍴⍳44]
+     n←dt._Columns.Name
+     p←⎕NS''
+     p.Values←dt.∆FormattedValuesAsMatrix[r⍴⍳10000;c⍴⍳44]
+     p.Names←'Column'∘,¨⍕¨⍳1⊃⍴p.Values
+     p.SortOrder←⊂''
+     p.TextAlign←'right' 'left'[c⍴dt._Columns.Character]
+     j←n⍳'City' 'State' 'PropertyType'
+     p.AutoCompleteItems←c⍴⍬
+     p.AutoCompleteItems[j]←∪¨↓⍉p.Values[;j]
+     p
  }
