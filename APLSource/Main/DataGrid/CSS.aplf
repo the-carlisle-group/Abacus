@@ -51,5 +51,10 @@
      r.position←'absolute'
      r.width←'100%'
 
+     r←s Rule'.r'            ⍝ Don't even need left!
+     r.text_align←'right'     ⍝ For numerics
+
+
+
      ##.UnNestCSS s
  }

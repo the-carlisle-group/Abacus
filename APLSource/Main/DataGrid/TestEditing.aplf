@@ -14,5 +14,8 @@
      t←m New p
      ⍝ d.Style←CSS #.Abacus.Themes.Dark 0
      d.Style←A.ComponentStyles #.Abacus.Themes.Dark 0
-     A.NewForm d
+     _←A.NewForm d
+
+     _←d A.ExecuteJavaScript'window.addEventListener("resize",sendAPLRequest(event));'
+     0
  }

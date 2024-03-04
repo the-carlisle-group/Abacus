@@ -9,7 +9,7 @@
      lc←t.WindowCell⌷c
      nc←e
      _←lc A.RemoveClass'window-cell'
-     _←nc A.SetClass'window-cell'
+     _←nc A.AddClass'window-cell'
      t.DataCell←i+t.WindowIndex
      t.WindowCell←i
      0

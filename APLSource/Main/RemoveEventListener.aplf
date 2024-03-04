@@ -1,0 +1,5 @@
+ RemoveEventListener←{
+    ⍝ ⍺ ←→ Element
+    ⍝ ⍵ ←→ Event 'Onblur', etc.
+     ⍺ ExecuteOnElement'removeEventListener("',⍵,'")'
+ }

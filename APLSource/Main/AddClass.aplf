@@ -2,7 +2,8 @@
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ DOM content
      _←⍺ ExecuteOnElement'classList.add("',⍵,'")'
-     c←{⍵⊆⍨' '≠⍵}⍺.class
+     0=⍺.⎕NC'class':0⊣⍺.class←⍵
+     c←{⍵⊆⍨' '≠⍵},⍺.class
      ⍺.class←1↓∊' ',¨c,⊂⍵
      0
  }

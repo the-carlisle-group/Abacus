@@ -1,6 +1,6 @@
  Move←{
-     ⎕←'Move'
      t←⍵.CurrentTarget
+     HandleInput t:0
      i←⍺+t.DataCell
      ∨/(i<0)∨i=t.DataSize:0
      t.DataCell←i
@@ -13,7 +13,7 @@
      lc←l⌷bc
      nc←t.WindowCell⌷bc
      _←lc A.RemoveClass'window-cell'
-     _←nc A.SetClass'window-cell'
+     _←nc A.AddClass'window-cell'
      _←t A.FireEvent'focus'
      0
  }

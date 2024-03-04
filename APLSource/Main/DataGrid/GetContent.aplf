@@ -18,10 +18,14 @@
      h.id←(A.GetNextId 0)∘,¨'-',¨⍕¨⍳≢h
 
      c←A.BodyCells t
-     c.style←(⍴c)⍴⍺.ColumnStyles[j]
+     k←⍸d.TextAlign[j]∊⊂'right'     ⍝ Precompute this
+     c.class←⊂''
+     c[;k].class←'r'
+
+     ⍝ c.style←(⍴c)⍴⍺.ColumnStyles[j]
      ⍝ c.tabindex←'0' ⍝ Need this maybe?
      c.id←(⍴c)⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/⍴c
      cc←⍺.WindowCell⌷c
-     cc.class←'window-cell'
+     cc.class,←' window-cell'
      t.Content
  }
