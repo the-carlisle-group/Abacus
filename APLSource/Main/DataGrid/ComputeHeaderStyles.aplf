@@ -2,7 +2,6 @@
      w←(⍕¨⍵.Widths),¨⊂'px'
      s←'width:'∘,¨w
      s←s,¨';max-width:'∘,¨w
-     ⍝ s←'max-width:'∘,¨w
      s←s,¨';min-width:'∘,¨w
      s←s,¨';text-align:'∘,¨⍵.TextAlign
      s

@@ -16,27 +16,17 @@
      d←A.New'div'
      d.class←'input-cell'
      i←d A.New'input'
+     i.OnEnter←''
      i.value←⍺
      i.OriginalValue←v
      i.Oninput←A.FQP'OnInput'
      i.Onblur←A.FQP'OnInputBlur'
-
-     ⍝ _←t.Document A.AutoComplete.Init i ai
      ai←⎕NS''
      ai.AutoCompleteItems←(1⊃t.DataCell)⊃t.TableData.AutoCompleteItems
      i.Document←⍵.Document
      _←i ##.AutoComplete.Init ai
-
-    ⍝ c←A.New'div'(⊃td.Content)
-⍝     c.class←'input-temp'
-     ⍝ td.Content←d
-     ⍝
-
-     ⍝ _←td A.SetOuterHTML td
-
      _←td A.SetInnerHTML d
      _←td A.SetClass'window-cell in-cell'
-
      n←⍕≢⍺
      _←i A.ExecuteOnElement'setSelectionRange(',n,',',n,')'
      _←i A.FireEvent'focus'

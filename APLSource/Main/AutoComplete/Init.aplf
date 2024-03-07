@@ -7,7 +7,5 @@
      i.TriggerKeys←(⊂'Backspace'),∪' '~⍨∊a
      i.autocomplete←'off'
      i.Onkeydown←A.FQP'OnKeyDown'
-     d←i.Document
-     d.AutoCompleteElement.InputElement←i
      0
  }

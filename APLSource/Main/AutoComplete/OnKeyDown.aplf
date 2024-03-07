@@ -9,24 +9,25 @@
 
 
     ⍝ This is NOT for grids, but maybe OnEnter should be?
-    ⍝ (~a)∧k≡'Enter':OnEnter ⍵
-⍝     (~a)∧k≡'ArrowDown':¯1 History ⍵
-⍝     (~a)∧k≡'ArrowUp':1 History ⍵
+
+     (~a)∧k≡'Enter':OnEnter ⍵
+     (~a)∧k≡'ArrowDown':¯1 History ⍵
+     (~a)∧k≡'ArrowUp':1 History ⍵
 ⍝
 
-     ⍝ ck∧k≡'Enter':(⍎e.OnCtrlEnter)⍵
+     ⍝ ck∧k≡'Enter':(⍎e.OnCtrlEnter)⍵ ⍝ WHERE DID WE USE THIS?
      ⍝ a∧k≡'ArrowRight':SelectItem ⍵   ⍝ Not like VS Code
      a∧k≡'Enter':StopPropagation ⍵⊣1 SelectItem ⍵
      a∧k≡'Tab':StopPropagation ⍵⊣1 SelectItem ⍵
-     a∧k≡'Escape':StopPropagation ⍵⊣1 Clear l
+     a∧k≡'Escape':StopPropagation ⍵⊣1 Clear e
      a∧k≡'ArrowDown':ResetCursor ⍵⊣1 OnArrowUpDown ⍵
      a∧k≡'ArrowUp':ResetCursor ⍵⊣¯1 OnArrowUpDown ⍵
      ~(⊂k)∊,¨e.TriggerKeys:Clear l
      rc st←GetStartText ⍵
-     rc:Clear l
+     rc:Clear e
      i←e.AutoCompleteItems
      b←((≢st)↑¨i)∊⊂st
-     ~∨/b:Clear l
+     ~∨/b:Clear e
      l.(Mask StartText)←b st
      c←##.New¨{'div'⍵}¨b/i ⍝ div or <p> doesnt really matter
      c.class←⊂''

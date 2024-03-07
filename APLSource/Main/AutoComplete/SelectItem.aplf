@@ -8,5 +8,5 @@
      t2←(s↑t),v,s↓t
      _←e ##.SetValue t2
      _←e SetCursor s+≢v
-     Clear l
+     Clear e
  }

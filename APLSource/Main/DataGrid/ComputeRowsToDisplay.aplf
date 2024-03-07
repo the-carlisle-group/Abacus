@@ -2,6 +2,6 @@
      h←⍺                                   ⍝ Available height
      d←GetDimensions 0                     ⍝ Get dimensions
      hh←d.tdFontSize+2×d.thPaddingTop      ⍝ Header height
-     rh←d.thFontSize+2×d.tdPaddingTop                                   ⍝ Row height
-     ⌊rh÷⍨h-hh                             ⍝ Rows to display
+     rh←d.thFontSize+2×d.tdPaddingTop
+     ⌊rh÷⍨h-hh
  }

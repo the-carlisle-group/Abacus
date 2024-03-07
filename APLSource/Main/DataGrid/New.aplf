@@ -7,41 +7,25 @@
      ⎕THIS.A←##
      p.Widths←8⌈⌈⌿≢¨p.Values
      p.Widths←24+p.Widths×12 ⍝ Make px  ⍝ 20+ for padding and borders
-
      p.ColumnTitles←p.SortOrder GetColTitles¨p.Names
-
      t←⍺ A.New'table'
      t.TableData←p
      t.class←'data-grid'
      t.ReadOnly←p.ReadOnly
-
-
-     t.Width←0⊃1488 2544   ⍝ My laptop, big mon
-                                 ⍝ Width in pixels of entire table. Dynamic, will change when viewport/parent is resized
-     t.Widths←p.Widths                         ⍝ Column widths in pixels. This is fixed
-
-
+     t.Width←0⊃1488 2544   ⍝ Maybe make it big , will be overwritten immediately My laptop, big mon
+     t.Widths←p.Widths     ⍝ Column widths in pixels. This is fixed
      t.ColumnsPerIndex←t.Width ComputeColumnsPerIndex t.Widths
      t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
      t.WindowCell←p.WindowCell
      t.WindowIndex←p.WindowIndex
      t.DataCell←t.WindowIndex+t.WindowCell
      t.DataSize←⍴p.Values
-
      t.WindowSize←13,(1⊃t.DataCell)⊃t.ColumnsPerIndex ⍝ DONT THINK RIIGHT, SHOULD LOOK AT WindowIndex   ⍝ This is dynamcic
-
-
-
-
      t.tabindex←0
-
      t.CellMode←0
      t.AutoCompleteActive←0
      t.Changed←0
-
      t.HeaderStyles←ComputeHeaderStyles p
-     t.ColumnStyles←ComputeColumnStyles p
-
      t.Onclick←A.FQP'OnClick'
      t.Onkeydown←A.FQP'OnKeyDown'
      t.Content←t GetContent''

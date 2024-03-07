@@ -1,5 +1,4 @@
  ProcessInput←{
-     ⎕←'ProcessInput'
      i←⍵
      ev←⍵.value   ⍝ Entered Value, char
      ev≡'Crap':1  ⍝ Set focus back on input
