@@ -6,15 +6,9 @@
      ck←⍵.CtrlKey≡⊂'true'
      l←⍵.Document.AutoCompleteElement
      a←0<≢AutoCompleteElements l
-
-
-    ⍝ This is NOT for grids, but maybe OnEnter should be?
-
      (~a)∧k≡'Enter':OnEnter ⍵
      (~a)∧k≡'ArrowDown':¯1 History ⍵
      (~a)∧k≡'ArrowUp':1 History ⍵
-⍝
-
      ⍝ ck∧k≡'Enter':(⍎e.OnCtrlEnter)⍵ ⍝ WHERE DID WE USE THIS?
      ⍝ a∧k≡'ArrowRight':SelectItem ⍵   ⍝ Not like VS Code
      a∧k≡'Enter':StopPropagation ⍵⊣1 SelectItem ⍵
@@ -29,7 +23,7 @@
      b←((≢st)↑¨i)∊⊂st
      ~∨/b:Clear e
      l.(Mask StartText)←b st
-     c←##.New¨{'div'⍵}¨b/i ⍝ div or <p> doesnt really matter
+     c←##.New¨{'div'⍵}¨b/i
      c.class←⊂''
      (0⊃c).class←'active-item'
      _←SetPosition ⍵
