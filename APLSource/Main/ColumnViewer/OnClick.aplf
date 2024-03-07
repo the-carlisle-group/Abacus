@@ -1,7 +1,0 @@
- OnClick←{
-     e←⍵.Target
-     t←⍵.CurrentTarget
-     c←A.Cells t
-     i←1⊃∊⍸e.Parent=A.Cells t
-     t MoveCol i
- }
