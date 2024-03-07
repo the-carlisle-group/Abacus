@@ -1,9 +1,0 @@
- Restore←{
-     t←⍵.CurrentTarget
-     t.CellMode←0
-     td←t.CurCell⌷A.BodyCells t
-     v←⊃(⊃⌽td.Content).Content
-     _←td A.SetInnerHTML v
-     _←td A.RemoveClass'in-cell'
-     A.SetFocus td
- }

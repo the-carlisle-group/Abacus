@@ -1,7 +1,0 @@
- ArrowDown←{
-     t←⍺
-     ri ci←t.CurCell
-     l←ri=¯1+≢A.BodyRows t
-     _←t AddRow l
-     t MoveCell ri ci+1 0
- }
