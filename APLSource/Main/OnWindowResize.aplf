@@ -1,0 +1,8 @@
+ OnWindowResize←{
+     d←⍵.Document
+     n←'ResizeTimer'
+     t←d⍎n⊣n d.⎕WC'timer'
+     t.Interval←100
+     t.onTimer←'OnWindowResizeTimer'⍵
+     0
+ }

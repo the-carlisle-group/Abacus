@@ -1,0 +1,13 @@
+ GetDimensions←{
+     ⍝ All Dimentsions in px, inlcuding line height
+     s←⎕NS''
+     s.thLineHeight←24
+     s.thFontSize←20
+     s.thPaddingTop←12
+     s.thPaddingBottom←6
+     s.tdFontSize←18
+     s.tdBorderWidth←0.5
+     s.tdPaddingTop←6
+     s.tdPaddingLeft←12
+     s
+ }

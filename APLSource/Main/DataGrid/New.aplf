@@ -14,6 +14,8 @@
      t.TableData←p
      t.class←'data-grid'
      t.ReadOnly←p.ReadOnly
+
+
      t.Width←0⊃1488 2544   ⍝ My laptop, big mon
                                  ⍝ Width in pixels of entire table. Dynamic, will change when viewport/parent is resized
      t.Widths←p.Widths                         ⍝ Column widths in pixels. This is fixed
@@ -26,7 +28,7 @@
      t.DataCell←t.WindowIndex+t.WindowCell
      t.DataSize←⍴p.Values
 
-     t.WindowSize←13,(1⊃t.DataCell)⊃t.ColumnsPerIndex    ⍝ This is dynamcic
+     t.WindowSize←13,(1⊃t.DataCell)⊃t.ColumnsPerIndex ⍝ DONT THINK RIIGHT, SHOULD LOOK AT WindowIndex   ⍝ This is dynamcic
 
 
 

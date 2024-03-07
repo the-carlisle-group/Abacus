@@ -1,5 +1,6 @@
  OnWebSocketUpgrade←{
      h←⊃⍵
      h.WebSocketID←2⊃⍵
-     0
+     d←h.Document
+     d ExecuteJavaScript'window.dispatchEvent(new Event("resize"))'
  }

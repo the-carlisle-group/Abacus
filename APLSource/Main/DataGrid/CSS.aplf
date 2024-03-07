@@ -1,5 +1,11 @@
  CSS←{
-     CellPadding←'.5rem .75rem'
+
+
+     d←GetDimensions 0
+     px←{'px',⍨⍕⍵}
+     CellPadding←1↓∊' ',¨px¨d.tdPaddingTop d.tdPaddingLeft
+
+
      Border←'solid .5px gray'
 
      ⍝ ⍵ ←→ Table
@@ -11,10 +17,10 @@
 
      ⍝ th
      r←s Rule'th'
-     r.padding←'1rem .75rem'
+     r.padding←CellPadding
      r.border←Border
      r.font_family←'Arial'
-     r.font_size←'1.1rem'
+     r.font_size←px d.thFontSize
      r.font_weight←'normal'
      ⍝ r.box_sizing←'border-box'
 
@@ -33,7 +39,7 @@
      ⍝ tbody
      r←s Rule'tbody'
      r.font_family←'APL385 Unicode'
-     r.font_size←'1.25rem'
+     r.font_size←px d.tdFontSize
 
      r←s Rule'.window-cell'
      r.background_color←'orange'
@@ -46,7 +52,7 @@
      r.box_sizing←'border-box'
      r.padding←CellPadding
      r.font_family←'APL385 Unicode'
-     r.font_size←'1.25rem'
+     r.font_size←px d.tdFontSize
      r.border←'none'
      r.position←'absolute'
      r.width←'100%'

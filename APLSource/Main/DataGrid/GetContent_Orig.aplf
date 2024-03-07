@@ -1,4 +1,4 @@
- GetContent←{
+ GetContent_Orig←{
      d←⍺.TableData
 
      ⍝ Don't need partial on last row/col obviously
@@ -6,8 +6,6 @@
      ⍝ One more test for if parital needed
 
      p←⍺.DataCell≠⍺.DataSize-1 ⍝ Show partial row/col partial!!
-     p←10 ⍝ Arbitrary extra rows and columns that are off screen
-      ⍝ So you see then if you make make the form larger
      i j←⍺.WindowIndex+⍳¨⍺.WindowSize+p
      i j←i j~¨⍺.DataSize ⍝ Temp kluge. Somehow we miscalulate and can get an extra column because there is in fact no partial
      ⍝ Probly need to pay closer attention to width.

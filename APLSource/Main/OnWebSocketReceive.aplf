@@ -4,12 +4,14 @@
      c←⎕JSON 3⊃⍵
      c.Event≡'SJSR':c.result ⎕TPUT c.id
      d←h.Document
+     c.HTMLRenderer←h    ⍝ May not have this!!!!
+     c.Document←d
+     c.Event≡'resize':OnWindowResize c
      ⍝ d RepeatLimit c:0
      q←d.StopPropagation
      d.StopPropagation←0
      q:0
-     c.HTMLRenderer←h    ⍝ May not have this!!!!
-     c.Document←d
+
      ⍝ j←c.TargetIndex
      ⍝ k←c.CurrentTargetIndex
      ⍝ te ce←(Elements d)[j k]

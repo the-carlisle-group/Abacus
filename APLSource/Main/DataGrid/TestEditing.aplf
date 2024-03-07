@@ -9,13 +9,20 @@
      a←b A.AutoComplete.New''
      d.AutoCompleteElement←a
      b.style←'overflow:clip'
+
+
      m←b A.New'main'
-     m.style←'overflow:clip'
+     m.style←'max-height:100vh;overflow:clip'
+
      t←m New p
+
+
+
+
      ⍝ d.Style←CSS #.Abacus.Themes.Dark 0
      d.Style←A.ComponentStyles #.Abacus.Themes.Dark 0
-     _←A.NewForm d
+     A.NewForm d
 
-     _←d A.ExecuteJavaScript'window.addEventListener("resize",sendAPLRequest(event));'
+     ⍝ _←d A.ExecuteJavaScript'window.addEventListener("resize",sendAPLRequest(event));'
      0
  }
