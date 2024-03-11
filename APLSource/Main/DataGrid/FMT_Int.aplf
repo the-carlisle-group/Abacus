@@ -1,0 +1,3 @@
+ FMT_Int←{
+     ntbs'LCI20'⎕FMT ⍵
+ }

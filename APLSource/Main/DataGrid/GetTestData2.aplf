@@ -1,0 +1,16 @@
+ GetTestData2←{
+     t←#.FlipDBDesktop.Main.TabEx.GetTestTable2''
+     dt←t.ToDataTable 0
+     c←¯1↓dt._Columns
+     n←c.Name
+     p←⎕NS''
+     p.Values←c._Value   ⍝ Inverted
+     p.Types←AbacusTypeFromFlipDBType¨c
+     p.Names←n
+     p.SortOrder←⊂''
+     p.Align←'right' 'left'[(⍴c)⍴c.Character]
+     j←n⍳'City' 'State' 'PropertyType'
+     p.AutoCompleteItems←(⍴c)⍴⍬
+     ⍝ p.AutoCompleteItems[j]←∪¨↓⍉p.Values[;j]
+     p
+ }

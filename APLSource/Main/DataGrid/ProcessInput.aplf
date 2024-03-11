@@ -1,16 +1,19 @@
  ProcessInput←{
      i←⍵
-     ev←⍵.value   ⍝ Entered Value, char
-     ev≡'Crap':1  ⍝ Set focus back on input
-     pv←ev        ⍝ Processed value (char, num, date...)
-     fv←ev        ⍝ Formatted value (char)
      t←i A.GetNearest'table'
-     t.CellMode←0
-     t.Changed←1
-     t.TableData.Values[⊂t.DataCell]←⊂pv  ⍝ For now
+     ev←i.value   ⍝ Entered Value, char
+     vfi←⍎(1⊃t.DataCell)⊃t.VFI
+     ml←(1⊃t.DataCell)⊃t.MaxLength
+     b pv em←ml vfi ev
+     b:1   ⍝ No good, set focus back on input
+     fmt←⍎(1⊃t.DataCell)⊃t.FMT
+     fv←⊃fmt pv
+     _←t SetValue pv
      e←i A.GetNearest'td'
      _←i A.RemoveAttribute'onblur'
      _←e A.SetInnerHTML fv
      _←e A.RemoveClass'in-cell'
+     t.CellMode←0
+     t.Changed←1
      0
  }

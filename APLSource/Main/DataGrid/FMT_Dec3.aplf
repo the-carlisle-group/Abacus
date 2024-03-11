@@ -1,0 +1,3 @@
+ FMT_Dec3←{
+     ntbs'LK¯3F20.3'⎕FMT ⍵
+ }

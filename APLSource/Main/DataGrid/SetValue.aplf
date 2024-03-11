@@ -1,0 +1,13 @@
+ SetValue←{
+     ⍝ For inverted table
+
+
+     ⍝ t.TableData.Values[⊂t.DataCell]←⊂pv  ⍝ For reg mat
+
+     t v←⍺ ⍵
+     i j←t.DataCell
+     c←j⊃t.TableData.Values
+     _←{2=⍴⍴c:c[i;]←(1⊃⍴c)↑v ⋄ c[i]←v}0
+     t.TableData.Values[j]←⊂c
+     0
+ }

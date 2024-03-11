@@ -1,0 +1,8 @@
+ GetFormattedValues←{
+     t←⍵
+     d←t.TableData
+
+
+     d.Values
+
+ }

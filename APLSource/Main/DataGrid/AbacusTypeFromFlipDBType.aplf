@@ -1,0 +1,6 @@
+ AbacusTypeFromFlipDBType←{
+     ⍵.Character:'Char'
+     ⍵.Type≡'Date':'Date'
+     'Int'≡3↑⍵.Type:'Int'
+     'Dec'≡3↑⍵.Type:⍵.Type~'()'
+ }

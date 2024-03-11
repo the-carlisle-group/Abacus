@@ -6,13 +6,17 @@
      t.ColumnsPerIndex←t.Width ComputeColumnsPerIndex t.Widths
      t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
      t.RowsToDisplay←t.Height ComputeRowsToDisplay 0
-⍝     ⎕←'Height: ',⍕⍵.Height
-⍝     ⎕←'Width: ',⍕⍵.Width
-⍝     ⎕←'ParentHeight: ',⍕⍵.ParentHeight
-⍝     ⎕←'ParentWidth: ',⍕⍵.ParentWidth
-⍝     ⎕←'Widths:',⍕t.Widths
-⍝     ⎕←'ColumsPerIndex: ',⍕t.ColumnsPerIndex
-⍝     ⎕←'Rows to Display: ',⍕t.RowsToDisplay
+     ⎕←'Height: ',⍕⍵.Height
+     ⎕←'Width: ',⍕⍵.Width
+     ⎕←'ParentHeight: ',⍕⍵.ParentHeight
+     ⎕←'ParentWidth: ',⍕⍵.ParentWidth
+     ⎕←'ParentOffsetHeight: ',⍕⍵.ParentOffsetHeight
+     ⎕←'ParentOffsetWidth: ',⍕⍵.ParentOffsetWidth
+
+     ⎕←'BoundingClientRect: ',⍕⍵.BoundingClientRect
+     ⎕←'Widths:',⍕t.Widths
+     ⎕←'ColumsPerIndex: ',⍕t.ColumnsPerIndex
+     ⎕←'Rows to Display: ',⍕t.RowsToDisplay
      t.WindowSize←t.RowsToDisplay,(1⊃t.WindowIndex)⊃t.ColumnsPerIndex
      t.WindowCell←t.WindowCell⌊t.WindowSize-1
      t.DataCell←t.WindowIndex+t.WindowCell

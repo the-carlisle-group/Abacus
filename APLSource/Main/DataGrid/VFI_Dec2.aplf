@@ -1,0 +1,6 @@
+ VFI_Dec2←{
+     b v←⎕VFI ⍵
+     n←⌊v×10*2
+     (b≡,1)∧323≥⎕DR v:0 n''
+     1 0 'Invalid entry'
+ }
