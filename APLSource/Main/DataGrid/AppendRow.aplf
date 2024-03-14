@@ -1,0 +1,11 @@
+ AppendRow←{
+     t←⍵
+     ~⍵.Write∧⍵.InsertRows:0
+     i j←t.DataCell
+     n m←t.DataSize
+     e←0,⍨n⍴1
+     t.Values←e∘⍀¨t.Values
+     t.DataSize+←1 0
+     _←Refresh t
+     1 0 Move t
+ }

@@ -2,6 +2,7 @@
      t←⍵
      HandleInput t:0
      i←⍺+t.DataCell
+     (⊃i)=⊃t.DataSize:AppendRow t
      ∨/(i<0)∨i=t.DataSize:0
      t.DataCell←i
      j←⍺+t.WindowCell
