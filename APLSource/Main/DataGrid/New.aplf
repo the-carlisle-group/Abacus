@@ -1,53 +1,26 @@
  New←{
-     ⍝ ⍺ ←→ Parent
-     ⍝ ⍵ ←→ Table Space
-     ⍝   ←→
-     ⍺←⊣
-     p←DefaultProperties ⍵
      ⎕THIS.A←##
+     ⍺←⊣
+     r c←10 3
      t←⍺ A.New'table'
+     t.Write←0
+     t.InsertRows←0
+     t.MoveRows←0
+     t.WindowIndex←0 0
+     t.WindowCell←0 0
+     t.Values←r c⍴⊂''
+     t.Names←'Column'∘,¨c↑⎕A
+     t.Types←'Char'
+     t.Align←c⍴⊂'left'
+     t.SortOrder←c⍴⊂''
+     t.AutoCompleteItems←c⍴⊂''
      t.class←'data-grid'
-     ⍝ All should be set right into t after New
-     ⍝ Then we need an init function to init things....
-     ⍝ which could be run automatically,...
-
-     t.Values←p.Values
-     t.Names←p.Names
-     t.Types←p.Types
-     t.Align←p.Align
-     t.SortOrder←p.SortOrder
-     t.Write←p.Write
-     t.InsertRows←p.InsertRows
-     t.MoveRows←p.MoveRows
-     t.AutoCompleteItems←p.AutoCompleteItems
-     t.WindowCell←p.WindowCell
-     t.WindowIndex←p.WindowIndex
-
-
-
-     ⍝ This is the init part....
-     ⍝ p.Widths←8⌈⌈⌿≢¨p.Values    ⍝ For reg mat
-     t.Widths←8⌈1⊃¨2↑¨⍴¨t.Values  ⍝ For inverted
-     t.Widths←24+t.Widths×12      ⍝ Make px  ⍝ 20+ for padding and borders
-     t.ColumnTitles←t.SortOrder GetColTitles¨t.Names
-     t.FMT←'FMT_'∘,¨t.Types
-     t.VFI←'VFI_'∘,¨t.Types
-     t.MaxLength←1⊃¨2↑¨⍴¨t.Values
-     t.Width←0⊃1488 2544   ⍝ Maybe make it big , will be overwritten immediately My laptop, big mon
-
-     t.ColumnsPerIndex←t.Width ComputeColumnsPerIndex t.Widths
-     t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
-     t.DataCell←t.WindowIndex+t.WindowCell
-     ⍝ t.DataSize←⍴p.Values ⍝ For reg mat
-     t.DataSize←(≢0⊃t.Values),≢t.Values  ⍝ For inverted
-     t.WindowSize←13,(1⊃t.DataCell)⊃t.ColumnsPerIndex ⍝ DONT THINK RIIGHT, SHOULD LOOK AT WindowIndex   ⍝ This is dynamcic
      t.tabindex←0
      t.CellMode←0   ⍝ 0←→ReadyMode, 1←→EnterMode, 2←→EditMode
      t.AutoCompleteActive←0
      t.Changed←0
-     t.HeaderStyles←ComputeHeaderStyles t
      t.Onclick←A.FQP'OnClick'
      t.Onkeydown←A.FQP'OnKeyDown'
-     t.Content←t GetContent''
+     t.Init←0
      t
  }

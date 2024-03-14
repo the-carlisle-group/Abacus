@@ -1,9 +1,0 @@
- DefaultProperties←{
-     d←⎕NS''
-     d.Write←0
-     d.InsertRows←0
-     d.MoveRows←0
-     d.WindowIndex←0 0
-     d.WindowCell←0 0
-     d⊣'d'⎕NS ⍵
- }

@@ -2,9 +2,6 @@
      ⍝
      ⎕THIS.A←##
      p←GetTestData3 0
-     p.Write←1
-     p.InsertRows←1
-     p.MoveRows←1
      d←A.NewDocument''
      d.Caption←'Test Editing'
      b←A.GetBody d
@@ -12,8 +9,18 @@
      d.AutoCompleteElement←a
      b.style←'margin:0'
      m←b A.New'main'
-     m.style←'max-height:100vh;overflow:clip'
-     t←m New p
+     m.style←'max-height:100vh;min-height:100vh;overflow:clip'
+     t←m New''
+     t.Write←1
+     t.InsertRows←1
+     t.MoveRows←1
+     t.Values←p.Values
+     t.Names←p.Names
+     t.Types←p.Types
+     t.AutoCompleteItems←p.AutoCompleteItems
+     t.Align←p.Align
+     t.SortOrder←p.SortOrder
+     _←t Init 0  ⍝ Automate this!
      ⍝ d.Style←CSS #.Abacus.Themes.Dark 0
      d.Style←A.ComponentStyles #.Abacus.Themes.Dark 0
      A.NewForm d

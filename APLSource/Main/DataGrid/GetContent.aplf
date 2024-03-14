@@ -1,11 +1,9 @@
  GetContent←{
      p←10⌊⍺.DataSize-⍺.WindowIndex+⍺.WindowSize
      i j←⍺.WindowIndex+⍳¨⍺.WindowSize+p
-
      ⍝ v←i j⌷d.Values  ⍝ For reg mat
-     v←i∘{2=⍴⍴⍵:⍵[⍺;] ⋄ ⍵[⍺]}¨⍺.Values[j]
+     v←(⊂⊂i)⌷¨⍺.Values[j]
      v←⍉↑⍺.FMT[j]{(⍎⍺)⍵}¨v
-
      n←⍺.ColumnTitles[j]
      t←A.NewTable v n
      h←,A.HeaderCells t
