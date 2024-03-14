@@ -1,0 +1,11 @@
+ ComponentList←{
+     l←⊂'AutoComplete'
+     l,←⊂'ConfirmationBox'
+     l,←⊂'DataGrid'
+     l,←⊂'DialogBox'
+     l,←⊂'ExtendedInput'
+     l,←⊂'MenuRibbon'
+     l,←⊂'TextEdit'
+     l,←⊂'ToggleGroup'
+     l
+ }
