@@ -2,7 +2,7 @@
      ⍝ ⍺←Direction
      ⍺≡0 ¯1:MoveWindowLeft ⍵
      ⍺≡0 1:MoveWindowRight ⍵
-     t←⍵.CurrentTarget
+     t←⍵
      t.WindowIndex+←⍺      ⍝ Up or Down
      Refresh t
  }

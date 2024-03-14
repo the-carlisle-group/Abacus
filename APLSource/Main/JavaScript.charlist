@@ -32,21 +32,13 @@ function sendAPLResize(e){
        const dg = Array.from (document.getElementsByClassName ('data-grid'));
 
             dg.forEach ((x)=>{
-             const r = x.parentElement.getBoundingClientRect();  
-             b.DataGrids.push ({
+            b.DataGrids.push ({
                Id:x.id,
-               Height:x.clientHeight, 
-               Width:x.clientWidth,
-               ParentHeight: x.parentElement.clientHeight,
-               ParentWidth: x.parentElement.clientWidth,
-               
-               ParentOffsetHeight: x.parentElement.offsetHeight,
-               ParentOffsetWidth: x.parentElement.offsetWidth,
-               
-               
-               BoundingClientRect: [r.top,r.left,r.bottom,r.right,r.height,r.width]
-               
-                })
+               Height:x.parentElement.clientHeight, 
+               Width:x.parentElement.clientWidth,
+               OffsetHeight: x.offsetHeight,
+               OffsetWidth: x.offsetWidth,                  
+              })
             })
 
       const m = JSON.stringify(b); 

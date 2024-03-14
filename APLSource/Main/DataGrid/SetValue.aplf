@@ -6,8 +6,8 @@
 
      t v←⍺ ⍵
      i j←t.DataCell
-     c←j⊃t.TableData.Values
+     c←j⊃t.Values
      _←{2=⍴⍴c:c[i;]←(1⊃⍴c)↑v ⋄ c[i]←v}0
-     t.TableData.Values[j]←⊂c
+     t.Values[j]←⊂c
      0
  }

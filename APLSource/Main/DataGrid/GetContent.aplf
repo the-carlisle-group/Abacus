@@ -1,21 +1,18 @@
  GetContent←{
-     d←⍺.TableData
      p←10⌊⍺.DataSize-⍺.WindowIndex+⍺.WindowSize
      i j←⍺.WindowIndex+⍳¨⍺.WindowSize+p
 
-
-
      ⍝ v←i j⌷d.Values  ⍝ For reg mat
-     v←i∘{2=⍴⍴⍵:⍵[⍺;] ⋄ ⍵[⍺]}¨d.Values[j]
+     v←i∘{2=⍴⍴⍵:⍵[⍺;] ⋄ ⍵[⍺]}¨⍺.Values[j]
      v←⍉↑⍺.FMT[j]{(⍎⍺)⍵}¨v
 
-     n←d.ColumnTitles[j]
+     n←⍺.ColumnTitles[j]
      t←A.NewTable v n
      h←,A.HeaderCells t
      h.style←⍺.HeaderStyles[j]
      h.id←(A.GetNextId 0)∘,¨'-',¨⍕¨⍳≢h
      c←A.BodyCells t
-     k←⍸d.Align[j]∊⊂'right'
+     k←⍸⍺.Align[j]∊⊂'right'
      c.class←⊂''
      _←{0=≢k:0 ⋄ c[;k].class←'r' ⋄ 0}0
      c.id←(⍴c)⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/⍴c

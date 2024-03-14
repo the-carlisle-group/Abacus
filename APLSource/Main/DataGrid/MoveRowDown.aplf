@@ -1,13 +1,12 @@
  MoveRowDown←{
-     ri ci←⍺.CurCell
-     tr←A.BodyRows ⍺
-     ri=¯1+≢tr:0
-     r1 r2←(A.BodyRows ⍺)[ri,ri+1]
-     c←r1.Content
-     _←r1 A.SetInnerHTML r2.Content
-     _←r2 A.SetInnerHTML c
-     ⍺.CurCell+←1 0
-     _←A.ScrollIntoView ci⊃c
-     (ci⊃c)A.FireEvent'focus'
-     0
+     t←⍺
+     ~t.MoveRows:0
+     i←⊃⍺.DataCell
+     i=¯1+⊃⍺.DataSize:0
+     k←i,i+1
+     j←⍳⊃⍺.DataSize
+     j[k]←⌽k
+     t.Values←(⊂⊂j)⌷¨t.Values
+     _←Refresh t
+     1 0 Move t
  }

@@ -9,7 +9,7 @@
      ⍝    If this is not done, and the widest content cell is being edited
      ⍝    the column will resize to the next widest content cell.
      ⍝ 4. Set the outerHMTL of <td> so class is changed too.
-     t←⍵.CurrentTarget
+     t←⍵
      ⍝v←⊃t.DataCell⌷t.TableData.Values
      td←t.WindowCell⌷A.BodyCells t
      v←⊃td.Content
@@ -23,7 +23,7 @@
      i.Oninput←A.FQP'OnInput'
      i.Onblur←A.FQP'OnInputBlur'
      ai←⎕NS''
-     ai.AutoCompleteItems←(1⊃t.DataCell)⊃t.TableData.AutoCompleteItems
+     ai.AutoCompleteItems←(1⊃t.DataCell)⊃t.AutoCompleteItems
      i.Document←⍵.Document
      _←i ##.AutoComplete.Init ai
      _←td A.SetInnerHTML d

@@ -1,8 +1,10 @@
- TestEditing2←{
+ TestEditing3←{
      ⍝
      ⎕THIS.A←##
-     p←GetTestData2 0
-     p.ReadOnly←0
+     p←GetTestData3 0
+     p.Write←1
+     p.InsertRows←1
+     p.MoveRows←1
      d←A.NewDocument''
      d.Caption←'Test Editing'
      b←A.GetBody d

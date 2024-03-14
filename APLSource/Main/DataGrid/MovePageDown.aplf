@@ -1,5 +1,5 @@
  MovePageDown←{
-     t←⍵.CurrentTarget
+     t←⍵
      HandleInput t:0
      m←0⊃t.DataSize-t.WindowSize
      m≤0⊃t.WindowIndex:0

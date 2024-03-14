@@ -7,25 +7,25 @@
      s←⍵.ShiftKey≡⊂'true'
      a←⍵.AltKey≡⊂'true'
      u←~c∨s∨a
-     u∧k≡'Enter':1 0 Move ⍵
-     s∧k≡'Enter':¯1 0 Move ⍵
-     u∧k≡'Tab':0 1 Move ⍵
-     s∧k≡'Tab':0 ¯1 Move ⍵
+     u∧k≡'Enter':1 0 Move t
+     s∧k≡'Enter':¯1 0 Move t
+     u∧k≡'Tab':0 1 Move t
+     s∧k≡'Tab':0 ¯1 Move t
      m=2:0
-     k≡'ArrowRight':0 1 Move ⍵
-     k≡'ArrowLeft':0 ¯1 Move ⍵
-     k≡'ArrowUp':¯1 0 Move ⍵
-     k≡'ArrowDown':1 0 Move ⍵
-     k≡'PageUp':MovePageUp ⍵
-     k≡'PageDown':1 MovePageDown ⍵
-     u∧k≡'Home':0 MoveToColumn ⍵
-     u∧k≡'End':¯1 MoveToColumn ⍵
-     c∧k≡'Home':MoveHome ⍵
-     c∧k≡'End':MoveEnd ⍵
-     t.ReadOnly:0
-     k≡'F2':StartInCellMode ⍵
+     u∧k≡'ArrowRight':0 1 Move t
+     u∧k≡'ArrowLeft':0 ¯1 Move t
+     u∧k≡'ArrowUp':¯1 0 Move t
+     u∧k≡'ArrowDown':1 0 Move t
+     u∧k≡'PageUp':MovePageUp t
+     u∧k≡'PageDown':1 MovePageDown t
+     u∧k≡'Home':0 MoveToColumn t
+     u∧k≡'End':¯1 MoveToColumn t
+     c∧k≡'Home':MoveHome t
+     c∧k≡'End':MoveEnd t
+     ~t.Write:0
+     k≡'F2':StartEditMode t
      m=1:0
-     (1=≢k)∧(⊃k)∊⎕D,(⊣,⎕C)⎕A:k StartEditMode ⍵
+     (1=≢k)∧(⊃k)∊⎕D,(⊣,⎕C)⎕A:k StartEnterMode t
      c∧s∧k≡'Insert':t InsertRow 0
      k≡'F9':t InsertRow 0
      c∧s∧k≡'Delete':t DeleteRow 0

@@ -1,20 +1,13 @@
  CSS←{
-
-
+     Rule←##.NewRule
      d←GetDimensions 0
      px←{'px',⍨⍕⍵}
      CellPadding←1↓∊' ',¨px¨d.tdPaddingTop d.tdPaddingLeft
-
-
      Border←'solid .5px gray'
-
-     ⍝ ⍵ ←→ Table
-     Rule←##.NewRule
+     ⍝ Table
      s←Rule'.data-grid'
      s.border_collapse←'collapse'
-     ⍝s.box_sizing←'border-box'
      s.table_layout←'fixed'
-
      ⍝ th
      r←s Rule'th'
      r.padding←CellPadding
@@ -22,12 +15,6 @@
      r.font_family←'Arial'
      r.font_size←px d.thFontSize
      r.font_weight←'normal'
-     ⍝ r.box_sizing←'border-box'
-
-
-     ⍝ r←s Rule'tr'
-     ⍝ r.height←'2.25rem'            ⍝ 1.25+.5+.5
-
      ⍝ td
      r←s Rule'td'
      r.white_space←'nowrap'
@@ -35,16 +22,16 @@
      r.padding←CellPadding
      r.border←Border
      r.box_sizing←'border-box'
-
      ⍝ tbody
      r←s Rule'tbody'
      r.font_family←'APL385 Unicode'
      r.font_size←px d.tdFontSize
-
+     ⍝ Window-cell
      r←s Rule'.window-cell'
      r.background_color←'orange'
      r.position←'relative'
 
+     ⍝ in-cell
      r←s Rule'.in-cell'
      r.padding←0
 
@@ -57,10 +44,8 @@
      r.position←'absolute'
      r.width←'100%'
 
-     r←s Rule'.r'            ⍝ Don't even need left!
-     r.text_align←'right'     ⍝ For numerics
-
-
+     r←s Rule'.r'
+     r.text_align←'right'
 
      ##.UnNestCSS s
  }

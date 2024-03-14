@@ -1,16 +1,10 @@
  DeleteRow←{
-     ⍝ ⍺ ←→ Table
-     ri ci←⍺.CurCell
-     r←A.BodyRows ⍺
-     m←10=≢r
-     l←ri=¯1+≢r
-     d←l⊃1 ¯1
-     nr←(ri+d)⊃r
-     ⍺.CurCell←(ri-l),0
-     nc←ci⊃nr.Content
-     _←A.DeleteElement ri⊃r
-     _←nc A.SetClass'curcell'
-     _←A.ScrollIntoView nc
-     _←⍺ AddRow m
-     nc A.FireEvent'focus'
+     t←⍺
+     ~t.InsertRows:0
+     i j←t.DataCell
+     n m←t.DataSize
+     b←(0@i)n⍴1
+     t.Values←b∘⌿¨t.Values
+     t.DataSize-←1 0
+     Refresh t
  }

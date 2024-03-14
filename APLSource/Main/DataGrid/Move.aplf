@@ -1,12 +1,12 @@
  Move←{
-     t←⍵.CurrentTarget
+     t←⍵
      HandleInput t:0
      i←⍺+t.DataCell
      ∨/(i<0)∨i=t.DataSize:0
      t.DataCell←i
      j←⍺+t.WindowCell
      s←∨/(j<0)∨j≥t.WindowSize
-     s:⍺ MoveWindow ⍵
+     s:⍺ MoveWindow t
      l←t.WindowCell
      t.WindowCell+←⍺
      bc←A.BodyCells t

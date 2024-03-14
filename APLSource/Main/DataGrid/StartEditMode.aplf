@@ -1,8 +1,10 @@
  StartEditMode←{
      ⍝ ⍺ ←→ Starting text
      ⍝ ⍵ ←→ <td> element
-     t←⍵.CurrentTarget
-     t.CellMode←1
-     i←''CreateInputField ⍵
-     i A.FireKeyDownOnInput ⍺
+     t←⍵
+     m←t.CellMode
+     t.CellMode←2
+     m=1:0
+     i←CreateInputField ⍵
+     0
  }
