@@ -2,7 +2,7 @@
      t←⍵
      t.CellMode=0:0
      c←A.BodyCells t
-     td←t.WindowCell⌷c
+     td←t.TableCell⌷c
      i←⊃td.Content.Content ⍝ Use an id here, or have globablly available.
      ProcessInput i  ⍝
  }

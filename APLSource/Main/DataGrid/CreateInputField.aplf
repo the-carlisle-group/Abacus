@@ -11,7 +11,7 @@
      ⍝ 4. Set the outerHMTL of <td> so class is changed too.
      t←⍵
      ⍝v←⊃t.DataCell⌷t.TableData.Values
-     td←t.WindowCell⌷A.BodyCells t
+     td←t.TableCell⌷A.BodyCells t
      v←⊃td.Content
      ⍺←v
      d←A.New'div'
