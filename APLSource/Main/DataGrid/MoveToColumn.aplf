@@ -4,6 +4,7 @@
      c←1⊃t.DataCell               ⍝ Current column
      n=c:0
      t.DataCell[1]←n
+     n∊⍳t.FreezeColumns:n MoveToColumnInFreezePane ⍵
      o←n∊(1⊃t.WindowIndex)+⍳1⊃t.WindowSize
      o:n MoveToColumnInWindow ⍵
      n<c:n MoveToColumnLeft ⍵

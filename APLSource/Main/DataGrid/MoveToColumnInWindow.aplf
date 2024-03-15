@@ -1,11 +1,11 @@
  MoveToColumnInWindow←{
-     t←⍵.CurrentTarget
-     l←t.WindowCell
+     t←⍵
      t.WindowCell[1]←⍺-1⊃t.WindowIndex
      bc←A.BodyCells t
-     lc←l⌷bc
-     nc←t.WindowCell⌷bc
+     lc←t.TableCell⌷bc
      _←lc A.RemoveClass'window-cell'
+     t.TableCell←t.WindowCell+0,t.ColumnOffset
+     nc←t.TableCell⌷bc
      _←nc A.SetClass'window-cell'
      0
  }

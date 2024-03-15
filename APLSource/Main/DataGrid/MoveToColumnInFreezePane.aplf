@@ -1,0 +1,8 @@
+ MoveToColumnInFreezePane←{
+     t←⍵
+     t.WindowCell[1]←⍺-t.FreezeColumns
+     t.WindowIndex[1]←t.FreezeColumns
+     t.DataCell←t.WindowIndex+t.WindowCell
+     t.TableCell←t.WindowCell+0,t.ColumnOffset
+     Refresh t
+ }

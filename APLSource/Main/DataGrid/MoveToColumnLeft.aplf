@@ -3,5 +3,6 @@
      t.WindowIndex[1]←⍺
      t.WindowSize[1]←⍺⊃t.ColumnsPerIndex
      t.WindowCell[1]←0
+     t.TableCell[1]←t.ColumnOffset
      Refresh t
  }

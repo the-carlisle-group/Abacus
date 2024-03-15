@@ -8,7 +8,7 @@
      t.ColumnOffset←t.RowNumbers+t.FreezeColumns
      t.WindowCell←0,-t.FreezeColumns
      t.WindowIndex←0,t.FreezeColumns
-     t.DataCell←t.WindowIndex+t.WindowCell
+     t.DataCell←t.WindowIndex+t.WindowCell ⍝ Or (0 0)
      t.TableCell←t.WindowCell+0,t.ColumnOffset
      t.HeaderStyles←ComputeHeaderStyles t
      t.FMT←'FMT_'∘,¨t.Types
