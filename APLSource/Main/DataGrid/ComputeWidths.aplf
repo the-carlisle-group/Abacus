@@ -1,5 +1,5 @@
  ComputeWidths←{
      t←⍺
-     w←8⌈{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨p.Values}t.Values
+     w←8⌈(t.RowNumbers/1),{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨p.Values}t.Values
      24+w×12
  }

@@ -4,6 +4,8 @@
      r c←10 3
      t←⍺ A.New'table'
      t.Write←0
+     t.RowNumbers←0
+     t.FreezeColumns←0
      t.InsertRows←0
      t.MoveRows←0
      t.WindowIndex←0 0

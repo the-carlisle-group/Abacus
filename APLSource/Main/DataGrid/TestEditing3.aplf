@@ -1,7 +1,7 @@
  TestEditing3←{
      ⍝
      ⎕THIS.A←##
-     p←GetTestData3 0
+     p←GetTestData2 0
      d←A.NewDocument''
      d.Caption←'Test Editing'
      b←A.GetBody d
@@ -12,6 +12,8 @@
      m.style←'max-height:100vh;min-height:100vh;overflow:clip'
      t←m New''
      t.Write←1
+     t.RowNumbers←1
+     t.FreezeColumns←3
      t.InsertRows←1
      t.MoveRows←1
      t.Values←p.Values

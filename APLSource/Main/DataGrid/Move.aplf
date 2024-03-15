@@ -6,13 +6,15 @@
      ∨/(i<0)∨i=t.DataSize:0
      t.DataCell←i
      j←⍺+t.WindowCell
-     s←∨/(j<0)∨j≥t.WindowSize
-     s:⍺ MoveWindow t
-     l←t.WindowCell
-     t.WindowCell+←⍺
+     b1←(j[0]<0)∨∨/j≥t.WindowSize                   ⍝ Going right, up or down
+     b2←(j[1]<0)∧t.WindowIndex[1]>t.FreezeColumns   ⍝ Going left?
+     b1∨b2:⍺ MoveWindow t
+     l←t.TableCell
+     t.TableCell+←⍺
+     t.WindowCell←t.TableCell-0,t.ColumnOffset
      bc←A.BodyCells t
      lc←l⌷bc
-     nc←t.WindowCell⌷bc
+     nc←t.TableCell⌷bc
      _←lc A.RemoveClass'window-cell'
      _←nc A.AddClass'window-cell'
      _←t A.FireEvent'focus'

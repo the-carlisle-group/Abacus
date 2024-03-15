@@ -3,6 +3,6 @@
      s←'width:'∘,¨w
      s←s,¨';max-width:'∘,¨w
      s←s,¨';min-width:'∘,¨w
-     s←s,¨';text-align:'∘,¨⍵.Align
+     s←s,¨';text-align:'∘,¨(⍵.RowNumbers/⊂'right'),⍵.Align
      s
  }

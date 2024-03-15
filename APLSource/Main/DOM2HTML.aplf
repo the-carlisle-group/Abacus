@@ -3,6 +3,7 @@
      ⍝ ← ←→ HTML
      nl←⎕UCS 13
      0<⍴⍴⍵:1↓⊃,/nl,¨∇¨⍵
+     _←InitializeComponents ⍵
      _←InjectStyleElement ⍵
      _←InjectScriptElement ⍵
      m←AddXMLSpace↑,ConstructQXI ⍵
