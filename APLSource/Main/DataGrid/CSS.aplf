@@ -8,13 +8,29 @@
      s←Rule'.data-grid'
      s.border_collapse←'collapse'
      s.table_layout←'fixed'
+
+
+
+     ⍝ th
+     r←s Rule'thead>tr'
+     ⍝ r.height←'200px'
+     r.height←px(2×d.thLineHeight)+d.thPaddingTop+d.thPaddingBottom
+     ⍝ r.min_height←px d.thLineHeight+d.thPaddingTop+d.thPaddingBottom
+     ⍝ r.max_height←r.min_height
+
      ⍝ th
      r←s Rule'th'
      r.padding←CellPadding
      r.border←Border
-     r.font_family←'Arial'
+     r.font_family←'Tahoma'
      r.font_size←px d.thFontSize
      r.font_weight←'normal'
+
+     r.min_height←px d.thLineHeight+d.thPaddingTop+d.thPaddingBottom
+     r.max_height←r.min_height
+     r.height←r.min_height
+     r.overflow←'hidden'
+
      ⍝ td
      r←s Rule'td'
      r.white_space←'nowrap'
@@ -22,14 +38,18 @@
      r.padding←CellPadding
      r.border←Border
      r.box_sizing←'border-box'
+     r.position←'relative'
+
      ⍝ tbody
      r←s Rule'tbody'
      r.font_family←'APL385 Unicode'
      r.font_size←px d.tdFontSize
+
+
      ⍝ Window-cell
      r←s Rule'.window-cell'
      r.background_color←'orange'
-     r.position←'relative'
+     r.position←'relative' ⍝ DOnt NEED AS SEt FOr tD.
 
      ⍝ in-cell
      r←s Rule'.in-cell'
@@ -46,6 +66,28 @@
 
      r←s Rule'.r'
      r.text_align←'right'
+
+     r←s Rule'.row-number'
+     r.border←0
+     r.text_align←'center'
+     r.font_family←'Arial Narrow'
+     r.color←'darkgray'
+
+     r←s Rule'.sorted-up::before'
+     r.content←'"',(⎕UCS 9650),'"'
+     r.color←'darkgray'
+     r.margin_right←'2px'
+
+     r←s Rule'.sorted-down::before'
+     r.content←'"',(⎕UCS 9660),'"'
+     r.color←'darkgray'
+     r.margin_right←'2px'
+
+     r←s Rule'.more-to-left::before'
+     r.content←'"<"'
+     r.color←'gray'
+     r.position←'absolute'
+     r.left←0
 
      ##.UnNestCSS s
  }

@@ -11,11 +11,22 @@
      t←A.NewTable v n
      h←,A.HeaderCells t
      h.style←⍺.HeaderStyles[q]
+     h.class←⊂'sorted-up'
      h.id←(A.GetNextId 0)∘,¨'-',¨⍕¨⍳≢h
      c←A.BodyCells t
-     r←⍸(⍺.RowNumbers/1),⍺.Align[k]∊⊂'right'
+     r←⍺.RowNumbers+⍸⍺.Align[k]∊⊂'right'
      c.class←⊂''
+     _←{~⍵:0 ⋄ c[;0].class←⊂'row-number' ⋄ 0}⍺.RowNumbers
      _←{0=≢r:0 ⋄ c[;r].class←'r' ⋄ 0}0
+
+
+     _←⍺{⍺.WindowIndex[1]≤⍺.FreezeColumns:0
+
+         c[;⍺.ColumnOffset].class←c[;⍺.ColumnOffset].class,¨⊂' more-to-left'
+         0
+
+     }0
+
      c.id←(⍴c)⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/⍴c
      cc←⍺.TableCell⌷c
      cc.class,←' window-cell'

@@ -1,0 +1,15 @@
+ Name2Desc←{            ⍝ Insert space
+     3≥≢⍵:,⊂⍵           ⍝ Short
+     '_'∊⍵:,⊂⍵          ⍝ No need
+     u←⍵∊⎕A             ⍝ where cap
+     n←⍵∊⎕D             ⍝ Where numeric
+     l←~u∨n             ⍝ Where lower
+     b←u>¯1↓0,u         ⍝ cap preceeded by non-cap
+     b←b∨u∧1↓l,0        ⍝ cap followed by lowercase
+     b←b∨n>¯1↓0,n       ⍝ digit preceeded by non-num
+     b←b∨l∧¯1↓0,n       ⍝ Lowercase preceeded by digit
+     (⊃⌽b)←0            ⍝ No trailing single thingy
+     p←(+\b)⊆⍵          ⍝ Partition
+     1∊≢¨p:,⊂⍵          ⍝ Not if single char
+     p                  ⍝ Done
+ }

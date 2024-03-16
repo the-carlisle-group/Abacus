@@ -13,7 +13,7 @@
      t←m New''
      t.Write←1
      t.RowNumbers←1
-     t.FreezeColumns←3
+     ⍝ t.FreezeColumns←3
      t.InsertRows←1
      t.MoveRows←1
      t.Values←p.Values
