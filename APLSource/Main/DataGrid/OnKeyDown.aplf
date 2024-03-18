@@ -31,5 +31,6 @@
      c∧s∧k≡'Delete':t DeleteRow 0
      c∧s∧k≡'ArrowUp':t MoveRowUp 0
      c∧s∧k≡'ArrowDown':t MoveRowDown 0
+     k≡'F6':t FreezeColumns 0
      0
  }
