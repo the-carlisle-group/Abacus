@@ -1,6 +1,5 @@
  OnWindowResizeTimer←{
      ⍝ ⍺ ← From OnWebSocketReceive
-     ⎕←'OnTimer!'
      t←⊃⍵
      t.Active←0
      g←⍺.DataGrids

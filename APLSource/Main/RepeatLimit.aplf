@@ -1,8 +1,10 @@
  RepeatLimit←{
+     ⍵.RepeatTotal←0
      ⍵.Event≢'keydown':0
      r←⍵.Repeat≡⊂'true'
      ⍺.RepeatTotal+←r
      ⍺.RepeatTotal×←r
-     ⍺.RepeatTotal>100:1             ⍝ Fuck off
+     r∧⍺.RepeatTotal<25:1
+     ⍵.RepeatTotal←⍺.RepeatTotal
      0
  }

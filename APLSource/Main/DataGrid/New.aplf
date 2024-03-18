@@ -14,7 +14,7 @@
      t.Names←'Column'∘,¨c↑⎕A
      t.Types←'Char'
      t.Align←c⍴⊂'left'
-     t.SortOrder←c⍴⊂''
+     t.SortDirection←c⍴0
      t.AutoCompleteItems←c⍴⊂''
      t.class←'data-grid'
      t.tabindex←0
@@ -23,6 +23,8 @@
      t.Changed←0
      t.Onclick←A.FQP'OnClick'
      t.Onkeydown←A.FQP'OnKeyDown'
+     t.Height←0
+     t.Width←0
      t.Init←0
      t
  }

@@ -1,14 +1,6 @@
  OnResize←{
      d←⍺.Document
      t←d A.ElementById ⍵.Id
-     t.TotalWidth←⍵.Width
-     t.AvailableWidth←t.TotalWidth-+/(t.RowNumbers+t.FreezeColumns)↑t.Widths
-     t.Height←⍵.Height
-     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.Widths
-     t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
-     t.RowsToDisplay←t.Height ComputeRowsToDisplay 0
-     t.WindowSize←t.RowsToDisplay,(1⊃t.WindowIndex)⊃t.ColumnsPerIndex
-     t.WindowCell←t.WindowCell⌊t.WindowSize-1
-     t.DataCell←t.WindowIndex+t.WindowCell
-     Refresh t
+     t.Parent.(Width Height)←⍵.Width ⍵.Height
+     t Resize 0
  }

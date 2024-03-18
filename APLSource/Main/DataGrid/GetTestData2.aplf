@@ -6,5 +6,6 @@
      j←p.Names⍳'City' 'State' 'PropertyType'
      p.AutoCompleteItems←(⍴p.Names)⍴⍬
      p.AutoCompleteItems[j]←∪¨ntbs¨p.Values[j]
+     p.SortDirection[p.Names⍳'State' 'Balance']←1 ¯1
      p
  }

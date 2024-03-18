@@ -11,7 +11,7 @@
      t←A.NewTable v n
      h←,A.HeaderCells t
      h.style←⍺.HeaderStyles[q]
-     h.class←⊂'sorted-up'
+     h.class←'sorted-down' '' 'sorted-up'[(⍺.RowNumbers/1),1+⍺.SortDirection[k]]
      h.id←(A.GetNextId 0)∘,¨'-',¨⍕¨⍳≢h
      c←A.BodyCells t
      r←⍺.RowNumbers+⍸⍺.Align[k]∊⊂'right'

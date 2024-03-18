@@ -1,0 +1,13 @@
+ Resize←{
+     t←⍺
+     p←t.Parent
+     0=p.⎕NC'Width':0
+     t.AvailableWidth←p.Width-+/(t.RowNumbers+t.FreezeColumns)↑t.Widths
+     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.Widths
+     t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
+     t.RowsToDisplay←p.Height ComputeRowsToDisplay 0
+     t.WindowSize←t.RowsToDisplay,(1⊃t.WindowIndex)⊃t.ColumnsPerIndex
+     t.WindowCell←t.WindowCell⌊t.WindowSize-1
+     t.DataCell←t.WindowIndex+t.WindowCell
+     Refresh t
+ }
