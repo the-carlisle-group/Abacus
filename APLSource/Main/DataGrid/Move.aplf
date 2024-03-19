@@ -1,22 +1,15 @@
  Move←{
      t←⍵
-     HandleInput t:0
+     HandleInput ⍵:0
      i←⍺+t.DataCell
      (⊃i)=⊃t.DataSize:AppendRow t
+     j←⍺+t.WindowCell
      ∨/(i<0)∨i=t.DataSize:0
      t.DataCell←i
-     j←⍺+t.WindowCell
-     b1←(j[0]<0)∨∨/j≥t.WindowSize                   ⍝ Going right, up or down
-     b2←(j[1]<0)∧t.WindowIndex[1]>t.FreezeColumns   ⍝ Going left?
-     b1∨b2:⍺ MoveWindow t
-     l←t.TableCell
-     t.TableCell+←⍺
-     t.WindowCell←t.TableCell-0,t.ColumnOffset
-     bc←A.BodyCells t
-     lc←l⌷bc
-     nc←t.TableCell⌷bc
-     _←lc A.RemoveClass'window-cell'
-     _←nc A.AddClass'window-cell'
-     _←t A.FireEvent'focus'
-     0
+     n←t.FreezeColumns≠t.WindowIndex[1]       ⍝ Non-contiguous border
+     d←t.WindowCell[1],j[1]                   ⍝ From and to column
+     n∧d≡0 ¯1:⍺ MoveWindow t                  ⍝ ... and crossing back to freeze pane
+     n∧d≡¯1 0:⍺ MoveIntoWindow t              ⍝ ... and crossing into moving window
+     (j[0]<0)∨∨/j≥t.WindowSize:⍺ MoveWindow t ⍝ Otherwise out of bounds
+     ⍺ MoveWithinTable t
  }
