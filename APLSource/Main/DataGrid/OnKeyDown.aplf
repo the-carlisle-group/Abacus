@@ -22,6 +22,7 @@
      u∧k≡'End':¯1 MoveToColumn t
      c∧k≡'Home':MoveHome t
      c∧k≡'End':MoveEnd t
+     k≡'F6':t FreezeColumns 0
      ~t.Write:0
      k≡'F2':StartEditMode t
      m=1:0
@@ -31,6 +32,5 @@
      c∧s∧k≡'Delete':t DeleteRow 0
      c∧s∧k≡'ArrowUp':t MoveRowUp 0
      c∧s∧k≡'ArrowDown':t MoveRowDown 0
-     k≡'F6':t FreezeColumns 0
      0
  }

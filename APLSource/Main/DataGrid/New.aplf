@@ -8,8 +8,6 @@
      t.FreezeColumns←0
      t.InsertRows←0
      t.MoveRows←0
-     t.WindowIndex←0 0
-     t.WindowCell←0 0
      t.Values←r c⍴⊂''
      t.Names←'Column'∘,¨c↑⎕A
      t.Types←'Char'
