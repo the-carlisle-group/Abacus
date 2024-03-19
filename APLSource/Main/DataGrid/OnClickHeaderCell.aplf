@@ -3,14 +3,17 @@
      t←⍵.CurrentTarget
      h←,A.HeaderCells t
      i←h⍳e
-     i=1⊃t.WindowCell:0
+     i=1⊃t.TableCell:0
      c←A.BodyCells t
-     lc←t.WindowCell⌷c
-     j←i,⍨0⊃t.WindowCell
+     lc←t.TableCell⌷c
+     j←i,⍨0⊃t.TableCell
      nc←j⌷c
      _←lc A.RemoveClass'window-cell'
-     _←nc A.SetClass'window-cell'
-     t.WindowCell←j
-     t.DataCell←j+t.WindowIndex
+     _←nc A.AddClass'window-cell'
+     t.TableCell←j
+     t.WindowCell←t.TableCell-0,t.ColumnOffset
+     t.DataCell←t.WindowCell+t.WindowIndex
+     b←t.WindowCell[1]≥0:0
+     t.DataCell[1]←t.FreezeColumns+t.WindowCell[1]
      0
  }
