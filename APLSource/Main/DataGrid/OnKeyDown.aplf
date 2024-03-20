@@ -23,6 +23,8 @@
      c∧k≡'Home':MoveHome t
      c∧k≡'End':MoveEnd t
      k≡'F6':t FreezeColumns 0
+     c∧s∧k≡'ArrowLeft':¯1 MoveColumn t
+     c∧s∧k≡'ArrowRight':1 MoveColumn t
      ~t.Write:0
      k≡'F2':StartEditMode t
      m=1:0

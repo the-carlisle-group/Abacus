@@ -1,0 +1,15 @@
+ MoveColumn←{
+     t←⍵
+     c←1⊃t.DataCell
+     (⍺=¯1)∧c=0:0
+     (⍺=1)∧c=¯1+≢t.Names:0
+     i←c,c+⍺
+     j←⌽i
+     t.Values[i]←t.Values[j]
+     t.Names[i]←t.Names[j]
+     t.Types[i]←t.Types[j]
+     t.SortDirection[i]←t.SortDirection[j]
+     _←t Init 0
+     _←t Resize 0
+     0 ⍺ Move t
+ }
