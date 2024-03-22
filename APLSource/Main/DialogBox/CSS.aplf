@@ -2,15 +2,13 @@
      Rule←##.NewRule
      ⍝ ************************
      s←Rule'.dialog-box'
-     ⍝ ↓↓↓↓↓
-     ⍝ Cant do this hear
-     s.overflow←'visible'
-     ⍝ ↑↑↑↑↑↑
-     ⍝ For autocomplete, dyamic content not bounded by dialog box
-     ⍝ But it also squares off color header or footer
-     ⍝ This is why both top and bottom elements must have
-     ⍝ top and bottom corners explicitly rounded as well.
-     s.min_width←'60rem'
+     s.min_width←'50vh'
+     s.max_width←'50vh'
+     s.min_height←'25vh'
+     s.max_height←'25vh'
+
+
+
      s.border←'none'
      s.border_radius←'1em'
      s.padding←0
@@ -18,6 +16,8 @@
      s.left←'50%'
      s.top←'50%'
      s.transform←'translate(-50%, -50%)' ⍝ Need this?
+     s.display←'flex'
+     s.flex_direction←'column'
      ⍝ ************************
      r←s Rule'::backdrop'  ⍝ does not work the way I nest/unest
      r.backdrop_filter←'blur(2px)'
@@ -37,8 +37,9 @@
      r.padding←'1rem'
      ⍝ ***********************
      r←s Rule' > Section'
-     r.max_height←'20rem'
-     r.overflow←'auto'
+     r.flex←1
+     r.position←'relative'
+     r.overflow←'clip'
      ⍝ ************************
      r←s Rule'> menu'
      r.list_style_type←'none'

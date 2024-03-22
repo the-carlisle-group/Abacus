@@ -1,0 +1,13 @@
+ MoveClass←{
+     ⍝ ⍺ ←→ From,to Element
+     ⍝ ⍵ ←→ DOM content
+     f t←⍺
+     j←'document.getElementById("',f.id,'").classList.remove("',⍵,'");'
+     j,←'document.getElementById("',t.id,'").classList.add("',⍵,'")'
+     _←f.Document ExecuteJavaScript j
+     c←{⍵⊆⍨' '≠⍵},f.class
+     f.class←1↓∊' ',¨c~⊂⍵
+     c←{⍵⊆⍨' '≠⍵},t.class
+     t.class←1↓∊' ',¨c,⊂⍵
+     0
+ }

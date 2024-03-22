@@ -1,5 +1,4 @@
  OnClick←{
-     ⎕←'On click in datagrid'
      e←⍵.Target
      e.Tag≡'th':OnClickHeaderCell ⍵
      t←⍵.CurrentTarget

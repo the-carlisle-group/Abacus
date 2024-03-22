@@ -3,6 +3,7 @@
      ⍝ ⍵ ←→ dialog element
      b←GetBody ⍺
      _←b AppendChild ⍵
-     _←⍵ ExecuteOnElement'style.(maxHeight=offsetHeight)'
+     ⍝ _←⍵ ExecuteOnElement'style.(maxHeight=offsetHeight)'
+     _←⍺ ExecuteJavaScript'window.dispatchEvent(new Event("resize"))'
      ⍵ ExecuteOnElement'showModal()'
  }

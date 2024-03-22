@@ -1,13 +1,11 @@
  MoveWithinTable←{
      t←⍵
-     l←t.TableCell
+     bc←A.BodyCells t
+     lc←t.TableCell⌷bc
      t.TableCell+←⍺
      t.WindowCell←t.TableCell-0,t.ColumnOffset
-     bc←A.BodyCells t
-     lc←l⌷bc
      nc←t.TableCell⌷bc
-     _←lc A.RemoveClass'window-cell'
-     _←nc A.AddClass'window-cell'
+     _←lc nc A.MoveClass'window-cell'
      _←t A.FireEvent'focus'
      0
  }
