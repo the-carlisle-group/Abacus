@@ -11,6 +11,8 @@
      t.DataCell←t.WindowIndex+t.WindowCell ⍝ Or (0 0)
      t.TableCell←t.WindowCell+0,t.ColumnOffset
      t.HeaderStyles←ComputeHeaderStyles t
+     t.HeaderClass←'sorted-down' '' 'sorted-up'[(t.RowNumbers/1),1+t.SortDirection]
+     t.ColumnClass←(t.RowNumbers/⊂'row-number'),'' 'r'[t.Align∊⊂'right']
      t.FMT←'FMT_'∘,¨t.Types
      t.VFI←'VFI_'∘,¨t.Types
      r c←50 20

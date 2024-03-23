@@ -12,18 +12,13 @@
      h←nc↑t.TH
      h.Content←⍺.ColumnTitles[q]
      h.style←⍺.HeaderStyles[q]
-     h.class←'sorted-down' '' 'sorted-up'[(⍺.RowNumbers/1),1+⍺.SortDirection[k]]
+     h.class←⍺.HeaderClass[q]
      c←nr nc↑t.TD
      c.Content←v
-     r←⍺.RowNumbers+⍸⍺.Align[k]∊⊂'right'
-     c.class←⊂''
-     _←{~⍵:0 ⋄ c[;0].class←⊂'row-number' ⋄ 0}⍺.RowNumbers
-     _←{0=≢r:0 ⋄ c[;r].class←'r' ⋄ 0}0
-     _←⍺{⍺.WindowIndex[1]≤⍺.FreezeColumns:0
-         c[;⍺.ColumnOffset].class←c[;⍺.ColumnOffset].class,¨⊂' more-to-left'
-         0
-     }0
+     c.class←nr nc⍴⍺.ColumnClass[q]
      cc←⍺.TableCell⌷c
      cc.class,←' window-cell'
+     ⍺.WindowIndex[1]≤⍺.FreezeColumns:h c
+     c[;⍺.ColumnOffset].class←c[;⍺.ColumnOffset].class,¨⊂' more-to-left'
      h c
  }
