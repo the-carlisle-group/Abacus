@@ -22,7 +22,7 @@
      t.AutoCompleteItems←p.AutoCompleteItems
      t.Align←p.Align
      t.SortDirection←p.SortDirection
-     _←t Init 0  ⍝ Automate this!
+     _←d Init t  ⍝ Automate this!
      ⍝ d.Style←CSS #.Abacus.Themes.Dark 0
      d.Style←A.ComponentStyles #.Abacus.Themes.Dark 0
      A.NewForm d

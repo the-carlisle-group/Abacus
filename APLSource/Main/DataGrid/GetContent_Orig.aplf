@@ -1,5 +1,4 @@
- GetContent←{
-     t←⍺
+ GetContent_Orig←{
      p←10⌊⍺.DataSize-⍺.WindowIndex+⍺.WindowSize
      i j←⍺.WindowIndex+⍳¨⍺.WindowSize+p
      k←(⍳⍺.FreezeColumns),j
@@ -8,13 +7,13 @@
      v←(⊂⊂i)⌷¨⍺.Values[k]
      v←⍉↑⍺.FMT[k]{(⍎⍺)⍵}¨v
      v←{⍵:v,⍨ntbs'LCI15'⎕FMT i+1 ⋄ v}⍺.RowNumbers
-     nr nc←⍴v
-     h←nc↑t.TH
-     h.Content←⍺.ColumnTitles[q]
+     n←⍺.ColumnTitles[q]
+     t←A.NewTable v n
+     h←,A.HeaderCells t
      h.style←⍺.HeaderStyles[q]
      h.class←'sorted-down' '' 'sorted-up'[(⍺.RowNumbers/1),1+⍺.SortDirection[k]]
-     c←nr nc↑t.TD
-     c.Content←v
+     h.id←(A.GetNextId 0)∘,¨'-',¨⍕¨⍳≢h
+     c←A.BodyCells t
      r←⍺.RowNumbers+⍸⍺.Align[k]∊⊂'right'
      c.class←⊂''
      _←{~⍵:0 ⋄ c[;0].class←⊂'row-number' ⋄ 0}⍺.RowNumbers
@@ -23,7 +22,8 @@
          c[;⍺.ColumnOffset].class←c[;⍺.ColumnOffset].class,¨⊂' more-to-left'
          0
      }0
+     c.id←(⍴c)⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/⍴c
      cc←⍺.TableCell⌷c
      cc.class,←' window-cell'
-     h c
+     t.Content
  }

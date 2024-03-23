@@ -1,0 +1,19 @@
+ DOM2HTML←{
+     ⍝ Optimized for scrolling
+     th td←⍵
+     z←'<thead><tr>'
+     h←('<th id="'∘,¨th.id,¨⊂'" ')
+     h←h,¨('class="'∘,¨th.class,¨⊂'" ')
+     h←h,¨('style="'∘,¨th.style,¨⊂'">')
+     h←h,¨th.Content,¨⊂'</th>'
+     z,←⊃,/h
+     z,←'</tr></thead>'
+     d←{
+         t←'<td id="'∘,¨⍵.id,¨⊂'" '
+         t←t,¨'class="'∘,¨⍵.class,¨⊂'">'
+         t←⊃,/t,¨⍵.Content,¨⊂'</td>'
+         '<tr>',t,'</tr>'
+     }¨↓td
+     z,←⊃,/d
+     z
+ }

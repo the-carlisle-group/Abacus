@@ -1,5 +1,5 @@
  Init←{
-     t←⍺
+     d t←⍺ ⍵
      t.Inverted←1=≢⍴t.Values
      t.DataSize←{t.Inverted:(≢0⊃⍵),≢⍵ ⋄ ⍴⍵}t.Values
      t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ∊⌈⌿⍴¨⍵}t.Values
@@ -13,6 +13,18 @@
      t.HeaderStyles←ComputeHeaderStyles t
      t.FMT←'FMT_'∘,¨t.Types
      t.VFI←'VFI_'∘,¨t.Types
+     r c←50 20
+     t.THEAD←t A.New'thead'
+     t.THEAD_TR←t.THEAD A.New'tr'
+     t.TH←t.THEAD_TR A.New¨c⍴⊂'th'
+     t.TH.id←(A.GetNextId 0)∘,¨'-',¨⍕¨⍳c
+     t.TBODY←t A.New'tbody'
+     t.TBODY_TR←t.TBODY A.New¨r⍴⊂'tr'
+     t.TD←↑{⍵ A.New¨c⍴⊂'td'}¨t.TBODY_TR
+     t.TD.id←r c⍴(A.GetNextId 0)∘,¨'-',¨⍕¨⍳×/r c
+     t.(THEAD_TR TH TBODY_TR TD).Document←d
+     t.(THEAD TBODY).Content←⊂''
+     t.Content←t.THEAD,t.TBODY
      t.Init←1
      0
  }
