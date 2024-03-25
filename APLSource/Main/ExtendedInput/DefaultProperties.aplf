@@ -1,6 +1,5 @@
  DefaultProperties←{
      d←⎕NS''
-     d.Id←##.GetNextId 0
      d.Label←''
      d.Placeholder←''
      d.History←''

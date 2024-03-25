@@ -1,9 +1,6 @@
  ExecuteOnElement←{
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ Javascript
-     i←TagIndex ⍺
-     t←⍺.Tag
-     j←'document.getElementsByTagName'
-     j,←'("',t,'").item(',(⍕i),').',⍵,';'
+     j←'document.getElementById("',⍺.id,'").',⍵
      ⍺.Document ExecuteJavaScript j
  }

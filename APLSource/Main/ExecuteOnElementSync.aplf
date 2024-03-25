@@ -2,9 +2,6 @@
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ Javascript
      ⍝ ← ←→ Result
-     i←TagIndex ⍺
-     t←⍺.Tag
-     c←'document.getElementsByTagName'
-     c,←'(''',t,''').item(',(⍕i),').',⍵,';'
-     ⍺.Document ExecuteJavaScriptSync c
+     j←'document.getElementById("',⍺.id,'").',⍵
+     ⍺.Document ExecuteJavaScriptSync j
  }

@@ -1,0 +1,7 @@
+ SetDefaultId←{
+     b←0=⍵.⎕NC⊂⊂'id'
+     i←⍺ NextIds+/b
+     0=≢i:0
+     (b/⍵).id←i
+     0
+ }

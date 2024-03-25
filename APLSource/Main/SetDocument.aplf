@@ -7,9 +7,9 @@
      _←SetParent d
      e←Elements d
      e.Document←d
+     _←d SetDefaultId e
      ⍺.Document←d
      d.StopPropagation←0
-     d.RepeatTotal←0
      d.HTMLRenderer←⍺
      h←DOM2HTML d
      0=≢f:h⊣⍺.HTML←h

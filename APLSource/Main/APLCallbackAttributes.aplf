@@ -4,8 +4,9 @@
      n←b/v
      0=≢n:0 2⍴⊂''
      j←'sendAPLRequest(event)'
+     ⍝ ↑⍵{(⎕C ⍵)j}¨n
      a←↑⍵{(⎕C ⍵)j}¨n
      2=⍵.⎕NC'id':a
-     ⍵.id←GetNextId 0
+     ⍵.id←⊃⍵.Document NextIds 1
      a
  }

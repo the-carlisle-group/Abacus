@@ -1,0 +1,4 @@
+ NextIds←{
+     ⍺.NextId+←⍵
+     'id'∘,¨⍕¨⍺.NextId-⌽⍳⍵
+ }
