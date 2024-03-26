@@ -23,6 +23,7 @@
      t.Onkeydown←A.FQP'OnKeyDown'
      t.Height←0
      t.Width←0
+     t.Highlight←0
      t.Init←0
      t
  }

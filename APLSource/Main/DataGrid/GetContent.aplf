@@ -16,6 +16,7 @@
      c←nr nc↑t.TD
      c.Content←v
      c.class←nr nc⍴⍺.ColumnClass[q]
+     _←t Highlight i q c
      cc←⍺.TableCell⌷c
      cc.class,←' window-cell'
      ⍺.WindowIndex[1]≤⍺.FreezeColumns:h c

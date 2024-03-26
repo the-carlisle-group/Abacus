@@ -1,0 +1,10 @@
+ Highlight←{
+     t←⍺
+     0≡t.Highlight:0
+     i q c←⍵
+     h←t.Highlight[i;q]
+     ~0∊0=h:0
+     v←(⊂''),' highlight'∘,¨⍕¨1+⍳⌈/,h
+     c.class←c.class,¨v[h]
+     0
+ }

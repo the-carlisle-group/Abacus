@@ -89,5 +89,11 @@
      r.position←'absolute'
      r.left←0
 
+     r←s Rule'.highlight1'
+     r.color←'green'
+
+     r←s Rule'.highlight2'
+     r.color←'red'
+
      ##.UnNestCSS s
  }

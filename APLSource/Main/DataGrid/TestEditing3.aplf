@@ -17,6 +17,7 @@
      t.InsertRows←1
      t.MoveRows←1
      t.Values←p.Values
+     t.Highlight←?((≢0⊃t.Values),≢t.Values)⍴3
      t.Names←p.Names
      t.Types←p.Types
      t.AutoCompleteItems←p.AutoCompleteItems
