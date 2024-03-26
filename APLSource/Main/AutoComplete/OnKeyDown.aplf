@@ -24,6 +24,7 @@
      ~∨/b:Clear e
      l.(Mask StartText)←b st
      c←##.New¨{'div'⍵}¨b/i
+     c.id←⍵.Document ##.NextIds≢c
      c.class←⊂''
      (0⊃c).class←'active-item'
      _←SetPosition ⍵
