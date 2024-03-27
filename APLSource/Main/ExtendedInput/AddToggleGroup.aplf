@@ -3,5 +3,6 @@
      p←⎕NS''
      p.Labels←⍵.ToggleButtons
      p.Multi←⍵.ToggleMulti
+     p.Tips←⍵.ToggleButtonTips
      ⍺ ##.ToggleGroup.New p
  }
