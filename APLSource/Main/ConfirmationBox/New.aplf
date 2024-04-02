@@ -1,18 +1,18 @@
  New←{
      ⍝ ⍵ ←→ Caption, Message
      ⍝ ← ←→ new dialog element
-     c m f←3↑⍵,⊂''
-     mb←f≡''
+     c m←⍵
      A←##
      e←A.New¨'h1' 'p'{⍺ ⍵}¨c m
-     bn←A.New¨{'button'⍵}¨'Yes'(mb⊃'No' 'OK')
-     bn.Onclick←f(A.FQP'OnClose')
-     bn←mb↓bn
+     bn←A.New¨{'button'⍵}¨'Yes' 'No'
+     bn.Onclick←A.FQP¨'OnYes' 'OnNo'
+     bn.Unqueued←1
      li←A.New¨{'li'⍵}¨bn
      e,←A.New'menu'li
      d←A.New'dialog'
      d.class←'messagebox'
-     d.Onclose←A.FQP'OnClose'
+     d.Onclose←A.FQP'OnNo'
+     d.Tid←⎕TID
      d.Content←e
      d
  }

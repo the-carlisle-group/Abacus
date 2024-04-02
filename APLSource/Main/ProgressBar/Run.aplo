@@ -1,0 +1,10 @@
+ Run←{
+     ⍝ Deterministic looping, n known, named or numbered, loops
+     ⎕THIS.A←##
+     d←⍵.Document
+     p←New'Processing...'⍵.Iterations
+     ⍵.ProgressBar←p
+     _←d A.ShowModal p
+     r←↓⍉↑⍵ ⍺⍺ RunEach¨⍳⍵.Iterations
+     r⊣A.DeleteElement p
+ }

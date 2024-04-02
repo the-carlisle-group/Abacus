@@ -1,3 +1,0 @@
- OnClose←{
-     ##.DeleteElement ⍵.CurrentTarget ##.GetNearest'dialog'
- }

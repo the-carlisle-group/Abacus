@@ -1,0 +1,6 @@
+ OnYes←{
+     d←⍵.CurrentTarget ##.GetNearest'dialog'
+     _←##.DeleteElement d
+     _←'Yes'⎕TPUT d.Tid
+     0
+ }

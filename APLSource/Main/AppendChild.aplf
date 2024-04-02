@@ -2,7 +2,12 @@
      ⍝ ⍺ ←→ Parent
      ⍝ ⍵ ←→ Element
      ⍵=0:0
-     _←⍺ ExecuteOnElement'appendChild(document.createElement("',⍵.Tag,'"))'
+     ⍝ _←⍺ ExecuteOnElement'appendChild(document.createElement("',⍵.Tag,'"))'
+     j←'(()=>{ const el = document.createElement("',⍵.Tag,'");'
+     j,←'el.id ="',⍵.id,'";'
+     j,←'document.getElementById("',⍺.id,'")'
+     j,←'.appendChild(el)})()'
+     _←⍺.Document ExecuteJavaScript j
      ⍵.Parent←⍺
      ⍺.Content,←⍵
      ⍵.Document←⍺.Document

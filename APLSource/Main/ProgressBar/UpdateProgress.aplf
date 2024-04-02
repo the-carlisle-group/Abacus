@@ -1,0 +1,8 @@
+ UpdateProgress←{
+     d i←⍺
+     p←d A.ElementById'progress'
+     n←⍕1+⍎p.value
+     p.value←n  ⍝ why doesn't SetProperty do this?
+     _←p A.SetProperty'value'n
+     0 ⍵
+ }

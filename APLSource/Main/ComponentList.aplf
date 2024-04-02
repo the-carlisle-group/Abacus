@@ -5,6 +5,7 @@
      l,←⊂'DialogBox'
      l,←⊂'ExtendedInput'
      l,←⊂'MenuRibbon'
+     l,←⊂'ProgressBar'
      l,←⊂'TextEdit'
      l,←⊂'ToggleGroup'
      l
