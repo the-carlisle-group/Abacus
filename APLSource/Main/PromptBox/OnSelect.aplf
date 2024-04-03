@@ -1,0 +1,10 @@
+ OnSelect←{
+     t←⍵.CurrentTarget
+     c←∊t.Content
+     d←t ##.GetNearest'dialog'
+     i←d ElementByTag'input'
+     v←i.value
+     _←A.DeleteElement d
+     _←c v ⎕TPUT d.Tid
+     0
+ }

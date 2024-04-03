@@ -1,0 +1,3 @@
+ Show←{
+     ⍺ A.ShowModal New ⍵
+ }
