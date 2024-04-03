@@ -1,0 +1,4 @@
+ OnOK←{
+     d←⍵.CurrentTarget ##.GetNearest'dialog'
+     ##.DeleteElement d
+ }

@@ -1,0 +1,14 @@
+ New←{
+     ⍝ ⍵ ←→ Message
+     ⍝ ← ←→ New dialog element
+     m←⍵
+     A←##
+     d←A.New'dialog'
+     d.class←'alert-box'
+     p←d A.New'p'm
+     b←d A.New'button' 'OK'
+     b.Onclick←A.FQP'OnOK'
+     b.Unqueued←1
+     d.Onclose←A.FQP'OnOK'
+     d
+ }
