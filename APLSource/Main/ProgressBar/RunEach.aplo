@@ -5,9 +5,9 @@
      _←p UpdateStatus ⍵⊃⍺.Status   ⍝ Put new status on screen
      c←p.Cancel                    ⍝ Has cancel been pressed?
      ~c:p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵  ⍝ No, Run iteration, update the progress bar
-     r←⍺.Document ##.ConfirmationBox.Run'Blah' 'Are you sure you want to cancel this operation?'
+     r←⍺.Document A.ConfirmBox.Show'Are you sure you want to cancel this operation?'
      p.Cancel←0
-     r≡⊂'No':p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵ ⍝ No, did not want to cancel, keep going
+     r≢⊂'Yes':p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵ ⍝ No, did not want to cancel, keep going
      p.Cancel←1
      p.Canceled←1                  ⍝ Fully cancelled
      1 0

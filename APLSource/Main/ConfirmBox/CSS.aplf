@@ -1,0 +1,34 @@
+ CSS←{
+     Rule←##.NewRule
+     ⍝ ************************
+     s←Rule'.confirm-box'
+     s.width←'40rem'
+     s.border←'none'
+     s.border_radius←'.5rem'
+     s.padding←0  ⍝ '1rem'
+     s.position←'fixed'
+     s.left←'50%'
+     s.top←'50%'
+     s.transform←'translate(-50%, -50%)' ⍝ Need this?
+     ⍝ ************************
+     r←s Rule'::backdrop'
+     r.backdrop_filter←'blur(3px)'
+     ⍝ ************************
+     r←s Rule'p'
+     r.font_family←'Arial'
+     r.padding←'1rem'
+     r.background_color←'steelblue'
+     ⍝ ************************
+     r←s Rule'menu'
+     r.list_style_type←'none'
+     r.display←'flex'
+     r.justify_content←'center'
+     r.gap←'1rem'
+     r.padding←'0rem 2rem 2rem 2rem'
+     ⍝ ************************
+     r←s Rule'button'
+     r.width←'10rem'
+     r.border_radius←'.25rem'
+     ⍝ ************************
+     ##.UnNestCSS s
+ }

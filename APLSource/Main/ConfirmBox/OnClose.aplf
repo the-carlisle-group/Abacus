@@ -1,0 +1,6 @@
+ OnClose←{
+     d←⍵.CurrentTarget ##.GetNearest'dialog'
+     _←##.DeleteElement d
+     _←''⎕TPUT d.Tid
+     0
+ }
