@@ -1,7 +1,7 @@
  ComponentList←{
      l←⊂'AlertBox'
      l,←⊂'AutoComplete'
-     l,←⊂'ConfirmationBox'
+     l,←⊂'ConfirmBox'
      l,←⊂'DataGrid'
      l,←⊂'DialogBox'
      l,←⊂'ExtendedInput'

@@ -1,8 +1,0 @@
- Confirm←{
-     (e b c m)←⍵
-     e.Target.Content≡,⊂'Yes':0⊣OnClose e
-     ~b:0
-     f←1⊃⎕XSI
-     d←e.HTMLRenderer.Document
-     1⊣d ##.ShowModal New c m f
- }

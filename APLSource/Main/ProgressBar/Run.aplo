@@ -3,6 +3,7 @@
      ⎕THIS.A←##
      d←⍵.Document
      p←New'Processing...'⍵.Iterations
+     ⍵.Message←'Are you sure you want to cancel this operation?'
      ⍵.ProgressBar←p
      _←d A.ShowModal p
      r←↓⍉↑⍵ ⍺⍺ RunEach¨⍳⍵.Iterations

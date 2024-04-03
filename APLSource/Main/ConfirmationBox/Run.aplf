@@ -1,4 +1,0 @@
- Run←{
-     _←⍺ ##.ShowModal New ⍵
-     ⎕TGET ⎕TID
- }

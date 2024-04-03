@@ -1,14 +1,13 @@
  RunEach←{
      ⍺.Iteration←⍵
      p←⍺.ProgressBar
-     p.Canceled:1 0                ⍝ Previously Cancelled
-     _←p UpdateStatus ⍵⊃⍺.Status   ⍝ Put new status on screen
-     c←p.Cancel                    ⍝ Has cancel been pressed?
-     ~c:p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵  ⍝ No, Run iteration, update the progress bar
-     r←⍺.Document A.ConfirmBox.Show'Are you sure you want to cancel this operation?'
+     p.Canceled:1 0
+     _←p UpdateStatus ⍵⊃⍺.Status
+     ~p.Cancel:p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵
+     r←⍺.Document A.ConfirmBox.Show ⍺.Message
      p.Cancel←0
-     r≢⊂'Yes':p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵ ⍝ No, did not want to cancel, keep going
+     r≢⊂'Yes':p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵
      p.Cancel←1
-     p.Canceled←1                  ⍝ Fully cancelled
+     p.Canceled←1
      1 0
  }

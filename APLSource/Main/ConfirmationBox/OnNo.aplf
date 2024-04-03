@@ -1,6 +1,0 @@
- OnNo←{
-     d←⍵.CurrentTarget ##.GetNearest'dialog'
-     _←##.DeleteElement d
-     _←'No'⎕TPUT d.Tid
-     0
- }

@@ -4,14 +4,13 @@
      c o←2↑(⊆⍵),⊂'Yes' 'No'
      A←##
      d←A.New'dialog'
-     d.class←'messagebox'
+     d.class←'confirm-box'
      d.Onclose←A.FQP'OnClose'
      d.Unqueued←1
      d.Tid←⎕TID
      p←d A.New'p'c
      m←d A.New'menu'
-     i←m A.New¨{'li'}¨o           ⍝ try eliminating!
-     b←i A.New¨{'button'⍵}¨o
+     b←m A.New¨{'button'⍵}¨o
      b.Onclick←⊂A.FQP'OnSelect'
      b.Unqueued←1
      d
