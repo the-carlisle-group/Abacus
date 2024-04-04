@@ -1,15 +1,16 @@
  New←{
      ⍝ ⍵ ←→ Title, Label,[Value]
      ⍝ ← ←→ new dialog element
-     tv tv iv←3↑⍵,⊂''
-     A←##
+     tv lv iv←3↑⍵,⊂''
+     ⎕THIS.A←##
      d←A.New'dialog'
      d.class←'prompt-box'
      d.Onclose←A.FQP'OnClose'
      d.Unqueued←1
      d.Tid←⎕TID
+     h1←d A.New'h1'tv
      l←d A.New'label'lv
-     i←l A.Add'input'
+     i←l A.New'input'
      i.value←iv
      i.Oninput←A.FQP'OnInput'
      m←d A.New'menu'

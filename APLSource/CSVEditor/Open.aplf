@@ -1,0 +1,22 @@
+ Open←{
+     d←⍺
+     v n←(⎕CSV⍠1)⍵ ⍬ ⍬ 1
+     c←≢n
+     t←⎕NS''
+     t.Names←n
+     t.Values←v
+     t.Types←c⍴⊂'Char'
+     t.Align←c⍴⊂'left'
+     t.SortDirection←c⍴0
+     g←A.DataGrid.New''   ⍝ #.Abacus.Main.DataGrid.OnResize
+     g.RowNumbers←1
+     g.Values←t.Values
+     g.Names←t.Names
+     g.Types←t.Types
+     g.Align←t.Align
+     g.SortDirection←t.SortDirection
+     _←d A.DataGrid.Init g
+     m←d A.ElementByTag'main'
+     _←m A.SetInnerHTML g
+     g A.DataGrid.Resize 0
+ }

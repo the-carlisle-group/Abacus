@@ -1,0 +1,33 @@
+ CSS←{
+     Rule←A.NewRule
+     s←Rule''
+     ⍝ Reset
+     r←s Rule'*'
+     r.margin←0
+     r.padding←0
+     ⍝
+     r←s Rule'input:focus'
+     r.outline←'none'
+     ⍝ Body
+     r←s Rule'body'
+     r.color←⍵.BodyColor
+     r.background_color←⍵.BodyBackgroundColor
+     r.border←0
+     r.display←'flex'
+     r.flex_direction←'column'
+     r.min_height←'100vh'
+     r.max_height←'100vh'
+     ⍝ Header
+     r←s Rule'body>header'
+     r.background_color←'steelblue'
+     ⍝ Main
+     r←s Rule'body>main'
+     r.contain←'strict'
+     r.flex←1
+     r.position←'relative'
+     r.overflow←'clip'
+     ⍝ Footer
+     r←s Rule'body>footer'
+     r.background_color←'steelblue'
+     s
+ }

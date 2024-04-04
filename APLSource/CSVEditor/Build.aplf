@@ -1,5 +1,12 @@
  Build←{
-
-
-
+     d←A.NewDocument''
+     b←A.GetBody d
+     h←b A.New'header'
+     h1←h A.New'h1' 'filename'
+     mb←b BuildMenu''
+     m←b A.New'main'
+     f←b A.New'footer'
+     h2←f A.New'h2' 'x rows by n columns'
+     d
+    ⍝#.FlipDBDesktop.Main.TabEx.BuildMainPage
  }

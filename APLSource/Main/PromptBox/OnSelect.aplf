@@ -1,8 +1,8 @@
  OnSelect←{
      t←⍵.CurrentTarget
      c←∊t.Content
-     d←t ##.GetNearest'dialog'
-     i←d ElementByTag'input'
+     d←t A.GetNearest'dialog'
+     i←d A.ElementByTag'input'
      v←i.value
      _←A.DeleteElement d
      _←c v ⎕TPUT d.Tid

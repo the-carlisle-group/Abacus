@@ -1,0 +1,7 @@
+ BuildMenu←{
+     s←⎕NS''
+     s.Items←'File' 'Edit'
+     s.SubItems←⊂'Open' 'Save' 'Save As'
+     s.SubItems,←⊂'Insert row' 'Delete row'
+     ⍺ A.MenuRibbon.New s
+ }

@@ -1,4 +1,9 @@
  Run←{
-
-
+     ⎕THIS.A←##.Main
+     d←Build''
+     t←##.Themes.Dark 0
+     d.Style←CSS t
+     d.Style,←A.ComponentStyles t
+     d.Caption←'Abacus CSV Editor'
+     A.NewForm d
  }
