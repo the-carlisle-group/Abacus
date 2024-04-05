@@ -1,5 +1,6 @@
  HandleRequest←{
-     _←{6::0 ⋄ ⎕TSYNC ⍵}⍺
+     _←⍵.Document.Modal{⍺:0 ⋄ 6::0 ⋄ ⎕TSYNC ⍵}⍺
+     ⍵.Document.Modal←0
      _←(⍎⍵.CurrentTarget⍎'On',⍵.Event)⍵
      ~EventToken∊⎕TREQ ⎕TNUMS:z←0
      1:z←⍵ ⎕TPUT EventToken

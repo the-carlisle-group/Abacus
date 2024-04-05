@@ -12,7 +12,8 @@
      l←d A.New'label'lv
      i←d A.New'input'
      i.value←iv
-     i.Oninput←A.FQP'OnInput'
+     i.Oninput←A.FQP'OnInput' ⍝ NOT FIRING?!
+     ⍝ i.Onblur←A.FQP'OnBlur'
      m←d A.New'menu'
      b←m A.New¨{'button'⍵}¨'OK' 'Cancel'
      b.Onclick←⊂A.FQP'OnSelect'

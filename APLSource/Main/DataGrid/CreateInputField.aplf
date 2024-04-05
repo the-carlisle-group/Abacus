@@ -17,6 +17,7 @@
      d←A.New'div'
      d.class←'input-cell'
      i←d A.New'input'
+     i.id←'data-grid-input'
      i.OnEnter←''
      i.value←⍺
      i.OriginalValue←v

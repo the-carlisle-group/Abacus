@@ -4,7 +4,7 @@
      c←⎕JSON 3⊃⍵
      c.Event≡'SJSR':c.result ⎕TPUT c.id
      d←h.Document
-     c.HTMLRenderer←h    ⍝ May not have this!!!!
+     c.HTMLRenderer←h ⍝ May not have this!!!!
      c.Document←d
      c.Event≡'resize':OnWindowResize c
      q←d.StopPropagation
