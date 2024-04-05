@@ -1,5 +1,6 @@
  Resize←{
      t←⍺
+     ~t.Init:0
      p←t.Parent
      0=p.⎕NC'Width':0
      t.AvailableWidth←p.Width-+/(t.RowNumbers+t.FreezeColumns)↑t.Widths
