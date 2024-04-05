@@ -10,7 +10,7 @@
      d.Tid←⎕TID
      h1←d A.New'h1'tv
      l←d A.New'label'lv
-     i←l A.New'input'
+     i←d A.New'input'
      i.value←iv
      i.Oninput←A.FQP'OnInput'
      m←d A.New'menu'

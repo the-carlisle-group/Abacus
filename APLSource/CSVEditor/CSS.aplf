@@ -20,6 +20,8 @@
      ⍝ Header
      r←s Rule'body>header'
      r.background_color←'steelblue'
+     r.font_family←'Arial'
+     r.padding←'1rem'
      ⍝ Main
      r←s Rule'body>main'
      r.contain←'strict'
@@ -29,5 +31,7 @@
      ⍝ Footer
      r←s Rule'body>footer'
      r.background_color←'steelblue'
+     r.font_family←'Arial'
+     r.padding←'1rem'
      s
  }

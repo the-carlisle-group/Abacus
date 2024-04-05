@@ -12,28 +12,42 @@
      s.transform←'translate(-50%, -50%)' ⍝ Need this?
      ⍝ ************************
      r←s Rule'::backdrop'
-     r.backdrop_filter←'blur(3px)'
+     r.backdrop_filter←'blur(2px)'
      ⍝ h1
      r←s Rule'h1'
      r.font_family←'Arial'
-     r.font_size←'3rem'
+     r.font_size←'1.5rem'
      r.padding←'1rem'
      r.background_color←'steelblue'
      ⍝ ************************
      r←s Rule'label'
      r.font_family←'Arial'
-     r.font_size←'2rem'
-     r.padding←'3rem'
+     r.font_size←'1.5rem'
+     r.padding←'1rem'
+     r.display←'block'
+     r.width←'80%'
+     r.margin←'auto'
+     ⍝ ****************************
+     r←s Rule'input'
+     r.font_family←'APL385 Unicode'
+     r.font_size←'1.5rem'
+     r.padding←'1rem'
+     r.display←'block'
+     r.width←'80%'
+     r.border_radius←'5px'
+     r.margin←'auto'
+     r.border←'1px solid black'
      ⍝ ************************
      r←s Rule'menu'
      r.display←'flex'
      r.justify_content←'center'
      r.gap←'1rem'
-     r.padding←'0rem 2rem 2rem 2rem'
+     r.padding←'2rem 2rem 2rem 2rem'
      ⍝ ************************
      r←s Rule'button'
-     r.height←'2rem'
+     r.height←'3rem'
      r.width←'10rem'
+     r.font_size←'1.25rem'
      r.border_radius←'.25rem'
      ⍝ ************************
      ##.UnNestCSS s
