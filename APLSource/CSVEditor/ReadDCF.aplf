@@ -1,0 +1,6 @@
+ ReadDCF←{
+     t←⍵ ⎕FTIE 0
+     n←⎕FREAD t 1
+     v←⎕FREAD t(2+⍳≢n)
+     n v⊣⎕FUNTIE t
+ }

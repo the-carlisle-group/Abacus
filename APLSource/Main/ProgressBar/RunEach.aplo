@@ -7,7 +7,7 @@
      r←⍺.Document A.ConfirmBox.Show ⍺.Message
      p.Cancel←0
      r≢⊂'Yes':p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵
-     p.Cancel←1
+     p.Cancel←1   ⍝ Line not needed?
      p.Canceled←1
      1 0
  }

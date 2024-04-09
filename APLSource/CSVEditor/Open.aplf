@@ -1,6 +1,13 @@
  Open←{
      d←⍺
-     v n←(⎕CSV⍠1)⍵ ⍬ ⍬ 1
+     ⍝ If large:BlockRead
+     ⍝ v n←(⎕CSV⍠1)⍵ ⍬ ⍬ 1
+     rc fn←d ToBlockedDCF ⍵
+     rc:0
+     rc fn2←d ToDCF fn
+     rc:0
+     n v←d ReadDCF fn2
+
      r←≢0⊃v
      c←≢n
      fmt←{' '~⍨,'CI20'⎕FMT ⍵}

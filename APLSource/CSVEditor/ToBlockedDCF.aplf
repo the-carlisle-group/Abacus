@@ -1,0 +1,26 @@
+ ToBlockedDCF←{
+                ⍝ ⍵ ←→ CSVFile Name
+     ⍺←0        ⍝ Document - no doc, no progress bar!
+     c←∊'.bdcf',⍨¯1↓⎕NPARTS ⍵
+     _←3 ⎕NDELETE c
+     p←⎕NS''
+     p.Status←''
+     p.RowLimit←0
+     p.ColumnLimit←0
+     p.RowsProcessed←0
+     p.BlocksProcessed←0
+     p.BlockSize←50000
+     p.Widths←0
+     p.ColumnLimit←0
+     p.CSVTie←⍵ ⎕NTIE 0
+     p.DCFTie←c ⎕FCREATE 0
+     p.Names←ReadHeader p
+     p.Complete←0
+     _←p.Names ⎕FAPPEND p.DCFTie
+     f←ReadAndWriteBlock
+     r←⍺ f A.ProgressStatus.Run p
+     _←⎕NUNTIE p.CSVTie
+     _←⎕FUNTIE p.DCFTie
+     ⍝ Should delete if file if cancelled
+     r c
+ }

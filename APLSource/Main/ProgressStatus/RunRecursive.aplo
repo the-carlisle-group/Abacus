@@ -1,0 +1,11 @@
+ RunRecursive←{
+     p←⍵.ProgressBar
+     _←p UpdateStatus ⍵.Status
+     c←⍺{~p.Cancel:0 ⋄ ⍺ A.ConfirmBox.Show ⍵.Message}⍵
+     c≡'No':1
+     p.Cancel←0
+     r←⍺⍺ ⍵
+     _←p UpdateStatus ⍵.Status
+     r:0
+     ⍺ ⍺⍺ ∇∇ ⍵
+ }

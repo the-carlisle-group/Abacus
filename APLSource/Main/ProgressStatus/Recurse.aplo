@@ -1,0 +1,11 @@
+ Recurse←{
+     p←⍵.ProgressBar
+     _←p UpdateStatus ⍵.Status
+     c←⍺ Confirm ⍵
+     c≡'Cancel':1
+     p.Cancel←0
+     r←⍺⍺ ⍵
+     _←p UpdateStatus ⍵.Status
+     r:0
+     ⍺ ⍺⍺ ∇∇ ⍵
+ }

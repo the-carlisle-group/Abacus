@@ -2,6 +2,7 @@
      3≥≢⍵:,⊂⍵           ⍝ Short
      '_'∊⍵:,⊂⍵          ⍝ No need
      u←⍵∊⎕A             ⍝ where cap
+     u[0]←1
      n←⍵∊⎕D             ⍝ Where numeric
      l←~u∨n             ⍝ Where lower
      b←u>¯1↓0,u         ⍝ cap preceeded by non-cap

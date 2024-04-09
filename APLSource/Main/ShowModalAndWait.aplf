@@ -1,0 +1,12 @@
+ ShowModalAndWait←{
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ dialog element
+     b←GetBody ⍺
+     _←⍺ SetDefaultId Elements ⍵
+     _←b AppendChild ⍵
+     ⍝ Only do this ↓↓↓ if the content has a grid
+     _←⍺ ExecuteJavaScript'window.dispatchEvent(new Event("resize"))'
+     _←⍵ ExecuteOnElement'showModal()'
+     ⍺.Modal←1
+     ⊃⎕TGET ⎕TID
+ }

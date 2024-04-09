@@ -1,4 +1,3 @@
  Show←{
-     _←⍺ ##.ShowModal New ⍵
-     ⎕TGET ⎕TID
+     ⍺ ##.ShowModalAndWait New ⍵
  }
