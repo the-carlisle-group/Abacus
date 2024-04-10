@@ -1,9 +1,0 @@
- Run←{
-     ⎕THIS.A←##
-     c w←⍵
-     p←New c
-     w.ProgressBar←p
-     _←⍺ A.ShowModal p
-     r←⍺ ⍺⍺ Recurse w
-     r⊣A.DeleteElement p
- }

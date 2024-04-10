@@ -1,5 +1,0 @@
- Confirm←{
-     ~⍵.ProgressBar.Cancel:0
-     z←⍺ A.ConfirmBox.Show ⍵.Message('Cancel' 'Resume' 'Finish')
-     z
- }
