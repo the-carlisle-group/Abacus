@@ -1,10 +1,9 @@
  Run←{
      ⎕THIS.A←##
-     ⍝ ⍺=0:⍺ ⍺⍺ RunRecursive ⍵
-     p←New'Processing...'
-     ⍵.Message←'Are you sure you want to cancel this operation?'
-     ⍵.ProgressBar←p
+     c w←⍵
+     p←New c
+     w.ProgressBar←p
      _←⍺ A.ShowModal p
-     r←⍺ ⍺⍺ Recurse ⍵
+     r←⍺ ⍺⍺ Recurse w
      r⊣A.DeleteElement p
  }

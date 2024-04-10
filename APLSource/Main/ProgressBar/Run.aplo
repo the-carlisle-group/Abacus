@@ -1,11 +1,9 @@
  Run←{
-     ⍝ Deterministic looping, n known, named or numbered, loops
      ⎕THIS.A←##
-     d←⍵.Document
-     p←New'Processing...'⍵.Iterations
-     ⍵.Message←'Are you sure you want to cancel this operation?'
-     ⍵.ProgressBar←p
-     _←d A.ShowModal p
-     r←↓⍉↑⍵ ⍺⍺ RunEach¨⍳⍵.Iterations
+     (c i w)←⍵
+     p←New c i
+     _←⍺ A.ShowModal p
+     op←⍎(0=≢i)⊃'Determinate' 'Indeterminate'
+     r←p ⍺⍺ op w
      r⊣A.DeleteElement p
  }

@@ -4,14 +4,14 @@
      d←A.New'dialog'
      d.class←'progress-status'
      d.id←'progress-status'
-     d.Cancel←0
-     d.Onclose←A.FQP'OnCancel'
+     d.Pause←0
+     d.Onclose←A.FQP'OnPause'
      h1←d A.New'h1't
      p←d A.New'p'
      p.id←'progress-status-status' ⍝ Yuck
      b←A.New'button' 'Pause'
      b.Unqueued←1
-     b.Onclick←A.FQP'OnCancel'
+     b.Onclick←A.FQP'OnPause'
      li←A.New'li'b
      m←d A.New'menu'li
      d

@@ -1,6 +1,10 @@
  ReadDCF←{
      t←⍵ ⎕FTIE 0
      n←⎕FREAD t 1
-     v←⎕FREAD t(2+⍳≢n)
-     n v⊣⎕FUNTIE t
+     f←{⎕FREAD ⍵,2+⍺}
+     c←'Reading columns...'
+     b v←⍺ f A.ProgressBar.Run c n t
+     _←⎕FUNTIE t
+     r←(b=0)∘/¨n v
+     (⌈/b)r
  }

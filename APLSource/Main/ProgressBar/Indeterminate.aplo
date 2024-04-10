@@ -1,0 +1,8 @@
+ Indeterminate←{
+     _←⍺ Update ⍵.Status
+     c←⍺ Pause ⍵
+     c≡'Cancel':1
+     c≡'Finish':2
+     ⍺⍺ ⍵:0
+     ⍺ ⍺⍺ ∇∇ ⍵
+ }

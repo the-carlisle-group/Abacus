@@ -1,4 +1,5 @@
  ToBlockedDCF←{
+
                 ⍝ ⍵ ←→ CSVFile Name
      ⍺←0        ⍝ Document - no doc, no progress bar!
      c←∊'.bdcf',⍨¯1↓⎕NPARTS ⍵
@@ -18,7 +19,7 @@
      p.Complete←0
      _←p.Names ⎕FAPPEND p.DCFTie
      f←ReadAndWriteBlock
-     r←⍺ f A.ProgressStatus.Run p
+     r←⍺ f A.ProgressBar.Run'Caption'⍬ p
      _←⎕NUNTIE p.CSVTie
      _←⎕FUNTIE p.DCFTie
      ⍝ Should delete if file if cancelled

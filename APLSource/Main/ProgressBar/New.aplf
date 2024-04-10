@@ -1,21 +1,22 @@
  New←{
-     t m←⍵ ⍝ ⍝ Title, Max
+     c i←⍵ ⍝ Max
      d←A.New'dialog'
+     d.Iterator←i
      d.class←'progress-bar'
      d.id←'progress-bar'
+     d.Pause←0
      d.Cancel←0
-     d.Canceled←0
-     d.Onclose←A.FQP'OnCancel'
-     h1←d A.New'h1't
+     d.Onclose←A.FQP'OnPause'  ⍝ ????
+     h1←d A.New'h1'c
      p←d A.New'p'
      p.id←'progress-bar-status'
      pb←d A.New'progress'
      pb.id←'progress'
-     pb.max←m
+     pb.max←≢i
      pb.value←'0'
-     b←A.New'button' 'Cancel'
+     b←A.New'button' 'Pause'
      b.Unqueued←1
-     b.Onclick←A.FQP'OnCancel'
+     b.Onclick←A.FQP'OnPause'
      li←A.New'li'b
      m←d A.New'menu'li
      d

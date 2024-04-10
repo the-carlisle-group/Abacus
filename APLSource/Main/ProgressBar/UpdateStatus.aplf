@@ -1,5 +1,0 @@
- UpdateStatus←{
-     p←⍺
-     s←p A.ElementById'progress-bar-status'
-     s A.SetInnerHTML ⍵
- }

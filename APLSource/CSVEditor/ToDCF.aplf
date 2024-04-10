@@ -8,17 +8,9 @@
      c←≢n
      b←c÷⍨¯2+1⊃⎕FSIZE s
      i←2+c×⍳b
-     ps←⎕NS''
-     ps.Iterations←≢n
-     ps.Indices←i
-     ps.SourceTie←s
-     ps.TargetTie←t
-     ps.Status←n
-     ps.Document←⍺
      g←ReadAndWriteColumn
-     rc rv←g A.ProgressBar.Run ps
-     ⍝ _←s t i∘ReadAndWriteColumn¨⍳c
+     c←'Assembling columns...'
+     rc rv←⍺ g A.ProgressBar.Run c n(s t i)
      _←⎕FUNTIE s t
-     ∨/rc:1 ''
-     0 f
+     (⌈/rc)f
  }

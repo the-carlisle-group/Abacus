@@ -11,7 +11,7 @@
      ⍝ d←o TrapRead t'',(⍵.ColumnLimit>0)/⊂⍵.ColumnLimit⍴1
      n←≢⊃v
      n=0:1
-     ⍝ _←v ⎕FAPPEND¨⍵.DCFTie
+     _←v ⎕FAPPEND¨⍵.DCFTie
      ⍵.Widths⌈←1⊃⍴¨v
      ⍵.BlocksProcessed+←1
      ⍵.RowsProcessed+←n

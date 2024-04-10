@@ -1,9 +1,6 @@
  ReadAndWriteColumn←{
-     ⍝ ⍵ ←→ Column number
-     s←⍺.SourceTie
-     t←⍺.TargetTie
-     i←⍺.Indices
-     m←⎕FREAD s(⍵+i)
+     s t i←⍵
+     m←⎕FREAD s(⍺+i)
      v←⊃⍪/m↑[1]⍨¨⌈/1⊃¨⍴¨m
      v ⎕FAPPEND t
  }

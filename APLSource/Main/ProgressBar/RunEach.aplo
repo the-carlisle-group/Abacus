@@ -1,13 +1,13 @@
  RunEach←{
-     ⍺.Iteration←⍵
-     p←⍺.ProgressBar
-     p.Canceled:1 0
-     _←p UpdateStatus ⍵⊃⍺.Status
-     ~p.Cancel:p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵
-     r←⍺.Document A.ConfirmBox.Show ⍺.Message
-     p.Cancel←0
-     r≢⊂'Yes':p ⍵ UpdateProgress ⍺ ⍺⍺ ⍵
-     p.Cancel←1   ⍝ Line not needed?
-     p.Canceled←1
-     1 0
+     ⍝ w ←→ Right arg to ⍺⍺
+     ⍝ ⍵ ←→ Iteration #
+     ⍝ p ←→ ProgressBar component
+     p w←⍺
+     p.Cancel:1 0
+     c←p Pause 0
+     c≡'Cancel':1 0⊣p.Cancel←1
+     c≡'Finish':2 0⊣p.Cancel←1
+     _←p Update ⍵⊃p.Iterator
+     r←⍵ ⍺⍺ w
+     0 r
  }

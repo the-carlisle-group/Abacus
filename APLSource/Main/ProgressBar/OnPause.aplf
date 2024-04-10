@@ -1,5 +1,5 @@
- OnCancel←{
+ OnPause←{
      d←⍵.CurrentTarget A.GetNearest'dialog'
-     d.Cancel←1
+     d.Pause←1
      0
  }
