@@ -8,12 +8,13 @@
      d.Cancel←0
      d.Onclose←A.FQP'OnPause'  ⍝ ????
      h1←d A.New'h1'c
-     p←d A.New'p'
-     p.id←'progress-bar-status'
-     pb←d A.New'progress'
-     pb.id←'progress'
-     pb.max←≢i
-     pb.value←'0'
+     s←d A.New'p'
+     s.id←'progress-bar-status'
+     p←A.New'progress'
+     p.id←'progress'
+     p.max←≢i
+     p.value←'0'
+     d.Content,←(0<≢i)/p
      b←A.New'button' 'Pause'
      b.Unqueued←1
      b.Onclick←A.FQP'OnPause'

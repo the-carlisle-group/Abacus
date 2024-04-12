@@ -1,0 +1,12 @@
+ TestFileOpen←{
+     f←⍵
+     d←f.Document
+     _←d A.ClickOn'File'
+     _←d A.ClickOn'Open'
+
+
+
+
+
+     0
+ }

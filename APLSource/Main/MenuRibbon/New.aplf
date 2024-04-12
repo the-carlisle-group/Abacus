@@ -8,6 +8,7 @@
      mm←m A.New'div'
      mm.class←'menu-ribbon-main'
      mb←mm{⍺ A.New'button'⍵}¨⍵.Items
+     mb.id←⍵.Items
      mb.class←⊂'inactive-menu-item'
      (0⊃mb).class←'active-menu-item'
      mb.SubItems←⍵.SubItems

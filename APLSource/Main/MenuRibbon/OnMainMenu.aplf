@@ -8,6 +8,7 @@
      b.class←'active-menu-item'
      sm←1⊃m.Parent.Content
      sb←{A.New'button'⍵}¨⍵.Target.SubItems
+     sb.id←⍵.Target.SubItems
      sm.Content←sb
      sb.Onclick←⊂A.FQP'OnSubMenu'
      sb.class←⊂'inactive-menu-subitem'

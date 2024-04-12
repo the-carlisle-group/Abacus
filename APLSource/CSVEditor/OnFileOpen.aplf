@@ -1,7 +1,7 @@
  OnFileOpen←{
      d←⍵.Document
-     f←'c:/DataSets/Baseball2019/batting.csv'
-     ⍝ f←'c:/DataSets/Large Files/GB3.csv'
+     ⍝ f←'c:/DataSets/Baseball2019/batting.csv'
+     f←'c:/DataSets/Large Files/GB3.csv'
      r v←d A.PromptBox.Show'Open File' 'File name:'f
      a←1
      b←2

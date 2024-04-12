@@ -14,6 +14,11 @@
      r←s Rule'::backdrop'
      r.backdrop_filter←'blur(3px)'
      ⍝ ************************
+     r←s Rule'h1'
+     r.font_family←'Arial'
+     r.padding←'1rem'
+     r.background_color←'steelblue'
+     ⍝ ********************
      r←s Rule'p'
      r.font_family←'Arial'
      r.font_size←'2rem'

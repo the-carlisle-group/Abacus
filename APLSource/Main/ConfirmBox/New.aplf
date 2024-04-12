@@ -1,13 +1,14 @@
  New←{
-     ⍝ ⍵ ←→ Message [Options ]
+     ⍝ ⍵ ←→ Title Caption [Options]
      ⍝ ← ←→ new dialog element
-     c o←2↑(⊆⍵),⊂'Yes' 'No'
+     t c o←3↑(⊆⍵),⊂'Yes' 'No'
      A←##
      d←A.New'dialog'
      d.class←'confirm-box'
      d.Onclose←A.FQP'OnClose'
      d.Unqueued←1
      d.Tid←⎕TID
+     h1←d A.New'h1't
      p←d A.New'p'c
      m←d A.New'menu'
      b←m A.New¨{'button'⍵}¨o

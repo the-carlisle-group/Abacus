@@ -1,5 +1,8 @@
  Pause←{
      ~⍺.Pause:'Resume'
      ⍺.Pause←0
-     ⍺.Document A.ConfirmBox.Show'blah blah'('Cancel' 'Resume' 'Finish')
+     t←'Process paused'
+     c←''
+     b←'Cancel' 'Resume' 'Finish'
+     ⍺.Document A.ConfirmBox.Show t c b
  }

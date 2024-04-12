@@ -9,5 +9,5 @@
      f←b A.New'footer'
      h2←f A.New'h2' 'x rows by n columns'
      d
-    ⍝#.FlipDBDesktop.Main.TabEx.BuildMainPage
+     ⍝#.FlipDBDesktop.Main.TabEx.BuildMainPage
  }
