@@ -16,6 +16,7 @@
      p.value←'0'
      d.Content,←(0<≢i)/p
      b←A.New'button' 'Pause'
+     b.id←'Pause'
      b.Unqueued←1
      b.Onclick←A.FQP'OnPause'
      li←A.New'li'b

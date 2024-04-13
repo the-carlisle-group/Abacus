@@ -1,7 +1,7 @@
  ClickOn←{
- ⍝ ⍺ ←→ Documnet
- ⍝ ⍵ ←→ id
+     ⍝ ⍺ ←→ Documnet
+     ⍝ ⍵ ←→ id
      j←'document.getElementById("',⍵,'").click()'
-     _←⍺.Document ExecuteJavaScript j
+     _←⍺ ExecuteJavaScript j
      ⎕TGET EventToken
  }

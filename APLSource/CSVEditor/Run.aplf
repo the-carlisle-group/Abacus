@@ -1,6 +1,7 @@
  Run←{
      ⎕THIS.A←##.Main
      d←Build''
+     d.PutEventToken←0
      t←##.Themes.Dark 0
      d.Style←CSS t
      d.Style,←A.ComponentStyles t

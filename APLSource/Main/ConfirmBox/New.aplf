@@ -12,6 +12,7 @@
      p←d A.New'p'c
      m←d A.New'menu'
      b←m A.New¨{'button'⍵}¨o
+     b.id←o
      b.Onclick←⊂A.FQP'OnSelect'
      b.Unqueued←1
      d

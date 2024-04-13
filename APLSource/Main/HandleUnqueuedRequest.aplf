@@ -4,4 +4,5 @@
      ~c.Unqueued:0
      _←(⍎⍵.CurrentTarget⍎'On',⍵.Event)⍵
      1
+     ⍝ 1⊣PutEventToken 0
  }

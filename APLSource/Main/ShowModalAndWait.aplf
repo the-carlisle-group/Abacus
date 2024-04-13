@@ -7,5 +7,6 @@
      ⍝ Only do this ↓↓↓ if the content has a grid
      ⍝ _←⍺ ExecuteJavaScript'window.dispatchEvent(new Event("resize"))'
      _←⍵ ExecuteOnElement'showModal()'
+     _←PutEventToken 0
      ⊃⎕TGET ⎕TID
  }

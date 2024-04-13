@@ -16,6 +16,7 @@
      ⍝ i.Onblur←A.FQP'OnBlur'
      m←d A.New'menu'
      b←m A.New¨{'button'⍵}¨'OK' 'Cancel'
+     b.id←'OK' 'Cancel'
      b.Onclick←⊂A.FQP'OnSelect'
      b.Unqueued←1
      d

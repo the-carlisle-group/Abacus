@@ -1,0 +1,4 @@
+ PutEventToken←{
+     ~EventToken∊⎕TREQ ⎕TNUMS:0
+     ⍵ ⎕TPUT EventToken
+ }

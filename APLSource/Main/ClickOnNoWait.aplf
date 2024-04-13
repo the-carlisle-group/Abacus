@@ -1,0 +1,8 @@
+ ClickOnNoWait←{
+     ⍝ ⍺ ←→ Documnet
+     ⍝ ⍵ ←→ id [delay, 3 second]
+     i d←2↑3,⍨⊆⍵
+     j←'document.getElementById("',i,'").click()'
+     _←⍺ ExecuteJavaScript j
+     ⎕DL d
+ }

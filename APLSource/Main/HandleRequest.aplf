@@ -1,6 +1,10 @@
  HandleRequest←{
      _←{6::0 ⋄ ⎕TSYNC ⍵}⍺
      _←(⍎⍵.CurrentTarget⍎'On',⍵.Event)⍵
-     ~EventToken∊⎕TREQ ⎕TNUMS:z←0
-     1:z←⍵ ⎕TPUT EventToken
+     1:z←PutEventToken 0
+
+     ⍝ ~EventToken∊⎕TREQ ⎕TNUMS:z←0
+     ⍝ ~⍵.Document.PutEventToken:z←0
+     ⍝ ⍵.Document.PutEventToken←0
+     ⍝1:z←⍵ ⎕TPUT EventToken
  }

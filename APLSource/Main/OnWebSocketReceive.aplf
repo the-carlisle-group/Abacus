@@ -12,7 +12,8 @@
      q:0
      c.Target←d{⍵≡'':0 ⋄ ⍺ ElementById ⍵}c.TargetId
      c.CurrentTarget←d ElementById c.CurrentTargetId
-     HandleUnqueuedRequest c:0
+     HandleUnqueuedRequest c:0   ⍝ Running in 0 thread. Is this ok? YES
+     ⍝ HandleEventFiredFromAPL c:0
      ⍝ _←DisplayEventMessage c
      h.LastTID←h.LastTID HandleRequest&c
      0
