@@ -5,5 +5,5 @@
      c←'"',⍵,'"'
      j←'execCode(',(⍕⎕TID),',',c,')'
      _←⍺ ExecuteJavaScript j
-     ⎕TGET ⎕TID
+     ⊃⎕TGET ⎕TID
  }

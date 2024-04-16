@@ -1,0 +1,4 @@
+ BodyValues←{
+     c←BodyCells ⍵
+     ∊¨c.Content
+ }

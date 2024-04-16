@@ -1,6 +1,8 @@
  OnResize←{
      d←⍺.Document
-     t←d A.ElementById ⍵.Id
+     e←d A.ElementsWhere'id'⍵.Id
+     0=≢e:0
+     t←⊃e
      t.Parent.(Width Height)←⍵.Width ⍵.Height
      t Resize 0
  }

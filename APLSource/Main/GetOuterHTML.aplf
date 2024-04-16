@@ -1,0 +1,4 @@
+ GetOuterHTML←{
+     e←⍺ ElementById ⍵
+     e ExecuteOnElementSync'outerHTML'
+ }

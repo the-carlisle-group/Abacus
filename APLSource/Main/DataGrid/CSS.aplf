@@ -84,7 +84,9 @@
      r.margin_right←'2px'
 
      r←s Rule'.more-to-left::before'
-     r.content←'"<"'
+     ⍝ r.content←'"<"'
+     r.content←'"&lt;"'
+
      r.color←'gray'
      r.position←'absolute'
      r.left←0

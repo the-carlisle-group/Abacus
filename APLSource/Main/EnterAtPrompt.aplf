@@ -1,0 +1,4 @@
+ EnterAtPrompt←{
+     e←⍺ ElementById'Prompt'
+     e SetValue ⍵
+ }

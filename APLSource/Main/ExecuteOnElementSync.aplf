@@ -2,6 +2,6 @@
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ Javascript
      ⍝ ← ←→ Result
-     j←'document.getElementById("',⍺.id,'").',⍵
+     j←'document.getElementById(''',⍺.id,''').',⍵
      ⍺.Document ExecuteJavaScriptSync j
  }

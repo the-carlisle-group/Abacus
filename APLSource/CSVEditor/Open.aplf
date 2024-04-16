@@ -23,6 +23,7 @@
      t.Align←c⍴⊂'left'
      t.SortDirection←c⍴0
      g←A.DataGrid.New''   ⍝ #.Abacus.Main.DataGrid.OnResize
+     g.id←'CSVdata'
      g.RowNumbers←1
      g.Values←t.Values
      g.Names←t.Names
