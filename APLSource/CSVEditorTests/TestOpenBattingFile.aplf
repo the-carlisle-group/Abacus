@@ -1,14 +1,21 @@
  TestOpenBattingFile←{
      d←⍵
-     _←d A.ClickOn'File'
-     _←d A.ClickOn'Open'
-     _←d A.EnterAtPrompt'C:/DataSets/Baseball2019/Batting.csv'
-     _←d A.ClickOn'OK'
+     d A.ClickOn'File':
+     d A.ClickOn'Open':
+     d A.EnterAtPrompt'C:/DataSets/Baseball2019/Batting.csv':
+     d A.ClickOn'OK':
      p←d A.ElementById'CSVdata'
      Assert 22=≢p.Values:
      Assert 107429=≢0⊃p.Values:
      q←d A.GetDOM'CSVdata'
      v←A.BodyValues q
      Assert'abercda01' '1871'≡v[0;1 2]:
+     p A.PressKey'ArrowDown':
+     p A.PressKey'ArrowDown':
+     p A.PressKey'End':
+     Assert p.DataCell≡2 21:
+     q←d A.GetDOM'CSVdata'
+     v←A.BodyValues q
+     Assert(2⊃⊢/v)≡,'1':
      0
  }

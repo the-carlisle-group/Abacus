@@ -1,5 +1,5 @@
  HandleRequest←{
      _←{6::0 ⋄ ⎕TSYNC ⍵}⍺
      _←(⍎⍵.CurrentTarget⍎'On',⍵.Event)⍵
-     1:z←PutEventToken 0
+     1:z←PutEventToken ⍵
  }

@@ -3,5 +3,5 @@
      ⍝ ⍵ ←→ id
      j←'document.getElementById("',⍵,'").click()'
      _←⍺ ExecuteJavaScript j
-     ⎕TGET EventToken
+     0⊣⎕TGET EventToken
  }
