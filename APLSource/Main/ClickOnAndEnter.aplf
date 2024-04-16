@@ -1,0 +1,8 @@
+ ClickOnAndEnter←{
+     ⍝ ⍺ ←→ Documnet
+     ⍝ ⍵ ←→ id text
+     i t←
+     e←d ElementById i
+     _←e FireKeyDownAndWait¨,¨t
+     0
+ }

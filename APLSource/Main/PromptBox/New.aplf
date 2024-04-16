@@ -1,23 +1,22 @@
  New←{
-     ⍝ ⍵ ←→ Title, Label,[Value]
+     ⍝ ⍵ ←→ Title, Label, Value, OKHandler
      ⍝ ← ←→ new dialog element
-     tv lv iv←3↑⍵,⊂''
+     tv lv iv cb←⍵
      ⎕THIS.A←##
      d←A.New'dialog'
      d.class←'prompt-box'
      d.Onclose←A.FQP'OnClose'
-     d.Unqueued←1
-     d.Tid←⎕TID
+     d.OnOK←cb
      h1←d A.New'h1'tv
      l←d A.New'label'lv
      i←d A.New'input'
+     i.id←'Prompt'
      i.value←iv
-     i.Oninput←A.FQP'OnInput' ⍝ NOT FIRING?!
+     i.Oninput←A.FQP'OnInput'
      ⍝ i.Onblur←A.FQP'OnBlur'
      m←d A.New'menu'
      b←m A.New¨{'button'⍵}¨'OK' 'Cancel'
      b.id←'OK' 'Cancel'
-     b.Onclick←⊂A.FQP'OnSelect'
-     b.Unqueued←1
+     b.Onclick←A.FQP¨'OnOK' 'OnCancel'
      d
  }

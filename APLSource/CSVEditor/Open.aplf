@@ -3,11 +3,11 @@
      ⍝ If large:BlockRead
      ⍝ v n←(⎕CSV⍠1)⍵ ⍬ ⍬ 1
      rc fn←d ToBlockedDCF ⍵
-     rc=1:0                  ⍝ rc is 0 1 or 2    NOT BOOLEAN!
+     rc=1:1                  ⍝ rc is 0 1 or 2    NOT BOOLEAN!
      rc fn2←d ToDCF fn
-     rc=1:0
+     rc=1:1
      rc(n v)←d ReadDCF fn2
-     rc=1:0
+     rc=1:1
      r←≢0⊃v
      c←≢n
      fmt←{' '~⍨,'CI20'⎕FMT ⍵}
@@ -32,5 +32,6 @@
      _←d A.DataGrid.Init g
      m←d A.ElementByTag'main'
      _←m A.SetInnerHTML g
-     g A.DataGrid.Resize 0
+     _←g A.DataGrid.Resize 0
+     0
  }

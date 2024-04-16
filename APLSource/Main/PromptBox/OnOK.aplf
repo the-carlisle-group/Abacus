@@ -1,10 +1,10 @@
- OnSelect←{
+ OnOK←{
      t←⍵.CurrentTarget
-     c←∊t.Content
      d←t A.GetNearest'dialog'
      i←d A.ElementByTag'input'
      v←i.value
-     _←A.DeleteElement d
-     _←c v ⎕TPUT d.Tid
-     0
+     f←⍎d.OnOK
+     r←⍵.Document f v
+     r:0
+     A.DeleteElement d
  }

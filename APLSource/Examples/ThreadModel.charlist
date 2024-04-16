@@ -1,0 +1,57 @@
+         Browser        |   APL Test Thread    |   APL CallBack Threads                                             
+ -----------------------|----------------------|------------------------------------------------------------------------
+        Button1         | Start Test Fun in &1 |
+                        |          ↓           |
+                        |   ClickOn Button1    |
+                        |   ⎕TGET TestToken... |
+                        |          ↓           |
+                   ---- | ←-------←            |
+             ↓          |         .            |
+                        |         .            |
+         Fire Click     |         .            |
+             ↓          |         .            |         
+             --->       | -----------------------------→ &2
+                        |         .            |         ↓
+                        |         .            |     Run CallBack1
+                        |         .            |         ↓
+                        |         .            |     Create dialog
+                        |         .            |         ↓
+             --------------------------------------← Send to brower 
+            ↓           |         .            |         ↓                                
+         Puts up        |         .            |         ↓
+                                                    ← CallShowModal
+       dialog element   |         .            |   CallBack1 completes
+       with Button2     |         .            |         ↓
+                        |     ⎕TGET completes  |    ←⎕TPUT TestToken
+                        |    ClickOn Button2   |      End of &2
+                        |     ⎕TGET TestToken  |                             
+             ---------------------←            |                           
+            ↓           |         .            |                     
+         Fire Click     |         .            |                    
+            ↓           |         .            |                     
+             →------------------------------------------→ &3            
+                        |         .            |             ↓
+                        |          .           |         Run CalLback2
+                        |          .           |              ↓
+             ←----------------------------------------← Creates dbox
+            ↓           |          .            |             ↓
+       Puts up element  |          .            |       ← Sendto browser
+       With OK, Cancel  |          .            |             ↓
+            ↓           |          .            |      Call ShowModalAndWait
+                        |      ⎕TGET Completes  |       ←⎕TPUT TestToken 
+                        |      ClickOn  'OK'    |
+                        |     ⎕TGET TestToken   |           ⎕TGET 3
+            ---------------------←              |             .            
+            ↓           |         .             |             .       
+         Fire Click     |         .             |             .      
+            ↓           |         .             |             .       
+             →-------------------------------------------------------------------------→ &4 
+                        |         .              |        ⎕TGET Completes      |      'OK'⎕TPUT 3             
+                        |         .              |       Callback2 continues   |       End of &4
+                        |         .              |       Callback2 ends        |
+                        |      ⎕TGET Complete    |        ← ⎕TPUT TestToken     |
+                                                           End of &3            |
+                        |                        |                              |
+                        |                        |                             |            
+                        |                        |                             |            
+                        |                        |                             |
