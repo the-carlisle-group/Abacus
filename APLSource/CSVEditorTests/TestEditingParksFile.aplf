@@ -1,0 +1,18 @@
+ TestEditingParksFile←{
+     d←⍵
+     d A.ClickOn'File':
+     d A.ClickOn'Open':
+     d A.EnterAtPrompt GetFileName'Parks.csv':
+     d A.ClickOn'OK':
+     p←d A.ElementById'CSVdata'
+     Assert 6=≢p.Values:
+     Assert 255=≢0⊃p.Values:
+     p A.PressKey'ArrowRight':
+     p A.PressKey'ArrowRight':
+     p A.Enter'Hello world!':
+     p A.PressKey'Enter':
+     p A.PressKey'F2':
+     p A.Enter'Rock and Roll':
+
+     0
+ }

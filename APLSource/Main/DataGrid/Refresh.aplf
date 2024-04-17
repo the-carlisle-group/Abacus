@@ -2,7 +2,7 @@
      t←⍵
      hc bc←t GetContent''
      h←DOM2HTML hc bc
-     _←t ##.SetProperty'innerHTML'h ⍝ (Sanitize h) ??
+     _←t ##.SetProperty'innerHTML'(##.Sanitize h)
      t.THEAD_TR.Content←hc
      t.TBODY.Content←(≢bc)↑t.TBODY_TR
      t.TBODY.Content.Content←↓bc

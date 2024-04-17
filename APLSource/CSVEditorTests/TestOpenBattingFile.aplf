@@ -2,7 +2,7 @@
      d←⍵
      d A.ClickOn'File':
      d A.ClickOn'Open':
-     d A.EnterAtPrompt'C:/DataSets/Baseball2019/Batting.csv':
+     d A.EnterAtPrompt GetFileName'Batting.csv':
      d A.ClickOn'OK':
      p←d A.ElementById'CSVdata'
      Assert 22=≢p.Values:

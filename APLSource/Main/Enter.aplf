@@ -1,0 +1,7 @@
+ Enter←{
+     t←⍺.Tag
+     t≡'html':⍺ EnterAtPrompt ⍵
+     t≡'table':⍺ EnterOnTable ⍵
+     t≡'input':⍺ FireKeyDownOnInputAndWait¨⍵
+     0
+ }

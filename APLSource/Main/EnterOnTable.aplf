@@ -1,0 +1,6 @@
+ EnterOnTable←{
+     ⍺.Mode=2:0⊣i FireKeyDownOnInputAndWait¨1↓⍵
+     _←⍺ FireKeyDownAndWait⊃⍵
+     i←⍺ ElementById'data-grid-input'
+     0⊣i FireKeyDownOnInputAndWait¨1↓⍵
+ }

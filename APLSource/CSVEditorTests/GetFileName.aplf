@@ -1,0 +1,5 @@
+ GetFileName←{
+     ∨/'/\'∊⍵:⍵
+     f←##.AcreConfig.ProjectFolder
+     f,'Assets/Development/TestFiles/',⍵
+ }
