@@ -12,7 +12,10 @@
      i←d A.New'input'
      i.id←'Prompt'
      i.value←iv
+
      i.Oninput←A.FQP'OnInput'
+     i.Onkeydown←A.FQP'OnKeyDown'
+
      ⍝ i.Onblur←A.FQP'OnBlur'
      m←d A.New'menu'
      b←m A.New¨{'button'⍵}¨'OK' 'Cancel'

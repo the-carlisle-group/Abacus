@@ -1,0 +1,3 @@
+ Press←{
+     0⊣⍺ FireKeyDownAndWait ⍵
+ }

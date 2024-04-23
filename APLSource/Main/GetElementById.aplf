@@ -1,0 +1,8 @@
+ GetElementById←{
+     ⍝ ⍺ ←→ Document, Element (or result of Elements ⍺)
+     ⍝ ⍵ ←→ Id
+     ⍝ ← ←→ element
+     r←⍺ ElementsWhere'id'⍵
+     0=≢r:('undefined id: ',⍵)⎕SIGNAL 6
+     ⊃r
+ }

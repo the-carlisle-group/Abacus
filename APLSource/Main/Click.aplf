@@ -1,0 +1,8 @@
+ Click←{
+     ⍝ ⍺ ←→ Documnet
+     ⍝ ⍵ ←→ id
+     j←'document.getElementById("',⍵,'").click()'
+     ⍺.PutTestToken←1
+     _←⍺ ExecuteJavaScript j
+     0⊣⎕TGET EventToken
+ }

@@ -1,0 +1,4 @@
+ OnChange←{
+     ⎕←'Change event!'
+     0
+ }

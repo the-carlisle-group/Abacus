@@ -1,5 +1,5 @@
  EnterOnTable←{
-     ⍺.Mode=2:0⊣i FireKeyDownOnInputAndWait¨1↓⍵
+     ⍺.CellMode=2:0⊣(⍺ ElementById'data-grid-input')FireKeyDownOnInputAndWait¨⍵
      _←⍺ FireKeyDownAndWait⊃⍵
      i←⍺ ElementById'data-grid-input'
      0⊣i FireKeyDownOnInputAndWait¨1↓⍵

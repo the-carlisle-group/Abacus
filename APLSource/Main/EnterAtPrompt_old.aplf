@@ -1,0 +1,4 @@
+ EnterAtPrompt_old←{
+     e←⍺ ElementById'Prompt'
+     e SetValue ⍵
+ }

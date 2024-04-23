@@ -1,7 +1,9 @@
  FireKeyDownOnInputAndWait←{
      ⍝ ⍺ Element
      ⍝ ⍵ Key:  'Enter', 'ArrowUp' etc
+     ⍝ ⍵='x':crash
      k←⍵
+     ⍺.Document.PutTestToken←1
      _←⍺ ExecuteOnElement'dispatchEvent(new KeyboardEvent(''keydown'',{key:''',k,'''}))'
      _←⍺ SetValue ⍺.value,k
      ⎕TGET EventToken

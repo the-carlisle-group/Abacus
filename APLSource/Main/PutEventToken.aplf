@@ -1,4 +1,6 @@
  PutEventToken←{
-     ~EventToken∊⎕TREQ ⎕TNUMS:0
+     ~⍵.Document.PutTestToken:0
+     ⍵.Document.PutTestToken←0
+     ⍝ ~EventToken∊⎕TREQ ⎕TNUMS:0
      ⍵ ⎕TPUT EventToken
  }
