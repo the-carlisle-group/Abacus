@@ -1,7 +1,0 @@
- ClickOn←{
-     ⍝ ⍺ ←→ Documnet
-     ⍝ ⍵ ←→ id
-     j←'document.getElementById("',⍵,'").click()'
-     _←⍺ ExecuteJavaScript j
-     0⊣⎕TGET EventToken
- }

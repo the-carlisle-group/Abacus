@@ -1,14 +1,30 @@
  TestFileOpen←{
      f←⍵
      d←f.Document
-     _←d A.ClickOn'File'
-     _←d A.ClickOn'Open'
-     _←d A.ClickOnNoWait'OK'
-     _←d A.ClickOn'Pause'
-     _←d A.ClickOnNoWait'Resume'
-     _←d A.ClickOn'Pause'
-     _←d A.ClickOnNoWait'Resume'
-     _←d A.ClickOn'Pause'
-     _←d A.ClickOn'Finish'
+     d A.Click'File':
+     d A.Click'Open':
+     d A.Enter GetFileName'Parks.csv':
+     d A.Click'OK':
+     g←d A.GetElementById'CSVdata'
+     Assert 6=≢g.Values:
+     Assert 255=≢0⊃g.Values:
+     d A.Click'Open':
+     d A.Enter GetFileName'Batting.csv':
+     d A.Click'OK':
+     g←d A.GetElementById'CSVdata'
+     Assert 22=≢g.Values:
+     Assert 107429=≢0⊃g.Values:
+     d A.Click'Open':
+     d A.Enter GetFileName'Pitching.csv':
+     d A.Click'OK':
+     g←d A.GetElementById'CSVdata'
+     Assert 30=≢g.Values:
+     Assert 47628=≢0⊃g.Values:
+     d A.Click'Open':
+     d A.Enter GetFileName'People.csv':
+     d A.Click'OK':
+     g←d A.GetElementById'CSVdata'
+     Assert 24=≢g.Values:
+     Assert 20081=≢0⊃g.Values:
      0
  }
