@@ -1,4 +1,5 @@
  HandleEventFiredFromAPL←{
+     OBSOLETE
      ~EventToken∊⎕TREQ ⎕TNUMS:0
      _←(⍎⍵.CurrentTarget⍎'On',⍵.Event)⍵
 

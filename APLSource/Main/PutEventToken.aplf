@@ -1,5 +1,0 @@
- PutEventToken←{
-     ~⍵.Document.PutTestToken:0
-     ⍵.Document.PutTestToken←0
-     ⍵ ⎕TPUT EventToken
- }

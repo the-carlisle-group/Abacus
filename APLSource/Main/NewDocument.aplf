@@ -1,7 +1,7 @@
  NewDocument←{
      h←New'html'
      h.NextId←0
-     h.PutTestToken←0
+     h.Waiting←0
      h.lang←'en'
      hd←h New'head'
      mt←hd New'meta'

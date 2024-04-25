@@ -6,7 +6,7 @@
      n←⎕NS''
      n.(key ctrlKey shiftKey altKey)←(w~m),⊂¨'false' 'true'[m∊w]
      j←⎕JSON n
-     ⍺.Document.PutTestToken←1
+     ⍺.Document.Waiting←1
      _←⍺ ExecuteOnElement'dispatchEvent(new KeyboardEvent(''keydown'',',j,'))'
-     ⎕TGET EventToken
+     ⎕TGET DoneToken
  }

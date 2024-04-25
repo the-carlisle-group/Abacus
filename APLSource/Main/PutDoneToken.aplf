@@ -1,0 +1,5 @@
+ PutDoneToken←{
+     ~⍵.Document.Waiting:0
+     ⍵.Document.Waiting←0
+     ⍵ ⎕TPUT DoneToken
+ }

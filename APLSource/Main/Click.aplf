@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Documnet
      ⍝ ⍵ ←→ id
      j←'document.getElementById("',⍵,'").click()'
-     ⍺.PutTestToken←1
+     ⍺.Waiting←1
      _←⍺ ExecuteJavaScript j
-     0⊣⎕TGET EventToken
+     0⊣⎕TGET DoneToken
  }
