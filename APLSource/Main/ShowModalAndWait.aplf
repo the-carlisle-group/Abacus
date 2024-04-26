@@ -7,6 +7,7 @@
      ⍝ Only do this ↓↓↓ if the content has a grid
      ⍝ _←⍺ ExecuteJavaScript'window.dispatchEvent(new Event("resize"))'
      _←⍵ ExecuteOnElement'showModal()'
-     _←PutDoneToken ⍺  ⍝ Why?
+     _←PutDoneToken ⍵ ⍝ Needed if running in test mode
+                      ⍝ because modal form would have been popped up by Click function
      ⊃⎕TGET ⎕TID
  }

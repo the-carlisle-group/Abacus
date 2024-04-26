@@ -16,5 +16,6 @@
      ⍝ HandleEventFiredFromAPL c:0
      ⍝ _←DisplayEventMessage c
      h.LastTID←h.LastTID HandleRequest&c
+     ⍝ _←c ⎕TPUT d.QueuedThread
      0
  }
