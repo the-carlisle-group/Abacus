@@ -1,5 +1,5 @@
  ToDCF←{
-     f←∊'.dcf',⍨¯1↓⎕NPARTS ⍵
+     f←'.dcf'GetTempFile ⍵
      _←3 ⎕NDELETE f
      s←⍵ ⎕FTIE 0
      t←f ⎕FCREATE 0

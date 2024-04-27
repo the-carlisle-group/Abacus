@@ -2,7 +2,7 @@
 
                 ⍝ ⍵ ←→ CSVFile Name
      ⍺←0        ⍝ Document - no doc, no progress bar!
-     c←∊'.bdcf',⍨¯1↓⎕NPARTS ⍵
+     c←'.bdcf'GetTempFile ⍵
      _←3 ⎕NDELETE c
      p←⎕NS''
      p.Status←'Rows read: 0'

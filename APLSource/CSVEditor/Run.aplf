@@ -6,6 +6,6 @@
      d.Style,←A.ComponentStyles t
      d.Caption←'Abacus CSV Editor'
      _←A.NewForm d
-     d.QueuedThread←##.Main.ThreadQueueTrad&0
+     ⍝ d.QueuedThread←##.Main.ThreadQueueTrad&0
      d
  }

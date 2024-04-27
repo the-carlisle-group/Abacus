@@ -1,0 +1,4 @@
+ GetTempFile←{
+     n←1⊃⎕NPARTS ⍵
+     (739⌶0),'/',n,⍺
+ }
