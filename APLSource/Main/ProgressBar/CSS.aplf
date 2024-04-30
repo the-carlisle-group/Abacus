@@ -1,34 +1,31 @@
- CSS←{                       ⍝ Try nesting THIS!
+ CSS←{
      Rule←##.NewRule
-     s←Rule''
      ⍝ ************************
-     r←s Rule'.progress-bar'
-     ⍝ r.background_color←'red'
-     r.width←'40rem'
-     r.border←'none'
-     r.border_radius←'.5rem'
-     r.padding←0  ⍝ '1rem'
-     r.position←'fixed'
-     r.left←'50%'
-     r.top←'50%'
-     r.transform←'translate(-50%, -50%)' ⍝ Need this?
+     s←Rule'.progress-bar'
+     s.width←'40rem'
+     s.border←'none'
+     s.border_radius←'.5rem'
+     s.padding←0
+     s.position←'fixed'
+     s.left←'50%'
+     s.top←'50%'
+     s.transform←'translate(-50%, -50%)'
      ⍝ ************************
-     r←s Rule'.progress-bar::backdrop'
+     r←s Rule'::backdrop'
      r.backdrop_filter←'blur(3px)'
      ⍝ ************************
-     r←s Rule'.progress-bar h1'
+     r←s Rule'h1'
      r.font_family←'Arial'
      r.padding←'1rem'
      r.background_color←'steelblue'
      ⍝ ************************
-     r←s Rule'.progress-bar p'
+     r←s Rule'p'
      r.padding←'2rem'
      r.font_family←'Arial'
      r.font_size←'1.5rem'
      r.font_weight←'normal'
-
      ⍝ Progress bar itself
-     r←s Rule'.progress-bar progress'
+     r←s Rule'progress'
      r.display←'block'
      r.width←'90%'
      r.height←'1rem'
@@ -36,17 +33,13 @@
      r.padding_top←'3rem'
      r.padding_bottom←'2rem'
      ⍝ ************************
-     r←s Rule'.progress-bar menu'
-     r.list_style_type←'none'
-     r.display←'flex'
-     r.justify_content←'center'
-     r.gap←'1rem'
-     r.padding←'0rem 2rem 2rem 2rem'
-     ⍝ ************************
-     r←s Rule'.progress-bar button'
+     r←s Rule'button'
      r.width←'10rem'
      r.height←'3rem'
      r.border_radius←'.25rem'
+     r.display←'block'
+     r.margin←'auto'
+     r.margin_bottom←'2em'
      ⍝ ************************
-     s
+     ##.UnNestCSS s
  }

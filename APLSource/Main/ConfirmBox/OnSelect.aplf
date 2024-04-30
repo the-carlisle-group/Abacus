@@ -2,6 +2,5 @@
      d←⍵.CurrentTarget ##.GetNearest'dialog'
      _←##.DeleteElement d
      v←⍵.CurrentTarget.Name
-     _←v ⎕TPUT d.Tid
-     0
+     0⊣v ⎕TPUT d.Tid
  }

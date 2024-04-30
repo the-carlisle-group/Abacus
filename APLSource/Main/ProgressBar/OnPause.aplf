@@ -1,4 +1,5 @@
  OnPause←{
+     ⎕←'On pause!'
      d←⍵.CurrentTarget A.GetNearest'dialog'
      d.Pause←1
      0

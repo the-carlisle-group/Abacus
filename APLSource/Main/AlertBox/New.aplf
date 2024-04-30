@@ -8,7 +8,6 @@
      p←d A.New'p'm
      b←d A.New'button' 'OK'
      b.Onclick←A.FQP'OnOK'
-     b.Unqueued←1
      d.Onclose←A.FQP'OnOK'
      d
  }

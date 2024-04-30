@@ -1,0 +1,6 @@
+ OnClose←{
+     ⎕←'On close!'
+     d←⍵.CurrentTarget A.GetNearest'dialog'
+     d.Pause←1
+     d A.ExecuteOnElement'showModal()' ⍝ Reopen!
+ }

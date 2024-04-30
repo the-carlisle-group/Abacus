@@ -36,5 +36,5 @@
      m←d A.ElementByTag'main'
      _←m A.SetInnerHTML g
      _←g A.DataGrid.Resize 0
-     0
+     d A.AlertBox.Show'File loaded.'
  }
