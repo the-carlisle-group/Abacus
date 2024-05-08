@@ -1,0 +1,6 @@
+ Show←{
+     ⍝ ⍺ ←→ Documnet
+     ⍝ ⍵ ←→ id
+     j←'document.getElementById("',⍵,'").style.display="block"'
+     ⍺ ExecuteJavaScript j
+ }
