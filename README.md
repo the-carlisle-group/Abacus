@@ -1,3 +1,8 @@
+> Take care of the code, be gentle to the computer, and make beautiful stuff on your screens.
+
+Håkon Wium Lie 
+
+
 # Abacus, an HTML Framework for Dyalog APL
 
 (See the wiki for documentation) 
