@@ -3,5 +3,5 @@
      d←GetDimensions 0                     ⍝ Get dimensions
      hh←d.tdFontSize+2×d.thPaddingTop      ⍝ Header height
      rh←d.thFontSize+2×d.tdPaddingTop
-     ⌊rh÷⍨h-hh
+     ¯1+⌊rh÷⍨h-hh
  }

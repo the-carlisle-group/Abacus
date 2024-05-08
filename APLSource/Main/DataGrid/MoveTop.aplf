@@ -1,0 +1,8 @@
+ MoveTop←{
+     t←⍵
+     t.DataCell[0]←0
+     t.WindowCell[0]←0
+     t.TableCell[0]←0
+     t.WindowIndex[0]←0
+     Refresh t
+ }

@@ -1,8 +1,17 @@
  MoveEnd←{
      t←⍵
-     t.WindowSize[1]←0⊃t.ColumnsPerIndex
-     t.DataCell←0 0
-     t.WindowCell←0 0
-     t.WindowIndex←0 0
+     ⍝ Same as MoveToColumnRight
+     n←¯1+1⊃t.DataSize
+     i←n⊃t.ScrollIntoViewIndex
+     t.WindowIndex[1]←i
+     t.WindowSize[1]←i⊃t.ColumnsPerIndex
+     t.WindowCell[1]←n-i
+     t.TableCell[1]←t.WindowCell[1]+t.ColumnOffset
+     ⍝ Same as MoveBottom
+     t.DataCell[0]←t.DataSize[0]-1
+     t.WindowCell[0]←t.WindowSize[0]-1
+     t.TableCell[0]←t.WindowCell[0]
+     t.WindowIndex[0]←t.DataSize[0]-t.WindowSize[0]
+     ⍝ Done
      Refresh t
  }

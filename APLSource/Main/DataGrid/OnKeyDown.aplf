@@ -16,6 +16,10 @@
      u∧k≡'ArrowLeft':0 ¯1 Move t
      u∧k≡'ArrowUp':¯1 0 Move t
      u∧k≡'ArrowDown':1 0 Move t
+     c∧k≡'ArrowUp':MoveTop t
+     c∧k≡'ArrowDown':MoveBottom t
+     c∧k≡'ArrowLeft':0 MoveToColumn t
+     c∧k≡'ArrowRight':¯1 MoveToColumn t
      u∧k≡'PageUp':MovePageUp t
      u∧k≡'PageDown':1 MovePageDown t
      u∧k≡'Home':0 MoveToColumn t
