@@ -3,8 +3,8 @@
      ~t.Init:0
      p←t.Parent
      0=p.⎕NC'Width':0
-     t.AvailableWidth←p.Width-+/(t.RowNumbers+t.FreezeColumns)↑t.Widths
-     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.Widths
+     t.AvailableWidth←p.Width-+/(t.RowNumbers+t.FreezeColumns)↑t.FullWidths
+     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.FullWidths
      t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
      t.RowsToDisplay←p.Height ComputeRowsToDisplay 0
      t.WindowSize←t.RowsToDisplay,(1⊃t.WindowIndex)⊃t.ColumnsPerIndex

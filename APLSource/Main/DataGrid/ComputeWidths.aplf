@@ -1,5 +1,5 @@
  ComputeWidths←{
      t←⍺
-     w←(t.RowNumbers/2),12⌈{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨p.Values}t.Values
-     24+w×12
+     c←(t.RowNumbers/2),12⌈{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
+     24+c×12
  }

@@ -4,6 +4,7 @@
      t.DataSize←{t.Inverted:(≢0⊃⍵),≢⍵ ⋄ ⍴⍵}t.Values
      t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ∊⌈⌿⍴¨⍵}t.Values
      t.Widths←t ComputeWidths 0
+     t.FullWidths←t ComputeFullWidths t.Widths
      t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Names
      t.ColumnOffset←t.RowNumbers+t.FreezeColumns
      t.WindowCell←t{2=⍺.⎕NC'WindowCell':⍺.WindowCell ⋄ ⍵}0,-t.FreezeColumns

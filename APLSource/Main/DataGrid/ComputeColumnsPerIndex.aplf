@@ -1,6 +1,7 @@
  ComputeColumnsPerIndex←{
-     d←GetDimensions 0
-     w←⍵+d.tdBorderWidth+2×d.tdPaddingLeft
+     ⍝ d←GetDimensions 0
+     ⍝ w←⍵+d.tdBorderWidth+2×d.tdPaddingLeft
+     w←⍵
      s←+\¨(⍳≢w)↓¨⊂w
      1+s⍸¨⍺
  }
