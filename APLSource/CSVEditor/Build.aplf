@@ -1,5 +1,5 @@
  Build←{
-     d←A.NewDocument''
+     d←A.NewApplication''
      b←A.GetBody d
      a←b A.AutoComplete.New''
      d.AutoCompleteElement←a

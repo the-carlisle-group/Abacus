@@ -6,5 +6,4 @@
      0=≢g:0
      _←⍺ DataGrid.OnResize¨g
      0
-
  }

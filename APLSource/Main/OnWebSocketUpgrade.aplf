@@ -2,5 +2,6 @@
      h←⊃⍵
      h.WebSocketID←2⊃⍵
      d←h.Document
+     _←d OnApplicationStartUp 0
      d ExecuteJavaScript'window.dispatchEvent(new Event("resize"))'
  }
