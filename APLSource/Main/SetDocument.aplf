@@ -3,12 +3,6 @@
      ⍝ ⍵ ←→ Application Document [Target temp file name]
      d f←2↑⍵,⊂''
      d=0:0
-     _←SetParent d
-     e←Elements d
-     e.Document←d
-     _←d SetDefaultId e
-     ⍺.Document←d
-     d.HTMLRenderer←⍺
      h←DOM2HTML d
      0=≢f:z←h⊣⍺.HTML←h
      _←h ⎕NPUT f 1

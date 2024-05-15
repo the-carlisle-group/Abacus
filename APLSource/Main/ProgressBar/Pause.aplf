@@ -3,6 +3,6 @@
      ⍺.Pause←0
      t←'Process paused'
      c←''
-     b←'Cancel' 'Resume' 'Finish'
+     b←'Cancel' 'Resume' 'Truncate'
      ⍺.Document A.ConfirmBox.Show t c b
  }

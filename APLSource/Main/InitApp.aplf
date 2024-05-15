@@ -1,0 +1,17 @@
+ InitApp←{
+     ⍝ ⍺ ←→ Client
+     ⍝ ⍵ ←→ Document
+     c←⍺
+     d←⍵
+     c.Document←d
+     d.Client←c
+     d.Script←JavaScript
+     d.NextId←0
+     d.Waiting←0
+     d.StopPropagation←0
+     e←Elements d
+     e.Document←d
+     _←d SetDefaultId e
+     _←SetParent d
+     0
+ }

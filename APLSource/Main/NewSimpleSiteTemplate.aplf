@@ -25,6 +25,7 @@
      h←b New'header'
      _←h New'h1'⍵.Title
      _←h New'h2'⍵.Subtitle
+     _←h New'h3'⍵.Quote
      n←h New'nav'
      _←n NewLink¨⍵.Menu
      m←b New'main'

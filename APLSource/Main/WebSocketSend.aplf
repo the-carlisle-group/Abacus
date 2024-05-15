@@ -2,5 +2,6 @@
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ Data to send
      ⍝ Need to UTF8 ⍵ probably
-     ⍺.HTMLRenderer.WebSocketSend ⍺.HTMLRenderer.WebSocketID ⍵ 1 1
+     c←⍺.Client
+     c.WebSocketSend c.WebSocketID ⍵ 1 1
  }

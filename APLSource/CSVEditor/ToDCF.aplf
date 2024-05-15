@@ -9,8 +9,14 @@
      b←c÷⍨¯2+1⊃⎕FSIZE s
      i←2+c×⍳b
      g←ReadAndWriteColumn
-     c←'Assembling columns...'
-     rc rv←⍺ g A.ProgressBar.Run c n(s t i)
+     p←⎕NS''
+     p.Iterator←n
+     p.Caption←'Assembling columns...'
+     p.SourceTie←s
+     p.TargetTie←t
+     p.Indices←i
+     p.Status←n
+     rc rv←⍺ g A.ProgressBar.Run p
      _←⎕FUNTIE s t
-     (⌈/rc)f
+     rc f
  }

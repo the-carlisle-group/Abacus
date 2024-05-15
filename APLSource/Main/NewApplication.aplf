@@ -1,9 +1,0 @@
- NewApplication←{
-     d←NewDocument ⍵
-     d.Script←JavaScript
-     d.NextId←0
-     d.Waiting←0
-     d.OnStartUp←''
-     d.StopPropagation←0
-     d
- }

@@ -10,5 +10,6 @@
      h.onWebSocketUpgrade←'OnWebSocketUpgrade'
      h.onWebSocketReceive←'OnWebSocketReceive'
      h.Caption←⍵.Caption
+     _←h InitApp ⍵
      h⊣h SetDocument ⍵
  }

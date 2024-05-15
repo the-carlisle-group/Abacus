@@ -1,3 +1,13 @@
  Determinate←{
-     ↓⍉↑(⊂⍺ ⍵)⍺⍺ RunEach¨⍳≢⍺.Iterator
+     b r←↓⍉↑(⊂⍺ ⍵)⍺⍺{
+         p w←⍺
+         p.Cancel:1 0
+         c←p Pause 0
+         c≡'Cancel':1 0⊣p.Cancel←1
+         c≡'Truncate':2 0⊣p.Cancel←1
+         _←p Update ⍵⊃w.Status
+         r←⍵ ⍺⍺ w
+         0 r
+     }¨⍳≢⍺.Iterator
+     (⌈/b)(r/⍨b=0)
  }

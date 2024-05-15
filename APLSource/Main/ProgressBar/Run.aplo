@@ -1,9 +1,8 @@
  Run←{
      ⎕THIS.A←##
-     (c i w)←⍵
-     p←New c i
+     p←New ⍵.Caption ⍵.Iterator
      _←⍺ A.ShowModal p
-     op←⍎(0=≢i)⊃'Determinate' 'Indeterminate'
-     r←p ⍺⍺ op w
+     op←⍎(0=≢⍵.Iterator)⊃'Determinate' 'Indeterminate'
+     r←p ⍺⍺ op ⍵
      r⊣A.DeleteElement p
  }

@@ -1,6 +1,6 @@
  ExecuteJavaScript←{
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ JavaScript
-     ⍺.HTMLRenderer.WebSocketSend ⍺.HTMLRenderer.WebSocketID ⍵ 1 1
-     ⍝ ⍺ WebSocketSend ⍵
+     c←⍺.Client
+     c.WebSocketSend c.WebSocketID ⍵ 1 1
  }

@@ -1,0 +1,5 @@
+ ReadColumn←{
+     n←⍺⊃⍵.Iterator
+     v←⎕FREAD ⍵.TargetTie,2+⍺
+     n v
+ }

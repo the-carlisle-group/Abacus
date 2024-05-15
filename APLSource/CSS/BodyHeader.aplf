@@ -15,6 +15,16 @@
      r.text_align←'center'
      r.font_size←'2rem'
      r.margin←0
+     ⍝ ****************
+     s,←r←Rule'body>header>h3'
+     r.font_family←'Times New Roman'
+     r.font_style←'italic'
+     r.text_align←'center'
+     r.font_size←'1.2rem'
+     r.margin←0
+     ⍝ ******************************
+
+
      ⍝ ******************************
      s,←r←Rule'body>header>nav'
      r.display←'flex'
