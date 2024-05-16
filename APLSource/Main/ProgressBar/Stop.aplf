@@ -1,0 +1,4 @@
+ Stop←{
+     d←⍺ A.GetElementById'progress-bar'
+     ⍺ A.DeleteElement d
+ }

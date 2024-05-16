@@ -1,0 +1,17 @@
+ Start←{
+     ⎕THIS.A←##
+     c←⍵,(0=≢⍵)/'Working...'
+     e←A.New'dialog'
+     e.class←'progress-bar'
+     e.id←'progress-bar'
+     e.TID←⎕TID
+     h1←e A.New'h1'c
+     p←e A.New'progress'
+     p.id←'progress'
+     b←e A.New'button' 'Cancel'
+     b.id←'Cancel'
+     b.Unqueued←1
+     b.Onclick←A.FQP'OnCancel'
+     _←⍺ A.ShowModal e
+     0
+ }

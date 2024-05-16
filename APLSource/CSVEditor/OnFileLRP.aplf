@@ -1,0 +1,10 @@
+ OnFileLRP←{
+     ⍝ Test Long Running Process
+     d←⍵.Document
+     _←d A.ProgressBar.Start''
+     ⎕←'Starting LRP'
+     _←⎕DL 10
+     ⎕←'Completed LRP'
+     _←d A.ProgressBar.Stop''
+     0
+ }
