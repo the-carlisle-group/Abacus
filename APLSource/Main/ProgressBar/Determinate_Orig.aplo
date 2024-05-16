@@ -1,3 +1,0 @@
- Determinate_Orig←{
-     ↓⍉↑(⊂⍺ ⍵)⍺⍺ RunEach¨⍳≢⍺.Iterator
- }
