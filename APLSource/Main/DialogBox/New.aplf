@@ -4,6 +4,7 @@
      A←##
      d←A.New'dialog'
      d.class←'dialog-box'
+     a←d ##.AutoComplete.New''
      ⍝ d.Onclose←A.FQP'OnClose'
      h←d A.New'header'
      h1←h A.New'h1'p.Title

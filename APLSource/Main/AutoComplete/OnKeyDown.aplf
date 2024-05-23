@@ -4,7 +4,8 @@
      e←⍵.CurrentTarget ⍝ Input element
      k≡'Shift':0
      ck←⍵.CtrlKey≡⊂'true'
-     l←⍵.Document.AutoCompleteElement
+     l←GetAutoCompleteElement e
+     e.AutoCompleteElement←l
      a←0<≢AutoCompleteElements l
      (~a)∧k≡'Enter':OnEnter ⍵
      (~a)∧k≡'ArrowDown':¯1 History ⍵
@@ -16,7 +17,7 @@
      a∧k≡'Escape':StopPropagation ⍵⊣1 Clear e
      a∧k≡'ArrowDown':ResetCursor ⍵⊣1 OnArrowUpDown ⍵
      a∧k≡'ArrowUp':ResetCursor ⍵⊣¯1 OnArrowUpDown ⍵
-     ~(⊂k)∊,¨e.TriggerKeys:Clear l
+     ~(⊂k)∊,¨e.TriggerKeys:Clear e
      rc st←GetStartText ⍵
      rc:Clear e
      i←e.AutoCompleteItems
@@ -27,7 +28,7 @@
      c.id←⍵.Document ##.NextIds≢c
      c.class←⊂''
      (0⊃c).class←'active-item'
-     _←SetPosition ⍵
+     _←l SetPosition ⍵
      _←l ##.SetProperty'style.font'⍵.Font
      _←l ##.SetInnerHTML c
      t←⍵.CurrentTarget A.GetNearest'table'

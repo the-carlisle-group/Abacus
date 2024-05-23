@@ -1,0 +1,6 @@
+ GetAutoCompleteElement←{
+     d←⍵ A.GetNearest'dialog'
+     d≠0:⊃d.Content
+     b←A.GetBody ⍵.Document
+     ⊃b.Content
+ }

@@ -2,25 +2,21 @@
      Rule←##.NewRule
      ⍝ ************************
      s←Rule'.dialog-box'
-     s.min_width←'50vh'
-     s.max_width←'50vh'
-     s.min_height←'25vh'
-     s.max_height←'25vh'
-
-
-
+     s.width←'75%'
+     s.height←'75%'
      s.border←'none'
      s.border_radius←'1em'
      s.padding←0
      s.position←'fixed'
-     s.left←'50%'
-     s.top←'50%'
-     s.transform←'translate(-50%, -50%)' ⍝ Need this?
+     s.left←'12.5%'
+     s.top←'12.5%'
      s.display←'flex'
      s.flex_direction←'column'
      ⍝ ************************
-     r←s Rule'::backdrop'  ⍝ does not work the way I nest/unest
-     r.backdrop_filter←'blur(2px)'
+   ⍝ CANT DO THIS WITH CONTENT THAT NEEDS CONSTANT REPAINT LIKE SCROLLING GRID!!!
+
+   ⍝   r←s Rule'::backdrop'  ⍝ does not work the way I nest/unest
+   ⍝   r.backdrop_filter←'blur(2px)'
      ⍝ ************************
      r←s Rule'> header'
      r.font_family←'Arial'
@@ -30,7 +26,7 @@
      ⍝ ************************
      r←s Rule'> header > h1'
      r.font_family←'Arial'
-     r.padding←'1rem'
+     r.padding←'.5rem'
      ⍝ ************************
      r←s Rule'> header > h2'
      r.font_family←'Arial'
@@ -52,6 +48,7 @@
      ⍝ ************************
      r←s Rule'> menu button'
      r.width←'10rem'
+     r.height←'2rem'
      r.border_radius←'.25rem'
 
      ##.UnNestCSS s

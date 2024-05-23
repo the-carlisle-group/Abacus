@@ -4,6 +4,7 @@
      a←⍵.AutoCompleteItems
      ⍝ 0=≢a:0
      i.AutoCompleteItems←a
+     i.AutoCompleteElement←0
      i.TriggerKeys←(⊂'Backspace'),∪' '~⍨∊a
      i.autocomplete←'off'
      i.Onkeydown←A.FQP'OnKeyDown'

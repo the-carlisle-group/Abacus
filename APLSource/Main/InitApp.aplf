@@ -9,6 +9,8 @@
      d.NextId←0
      d.Waiting←0
      d.StopPropagation←0
+     b←GetBody d
+     b.Content←b.Content,⍨AutoComplete.New''
      e←Elements d
      e.Document←d
      _←d SetDefaultId e

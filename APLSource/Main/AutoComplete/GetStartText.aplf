@@ -3,7 +3,6 @@
      ⍝ ← ←→ Return code, starting text
      i←⍵.Target
      t←⍵.Value
-     l←⍵.Document.AutoCompleteElement
      k←⍵.Key
      bs←k≡'Backspace'
      s←⍵.SelectionStart

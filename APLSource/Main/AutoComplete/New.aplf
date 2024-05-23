@@ -3,6 +3,6 @@
      ⍺←0
      ⎕THIS.A←##
      a←⍺ A.New'div'
-     a.id←'auto-complete'
+     a.class←'auto-complete'
      a
  }

@@ -1,6 +1,6 @@
  CSS←{
      Rule←##.NewRule
-     s←Rule'#auto-complete'
+     s←Rule'.auto-complete'
      s.z_index←9
      s.background_color←⍵.BodyBackgroundColor
      ⍝ s.box_sizing←'border-box'

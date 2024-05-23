@@ -1,6 +1,6 @@
  SelectItem←{
      e←⍵.Target
-     l←⍵.Document.AutoCompleteElement
+     l←e.AutoCompleteElement
      b←ActiveItemMask l
      v←(≢l.StartText)↓⊃b/l.Mask/e.AutoCompleteItems
      t←⍵.Value

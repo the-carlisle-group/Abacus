@@ -1,7 +1,7 @@
  OnArrowUpDown←{
      ⍝ ⍺ ←→ ¯1 Up, 1 Down
      e←⍵.Target
-     l←⍵.Document.AutoCompleteElement
+     l←e.AutoCompleteElement
      j k←0 ⍺+⍸ActiveItemMask l
      i←AutoCompleteElements l
      (k=¯1)∨k=≢i:0
