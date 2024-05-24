@@ -19,7 +19,7 @@
      t.CellMode←0   ⍝ 0←→ReadyMode, 1←→EnterMode, 2←→EditMode
      t.AutoCompleteActive←0
      t.Changed←0
-     t.Onclick←A.FQP'OnClick'
+     t.Onmousedown←A.FQP'OnClick'
      t.Onkeydown←A.FQP'OnKeyDown'
      t.Height←0
      t.Width←0
