@@ -4,7 +4,7 @@
      i j←t.DataCell
      n m←t.DataSize
      e←(0@i)1⍴⍨n+1
-     t.Values←e∘⍀¨t.Values
+     t.Values←t.Inverted{⍺:e∘⍀¨⍵ ⋄ e⍀⍵}t.Values
      t.DataSize+←1 0
      Refresh t
  }

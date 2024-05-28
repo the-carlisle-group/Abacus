@@ -1,0 +1,7 @@
+ GetValuesInverted←{
+     i k←⍵
+     v←(⊂⊂i)⌷¨⍺.Values[k]
+     v←⍉↑⍺.FMT[k]{(⍎⍺)⍵}¨v
+     ~⍺.RowNumbers:v
+     v,⍨ntbs'LCI15'⎕FMT i+1
+ }

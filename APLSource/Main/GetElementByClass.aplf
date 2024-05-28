@@ -1,0 +1,5 @@
+ GetElementByClass←{
+     r←⍺ ElementsWhere'class'⍵
+     0=≢r:('undefined class: ',⍵)⎕SIGNAL 6
+     ⊃r
+ }

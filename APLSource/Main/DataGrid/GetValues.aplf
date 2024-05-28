@@ -1,0 +1,8 @@
+ GetValues←{
+     ⍺.Inverted:⍺ GetValuesInverted ⍵
+     i k←⍵
+     v←i k⌷⍺.Values
+     ⍝ Need to format here
+     ~⍺.RowNumbers:v
+     v,⍨ntbs'LCI15'⎕FMT i+1
+ }
