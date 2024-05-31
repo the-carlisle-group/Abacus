@@ -1,10 +1,8 @@
  ProcessInput←{
      i←⍵
      t←i A.GetNearest'table'
-     ev←i.value   ⍝ Entered Value, char
      vfi←⍎(1⊃t.DataCell)⊃t.VFI
-     ml←(1⊃t.DataCell)⊃t.MaxLength
-     b pv em←ml vfi ev
+     b pv em←t vfi i.value
      b:1   ⍝ No good, set focus back on input
      fmt←⍎(1⊃t.DataCell)⊃t.FMT
      fv←⊃fmt pv

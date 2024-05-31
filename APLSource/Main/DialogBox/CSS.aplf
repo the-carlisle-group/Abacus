@@ -7,16 +7,9 @@
      s.border←'none'
      s.border_radius←'1em'
      s.padding←0
-     s.position←'fixed'
-     s.left←'12.5%'
-     s.top←'12.5%'
+     s.margin←'auto'
      s.display←'flex'
      s.flex_direction←'column'
-     ⍝ ************************
-   ⍝ CANT DO THIS WITH CONTENT THAT NEEDS CONSTANT REPAINT LIKE SCROLLING GRID!!!
-
-   ⍝   r←s Rule'::backdrop'  ⍝ does not work the way I nest/unest
-   ⍝   r.backdrop_filter←'blur(2px)'
      ⍝ ************************
      r←s Rule'> header'
      r.font_family←'Arial'

@@ -1,5 +1,5 @@
  VFI_Char←{
-     0=⍺:0 ⍵''
-     v←⍺↑⍵
-     0 v''
+     ~⍺.Inverted:0 ⍵''
+     l←(1⊃⍺.DataCell)⊃⍺.MaxLength
+     0(l↑⍵)''
  }
