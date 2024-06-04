@@ -1,7 +1,7 @@
  OnWebSocketReceive←{
      ⍝ ⎕←'OnWebSocketReceive'
      h←⊃⍵
-     c←⎕JSON 3⊃⍵ NewForm
+     c←⎕JSON 3⊃⍵
      c.Event≡'SJSR':c.result ⎕TPUT c.id
      d←h.Document
      c.Document←d
