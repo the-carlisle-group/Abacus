@@ -1,0 +1,5 @@
+ RunOnWeb←{
+     ⎕THIS.A←##.Main
+     a←CreateApplication 0
+     a A.StartWebApplication 0
+ }

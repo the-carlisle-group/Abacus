@@ -1,0 +1,25 @@
+ OnRequestRumba←{
+     ⍝ The default Rumba request callback
+     ⍝ This may be overridden with"
+     ⍝ Application.Server.OnRequest←'#.Some.Foo'
+     r←#.Rumba.Core.NewResponse ⍵
+     r.StatusCode←404
+     u←⍵.RequestTarget
+     u≢,'/':r
+     c←⍵.Connection
+     s←c.Server
+     a←s.Application
+     d←InitApp(⍎a.BuildFunction)0
+     ⍝ **** Collect CSS
+     ms←CSS d.Theme             ⍝ Main CSS
+     ls←d.Layout d.Theme        ⍝ Layout CSS
+     cs←ComponentStyles d.Theme ⍝ Component CSS
+                                ⍝ Application CSS
+
+     d.Style←ms,ls,cs
+     ⍝ ******************
+     a.Sessions,←d
+     r←#.Rumba.Core.NewResponse ⍵
+     r.Content←##.Main.DOM2HTML d
+     r
+ }

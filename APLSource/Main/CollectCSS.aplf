@@ -1,0 +1,7 @@
+ CollectCSS←{
+     d←⍵
+     m←CSS d.Theme              ⍝ Main CSS
+     l←d.Layout                 ⍝ Layout CSS
+     c←ComponentStyles d.Theme  ⍝ Component CSS
+     m,l,c                      ⍝ ORDER!!!!
+ }

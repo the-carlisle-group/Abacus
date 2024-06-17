@@ -3,6 +3,7 @@
      ~t.Init:0
      p←t.Parent
      0=p.⎕NC'Width':0
+     ⎕←'Resize!'
      t.AvailableWidth←p.Width-+/t.ColumnOffset↑t.FullWidths
      t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.RowNumbers↓t.FullWidths
      0∊t.ColumnsPerIndex:0

@@ -1,0 +1,4 @@
+ StartWebApplication←{
+     s←⍺.Server
+     s #.Rumba.Core.Start 0
+ }

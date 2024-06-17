@@ -1,0 +1,6 @@
+ BuildJavaScript←{
+     d←⍵
+     q←''''
+     l←⊂'const sessionID=',q,⍵.SessionID,q,';'
+     l,JavaScript
+ }

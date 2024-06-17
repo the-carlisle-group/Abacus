@@ -1,0 +1,6 @@
+ NewGUID←{
+     ⍝ ⍵ ←→ '' 'N' 'B' 'P' or 'X'
+     ⍝ New GUID formatted according to ⍵
+     ⎕USING←'System'
+     Guid.NewGuid.ToString⊂,⍵
+ }

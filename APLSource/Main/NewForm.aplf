@@ -5,11 +5,13 @@
      ⍝ p,←⊂'Size'⍵.Size
      n←NextFormName 0
      h←⍎n ⎕WC p
-     h.LastTID←{}&0
-     h.InterceptedURLs←1 2⍴'ws://dyalog_root' 1
-     h.onWebSocketUpgrade←'OnWebSocketUpgrade'
-     h.onWebSocketReceive←'OnWebSocketReceive'
+     ⍝ h.InterceptedURLs←1 2⍴'ws://dyalog_root' 1
+     h.InterceptedURLs←1 2⍴'*' 1
+     h.onWebSocketUpgrade←'OnWebSocketUpgrade' ⍝ ???? Web?
+     h.onWebSocketReceive←'OnWSReceiveHR'
      h.Caption←⍵.Caption
-     _←h InitApp ⍵
+     _←InitApp ⍵
+     ⍵.Client←h
+     h.Document←⍵
      h⊣h SetDocument ⍵
  }

@@ -1,0 +1,9 @@
+ OnWSReceiveHR←{
+     ⍝ HTMLRenderer Callback
+     ⍝ ⎕←'OnWebSocketReceive'
+     h←⊃⍵
+     d←h.Document
+     j←⎕JSON 3⊃⍵
+     j.Event≡'WSOpen':0
+     d OnWSReceive j
+ }

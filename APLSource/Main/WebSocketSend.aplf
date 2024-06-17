@@ -1,7 +1,8 @@
  WebSocketSend←{
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ Data to send
-     ⍝ Need to UTF8 ⍵ probably
+     ⍝ Client is HTMLRenderer, or Rumba Connection
      c←⍺.Client
-     c.WebSocketSend c.WebSocketID ⍵ 1 1
+     c.Type≡'HTMLRenderer':c.WebSocketSend c.WebSocketID ⍵ 1 1
+     c.Server.DRC.Send(c.Server.Name,'.',c.Name)(⍵ 1 1)
  }

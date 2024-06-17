@@ -1,0 +1,10 @@
+ LinkWebsocketToSession←{
+     c←⍺             ⍝ Connection Space
+     j←⍵             ⍝ JSON WSOpen message
+     s←c.Server      ⍝ Server
+     a←s.Application
+     d←a.Sessions⊃⍨a.Sessions.SessionID⍳⊂j.SessionID
+     c.Document←d    ⍝ WS Connection now knows doc/session
+     d.Client←c      ⍝ And vice versa
+     0
+ }

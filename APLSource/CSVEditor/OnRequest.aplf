@@ -1,0 +1,28 @@
+ OnRequest←{
+     ⍝ On First Request Build Doc and Return it
+     ⍝ Establish Session
+     nr←#.Rumba.Core.NewResponse ⍵
+     nr.StatusCode←404
+     u←⍵.RequestTarget
+     ⎕←'On Request to: ',u
+     u≢,'/':nr
+     d←Build''
+     t←##.Themes.Dark 0
+     d.Style←CSS t
+     d.Style,←A.ComponentStyles t
+
+     ⍝ This is just the connection that establishes the session
+     ⍝ it may go away, and session remains
+     ⍝ Later we will get a long lived web socket connection
+     ⍝ That will be the "Client"
+     c←⍵.Connection       ⍝ This connection will not be the websocket, that comes later
+
+     c.Server.Sessions,←d ⍝ Add Document to Sessions
+
+     ⍝ 0 should work here instead of c
+     _←(⎕NS'')A.InitApp d   ⍝ left arg is place holder
+
+     r←#.Rumba.Core.NewResponse ⍵
+     r.Content←##.Main.DOM2HTML d
+     r
+ }

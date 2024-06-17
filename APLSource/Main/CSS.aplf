@@ -1,0 +1,31 @@
+ CSS←{
+     ⍝ Main CSS for Abacus Applications
+     ⍝ ⍵ ←→ Theme
+     Rule←NewRule
+     s←Rule''
+     ⍝ Reset
+     r←s Rule'*'
+     r.margin←0
+     r.padding←0
+     ⍝ Input
+     r←s Rule'input:focus'
+     r.outline←'none'
+     ⍝ dialog
+     r←s Rule'dialog'
+     s.border_radius←'1em'
+     s.padding←0
+     s.margin←'auto'
+     ⍝ dialog h1
+     r←s Rule'dialog h1'
+     r.font_family←'Arial'
+     r.font_size←'1.5rem'
+     r.padding←'1rem'
+     r.background_color←'steelblue'
+     ⍝ dialog button
+     r←s Rule'dialog button'
+     r.height←'3rem'
+     r.width←'10rem'
+     r.font_size←'1.25rem'
+     r.border_radius←'.25rem'
+     s
+ }

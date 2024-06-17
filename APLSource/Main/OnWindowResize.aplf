@@ -1,4 +1,18 @@
  OnWindowResize←{
+     ⎕←'On Window Resize'
+     g←⍵.DataGrids
+     0=≢g:0
+     _←⍵ DataGrid.OnResize¨g
+     0
+
+
+     ⍝ ALL BELOW OBSOLETE
+
+
+
+     OnWindowResizeTimer ⍵
+
+
      d←⍵.Document
      n←'ResizeTimer'
      t←d⍎n⊣n d.⎕WC'timer'

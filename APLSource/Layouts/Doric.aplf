@@ -1,18 +1,6 @@
- CSS←{
-
-
-     ⍬
-     ⍝ NOTHING FOR NOW
-
-     Rule←A.NewRule
+ Doric←{
+     Rule←##.Main.NewRule
      s←Rule''
-     ⍝ Reset
-     r←s Rule'*'
-     r.margin←0
-     r.padding←0
-     ⍝
-     r←s Rule'input:focus'
-     r.outline←'none'
      ⍝ Body
      r←s Rule'body'
      r.color←⍵.BodyColor

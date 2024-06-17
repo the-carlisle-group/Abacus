@@ -1,0 +1,8 @@
+ OnWSReceiveRumba←{
+     ⍝ ⍵ ←→ Connection space, Socket message
+     c m←⍵
+     j←⎕JSON m
+     j.Event≡'WSOpen':c LinkWebsocketToSession j
+     d←c.Document
+     d OnWSReceive j
+ }

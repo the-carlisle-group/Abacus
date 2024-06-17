@@ -1,9 +1,9 @@
- OnWebSocketReceive←{
-     ⍝ ⎕←'OnWebSocketReceive'
-     h←⊃⍵
-     c←⎕JSON 3⊃⍵
+ OnWSReceive←{
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ JSON Data Received
+     d←⍺
+     c←⍵
      c.Event≡'SJSR':c.result ⎕TPUT c.id
-     d←h.Document
      c.Document←d
      c.Event≡'resize':OnWindowResize c
      q←d.StopPropagation
@@ -14,7 +14,7 @@
      c.Target←d{⍵≡'':0 ⋄ 6::0 ⋄ ⍺ ElementById ⍵}c.TargetId
      HandleUnqueuedRequest c:0     ⍝ Running in 0 thread. Is this ok? YES
      ⍝ _←DisplayEventMessage c
-     h.LastTID←h.LastTID HandleRequest&c
+     d.LastTID←d.LastTID HandleRequest&c
      ⍝ _←c ⎕TPUT d.QueuedThread
      0
  }
