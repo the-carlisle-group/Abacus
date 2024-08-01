@@ -1,0 +1,9 @@
+ GetElementsByClass←{
+     ⍝ ⍺ ←→ Element (or result of Elements ⍺)
+     ⍝ ⍵ ←→ Class(es) Simple or nested: 'One' or 'One Two' or 'One' 'Two'
+     ⍝ ← ←→ Elements
+     c←' '(≠⊆⊢)1↓∊' ',¨⊆⍵
+     e←{1=⍴⍴⍵:⍵ ⋄ Elements ⍵}⍺
+     b←e{2≠⍺.⎕NC'class':0 ⋄ ∧/⍵∊' '(≠⊆⊢)⍺.class}¨⊂c
+     b/e
+ }

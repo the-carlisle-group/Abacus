@@ -1,4 +1,0 @@
- EnterAtPrompt2←{
-     e←⍺ ElementById'Prompt'
-     0⊣e FireKeyDownOnInputAndWait¨⍵
- }
