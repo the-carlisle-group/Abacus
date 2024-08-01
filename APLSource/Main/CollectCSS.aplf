@@ -1,7 +1,8 @@
  CollectCSS←{
      d←⍵
-     m←CSS d.Theme              ⍝ Main CSS
-     l←d.Layout                 ⍝ Layout CSS
+     l←d.LayoutStyle            ⍝ User supplied Layout
+     m←CSS d.Theme              ⍝ Abacus Default CSS (common for all components)
      c←ComponentStyles d.Theme  ⍝ Component CSS
-     m,l,c                      ⍝ ORDER!!!!
+     u←d.AppStyle               ⍝
+     l,m,c,u                    ⍝ ORDER!!!!
  }

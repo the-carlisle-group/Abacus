@@ -36,6 +36,7 @@
      m←d A.ElementByTag'main'
      _←m A.SetInnerHTML g
      _←g A.DataGrid.Resize 0
-     _←d A.AlertBox.Show'File loaded.'
+     ⍝ Can't automate below in test yet!
+     ⍝ _←d A.AlertBox.Show'File loaded.'
      0
  }

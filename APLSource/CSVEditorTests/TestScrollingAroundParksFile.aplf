@@ -13,6 +13,4 @@
      p A.Press'ArrowRight':
      Assert p.DataCell=0 2:
      0
-
-
  }

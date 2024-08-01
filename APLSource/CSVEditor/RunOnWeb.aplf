@@ -1,5 +1,17 @@
  RunOnWeb←{
+     ⍝ ⍺ →⊢ Log Flag
+     ⍝ ← ←→ Abacus Application Instance
+     ⍝ *****************************************************
+     ⍝ Navigate to localhost in browser to start a session
+     ⍝ ...then ⊃[result].Sessions yields associated document object
+     ⍝      suitable for testing,
+     ⍺←0
      ⎕THIS.A←##.Main
      a←CreateApplication 0
-     a A.StartWebApplication 0
+     s←a.Server
+     s.Folder←'c:\DataSets\CSVEditorServer'
+     s.LogRumba←⍺
+     s.LogConga←⍺
+     s.LogHTTP←⍺
+     a⊣a A.StartWebApplication 0
  }

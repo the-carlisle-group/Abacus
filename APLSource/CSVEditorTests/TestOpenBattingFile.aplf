@@ -1,9 +1,9 @@
  TestOpenBattingFile←{
      d←⍵
-     d A.ClickOn'File':
-     d A.ClickOn'Open':
-     d A.EnterAtPrompt GetFileName'Batting.csv':
-     d A.ClickOn'OK':
+     d A.Click'File':
+     d A.Click'Open':
+     d A.Enter GetFileName'Batting.csv':
+     d A.Click'OK':
      p←d A.ElementById'CSVdata'
      Assert 22=≢p.Values:
      Assert 107429=≢0⊃p.Values:

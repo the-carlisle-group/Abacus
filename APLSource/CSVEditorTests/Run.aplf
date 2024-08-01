@@ -1,4 +1,4 @@
  Run←{
      ⎕THIS.A←##.Main
-     ##.CSVEditor.Run 0
+     ##.CSVEditor.RunOnDesktop 0
  }

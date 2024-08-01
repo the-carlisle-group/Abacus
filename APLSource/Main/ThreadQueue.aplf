@@ -1,4 +1,5 @@
  ThreadQueue←{
+     ⍝ Queued Event Loop for Session/Document
      c←⊃⎕TGET ⎕TID
      _←(⍎c.CurrentTarget⍎'On',c.Event)c
      _←PutDoneToken c

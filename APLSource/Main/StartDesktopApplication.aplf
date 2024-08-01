@@ -1,7 +1,7 @@
  StartDesktopApplication←{
+     ⍝ ⍺ ←→ Application
+     ⍝ ← ←→ Document
      d←(⍎⍺.BuildFunction)0
-     d.Style←CollectCSS d
      d.Caption←⍺.Name
-     _←NewForm d
-     0
+     d⊣NewForm d
  }

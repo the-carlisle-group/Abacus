@@ -1,0 +1,5 @@
+ HandleRequest_Orig←{
+     _←{6::0 ⋄ ⎕TSYNC ⍵}⍺
+     _←(⍎⍵.CurrentTarget⍎'On',⍵.Event)⍵
+     1:z←PutDoneToken ⍵
+ }

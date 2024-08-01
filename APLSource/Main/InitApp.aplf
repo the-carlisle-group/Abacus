@@ -1,9 +1,9 @@
  InitApp←{
      ⍝ ⍵ ←→ Document
      d←⍵
-     d.LastTID←{}&0
      d.SessionID←NewGUID'N'
      d.Script←BuildJavaScript d
+     d.Style←CollectCSS d
      d.NextId←0
      d.Waiting←0
      d.StopPropagation←0
@@ -13,5 +13,6 @@
      e.Document←d
      _←d SetDefaultId e
      _←SetParent d
+     d.QueuedThread←ThreadQueue&0
      d
  }

@@ -1,5 +1,6 @@
  OnWindowResizeTimer←{
      ⍝ ⍺ ← From OnWebSocketReceive
+     OBSOLETE
      ⎕←'On window Resize timer'
      t←⊃⍵
      t.Active←0
