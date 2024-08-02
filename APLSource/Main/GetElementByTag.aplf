@@ -1,0 +1,8 @@
+ GetElementByTag←{
+     ⍝ ⍺ ←→ Element (or result of Elements ⍺)
+     ⍝ ⍵ ←→ Tag
+     ⍝ ← ←→ element
+     r←⍺ GetElementsWhere'Tag'⍵
+     0=≢r:('tag not found: ',⍵)⎕SIGNAL 6
+     ⊃r
+ }

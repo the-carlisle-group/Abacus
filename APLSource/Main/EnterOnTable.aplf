@@ -1,6 +1,6 @@
  EnterOnTable←{
-     ⍺.CellMode=2:0⊣(⍺ ElementById'data-grid-input')FireKeyDownOnInputAndWait¨⍵
+     ⍺.CellMode=2:0⊣(⍺ GetElementById'data-grid-input')FireKeyDownOnInputAndWait¨⍵
      _←⍺ FireKeyDownAndWait⊃⍵
-     i←⍺ ElementById'data-grid-input'
+     i←⍺ GetElementById'data-grid-input'
      0⊣i FireKeyDownOnInputAndWait¨1↓⍵
  }

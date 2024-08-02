@@ -10,8 +10,8 @@
      d.StopPropagation←0
      q:0
      c.CurrentTargetId≡'':0        ⍝ How does this happen?
-     c.CurrentTarget←d ElementById c.CurrentTargetId
-     c.Target←d{⍵≡'':0 ⋄ 6::0 ⋄ ⍺ ElementById ⍵}c.TargetId
+     c.CurrentTarget←d GetElementById c.CurrentTargetId
+     c.Target←d{⍵≡'':0 ⋄ 6::0 ⋄ ⍺ GetElementById ⍵}c.TargetId
      HandleUnqueuedRequest c:0
      _←c ⎕TPUT d.QueuedThread
      0

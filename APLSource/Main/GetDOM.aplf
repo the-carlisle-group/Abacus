@@ -1,5 +1,5 @@
  GetDOM←{
-     e←⍺ ElementById ⍵
+     e←⍺ GetElementById ⍵
      h←e ExecuteOnElementSync'outerHTML'
      HTML2DOM h
  }

@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Document, Element (or result of Elements ⍺)
      ⍝ ⍵ ←→ Id
      ⍝ ← ←→ element
-     r←⍺ ElementsWhere'id'⍵
+     r←⍺ GetElementsWhere'id'⍵
      0=≢r:('undefined id: ',⍵)⎕SIGNAL 6
      ⊃r
  }

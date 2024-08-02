@@ -1,0 +1,6 @@
+ GetElementsByTag←{
+     ⍝ ⍺ ←→ Element (or result of Elements ⍺)
+     ⍝ ⍵ ←→ Tag
+     ⍝ ← ←→ element
+     ⍺ GetElementsWhere'Tag'⍵
+ }

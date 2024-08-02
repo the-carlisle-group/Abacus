@@ -1,6 +1,6 @@
  InjectScriptElement←{
      ⍵.Tag≢'html':0
      0=⍵.⎕NC'Script':0
-     h←⍵ ElementByTag'head'
+     h←⍵ GetElementByTag'head'
      h New'script'
  }
