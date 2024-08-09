@@ -1,0 +1,46 @@
+ OnFileSettings←{
+     d←⍵.Document
+     p←⎕NS''
+     p.Title←'Testing'
+     p.Subtitle←'This is a test.'
+     p.Content←A.New'div' 'Hello World!'
+     p.OnOK←A.FQP'OnFileSettingsOK'
+     b←A.DialogBox.New p
+     d A.ShowModal b
+
+
+
+     ⍝ See how this works ↑↑↑
+
+
+
+
+
+
+     ⍝ FOR LATER:
+
+     A.PropertySheet.New
+
+
+     'Delimiter' ⍝ Name
+                 ⍝ Label
+                 ⍝ Autocomplete values
+                 ⍝
+     p←⎕NS''
+     p.Caption←'File Properties'
+     p.Fields←⊂'Delimiter' 'Delimiter'
+     p.Fields,←⊂'QuoteChar' 'Quote character'
+     p.Fields,←⊂'EscapeChar' 'Escape character'
+     p.Fields,←⊂'Encoding' 'Encoding'
+
+
+     ⎕CSV
+     p.OnOK←A.FQP'OnFileSettingsOK'
+
+     f←A.PropertyBox.New p
+
+
+     A.PropertyBox.Show'File Properties'
+
+     d A.PromptBox.Show'Open File' 'File name:'f(A.FQP'Open')
+ }

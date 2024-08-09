@@ -12,11 +12,13 @@
      mb.class←⊂'inactive-menu-item'
      (0⊃mb).class←'active-menu-item'
      mb.SubItems←⍵.SubItems
-     mb.Onclick←⊂A.FQP'OnMainMenu'
+     ⍝ mb.Onclick←⊂A.FQP'OnMainMenu'
+     mb.Onmousedown←⊂A.FQP'OnMainMenu'
      sm←m A.New'div'
      sm.class←'menu-ribbon-sub'
      sb←sm{⍺ A.New'button'⍵}¨0⊃⍵.SubItems
      sb.class←⊂'inactive-menu-subitem'
-     sb.Onclick←⊂A.FQP'OnSubMenu'
+     ⍝ sb.Onclick←⊂A.FQP'OnSubMenu'
+     sb.Onmousedown←⊂A.FQP'OnSubMenu'
      m
  }

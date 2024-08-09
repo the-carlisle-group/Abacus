@@ -2,6 +2,7 @@
      Rule←##.NewRule
      s←Rule'.auto-complete'
      s.z_index←9
+     s.color←'white'
      s.background_color←⍵.BodyBackgroundColor
      ⍝ s.box_sizing←'border-box'
      s.border←'.5px solid gray'

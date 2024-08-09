@@ -6,11 +6,7 @@
      s.border←'none'
      s.border_radius←'.5rem'
      s.padding←0  ⍝ '1rem'
-     s.position←'fixed'
-     s.left←'50%'
-     s.top←'50%'
-     s.transform←'translate(-50%, -50%)' ⍝ Need this?
-     ⍝ ************************
+     s.margin←'auto'
      r←s Rule'::backdrop'
      r.backdrop_filter←'blur(2px)'
      ⍝ h1

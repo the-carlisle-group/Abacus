@@ -1,0 +1,9 @@
+ OnOK←{
+     ⎕←'On OK'
+     t←⍵.CurrentTarget
+     d←t A.GetNearest'dialog'
+     f←⍎d.OnOK
+     r←⍵.Document f 999
+     r:0
+     A.DeleteElement d
+ }

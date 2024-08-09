@@ -5,17 +5,15 @@
      ⎕THIS.A←##
      d←A.New'dialog'
      d.class←'prompt-box'
+     d.Onclose←A.FQP'OnCancel'
      d.OnOK←cb
      h1←d A.New'h1'tv
      l←d A.New'label'lv
      i←d A.New'input'
-     i.id←'Prompt'
      i.value←iv
      i.Oninput←A.FQP'OnInput'
-     i.Onkeydown←A.FQP'OnKeyDown'
      m←d A.New'menu'
      b←m A.New¨{'button'⍵}¨'OK' 'Cancel'
-     b.id←'OK' 'Cancel'
      b.Onclick←A.FQP¨'OnOK' 'OnCancel'
      d
  }
