@@ -10,7 +10,7 @@
      p.id←'progress'
      b←e A.New'button' 'Cancel'
      b.id←'Cancel'
-     b.Unqueued←1
+     b.Unqueued←'click'
      b.Onclick←A.FQP'OnCancel'
      _←⍺ A.ShowModal e
      0

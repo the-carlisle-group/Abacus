@@ -6,7 +6,7 @@
      d.Multi←p.Multi
      d.class←'toggle-group'
      b←d A.New¨{'button'⍵}¨p.Labels
-     b.title←p.Tips
+     b.ToolTip←p.Tips
      b.State←0
      b.class←⊂''
      b.Onclick←⊂A.FQP'OnClick'

@@ -6,7 +6,7 @@
      d←A.New'dialog'
      d.class←'confirm-box'
      d.Onclose←A.FQP'OnClose'
-     d.Unqueued←1
+     d.Unqueued←'close'
      d.Tid←⎕TID
      h1←d A.New'h1't
      p←d A.New'p'c
@@ -14,6 +14,6 @@
      b←m A.New¨{'button'⍵}¨o
      b.Name←o
      b.Onclick←⊂A.FQP'OnSelect'
-     b.Unqueued←1
+     b.Unqueued←'click'
      d
  }

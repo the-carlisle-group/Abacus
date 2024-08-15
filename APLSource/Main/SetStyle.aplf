@@ -1,0 +1,7 @@
+ SetStyle←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Style Value
+     n v←⍵
+     j←'document.getElementById("',⍺.id,'").style.',n,'="',v,'"'
+     ⍺.Document ExecuteJavaScript j
+ }

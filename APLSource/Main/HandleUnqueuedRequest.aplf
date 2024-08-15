@@ -1,6 +1,6 @@
  HandleUnqueuedRequest←{
      c←⍵.CurrentTarget
      0=c.⎕NC'Unqueued':0
-     ~c.Unqueued:0
+     ~(⊂⍵.Event)∊⊆c.Unqueued:0
      1⊣(⍎⍵.CurrentTarget⍎'On',⍵.Event)⍵
  }

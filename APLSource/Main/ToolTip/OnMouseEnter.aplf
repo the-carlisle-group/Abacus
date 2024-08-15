@@ -1,0 +1,5 @@
+ OnMouseEnter←{
+     t←⍎'tmT'⎕WC'Timer' 200 1('FireOnce' 1)
+     t.onTimer←'OnMouseEnterTimer'⍵
+     0
+ }

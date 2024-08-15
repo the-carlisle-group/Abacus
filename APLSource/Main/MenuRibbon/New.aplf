@@ -18,6 +18,7 @@
      sm.class←'menu-ribbon-sub'
      sb←sm{⍺ A.New'button'⍵}¨0⊃⍵.SubItems
      sb.class←⊂'inactive-menu-subitem'
+     ⍝ sb.ToolTip←'Tip for '∘,¨0⊃⍵.SubItems
      ⍝ sb.Onclick←⊂A.FQP'OnSubMenu'
      sb.Onmousedown←⊂A.FQP'OnSubMenu'
      m

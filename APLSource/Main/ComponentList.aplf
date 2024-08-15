@@ -9,6 +9,7 @@
      l,←⊂'ProgressBar'
      l,←⊂'PromptBox'
      l,←⊂'TextEdit'
+     l,←⊂'ToolTip'
      l,←⊂'ToggleGroup'
      l
  }

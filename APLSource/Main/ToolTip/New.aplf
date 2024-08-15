@@ -1,0 +1,9 @@
+ New←{
+     ⍝ ⍺ ←→ Parent (Body)
+     ⍺←0
+     ⎕THIS.A←##
+     t←⍺ A.New'div'
+     t.class←'tool-tip'
+     t.LastAnchor←0
+     t
+ }

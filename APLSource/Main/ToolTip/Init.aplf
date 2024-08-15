@@ -1,0 +1,10 @@
+ Init←{
+     ⍝ ⍵ ←→ Element(s)
+     b←{0=⍵.⎕NC'ToolTip':0 ⋄ 1}¨⍵
+     e←b/⍵
+     0=≢e:0
+     e.Onmouseenter←⊂A.FQP'OnMouseEnter'
+     e.Onmouseleave←⊂A.FQP'OnMouseLeave'
+     e.Unqueued←⊂'mouseenter' 'mouseleave'
+     0
+ }

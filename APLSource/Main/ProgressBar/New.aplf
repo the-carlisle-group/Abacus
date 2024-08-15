@@ -5,7 +5,7 @@
      d.class←'progress-bar'
      d.id←'progress-bar'
      d.(Pause Cancel)←0
-     d.Unqueued←1
+     d.Unqueued←'close'
      d.Onclose←A.FQP'OnClose'
      h1←d A.New'h1'c
      s←d A.New'p'
@@ -17,7 +17,7 @@
      d.Content,←(0<≢i)/p
      b←d A.New'button' 'Pause'
      b.id←'Pause'
-     b.Unqueued←1
+     b.Unqueued←'click'
      b.Onclick←A.FQP'OnPause'
      d
  }

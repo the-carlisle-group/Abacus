@@ -8,11 +8,16 @@
      d.Waiting←0
      d.StopPropagation←0
      b←GetBody d
-     b.Content←b.Content,⍨AutoComplete.New''
+     t←ToolTip.New''
+     a←AutoComplete.New''
+     b.Content←b.Content,⍨a,t
      e←Elements d
+     _←ToolTip.Init e
      e.Document←d
      _←d SetDefaultId e
      _←SetParent d
+     d.ToolTip←t
+     d.AutoComplete←a
      d.QueuedThread←ThreadQueue&0
      d
  }

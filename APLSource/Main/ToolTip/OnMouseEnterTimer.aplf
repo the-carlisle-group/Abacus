@@ -1,0 +1,10 @@
+ OnMouseEnterTimer←{
+     e←⍺.CurrentTarget
+     t←⍺.Document.ToolTip
+     _←t A.SetInnerHTML A.New'p'e.ToolTip
+     _←t.LastAnchor A.SetAnchorName'--no-such-name'
+     t.LastAnchor←e
+     _←e A.SetAnchorName'--tool-tip'
+     _←t A.SetStyle'opacity' '1'
+     0
+ }

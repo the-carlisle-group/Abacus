@@ -1,0 +1,7 @@
+ SetAnchorName←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Anchor name
+     ⍺=0:0
+     j←'document.getElementById("',⍺.id,'").style.anchorName="',⍵,'"'
+     ⍺.Document ExecuteJavaScript j
+ }
