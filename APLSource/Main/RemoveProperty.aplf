@@ -1,0 +1,7 @@
+ RemoveProperty←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ CSS property name
+     ⍺=0:0
+     _←⍺ ExecuteOnElement'style.removeProperty("',⍵,'")'
+     0
+ }
