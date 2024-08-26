@@ -1,0 +1,5 @@
+ OnResetHR1←{
+     b←0⊃⍵
+     f←b.##.##
+     f.hr1 A.SetApp A.InitApp Build''
+ }

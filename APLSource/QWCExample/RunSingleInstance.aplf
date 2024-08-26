@@ -1,0 +1,4 @@
+ RunSingleInstance←{
+     d←Build''
+     A.NewForm d
+ }

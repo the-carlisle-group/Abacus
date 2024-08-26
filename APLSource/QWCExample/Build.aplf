@@ -1,0 +1,11 @@
+ Build←{
+     ⎕THIS.A←##.Main
+     d←A.NewDocument''
+     d.Caption←'Press Me App'
+     b←A.GetBody d
+     bn←b A.New'button' 'Press Me'
+     bn.NumberOfClicks←0
+     p←b A.New'p' 'Button pressed 0 times.'
+     bn.Onclick←A.FQP'OnButtonClick'
+     d
+ }

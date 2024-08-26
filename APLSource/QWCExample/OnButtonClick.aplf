@@ -1,0 +1,9 @@
+ OnButtonClick←{
+     b←⍵.CurrentTarget
+     b.NumberOfClicks+←1
+     n←⍕b.NumberOfClicks
+     d←⍵.Document
+     p←d A.GetElementByTag'p'
+     p A.SetInnerHTML'Button clicked ',n,' times.'
+     0
+ }

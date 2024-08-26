@@ -5,10 +5,9 @@
      p←⊂'HTMLRenderer'
      p,←⊂'AsChild' 1
      h←⍎⍵ ⍺.⎕WC p
-     h.LastTID←{}&0
      h.ZoomLevel←100
      h.InterceptedURLs←1 2⍴'*' 1
      h.onWebSocketUpgrade←'OnWebSocketUpgrade'
-     h.onWebSocketReceive←'OnWebSocketReceive'
+     h.onWebSocketReceive←'OnWSReceiveHR'
      h
  }

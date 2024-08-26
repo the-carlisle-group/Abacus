@@ -1,0 +1,6 @@
+ CloseApp←{
+     ⍝ ⍵ ←→ Client (HTML Renderer, or Rumbo Connection)
+     0=⍵.⎕NC'Document':0
+     _←⎕TKILL ⍵.Document.QueuedThread
+     0
+ }

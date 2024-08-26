@@ -1,0 +1,10 @@
+ SetApp←{
+     ⍝ ⍺ ←→ HTMLRenderer
+     ⍝ ⍵ ←→ Application Document
+     _←CloseApp ⍺
+     ⍵.Client←⍺
+     ⍺.Document←⍵
+     h←DOM2HTML ⍵
+     ⍺.HTML←h
+     0
+ }

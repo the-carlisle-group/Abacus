@@ -1,5 +1,6 @@
  CollectCSS←{
      d←⍵
+     0=d.⎕NC'LayoutStyle':⍬
      l←d.LayoutStyle            ⍝ User supplied Layout
      m←CSS d.Theme              ⍝ Abacus Default CSS (common for all components)
      c←ComponentStyles d.Theme  ⍝ Component CSS

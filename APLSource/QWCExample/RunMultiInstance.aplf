@@ -1,0 +1,29 @@
+ RunMultiInstance←{
+     ⎕THIS.A←##.Main
+     f←⍎'fmFM'⎕WC'Form'('Coord' 'Pixel')
+     f.onClose←'OnCloseMultiInstance'
+     _←⍎'sf'f.⎕WC'Subform'
+     _←'bn1'f.sf.⎕WC'Button'('Posn' 0 0)('Size' 100 300)('Caption' 'Reset content of hr1')
+     f.sf.bn1.onSelect←'OnResetHR1'
+     _←'bn2'f.sf.⎕WC'Button'('Posn' 200 200)('Size' 100 300)('Caption' 'Launch Modal Form')
+     f.sf.bn2.onSelect←'OnLaunchModalForm'
+     _←f A.NewHTMLRenderer'hr1'
+     _←f A.NewHTMLRenderer'hr2'
+     _←f A.NewHTMLRenderer'hr3'
+     _←'sp1'f.⎕WC'Splitter'f.sf f.hr1('Style' 'Horz')('Align' 'Top')
+     _←'sp2'f.⎕WC'Splitter'f.hr1 f.hr2('Style' 'Horz')('Align' 'Top')
+     _←'sp3'f.⎕WC'Splitter'f.hr2 f.hr3('Style' 'Horz')('Align' 'Top')
+     ⍝ In v19, without this delay, the WebSocketUpgrade
+     ⍝    in #.Abacus.Main.OnWebSocketUpgrade event does not fire
+     dl←0.01     ⍝ Use this in v19
+     ⍝ dl←0      ⍝ In 18.2, no delay is ok
+     _←⎕DL dl
+     _←f.hr1 A.SetApp A.InitApp Build''
+     _←⎕DL dl
+     _←f.hr2 A.SetApp A.InitApp Build''
+     _←⎕DL dl
+     _←f.hr3 A.SetApp A.InitApp Build''
+     _←⎕DL dl
+     ⍝ _←f.Wait
+     0
+ }

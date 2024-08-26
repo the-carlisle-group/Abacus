@@ -1,0 +1,5 @@
+ OnCloseMultiInstance←{
+     f←0⊃⍵
+     _←A.CloseApp¨f.hr1 f.hr2 f.hr3
+     1
+ }

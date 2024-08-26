@@ -2,7 +2,7 @@
      ⍝ ⍵ ←→ Connection space, Socket message
      c m←⍵
      j←⎕JSON m
-     j.Event≡'WSOpen':c LinkWebsocketToSession j
+     j.Event≡'WSOpen':c LinkWebsocketToSession j  ⍝ Could this be done in OnWSUpgradeRumba?
      d←c.Document
      d OnWSReceive j
  }

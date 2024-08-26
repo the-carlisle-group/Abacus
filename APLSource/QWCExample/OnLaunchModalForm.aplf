@@ -1,0 +1,7 @@
+ OnLaunchModalForm←{
+     b←0⊃⍵
+     f←b.##.##
+     _←'mfF'f.⎕WC'Form'('Caption' 'A Modal Form')
+     _←f.mfF.Wait
+     0
+ }

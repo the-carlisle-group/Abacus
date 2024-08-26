@@ -1,0 +1,6 @@
+ OnClose←{
+     ⍝ OnClose of HTMLRenderer created here: NewForm
+     h←0⊃⍵
+     _←CloseApp h
+     1
+ }

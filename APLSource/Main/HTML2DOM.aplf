@@ -2,7 +2,10 @@
      ⍝ ⍵ ←→ HTML
      ⍝ ← ←→ DOM
      0=≢⍵:⍬
-     ⍝ PROBLEM!!!!!! Add lots of phantom elements to DOM! No tag, blank data
+     ⍝ PROBLEM!!!!!! Whitespace=preserve is an issue. Removed for CAS
+     ⍝ Add lots of phantom elements to DOM! No tag, blank data
+     ⍝ Not a problem anymore as Abacus uses id's rather than position as originally done in DOM to identify elements.
+     ⍝ And keep APL DOM in sync.
      ⍝ xml←⎕XML⍠('Whitespace' 'Preserve')('UnknownEntity' 'Preserve')
      xml←⎕XML⍠'UnknownEntity' 'Preserve'
      {⍵⌷⍨⍳1=⍴⍵}0{
