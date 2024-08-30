@@ -1,4 +1,0 @@
- EnterAtPrompt←{
-     i←⍺ GetElementById'Prompt'
-     i EnterOnInput ⍵
- }

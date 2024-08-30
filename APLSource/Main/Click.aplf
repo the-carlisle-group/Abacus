@@ -1,5 +1,5 @@
  Click←{
-     ⍝ ⍺ ←→ Documnet
+     ⍝ ⍺ ←→ document
      ⍝ ⍵ ←→ id
      e←⍺ GetElementById ⍵
      b←2=e.⎕NC'Onclick'

@@ -3,6 +3,9 @@
      ⍝ ⍵ ←→ Test space, [Code space]
      ⍝ ← ←→ Result space
      ⍺←0
-     _←(⊃⍵).Start 0
+     s←⊃⍵
+     d←s.Start 0
+     _←s InitTestSuite d
+     _←WaitForApp d.Client
      ⍺ #.Provanto.Main.Run&⍵
  }

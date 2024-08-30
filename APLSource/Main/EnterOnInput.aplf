@@ -1,5 +1,8 @@
  EnterOnInput←{
      ⍝ Enter text ⍵ on input element ⍺.
+     ⍝ Note that firing keydown events on <input> elements
+     ⍝ will NOT put the character in the value property.
+     ⍝ Thus the value property must be set explicitly.
      ⍝ If there are keydown events attached to the
      ⍝ input element they will NOT be fired.
      ⍝ ******************************************

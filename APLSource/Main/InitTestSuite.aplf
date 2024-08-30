@@ -3,10 +3,12 @@
      ⍝ ⍵ ←→ Document
      ⍺.A←⎕THIS
      ⍺.Document←⍵
-     fx0←{⍺.⎕FX,⊂⍵,'←{⍺←Document ⋄ ⍺ A.',⍵,' ⍵}'}
-     fx1←{⍺.⎕FX,⊂⍵,'←{Document A.',⍵,' ⍵}'}
-     _←⍺ fx0¨'Enter' 'Press'
-     _←⍺ fx1¨'Click' 'GetElementById' 'GetDOM'
-     ⍝ Rename GetDOM!!!! to GetElementFromBrowser
-     WaitForApp ⍵.Client
+     ⍺.Element←⍵
+     fx←{⍺.⎕FX,⊂⍵,'←{⍺←Element ⋄ ⍺ A.',⍵,' ⍵}'}
+     fx1←{⍺.⎕FX,⊂⍵,'←{⍺←Document ⋄ ⍺ A.',⍵,' ⍵}'}
+     _←⍺ fx¨'Press' 'Enter' 'GetDOM'
+     _←⍺ fx1'Click'
+     fx2←{⍺.⎕FX,⊂⍵,'←{⎕THIS.Element←Document A.',⍵,' ⍵}'}
+     _←⍺ fx2'GetElementById'
+     0
  }

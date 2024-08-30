@@ -1,7 +1,13 @@
  Enter←{
+     ⍝ ⍵ ←→ String
+     ⍝ ⍺ ←→ Element
+     ⍝ Enter characters ⍵ on Element ⍺
+     ⍝ Regardless of ⍺, if a modal prompt box is open,
+     ⍝ then the text ⍵ is entered in the prompt box
      t←⍺.Tag
-     t≡'html':⍺ EnterAtPrompt ⍵
-     t≡'table':0⊣⎕DL 0.001⊣⍺ EnterOnTable ⍵
+     p←⍺.Document GetElementsWhere'id' 'Prompt'
+     1=≢p:(⊃p)EnterOnInput ⍵
      t≡'input':⍺ EnterOnInput ⍵
+     t≡'table':0⊣⎕DL 0.001⊣⍺ EnterOnTable ⍵
      0
  }
