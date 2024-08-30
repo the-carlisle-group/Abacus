@@ -1,7 +1,5 @@
  Teardown←{
-     ⍝ _←Document.Client.Close 0
      _←⎕NQ Document.Client'Close'
      _←⎕EX'Document'
-     ⎕←'TearDown function complete.'
      0
  }
