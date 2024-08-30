@@ -2,7 +2,7 @@
      ⍝ ⍵ ←→ Document
      p←⊂'HTMLRenderer'
      p,←⊂'Coord' 'RealPixel'
-     ⍝ p,←⊂'Size'⍵.Size
+     p,←⊂'Size' 1200 1600
      n←NextFormName 0
      h←⍎n ⎕WC p
      h.InterceptedURLs←1 2⍴'*' 1

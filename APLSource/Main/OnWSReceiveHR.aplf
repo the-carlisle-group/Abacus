@@ -1,6 +1,5 @@
  OnWSReceiveHR←{
      ⍝ HTMLRenderer Callback
-     ⍝ ⎕←'OnWebSocketReceive'
      h←⊃⍵
      d←h.Document
      j←⎕JSON 3⊃⍵

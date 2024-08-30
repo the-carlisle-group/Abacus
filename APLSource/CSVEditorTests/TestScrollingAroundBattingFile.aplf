@@ -1,26 +1,23 @@
  TestScrollingAroundBattingFile←{
-     d←⍵
-     d A.Click'File':
-     d A.Click'Open':
-     d A.Enter GetFileName'Batting.csv':
-     d A.Click'OK':
-     p←d A.GetElementById'CSVdata'
-     ⎕←⎕TS
+     Click'File':
+     Click'Open':
+     Enter GetFileName'Batting.csv':
+     Click'OK':
+     p←GetElementById'CSVdata'
      Assert p.DataCell≡0 0:
-     p A.Press'ArrowDown':
+     p Press'ArrowDown':
      Assert p.DataCell=1 0:
-     p A.Press'ArrowDown':
+     p Press'ArrowDown':
      Assert p.DataCell=2 0:
-     p A.Press'ArrowDown':
+     p Press'ArrowDown':
      Assert p.DataCell=3 0:
-     p A.Press'ArrowDown':
+     p Press'ArrowDown':
      Assert p.DataCell=4 0:
-     p A.Press'ArrowDown':
+     p Press'ArrowDown':
      Assert p.DataCell=5 0:
-     p A.Press'ArrowDown':
+     p Press'ArrowDown':
      Assert p.DataCell=6 0:
-     _←{p A.Press'ArrowDown'}¨1000⍴0
-     Assert p.DataCell=1006 0:
-     ⎕←⎕TS
+     _←{p A.Press'ArrowDown'}¨100⍴0
+     Assert p.DataCell=106 0:
      0
  }

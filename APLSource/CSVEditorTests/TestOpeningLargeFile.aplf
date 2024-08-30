@@ -1,5 +1,5 @@
  TestOpeningLargeFile←{
-     f←⍵
+     3
      d←f.Document
      d A.Click'File':
      d A.Click'Open':

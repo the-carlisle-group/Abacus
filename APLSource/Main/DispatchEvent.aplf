@@ -1,0 +1,5 @@
+ DispatchEvent←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Event
+     ⍺ ExecuteOnElement'dispatchEvent(new Event("',⍵,'"))'
+ }

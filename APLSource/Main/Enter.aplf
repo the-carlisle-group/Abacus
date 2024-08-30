@@ -2,6 +2,6 @@
      t←⍺.Tag
      t≡'html':⍺ EnterAtPrompt ⍵
      t≡'table':0⊣⎕DL 0.001⊣⍺ EnterOnTable ⍵
-     t≡'input':⍺ FireKeyDownOnInputAndWait¨⍵
+     t≡'input':⍺ EnterOnInput ⍵
      0
  }

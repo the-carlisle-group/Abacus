@@ -1,4 +1,0 @@
- RunOnWeb←{
-     ⎕THIS.A←##.Main
-     ##.CSVEditor.RunOnWeb 0
- }

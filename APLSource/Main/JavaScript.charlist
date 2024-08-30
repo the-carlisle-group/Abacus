@@ -3,8 +3,8 @@
 var ws;
 
 function APLInit(){
-  // ws = new WebSocket ('ws:://dyalog_root/'); 
-  // ws = new WebSocket ('ws://localhost'); 
+   // ws = new WebSocket ('ws:://dyalog_root/'); 
+   // ws = new WebSocket ('ws://localhost'); 
    
    ws = new WebSocket ('ws://'+location.hostname); 
    ws.onopen = function(evt) { onOpen(evt) };

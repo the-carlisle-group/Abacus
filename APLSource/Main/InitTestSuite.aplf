@@ -1,0 +1,12 @@
+ InitTestSuite←{
+     ⍝ ⍺ ←→ Test Suite Namespace
+     ⍝ ⍵ ←→ Document
+     ⍺.A←⎕THIS
+     ⍺.Document←⍵
+     fx0←{⍺.⎕FX,⊂⍵,'←{⍺←Document ⋄ ⍺ A.',⍵,' ⍵}'}
+     fx1←{⍺.⎕FX,⊂⍵,'←{Document A.',⍵,' ⍵}'}
+     _←⍺ fx0¨'Enter' 'Press'
+     _←⍺ fx1¨'Click' 'GetElementById' 'GetDOM'
+     ⍝ Rename GetDOM!!!! to GetElementFromBrowser
+     WaitForApp ⍵.Client
+ }

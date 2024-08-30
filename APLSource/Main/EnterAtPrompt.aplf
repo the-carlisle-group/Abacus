@@ -1,4 +1,4 @@
  EnterAtPrompt←{
-     e←⍺ GetElementById'Prompt'
-     0⊣e FireKeyDownOnInputAndWait¨⍵
+     i←⍺ GetElementById'Prompt'
+     i EnterOnInput ⍵
  }

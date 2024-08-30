@@ -1,8 +1,10 @@
  Click←{
      ⍝ ⍺ ←→ Documnet
      ⍝ ⍵ ←→ id
-     j←'document.getElementById("',⍵,'").click()'
+     e←⍺ GetElementById ⍵
+     b←2=e.⎕NC'Onclick'
+     v←b⊃'mousedown' 'click'
      ⍺.Waiting←1
-     _←⍺ ExecuteJavaScript j
+     _←e DispatchEvent v
      0⊣⎕TGET DoneToken
  }

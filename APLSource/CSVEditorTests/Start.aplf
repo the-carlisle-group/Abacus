@@ -1,0 +1,4 @@
+ Start←{
+     d←##.CSVEditor.RunOnDesktop 0
+     ⎕THIS #.Abacus.Main.InitTestSuite d
+ }

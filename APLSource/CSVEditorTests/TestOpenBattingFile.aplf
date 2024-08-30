@@ -1,20 +1,19 @@
  TestOpenBattingFile←{
-     d←⍵
-     d A.Click'File':
-     d A.Click'Open':
-     d A.Enter GetFileName'Batting.csv':
-     d A.Click'OK':
-     p←d A.ElementById'CSVdata'
+     Click'File':
+     Click'Open':
+     Enter GetFileName'Batting.csv':
+     Click'OK':
+     p←GetElementById'CSVdata'
      Assert 22=≢p.Values:
      Assert 107429=≢0⊃p.Values:
-     q←d A.GetDOM'CSVdata'
+     q←GetDOM'CSVdata'
      v←A.BodyValues q
      Assert'abercda01' '1871'≡v[0;1 2]:
-     p A.PressKey'ArrowDown':
-     p A.PressKey'ArrowDown':
-     p A.PressKey'End':
+     p Press'ArrowDown':
+     p Press'ArrowDown':
+     p Press'End':
      Assert p.DataCell≡2 21:
-     q←d A.GetDOM'CSVdata'
+     q←GetDOM'CSVdata'
      v←A.BodyValues q
      Assert(2⊃⊢/v)≡,'1':
      0

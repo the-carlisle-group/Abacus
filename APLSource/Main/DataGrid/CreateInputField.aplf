@@ -32,5 +32,6 @@
      n←⍕≢⍺
      _←i A.ExecuteOnElement'setSelectionRange(',n,',',n,')'
      _←i A.FireEvent'focus'
+     ⎕←'Input field created!'
      i
  }

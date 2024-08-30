@@ -10,10 +10,12 @@
      h1←d A.New'h1'tv
      l←d A.New'label'lv
      i←d A.New'input'
+     i.id←'Prompt' ⍝ Is there a better way for tests?
      i.value←iv
      i.Oninput←A.FQP'OnInput'
      m←d A.New'menu'
      b←m A.New¨{'button'⍵}¨'OK' 'Cancel'
+     b.id←'OK' 'Cancel'
      b.Onclick←A.FQP¨'OnOK' 'OnCancel'
      d
  }

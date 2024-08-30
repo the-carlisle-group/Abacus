@@ -1,4 +1,4 @@
- EnterOnInput←{
+ EnterOnInputAccumulate←{
      ⍝ Enter text ⍵ on input element ⍺.
      ⍝ If there are keydown events attached to the
      ⍝ input element they will NOT be fired.
@@ -7,9 +7,10 @@
      ⍝            This does NOT fire the input event
      ⍝            So we must call it here.
      ⍝
-     _←⍺ SetProperty'value'⍵
+     w←⍺.value,⍵
+     _←⍺ SetProperty'value'w
      s←⎕NS''
      s.CurrentTarget←⍺
-     s.Value←⍵
+     s.Value←w
      (⍎⍺.Oninput)s
  }
