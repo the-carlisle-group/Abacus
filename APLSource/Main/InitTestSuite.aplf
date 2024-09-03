@@ -6,8 +6,8 @@
      ⍺.Element←⍵
      fx←{⍺.⎕FX,⊂⍵,'←{⍺←Element ⋄ ⍺ A.',⍵,' ⍵}'}
      fx1←{⍺.⎕FX,⊂⍵,'←{⍺←Document ⋄ ⍺ A.',⍵,' ⍵}'}
-     _←⍺ fx¨'Press' 'Enter' 'GetDOM'
-     _←⍺ fx1'Click'
+     _←⍺ fx¨'Press' 'Enter'
+     _←⍺ fx1¨'Click' 'GetElementFromBrowser'
      fx2←{⍺.⎕FX,⊂⍵,'←{⎕THIS.Element←Document A.',⍵,' ⍵}'}
      _←⍺ fx2'GetElementById'
      0

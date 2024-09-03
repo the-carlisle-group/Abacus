@@ -3,7 +3,7 @@
      ⍝ ⍵ ←→ Javascript
      ⍝ ← ←→ Result
      c←'"',⍵,'"'
-     j←'execCode(',(⍕⎕TID),',',c,')'
-     _←⍺ ExecuteJavaScript j
+     j←'execCode(',(⍕⎕TID),',',c,')' ⍝ ⎕TID here conflicts with server event loop
+     _←⍺ ExecuteJavaScript j         ⍝ Maybe?? Maybe not?
      ⊃⎕TGET ⎕TID
  }

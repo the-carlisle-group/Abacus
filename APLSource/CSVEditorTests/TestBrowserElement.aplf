@@ -1,0 +1,21 @@
+ TestBrowserElement←{
+     3
+     ⎕TID=0:∇&0
+     Click'File':
+     Click'Open':
+     Enter GetFileName'Batting.csv':
+     Click'OK':
+     sg←GetElementById'CSVdata'
+     Assert 22=≢sg.Values:
+     Assert 107429=≢⊃sg.Values:
+
+     r←A.ExecuteJavaScriptSync'2+2'
+
+     cg←GetElementFromBrowser'CSVData'
+     ⊃A.BodyCells cg
+
+     A.BodyCells sg
+
+
+     0
+ }

@@ -1,5 +1,4 @@
  GetXML←{
-     j←'new XMLSerializer().serializeToString(document.getElementById (''',⍵,'''));'
- ⍝   j←'new XMLSerializer().serializeToString(document.body)'
+     j←'new XMLSerializer().serializeToString(document.getElementById(''',⍵,'''))'
      ⍺ ExecuteJavaScriptSync j
  }

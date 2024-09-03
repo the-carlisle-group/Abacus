@@ -4,20 +4,24 @@
      Enter GetFileName'Batting.csv':
      Click'OK':
      g←GetElementById'CSVdata'
+     Assert 22=≢g.Values:
+     Assert 107429=≢⊃g.Values:
      Assert g.DataCell≡0 0:
-     g Press'ArrowDown':
+     Press'ArrowRight':
+     Assert g.DataCell=0 1:
+     Press'ArrowDown':
+     Assert g.DataCell=1 1:
+     Press'ArrowLeft':
      Assert g.DataCell=1 0:
-     g Press'ArrowDown':
-     Assert g.DataCell=2 0:
-     g Press'ArrowDown':
-     Assert g.DataCell=3 0:
-     g Press'ArrowDown':
-     Assert g.DataCell=4 0:
-     g Press'ArrowDown':
-     Assert g.DataCell=5 0:
-     g Press'ArrowDown':
-     Assert g.DataCell=6 0:
-     _←{g Press'ArrowDown'}¨100⍴0
-     Assert g.DataCell=106 0:
+     Press'ArrowUp':
+     Assert g.DataCell=0 0:
+     Press'End':
+     Assert g.DataCell=0 21:
+     Press'Home':
+     Assert g.DataCell=0 0:
+     Press'Ctrl' 'End':
+     Assert g.DataCell=107428 21:
+     Press'Ctrl' 'Home':
+     Assert g.DataCell=0 0:
      0
  }

@@ -1,0 +1,3 @@
+ GetElementFromBrowser←{
+     HTML2DOM ⍺ GetXML ⍵
+ }

@@ -3,18 +3,18 @@
      Click'Open':
      Enter GetFileName'Batting.csv':
      Click'OK':
-     p←GetElementById'CSVdata'
-     Assert 22=≢p.Values:
-     Assert 107429=≢0⊃p.Values:
-     q←GetDOM'CSVdata'
-     v←A.BodyValues q
+     sg←GetElementById'CSVdata'
+     Assert 22=≢sg.Values:
+     Assert 107429=≢0⊃sg.Values:
+     cg←GetElementFromBrowser'CSVdata'
+     v←A.BodyValues cg
      Assert'abercda01' '1871'≡v[0;1 2]:
-     p Press'ArrowDown':
-     p Press'ArrowDown':
-     p Press'End':
-     Assert p.DataCell≡2 21:
-     q←GetDOM'CSVdata'
-     v←A.BodyValues q
+     Press'ArrowDown':
+     Press'ArrowDown':
+     Press'End':
+     Assert sg.DataCell≡2 21:
+     cg←GetElementFromBrowser'CSVdata'
+     v←A.BodyValues cg
      Assert(2⊃⊢/v)≡,'1':
      0
  }

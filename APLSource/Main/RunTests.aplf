@@ -1,4 +1,5 @@
  RunTests←{
+     ⍝ ⍺ ←→ ¯1 ←→ Setup only
      ⍝ ⍺ ←→ [Stop 0|1 [Quiet 0|1|2]]
      ⍝ ⍵ ←→ Test space, [Code space]
      ⍝ ← ←→ Result space
@@ -7,5 +8,6 @@
      d←s.Start 0
      _←s InitTestSuite d
      _←WaitForApp d.Client
+     ⍺≡¯1:0
      ⍺ #.Provanto.Main.Run&⍵
  }
