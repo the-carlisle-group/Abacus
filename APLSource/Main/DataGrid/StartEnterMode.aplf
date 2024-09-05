@@ -1,8 +1,12 @@
  StartEnterMode←{
      ⍝ ⍺ ←→ Starting text
-     ⍝ ⍵ ←→ <td> element
+     ⍝ ⍵ ←→ table
      t←⍵
      t.CellMode←1
+     ⍝ ⍺ CreateInputField ⍵
+     ⍝ Probably need this for autocomplete
+     ⍝ But could be problematic to further fire events
+     ⍝ that have call backs in APL... messy
      i←''CreateInputField ⍵
      i A.FireKeyDownOnInput ⍺
  }

@@ -8,6 +8,6 @@
      p←⍺.Document GetElementsWhere'id' 'Prompt'
      1=≢p:(⊃p)EnterOnInput ⍵
      t≡'input':⍺ EnterOnInput ⍵
-     t≡'table':0⊣⎕DL 0.001⊣⍺ EnterOnTable ⍵
+     t≡'table':0⊣⍺ EnterOnTable ⍵
      0
  }

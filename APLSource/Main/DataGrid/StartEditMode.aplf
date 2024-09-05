@@ -1,7 +1,6 @@
  StartEditMode←{
      ⍝ ⍺ ←→ Starting text
      ⍝ ⍵ ←→ <td> element
-     ⎕←'Start edit mode!'
      t←⍵
      m←t.CellMode
      t.CellMode←2

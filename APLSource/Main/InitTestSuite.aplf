@@ -4,6 +4,7 @@
      ⍺.A←⎕THIS
      ⍺.Document←⍵
      ⍺.Element←⍵
+     ⍵.TestMode←1
      fx←{⍺.⎕FX,⊂⍵,'←{⍺←Element ⋄ ⍺ A.',⍵,' ⍵}'}
      fx1←{⍺.⎕FX,⊂⍵,'←{⍺←Document ⋄ ⍺ A.',⍵,' ⍵}'}
      _←⍺ fx¨'Press' 'Enter'

@@ -1,9 +1,8 @@
  TestOpeningLargeFile←{
-     3
-     d←f.Document
-     d A.Click'File':
-     d A.Click'Open':
-     d A.Enter GetFileName'c:/DataSets/Large Files/GB3.csv':
+     4
+     A.Click'File':
+     A.Click'Open':
+     Enter GetFileName'c:/DataSets/Large Files/GB3.csv':
      d A.NoWaitClick'OK':
      d A.Click'Pause':
      d A.NoWaitClick'Resume':
