@@ -1,0 +1,22 @@
+ Start←{
+     ⎕THIS.A←##.##.Main
+     t←ReadCSVFile GetFileName'People.csv'
+     g←A.DataGrid.New''
+     g.id←'the-datagrid'
+     g.Write←1
+     g.RowNumbers←1
+     g.Values←t.Values
+     g.Names←t.Names
+     g.Types←t.Types
+     g.Align←t.Align
+     g.SortDirection←t.SortDirection
+     d←A.NewDocument g
+     d.Caption←'Datagrid Test'
+     d.LayoutStyle←CSS 0
+     d.AppStyle←⍬
+     d.Theme←#.Abacus.Themes.Dark 0
+     _←A.NewForm d
+     _←d A.DataGrid.Init g
+     _←g A.DataGrid.Resize 0
+     d
+ }

@@ -1,0 +1,9 @@
+ CSS←{
+     Rule←#.Abacus.Main.NewRule
+     s←Rule''
+     ⍝ Body
+     r←s Rule'body'
+     r.min_height←'100vh'
+     r.max_height←'100vh'
+     s
+ }

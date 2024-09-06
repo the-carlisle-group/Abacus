@@ -1,0 +1,24 @@
+ TestEditingTextColumn←{
+     ⎕TID=0:∇&0
+     g←GetElementById'the-datagrid'
+     Assert 20081 24≡⍴g.Values:
+     Assert g.Values[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
+     bg←GetElementFromBrowser'the-datagrid'
+     c←A.BodyValues bg
+     Assert c[⍳5;1]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
+     Enter'One':
+     Press'ArrowDown':
+     Enter'Two':
+     Press'ArrowDown':
+     Enter'Three':
+     Press'ArrowDown':
+     Enter'Four':
+     Press'ArrowDown':
+     Enter'Five':
+     Press'ArrowDown':
+     Assert g.Values[⍳5;0]≡'One' 'Two' 'Three' 'Four' 'Five':
+     bg←GetElementFromBrowser'the-datagrid'
+     c←A.BodyValues bg
+     Assert c[⍳5;1]≡'One' 'Two' 'Three' 'Four' 'Five':
+     0
+ }

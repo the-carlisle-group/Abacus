@@ -1,0 +1,14 @@
+ ReadCSVFile←{
+     ⍝ ⍵ ←→ FQP file name
+     ⍝ ← ←→ Namespace with Names, Values, etc.
+     o←'Invert' 0
+     v n←(⎕CSV⍠o)⍵'' 1 1
+     c←≢n
+     t←⎕NS''
+     t.Names←n
+     t.Values←v
+     t.Types←c⍴⊂'Char'
+     t.Align←c⍴⊂'left'
+     t.SortDirection←c⍴0
+     t
+ }
