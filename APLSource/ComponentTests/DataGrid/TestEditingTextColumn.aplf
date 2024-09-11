@@ -1,6 +1,7 @@
  TestEditingTextColumn←{
      ⎕TID=0:∇&0
      g←GetElementById'the-datagrid'
+     Press'Ctrl' 'Home':
      Assert 20081 24≡⍴g.Values:
      Assert g.Values[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
      bg←GetElementFromBrowser'the-datagrid'

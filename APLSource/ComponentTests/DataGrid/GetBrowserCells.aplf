@@ -1,0 +1,4 @@
+ GetBrowserCells←{
+     t←GetElementFromBrowser'the-datagrid'
+     0 1↓A.BodyCells t
+ }

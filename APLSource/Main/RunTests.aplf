@@ -1,13 +1,14 @@
  RunTests←{
      ⍝ ⍺ ←→ ¯1 ←→ Setup only
-     ⍝ ⍺ ←→ [Stop 0|1 [Quiet 0|1|2]]
+     ⍝ ⍺ ←→ [Stop 0|1 [Quiet 0|1|2] [DataGrid test edit mode 0|1]]
      ⍝ ⍵ ←→ Test space, [Code space]
      ⍝ ← ←→ Result space
      ⍺←0
      s←⊃⍵
      d←s.Start 0
      _←s InitTestSuite d
+     d.TestMode+←2⊃3↑⍺
      _←WaitForApp d.Client
-     ⍺≡¯1:0
+     ¯1=⊃⍺:0
      ⍺ #.Provanto.Main.Run&⍵
  }

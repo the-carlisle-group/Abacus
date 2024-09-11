@@ -9,7 +9,8 @@
      g.Names←t.Names
      g.Types←t.Types
      g.Align←t.Align
-     g.SortDirection←t.SortDirection
+     g.SortDirection←t.SortDirection           ⍝ Should default
+     g.AutoCompleteItems←t.AutoCompleteItems   ⍝ Should default
      d←A.NewDocument g
      d.Caption←'Datagrid Test'
      d.LayoutStyle←CSS 0

@@ -9,7 +9,7 @@
      ⍝    If this is not done, and the widest content cell is being edited
      ⍝    the column will resize to the next widest content cell.
      ⍝ 4. Set the outerHMTL of <td> so class is changed too.
-     _←⎕DL ⍵.Document.TestMode×0.1
+     _←⎕DL 0.5×⍵.Document.TestMode=2
      t←⍵
      td←t.TableCell⌷A.BodyCells t
      v←td.Content

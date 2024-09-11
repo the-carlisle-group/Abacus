@@ -1,7 +1,6 @@
  EnterOnTable←{
      ⍝ ⍺ ←→ Table Element
      ⍝ ⍵ ←→ Text
-     ⍝ _←⎕DL 0.05
      ⍺.CellMode=2:0⊣(⍺ GetElementById'data-grid-input')EnterOnInputAccumulate ⍵
      _←⍺ FireKeyDownAndWait⊃⍵
      i←⍺ GetElementById'data-grid-input'
