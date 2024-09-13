@@ -1,4 +1,5 @@
  CreateInputField←{
+     ⍝ ****************↓↓↓↓ OLD COMMENTS↓↓↓↓
      ⍝ Inside <td>:
      ⍝ 1. Remove the padding of td
      ⍝ 2. Create a new div (input-cell) to hold <input> element
@@ -9,9 +10,13 @@
      ⍝    If this is not done, and the widest content cell is being edited
      ⍝    the column will resize to the next widest content cell.
      ⍝ 4. Set the outerHMTL of <td> so class is changed too.
+     ⍝ **************↑↑↑↑↑ OLD COMMENTS ↑↑↑
+
      ⍝ When editing a cell, the <td> gets its content replaced
      ⍝ with the <input> element. If the cell has the widest content of the
-     ⍝ column, the column width shrinks to the next widest...
+     ⍝ column, the column width shrinks to the next widest as the <input>
+     ⍝ element, even with text in it, does not force the column to stay wide enough...
+
      _←⎕DL ⍵.Document.DataGridInputDelay
      t←⍵
      td←t.TableCell⌷A.BodyCells t
