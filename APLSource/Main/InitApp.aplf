@@ -2,6 +2,7 @@
      ⍝ ⍵ ←→ Document
      d←⍵
      d.TestMode←0
+     d.DataGridInputDelay←0
      d.SessionID←NewGUID'N'
      d.Script←BuildJavaScript d
      d.Style←CollectCSS d

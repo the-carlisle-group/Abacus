@@ -12,7 +12,7 @@
      ⍝ When editing a cell, the <td> gets its content replaced
      ⍝ with the <input> element. If the cell has the widest content of the
      ⍝ column, the column width shrinks to the next widest...
-     _←⎕DL 0.5×⍵.Document.TestMode=2
+     _←⎕DL ⍵.Document.DataGridInputDelay
      t←⍵
      td←t.TableCell⌷A.BodyCells t
      _←t.LastAnchor A.RemoveProperty'anchor-name'
