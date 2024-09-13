@@ -1,16 +1,22 @@
  MoveColumn←{
      t←⍵
+     HandleInput t:0
      c←1⊃t.DataCell
      (⍺=¯1)∧c=0:0
      (⍺=1)∧c=¯1+≢t.Names:0
      i←c,c+⍺
      j←⌽i
-     t.Values[i]←t.Values[j]
+
+     ⍝ If inverted do this.
+     ⍝ t.Values[i]←t.Values[j]
+     ⍝ Else this
+     t.Values[;i]←t.Values[;j]
+
      t.Names[i]←t.Names[j]
      t.Types[i]←t.Types[j]
      t.Align[i]←t.Align[j]
      t.SortDirection[i]←t.SortDirection[j]
-     _←t Init 0
+     _←t.Document Init t
      _←t Resize 0
      0 ⍺ Move t
  }

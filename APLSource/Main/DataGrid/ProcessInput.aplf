@@ -3,7 +3,7 @@
      t←i A.GetNearest'table'
      vfi←⍎(1⊃t.DataCell)⊃t.VFI
      b pv em←t vfi i.value
-     b:1   ⍝ No good, set focus back on input
+     b:i ShowDataEntryError em
      fmt←⍎(1⊃t.DataCell)⊃t.FMT
      fv←⊃fmt pv
      _←t SetValue pv

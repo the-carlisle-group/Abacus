@@ -1,6 +1,6 @@
  Move←{
      t←⍵
-     HandleInput ⍵:0
+     HandleInput t:0
      i←⍺+t.DataCell
      (⊃i)=⊃t.DataSize:AppendRow t
      j←⍺+t.WindowCell

@@ -2,5 +2,5 @@
      b v←' ./-'⎕VFI ⍵
      g←¯1 0 ⎕DT⊂v
      g∧b≡3⍴1:0(¯1 60 ⎕DT⊂v)''
-     1 0 'Invalid entry'
+     1 0 'Invalid entry; not a date'
  }

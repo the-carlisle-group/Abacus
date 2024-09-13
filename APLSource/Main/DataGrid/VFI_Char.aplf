@@ -1,4 +1,5 @@
  VFI_Char←{
+     ⍵≡'crap':1 0 'Invalid entry: "crap"'
      ~⍺.Inverted:0 ⍵''
      l←(1⊃⍺.DataCell)⊃⍺.MaxLength
      0(l↑⍵)''

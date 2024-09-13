@@ -3,6 +3,8 @@
      ⍺←⊣
      r c←10 3
      t←⍺ A.New'table'
+     t.LastAnchor←0
+     t.EntryError←0
      t.Write←0
      t.RowNumbers←0
      t.FreezeColumns←0

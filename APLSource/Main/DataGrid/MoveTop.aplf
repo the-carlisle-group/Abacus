@@ -1,5 +1,6 @@
  MoveTop←{
      t←⍵
+     HandleInput t:0
      t.DataCell[0]←0
      t.WindowCell[0]←0
      t.TableCell[0]←0

@@ -1,0 +1,8 @@
+ SplitCSV
+
+ a b c←⎕NGET'c:/DataSets/Large Files/GB3.csv' 1
+ ⍴a
+ 7067533
+ (⊂1000000↑a)⎕NPUT'c:/DataSets/Large Files/OneMillionOne.csv'
+ (⊂1000000↑1000000↓a)⎕NPUT'c:/DataSets/Large Files/OneMillion2.csv'
+ (⊂1000000↑2000000↓a)⎕NPUT'c:/DataSets/Large Files/OneMillion3.csv'

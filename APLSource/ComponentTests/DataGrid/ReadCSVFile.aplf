@@ -13,5 +13,9 @@
      t.Align←p.Align
      t.SortDirection←c⍴0
      t.AutoCompleteItems←c⍴⊂''
+     j←n⍳⊂'birthCity'
+     t.AutoCompleteItems[j]←⊂∪t.Values[;j]
+     j←n⍳⊂'birthCountry'
+     t.AutoCompleteItems[j]←⊂∪t.Values[;j]
      t
  }

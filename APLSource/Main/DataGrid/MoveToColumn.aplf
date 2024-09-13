@@ -1,5 +1,6 @@
  MoveToColumn←{
      t←⍵
+     HandleInput t:0
      n←(⍺=¯1)⊃⍺,⍺+1⊃t.DataSize    ⍝ Goto Nth column
      c←1⊃t.DataCell               ⍝ Current column
      n=c:0

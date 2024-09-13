@@ -1,8 +1,8 @@
  EnterOnTable←{
      ⍝ ⍺ ←→ Table Element
      ⍝ ⍵ ←→ Text
-     ⍺.CellMode=2:0⊣(⍺ GetElementById'data-grid-input')EnterOnInputAccumulate ⍵
+     ⍺.CellMode=2:0⊣(⍺ GetElementById'grid-input')EnterOnInputAccumulate ⍵
      _←⍺ FireKeyDownAndWait⊃⍵
-     i←⍺ GetElementById'data-grid-input'
+     i←⍺ GetElementById'grid-input'
      i EnterOnInputAccumulate 1↓⍵
  }

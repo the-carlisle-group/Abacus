@@ -1,5 +1,7 @@
  OnClick←{
      e←⍵.Target
+     t←⍵.CurrentTarget
+     HandleInput t:0
      e.Tag≡'th':OnClickHeaderCell ⍵
      t←⍵.CurrentTarget
      c←A.BodyCells t

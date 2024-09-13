@@ -7,11 +7,14 @@
      s←⍵.ShiftKey≡⊂'true'
      a←⍵.AltKey≡⊂'true'
      u←~c∨s∨a
+     k≡'Escape':Escape t
      u∧k≡'Enter':1 0 Move t
      s∧k≡'Enter':¯1 0 Move t
      u∧k≡'Tab':0 1 Move t
      s∧k≡'Tab':0 ¯1 Move t
      m=2:0
+     c∧s∧k≡'ArrowLeft':¯1 MoveColumn t
+     c∧s∧k≡'ArrowRight':1 MoveColumn t
      u∧k≡'ArrowRight':0 1 Move t
      u∧k≡'ArrowLeft':0 ¯1 Move t
      u∧k≡'ArrowUp':¯1 0 Move t
@@ -27,8 +30,8 @@
      c∧k≡'Home':MoveHome t
      c∧k≡'End':MoveEnd t
      k≡'F6':t FreezeColumns 0
-     c∧s∧k≡'ArrowLeft':¯1 MoveColumn t
-     c∧s∧k≡'ArrowRight':1 MoveColumn t
+     ⍝ c∧s∧k≡'ArrowLeft':¯1 MoveColumn t
+     ⍝ c∧s∧k≡'ArrowRight':1 MoveColumn t
      ~t.Write:0
      k≡'F2':StartEditMode t
      m=1:0

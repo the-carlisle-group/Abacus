@@ -1,0 +1,15 @@
+ Escape←{
+     t←⍵
+     t.CellMode=0:0
+     c←A.BodyCells t
+     td←t.TableCell⌷c
+     i←td ##.GetElementById'grid-input'
+     i.EntryError:HideEntryError i
+     _←i A.RemoveAttribute'onblur'
+     ov←∊i.OriginalValue   ⍝ Get rid of this ∊!!!!
+     _←td A.SetInnerHTML ov
+     _←td A.RemoveClass'in-cell'
+     t.CellMode←0
+     _←t A.FireEvent'focus'
+     0
+ }

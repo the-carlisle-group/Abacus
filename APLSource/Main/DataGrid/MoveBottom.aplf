@@ -1,5 +1,6 @@
  MoveBottom←{
      t←⍵
+     HandleInput t:0
      t.DataCell[0]←t.DataSize[0]-1
      t.WindowCell[0]←t.WindowSize[0]-1
      t.TableCell[0]←t.WindowCell[0]

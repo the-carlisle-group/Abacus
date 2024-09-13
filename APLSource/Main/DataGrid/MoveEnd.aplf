@@ -1,5 +1,6 @@
  MoveEnd←{
      t←⍵
+     HandleInput t:0
      ⍝ Same as MoveToColumnRight
      n←¯1+1⊃t.DataSize
      i←n⊃t.ScrollIntoViewIndex
