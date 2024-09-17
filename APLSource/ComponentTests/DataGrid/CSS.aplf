@@ -3,6 +3,7 @@
      s←Rule''
      ⍝ Body
      r←s Rule'body'
+     r.overflow←'clip'
      r.min_height←'100vh'
      r.max_height←'100vh'
      s

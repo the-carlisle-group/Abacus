@@ -109,9 +109,5 @@
      r.inset_area←'bottom right'
      r.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
 
-     ⍝ r←s Rule'.input-cell'
-     ⍝ r.anchor_name←'--input-cell'
-     ⍝ r.position←'relative'
-
      ##.UnNestCSS s
  }

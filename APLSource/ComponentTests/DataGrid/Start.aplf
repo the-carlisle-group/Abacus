@@ -5,6 +5,10 @@
      g.id←'the-datagrid'
      g.Write←1
      g.RowNumbers←1
+     g.InsertRows←1
+     g.MoveRows←1
+     g.InsertColumns←1
+     g.MoveColumns←1
      g.Values←t.Values
      g.Names←t.Names
      g.Types←t.Types

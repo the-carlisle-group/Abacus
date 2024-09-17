@@ -1,12 +1,13 @@
  MoveRowUp←{
-     t←⍺
+     t←⍵
+     HandleInput t:0
      ~t.MoveRows:0
-     i←⊃⍺.DataCell
+     i←⊃t.DataCell
      i=0:0
      k←i,i-1
-     j←⍳⊃⍺.DataSize
+     j←⍳⊃t.DataSize
      j[k]←⌽k
-     t.Values←(⊂⊂j)⌷¨t.Values
+     t.Values←j ⍬ Index t
      _←Refresh t
      ¯1 0 Move t
  }

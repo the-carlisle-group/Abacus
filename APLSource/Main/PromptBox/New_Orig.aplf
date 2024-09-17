@@ -1,4 +1,4 @@
- New←{
+ New_Orig←{
      ⍝ ⍵ ←→ Title, Label, Value, OKHandler
      ⍝ ← ←→ new dialog element
      tv lv iv cb←⍵
@@ -6,12 +6,12 @@
      d←A.New'dialog'
      d.class←'prompt-box'
      d.Onclose←A.FQP'OnCancel'
-     d.Argumment←⍵
-     h1←d A.New'h1'⍵.Caption
-     l←d A.New'label'⍵.Title
+     d.OnOK←cb
+     h1←d A.New'h1'tv
+     l←d A.New'label'lv
      i←d A.New'input'
      i.id←'Prompt' ⍝ Is there a better way for tests?
-     i.value←⍵.Value
+     i.value←iv
      i.Oninput←A.FQP'OnInput'
      m←d A.New'menu'
      b←m A.New¨{'button'⍵}¨'OK' 'Cancel'

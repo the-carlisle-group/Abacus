@@ -1,0 +1,26 @@
+ TestMovingRows←{
+     ⎕TID=0:∇&0
+     g←GetElementById'the-datagrid'
+     Press'Ctrl' 'Home':
+     Assert g.DataCell≡0 0:
+     sv←g.Values[0;]
+     c←GetBrowserCells''
+     cv←1↓c[0;]
+     Press'Ctrl' 'Shift' 'DownArrow':
+
+     #.Abacus.Main.DataGrid.OnKeyDown
+
+
+
+     c←GetBrowserCells''
+     Assert cc≡(⊃c).class:0
+     Press'Ctrl' 'End':
+     Assert g.DataCell≡m n-1:
+     c←GetBrowserCells''
+     Assert cc≡(⊃⌽⊖c).class:0
+     Press'Home':
+
+
+
+
+ }

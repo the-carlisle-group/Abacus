@@ -1,5 +1,5 @@
  DeleteRow←{
-     t←⍺
+     t←⍵
      ~t.InsertRows:0
      i j←t.DataCell
      n m←t.DataSize

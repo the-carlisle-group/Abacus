@@ -1,18 +1,13 @@
- MoveColumn←{
+ DeleteColumn←{
      t←⍵
-     HandleInput t:0
+     ~t.InsertColumns:0
      c←1⊃t.DataCell
-     (⍺=¯1)∧c=0:0
-     (⍺=1)∧c=¯1+≢t.Names:0
-     i←c,c+⍺
-     j←⍳1⊃t.DataSize
-     j[i]←⌽i
+     j←c~⍨⍳1⊃t.DataSize
      t.Values←⍬ j Index t
      t.Names←t.Names[j]
      t.Types←t.Types[j]
      t.Align←t.Align[j]
      t.SortDirection←t.SortDirection[j]
      _←t.Document Init t
-     _←t Resize 0
-     0 ⍺ Move t
+     t Resize 0
  }

@@ -1,6 +1,7 @@
  InsertRow←{
-     t←⍺
+     t←⍵
      ~t.InsertRows:0
+     HandleInput t:0
      i j←t.DataCell
      n m←t.DataSize
      e←(0@i)1⍴⍨n+1

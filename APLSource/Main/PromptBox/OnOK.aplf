@@ -1,10 +1,11 @@
  OnOK←{
      t←⍵.CurrentTarget
      d←t A.GetNearest'dialog'
+     a←d.Argument
      i←d A.ElementByTag'input'
-     v←i.value
-     f←⍎d.OnOK
-     r←⍵.Document f v
+     a.NewValue←i.value
+     f←⍎a.OnOK
+     r←f a
      r:0
      A.DeleteElement d
  }

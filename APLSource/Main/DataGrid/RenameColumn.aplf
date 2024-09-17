@@ -1,0 +1,32 @@
+ RenameColumn←{
+   ⍝ UI Options:
+   ⍝ 1. Double click on column header,
+   ⍝    ... and rename in place, or with PromptBox...
+   ⍝ 2. Popup context menu.
+   ⍝ 3. Some key like  ctrl+shift F2, in case 2 or three
+   ⍝ Better to use Prompt box so avoid click away problem
+     t←⍵
+     ~t.InsertColumns:0
+     c←1⊃t.DataCell
+     ⍝ We can put all types of state in here:
+     p←⎕NS''
+     p.Caption←'Rename column'
+     p.Title←'Rename to:'
+     p.OnOK←##.FQP'OnRenameColumnOK'
+     p.Value←c⊃t.Names
+     p.DataGrid←t
+     ##.PromptBox.Show p ⍝ 'Rename Column' 'Rename to:' on cb
+
+
+     j←c~⍨⍳1⊃t.DataSize
+     t.Values←⍬ j Index t
+     t.Names←t.Names[j]
+     t.Types←t.Types[j]
+     t.Align←t.Align[j]
+     t.SortDirection←t.SortDirection[j]
+     _←t.Document Init t
+     t Resize 0
+
+
+
+ }

@@ -1,0 +1,18 @@
+ OnRenameColumnOK←{
+     v←⍵.NewValue~' '
+     v≡⍵.Value:0
+     g←⍵.DataGrid
+     c←g.D
+
+
+
+
+     e←(⊂v)∊t.Names
+     e:1
+     t.Names[c]←⊂v
+     _←t.Document Init t
+     _←t Resize 0
+
+
+     0
+ }

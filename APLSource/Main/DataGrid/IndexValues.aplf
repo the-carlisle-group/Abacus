@@ -1,0 +1,13 @@
+ IndexValues←{
+     ⍝ ⍺ ←→ Rows, Columns ⍬ for all
+     j k←⍺
+     t←⍵
+     v←t.Values
+     i←t.Inverted
+     i∧0=≢j:v[k]
+     0=≢j:v[;k]
+     i∧0=≢k:(⊂⊂j)∘⌷¨v
+     0=≢k:v[j;]
+     i:(⊂⊂j)∘¨v[j]
+     t[j;k]
+ }

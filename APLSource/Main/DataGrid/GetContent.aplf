@@ -5,10 +5,6 @@
      k←(⍳⍺.FreezeColumns),j
      q←(⍺.RowNumbers/0),k+⍺.RowNumbers
      v←⍺ GetValues i k
-     ⍝ v←i j⌷d.Values  ⍝ For reg mat
-     ⍝ v←(⊂⊂i)⌷¨⍺.Values[k]
-     ⍝ v←⍉↑⍺.FMT[k]{(⍎⍺)⍵}¨v
-     ⍝ v←{⍵:v,⍨ntbs'LCI15'⎕FMT i+1 ⋄ v}⍺.RowNumbers
      nr nc←⍴v
      h←nc↑t.TH
      h.Content←⍺.ColumnTitles[q]

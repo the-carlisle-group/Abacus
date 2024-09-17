@@ -17,5 +17,7 @@
      t.AutoCompleteItems[j]←⊂∪t.Values[;j]
      j←n⍳⊂'birthCountry'
      t.AutoCompleteItems[j]←⊂∪t.Values[;j]
+     j←n⍳⊂'birthState'
+     t.AutoCompleteItems[j]←⊂∪t.Values[;j]
      t
  }

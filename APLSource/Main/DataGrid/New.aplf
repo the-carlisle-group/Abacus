@@ -10,6 +10,8 @@
      t.FreezeColumns←0
      t.InsertRows←0
      t.MoveRows←0
+     t.MoveColumns←0
+     t.InsertColumns←0
      t.Values←r c⍴⊂''
      t.Names←'Column'∘,¨c↑⎕A
      t.Types←'Char'
