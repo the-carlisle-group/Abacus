@@ -1,3 +1,4 @@
  Show←{
+     ⍵.Document←⍺
      ⍺ ##.ShowModal New ⍵
  }

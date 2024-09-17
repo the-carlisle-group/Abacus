@@ -1,7 +1,11 @@
  OnFileOpen←{
-     d←⍵.Document
      ⍝ ⍝ f←'c:/DataSets/Baseball2019/batting.csv'
      ⍝ f←'c:/DataSets/Large Files/GB3.csv'
      f←''
-     d A.PromptBox.Show'Open File' 'File name:'f(A.FQP'Open')
+     p←⎕NS''
+     p.Title←'Open File'
+     p.Label←'File name:'
+     p.Value←''
+     p.OnOK←A.FQP'Open'
+     ⍵.Document A.PromptBox.Show p
  }

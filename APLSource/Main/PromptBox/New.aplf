@@ -1,14 +1,16 @@
  New←{
-     ⍝ ⍵ ←→ Title, Label, Value, OKHandler
+     ⍝ ⍵ ←→ .Title
+     ⍝      .Label
+     ⍝      .Value
+     ⍝      .OnOK
      ⍝ ← ←→ new dialog element
-     tv lv iv cb←⍵
      ⎕THIS.A←##
      d←A.New'dialog'
      d.class←'prompt-box'
      d.Onclose←A.FQP'OnCancel'
-     d.Argumment←⍵
-     h1←d A.New'h1'⍵.Caption
-     l←d A.New'label'⍵.Title
+     d.Argument←⍵
+     h1←d A.New'h1'⍵.Title
+     l←d A.New'label'⍵.Label
      i←d A.New'input'
      i.id←'Prompt' ⍝ Is there a better way for tests?
      i.value←⍵.Value
