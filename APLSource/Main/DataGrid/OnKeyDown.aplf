@@ -41,7 +41,7 @@
      co∧k≡'Delete':DeleteRow t
      cs∧k≡'Insert':InsertColumn t  ⍝ TODO!
      cs∧k≡'Delete':DeleteColumn t
-     co∧k≡'F2':RenameColumn t      ⍝ TODO!
+     co∧k≡'F2':RenameColumn t
      cs∧k≡'ArrowLeft':¯1 MoveColumn t
      cs∧k≡'ArrowRight':1 MoveColumn t
      cs∧k≡'ArrowUp':MoveRowUp t

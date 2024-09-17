@@ -2,17 +2,11 @@
      v←⍵.NewValue~' '
      v≡⍵.Value:0
      g←⍵.DataGrid
-     c←g.D
-
-
-
-
-     e←(⊂v)∊t.Names
-     e:1
-     t.Names[c]←⊂v
-     _←t.Document Init t
-     _←t Resize 0
-
-
-     0
+     c←1⊃g.DataCell
+     d←g.Document
+     e←(⊂v)∊g.Names
+     e:1⊣d ##.AlertBox.Show'Column name "',v,'" already exists.'
+     g.Names[c]←⊂v
+     _←d Init g
+     0⊣g Resize 0
  }
