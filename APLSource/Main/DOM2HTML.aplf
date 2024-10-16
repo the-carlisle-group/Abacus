@@ -6,9 +6,13 @@
      _←InitializeComponents ⍵
      _←InjectStyleElement ⍵
      _←InjectScriptElement ⍵
-     m←AddXMLSpace↑,ConstructQXI ⍵
-     xml←⎕XML⍠'UnknownEntity' 'Preserve'
-     t←RemoveXMLSpace xml 4↑[1]m
+     ⍝ m←AddXMLSpace↑,ConstructQXI ⍵
+     m←↑,ConstructQXI ⍵
+     o←⊂'Whitespace' 'Preserve'
+     o,←⊂'UnknownEntity' 'Preserve'
+     xml←⎕XML⍠o
+     ⍝ t←RemoveXMLSpace xml 4↑[1]m
+     t←xml 4↑[1]m
      t←t InjectHTML m[;4]~0
      ⍵.Tag≢'html':t
      t←⍵ InjectStyle t
