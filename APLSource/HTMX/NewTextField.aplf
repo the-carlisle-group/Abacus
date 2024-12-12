@@ -1,0 +1,13 @@
+ NewTextField←{
+     ⍺←0
+     n c v←⍵
+     d←⍺ A.New'div'
+     d.class←'fieldstyle1'
+     l←d A.New'label'c
+     i←d A.New'input'
+     i.name←n
+     i.type←'text'
+     i.value←v
+     d.Input←i
+     d
+ }

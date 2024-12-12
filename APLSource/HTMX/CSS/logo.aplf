@@ -1,0 +1,49 @@
+ logo←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'#logo'
+     r.background_color←⍵.BannerBackgroundColor
+     r.display←'inline-block'
+     r.font_family←'Francois One' ⍝  'Arial Black'
+     r.position←'relative'
+     r.font_size←'4em'
+     r.padding_left←'3rem'
+     r.padding_bottom←'2rem'
+       ⍝ *************************
+     r←s NewRule'.logoletterleft'
+     r.display←'inline-block'
+     r.transform←'rotate(-2deg)'
+     r.margin_left←'-.25rem'
+       ⍝ ***************************
+     r←s NewRule'.logoletterright'
+     r.display←'inline-block'
+     r.transform←'rotate(2deg)'
+     r.margin_left←'-.25rem'
+       ⍝ ********************
+     r←s NewRule'.logolettergreen'
+     r.color←⍵.Color1
+       ⍝ **************************
+     r←s NewRule'.logoletterblue'
+     r.color←⍵.Color2
+       ⍝ **************************
+     r←s NewRule'.logoletterred'
+     r.color←⍵.Color3
+       ⍝ **************************
+     r←s NewRule'.logoletteryellow'
+     r.color←⍵.Color4
+       ⍝ **************************
+     r←s NewRule'#logo>p'
+     r.position←'absolute'
+     r.top←'4.5rem'
+     r.color←⍵.LightGray
+     r.font_style←'none'
+     r.font_family←'Arial'
+     r.font_weight←'bold'
+     r.font_size←'1rem'
+       ⍝ **************************
+     r←s NewRule'.flipdbsublogo'
+     r.left←'7rem'
+       ⍝ *******************
+     s
+ }

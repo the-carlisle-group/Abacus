@@ -1,0 +1,25 @@
+ breadcrumbs←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'.breadcrumbs'
+     r.background_image←⍵.BreadcrumbBarBackground
+     r.padding←'.1em 2em'
+     ⍝ ************************
+     r←s NewRule'.breadcrumbs>a'
+     r.display←'inline-block'
+     r.font_family←'Arial'
+     r.font_size←'1.25em'
+     r.font_weight←'bold'
+     r.color←'inherit'
+     r.text_decoration←'none'
+     r.padding←'.5em 0em'
+     r.border_radius←'.25em'
+     r.transition←'all 1s'
+     ⍝ ************************
+     r←s NewRule'.breadcrumbs a:hover'
+     r.background_color←'white'
+     r.box_shadow←'0em 0em 1em 1 white'
+     ⍝ ****************
+     s
+ }

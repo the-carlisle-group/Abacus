@@ -1,0 +1,30 @@
+ variables←{
+
+     p←⎕NS''
+     p.FooterHeight←'5rem'
+     p.BannerBackgroundColor←'hsla(0, 0%, 5%, 1)'
+     p.MenuFontColor←'hsla(0, 0%, 60%,1)'
+     p.BreadcrumbBarBackground←'linear-gradient(to bottom,gray,lightgray)'
+     ⍝ Fonts
+
+
+
+
+
+     ⍝ Color palette
+     p.Color1←'hsla(100, 20%, 50%, 1)'
+     p.Color2←'hsla(200, 20%, 50%, 1)'
+     p.Color3←'hsla(0, 20%, 50%, 1)'
+     p.Color4←'hsla(50, 20%, 50%, 1)'
+     p.Color5←'hsla(50, 20%, 50%, 1)'
+     ⍝ Gray scale
+     p.EightyPercentWhite←'hsla(0, 0%, 80%, 1)'
+     p.NinetyPercentWhite←'hsla(0, 0%, 90%, 1)'
+     p.NinetyFivePercentWhite←'hsla(0, 0%, 95%, 1)'
+     p.VeryLightGray←'hsla(0, 0%, 70%, 1)'
+     p.LightGray←'hsla(0, 0%, 60%, 1)'
+     p.Gray←'hsla(0, 0%, 50%, 1)'
+     p.DarkGray←'hsla(0, 0%, 35%, 1)'
+     p.VeryDarkGray←'hsla(0, 0%, 25%, 1)'
+     p
+ }

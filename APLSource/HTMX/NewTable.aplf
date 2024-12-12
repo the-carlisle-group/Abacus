@@ -1,0 +1,21 @@
+ NewTable←{
+     ⍝ ⍵ ←→ Array of Col Spaces
+     ⍺←0
+     c←⍵
+     n←≢c
+     t←⍺ A.New'table'
+     th←t A.New'thead'
+     tr←th A.New'tr'
+     ch←tr∘A.New¨{'th'⍵}¨c.HeaderValue
+     ch.class←c.Class
+     tb←t A.New'tbody'
+     fc←⊃c
+     0=≢fc.BodyValues:t
+     td←{
+         0=fc.⎕NC'RowLinks':tb NewTableRow¨↓⍉↑c.BodyValues
+         rl←fc.RowLinks
+         tb NewTableRowLink¨rl{⍵{⍺ ⍵}¨⊂⍺}¨↓⍉↑c.BodyValues
+     }0
+     td.Content.class←⊂c.Class
+     t
+ }

@@ -1,0 +1,17 @@
+ subsection←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'.subsection'
+     r.margin_top←'.75rem'
+     ⍝ ************************
+     r←s NewRule'.subsection>summary'
+     r.font_family←'Arial'
+     r.font_size←'1.25rem'
+     r.font_weight←'bold'
+     ⍝ ************************
+     r←s NewRule'.subsectioncontent'
+     r.padding←'1rem 0 1rem 0'
+     ⍝ **************
+     s
+ }

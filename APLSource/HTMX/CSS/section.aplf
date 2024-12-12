@@ -1,0 +1,51 @@
+ section←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'section'
+     r.border_radius←'1.67rem'
+     r.margin←'.5rem'
+     r.display←'inline-block'
+     r.min_width←'35rem'
+     r.float←'left'
+     r.clear←'left'
+     ⍝ ************************
+     r←s NewRule'.sectioncontent'
+     r.padding←'1rem 3rem 1rem 3rem'
+     ⍝ ************************
+     r←s NewRule'section>details>summary'
+     r.border_radius←'1.67rem'
+     r.outline_style←'none'
+     r.cursor←'pointer'
+     r.font_family←'Arial'
+     r.font_size←'1.5em'
+     r.font_weight←'bold'
+     r.padding←'1.25rem 3rem'
+     ⍝ ************************
+     r←s NewRule'section>details[open]>summary'
+     r.border_radius←'1.67rem 1.67rem 0 0'
+     r.border_width←'0 0 .2em 0'
+     r.border_style←'solid'
+     r.border_color←⍵.VeryLightGray
+     ⍝ ************************
+     r←s NewRule'.links'
+     r.background_color←⍵.Color1
+     ⍝ ************************
+     r←s NewRule'.safe'
+     r.background_color←⍵.Color2
+     ⍝ ************************
+     r←s NewRule'.unsafe'
+     r.background_color←⍵.Color3
+     ⍝ ************************
+     r←s NewRule'.info'
+     r.background_color←⍵.Color4
+     ⍝ ************************
+     r←s NewRule'.propertysheet'
+     r.background_color←⍵.Color2
+     ⍝ ************************
+     r←s NewRule'.tablesection'
+     r.border←'3px solid'
+     r.border_color←⍵.EightyPercentWhite
+     ⍝ ************************
+     s
+ }

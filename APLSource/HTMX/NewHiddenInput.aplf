@@ -1,0 +1,12 @@
+ NewHiddenInput←{
+     ⍝ ⍺ ←→ Optional parent HTML Element
+     ⍝ ⍵ ←→ Name,Value
+     ⍝ ← ←→ input element
+     ⍺←0
+     i←⍺ A.New'input'
+     i.type←'hidden'
+     i.name←0⊃⍵
+     i.readonly←'readonly'
+     i.value←1⊃⍵
+     i
+ }

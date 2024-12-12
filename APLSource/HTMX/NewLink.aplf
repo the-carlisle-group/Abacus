@@ -1,0 +1,6 @@
+ NewLink←{
+     ⍺←0
+     l←⍺ A.New'a'(0⊃⍵)
+     l.href←1⊃⍵
+     l
+ }

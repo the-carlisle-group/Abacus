@@ -1,0 +1,28 @@
+ init←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ *****************
+     r←s NewRule'*'
+     r.margin←'0'
+     r.padding←'0'
+     r.box_sizing←'border-box'
+     ⍝ ********************
+     r←s NewRule'html'
+     r.font_family←'Arial'
+     r.position←'relative'     ⍝ For sticky footer
+     r.min_height←'100%'       ⍝ ... this too
+     ⍝ *********************
+     r←s NewRule'body'
+     r.margin←'0 0 6em 0'      ⍝ 6em is height of footer
+     ⍝ ***********************
+     r←s NewRule'main'
+     r.padding←'1rem 3rem'
+     ⍝ ***********************
+     r←s NewRule'dialog'
+     r.margin←'auto'
+     ⍝ **************************
+     r←s NewRule'.forceclear'
+     r.clear←'both'
+     ⍝ ******************
+     s
+ }

@@ -1,0 +1,11 @@
+ NewFileField←{
+     ⍺←0
+     n←⍵
+     d←⍺ A.New'div'
+     d.class←'fieldstyle3'
+     i←d A.New'input'
+     i.name←n
+     i.type←'file'
+     d.Input←i
+     d
+ }

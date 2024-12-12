@@ -1,0 +1,13 @@
+ NewSectionNew←{
+     ⍝ ⍺ ←→ Optional Parent Element
+     ⍝ ⍵ ←→ Target URL (parent)
+     ⍺←0
+     u←⍵
+     s←⍺ NewSectionForm'New' 'action safe'
+     f←s.Form
+     _←f NewTextField'_Class' 'Type' ''
+     _←f NewTextField'objectname' 'Name' ''
+     b←f NewCommand'Create'
+     b.hx_post←u
+     s
+ }

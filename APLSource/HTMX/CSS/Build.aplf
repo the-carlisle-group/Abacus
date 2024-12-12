@@ -1,0 +1,21 @@
+ Build←{
+     s←##.##.Main.NewRule''
+     p←variables 0
+     s←s init p
+     s←s header p
+     s←s logo p
+     s←s mainmenu p
+     s←s breadcrumbs p
+     s←s footer p
+     s←s section p
+     s←s subsection p
+     s←s linkstyle1 p
+     s←s fieldstyle1 p
+     s←s fieldstyle2 p
+     s←s fieldstyle3 p
+     s←s editjson p
+     s←s downloadbutton p
+     s←s commandbutton p
+     s←s table p
+     ##.##.Main.ComposeRules s
+ }

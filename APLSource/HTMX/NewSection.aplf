@@ -1,0 +1,12 @@
+ NewSection←{
+     ⍝ ⍺ ←→ Optional Parent
+     ⍝ ⍵ ←→ Caption, Class
+     ⍝ ← ←→ Section
+     ⍺←0
+     s←⍺ A.New'section'
+     s.class←1⊃⍵
+     d←s A.New'details'
+     _←d A.New'summary'(0⊃⍵)
+     s.Panel←d
+     s
+ }

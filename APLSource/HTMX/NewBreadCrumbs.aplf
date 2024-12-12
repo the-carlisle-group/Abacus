@@ -1,0 +1,11 @@
+ NewBreadCrumbs←{
+     ⎕ML←3
+     ⍺←0
+     p←(⍵≠'/')⊂⍵
+     r←'/',¨{⍺,'/',⍵}\p
+     n←'/ '∘,¨p
+     e←⍺ A.New'nav'
+     e.class←'breadcrumbs'
+     _←e NewLink¨↓⍉⊃n r
+     e
+ }

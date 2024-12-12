@@ -1,0 +1,12 @@
+ NewSectionDelete←{
+     ⍝ ⍺ ←→ Optional Parent
+     ⍝ ⍵ ←→ Caption URL
+     ⍺←0
+     c u←⍵
+     s←⍺ NewSectionForm c'unsafe'
+     f←s.Form
+     b←f NewCommand'Delete'
+     b.hx_delete←u
+     ⍝ b.hx_swap←'none'   ⍝ Needed?
+     s
+ }

@@ -1,0 +1,18 @@
+ downloadbutton←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'.downloadbutton'
+     r.display←'block'
+     r.margin←'2rem auto'
+     r.padding←'15px 45px'
+     r.text_decoration←'none'
+     r.color←'inherit'
+     r.font_size←'1.25rem'
+     r.background_image←'linear-gradient(to bottom,gray,white)'
+     r.box_shadow←'inset 0 0 0 1px #27496d'
+     r.border←'none'
+     r.border_radius←'5px'
+     ⍝ **********************
+     s
+ }

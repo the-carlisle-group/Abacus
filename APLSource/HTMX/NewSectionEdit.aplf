@@ -1,0 +1,9 @@
+ NewSectionEdit←{
+     c u v←⍵
+     s←⍺ NewSectionForm'Edit' 'action safe'
+     f←s.Form
+     _←f NewTextArea'JSON' 'JSON'v
+     b←f NewCommand'Save'
+     b.hx_put←u
+     s
+ }

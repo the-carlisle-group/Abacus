@@ -1,0 +1,14 @@
+ NewListbox←{
+     ⍺←0
+     n c v i←⍵
+     d←⍺ A.New'div'
+     d.class←'fieldstyle1'
+     l←d A.New'label'c
+     s←d A.New'select'
+     o←s A.New¨{'option'⍵}¨i
+     so←(i⍳⊂v)⊃o,↑o
+     so.selected←'selected'
+     s.name←n
+     d.Input←s
+     d
+ }

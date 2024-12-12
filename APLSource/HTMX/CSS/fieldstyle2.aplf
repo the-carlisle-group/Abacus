@@ -1,0 +1,24 @@
+ fieldstyle2←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'.fieldstyle2'
+     r.border_bottom←'1px dotted'
+     r.position←'relative'
+     r.margin←'2rem 0 2rem 0'
+     ⍝ ************************
+     r←s NewRule'.fieldstyle2 label'
+     r.font_weight←'bold'
+     r.font_size←'1.25rem'
+     ⍝ ************************
+     r←s NewRule'.fieldstyle2 input'
+     r.position←'absolute'
+     r.right←'0'
+     r.background_color←'inherit'
+     r.font_size←'1.25rem'
+     r.font_family←'APL385 Unicode'
+     r.text_align←'right'
+     r.border←'none'
+     ⍝ **********************
+     s
+ }

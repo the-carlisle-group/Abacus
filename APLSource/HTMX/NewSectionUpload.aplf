@@ -1,0 +1,17 @@
+ NewSectionUpload←{
+     ⍝ ⍺ ←→ Optional Parent Element
+     ⍝ ⍵ ←→ Caption, target URL
+     ⍺←0
+     u←1⊃⍵
+     s←⍺ NewSectionForm(0⊃⍵)'action safe'
+     f←s.Form
+     f.enctype←'multipart/form-data'
+     _←f NewHiddenInput'urlpart1'u
+     d←f NewFileField'file' ⍝ 'File Name' ''
+     d.Input.multiple←'multiple'
+     d.Input.required←'required'
+     c←'Additional path under /',{(↑⍵),'/.../',↑⌽⍵}('/'≠u)⊂u
+     r←f NewTextField'urlpart2'c''
+     _←f NewCommand'Upload'
+     s
+ }

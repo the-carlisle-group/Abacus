@@ -1,0 +1,22 @@
+ NewTemplate←{
+     d←NewHTMLDocument 0
+     b←d A.New'body'
+     h←b A.New'header'
+     l←h A.New'div'
+     l.id←'logo'
+     n←h A.New'nav'
+     n.id←'mainmenu'
+     _←n NewLink¨⍵.Menu
+     _←h NewBreadCrumbs ⍵.URL
+     m←b A.New'main'
+     m.id←'MainContent'
+     p←b A.New'p'
+     p.class←'forceclear'
+     f←b A.New'footer'
+     _←f A.New'p'⍵.Footer
+     db←b A.New'dialog'
+     db.id←'MainDialog'
+     db2←b A.New'dialog'
+     db2.id←'MessageBox'
+     d
+ }

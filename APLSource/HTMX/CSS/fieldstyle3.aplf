@@ -1,0 +1,13 @@
+ fieldstyle3←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'.fieldstyle3'
+     r.position←'relative'
+     r.margin←'1.5rem 0 3rem 0'
+     ⍝ ************************
+     r←s NewRule'.fieldstyle3 input'
+     r.font_size←'1.5rem'
+     ⍝ ***********************
+     s
+ }

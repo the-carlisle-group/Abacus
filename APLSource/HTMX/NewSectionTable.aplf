@@ -1,0 +1,7 @@
+ NewSectionTable←{
+     ⍺←0
+     c t←⍵
+     s←⍺ NewSection c'tablesection'
+     _←s.Panel NewTable t
+     s
+ }

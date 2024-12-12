@@ -1,0 +1,7 @@
+ header←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     r←s NewRule'header'
+     r.background_color←⍵.BannerBackgroundColor
+     s
+ }

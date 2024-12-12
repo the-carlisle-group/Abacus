@@ -1,0 +1,13 @@
+ NewSectionCopy←{
+     ⍝ ⍺ ←→ Optional Parent Element
+     ⍝ ⍵ ←→ Caption, source URL, target URL (parent)
+     ⍺←0
+     s←⍺ NewSectionForm(0⊃⍵)'action safe'
+     f←s.Form
+     _←f NewHiddenInput'httpmethod' 'PUT'
+     _←f NewHiddenInput'href'(1⊃⍵)
+     _←f NewHiddenInput'urlpart1'(2⊃⍵)
+     _←f NewTextField'urlpart2' 'Name' ''
+     _←f NewCommand'Copy'
+     s
+ }

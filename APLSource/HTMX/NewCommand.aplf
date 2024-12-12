@@ -1,0 +1,11 @@
+ NewCommand←{
+     ⍝ ⍵ ←→ [Name] Caption
+     ⍺←0
+     n c←(2=≡⍵)⊃(''⍵)⍵
+     b←⍺ A.New'button'c
+     b.class←'commandbutton'
+     n≡'':b
+     b.name←n
+     b.value←c
+     b
+ }

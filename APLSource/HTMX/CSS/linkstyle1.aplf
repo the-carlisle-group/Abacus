@@ -1,0 +1,19 @@
+ linkstyle1←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'.links a'
+     r.display←'block'
+     r.font_size←'1.5em'
+     r.color←'inherit'
+     r.padding←'.25em .5em'
+     r.text_decoration←'none'
+     r.border←'1px solid transparent'
+     r.border_radius←'.5em'
+     r.transition←'all 1s'
+     ⍝ ************************
+     r←s NewRule'.links a:hover'
+     r.background_color←'white'
+     ⍝ **************
+     s
+ }

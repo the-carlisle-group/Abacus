@@ -1,0 +1,10 @@
+ ReturnDialogError←{
+     ⍝ ⍺ ←→ Response
+     ⍝ ⍵ ←→ Error message (messages?)
+     A←#.Abacus.Main
+     e←A.New'div'⍵
+     e.id←'main-dialog-error'
+     e.hx_swap_oob←'true'
+     ⍺.Content←e
+     ⍺
+ }

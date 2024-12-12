@@ -1,0 +1,6 @@
+ NewTableRowLink←{
+     tr←⍺ A.New'tr'
+     td←tr A.New¨(≢⍵)⍴⊂'td'
+     _←td NewLink¨⍵
+     tr
+ }

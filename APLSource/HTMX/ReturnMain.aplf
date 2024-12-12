@@ -1,0 +1,12 @@
+ ReturnMain←{
+     ⍝ ⍺ ←→ Response
+     ⍝ ⍵ ←→ Full Page/Doc
+     A←#.Abacus.Main
+     m←A.GetMain ⍵
+     m.hx_swap_oob←'true'
+     d←A.New'dialog'
+     d.id←'MainDialog'
+     d.hx_swap_oob←'true'
+     ⍺.Content←m,d
+     ⍺
+ }

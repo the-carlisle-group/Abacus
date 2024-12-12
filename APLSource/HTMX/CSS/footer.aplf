@@ -1,0 +1,19 @@
+ footer←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'footer'
+     r.background_color←⍵.DarkGray
+     r.position←'absolute'
+     r.left←'0'
+     r.bottom←'0'
+     r.height←⍵.FooterHeight
+     r.width←'100%'
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'footer>p'
+     r.text_align←'center'
+     r.margin←'2rem'
+     ⍝ ***************
+     s
+ }

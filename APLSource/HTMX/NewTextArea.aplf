@@ -1,0 +1,11 @@
+ NewTextArea←{
+     ⍺←0
+     n c v←⍵
+     d←⍺ A.New'div'
+     d.class←'editjson'
+     ⍝ l←d Add'label'c
+     i←d A.New'textarea'v
+     i.name←n
+     d.Input←i
+     d
+ }

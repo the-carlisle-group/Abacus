@@ -1,0 +1,54 @@
+ fieldstyle1←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'.fieldstyle1'
+     r.position←'relative'
+     r.margin←'1.5rem 0'
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'fieldstyle1>label'
+     r.position←'absolute'
+     r.left←'1rem'
+     r.top←'-.75rem'
+     r.background←'white'
+     r.padding←'4px 10px 4px 10px'
+     r.border_radius←'12px'
+     r.border_color←⍵.LightGray
+     ⍝ ************************
+     r←s NewRule'.fieldstyle1>input'
+     r.border←'none'
+     r.border_radius←'6px'
+     r.border_color←⍵.LightGray
+     r.padding←'1.5rem 1rem .5rem 1rem'
+     r.outline←'none'
+     r.width←'100%'
+     r.font_family←'"Lucida Console"'
+     r.font_size←'1.25rem'
+     ⍝ ************************
+     r←s NewRule'.fieldstyle1>textarea'
+     r.height←'12rem'
+     r.width←'100%'
+     r.padding←'2rem'
+     r.white_space←'pre'
+     r.word_wrap←'normal'
+     r.overflow_x←'scroll'
+     r.font_family←'"Lucida Console"'
+     r.border←'1px solid'
+     r.border_radius←'6px 6px 0 0'
+     r.border_color←⍵.LightGray
+     r.font_size←'1.1rem'
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'.fieldstyle1>select'
+     r.border←'none'
+     r.border_radius←'6px'
+     r.border_color←⍵.LightGray
+     r.padding←'1.5rem 1rem .5rem 1rem'
+     r.outline←'none'
+     r.width←'100%'
+     r.font_family←'"Lucida Console"'
+     r.font_size←'1.25rem'
+     ⍝ **************
+     s
+ }

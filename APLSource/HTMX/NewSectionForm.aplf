@@ -1,0 +1,13 @@
+ NewSectionForm←{
+   ⍝ ⍺ ←→ Optional Parent
+   ⍝ ⍵ ←→ Caption, Class
+   ⍝ ← ←→ Section
+     ⍺←0
+     s←⍺ NewSection ⍵
+     f←s.Panel A.New'form'
+     f.class←'sectioncontent'
+     f.method←'post'
+     f.action←''
+     s.Form←f
+     s
+ }

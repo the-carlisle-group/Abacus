@@ -1,0 +1,9 @@
+ NewSectionInfo←{
+     ⍺←0
+     c←⍵
+     s←⍺ NewSection ⍵'info'
+     d←s.Panel A.New'div'
+     d.class←'sectioncontent'
+     s.SectionContent←d
+     s
+ }

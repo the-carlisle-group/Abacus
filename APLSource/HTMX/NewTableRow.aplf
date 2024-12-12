@@ -1,0 +1,6 @@
+ NewTableRow←{
+     ⍺←0
+     tr←⍺ A.New'tr'
+     _←tr A.New¨{'td'⍵}¨⍵
+     tr
+ }

@@ -1,0 +1,43 @@
+ table←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'table'
+     r.margin←'4rem'
+     r.border_collapse←'collapse'
+     ⍝ ************************
+     r←s NewRule'th,td'
+     r.padding←'.3rem .75rem'
+     r.font_weight←'normal'
+     ⍝ ************************
+     r←s NewRule'tbody tr:nth-child(even)'
+     r.background_color←⍵.NinetyPercentWhite
+           ⍝ ************************
+     r←s NewRule'tbody tr:nth-child(odd)'
+     r.background_color←'white'
+        ⍝ ************************
+     r←s NewRule'tbody tr:hover'
+     r.background_color←⍵.LightGray
+     r.cursor←'pointer'
+            ⍝ ************************
+     r←s NewRule'thead'
+     r.word_wrap←'break-word'
+     r.vertical_align←'bottom'
+     r.border_bottom←'1px solid black'
+     ⍝ ************************
+     r←s NewRule'tbody tr'
+     r.border_bottom←'1px solid'
+     r.border_color←⍵.VeryLightGray
+     ⍝ ************************
+     r←s NewRule'.nc'
+     r.text_align←'right'
+     ⍝ ************************
+     r←s NewRule'.tc'
+     r.text_align←'left'
+     ⍝ ************************
+     r←s NewRule'table a'
+     r.text_decoration←'none'
+     r.color←'inherit'
+     ⍝ **********************
+     s
+ }

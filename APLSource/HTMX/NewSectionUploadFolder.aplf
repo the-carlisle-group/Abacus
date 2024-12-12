@@ -1,0 +1,15 @@
+ NewSectionUploadFolder←{
+     ⍝ ⍺ ←→ Optional Parent Element
+     ⍝ ⍵ ←→ Caption, target URL
+     ⍺←0
+     s←⍺ NewSectionForm(0⊃⍵)'action safe'
+     f←s.Form
+     f.enctype←'multipart/form-data'
+     _←f NewHiddenInput'urlpart1'(1⊃⍵)
+     d←f NewFileField'folder' 'File Name' ''
+     d.Input.required←'required'
+     r←f NewTextField'urlpart2' 'Subfolder' ''
+     r.Input.placeholder←'path'
+     _←f NewCommand'Upload'
+     s
+ }

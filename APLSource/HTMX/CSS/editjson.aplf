@@ -1,0 +1,14 @@
+ editjson←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     r←s NewRule'.editjson'
+     r.margin←'1.5rem 0 3rem 0'
+     ⍝ ************************
+     r←s NewRule'.editjson textarea'
+     r.width←'90%'
+     r.height←'30rem'
+     r.font_size←'1rem'
+     ⍝ *******************
+     s
+ }
