@@ -1,4 +1,8 @@
-# Abacus Release 0.0.15                    
+# Abacus Release 0.0.16                    
+1. More HTMX changes
+2. Bring over HTML and CSS and htmx stuff from Rumba
+
+# Abacus Release 0.0.15 2024-10-23 07:29:48
 1. Preserve whitespace in both HTML2DOM and DOM2HTML
 2. Implement column rename in DataGrid component
 3. Revamp PromptBox component syntax
