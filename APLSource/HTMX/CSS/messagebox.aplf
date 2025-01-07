@@ -1,0 +1,29 @@
+ messagebox←{
+     s←⍺
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     p←s NewRule'.messagebox'
+     p.min_width←'20rem'
+     p.font_size←'1.25rem'
+     p.border←'1px' ⍝ 'none'
+     p.border_radius←'5px'
+     p.background_color←⍵.Color3
+     ⍝ *************************
+     r←p NewRule'p'
+     ⍝ r.padding←'2rem'
+     r.font_size←'1.5rem'
+     r.margin←'2rem'
+     r.text_align←'center'
+     ⍝ **************************
+     r←p NewRule'button'
+     r.padding←'15px 45px'
+     r.display←'block'
+     r.margin←'2rem auto'
+     r.font_size←'1rem'
+     r.background_image←'linear-gradient(to bottom,gray,white)'
+     r.box_shadow←'inset 0 0 0 1px #27496d'
+     r.border←'none'
+     r.border_radius←'5px'
+     ⍝ ******************
+     s
+ }

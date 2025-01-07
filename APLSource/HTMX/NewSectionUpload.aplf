@@ -7,10 +7,10 @@
      f←s.Form
      f.enctype←'multipart/form-data'
      _←f NewHiddenInput'urlpart1'u
-     d←f NewFileField'file' ⍝ 'File Name' ''
+     d←f NewFileField'file'
      d.Input.multiple←'multiple'
      d.Input.required←'required'
-     c←'Additional path under /',{(↑⍵),'/.../',↑⌽⍵}('/'≠u)⊂u
+     c←'Additional path under /',{(⊃⍵),'/.../',⊃⌽⍵}('/'≠u)⊆u
      r←f NewTextField'urlpart2'c''
      _←f NewCommand'Upload'
      s

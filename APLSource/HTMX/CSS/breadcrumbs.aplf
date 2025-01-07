@@ -13,7 +13,7 @@
      r.font_weight←'bold'
      r.color←'inherit'
      r.text_decoration←'none'
-     r.padding←'.5em 0em'
+     r.padding←'.5em .5rem .5em 0'
      r.border_radius←'.25em'
      r.transition←'all 1s'
      ⍝ ************************

@@ -1,0 +1,36 @@
+ dialogbox←{
+     s←⍺     ⍝ #.Abacus.Main.DataGrid.CSS
+     NewRule←##.##.Main.NewRule
+     ⍝ ************************
+     p←s NewRule'.dialogbox'
+     p.font_size←'1.25rem'
+     p.border←'1px' ⍝ 'none'
+     p.border_radius←'5px'
+     p.background_color←'lightgray'
+     ⍝ *************************
+     r←p NewRule'h2'
+     r.padding←'.5rem 1rem'
+     r.background_color←'steelblue'
+     r.font_size←'1.5rem'
+     r.border←'none'
+     ⍝ *****************************
+     r←p NewRule'form'
+     r.padding←'2rem'
+     ⍝ *****************************
+     r←p NewRule'nav'
+     r.padding←'1rem'
+     r.display←'flex'
+     r.justify_content←'center'
+     r.gap←'1rem'
+     ⍝ **************************
+     r←p NewRule'button'
+     r.padding←'15px 45px'
+     r.width←'10rem'
+     r.font_size←'1rem'
+     r.background_image←'linear-gradient(to bottom,gray,white)'
+     r.box_shadow←'inset 0 0 0 1px #27496d'
+     r.border←'none'
+     r.border_radius←'5px'
+     ⍝ ******************
+     s
+ }

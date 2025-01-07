@@ -16,6 +16,9 @@
      s←s editjson p
      s←s downloadbutton p
      s←s commandbutton p
+     s←s dialogbox p
+     s←s messagebox p
      s←s table p
+     ⍝ s←##.##.Main.UnNestCSS s
      ##.##.Main.ComposeRules s
  }

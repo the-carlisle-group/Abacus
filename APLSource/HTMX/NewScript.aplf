@@ -1,0 +1,7 @@
+ NewScript←{
+     ⍝ ⍵ ←→ JavaScript
+     ⍝ ← ←→ Script element
+     d←A.New'div'
+     d.id←'tempscript'
+     d⊣d A.New'script'⍵
+ }

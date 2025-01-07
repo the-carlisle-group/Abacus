@@ -1,0 +1,17 @@
+ NewDialogBox←{
+     ⍝ ⍵ ←→ Caption, URL, Content
+     ⍝ ← ←→ Dialog element
+     t u c←⍵
+     d←A.New'dialog'
+     d.class←'dialogbox'
+     d.id←'MainDialog'
+     h1←d A.New'h2't
+     f←d A.New'form'c
+     n←f A.New'nav'
+     OK←n A.New'button' 'OK'
+     OK.hx_post←u
+     OK.hx_swap←'none'
+     Cancel←n NewCancelButton''
+     s←d A.New'script'(ShowModalJS'MainDialog')
+     OOB d
+ }

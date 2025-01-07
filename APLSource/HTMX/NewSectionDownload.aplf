@@ -2,7 +2,7 @@
      ⍺←0
      c l fn←⍵
      s←⍺ NewSection c'safe'
-     d←s.Panel Add'div'
+     d←s.Panel A.New'div'
      d.class←'sectioncontent'
      a←d NewDownloadButton'Download'l fn
      s.SectionContent←d

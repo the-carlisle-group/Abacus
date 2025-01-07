@@ -1,12 +1,8 @@
  ReturnMain←{
-     ⍝ ⍺ ←→ Response
      ⍝ ⍵ ←→ Full Page/Doc
-     A←#.Abacus.Main
+     ⍝ ← ←→
      m←A.GetMain ⍵
-     m.hx_swap_oob←'true'
-     d←A.New'dialog'
-     d.id←'MainDialog'
-     d.hx_swap_oob←'true'
-     ⍺.Content←m,d
-     ⍺
+     s←A.New'Script'(CloseDialogJS'MainDialog')
+     m.Content,⍨←s
+     OOB m
  }

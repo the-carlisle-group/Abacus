@@ -1,0 +1,15 @@
+ NewSelectField←{
+     ⍺←0
+     n c v iv ic←⍵
+     d←⍺ A.New'div'
+     d.class←'fieldstyle1'
+     l←d A.New'label'c
+     op←A.New¨{'option'⍵}¨ic
+     so←(iv⍳⊂v)⊃op
+     so.selected←'selected'
+     op.value←iv
+     s←d A.New'select'op
+     s.name←n
+     d.Input←s   ⍝ Why?
+     d
+ }

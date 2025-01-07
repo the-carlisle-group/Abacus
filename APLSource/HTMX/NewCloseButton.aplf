@@ -1,0 +1,9 @@
+ NewCloseButton←{
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ Caption, defaults to 'Cancel'
+     ⍺←0
+     c←⍵,(0=≢⍵)/'Cancel'
+     b←⍺ A.New'button'⍵
+     b.onclick←'this.closest("dialog").close()'
+     b
+ }

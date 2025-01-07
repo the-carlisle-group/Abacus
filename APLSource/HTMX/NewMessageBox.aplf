@@ -1,0 +1,12 @@
+ NewMessageBox←{
+     ⍝ ⍺ ←→ Response
+     ⍝ ⍵ ←→ Message Text
+     ⍝ ← ←→ OOB swaps: dialog, script
+     d←A.New'dialog'
+     d.id←'MessageBox'
+     d.class←'messagebox'
+     p←d A.New'p'⍵
+     b←d NewCancelButton'OK'
+     s←d A.New'Script'(ShowModalJS'MessageBox')
+     OOB d
+ }

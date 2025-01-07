@@ -18,5 +18,7 @@
      db.id←'MainDialog'
      db2←b A.New'dialog'
      db2.id←'MessageBox'
+     ts←b A.New'div'
+     ts.id←'tempscript'
      d
  }

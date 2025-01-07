@@ -6,12 +6,14 @@
      hd←h A.New'head'
      j←hd A.New'script'   ⍝ This space is required !!! ? Why? Must have ending tag? MAYBE NOT ANYMORE NOW WE USING ABACUS!
      j.src←'https://unpkg.com/htmx.org@2.0.3'
-     _←hd A.New'script'(⊂⊂'document.addEventListener("showMessageBox", ()=>{document.getElementById("MessageBox").showModal()})')
      l←hd A.New'link'
      l.rel←'stylesheet'
      l.type←'text/css'
      l.href←'/Rumba/CSS/Default'
      mt←hd A.New'meta'
      mt.charset←'utf-8'
+     hx←hd A.New'meta'
+     hx.name←'htmx-config'
+     hx.content←'{"responseHandling": [{"code":".*", "swap": true}]}'
      h
  }

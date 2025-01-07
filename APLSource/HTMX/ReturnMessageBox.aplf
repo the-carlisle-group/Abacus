@@ -6,8 +6,8 @@
      d.id←'MessageBox'
      d.hx_swap_oob←'true'
      p←d A.New'p'⍵
-     b←d A.New'button' 'OK'
-     ⍺.Content←d
-     ⍺.Headers,←⊂'HX-Trigger-After-Swap' 'showMessageBox'
+     b←d NewCloseButton'OK'
+     s←NewScript'document.getElementById("MessageBox").showModal()'
+     ⍺.Content←d,s
      ⍺
  }

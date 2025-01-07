@@ -7,7 +7,7 @@
      r.margin←'1.5rem 0'
      NewRule←##.##.Main.NewRule
      ⍝ ************************
-     r←s NewRule'fieldstyle1>label'
+     r←s NewRule'.fieldstyle1>label'
      r.position←'absolute'
      r.left←'1rem'
      r.top←'-.75rem'
