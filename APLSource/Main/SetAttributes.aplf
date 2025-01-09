@@ -1,8 +1,9 @@
  SetAttributes←{
      ⍝ ⍺ ←→ Attributes
+     ⍝   ←→ Matrix from ⎕XML|name/value|name/value pairs
      ⍝ ⍵ ←→ Element
      0=≢⍺:⍵
-     n v←↓⍉⍺
+     n v←{2=⍴⍴⍵:↓⍉⍵ ⋄ 2=≡⍵:⊂¨⍵ ⋄ ↓⍉↑⍵}⍺
      p←'_'@('-'∘=)¨n
      _←p ⍵.{⍎⍺,'←⍵'}¨v
      ⍵

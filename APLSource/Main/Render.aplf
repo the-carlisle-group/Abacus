@@ -1,0 +1,3 @@
+ Render←{
+     ⎕XML⍣2 DOM2HTML ⍵
+ }
