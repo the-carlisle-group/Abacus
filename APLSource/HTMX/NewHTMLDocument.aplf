@@ -14,6 +14,6 @@
      mt.charset←'utf-8'
      hx←hd A.New'meta'
      hx.name←'htmx-config'
-     hx.content←'{"responseHandling": [{"code":".*", "swap": true}]}'
+     hx.content←Config 0
      h
  }

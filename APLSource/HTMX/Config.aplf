@@ -1,0 +1,7 @@
+ Config←{
+     c←⎕NS''
+     c.defaultSwapStyle←'none'
+     r←c.responseHandling←⎕NS''
+     r.(code swap)←'...'(⊂'true')
+     ⎕JSON c
+ }
