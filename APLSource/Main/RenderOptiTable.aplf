@@ -1,0 +1,26 @@
+ RenderOptiTable←{
+     ⍝ ⍵ ←→ OptiTable
+     a←ComposeAttributes ⍵
+     ⎕XML 0 'table' ''a⍪⊃⍪/'thead' 'tbody' 'tfoot'{
+         r c←⍴⍵.Values
+         0∊r,c:0 4⍴0
+         n←r+r×c
+         m←n 2⍴1 c⌿2 2⍴2 'tr' 3 'td'
+         m,←,(⊂''),⍵.Values
+         a←,⊃,/r(r c){
+             d←⍺
+             n←(⎕C ⎕A)⍵.⎕NL ¯2
+             0=≢n:d⍴⊂0 2⍴⊂''
+             v←⍵⍎¨n
+             n←'-'@('_'∘=)¨n
+             b←{80=⎕DR⊃⊃⍵}¨v
+             a←⍉↑¨↓⍉↑(b/n){⍺∘{⍺ ⍵}¨d⍴⊆⍵}¨b/v
+             a⊣(n/⍨~b){
+                 n i v←↓⍉(⊂⍺),↑⍵
+                 0⊣a[i]←a[i]⍪¨↓⍉↑n v
+             }¨v/⍨~b
+         }¨⍵.Rows ⍵.Cells
+         t←ComposeAttributes ⍵
+         1 ⍺''t⍪m,{(0<≢¨⍵[;1])⌿⍵}¨a
+     }¨⍵.(Header Body Footer)
+ }

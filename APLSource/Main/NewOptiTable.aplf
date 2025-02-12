@@ -1,0 +1,11 @@
+ NewOptiTable←{
+     t←⎕NS''
+     t.Tag←'optitable'
+     t.(Body Header Footer)←{
+         s←⎕NS''
+         s.Values←⍵⍴⍨¯2↑1,⍴⍵
+         s.Rows←⎕NS''
+         s.Cells←⎕NS''
+         s}¨3↑⍬ ⍬,⍨(⊂⍣(2=≡⍵))⍵
+     t
+ }
