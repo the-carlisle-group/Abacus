@@ -14,6 +14,7 @@
      a.Server←s
      a.Sessions←⍬
      a.BuildFunction←''
+     a.HTMLRendererProperties←DefaultHRProperties 0
      ⍝ Return Application object
      a
  }

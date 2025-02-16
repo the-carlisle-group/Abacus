@@ -3,5 +3,5 @@
      ⍝ ← ←→ Document
      d←(⍎⍺.BuildFunction)0
      d.Caption←⍺.Name
-     d⊣NewForm d
+     d⊣⍺ NewForm d
  }
