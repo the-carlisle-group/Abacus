@@ -1,0 +1,7 @@
+ DefaultHRProperties←{
+     ⍝ N.B. Some set in NewForm
+     ⍝ Revisit
+     p←⊂'Coord' 'RealPixel'
+     p,←⊂'Size' 1200 1600
+     p
+ }
