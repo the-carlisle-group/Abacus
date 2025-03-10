@@ -14,5 +14,5 @@
      t.SortDirection←t.SortDirection[j]
      _←t.Document Init t
      _←t Resize 0
-     0 ⍺ Move t
+     t Move t.DataCell+0 ⍺
  }

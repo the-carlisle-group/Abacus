@@ -1,4 +1,21 @@
  MoveBottom←{
+
+     i←(t.DataSize[0]-1),t.DataCell[0]
+
+
+     i Move t
+
+
+
+
+
+
+
+
+
+
+
+
      t←⍵
      HandleInput t:0
      t.DataCell[0]←t.DataSize[0]-1

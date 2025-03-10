@@ -1,0 +1,6 @@
+ ClearSelection←{
+     ⍵.Selection≡⍵.DataCell:0
+     ⍵.Selection←⍵.DataCell
+     _←⍵.DataCell AdjustWindow ⍵
+     Refresh ⍵
+ }

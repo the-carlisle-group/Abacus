@@ -8,7 +8,7 @@
      s←Rule'.data-grid'
      s.border_collapse←'collapse'
      s.table_layout←'fixed'
-
+     s.user_select←'none'
 
 
      ⍝ th
@@ -49,6 +49,11 @@
      r←s Rule'.window-cell'
      r.background_color←'orange'
      ⍝ r.position←'relative' ⍝ DOnt NEED AS SEt FOr tD.
+
+     ⍝ Selected-range
+     r←s Rule'.selected-range'
+     r.background_color←'green'
+
 
      ⍝ in-cell
      r←s Rule'.in-cell'

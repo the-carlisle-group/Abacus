@@ -1,0 +1,19 @@
+ Selection←{
+     v←⍵
+     t←⍺
+     t.Selection≡t.DataCell:v
+     s←{(⌊/⍵),⌈/⍵}t.DataCell t.Selection
+     b←t.FreezeColumns∧.≤1⊃¨s  ⍝ enitre range is past frozen columns
+     r c←(0⊃s)+⍳¨1+⊃-/⌽s
+     r c←r c-b×t.WindowIndex
+     c←c+t.RowNumbers+b×t.FreezeColumns
+
+     ⍝ CLEAN THIS MESS UP!!!
+
+     n m←⍴v
+     r←r/⍨(r<n)∧r≥0
+     c←c/⍨(c<m)∧c≥t.RowNumbers
+
+     v[r;c]←v[r;c],¨⊂' selected-range'
+     v
+ }

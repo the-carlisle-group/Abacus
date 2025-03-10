@@ -1,4 +1,4 @@
- Move←{
+ GoTo←{
      ⍝ ⍺ ←→Table
      ⍝ ⍵ ←→ DataCell
      HandleInput ⍺:0

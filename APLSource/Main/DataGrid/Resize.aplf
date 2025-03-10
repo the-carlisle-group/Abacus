@@ -13,5 +13,6 @@
      t.WindowCell←t.WindowCell⌊t.WindowSize-1
      t.DataCell←t.WindowIndex+t.WindowCell
      t.TableCell←t.WindowCell+0,t.ColumnOffset
+     _←BuildStructure t
      Refresh t
  }

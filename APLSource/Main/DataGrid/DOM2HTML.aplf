@@ -1,5 +1,6 @@
  DOM2HTML←{
      ⍝ Optimized for scrolling
+     ⍝ OBSOLETE
      th td←⍵
      z←'<thead><tr>'
      h←('<th id="'∘,¨th.id,¨⊂'" ')

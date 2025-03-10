@@ -1,0 +1,22 @@
+ OnMouseOver←{
+     t←⍵.CurrentTarget
+     ~t.SelectInProgress:0
+     c←⍵.Target
+     c.Tag≢'td':0
+     i←⊃⍸c=A.BodyCells t
+     d←t TableCell2DataCell i
+     cr←(i[1]=t.ColumnOffset)∧(t.WindowIndex[1]≠0)∧(i[1]>t.DataCell[1])        ⍝ Crossing right
+     cl←(i[1]=t.ColumnOffset-1)∧(t.WindowIndex[1]≠0)∧(i[1]<t.DataCell[1])      ⍝ On Border crossing left
+     ⎕←'crossing right: ',⍕cr
+     ⎕←'crossing left: ',⍕cl
+     _←{
+         cr:d[1]←t.FreezeColumns     ⍝ Crossing Border to right
+         cl:d[1]←t.WindowIndex[1]-1  ⍝ Crossing to left
+         0
+     }0
+     d≡t.Selection:0
+     t.Selection←d
+     t.Selection≡t.DataCell:ClearSelection t
+     _←t.Selection AdjustWindow t
+     Refresh t
+ }

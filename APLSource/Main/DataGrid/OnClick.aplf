@@ -1,20 +1,25 @@
  OnClick←{
+     ⍝ OnMouseDown really
      e←⍵.Target
      t←⍵.CurrentTarget
      HandleInput t:0
+     _←ClearSelection t
      e.Tag≡'th':OnClickHeaderCell ⍵
+     t.SelectInProgress←1
+
      t←⍵.CurrentTarget
      c←A.BodyCells t
      i←⊃⍸c=e
      i≡t.TableCell:0
      lc←t.TableCell⌷c
      nc←e
-     _←lc A.RemoveClass'window-cell'
-     _←nc A.AddClass'window-cell'
+     _←lc nc A.MoveClass'window-cell'
      t.TableCell←i
      t.WindowCell←t.TableCell-0,t.ColumnOffset
      t.DataCell←t.WindowCell+t.WindowIndex
-     b←t.WindowCell[1]≥0:0
+     t.Selection←t.DataCell
+     t.WindowCell[1]≥0:0
      t.DataCell[1]←t.FreezeColumns+t.WindowCell[1]
+     t.Selection←t.DataCell
      0
  }

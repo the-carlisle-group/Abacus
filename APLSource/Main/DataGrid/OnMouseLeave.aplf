@@ -1,0 +1,10 @@
+ OnMouseLeave←{
+     0
+     c←⍵.CurrentTarget
+     t←c.Parent.Parent.Parent
+     ~t.SelectInProgress:0
+     ⍝ ⎕←'Mouse leave!'
+     i←⊃⍸c=A.BodyCells t
+     t.LastTableCell←i
+     0
+ }

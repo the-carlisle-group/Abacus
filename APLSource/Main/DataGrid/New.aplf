@@ -1,8 +1,9 @@
  New←{
      ⎕THIS.A←##
      ⍺←⊣
-     r c←10 3
-     t←⍺ A.New'table'
+     t←⍺ A.NewTable''
+     t.class←'data-grid'
+     t.OptiTable←A.NewOptiTable ⍬
      t.LastAnchor←0
      t.EntryError←0
      t.Write←0
@@ -12,22 +13,19 @@
      t.MoveRows←0
      t.MoveColumns←0
      t.InsertColumns←0
-     t.Values←r c⍴⊂''
-     t.Names←'Column'∘,¨c↑⎕A
-     t.Types←'Char'
-     t.Align←c⍴⊂'left'
-     t.SortDirection←c⍴0
-     t.AutoCompleteItems←c⍴⊂''
-     t.class←'data-grid'
      t.tabindex←0
      t.CellMode←0   ⍝ 0←→ReadyMode, 1←→EnterMode, 2←→EditMode
      t.AutoCompleteActive←0
      t.Changed←0
      t.Onmousedown←A.FQP'OnClick'
+     t.Onmouseover←A.FQP'OnMouseOver'
+     t.Onmouseup←A.FQP'OnMouseUp'
      t.Onkeydown←A.FQP'OnKeyDown'
      t.Height←0
      t.Width←0
      t.Highlight←0
+     t.Selection←⍬
+     t.SelectInProgress←0
      t.Init←0
      t
  }

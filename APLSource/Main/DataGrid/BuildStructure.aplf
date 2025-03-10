@@ -1,0 +1,21 @@
+ BuildStructure←{
+     ⍝ CLEAN THIS UP!
+     t←⍵
+     d←t.Document
+     r←3+t.RowsToDisplay
+     c←5+⌈/t.ColumnsPerIndex
+     t.Content←{⍵.Content}A.NewTable(r c⍴⊂'')(c⍴⊂'')
+     bc←##.BodyCells t
+     _←A.SetParent t
+     e←A.Elements t
+     e.Document←d
+     e.class←⊂''
+     _←d A.SetDefaultId e
+     o←t.OptiTable
+     o.id←t.id
+     o.(Header Body).id←t.Content.id
+     o.Header.Rows.id←(##.HeaderRows t).id
+     t.HeaderCellIds←(##.HeaderCells t).id
+     t.BodyCellIds←(##.BodyCells t).id
+     0
+ }

@@ -6,45 +6,52 @@
      c←⍵.CtrlKey≡⊂'true'
      s←⍵.ShiftKey≡⊂'true'
      a←⍵.AltKey≡⊂'true'
-     uc us ua←~c s a
-     co←c∧us∧ua
-     cs←c∧s∧ua
-     ca←c∧a∧us
-     u←~c∨s∨a
-     k≡'Escape':Escape t
-     u∧k≡'Enter':1 0 Move t
-     s∧k≡'Enter':¯1 0 Move t
-     u∧k≡'Tab':0 1 Move t
-     s∧k≡'Tab':0 ¯1 Move t
+     p←k,⍨∊c s a/'Ctrl' 'Shift' 'Alt'
+     p≡'Escape':Escape t
+     p≡'Enter':t Move t.DataCell+1 0
+     p≡'ShiftEnter':t Move t.DataCell-1 0
+     p≡'Tab':t Move t.DataCell+0 1
+     p≡'ShiftTab':t Move t.DataCell-0 1
      m=2:0
-     u∧k≡'ArrowRight':0 1 Move t
-     u∧k≡'ArrowLeft':0 ¯1 Move t
-     u∧k≡'ArrowUp':¯1 0 Move t
-     u∧k≡'ArrowDown':1 0 Move t
-     co∧k≡'ArrowUp':MoveTop t
-     co∧k≡'ArrowDown':MoveBottom t
-     co∧k≡'ArrowLeft':0 MoveToColumn t
-     co∧k≡'ArrowRight':¯1 MoveToColumn t
-     u∧k≡'PageUp':MovePageUp t
-     u∧k≡'PageDown':1 MovePageDown t
-     u∧k≡'Home':0 MoveToColumn t
-     u∧k≡'End':¯1 MoveToColumn t
-     co∧k≡'Home':MoveHome t
-     co∧k≡'End':MoveEnd t
-     k≡'F6':t FreezeColumns 0
+     p≡'ArrowRight':t Move t.DataCell+0 1
+     p≡'ArrowLeft':t Move t.DataCell-0 1
+     p≡'ArrowUp':t Move t.DataCell-1 0
+     p≡'ArrowDown':t Move t.DataCell+1 0
+     p≡'CtrlArrowUp':t Move 0,t.DataCell[1]
+     p≡'CtrlArrowDown':t Move(t.DataSize[0]-1),t.DataCell[1]
+     p≡'CtrlArrowLeft':t Move t.DataCell[0],0
+     p≡'CtrlArrowRight':t Move t.DataCell[0],t.DataSize[1]-1
+     p≡'Home':t Move t.DataCell[0],0
+     p≡'End':t Move t.DataCell[0],t.DataSize[1]-1
+     p≡'CtrlHome':t Move 0 0
+     p≡'CtrlEnd':t Move t.DataSize-1
+     p≡'PageUp':MovePageUp t
+     p≡'PageDown':MovePageDown t
+     p≡'ShiftArrowRight':t Select t.Selection+0 1
+     p≡'ShiftArrowLeft':t Select t.Selection-0 1
+     p≡'ShiftArrowUp':t Select t.Selection-1 0
+     p≡'ShiftArrowDown':t Select t.Selection+1 0
+     p≡'ShiftHome':t Select t.Selection[0],0
+     p≡'ShiftEnd':t Select t.Selection[0],t.DataSize[1]-1
+     p≡'CtrlShiftHome':t Select 0 0
+     p≡'CtrlShiftEnd':t Select t.DataSize-1
+     p≡'ShiftPageUp':SelectPageUp                  ⍝ TODO
+     p≡'ShiftPageDown':SelectPageDown              ⍝ TODO
+     p≡'F6':t FreezeColumns 0
+     p≡'F10':t Move t.DataCell[0],13   ⍝ Goto nameFirst
      ~t.Write:0
-     u∧k≡'F2':StartEditMode t
+     p≡'F2':StartEditMode t
      m=1:0
      (1=≢k)∧(⊃k)∊⎕D,(⊣,⎕C)⎕A:k StartEnterMode t
-     co∧k≡'Insert':InsertRow t
-     k≡'F9':InsertRow t
-     co∧k≡'Delete':DeleteRow t
-     cs∧k≡'Insert':InsertColumn t  ⍝ TODO!
-     cs∧k≡'Delete':DeleteColumn t
-     co∧k≡'F2':RenameColumn t
-     cs∧k≡'ArrowLeft':¯1 MoveColumn t
-     cs∧k≡'ArrowRight':1 MoveColumn t
-     cs∧k≡'ArrowUp':MoveRowUp t
-     cs∧k≡'ArrowDown':MoveRowDown t
+     p≡'CtrlInsert':InsertRow t                    ⍝ Broken!
+     p≡'F9':InsertRow t
+     p≡'CtrlDelete':DeleteRow t
+     p≡'CtrlShiftInsert':InsertColumn t            ⍝ TODO!
+     p≡'CtrlShiftDelete':DeleteColumn t
+     p≡'CtrlF2':RenameColumn t                     ⍝ Needs Work!
+     p≡'CtrlShiftArrowLeft':¯1 MoveColumn t
+     p≡'CtrlShiftArrowRight':1 MoveColumn t
+     p≡'CtrlShiftArrowUp':MoveRowUp t
+     p≡'CtrlShiftArrowDown':MoveRowDown t
      0
  }

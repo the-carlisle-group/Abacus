@@ -6,17 +6,24 @@
      q←(⍺.RowNumbers/0),k+⍺.RowNumbers
      v←⍺ GetValues i k
      nr nc←⍴v
-     h←nc↑t.TH
-     h.Content←⍺.ColumnTitles[q]
-     h.style←⍺.HeaderStyles[q]
-     h.class←⍺.HeaderClass[q]
-     c←nr nc↑t.TD
-     c.Content←v
-     c.class←nr nc⍴⍺.ColumnClass[q]
-     _←t Highlight i q c
-     cc←⍺.TableCell⌷c
-     cc.class,←' window-cell'
-     ⍺.WindowIndex[1]≤⍺.FreezeColumns:h c
-     c[;⍺.ColumnOffset].class←c[;⍺.ColumnOffset].class,¨⊂' more-to-left'
-     h c
+     o←⍺.OptiTable
+     h←o.Header
+     h.Values←(1,nc)⍴⍺.ColumnTitles[q]
+     h.Cells.style←⍺.HeaderStyles[q]
+     h.Cells.class←⍺.HeaderClass[q]
+     h.Cells.id←nc↑t.HeaderCellIds
+     o.Body.Values←v
+     o.Body.Cells.id←(nr nc)↑t.BodyCellIds
+     bc←t Highlight i q(nr nc⍴⍺.ColumnClass[q])
+     bc←t Selection bc
+     _←{
+         ∨/t.TableCell<0:0
+         bc[⊂t.TableCell]←⊂((⊂t.TableCell)⊃bc),' window-cell'
+         0
+     }0
+     o.Body.Cells.class←bc
+     ⍺.WindowIndex[1]≤⍺.FreezeColumns:o
+     bc[;⍺.ColumnOffset]←bc[;⍺.ColumnOffset],¨⊂' more-to-left'
+     o.Body.Cells.class←bc
+     o
  }

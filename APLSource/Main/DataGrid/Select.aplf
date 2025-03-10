@@ -1,0 +1,6 @@
+ Select←{
+     t←⍺
+     t.Selection←⍵
+     _←t.Selection AdjustWindow t
+     Refresh t
+ }

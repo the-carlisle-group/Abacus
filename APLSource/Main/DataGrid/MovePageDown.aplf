@@ -6,6 +6,7 @@
      i←0⊃t.WindowSize
      t.WindowIndex[0]←m⌊i+0⊃t.WindowIndex
      t.DataCell[0]←(0⊃t.DataSize)⌊i+0⊃t.DataCell
+     t.Selection←t.DataCell
      t.WindowCell←t.DataCell-t.WindowIndex
      t.TableCell[0]←t.WindowCell[0]
      Refresh t

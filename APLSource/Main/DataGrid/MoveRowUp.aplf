@@ -9,5 +9,5 @@
      j[k]←⌽k
      t.Values←j ⍬ Index t
      _←Refresh t
-     ¯1 0 Move t
+     t Move t.DataCell-1 0
  }

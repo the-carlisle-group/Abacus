@@ -1,0 +1,16 @@
+ Select_old←{
+     t←⍵
+     t.Selection←2↑t.Selection,2⍴⊂t.DataCell
+     t.Selection+←0 ⍺
+     ⍝ ⎕←'New Selection: ',⍕t.Selection
+     ≡/t.Selection:ClearSelection t
+     i←1⊃t.Selection             ⍝ Expanding to this data cell
+     j←i-t.WindowIndex           ⍝ ⍝ Same as Move
+     s←(∨/j<0)∨∨/j≥t.WindowSize  ⍝ Need to scroll
+     ⍝ ⎕←'Need to scroll: ',⍕s
+     d←⍺×s                       ⍝ Scoll Direction
+     ⍝ t.TableCell+←-d
+     ⍝ t.WindowCell←t.TableCell-0,t.ColumnOffset
+
+     d MoveWindow t
+ }

@@ -1,0 +1,9 @@
+ OnMouseOut←{
+     t←⍵.CurrentTarget
+     ~t.SelectInProgress:0
+     c←⍵.Target
+     c.Tag≢'td':0
+     i←⊃⍸c=A.BodyCells t
+     t.LastTableCell←i
+     0
+ }

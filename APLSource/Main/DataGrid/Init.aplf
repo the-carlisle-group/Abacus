@@ -10,23 +10,13 @@
      t.WindowCell←t{2=⍺.⎕NC'WindowCell':⍺.WindowCell ⋄ ⍵}0,-t.FreezeColumns
      t.WindowIndex←t{2=⍺.⎕NC'WindowIndex':⍺.WindowIndex ⋄ ⍵}0,t.FreezeColumns
      t.DataCell←t.WindowIndex+t.WindowCell ⍝ Or (0 0)
+     t.Selection←t.DataCell
      t.TableCell←t.WindowCell+0,t.ColumnOffset
      t.HeaderStyles←ComputeHeaderStyles t
      t.HeaderClass←'sorted-down' '' 'sorted-up'[(t.RowNumbers/1),1+t.SortDirection]
      t.ColumnClass←(t.RowNumbers/⊂'row-number'),'' 'r'[t.Align∊⊂'right']
      t.FMT←'FMT_'∘,¨t.Types
      t.VFI←'VFI_'∘,¨t.Types
-     r c←50 25
-     t.THEAD←t A.New'thead'
-     t.THEAD_TR←t.THEAD A.New'tr'
-     t.TH←t.THEAD_TR A.New¨c⍴⊂'th'
-     t.TBODY←t A.New'tbody'
-     t.TBODY_TR←t.TBODY A.New¨r⍴⊂'tr'
-     t.TD←↑{⍵ A.New¨c⍴⊂'td'}¨t.TBODY_TR
-     t.(THEAD_TR TH TBODY_TR TD).Document←d
-     _←d A.SetDefaultId A.Elements t
-     t.(THEAD_TR TBODY).Content←⊂''
-     t.Content←t.THEAD,t.TBODY
      t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight
      t.Init←1
      0

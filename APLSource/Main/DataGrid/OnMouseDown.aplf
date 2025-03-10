@@ -1,0 +1,4 @@
+ OnMouseDown←{
+     ⎕←'Mouse Down!'
+     0
+ }

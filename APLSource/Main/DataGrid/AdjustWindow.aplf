@@ -1,0 +1,19 @@
+ AdjustWindow←{
+     ⍝ ⍺ ←→ DataCell, or any Cell (index into Values)
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ 1 for actual change, 0 for no change
+     d←⍺
+     u←⍵.FreezeColumns≤1⊃d
+     f←~u
+     s e←+\⍵.WindowIndex(⍵.WindowSize-1)
+     p q←(⊂d)-s e
+     x←(p×(p<0)×1,u)+q×q>0
+     ⍵.WindowIndex+←x
+     r c←⍵.WindowIndex
+     ⍵.WindowSize[1]←c⊃⍵.ColumnsPerIndex
+     ⍵.WindowCell←⍺-⍵.WindowIndex
+     b←⍵.FreezeColumns>1⊃d ⍝ Modify
+     ⍵.WindowCell[1]←b⊃(⍵.WindowCell[1])((1⊃d)-⍵.FreezeColumns)
+     ⍵.TableCell←⍵.WindowCell+0,⍵.ColumnOffset
+     x≢0 0
+ }

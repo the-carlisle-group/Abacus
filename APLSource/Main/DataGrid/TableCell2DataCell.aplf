@@ -1,0 +1,11 @@
+ TableCell2DataCell←{
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ TableCell index
+     ⍝ ← ←→ DataCell index
+     ⍝ SIMPLIFY!!!!
+     wc←⍵-0,⍺.ColumnOffset   ⍝ WindowCell
+     dc←wc+⍺.WindowIndex     ⍝ DataCell
+     wc[1]≥0:dc
+     dc[1]←⍺.FreezeColumns+wc[1]
+     dc
+ }
