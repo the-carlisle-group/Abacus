@@ -1,6 +1,0 @@
- MoveIntoWindow←{
-     ⍵.WindowIndex[1]←⍵.FreezeColumns
-     ⍵.WindowCell+←0 1
-     ⍵.TableCell+←0 1
-     Refresh ⍵
- }

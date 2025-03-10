@@ -1,4 +1,0 @@
- OnMouseMove←{
-     ⎕←'Mouse Move!'
-     0
- }

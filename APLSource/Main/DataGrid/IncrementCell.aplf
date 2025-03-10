@@ -1,9 +1,0 @@
- IncrementCell←{
-     OBSOLETE
-     t←⍺
-     v←1+t.Values[⊂t.DataCell]
-     t.Values[⊂t.DataCell]←v
-     c←t.TableCell⌷##.BodyCells t
-     _←c ##.SetInnerHTML⍕v
-     0
- }
