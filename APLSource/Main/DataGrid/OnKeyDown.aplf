@@ -3,10 +3,8 @@
      t.AutoCompleteActive:0
      m←t.CellMode
      k←⍵.Key
-     c←⍵.CtrlKey≡⊂'true'
-     s←⍵.ShiftKey≡⊂'true'
-     a←⍵.AltKey≡⊂'true'
-     p←k,⍨∊c s a/'Ctrl' 'Shift' 'Alt'
+     b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
+     p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
      p≡'Escape':Escape t
      p≡'Enter':t Move t.DataCell+1 0
      p≡'ShiftEnter':t Move t.DataCell-1 0
