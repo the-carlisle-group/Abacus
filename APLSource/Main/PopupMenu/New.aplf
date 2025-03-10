@@ -1,0 +1,12 @@
+ New←{
+     ⍝ ⍵ ←→ Desc, Key, Callback
+     A←##
+     c←A.New'ul'
+     c.class←'popup-menu'
+     c.popover←'auto'
+     n←'Menu Item One' 'menu Item Two' 'Menu Item Three'
+     f←'OnOne' 'OnTwo' 'OnThree'
+     i←c A.New¨{'li'⍵}¨n
+     i.Onclick←##.FQP¨f
+     c
+ }

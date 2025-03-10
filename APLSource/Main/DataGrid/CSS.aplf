@@ -48,6 +48,7 @@
      ⍝ Window-cell
      r←s Rule'.window-cell'
      r.background_color←'orange'
+     r.anchor_name←'--current-cell'
      ⍝ r.position←'relative' ⍝ DOnt NEED AS SEt FOr tD.
 
      ⍝ Selected-range

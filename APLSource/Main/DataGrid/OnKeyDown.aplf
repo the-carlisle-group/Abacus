@@ -36,8 +36,10 @@
      p≡'ShiftPageUp':SelectPageUp                  ⍝ TODO
      p≡'ShiftPageDown':SelectPageDown              ⍝ TODO
      p≡'F6':t FreezeColumns 0
-     p≡'F10':t Move t.DataCell[0],13   ⍝ Goto nameFirst
+     (⊂p)∊'Ctrlc' 'CtrlC':t Copy 0
      ~t.Write:0
+     (⊂p)∊'Ctrlx' 'CtrlX':t Cut 0
+     (⊂p)∊'Ctrlv' 'CtrlV':t Paste 0
      p≡'F2':StartEditMode t
      m=1:0
      (1=≢k)∧(⊃k)∊⎕D,(⊣,⎕C)⎕A:k StartEnterMode t

@@ -1,0 +1,10 @@
+ Show←{
+     ⎕←'Show the popup!'
+     A←##
+     d←⍺
+     p←New''
+     b←A.GetBody d
+     _←d A.SetDefaultId A.Elements p
+     _←b A.AppendChild p
+     p A.ExecuteOnElement'showPopover()'
+ }
