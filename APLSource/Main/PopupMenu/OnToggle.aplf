@@ -1,0 +1,5 @@
+ OnToggle←{
+     m←⍵.Target
+     0=m.Toggled:m.Toggled←1
+     m ##.DeleteElement m
+ }

@@ -1,8 +1,5 @@
  OnContextMenu←{
      ⎕←'Context menu!'
      d←⍵.Document
-
-
      d ##.PopupMenu.Show''
-
  }

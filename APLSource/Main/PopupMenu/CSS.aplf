@@ -12,13 +12,12 @@
      s.position_anchor←'--current-cell'
      s.inset_area←'bottom right'
      s.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
-
      ⍝ ************************
-     r←s Rule'> li'
+     r←s Rule'li'
      r.padding←'1rem'
-
-
-
+     ⍝ *********************************
+     r←s Rule'.sel-item'
+     r.background_color←'red'
 
 
 

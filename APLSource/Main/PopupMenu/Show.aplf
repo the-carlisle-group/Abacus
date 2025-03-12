@@ -6,5 +6,6 @@
      b←A.GetBody d
      _←d A.SetDefaultId A.Elements p
      _←b A.AppendChild p
-     p A.ExecuteOnElement'showPopover()'
+     _←p A.ExecuteOnElement'showPopover()'
+     ##.SetFocus p
  }

@@ -1,0 +1,8 @@
+ OnMouseOver←{
+     t←⍵.Target
+     t.Tag≢'li':0
+     m←⍵.CurrentTarget
+     c←m.Content
+     f←c⊃⍨c.class⍳⊂'sel-item'
+     f t ##.MoveClass'sel-item'
+ }

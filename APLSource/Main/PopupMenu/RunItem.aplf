@@ -1,0 +1,9 @@
+ RunItem←{
+     ⍝ ⍵ ←→ Event Message
+     m←⍵.CurrentTarget
+     c←m.Content
+     i←c.class⍳⊂'sel-item'
+     f←⍎i⊃m.Functions
+     _←##.DeleteElement m
+     f ⍵
+ }
