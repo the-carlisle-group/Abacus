@@ -3,6 +3,9 @@
      t.AutoCompleteActive:0
      m←t.CellMode
      k←⍵.Key
+     ⎕←'Key down: ',k
+     ⎕←'Current target: ',⍵.CurrentTarget.Tag
+     ⎕←'Target: ',⍵.Target.Tag
      b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
      p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
      p≡'Escape':Escape t

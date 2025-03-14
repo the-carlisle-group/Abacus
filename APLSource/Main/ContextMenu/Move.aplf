@@ -1,6 +1,6 @@
  Move←{
-   ⍝ ⍺ ←→ Menu
-   ⍝ ⍵ ←→ Direction
+     ⍝ ⍺ ←→ Menu
+     ⍝ ⍵ ←→ Direction
      c←⍺.Content
      f←c.class∊⊂'sel-item'
      k←⍵{(⍸⍵),⍸⍺⌽⍵}f

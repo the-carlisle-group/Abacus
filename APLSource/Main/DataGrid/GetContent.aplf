@@ -14,6 +14,7 @@
      h.Cells.id←nc↑t.HeaderCellIds
      o.Body.Values←v
      o.Body.Cells.id←(nr nc)↑t.BodyCellIds
+     o.Body.Cells.tabindex←'0'
      bc←t Highlight i q(nr nc⍴⍺.ColumnClass[q])
      bc←t Selection bc
      _←{

@@ -13,6 +13,6 @@
      lc←tc⌷bc
      nc←⍺.TableCell⌷bc
      _←lc nc A.MoveClass'window-cell'
-     _←⍺ A.FireEvent'focus'
+     _←nc A.FireEvent'focus'
      0
  }

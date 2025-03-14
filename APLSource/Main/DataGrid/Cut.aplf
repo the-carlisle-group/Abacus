@@ -1,4 +1,5 @@
  Cut←{
-     ⎕←'Cut!'
+     ⎕←'Cut on table: ',⍺.CurrentTarget.id
+
      0
  }

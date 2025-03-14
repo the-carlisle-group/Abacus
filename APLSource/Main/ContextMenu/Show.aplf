@@ -1,0 +1,14 @@
+ Show←{
+     ⍝ ⍺ ←→ Event Message (This provides the context
+     ⍝      (ie, what element is firing the context menu)
+     ⎕THIS.A←##
+     d←⍺.Document
+     p←New ⍵
+     p.Context←⍺ ⍝ ⍺.CurrentTarget
+     _←⍺.Target A.SetAnchorName'--context-menu'
+     b←A.GetBody d
+     _←d A.SetDefaultId A.Elements p
+     _←b A.AppendChild p
+     _←p A.ExecuteOnElement'showPopover()'
+     ##.SetFocus p
+ }

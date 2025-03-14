@@ -1,4 +1,0 @@
- OnThree←{
-     ⎕←'On three!'
-     0
- }

@@ -1,4 +1,4 @@
  Copy←{
-     ⎕←'Copy!'
+     ⎕←'Copy on table cell',⍺.Target.id
      0
  }

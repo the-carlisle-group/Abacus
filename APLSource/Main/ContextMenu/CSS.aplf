@@ -1,7 +1,7 @@
  CSS←{
      Rule←##.NewRule
      ⍝ ************************
-     s←Rule'.popup-menu'
+     s←Rule'.context-menu'
      s.list_style←'none'
      ⍝ s.border←'none'
      s.border_radius←'.5em'
@@ -9,7 +9,7 @@
      s.font_size←'1.5em'
      s.text_wrap←'nowrap'
      ⍝ s.background_color←'gray'
-     s.position_anchor←'--current-cell'
+     s.position_anchor←'--context-menu'
      s.inset_area←'bottom right'
      s.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
      ⍝ ************************
@@ -18,10 +18,6 @@
      ⍝ *********************************
      r←s Rule'.sel-item'
      r.background_color←'red'
-
-
-
-
-
+     ⍝ *******************************
      ##.UnNestCSS s
  }

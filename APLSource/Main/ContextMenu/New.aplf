@@ -1,19 +1,17 @@
  New←{
      ⍝ ⍵ ←→ Desc, Key, Callback
-     n←'Menu Item One' 'menu Item Two' 'Menu Item Three'
-     f←'OnOne' 'OnTwo' 'OnThree'
-     A←##
      c←A.New'menu'
-     c.class←'popup-menu'
+     n←≢⍵.Label
+     c.class←'context-menu'
      c.popover←'auto'
      c.tabindex←0
      c.Onkeydown←A.FQP'OnKeyDown'
      c.Onclick←A.FQP'OnClick'
      c.Onmouseover←A.FQP'OnMouseOver'
      c.Ontoggle←A.FQP'OnToggle'
-     c.Functions←A.FQP¨f
+     c.Functions←A.FQP¨⍵.Function
      c.Toggled←0
-     i←c A.New¨{'li'⍵}¨n
-     i.class←'sel-item' '' ''
+     i←c A.New¨{'li'⍵}¨⍵.Label
+     i.class←n↑(⊂'sel-item'),n⍴⊂''
      c
  }
