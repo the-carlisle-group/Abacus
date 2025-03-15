@@ -1,0 +1,3 @@
+ OnCut←{
+     ⍺.CurrentTarget Cut 0
+ }

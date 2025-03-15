@@ -10,12 +10,6 @@
      s.table_layout←'fixed'
      s.user_select←'none'
 
-
-     r←s Rule':focus-within'
-     r.outline←'none'
-
-
-
      ⍝ th
      r←s Rule'thead>tr'
      ⍝ r.height←'200px'
@@ -44,6 +38,12 @@
      r.border←Border
      r.box_sizing←'border-box'
      r.position←'relative'
+
+     ⍝
+     r←s Rule'td:focus'
+     r.outline←'none'
+
+
 
      ⍝ tbody
      r←s Rule'tbody'

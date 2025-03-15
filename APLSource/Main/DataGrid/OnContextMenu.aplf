@@ -1,9 +1,9 @@
  OnContextMenu←{
      d←⍵.Document
      p←⎕NS''
-     p.Label←'Cut' 'Copy' 'Paste'
-     p.Shortcut←'Ctrl+X' 'Ctrl+C' 'Ctrl+V'
-     p.Function←A.FQP¨'Cut' 'Copy' 'Paste'
+     p.Label←'Cut' 'Copy' 'Paste' 'Delete'
+     p.Shortcut←'Ctrl+X' 'Ctrl+C' 'Ctrl+V' 'Del'
+     p.Function←A.FQP¨'OnCut' 'OnCopy' 'OnPaste' 'OnDelete'
      p.Active←0 1 0
      ⍵ ##.ContextMenu.Show p
  }

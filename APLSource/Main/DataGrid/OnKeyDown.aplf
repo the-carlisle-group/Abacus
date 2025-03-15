@@ -40,6 +40,7 @@
      ~t.Write:0
      (⊂p)∊'Ctrlx' 'CtrlX':t Cut 0
      (⊂p)∊'Ctrlv' 'CtrlV':t Paste 0
+     p≡'Delete':t Delete 0
      p≡'F2':StartEditMode t
      m=1:0
      (1=≢k)∧(⊃k)∊⎕D,(⊣,⎕C)⎕A:k StartEnterMode t

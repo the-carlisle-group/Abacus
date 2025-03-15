@@ -1,0 +1,7 @@
+ Delete←{
+     t←⍺
+     s←{(⌊/⍵),⌈/⍵}t.DataCell t.Selection
+     r c←(0⊃s)+⍳¨1+⊃-/⌽s
+     t.Values[r;c]←{⎕ML←0 ⋄ ∊⍵}t.Values[r;c]
+     Refresh t
+ }

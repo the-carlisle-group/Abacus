@@ -1,0 +1,3 @@
+ OnDelete←{
+     ⍺.CurrentTarget Delete 0
+ }
