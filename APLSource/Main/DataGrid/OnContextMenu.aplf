@@ -1,12 +1,9 @@
  OnContextMenu←{
      d←⍵.Document
-     ⎕←'Context menu event'
-     ⎕←'Current target: ',⍵.CurrentTarget.Tag
-     ⎕←'Target: ',⍵.Target.Tag
      p←⎕NS''
      p.Label←'Cut' 'Copy' 'Paste'
      p.Shortcut←'Ctrl+X' 'Ctrl+C' 'Ctrl+V'
      p.Function←A.FQP¨'Cut' 'Copy' 'Paste'
      p.Active←0 1 0
-     ⍵ ##.PopupMenu.Show p
+     ⍵ ##.ContextMenu.Show p
  }

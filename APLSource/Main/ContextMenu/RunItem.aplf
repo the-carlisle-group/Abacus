@@ -6,5 +6,6 @@
      f←⍎i⊃m.Functions
      _←##.DeleteElement m
      _←m.Context.Target A.RemoveProperty'anchor-name'
+     _←##.SetFocus m.Context.Target
      m.Context f ⍵
  }

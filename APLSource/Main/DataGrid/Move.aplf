@@ -9,7 +9,7 @@
      ⍺.DataCell←⍵
      ⍺.Selection←⍵
      ⍵ AdjustWindow ⍺:Refresh ⍺
-     bc←A.BodyCells ⍺
+     bc←⍺.BodyCells
      lc←tc⌷bc
      nc←⍺.TableCell⌷bc
      _←lc nc A.MoveClass'window-cell'

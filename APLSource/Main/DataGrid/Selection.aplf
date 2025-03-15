@@ -7,13 +7,13 @@
      r c←(0⊃s)+⍳¨1+⊃-/⌽s
      r c←r c-b×t.WindowIndex
      c←c+t.RowNumbers+b×t.FreezeColumns
-
      ⍝ CLEAN THIS MESS UP!!!
-
      n m←⍴v
      r←r/⍨(r<n)∧r≥0
      c←c/⍨(c<m)∧c≥t.RowNumbers
-
+     b←n m⍴0
+     b[r;c]←1
+     t.BodyCells.Selected←(⍴t.BodyCells)↑b
      v[r;c]←v[r;c],¨⊂' selected-range'
      v
  }

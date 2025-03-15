@@ -11,10 +11,9 @@
      h.Values←(1,nc)⍴⍺.ColumnTitles[q]
      h.Cells.style←⍺.HeaderStyles[q]
      h.Cells.class←⍺.HeaderClass[q]
-     h.Cells.id←nc↑t.HeaderCellIds
+     h.Cells.id←nc↑t.HeaderCells.id
      o.Body.Values←v
-     o.Body.Cells.id←(nr nc)↑t.BodyCellIds
-     o.Body.Cells.tabindex←'0'
+     o.Body.Cells.id←(nr nc)↑t.BodyCells.id
      bc←t Highlight i q(nr nc⍴⍺.ColumnClass[q])
      bc←t Selection bc
      _←{

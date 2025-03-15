@@ -3,13 +3,13 @@
      e←⍵.Target
      t←⍵.CurrentTarget
      HandleInput t:0
+     e.Selected∧⍵.MouseButton=2:0
      _←ClearSelection t
      e.Tag≡'th':OnClickHeaderCell ⍵
      t.SelectInProgress←1
-
      t←⍵.CurrentTarget
-     c←A.BodyCells t
-     i←⊃⍸c=e
+     c←t.BodyCells
+     i←e.Index
      i≡t.TableCell:0
      lc←t.TableCell⌷c
      nc←e

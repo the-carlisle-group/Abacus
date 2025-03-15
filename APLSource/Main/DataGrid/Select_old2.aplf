@@ -1,8 +1,0 @@
- Select_old2←{
-     t←⍵
-     t.Selection←2↑t.Selection,t.DataCell
-     t.Selection+←⍺
-     t.Selection≡t.DataCell:ClearSelection t
-     _←t.Selection AdjustWindow t
-     Refresh t
- }

@@ -4,8 +4,13 @@
      d←t.Document
      r←3+t.RowsToDisplay
      c←5+⌈/t.ColumnsPerIndex
+     t.WindowOversize←r c
      t.Content←{⍵.Content}A.NewTable(r c⍴⊂'')(c⍴⊂'')
      bc←##.BodyCells t
+     bc.Selected←0
+     bc.Index←⍳r c
+     t.BodyCells←bc
+     t.HeaderCells←##.HeaderCells t
      _←A.SetParent t
      e←A.Elements t
      e.Document←d
@@ -15,7 +20,6 @@
      o.id←t.id
      o.(Header Body).id←t.Content.id
      o.Header.Rows.id←(##.HeaderRows t).id
-     t.HeaderCellIds←(##.HeaderCells t).id
-     t.BodyCellIds←(##.BodyCells t).id
+     o.Body.Cells.tabindex←'0'
      0
  }

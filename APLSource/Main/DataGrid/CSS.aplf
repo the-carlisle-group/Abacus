@@ -11,6 +11,11 @@
      s.user_select←'none'
 
 
+     r←s Rule':focus-within'
+     r.outline←'none'
+
+
+
      ⍝ th
      r←s Rule'thead>tr'
      ⍝ r.height←'200px'
