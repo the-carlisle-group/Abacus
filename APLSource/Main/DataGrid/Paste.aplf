@@ -1,4 +1,13 @@
  Paste←{
-     ⎕←'Paste on table ',⍺.CurrentTarget.id
-     0
+     t←⍺
+     a←⍪⊆(⎕NEW⊂'ClipBoard').Array
+     l←t.Selection t.DataCell
+     ul br←(⌊/,⌈/)l
+     d←1+⊃-/br ul
+     p q←d ExtendPasteData a
+     p≢⍴q:t.Document ##.AlertBox.Show'Paste data and selection dimensions do not match.'
+     t.Selection←(1⊃l)+(p-1)×*⍨×⊃-/l
+     r c←ul+⍳¨p
+     t.Values[r;c]←q
+     Refresh t
  }

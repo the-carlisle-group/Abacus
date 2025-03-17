@@ -1,0 +1,14 @@
+ ExtendPasteData←{
+     ⍝ ⍺ ←→ Desired Dimensions
+     ⍝ ⍵ ←→ Matrix
+     ⍝ ← ←→ ⍵ extended to match ⍺
+     r c←⍺
+     m n←⍴⍵
+     s←{(⍴⍵)⍵}
+     r c≡1 1:s ⍵
+     ~1∊m n:⍺ ⍵
+     m n≡1 1:s r c⍴⍵
+     (r=m)∨∧/1=r n:s c/⍵
+     (c=n)∨∧/1=c m:s r⌿⍵
+     ⍺ ⍵
+ }

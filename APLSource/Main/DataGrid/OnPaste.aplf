@@ -1,4 +1,3 @@
  OnPaste←{
-     ⎕←'Paste on table ',⍺.CurrentTarget.id
-     0
+     ⍺.CurrentTarget Paste 0
  }
