@@ -3,8 +3,7 @@
      s←{(⌊/⍵),⌈/⍵}t.DataCell t.Selection
      r c←(0⊃s)+⍳¨1+⊃-/⌽s
      v←0 t.RowNumbers↓t GetValues r c
-     cb←⎕NS''
-     _←'cb'⎕WC'Clipboard'
-     cb.Array←v
+     cb←⎕NEW⊂'Clipboard'
+     cb.Array←v2
      0
  }

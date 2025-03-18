@@ -8,6 +8,7 @@
      p≢⍴q:t.Document ##.AlertBox.Show'Paste data and selection dimensions do not match.'
      t.Selection←(1⊃l)+(p-1)×*⍨×⊃-/l
      r c←ul+⍳¨p
+     q←⍉↑t.Types[c]Coerce¨↓⍉q
      t.Values[r;c]←q
      Refresh t
  }

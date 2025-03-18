@@ -1,0 +1,15 @@
+ Coerce←{
+     ⍝ ⍺ ←→ Target Type
+     ⍝ ⍵ ←→ Source vector
+     toNum←#.Text2Date.Main.ToNum
+     ⍺≡'Char':{0=80|⎕DR↑⍵:⍵ ⋄ ⍕¨⍵}⍵
+     ⍺≡'Int':{3=80|⎕DR ⍵ ⋄ ⌊toNum↑⍵}⍵
+     ⍺≡'Float':{3 5 11∊⍨80|⎕DR ⍵ ⋄ toNum↑⍵}⍵
+     ⍺≡'Date':ToDate ⍵
+     trn←{f÷⍨⌊⍵×f←10*⍺}
+     rnd←{f÷⍨⌊0.5+⍵×f←10*⍺}
+     toDec←trn∘{3 5 11∊⍨80|⎕DR ⍵ ⋄ toNum↑⍵}
+     ⍺≡'Dec1':1 toDec ⍵
+     ⍺≡'Dec2':2 toDec ⍵
+     ⍺≡'Dec3':3 toDec ⍵
+ }
