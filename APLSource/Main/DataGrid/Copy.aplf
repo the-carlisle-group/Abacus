@@ -4,6 +4,6 @@
      r c←(0⊃s)+⍳¨1+⊃-/⌽s
      v←0 t.RowNumbers↓t GetValues r c
      cb←⎕NEW⊂'Clipboard'
-     cb.Array←v2
+     cb.Array←v
      0
  }

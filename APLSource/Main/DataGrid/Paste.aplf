@@ -1,6 +1,8 @@
  Paste←{
      t←⍺
-     a←⍪⊆(⎕NEW⊂'ClipBoard').Array
+     v←(⎕NEW⊂'ClipBoard').Array
+     b←(1=≢⍴v)∧0=80|⎕DR v
+     a←⍪(⊆⍣b)v
      l←t.Selection t.DataCell
      ul br←(⌊/,⌈/)l
      d←1+⊃-/br ul
@@ -8,7 +10,8 @@
      p≢⍴q:t.Document ##.AlertBox.Show'Paste data and selection dimensions do not match.'
      t.Selection←(1⊃l)+(p-1)×*⍨×⊃-/l
      r c←ul+⍳¨p
-     q←⍉↑t.Types[c]Coerce¨↓⍉q
-     t.Values[r;c]←q
+     ⍝ m←⍉↑t.Types[c]Coerce¨↓⍉q
+     m←⍉t.Types[c](Coerce⍤0 1)⍉q
+     t.Values[r;c]←m
      Refresh t
  }
