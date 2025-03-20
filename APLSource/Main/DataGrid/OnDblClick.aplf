@@ -1,0 +1,4 @@
+ OnDblClick←{
+     t←⍵.CurrentTarget
+     StartEditMode t
+ }

@@ -22,6 +22,7 @@
      t.Onmouseup←A.FQP'OnMouseUp'
      t.Onkeydown←A.FQP'OnKeyDown'
      t.Oncontextmenu←A.FQP'OnContextMenu'
+     t.Ondblclick←A.FQP'OnDblClick'
      t.PreventDefault←⊂'TABLE' 'contextmenu' ''
      t.Height←0
      t.Width←0
