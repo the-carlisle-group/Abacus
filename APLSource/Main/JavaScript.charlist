@@ -58,13 +58,9 @@ function sendAPLResize(e){
             dg.forEach ((x)=>{
             b.DataGrids.push ({
                Id:x.id,
-               // Height:x.parentElement.clientHeight, 
-               // Width:x.parentElement.clientWidth,
                Height:x.clientHeight, 
                Width:x.clientWidth,
-               OffsetHeight: x.offsetHeight,
-               OffsetWidth: x.offsetWidth,                  
-              })
+                })
             })
 
       const m = JSON.stringify(b); 
@@ -91,7 +87,6 @@ function sendAPLRequest(e){
                 TargetId: e.target.id, 
                 CurrentTargetId: e.currentTarget.id, 
                 Key: e.key, 
-                Repeat: e.repeat,
                 CtrlKey: e.ctrlKey,
                 AltKey: e.altKey,
                 ShiftKey: e.shiftKey,
