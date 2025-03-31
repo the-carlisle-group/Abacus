@@ -1,5 +1,0 @@
- MoveThumb←{
-    ⍝ ⍵ ←→ Track
-     th←⊃⍵.Content
-     th A.SetStyle ⍵.TopOrLeft('px',⍨⍕⍵.TopLeft)
- }
