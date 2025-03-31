@@ -1,5 +1,4 @@
  OnResize←{
-     ⎕←⍕'Width' 'Height' 'OffsetWidth' 'OfffsetHeight'{⍺ ⍵}¨⍕¨⍵.Width ⍵.Height ⍵.OffsetWidth ⍵.OffsetHeight
      d←⍺.Document
      e←d A.ElementsWhere'id'⍵.Id
      0=≢e:0
