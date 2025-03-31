@@ -12,5 +12,6 @@
      l,←⊂'ToolTip'
      l,←⊂'ToggleGroup'
      l,←⊂'ContextMenu'
+     l,←⊂'Scroller'
      l
  }

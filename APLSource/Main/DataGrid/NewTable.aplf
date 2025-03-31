@@ -1,0 +1,31 @@
+ NewTable←{
+     t←⍺ A.NewTable''
+     t.OptiTable←A.NewOptiTable ⍬
+     t.LastAnchor←0
+     t.EntryError←0
+     t.Write←0
+     t.RowNumbers←0
+     t.FreezeColumns←0
+     t.InsertRows←0
+     t.MoveRows←0
+     t.MoveColumns←0
+     t.InsertColumns←0
+     t.tabindex←0
+     t.CellMode←0   ⍝ 0←→ReadyMode, 1←→EnterMode, 2←→EditMode
+     t.AutoCompleteActive←0
+     t.Changed←0
+     t.Onmousedown←A.FQP'OnClick'
+     t.Onmouseover←A.FQP'OnMouseOver'
+     t.Onmouseup←A.FQP'OnMouseUp'
+     t.Onkeydown←A.FQP'OnKeyDown'
+     t.Oncontextmenu←A.FQP'OnContextMenu'
+     t.Ondblclick←A.FQP'OnDblClick'
+     t.PreventDefault←⊂'TABLE' 'contextmenu' ''
+     t.Height←0
+     t.Width←0
+     t.Highlight←0
+     t.Selection←⍬
+     t.SelectInProgress←0
+     t.Init←0
+     t
+ }

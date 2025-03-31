@@ -1,0 +1,9 @@
+ ScrollBarMovePage←{
+     ⍝ Move a page up or down (like Excel), NOT the distance clicked!
+     ⍝ How much left or right?
+     tr←⍵.CurrentTarget
+     th←⊃tr.Content
+     o←tr.Horz⊃⍵.MouseTargetPosition
+     o←o×o>30
+     tr MoveViaScrollBar o
+ }

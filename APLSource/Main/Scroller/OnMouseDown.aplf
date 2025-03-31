@@ -1,0 +1,11 @@
+ OnMouseDown←{
+     tr←⍵.CurrentTarget
+     tr=⍵.Target:MovePage ⍵
+     tr.Dragging←1
+     n←tr.Horz⊃⍵.MouseViewportPosition
+     m←tr.Horz⊃⍵.CurrentTargetPosition
+     tr.StartDragMousePosition←n-m
+     t←0⊃tr.Parent.Content
+     tr.StartDragWindowIndex←t.WindowIndex
+     0
+ }

@@ -1,0 +1,28 @@
+ CSS←{
+     Rule←##.NewRule
+     ⍝ ************************
+     s←Rule'.scroller'
+     s.display←'grid'
+     s.grid_auto_flow←'row'
+     s.grid_template_columns←'auto 20px'
+     s.grid_template_rows←'auto 20px'
+     s.height←'100%'
+     s.width←'100%'
+     s.overflow←'hidden' ⍝ clip?
+     ⍝ ************************
+     r←s Rule'.scrollbar'
+     r.padding←0
+     r.background_color←'lightgray'
+     r.width←'100%'
+     r.height←'100%'
+     r.position←'relative'
+     ⍝ *************************
+     r←s Rule'.thumb'
+     r.padding←0
+     r.background_color←'darkgray'
+     r.position←'absolute'
+     r.width←'100%'
+     r.height←'100%'
+     ⍝ ************************
+     ##.UnNestCSS s
+ }

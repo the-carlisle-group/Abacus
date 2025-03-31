@@ -1,4 +1,5 @@
  OnWindowResize←{
+     ⎕←'Resize!'
      g←⍵.DataGrids
      0=≢g:0
      _←⍵ DataGrid.OnResize¨g

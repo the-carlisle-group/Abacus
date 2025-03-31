@@ -1,0 +1,11 @@
+ ResizeScrollBar←{
+     ⍝ ⍺ ←→ Scrollbar
+     ⍺.ContentLength←0⊃⍵
+     ⍺.TrackLength←1⊃⍵
+     ⍺.ThumbLength←20⌈⍺.TrackLength⌊⍺.TrackLength{⍺×⍺÷⍵}⍺.ContentLength
+     ⍺.MaxTopLeft←⍺.TrackLength-⍺.ThumbLength
+     t←⊃⍺.Content
+     p←⍺.Vert⊃'width' 'height'
+     _←t A.SetStyle p('px',⍨⍕⍺.ThumbLength)
+     0
+ }

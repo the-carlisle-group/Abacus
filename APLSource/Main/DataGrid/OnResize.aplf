@@ -1,8 +1,10 @@
  OnResize←{
+     ⎕←⍕'Width' 'Height' 'OffsetWidth' 'OfffsetHeight'{⍺ ⍵}¨⍕¨⍵.Width ⍵.Height ⍵.OffsetWidth ⍵.OffsetHeight
      d←⍺.Document
      e←d A.ElementsWhere'id'⍵.Id
      0=≢e:0
-     t←⊃e
-     t.Parent.(Width Height)←⍵.Width ⍵.Height
-     t Resize 0
+     g←⊃e
+     ⍝ ¯30 for scroll bars
+     g.(Width Height)←¯20+⍵.Width ⍵.Height
+     g Resize 0
  }

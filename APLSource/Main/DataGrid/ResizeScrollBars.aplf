@@ -1,0 +1,8 @@
+ ResizeScrollBars←{
+     g←⍺
+     t←⍺.Table
+     v h←g.Content[1 2]
+     _←h ResizeScrollBar t.DataWidth g.Width
+     _←v ResizeScrollBar t.DataHeight g.Height
+     0
+ }

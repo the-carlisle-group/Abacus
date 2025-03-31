@@ -1,0 +1,6 @@
+ ComputeRowsToDisplay_old←{
+     d←GetDimensions 0                     ⍝ Get dimensions
+     ⍝ 12 and 2 here are trial and error
+     ⍝ Need to make precise computation!
+     2+d.thFontSize+2×d.tdPaddingTop
+ }

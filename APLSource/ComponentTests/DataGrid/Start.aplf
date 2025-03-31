@@ -1,21 +1,22 @@
  Start←{
      ⍺←0
      ⎕THIS.A←##.##.Main
-     t←ReadCSVFile GetFileName'People.csv'
+     p←ReadCSVFile GetFileName'People.csv'
      g←A.DataGrid.New''
      g.id←'the-datagrid'
-     g.Write←1
-     g.RowNumbers←1
-     g.InsertRows←1
-     g.MoveRows←1
-     g.InsertColumns←1
-     g.MoveColumns←1
-     g.Values←t.Values
-     g.Names←t.Names
-     g.Types←t.Types
-     g.Align←t.Align
-     g.SortDirection←t.SortDirection           ⍝ Should default
-     g.AutoCompleteItems←t.AutoCompleteItems   ⍝ Should default
+     t←g.Table
+     t.Write←1
+     t.RowNumbers←1
+     t.InsertRows←1
+     t.MoveRows←1
+     t.InsertColumns←1
+     t.MoveColumns←1
+     t.Values←p.Values
+     t.Names←p.Names
+     t.Types←p.Types
+     t.Align←p.Align
+     t.SortDirection←p.SortDirection           ⍝ Should default
+     t.AutoCompleteItems←p.AutoCompleteItems   ⍝ Should default
      d←A.NewDocument g
      d.Caption←'Datagrid Test'
      d.LayoutStyle←CSS 0
@@ -23,8 +24,8 @@
      d.Theme←#.Abacus.Themes.Dark 0
      _←A.NewForm d
      _←d A.DataGrid.Init g
-     _←⎕DL 1  ⍝ Need this sometimes in v19!
-     _←g A.DataGrid.Resize 0
+     ⍝ _←⎕DL 1  ⍝ Need this sometimes in v19!
+     ⍝ _←g A.DataGrid.Resize 0
      _←d.Client.ShowDevTools ⍺
      d
  }

@@ -3,7 +3,7 @@
      ⍝ Font must be fixed width
      e←⍺
      nb←⍵.Key≢'Backspace'
-     top left←2↑⍵.BoundingClientRect[2 1]
+     top left←⍵.TargetPosition ⍝ 2↑⍵.BoundingClientRect[2 1]
      pt pl←2↑⍎⍵.Padding~'px'
      cw←0.6×⍎⍵.FontSize~'px'
      ss←⍵.SelectionStart

@@ -1,0 +1,11 @@
+ Set←{
+     ⍝ ⍺ ←→ Scrollbars(v h)
+     ⍝ ⍵ ←→ table
+     t←⍵
+     v h←⍺
+     i←t.WindowIndex
+     m←t.MaxWindowIndex
+     p←⌊⍺.MaxTopLeft×i÷m
+     ⍺.TopLeft←p
+     MoveThumb¨v h
+ }

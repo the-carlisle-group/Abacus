@@ -1,0 +1,18 @@
+ Test←{
+     ⎕THIS.A←##
+     ⍺←0
+     s←New''
+     d←A.NewDocument s
+     d.LayoutStyle←⍬
+     d.AppStyle←⍬
+     d.Theme←#.Abacus.Themes.Dark 0
+     d.Caption←'Scroll Test'
+     _←A.NewForm d
+     _←⎕DL 1
+     v h←s.Content[1 2]
+
+     _←h Resize 4000 1000
+     _←v Resize 12000 1000
+     _←d.Client.ShowDevTools ⍺
+     d
+ }

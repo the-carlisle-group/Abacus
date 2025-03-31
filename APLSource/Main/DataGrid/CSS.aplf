@@ -4,33 +4,50 @@
      px←{'px',⍨⍕⍵}
      CellPadding←1↓∊' ',¨px¨d.tdPaddingTop d.tdPaddingLeft
      Border←'solid .5px gray'
-     ⍝ Table
+     ⍝ ************************
      s←Rule'.data-grid'
-     s.border_collapse←'collapse'
-     s.table_layout←'fixed'
-     s.user_select←'none'
-
-     ⍝ th
+     s.display←'grid'
+     s.grid_auto_flow←'row'
+     s.grid_template_columns←'auto 20px'
+     s.grid_template_rows←'auto 20px'
+     s.height←'100%'     ⍝ Why?
+     s.width←'100%'      ⍝ Why?
+     s.overflow←'hidden' ⍝ clip?
+     ⍝ ************************
+     r←s Rule'.scrollbar'
+     r.padding←0
+     r.background_color←'lightgray'
+     r.width←'100%'
+     r.height←'100%'
+     r.position←'relative'
+     ⍝ *************************
+     r←s Rule'.thumb'
+     r.padding←0
+     r.background_color←'darkgray'
+     r.position←'absolute'
+     r.width←'100%'
+     r.height←'100%'
+     ⍝ *************************
+     r←s Rule'table'
+     r.border_collapse←'collapse'
+     r.table_layout←'fixed'
+     r.user_select←'none'
+     r.overflow←'hidden'
+     ⍝ ********************
      r←s Rule'thead>tr'
-     ⍝ r.height←'200px'
      r.height←px(2×d.thLineHeight)+d.thPaddingTop+d.thPaddingBottom
-     ⍝ r.min_height←px d.thLineHeight+d.thPaddingTop+d.thPaddingBottom
-     ⍝ r.max_height←r.min_height
-
-     ⍝ th
+     ⍝ ************************
      r←s Rule'th'
      r.padding←CellPadding
      r.border←Border
      r.font_family←'Tahoma'
      r.font_size←px d.thFontSize
      r.font_weight←'normal'
-
      r.min_height←px d.thLineHeight+d.thPaddingTop+d.thPaddingBottom
      r.max_height←r.min_height
      r.height←r.min_height
      r.overflow←'hidden'
-
-     ⍝ td
+     ⍝ ***************************
      r←s Rule'td'
      r.white_space←'nowrap'
      r.overflow←'hidden'
@@ -38,34 +55,23 @@
      r.border←Border
      r.box_sizing←'border-box'
      r.position←'relative'
-
-     ⍝
+     ⍝ *****************************
      r←s Rule'td:focus'
      r.outline←'none'
-
-
-
-     ⍝ tbody
+     ⍝ *********************************
      r←s Rule'tbody'
      r.font_family←'APL385 Unicode'
      r.font_size←px d.tdFontSize
-
-     ⍝ Window-cell
+     ⍝ *********************************
      r←s Rule'.window-cell'
      r.background_color←'orange'
-     ⍝ r.anchor_name←'--current-cell'    ⍝ DO THIS DYNAMICALLY
-     ⍝ r.position←'relative' ⍝ DOnt NEED AS SEt FOr tD.
-
-     ⍝ Selected-range
+     ⍝ ********************************
      r←s Rule'.selected-range'
      r.background_color←'green'
-
-
-     ⍝ in-cell
+     ⍝ *********************************
      r←s Rule'.in-cell'
      r.padding←0
-
-     ⍝ input
+     ⍝ *********************************
      r←s Rule'input'
      r.box_sizing←'border-box'
      r.padding←CellPadding
@@ -74,40 +80,38 @@
      r.border←'none'
      r.position←'absolute'
      r.width←'100%'
-
-
+     ⍝ *******************************
      r←s Rule'.r'
      r.text_align←'right'
-
+     ⍝ *********************************
      r←s Rule'.row-number'
      r.border←0
      r.text_align←'center'
      r.font_family←'Arial Narrow'
      r.color←'darkgray'
-
+     ⍝ *********************************
      r←s Rule'.sorted-up::before'
      r.content←'"',(⎕UCS 9650),'"'
      r.color←'darkgray'
      r.margin_right←'2px'
-
+     ⍝ ********************************
      r←s Rule'.sorted-down::before'
      r.content←'"',(⎕UCS 9660),'"'
      r.color←'darkgray'
      r.margin_right←'2px'
-
+     ⍝ *********************************
      r←s Rule'.more-to-left::before'
      r.content←'"<"'
-
      r.color←'gray'
      r.position←'absolute'
      r.left←0
-
+     ⍝ *******************************
      r←s Rule'.highlight1'
      r.color←'green'
-
+     ⍝ ******************************
      r←s Rule'.highlight2'
      r.color←'red'
-
+     ⍝ ******************************
      r←s Rule'#grid-error'
      r.display←'none'
      r.position←'fixed' ⍝'absolute' wont work here!
@@ -119,6 +123,6 @@
      r.position_anchor←'--input-cell'
      r.inset_area←'bottom right'
      r.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
-
+     ⍝ *************************************
      ##.UnNestCSS s
  }

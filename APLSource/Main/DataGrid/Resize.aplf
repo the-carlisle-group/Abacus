@@ -1,5 +1,6 @@
  Resize←{
-     t←⍺
+     g←⍺
+     t←g.Table
      ~t.Init:0
      p←t.Parent
      0=p.⎕NC'Width':0
@@ -9,10 +10,14 @@
      t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
      t.RowsToDisplay←p.Height ComputeRowsToDisplay 0
      t.WindowSize←t.RowsToDisplay,(1⊃t.WindowIndex)⊃t.ColumnsPerIndex
+     t.DataWidth←+/t.FullWidths
+     t.DataHeight←t.RowHeight×⊃t.DataSize
+     t.MaxWindowIndex←t.DataSize-t.WindowSize[0],¯1++/∧\2</⌽t.ColumnsPerIndex
      ∨/t.WindowSize<1:0
      t.WindowCell←t.WindowCell⌊t.WindowSize-1
      t.DataCell←t.WindowIndex+t.WindowCell
      t.TableCell←t.WindowCell+0,t.ColumnOffset
+     _←g ResizeScrollBars''
      _←BuildStructure t
      Refresh t
  }

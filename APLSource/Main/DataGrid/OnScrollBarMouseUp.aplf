@@ -1,0 +1,5 @@
+ OnScrollBarMouseUp←{
+     e←⍵.CurrentTarget
+     e.Dragging←0
+     0
+ }

@@ -1,4 +1,4 @@
- CSS←{
+ CSS_ScrollBars←{
      Rule←#.Abacus.Main.NewRule
      s←Rule''
      ⍝ Body
@@ -6,5 +6,10 @@
      ⍝ r.overflow←'clip'
      r.height←'100vh'
      r.width←'100vw'
+
+     r←s Rule'table'
+     r.overflow←'hidden'
+
+
      s
  }

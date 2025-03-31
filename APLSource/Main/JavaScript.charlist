@@ -58,8 +58,10 @@ function sendAPLResize(e){
             dg.forEach ((x)=>{
             b.DataGrids.push ({
                Id:x.id,
-               Height:x.parentElement.clientHeight, 
-               Width:x.parentElement.clientWidth,
+               // Height:x.parentElement.clientHeight, 
+               // Width:x.parentElement.clientWidth,
+               Height:x.clientHeight, 
+               Width:x.clientWidth,
                OffsetHeight: x.offsetHeight,
                OffsetWidth: x.offsetWidth,                  
               })
@@ -78,6 +80,7 @@ function sendAPLRequest(e){
                 e.preventDefault();
        }     
       const r = e.target.getBoundingClientRect();
+      const q = e.currentTarget.getBoundingClientRect();
       const s = window.getComputedStyle(e.target);
       const b = {
                 Event: e.type,
@@ -98,9 +101,13 @@ function sendAPLRequest(e){
                 FontFamily: s['font-family'],
                 Font: s['font'],
                 Padding: s['padding'],
-                BoundingClientRect: [r.top,r.left,r.bottom,r.right]
-      };
+                MouseViewportPosition: [e.clientY,e.clientX],
+                MouseTargetPosition: [e.offsetY,e.offsetX],
+                CurrentTargetSize: [q.top,q.left],
+                CurrentTargetPosition: [q.height,q.width],
+                TargetSize: [r.top,r.left],
+                TargetPosition: [r.height,r.width]
+            };
       const m = JSON.stringify(b); 
       ws.send (m)
 }
-
