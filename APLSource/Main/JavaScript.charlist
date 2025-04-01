@@ -90,7 +90,7 @@ function sendAPLRequest(e){
                 CtrlKey: e.ctrlKey,
                 AltKey: e.altKey,
                 ShiftKey: e.shiftKey,
-                MouseButton: e.button,
+                MouseButton: e.buttons,
                 SelectionStart: e.target.selectionStart,
                 FontSize: s['font-size'],
                 FontFamily: s['font-family'],

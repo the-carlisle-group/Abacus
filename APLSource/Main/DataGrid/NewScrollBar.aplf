@@ -6,9 +6,7 @@
      s.Vert←⍵≡'v-scrollbar'
      s.TopLeft←0
      s.TopOrLeft←s.Horz⊃'top' 'left'
-     s.Dragging←0
      s.Onmousedown←A.FQP'OnScrollBarMouseDown'
-     s.Onmouseup←A.FQP'OnScrollBarMouseUp'
      s.Onmousemove←A.FQP'OnScrollBarMouseMove'
      t←s A.New'div'
      t.class←'thumb'

@@ -1,7 +1,6 @@
  OnScrollBarMouseMove←{
-     ⍵.Target.id≡⍵.CurrentTarget.id:0
+     ⍵.MouseButton≠1:0
      tr←⍵.CurrentTarget
-     ~tr.Dragging:0
      th←⍵.Target
      t←tr.Parent.Table
      n←⍵.MouseViewportPosition
