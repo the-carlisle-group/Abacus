@@ -98,10 +98,10 @@ function sendAPLRequest(e){
                 Padding: s['padding'],
                 MouseViewportPosition: [e.clientY,e.clientX],
                 MouseTargetPosition: [e.offsetY,e.offsetX],
-                CurrentTargetSize: [q.top,q.left],
-                CurrentTargetPosition: [q.height,q.width],
-                TargetSize: [r.top,r.left],
-                TargetPosition: [r.height,r.width]
+                CurrentTargetPosition: [q.top,q.left],
+                CurrentTargetSize: [q.height,q.width],
+                TargetPosition: [r.top,r.left],
+                TargetSize: [r.height,r.width]
             };
       const m = JSON.stringify(b); 
       ws.send (m)

@@ -1,15 +1,13 @@
  ScrollBarMovePage←{
-     ⍝ Move a page up or down (like Excel), NOT the distance clicked!
-     ⍝ How much left or right?
+     ⍝ PageUp or Page Down
      tr←⍵.CurrentTarget
-     th←⊃tr.Content
-     o←tr.Horz⊃⍵.MouseTargetPosition
-     o←o×o>30
-     t←tr.Parent.Table
-     i←t.WindowIndex
-     n←tr.Horz⊃t.MaxWindowIndex
-     j←⌊n×1⌊o÷tr.MaxTopLeft
-     i[tr.Horz]←j
-     t.WindowIndex←i
-     Refresh t
+     h v←tr.(Horz Vert)
+     n←⍵.MouseViewportPosition
+     m←⍵.CurrentTargetPosition
+     d←tr.TopLeft<h⊃n-m
+     v∧~d:ScrollBarPageUp ⍵
+     v∧d:ScrollBarPageDown ⍵
+     h∧~d:ScrollBarPageLeft ⍵
+     h∧d:ScrollBarPageRight ⍵
+     0
  }

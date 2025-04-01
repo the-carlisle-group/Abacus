@@ -1,7 +1,6 @@
  OnScrollBarMouseDown←{
      tr←⍵.CurrentTarget
      tr=⍵.Target:ScrollBarMovePage ⍵
-     tr.Dragging←1
      n←⍵.MouseViewportPosition
      m←⍵.CurrentTargetPosition
      tr.StartDragMousePosition←n-m
