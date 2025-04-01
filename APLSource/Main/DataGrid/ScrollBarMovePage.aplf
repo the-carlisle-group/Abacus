@@ -5,5 +5,11 @@
      th←⊃tr.Content
      o←tr.Horz⊃⍵.MouseTargetPosition
      o←o×o>30
-     tr MoveViaScrollBar o
+     t←0⊃tr.Parent.Content
+     i←t.WindowIndex
+     n←tr.Horz⊃t.MaxWindowIndex
+     j←⌊n×1⌊o÷tr.MaxTopLeft
+     i[tr.Horz]←j
+     t.WindowIndex←i
+     Refresh t
  }

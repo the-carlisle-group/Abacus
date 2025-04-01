@@ -1,7 +1,13 @@
  RefreshScrollBars←{
      t←⍵
      p←t.Parent
-     v h←p.Content[1 2]
-     v h SetScrollBarPosition t
-     0
+     s←p.Content[1 2]
+     i←t.WindowIndex
+     m←t.MaxWindowIndex
+     p←⌊s.MaxTopLeft×i÷m
+     s.TopLeft←p
+     th←⊃¨s.Content
+     pxf←{'px',⍨⍕⍵}
+     ra←s.TopOrLeft{⍺ ⍵}¨pxf¨p
+     th A.SetStyle¨ra
  }
