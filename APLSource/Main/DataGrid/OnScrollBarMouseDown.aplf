@@ -2,10 +2,10 @@
      tr←⍵.CurrentTarget
      tr=⍵.Target:ScrollBarMovePage ⍵
      tr.Dragging←1
-     n←tr.Horz⊃⍵.MouseViewportPosition
-     m←tr.Horz⊃⍵.CurrentTargetPosition
+     n←⍵.MouseViewportPosition
+     m←⍵.CurrentTargetPosition
      tr.StartDragMousePosition←n-m
-     t←0⊃tr.Parent.Content
+     t←tr.Parent.Table
      tr.StartDragWindowIndex←t.WindowIndex
      0
  }

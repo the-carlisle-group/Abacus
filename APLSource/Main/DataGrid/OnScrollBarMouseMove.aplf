@@ -1,20 +1,17 @@
  OnScrollBarMouseMove←{
-     ⍵.Target.id≡⍵.CurrentTarget.id:0 ⍝ Not on the thumb
-     tr←⍵.CurrentTarget               ⍝ Track
-     th←⍵.Target                      ⍝ Thumb
-     ~tr.Dragging:0                   ⍝ Not dragging
-     ⍝ Encapsulate
-     t←0⊃tr.Parent.Content
-     n←tr.Horz⊃⍵.MouseViewportPosition
-     m←tr.Horz⊃⍵.CurrentTargetPosition
-     tr.CurrentDragMousePosition←n-m
-     tr.DragDistance←tr.CurrentDragMousePosition-tr.StartDragMousePosition
-     j←¯1⌈1⌊tr.DragDistance÷tr.MaxTopLeft   ⍝ % movement Neg or Ois
-     i←tr.Horz⊃tr.StartDragWindowIndex
-     n←tr.Horz⊃t.MaxWindowIndex
-     k←0⌈n⌊i+⌊n×j   ⍝ Also move at least one col!
-     q←tr.StartDragWindowIndex
-     q[tr.Horz]←k
-     t.WindowIndex←q
+     ⍵.Target.id≡⍵.CurrentTarget.id:0
+     tr←⍵.CurrentTarget
+     ~tr.Dragging:0
+     th←⍵.Target
+     t←tr.Parent.Table
+     n←⍵.MouseViewportPosition
+     m←⍵.CurrentTargetPosition
+     d←n-m+tr.StartDragMousePosition
+     j←¯1⌈1⌊d÷tr.MaxTopLeft
+     i←tr.StartDragWindowIndex
+     n←t.MaxWindowIndex
+     k←0⌈n⌊i+⌊n×j
+     i[tr.Horz]←tr.Horz⊃k
+     t.WindowIndex←i
      Refresh t
  }

@@ -5,7 +5,7 @@
      th←⊃tr.Content
      o←tr.Horz⊃⍵.MouseTargetPosition
      o←o×o>30
-     t←0⊃tr.Parent.Content
+     t←tr.Parent.Table
      i←t.WindowIndex
      n←tr.Horz⊃t.MaxWindowIndex
      j←⌊n×1⌊o÷tr.MaxTopLeft
