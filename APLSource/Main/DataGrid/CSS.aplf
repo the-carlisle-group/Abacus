@@ -33,6 +33,8 @@
      r.table_layout←'fixed'
      r.user_select←'none'
      r.overflow←'hidden'
+     r.width←'fit-content'
+     r.height←'fit-content'
      ⍝ ********************
      r←s Rule'thead>tr'
      r.height←px(2×d.thLineHeight)+d.thPaddingTop+d.thPaddingBottom

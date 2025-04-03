@@ -1,8 +1,12 @@
  ReadCSVFile←{
+     ⍝ ⍺ ←→ Limit rows, Limit Columns
      ⍝ ⍵ ←→ FQP file name
      ⍝ ← ←→ Namespace with Names, Values, etc.
+     rl cl←2↑⍺,0
      o←'Invert' 1
      v n←(⎕CSV⍠o)⍵'' 1 1
+     v←rl{⍺=0:⍵ ⋄ ⍺↑⍵}¨v
+     n v←cl{⍺=0:⍵ ⋄ ⍺↑⍵}¨n v
      p←ConvertType¨v
      c←≢n
      t←⎕NS''
@@ -13,6 +17,7 @@
      t.Align←p.Align
      t.SortDirection←c⍴0
      t.AutoCompleteItems←c⍴⊂''
+     ~∨/n∊⊂'birthCity':t
      j←n⍳⊂'birthCity'
      t.AutoCompleteItems[j]←⊂∪t.Values[;j]
      j←n⍳⊂'birthCountry'

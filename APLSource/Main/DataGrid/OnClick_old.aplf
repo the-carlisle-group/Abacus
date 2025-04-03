@@ -1,4 +1,4 @@
- OnClick←{
+ OnClick_old←{
      ⍝ OnMouseDown really
      e←⍵.Target
      t←⍵.CurrentTarget
@@ -11,9 +11,15 @@
      c←t.BodyCells
      i←e.Index
      i≡t.TableCell:0
+     lc←t.TableCell⌷c
+     nc←e
+     _←lc nc A.MoveClass'window-cell'
      t.TableCell←i
      t.WindowCell←t.TableCell-0,t.ColumnOffset
      t.DataCell←t.WindowCell+t.WindowIndex
      t.Selection←t.DataCell
-     Refresh t
+     t.WindowCell[1]≥0:0
+     t.DataCell[1]←t.FreezeColumns+t.WindowCell[1]
+     t.Selection←t.DataCell
+     0
  }
