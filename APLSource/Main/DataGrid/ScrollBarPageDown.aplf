@@ -1,9 +1,9 @@
  ScrollBarPageDown←{
-     tr←⍵.CurrentTarget
-     t←tr.Parent.Table
+     t←⍵
      m←0⊃t.DataSize-t.WindowSize
      m≤0⊃t.WindowIndex:0
      i←0⊃t.WindowSize
      t.WindowIndex[0]←m⌊i+0⊃t.WindowIndex
+     t.TableCell←¯1 ¯1
      Refresh t
  }

@@ -25,6 +25,8 @@
      p≡'CtrlEnd':t Move t.DataSize-1
      p≡'PageUp':MovePageUp t
      p≡'PageDown':MovePageDown t
+     p≡'AltPageUp':MovePageLeft t
+     p≡'AltPageDown':MovePageRight t
      p≡'ShiftArrowRight':t Select t.Selection+0 1
      p≡'ShiftArrowLeft':t Select t.Selection-0 1
      p≡'ShiftArrowUp':t Select t.Selection-1 0

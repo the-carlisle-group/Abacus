@@ -1,8 +1,8 @@
  ScrollBarPageUp←{
-     tr←⍵.CurrentTarget
-     t←tr.Parent.Table
+     t←⍵
      0=0⊃t.WindowIndex:0
      i←-0⊃t.WindowSize
      t.WindowIndex[0]←0⌈i+0⊃t.WindowIndex
+     t.TableCell←¯1 ¯1
      Refresh t
  }

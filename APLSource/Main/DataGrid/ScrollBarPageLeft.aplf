@@ -1,0 +1,10 @@
+ ScrollBarPageLeft←{
+     t←⍵
+     HandleInput t:0
+     0=1⊃t.WindowIndex:0
+     c←1⊃t.WindowIndex
+     p←(c-1)⊃t.ScrollIntoViewIndex
+     t.WindowIndex[1]←p
+     t.TableCell←¯1 ¯1
+     Refresh t
+ }

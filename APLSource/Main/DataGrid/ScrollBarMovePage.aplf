@@ -1,13 +1,14 @@
  ScrollBarMovePage←{
      ⍝ PageUp or Page Down
      tr←⍵.CurrentTarget
+     t←tr.Parent.Table
      h v←tr.(Horz Vert)
      n←⍵.MouseViewportPosition
      m←⍵.CurrentTargetPosition
      d←tr.TopLeft<h⊃n-m
-     v∧~d:ScrollBarPageUp ⍵
-     v∧d:ScrollBarPageDown ⍵
-     h∧~d:ScrollBarPageLeft ⍵
-     h∧d:ScrollBarPageRight ⍵
+     v∧~d:ScrollBarPageUp t
+     v∧d:ScrollBarPageDown t
+     h∧~d:ScrollBarPageLeft t
+     h∧d:ScrollBarPageRight t
      0
  }

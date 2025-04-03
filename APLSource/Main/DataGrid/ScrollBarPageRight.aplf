@@ -1,0 +1,11 @@
+ ScrollBarPageRight←{
+     t←⍵
+     HandleInput t:0
+     m←1⊃t.MaxWindowIndex
+     c←1⊃t.WindowIndex
+     p←c⊃t.ColumnsPerIndex
+     m=c:0
+     t.WindowIndex[1]←m⌊p+c
+     t.TableCell←¯1 ¯1
+     Refresh t
+ }

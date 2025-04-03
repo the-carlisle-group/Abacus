@@ -4,6 +4,7 @@
      h←##.RenderOptiTable o
      _←t ##.SetProperty'innerHTML'(##.Sanitize h)
      _←RefreshScrollBars t
+     t.TableCell≡¯1 ¯1:t A.FireEvent'focus'
      bc←A.BodyCells t
      c←t.TableCell⌷bc
      c A.FireEvent'focus'
