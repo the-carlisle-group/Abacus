@@ -27,6 +27,12 @@
      r.position←'absolute'
      r.width←'100%'
      r.height←'100%'
+     ⍝ ****************
+     r←s Rule'.data-grid-corner'
+     r.background_color←'yellow'
+     r.position←'relative'
+     ⍝ r.width←'100%'
+     ⍝ r.height←'100%'
      ⍝ *************************
      r←s Rule'table'
      r.border_collapse←'collapse'

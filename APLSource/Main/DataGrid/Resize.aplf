@@ -12,7 +12,7 @@
      t.WindowSize←t.RowsToDisplay,(1⊃t.WindowIndex)⊃t.ColumnsPerIndex
      t.DataWidth←+/t.FullWidths
      t.DataHeight←t.RowHeight×⊃t.DataSize
-     t.MaxWindowIndex←t.DataSize-t.WindowSize[0],¯1++/∧\2</⌽t.ColumnsPerIndex
+     t.MaxWindowIndex←t.DataSize-t.WindowSize[0],1++/∧\2</⌽t.ColumnsPerIndex
      ∨/t.WindowSize<1:0
      t.WindowCell←t.WindowCell⌊t.WindowSize-1
      t.DataCell←t.WindowIndex+t.WindowCell

@@ -24,8 +24,6 @@
      d.Theme←#.Abacus.Themes.Dark 0
      _←A.NewForm d
      _←d A.DataGrid.Init g
-     ⍝ _←⎕DL 1  ⍝ Need this sometimes in v19!
-     ⍝ _←g A.DataGrid.Resize 0
      _←d.Client.ShowDevTools ⍺
      d
  }
