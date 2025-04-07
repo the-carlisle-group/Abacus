@@ -1,6 +1,7 @@
  MoveColumn←{
      t←⍵
      HandleInput t:0
+     g←t.Parent
      c←1⊃t.DataCell
      (⍺=¯1)∧c=0:0
      (⍺=1)∧c=¯1+≢t.Names:0
@@ -12,7 +13,7 @@
      t.Types←t.Types[j]
      t.Align←t.Align[j]
      t.SortDirection←t.SortDirection[j]
-     _←t.Document Init t
-     _←t Resize 0
+     _←t.Document Init g
+     _←g Resize 0
      t Move t.DataCell+0 ⍺
  }

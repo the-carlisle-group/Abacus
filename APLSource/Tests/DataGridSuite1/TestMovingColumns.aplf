@@ -1,0 +1,12 @@
+ TestMovingColumns←{
+     ⎕TID=0:∇&0
+     t←GetTable 0
+     Press'Ctrl' 'Home':
+     Assert t.DataCell≡0 0:
+     sv←t.Values[;0 1]
+     Press'Ctrl' 'Shift' 'ArrowRight':
+     Assert sv≡t.Values[;1 0]:
+     Press'Ctrl' 'Shift' 'ArrowLeft':
+     Assert sv≡t.Values[;0 1]:
+     0
+ }

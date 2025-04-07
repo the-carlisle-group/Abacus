@@ -1,13 +1,10 @@
  TestEditingIntColumn←{
      ⎕TID=0:∇&0
-     g←GetElementById'the-datagrid'
-     t←g.Table
-     ⎕THIS.Element←t
+     t←GetTable 0
      Press'Ctrl' 'Home':
      Press'ArrowRight':
      Assert t.Values[0;1 2 3]≡1981 12 27:
-     c←GetBrowserCellValues 0
-     Assert c[0;1 2 3]≡'1,981' '12' '27':
+     Assert BrowserValues[0;1 2 3]≡'1,981' '12' '27':
      Enter'1964':
      Press'ArrowRight':
      Enter'7':
@@ -16,7 +13,6 @@
      Press'ArrowRight':
      Assert t.Values[0;1 2 3]≡1964 7 24:
      Press'Ctrl' 'Home':
-     c←GetBrowserCellValues 0
-     Assert c[0;1 2 3]≡'1,964'(,'7')'24':
+     Assert BrowserValues[0;1 2 3]≡,¨'1,964' '7' '24':
      0
  }

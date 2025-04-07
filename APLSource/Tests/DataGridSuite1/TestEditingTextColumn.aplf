@@ -1,13 +1,10 @@
  TestEditingTextColumn←{
      ⎕TID=0:∇&0
-     g←GetElementById'the-datagrid'
-     t←g.Table
-     ⎕THIS.Element←t
+     t←GetTable 0
      Press'Ctrl' 'Home':
      Assert 20081 24≡⍴t.Values:
      Assert t.Values[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
-     c←GetBrowserCellValues 0
-     Assert c[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
+     Assert BrowserValues[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
      Enter'One':
      Press'ArrowDown':
      Enter'Two':
@@ -19,7 +16,6 @@
      Enter'Five':
      Press'ArrowDown':
      Assert t.Values[⍳5;0]≡'One' 'Two' 'Three' 'Four' 'Five':
-     c←GetBrowserCellValues 0
-     Assert c[⍳5;0]≡'One' 'Two' 'Three' 'Four' 'Five':
+     Assert BrowserValues[⍳5;0]≡'One' 'Two' 'Three' 'Four' 'Five':
      0
  }

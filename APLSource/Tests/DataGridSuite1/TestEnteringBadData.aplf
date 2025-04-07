@@ -1,8 +1,6 @@
  TestEnteringBadData←{
      ⎕TID=0:∇&0
-     g←GetElementById'the-datagrid'
-     t←g.Table
-     ⎕THIS.Element←t
+     t←GetTable 0
      Press'Ctrl' 'Home':
      Press'ArrowRight':
      Assert t.DataCell≡0 1:

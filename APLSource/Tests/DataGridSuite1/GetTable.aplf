@@ -1,0 +1,6 @@
+ GetTable←{
+     g←GetElementById'the-datagrid'
+     t←g.Table
+     ⎕THIS.Element←t
+     t
+ }

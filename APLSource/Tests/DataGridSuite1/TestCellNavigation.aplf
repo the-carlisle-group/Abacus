@@ -1,23 +1,18 @@
  TestCellNavigation←{
      ⎕TID=0:∇&0
+     t←GetTable 0
      cc←'window-cell'
-     g←GetElementById'the-datagrid'
-     t←g.Table
-     ⎕THIS.Element←t
      m n←⍴t.Values
      Assert m n≡20081 24:
      Press'Ctrl' 'Home':
      Assert t.DataCell≡0 0:
-     c←GetBrowserCells''
-     Assert(⊃c)HasClass cc:
+     Assert(⊃BrowserCells)HasClass cc:
      Press'Ctrl' 'End':
      Assert t.DataCell≡m n-1:
-     c←GetBrowserCells''
-     Assert(⊃⌽⊖c)HasClass cc:
+     Assert(⊃⌽⊖BrowserCells)HasClass cc:
      Press'Home':
      Assert t.DataCell≡(m-1),0:
-     c←GetBrowserCells''
-     Assert(⊃⊖c)HasClass cc:
+     Assert(⊃⊖BrowserCells)HasClass cc:
      Press'Ctrl' 'ArrowUp':
      Assert t.DataCell≡0 0:
      Press'ArrowDown':
@@ -35,8 +30,7 @@
      Press'Ctrl' 'Home':
      Press'End':
      Assert t.DataCell≡0,n-1:
-     c←GetBrowserCells''
-     Assert(⊃⌽c)HasClass cc:
+     Assert(⊃⌽BrowserCells)HasClass cc:
      Press'Home':
      Press'PageDown':
      Assert t.DataCell≡(⊃t.WindowSize),0:

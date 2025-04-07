@@ -1,14 +1,12 @@
  TestEditingDateColumn←{
      ⎕TID=0:∇&0
-     g←GetElementById'the-datagrid'
-     t←g.Table
-     ⎕THIS.Element←t
+     t←GetTable 0
      Press'Ctrl' 'Home':
      Press'End':
      Press'ArrowLeft':
      Press'ArrowLeft':
      Assert t.Values[⍳3;21]≡20150823 19761003 19710926:
-     c←GetBrowserCellValues 0
+     c←BrowserValues
      Assert c[⍳3;¯3+1⊃⍴c]≡'2015/08/23' '1976/10/03' '1971/09/26':
      Enter'1999 12 31':
      Press'Enter':
@@ -17,7 +15,7 @@
      Enter'2024-12-1':
      Press'Enter':
      Assert t.Values[⍳3;21]≡19991231 20000101 20241201:
-     c←GetBrowserCellValues 0
+     c←BrowserValues
      Assert c[⍳3;¯3+1⊃⍴c]≡'1999/12/31' '2000/01/01' '2024/12/01':
      0
  }
