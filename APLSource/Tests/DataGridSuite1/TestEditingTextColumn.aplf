@@ -6,10 +6,8 @@
      Press'Ctrl' 'Home':
      Assert 20081 24≡⍴t.Values:
      Assert t.Values[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
-     bg←GetElementFromBrowser'the-datagrid'
-     bt←⊃bg.Content
-     c←A.BodyValues bt
-     Assert c[⍳5;1]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
+     c←GetBrowserCellValues 0
+     Assert c[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
      Enter'One':
      Press'ArrowDown':
      Enter'Two':
@@ -21,9 +19,7 @@
      Enter'Five':
      Press'ArrowDown':
      Assert t.Values[⍳5;0]≡'One' 'Two' 'Three' 'Four' 'Five':
-     bg←GetElementFromBrowser'the-datagrid'
-     bt←⊃bg.Content
-     c←A.BodyValues bt
-     Assert c[⍳5;1]≡'One' 'Two' 'Three' 'Four' 'Five':
+     c←GetBrowserCellValues 0
+     Assert c[⍳5;0]≡'One' 'Two' 'Three' 'Four' 'Five':
      0
  }

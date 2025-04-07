@@ -6,10 +6,8 @@
      Press'Ctrl' 'Home':
      Press'ArrowRight':
      Assert t.Values[0;1 2 3]≡1981 12 27:
-     bg←GetElementFromBrowser'the-datagrid'
-     bt←⊃bg.Content
-     c←A.BodyValues bt
-     Assert c[0;2 3 4]≡'1,981' '12' '27':
+     c←GetBrowserCellValues 0
+     Assert c[0;1 2 3]≡'1,981' '12' '27':
      Enter'1964':
      Press'ArrowRight':
      Enter'7':
@@ -18,9 +16,7 @@
      Press'ArrowRight':
      Assert t.Values[0;1 2 3]≡1964 7 24:
      Press'Ctrl' 'Home':
-     bg←GetElementFromBrowser'the-datagrid'
-     bt←⊃bg.Content
-     c←A.BodyValues bt
-     Assert c[0;2 3 4]≡'1,964'(,'7')'24':
+     c←GetBrowserCellValues 0
+     Assert c[0;1 2 3]≡'1,964'(,'7')'24':
      0
  }
