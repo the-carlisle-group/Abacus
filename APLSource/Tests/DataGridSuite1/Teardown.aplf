@@ -1,0 +1,5 @@
+ Teardown←{
+     _←⎕NQ Document.Client'Close'
+     _←⎕EX'Document' 'Element'
+     0
+ }

@@ -1,0 +1,17 @@
+ TestEnteringBadData←{
+     ⎕TID=0:∇&0
+     g←GetElementById'the-datagrid'
+     t←g.Table
+     ⎕THIS.Element←t
+     Press'Ctrl' 'Home':
+     Press'ArrowRight':
+     Assert t.DataCell≡0 1:
+     ov←t.DataCell⌷t.Values
+     Enter'blah blah':
+     Press'Enter':
+     Assert t.DataCell≡0 1:
+     Assert ov≡t.DataCell⌷t.Values:
+     Press'Escape':
+     Press'Escape':
+     0
+ }

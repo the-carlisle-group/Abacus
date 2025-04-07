@@ -4,6 +4,8 @@
      ⍝ Enter characters ⍵ on Element ⍺
      ⍝ Regardless of ⍺, if a modal prompt box is open,
      ⍝ then the text ⍵ is entered in the prompt box
+     ⍝ The delay is required to give time for the DataGrid to react
+     _←⎕DL 0.005
      t←⍺.Tag
      p←⍺.Document GetElementsWhere'id' 'Prompt'
      1=≢p:(⊃p)EnterOnInput ⍵

@@ -1,0 +1,10 @@
+ CSS←{
+     Rule←#.Abacus.Main.NewRule
+     s←Rule''
+     ⍝ Body
+     r←s Rule'body'
+     ⍝ r.overflow←'clip'
+     r.height←'100vh'
+     r.width←'100vw'
+     s
+ }

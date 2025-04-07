@@ -1,0 +1,5 @@
+ HasClass←{
+     ⍝ ⍺←→Element
+     ⍝ ⍵←→Class Name(s)
+     ∧/(⊆⍵)∊' '(≠⊆⊢)⍺.class
+ }

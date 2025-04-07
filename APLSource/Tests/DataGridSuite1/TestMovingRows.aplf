@@ -1,0 +1,14 @@
+ TestMovingRows←{
+     ⎕TID=0:∇&0
+     g←GetElementById'the-datagrid'
+     t←g.Table
+     ⎕THIS.Element←t
+     Press'Ctrl' 'Home':
+     Assert t.DataCell≡0 0:
+     sv←t.Values[0 1;]
+     Press'Ctrl' 'Shift' 'ArrowDown':
+     Assert sv≡t.Values[1 0;]:
+     Press'Ctrl' 'Shift' 'ArrowUp':
+     Assert sv≡t.Values[0 1;]:
+     0
+ }
