@@ -16,7 +16,6 @@
      ⍝ with the <input> element. If the cell has the widest content of the
      ⍝ column, the column width shrinks to the next widest as the <input>
      ⍝ element, even with text in it, does not force the column to stay wide enough...
-     _←⎕DL ⍵.Document.DataGridInputDelay
      t←⍵
      td←t.TableCell⌷A.BodyCells t
      _←t.LastAnchor A.RemoveProperty'anchor-name'
