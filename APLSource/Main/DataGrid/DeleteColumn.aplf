@@ -8,6 +8,5 @@
      t.Types←t.Types[j]
      t.Align←t.Align[j]
      t.SortDirection←t.SortDirection[j]
-     _←t.Document Init t
-     t Resize 0
+     t Resize 1
  }

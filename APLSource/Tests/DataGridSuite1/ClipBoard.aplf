@@ -1,0 +1,2 @@
+ z←ClipBoard
+ z←(⎕NEW⊂'ClipBoard').Array

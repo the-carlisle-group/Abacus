@@ -5,25 +5,14 @@
      g←A.DataGrid.New''
      g.id←'the-datagrid'
      t←g.Table
-     t.Write←1
-     t.RowNumbers←1
-     t.InsertRows←1
-     t.MoveRows←1
-     t.InsertColumns←1
-     t.MoveColumns←1
-     t.Values←p.Values
-     t.Names←p.Names
-     t.Types←p.Types
-     t.Align←p.Align
-     t.SortDirection←p.SortDirection           ⍝ Should default
-     t.AutoCompleteItems←p.AutoCompleteItems   ⍝ Should default
+     t.DataSource←p
+     _←Init t
      d←A.NewDocument g
      d.Caption←'Datagrid Test'
      d.LayoutStyle←CSS 0
      d.AppStyle←⍬
      d.Theme←#.Abacus.Themes.Dark 0
      _←A.NewForm d
-     _←d A.DataGrid.Init g
      _←d.Client.ShowDevTools ⍺
      d
  }

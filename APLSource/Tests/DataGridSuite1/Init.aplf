@@ -1,0 +1,18 @@
+ Init←{
+     t←⍵
+     p←t.DataSource
+     t.Write←1
+     t.RowNumbers←1
+     t.InsertRows←1
+     t.MoveRows←1
+     t.InsertColumns←1
+     t.MoveColumns←1
+     t.Values←p.Values
+     t.Names←p.Names
+     t.Types←p.Types
+     t.Align←p.Align
+     t.SortDirection←p.SortDirection           ⍝ Should default
+     t.AutoCompleteItems←p.AutoCompleteItems   ⍝ Should default
+     t.Init←0
+     0
+ }

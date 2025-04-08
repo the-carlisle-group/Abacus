@@ -13,7 +13,6 @@
      t.Types←t.Types[j]
      t.Align←t.Align[j]
      t.SortDirection←t.SortDirection[j]
-     _←t.Document Init g
-     _←g Resize 0
+     _←g Resize 1
      t Move t.DataCell+0 ⍺
  }

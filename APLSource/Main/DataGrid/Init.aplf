@@ -1,5 +1,5 @@
  Init←{
-     d g←⍺ ⍵
+     g←⍵
      t←g.Table
      t.Inverted←1=≢⍴t.Values
      t.DataSize←{t.Inverted:(≢0⊃⍵),≢⍵ ⋄ ⍴⍵}t.Values

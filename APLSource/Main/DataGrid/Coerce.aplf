@@ -3,7 +3,7 @@
      ⍝ ⍵ ←→ Source vector
      a←⊃⊆⍺
      isN←{3 5 11∊⍨80|⎕DR ⍵}
-     toN←{#.Text2Date.Main.ToNum↑⍕¨⍵}
+     toN←{1⊃vfi↑⍕¨⍵}
      isC←{0=80|⎕DR↑⍵}
      a≡'Char':{isC ⍵:⍵ ⋄ ⍕¨⍵}⍵
      a≡'Int':{isN ⍵:⌊⍵ ⋄ ⌊toN ⍵}⍵

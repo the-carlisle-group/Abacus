@@ -7,6 +7,5 @@
      e←(⊂v)∊g.Names
      e:1⊣d ##.AlertBox.Show'Column name "',v,'" already exists.'
      g.Names[c]←⊂v
-     _←d Init g
-     0⊣g Resize 0
+     0⊣g Resize 1
  }
