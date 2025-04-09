@@ -1,0 +1,11 @@
+ TestRenamingColumn←{
+     ⎕TID=0:∇&0
+     t←GetTable 0
+     Press'Ctrl' 'Home':
+     Assert'playerID'≡⊃t.Names:
+     Press'Ctrl' 'F2':
+     Enter'PID':
+     Click'OK':
+     Assert'PID'≡⊃t.Names:
+     ReInit t
+ }

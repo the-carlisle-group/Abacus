@@ -1,0 +1,3 @@
+ ReInit←{
+     0⊣⍵.Parent A.DataGrid.Resize Init ⍵
+ }

@@ -7,6 +7,6 @@
      p.Label←'Rename to:'
      p.OnOK←##.FQP'OnRenameColumnOK'
      p.Value←c⊃t.Names
-     p.DataGrid←t
+     p.DataGrid←t.Parent
      t.Document ##.PromptBox.Show p
  }

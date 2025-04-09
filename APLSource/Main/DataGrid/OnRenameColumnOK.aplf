@@ -1,11 +1,12 @@
  OnRenameColumnOK←{
      v←⍵.NewValue~' '
      v≡⍵.Value:0
-     g←⍵.DataGrid
-     c←1⊃g.DataCell
+     g←⍵.DataGrid  ⍝ SHould this be this?
+     t←g.Table
+     c←1⊃t.DataCell
      d←g.Document
-     e←(⊂v)∊g.Names
+     e←(⊂v)∊t.Names
      e:1⊣d ##.AlertBox.Show'Column name "',v,'" already exists.'
-     g.Names[c]←⊂v
+     t.Names[c]←⊂v
      0⊣g Resize 1
  }

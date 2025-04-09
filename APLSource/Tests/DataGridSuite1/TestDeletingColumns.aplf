@@ -1,0 +1,11 @@
+ TestDeletingColumns←{
+     ⎕TID=0:∇&0
+     t←GetTable 0
+     Press'Ctrl' 'Home':
+     Assert(⊃BrowserValues)≡'aardsda01':
+     Press'Ctrl' 'Shift' 'Delete':
+     Assert(⊃BrowserValues)≡'1,981':
+     ⊃Press¨6⍴⊂'Ctrl' 'Shift' 'Delete':
+     Assert(⊃BrowserValues)≡,'0':
+     ReInit t
+ }

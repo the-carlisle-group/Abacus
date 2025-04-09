@@ -1,0 +1,11 @@
+ TestDeleteRange←{
+     ⎕TID=0:∇&0
+     t←GetTable 0
+     Press'Ctrl' 'Home':
+     Press'Shift' 'ArrowDown':
+     Press'Shift' 'ArrowRight':
+     Press'Delete':
+     Assert(2 2↑BrowserValues)≡,¨2 2⍴'' '0':
+     Assert(2 2↑t.Values)≡2 2⍴'' 0:
+     ReInit t
+ }
