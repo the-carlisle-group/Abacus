@@ -5,9 +5,10 @@
      ⍝ ← ←→ Result space
      ⍺←0
      s←⊃⍵
+     _←⎕PROFILE¨'clear'('start' 'coverage')
      d←s.Start 0
      _←s InitTestSuite d
      _←WaitForApp d.Client
-     ¯1=⊃⍺:0
+     ¯1=⊃⍺:0⊣⎕PROFILE¨'stop' 'clear'
      ⍺ #.Provanto.Main.Run&⍵
  }
