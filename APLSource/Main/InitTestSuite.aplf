@@ -11,5 +11,6 @@
      _←⍺ fx1¨'Click' 'GetElementFromBrowser'
      fx2←{⍺.⎕FX,⊂⍵,'←{⎕THIS.Element←Document A.',⍵,' ⍵}'}
      _←⍺ fx2'GetElementById'
+     ⍺.At←{⍺ ⍵}
      0
  }

@@ -1,0 +1,3 @@
+ z←HorizontalScrollBar;g
+ g←Document A.GetElementById'the-datagrid'
+ z←2⊃g.Content

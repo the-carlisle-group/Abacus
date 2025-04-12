@@ -1,0 +1,10 @@
+ MouseDownAt←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ clientY ClientX
+     n←⎕NS''
+     n.(clientY clientX)←⍵
+     j←⎕JSON n
+     ⍺.Document.Waiting←1
+     _←⍺ ExecuteOnElement'dispatchEvent(new MouseEvent(''mousedown'',',j,'))'
+     0⊣⎕TGET DoneToken
+ }

@@ -1,6 +1,9 @@
  Click←{
      ⍝ ⍺ ←→ document
      ⍝ ⍵ ←→ id
+     ⍝ ⍵ ←→ Element
+     ⍝ ⍵ ←→ Element (clientY ClientX)
+     ~IsString ⍵:(0⊃⍵)MouseDownAt(1⊃⍵)
      e←⍺ GetElementById ⍵
      b←2=e.⎕NC'Onclick'
      v←b⊃'mousedown' 'click'
