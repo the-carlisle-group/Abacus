@@ -6,5 +6,11 @@
      b←(0@i)n⍴1
      t.Values←t.Inverted{⍺:b∘⌿¨⍵ ⋄ b⌿⍵}t.Values
      t.DataSize-←1 0
+     l←⊃t.WindowIndex=t.MaxWindowIndex
+     t.DataCell-←l 0
+     t.Selection←t.DataCell
+     t.WindowIndex-←l 0
+     t.MaxWindowIndex-←1 0
+     _←t.Parent ResizeScrollBars''
      Refresh t
  }

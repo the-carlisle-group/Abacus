@@ -3,9 +3,9 @@
      ~⍵.Write∧⍵.InsertRows:0
      i j←t.DataCell
      n m←t.DataSize
-     e←0,⍨n⍴1
-     t.Values←t.Inverted{⍺:e∘⍀¨⍵ ⋄ e⍀⍵}t.Values
+     r←NewRow t
+     t.Values←t.Values⍪r
      t.DataSize+←1 0
-     _←Refresh t
-     1 0 Move t
+     t.MaxWindowIndex+←1 0
+     t Move t.DataCell+1 0
  }

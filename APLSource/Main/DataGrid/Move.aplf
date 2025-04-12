@@ -4,7 +4,7 @@
      HandleInput ⍺:0
      _←ClearSelection ⍺
      tc←⍺.TableCell
-     ⍝ (⊃⍵)=⊃⍵.DataSize:AppendRow ⍵
+     (⊃⍵)=⊃⍺.DataSize:AppendRow ⍺
      ∨/(⍵<0)∨⍵≥⍺.DataSize:0
      ⍺.DataCell←⍵
      ⍺.Selection←⍵

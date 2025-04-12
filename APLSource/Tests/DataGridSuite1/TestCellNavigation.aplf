@@ -1,6 +1,7 @@
  TestCellNavigation←{
      ⎕TID=0:∇&0
      t←GetTable 0
+     _←ReInit t
      cc←'window-cell'
      m n←⍴t.Values
      Assert m n≡20081 24:
