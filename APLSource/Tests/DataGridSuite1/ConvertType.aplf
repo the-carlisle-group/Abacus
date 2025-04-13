@@ -5,7 +5,7 @@
          r←⎕NS''
          r.Type←'Date'
          r.Align←'right'
-         v f←vfi ⍵[;4 7~⍨⍳10]
+         v f←#.Abacus.Main.DataGrid.vfi ⍵[;4 7~⍨⍳10]
          r.Value←f
          r
      }
@@ -18,7 +18,7 @@
      r.Value←⍵
      r.Type←'Char'
      r.Align←'left'
-     v f←vfi ⍵
+     v f←#.Abacus.Main.DataGrid.vfi ⍵
      ~∧/v:r
      r.Value←f
      r.Type←'Int'

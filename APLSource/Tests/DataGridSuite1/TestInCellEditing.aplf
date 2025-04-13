@@ -1,0 +1,10 @@
+ TestInCellEditing←{
+     ⎕TID=0:∇&0
+     t←GetTable 0
+     Press'Ctrl' 'Home':
+     Press'F2':
+     Enter'One':
+     Press'Enter':
+     Assert t.Values[0;0]≡⊂'aardsda01One':
+     0
+ }

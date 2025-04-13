@@ -14,5 +14,5 @@
      t.SortDirection←p.SortDirection           ⍝ Should default
      t.AutoCompleteItems←p.AutoCompleteItems   ⍝ Should default
      t.Init←0
-     0
+     t
  }

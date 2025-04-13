@@ -7,5 +7,5 @@
      Press'Delete':
      Assert(2 2↑BrowserValues)≡,¨2 2⍴'' '0':
      Assert(2 2↑t.Values)≡2 2⍴'' 0:
-     ReInit t
+     0
  }

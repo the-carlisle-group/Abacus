@@ -1,7 +1,6 @@
  TestCutAndPaste←{
      ⎕TID=0:∇&0
-     t←GetTable 0
-     _←ReInit t
+     t←ReInit 0
      Press'Ctrl' 'Home':
      Press'Shift' 'ArrowDown':
      Press'Shift' 'ArrowRight':

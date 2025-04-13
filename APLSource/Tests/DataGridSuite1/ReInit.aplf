@@ -1,3 +1,8 @@
  ReInit←{
-     0⊣⍵.Parent A.DataGrid.Resize Init ⍵
+     ⍝ ⍺ ←→ Number of rows in grid
+     ⍝ ← ←→ <table>
+     t←Init GetTable 0
+     ⍺←≢t.Values
+     t.Values←⍺↑t.Values
+     t⊣t.Parent A.DataGrid.Resize 0
  }

@@ -1,7 +1,7 @@
  WaitForApp←{
      ⍝ ⍵ ←→ HTMLRenderer Form
      ⍝ Give time for OnWebSocketUpgrade, etc., to fire
-     ⍺←500
+     ⍺←2000
      ⍵.on999←1
      _←'tmT'⍵.⎕WC'Timer'⍺('FireOnce' 1)
      onT←{⎕NQ((⊃⍵).##)999}
