@@ -1,8 +1,8 @@
  MouseDownAt←{
      ⍝ ⍺ ←→ Element
-     ⍝ ⍵ ←→ clientY ClientX
+     ⍝ ⍵ ←→ clientY ClientX offsetY offSetX
      n←⎕NS''
-     n.(clientY clientX)←⍵
+     n.(clientY clientX offsetY offSetX)←4↑∊⍵
      j←⎕JSON n
      ⍺.Document.Waiting←1
      _←⍺ ExecuteOnElement'dispatchEvent(new MouseEvent(''mousedown'',',j,'))'
