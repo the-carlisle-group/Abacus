@@ -43,8 +43,10 @@
      (⊂p)∊'Ctrlx' 'CtrlX':t Cut 0
      (⊂p)∊'Ctrlv' 'CtrlV':t Paste 0
      p≡'Delete':t Delete 0
-     p≡'F2':StartEditMode t
+     p≡'F2':⍵ StartEditMode t
+     p≡'AltArrowDown':⍵ StartEditMode t
      m=1:0
+     k≡,' ':ToggleCheckBox t
      (1=≢k)∧(⊃k)∊⎕D,(⊣,⎕C)⎕A:k StartEnterMode t
      p≡'CtrlInsert':InsertRow t                    ⍝ Broken!
      p≡'F9':InsertRow t

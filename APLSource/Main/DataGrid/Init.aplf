@@ -2,6 +2,7 @@
      g←⍵
      t←g.Table
      t.Inverted←1=≢⍴t.Values
+     n←≢t.Names
      t.DataSize←{t.Inverted:(≢0⊃⍵),≢⍵ ⋄ ⍴⍵}t.Values
      t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ∊⌈⌿⍴¨⍵}t.Values
      t.Widths←t ComputeWidths 0
@@ -15,8 +16,9 @@
      t.Selection←t.DataCell
      t.TableCell←t.WindowCell+0,t.ColumnOffset
      t.HeaderStyles←ComputeHeaderStyles t
-     t.HeaderClass←'sorted-down' '' 'sorted-up'[(t.RowNumbers/1),1+t.SortDirection]
-     t.ColumnClass←(t.RowNumbers/⊂'row-number'),'' 'r'[t.Align∊⊂'right']
+     t.HeaderClass←'sorted-down' '' 'sorted-up'[(t.RowNumbers/1),1+n⍴t.SortDirection]
+     t.ColumnClass←ComputeColumnClass t
+     t.AutoCompleteItems←n↑t.AutoCompleteItems,n⍴⊂''
      t.FMT←'FMT_'∘,¨t.Types
      t.VFI←'VFI_'∘,¨t.Types
      t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight

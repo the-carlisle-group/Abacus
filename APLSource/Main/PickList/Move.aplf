@@ -1,0 +1,8 @@
+ Move←{
+     ⍝ ⍺ ←→ Menu
+     ⍝ ⍵ ←→ Direction
+     c←⍺.Content
+     f←c.class∊⊂'sel-item'
+     k←⍵{(⍸⍵),⍸⍺⌽⍵}f
+     c[k]A.MoveClass'sel-item'
+ }

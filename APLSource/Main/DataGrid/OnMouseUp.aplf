@@ -1,5 +1,4 @@
  OnMouseUp←{
-     ⍝ ⎕←'Mouse up!'
      t←⍵.CurrentTarget
      t.SelectInProgress←0
      0

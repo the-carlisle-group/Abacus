@@ -1,0 +1,10 @@
+ SelectIt←{
+     ⍝ ⍵ ←→ Event Message
+     p←⍵.CurrentTarget
+     i←p.Content.class⍳⊂'sel-item'
+     p.Value←i⊃p.Items
+     f←(⍎p.OnSelect)⍵
+     _←##.DeleteElement p
+     _←p.Context.Target A.RemoveProperty'anchor-name'
+     A.SetFocus p.Context.Target
+ }

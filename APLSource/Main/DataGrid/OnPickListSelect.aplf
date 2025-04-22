@@ -1,0 +1,10 @@
+ OnPickListSelect←{
+     ⍝ ⍵ ←→ Event message from PickList
+     p←⍵.CurrentTarget
+     t←p.Context.CurrentTarget
+     td←p.Context.Target
+     _←t SetValue p.Value
+     _←td A.SetInnerHTML p.Value
+     t.Changed←1
+     0
+ }

@@ -1,0 +1,10 @@
+ ShowPickList←{
+     t←⍵
+     p←##.PickList.New''
+     p.Context←⍺
+     p.Items←(1⊃t.DataCell)⊃t.AutoCompleteItems
+     p.Value←⊃t.TableCell⌷t.OptiTable.Body.Values
+     p.OnSelect←##.FQP'OnPickListSelect'
+     p.Multi←0
+     p ##.PickList.Show''
+ }

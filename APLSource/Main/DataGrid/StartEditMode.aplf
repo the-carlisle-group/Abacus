@@ -1,10 +1,14 @@
  StartEditMode←{
-     ⍝ ⍺ ←→ Starting text
-     ⍝ ⍵ ←→ <td> element
+     ⍝ ⍺ ←→ Event Message
+     ⍝ ⍵ ←→ <table> element
+     ⍺←0
      t←⍵
+     ct←(1⊃t.DataCell)⊃t.Types
+     ct≡'CheckBox':ToggleCheckBox t
+     ct≡'Select':⍺ ShowPickList t
      m←t.CellMode
      t.CellMode←2
      m=1:0
-     i←CreateInputField ⍵
+     i←CreateInputField t
      0
  }

@@ -1,0 +1,11 @@
+ New←{
+     ⎕THIS.A←##
+     c←A.New'ul'
+     c.class←'pick-list'
+     c.popover←'auto'
+     c.tabindex←0
+     c.Onkeydown←A.FQP'OnKeyDown'
+     c.Onclick←A.FQP'SelectIt'
+     c.Onmouseover←A.FQP'OnMouseOver'
+     c
+ }

@@ -1,0 +1,21 @@
+ OnMouseDown←{
+     e←⍵.Target
+     t←⍵.CurrentTarget
+     ~(⊂e.Tag)∊'td' 'th':0
+     HandleInput t:0
+     e.Selected∧⍵.MouseButton=2:0
+     _←ClearSelection t
+     e.Tag≡'th':OnClickHeaderCell ⍵
+     t.SelectInProgress←1
+     c←t.BodyCells
+     i←e.Index
+     i≡t.TableCell:0
+     t.TableCell←i
+     t.WindowCell←t.TableCell-0,t.ColumnOffset
+     t.DataCell←t.WindowCell+t.WindowIndex
+     t.Selection←t.DataCell
+     ⍝ Need to go back to no refresh here, just change current cell
+     ⍝ and all properties, otherwise we kill mouse click event firing....
+     ⍝ As we have overwritten the inner html
+     Refresh t
+ }

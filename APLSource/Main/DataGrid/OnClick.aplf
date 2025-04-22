@@ -1,19 +1,9 @@
  OnClick←{
-     ⍝ OnMouseDown really
      e←⍵.Target
      t←⍵.CurrentTarget
-     HandleInput t:0
-     e.Selected∧⍵.MouseButton=2:0
-     _←ClearSelection t
-     e.Tag≡'th':OnClickHeaderCell ⍵
-     t.SelectInProgress←1
-     t←⍵.CurrentTarget
-     c←t.BodyCells
-     i←e.Index
-     i≡t.TableCell:0
-     t.TableCell←i
-     t.WindowCell←t.TableCell-0,t.ColumnOffset
-     t.DataCell←t.WindowCell+t.WindowIndex
-     t.Selection←t.DataCell
-     Refresh t
+     r c←t.DataCell
+     ct←c⊃t.Types
+     ct≡'Select':ShowPickList ⍵
+     ct≡'CheckBox':ToggleCheckBox t
+     0
  }

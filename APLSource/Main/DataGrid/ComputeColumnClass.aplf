@@ -1,0 +1,13 @@
+ ComputeColumnClass←{
+     ⍝ r Row Number
+     ⍝ n Numeric
+     ⍝ d Date
+     ⍝ c Char
+     ⍝ b CheckBox
+     ⍝ s Select
+     ⍝ m MultiSelect
+     ⍝ v Varchar (todo)
+     ⍝ o Object  (todo)
+     t←⍵
+     (t.RowNumbers/'r'),'cdbsmn'['Char' 'Date' 'CheckBox' 'Select' 'MultiSelect'⍳t.Types]
+ }
