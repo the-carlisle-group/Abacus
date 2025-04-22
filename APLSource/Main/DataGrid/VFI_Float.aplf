@@ -1,0 +1,5 @@
+ VFI_Float←{
+     b v←vfi↑,⊂⍵
+     (b≡,1)∧645≥⎕DR v:0(⊃v)''
+     1 0 'Invalid entry; not a Float'
+ }

@@ -16,9 +16,9 @@
      v,←⊂n⍴'Onions' 'Spinach',n⍴⊂''
      v,←⊂n⍴'One' 'Two' 'Three' 'Four' 'Five' 'Six' 'Seven' 'Eight' 'Nine'
      v,←⊂⍳n
-     v,←⊂10÷⍨⍳n
-     v,←⊂100÷⍨⍳n
-     v,←⊂1000÷⍨⍳n
+     v,←⊂10×⍳n
+     v,←⊂100×⍳n
+     v,←⊂1000×⍳n
      v,←⊂3÷⍨⍳n
      v,←⊂n⍴20251201+⍳31
      t.Values←⍉↑v

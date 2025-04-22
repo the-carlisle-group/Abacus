@@ -1,4 +1,5 @@
  TestScrollBars←{
+     4
      ⎕TID=0:∇&0
      t←100 ReInit 0
      Press'Ctrl' 'Home':
