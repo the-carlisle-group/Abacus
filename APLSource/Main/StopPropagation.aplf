@@ -1,5 +1,0 @@
- StopPropagation←{
-     d←⍵.Document
-     d.StopPropagation←1
-     0
- }

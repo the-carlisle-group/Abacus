@@ -7,13 +7,14 @@
      t.MoveRows←1
      t.InsertColumns←1
      t.MoveColumns←1
-     t.Names←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date'
-     t.Types←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Int' 'Dec1' 'Dec2' 'Dec3' 'Float' 'Date'
-     t.Align←'center' 'left' 'left' 'left' 'right' 'right' 'right' 'right' 'right' 'right'  ⍝ We don't need this any more!
+     t.Names←'CheckBox' 'Select' 'MultiSelect' 'AutoComplete' 'Char' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date'
+     t.Types←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Char' 'Int' 'Dec1' 'Dec2' 'Dec3' 'Float' 'Date'
+     t.Align←'center' 'left' 'left' 'left' 'left' 'right' 'right' 'right' 'right' 'right' 'right'  ⍝ We don't need this any more!
      n←100
      v←⊂n⍴1 0 0
      v,←⊂n⍴'Alabama' '' 'Alabama' 'New York' '' 'California'
      v,←⊂n⍴'Onions' 'Spinach',n⍴⊂''
+     v,←⊂n⍴(⊂'This is a really long string'),n⍴⊂''
      v,←⊂n⍴'One' 'Two' 'Three' 'Four' 'Five' 'Six' 'Seven' 'Eight' 'Nine'
      v,←⊂⍳n
      v,←⊂10×⍳n
@@ -26,6 +27,7 @@
      t.AutoCompleteItems←9⍴⊂''
      t.AutoCompleteItems[1]←⊂'Alabama' 'New Jersey' 'New Hamshire' 'New York' 'California' 'Nevada'
      t.AutoCompleteItems[2]←⊂'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach'
+     t.AutoCompleteItems[3]←⊂'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach' 'toDate' 'toChar' 'toNumeric'
      t.Init←0
      _←t.Parent A.DataGrid.Resize 0
      0

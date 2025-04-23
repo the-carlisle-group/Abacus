@@ -1,5 +1,6 @@
  OnKeyDown←{
      t←⍵.CurrentTarget
+     t.IgnoreNextKey:t.IgnoreNextKey←0
      t.AutoCompleteActive:0
      m←t.CellMode
      k←⍵.Key

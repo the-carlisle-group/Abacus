@@ -7,6 +7,7 @@
      fmt←⍎(1⊃t.DataCell)⊃t.FMT
      fv←⊃fmt pv
      _←t SetValue pv
+     t.OptiTable.Body.Values[⊂t.TableCell]←⊂fv
      e←i A.GetNearest'td'
      _←i A.RemoveAttribute'onblur'
      _←e A.SetInnerHTML fv

@@ -88,15 +88,9 @@
      r.border←'none'
      r.position←'absolute'
      r.width←'100%'
-     ⍝ Select
-     r←s Rule'input'
-     r.box_sizing←'border-box'
-     r.padding←CellPadding
-     r.font_family←'APL385 Unicode'
-     r.font_size←px d.tdFontSize
-     r.border←'none'
-     r.position←'absolute'
-     r.width←'100%'
+     r.height←'100%'
+     r.top←0
+     r.left←0
      ⍝ *******************************
      r←s Rule'.c'
      r.text_align←'left'
@@ -126,29 +120,9 @@
      r.padding←0
      r.font_size←'24px'
      r.background_image←GetCheckBoxBackground''
-     ⍝ r.outline←'1px solid black'
-     ⍝ r.outline_offset←'-5px'
-
-     ⍝ r.box_shadow←'inset 5px 5px 10px rgba(0, 0, 0, 0.3), inset -5px -5px 10px rgba(0, 0, 0, 0.3)'
-
-     ⍝ r.background_image←'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgZmlsbD0iYmx1ZSIvPjwvc3ZnPg==")'
-     ⍝ r.background_image←'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0Y1RjVGNSIvPjwvc3ZnPg==")'
      r.background_size←'auto 80%'
      r.background_repeat←'no-repeat'
      r.background_position←'center'
-     ⍝ *******************************
-     ⍝r←s Rule'.b::before'
-⍝     r.display←'block'
-⍝     r.content←'""'
-⍝     r.min_width←'50%'
-⍝     r.max_width←'50%'
-⍝     r.min_height←'90%'
-⍝     r.border_radius←'5px'
-⍝     r.background_color←'lightgray'
-⍝     r.position←'absolute'
-⍝     r.z_index←'-1'
-⍝     r.margin←'auto'
-⍝     ⍝ r.background←'transparent'
      ⍝ *********************************
      r←s Rule'.r'
      r.border←0

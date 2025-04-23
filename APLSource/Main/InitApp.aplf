@@ -7,7 +7,6 @@
      d.Style←CollectCSS d
      d.NextId←0
      d.Waiting←0
-     d.StopPropagation←0
      b←GetBody d
      t←ToolTip.New''
      a←AutoComplete.New''

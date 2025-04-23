@@ -39,6 +39,7 @@
      e←A.New'div'
      e.id←'grid-error'  ⍝ CSS
      c←i,e              ⍝ New Content
+
      _←td A.SetInnerHTML c
      _←td A.AddClass'in-cell'
      n←⍕≢⍺
