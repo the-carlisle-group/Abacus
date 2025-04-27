@@ -55,6 +55,16 @@
      r.max_height←r.min_height
      r.height←r.min_height
      r.overflow←'hidden'
+     ⍝ *******************************
+     r←s Rule'.hcl'
+     r.text_align←'left'
+     ⍝ *******************************
+     r←s Rule'.hcr'
+     r.text_align←'right'
+
+
+
+
      ⍝ ***************************
      r←s Rule'td'
      r.white_space←'nowrap'

@@ -3,7 +3,14 @@
      d←GetDimensions 0                     ⍝ Get dimensions
      ⍝ 12 and 2 here are trial and error
      ⍝ Need to make precise computation!
-     hh←12+d.tdFontSize+2×d.thPaddingTop
-     rh←2+d.thFontSize+2×d.tdPaddingTop
+
+     ⍝ WTF, was backwards!
+     ⍝ hh←12+d.tdFontSize+2×d.thPaddingTop
+     ⍝ rh←2+d.thFontSize+2×d.tdPaddingTop
+
+     hh←12+d.thFontSize+2×d.thPaddingTop
+     rh←2+d.tdFontSize+2×d.tdPaddingTop
+
+
      ⌊rh÷⍨h-hh
  }

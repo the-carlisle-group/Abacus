@@ -10,7 +10,6 @@
      t.Values←p.Values
      t.Names←p.Names
      t.Types←p.Types
-     t.Align←p.Align
      t.SortDirection←p.SortDirection           ⍝ Should default
      t.AutoCompleteItems←p.AutoCompleteItems   ⍝ Should default
      t.Init←0

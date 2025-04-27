@@ -4,6 +4,7 @@
      vfi←⍎(1⊃t.DataCell)⊃t.VFI
      b pv em←t vfi i.value
      b:i ShowDataEntryError em
+     ⍝ t FireCellChange:1
      fmt←⍎(1⊃t.DataCell)⊃t.FMT
      fv←⊃fmt pv
      _←t SetValue pv

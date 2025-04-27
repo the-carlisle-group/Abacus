@@ -16,7 +16,7 @@
      t.Selection←t.DataCell
      t.TableCell←t.WindowCell+0,t.ColumnOffset
      t.HeaderStyles←ComputeHeaderStyles t
-     t.HeaderClass←'sorted-down' '' 'sorted-up'[(t.RowNumbers/1),1+n⍴t.SortDirection]
+     t.HeaderClass←ComputeHeaderClass t
      t.ColumnClass←ComputeColumnClass t
      t.AutoCompleteItems←n↑t.AutoCompleteItems,n⍴⊂''
      t.FMT←'FMT_'∘,¨t.Types

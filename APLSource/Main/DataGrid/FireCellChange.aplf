@@ -1,0 +1,6 @@
+ FireCellChange←{
+
+
+     t.⎕NC'OnCellChange':
+     t
+ }
