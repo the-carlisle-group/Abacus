@@ -4,7 +4,7 @@
      h←,A.HeaderCells t
      i←h⍳e
      i=1⊃t.TableCell:0
-     c←A.BodyCells t
+     c←t.BodyCells
      lc←t.TableCell⌷c
      j←i,⍨0⊃t.TableCell
      nc←j⌷c

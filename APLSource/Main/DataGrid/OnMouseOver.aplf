@@ -3,7 +3,7 @@
      ~t.SelectInProgress:0
      c←⍵.Target
      c.Tag≢'td':0
-     i←⊃⍸c=A.BodyCells t
+     i←⊃⍸c=t.BodyCells
      d←t TableCell2DataCell i
      cr←(i[1]=t.ColumnOffset)∧(t.WindowIndex[1]≠0)∧(i[1]>t.DataCell[1])        ⍝ Crossing right
      cl←(i[1]=t.ColumnOffset-1)∧(t.WindowIndex[1]≠0)∧(i[1]<t.DataCell[1])      ⍝ On Border crossing left

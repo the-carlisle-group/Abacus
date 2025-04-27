@@ -1,7 +1,7 @@
  HandleInput←{
      t←⍵
      t.CellMode=0:0
-     c←A.BodyCells t
+     c←t.BodyCells
      td←t.TableCell⌷c
      i←td ##.GetElementById'grid-input'
      ProcessInput i  ⍝

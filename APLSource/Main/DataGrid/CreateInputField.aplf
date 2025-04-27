@@ -17,7 +17,7 @@
      ⍝ column, the column width shrinks to the next widest as the <input>
      ⍝ element, even with text in it, does not force the column to stay wide enough...
      t←⍵
-     td←t.TableCell⌷A.BodyCells t
+     td←t.TableCell⌷t.BodyCells
      _←t.LastAnchor A.RemoveProperty'anchor-name'
      _←td A.SetAnchorName'--input-cell'
      t.LastAnchor←td
