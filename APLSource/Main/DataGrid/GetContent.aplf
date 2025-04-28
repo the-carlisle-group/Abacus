@@ -1,7 +1,6 @@
  GetContent←{
      t←⍺
-     p←0⌈10⌊⍺.DataSize-⍺.WindowIndex+⍺.WindowSize
-     i j←⍺.WindowIndex+⍳¨⍺.WindowSize+p
+     i j←t.WindowIndex+⍳¨(t.WindowSize+t.WindowPadding)⌊t.DataSize-t.WindowIndex
      k←(⍳⍺.FreezeColumns),j
      q←(⍺.RowNumbers/0),k+⍺.RowNumbers
      v←⍺ GetValues i k

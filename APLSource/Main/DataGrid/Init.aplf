@@ -22,6 +22,7 @@
      t.FMT←'FMT_'∘,¨t.Types
      t.VFI←'VFI_'∘,¨t.Types
      t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight
+     t.WindowPadding←3 5
      t.Init←1
      0
  }

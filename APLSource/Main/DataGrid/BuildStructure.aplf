@@ -1,10 +1,7 @@
  BuildStructure←{
-     ⍝ CLEAN THIS UP!
      t←⍵
      d←t.Document
-     r←3+t.RowsToDisplay
-     c←5+⌈/t.ColumnsPerIndex
-     t.WindowOversize←r c
+     (r c)←t.WindowPadding+t.RowsToDisplay(⌈/t.ColumnsPerIndex)
      t.Content←{⍵.Content}A.NewTable(r c⍴⊂'')(c⍴⊂'')
      bc←##.BodyCells t
      bc.Selected←0
