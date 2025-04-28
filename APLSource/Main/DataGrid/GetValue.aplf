@@ -1,0 +1,4 @@
+ GetValue←{
+     ⍺.Inverted:(0⊃⍵)⌷(1⊃⍵)⊃⍺.Values
+     ⊃⍵⌷⍺.Values
+ }

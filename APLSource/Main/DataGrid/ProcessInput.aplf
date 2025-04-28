@@ -4,16 +4,23 @@
      vfi←⍎(1⊃t.DataCell)⊃t.VFI
      b pv em←t vfi i.value
      b:i ShowDataEntryError em
-     ⍝ t FireCellChange:1
+     e←⎕NS''
+     e.Event←'BeforeCellChange'
+     e.CellIndex←t.DataCell
+     e.OldValue←t GetValue t.DataCell
+     e.NewValue←pv
+     t Fire e:1
      fmt←⍎(1⊃t.DataCell)⊃t.FMT
-     fv←⊃fmt pv
-     _←t SetValue pv
+     fv←⊃fmt e.NewValue
+     _←t SetValue e.NewValue
      t.OptiTable.Body.Values[⊂t.TableCell]←⊂fv
-     e←i A.GetNearest'td'
+     c←i A.GetNearest'td'
      _←i A.RemoveAttribute'onblur'
-     _←e A.SetInnerHTML fv
-     _←e A.RemoveClass'in-cell'
+     _←c A.SetInnerHTML fv
+     _←c A.RemoveClass'in-cell'
      t.CellMode←0
      t.Changed←1
+     e.Event←'CellChange'
+     _←t Fire e
      0
  }

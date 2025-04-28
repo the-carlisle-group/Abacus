@@ -1,0 +1,4 @@
+ OnCellChange←{
+     ⎕←'On CellChange:',⎕JSON ⍵
+     0
+ }

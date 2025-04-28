@@ -1,0 +1,5 @@
+ OnBeforeCellChange←{
+     ⎕←'On BeforeCellChange:',⎕JSON ⍵
+     ⍵.NewValue←⌽⍵.NewValue
+     0
+ }
