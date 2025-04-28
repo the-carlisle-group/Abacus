@@ -14,6 +14,7 @@
      t.AutoCompleteItems←p.AutoCompleteItems   ⍝ Should default
      t.OnBeforeCellChange←A.FQP'OnBeforeCellChange'
      t.OnCellChange←A.FQP'OnCellChange'
+     t.OnCellMove←A.FQP'OnCellMove'
      t.Init←0
      t
  }

@@ -6,13 +6,18 @@
      tc←⍺.TableCell
      (⊃⍵)=⊃⍺.DataSize:AppendRow ⍺
      ∨/(⍵<0)∨⍵≥⍺.DataSize:0
+     e←⎕NS''
+     e.Event←'CellMove'
+     e.OldCellIndex←⍺.DataCell
+     e.NewCellIndex←⍵
      ⍺.DataCell←⍵
      ⍺.Selection←⍵
-     ⍵ AdjustWindow ⍺:Refresh ⍺
+     ⍵ AdjustWindow ⍺:e Refresh ⍺
      bc←⍺.BodyCells
      lc←tc⌷bc
      nc←⍺.TableCell⌷bc
      _←lc nc A.MoveClass'window-cell'
      _←nc A.FireEvent'focus'
+     _←⍺ Fire e
      0
  }

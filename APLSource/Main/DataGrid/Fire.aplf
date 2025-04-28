@@ -1,4 +1,5 @@
  Fire←{
+     ⍵=0:0
      n←'On',⍵.Event
      0=⍺.⎕NC n:0
      f←⍺⍎n

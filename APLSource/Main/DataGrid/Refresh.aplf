@@ -1,4 +1,7 @@
  Refresh←{
+     ⍝ ⍺ ←→ Optional Event To Fire
+     ⍺←0
+     e←⍺
      t←⍵
      o←t GetContent''
      h←##.RenderOptiTable o
@@ -7,5 +10,6 @@
      t.TableCell≡¯1 ¯1:t A.FireEvent'focus'
      bc←t.BodyCells
      c←t.TableCell⌷bc
-     c A.FireEvent'focus'
+     _←c A.FireEvent'focus'
+     t Fire e
  }

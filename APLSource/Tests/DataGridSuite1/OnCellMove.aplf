@@ -1,0 +1,4 @@
+ OnCellMove←{
+     ⎕←'On CellMove: ',⎕JSON ⍵
+     0
+ }
