@@ -1,7 +1,6 @@
  DynamicCSS←{
      t←⍵
      Rule←##.NewRule
-     d←GetDimensions 0
      px←{'px',⍨⍕⍵}
      ⍝ ************************
      s←Rule'.data-grid'

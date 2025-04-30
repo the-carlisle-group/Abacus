@@ -1,5 +1,5 @@
  ComputeWidths←{
      t←⍺
      c←(t.RowNumbers/2),12⌈{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
-     c×(GetDimensions 0).tdFontSize
+     c×t.FontSize
  }
