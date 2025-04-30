@@ -2,5 +2,9 @@
      ⍵.Tag≢'html':0
      0=⍵.⎕NC'Style':0
      h←⍵ GetElementByTag'head'
-     h New'style'
+     s←h New'style'
+     s.id←'main-style'
+     s←h New'style'
+     s.id←'data-grid-style'
+     0
  }

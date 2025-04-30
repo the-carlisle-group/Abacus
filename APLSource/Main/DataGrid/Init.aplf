@@ -3,11 +3,18 @@
      t←g.Table
      t.Inverted←1=≢⍴t.Values
      n←≢t.Names
+     ⍝ d←GetDimensions 0
+     ⍝ Clean this mess up!!
+     t.HeaderHeight←2.5×t.FontSize ⍝ d.thFontSize
+     t.RowHeight←2×t.FontSize
+     se←g.Document ##.GetElementById'data-grid-style'
+     se.Document←g.Document
+     _←se ##.SetProperty'textContent'((##.ComposeRules DynamicCSS t)~⎕UCS 13)
+     ⍝ This should work: 'data-grid-style' A.SetProperty   ....
+     ⍝ ↑↑↑↑↑
      t.DataSize←{t.Inverted:(≢0⊃⍵),≢⍵ ⋄ ⍴⍵}t.Values
-     t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ∊⌈⌿⍴¨⍵}t.Values
+     t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
      t.Widths←t ComputeWidths 0
-     t.FullWidths←t ComputeFullWidths t.Widths
-     t.RowHeight←ComputeRowHeight t     ⍝ ComputeRowsToDisplay_old Resize
      t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Names
      t.ColumnOffset←t.RowNumbers+t.FreezeColumns
      t.WindowCell←t{2=⍺.⎕NC'WindowCell':⍺.WindowCell ⋄ ⍵}0,-t.FreezeColumns

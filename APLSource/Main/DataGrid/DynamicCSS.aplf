@@ -1,0 +1,28 @@
+ DynamicCSS←{
+     t←⍵
+     Rule←##.NewRule
+     d←GetDimensions 0
+     px←{'px',⍨⍕⍵}
+     ⍝ ************************
+     s←Rule'.data-grid'
+     ⍝ ************************
+     r←s Rule'thead'
+     r.font_family←'Tahoma'
+     r.font_size←px t.FontSize ⍝ d.thFontSize
+     ⍝ ********************
+     r←s Rule'thead>tr'
+     r.height←px 2.5×t.FontSize ⍝ d.thFontSize ⍝  2 rows +.25 padding top and bottom
+     ⍝ *********************************
+     r←s Rule'tbody'
+     r.font_family←'APL385 Unicode'
+     r.font_size←px t.FontSize ⍝ d.tdFontSize
+     ⍝ *****************************
+     r←s Rule'tbody>tr'
+     r.height←px 2×t.FontSize ⍝ d.tdFontSize ⍝  +.25 padding top and bottom
+     ⍝ *************************************
+     r←s Rule'tbody input'
+     r.font_family←'APL385 Unicode'
+     r.font_size←px t.FontSize
+     ⍝ ***************************
+     {1↓⍵.Rules}##.UnNestCSS s
+ }

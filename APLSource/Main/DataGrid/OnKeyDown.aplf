@@ -39,6 +39,9 @@
      p≡'ShiftPageUp':SelectPageUp                  ⍝ TODO
      p≡'ShiftPageDown':SelectPageDown              ⍝ TODO
      p≡'F6':t FreezeColumns 0
+     p≡'F5':t.Parent Resize 1
+     p≡'Ctrl+':t.Parent Resize 1⊣t.FontSize+←2
+     p≡'Ctrl-':t.Parent Resize 1⊣t.FontSize-←2
      (⊂p)∊'Ctrlc' 'CtrlC':t Copy 0
      ~t.Write:0
      (⊂p)∊'Ctrlx' 'CtrlX':t Cut 0

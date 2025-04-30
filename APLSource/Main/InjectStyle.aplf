@@ -2,8 +2,8 @@
      e←Elements ⍺
      s←∊{6::⍬ ⋄ ⍵.Style}¨e
      0=≢s:⍵
-     i←1⍳⍨'<style></style>'⍷⍵
-     j←i+7
+     i←1⍳⍨'<style id="main-style"></style>'⍷⍵
+     j←i+23
      p←4⍴' '
      nl←⎕UCS 13
      v←ComposeRules s

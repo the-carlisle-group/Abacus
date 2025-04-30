@@ -1,9 +1,7 @@
  CSS←{
      Rule←##.NewRule
-     d←GetDimensions 0
-     px←{'px',⍨⍕⍵}
-     CellPadding←1↓∊' ',¨px¨d.tdPaddingTop d.tdPaddingLeft
-     Border←'solid .5px gray'
+     Padding←'.25em .5em'
+     Border←'solid 1px gray'
      ⍝ ************************
      s←Rule'.data-grid'
      s.display←'grid'
@@ -31,8 +29,6 @@
      r←s Rule'.data-grid-corner'
      r.background_color←'yellow'
      r.position←'relative'
-     ⍝ r.width←'100%'
-     ⍝ r.height←'100%'
      ⍝ *************************
      r←s Rule'table'
      r.border_collapse←'collapse'
@@ -42,18 +38,14 @@
      r.width←'fit-content'
      r.height←'fit-content'
      ⍝ ********************
-     r←s Rule'thead>tr'
-     r.height←px(2×d.thLineHeight)+d.thPaddingTop+d.thPaddingBottom
+     r←s Rule'tbody>tr'
+     r.box_sizing←'border-box'
      ⍝ ************************
      r←s Rule'th'
-     r.padding←CellPadding
+     r.padding←Padding
+     r.box_sizing←'border-box'
      r.border←Border
-     r.font_family←'Tahoma'
-     r.font_size←px d.thFontSize
-     r.font_weight←'normal'
-     r.min_height←px d.thLineHeight+d.thPaddingTop+d.thPaddingBottom
-     r.max_height←r.min_height
-     r.height←r.min_height
+     r.font_weight←'normal' ⍝ Odd this need to be here and not in DynamicCSS
      r.overflow←'hidden'
      ⍝ *******************************
      r←s Rule'.hcl'
@@ -61,25 +53,17 @@
      ⍝ *******************************
      r←s Rule'.hcr'
      r.text_align←'right'
-
-
-
-
      ⍝ ***************************
      r←s Rule'td'
      r.white_space←'nowrap'
      r.overflow←'hidden'
-     r.padding←CellPadding
+     r.padding←Padding
      r.border←Border
      r.box_sizing←'border-box'
      r.position←'relative'
      ⍝ *****************************
      r←s Rule'td:focus'
      r.outline←'none'
-     ⍝ *********************************
-     r←s Rule'tbody'
-     r.font_family←'APL385 Unicode'
-     r.font_size←px d.tdFontSize
      ⍝ *********************************
      r←s Rule'.window-cell'
      r.background_color←'orange'
@@ -92,9 +76,7 @@
      ⍝ *********************************
      r←s Rule'input'
      r.box_sizing←'border-box'
-     r.padding←CellPadding
-     r.font_family←'APL385 Unicode'
-     r.font_size←px d.tdFontSize
+     r.padding←Padding
      r.border←'none'
      r.position←'absolute'
      r.width←'100%'
@@ -119,8 +101,6 @@
      ⍝  **********************
      r←s Rule'.s.window-cell::after'
      r.content←'"∨"'
-     ⍝ r.font_size←'24px'
-     ⍝ r.color←'darkgray'
      r.position←'absolute'
      r.right←'5px'
      ⍝ *******************************

@@ -1,5 +1,0 @@
- ComputeFullWidths←{
-     t←⍺
-     d←GetDimensions 0
-     ⍵+d.tdBorderWidth+2×d.tdPaddingLeft
- }

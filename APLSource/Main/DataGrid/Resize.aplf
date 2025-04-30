@@ -6,13 +6,13 @@
      _←Init⍣(⍵∨~t.Init)⊣g
      p←t.Parent
      0=p.⎕NC'Width':0
-     t.AvailableWidth←p.Width-+/t.ColumnOffset↑t.FullWidths
-     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.RowNumbers↓t.FullWidths
+     t.AvailableWidth←p.Width-+/t.ColumnOffset↑t.Widths
+     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.RowNumbers↓t.Widths
      0∊t.ColumnsPerIndex:0
      t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
-     t.RowsToDisplay←p.Height ComputeRowsToDisplay 0
+     t.RowsToDisplay←⌊t.RowHeight÷⍨p.Height-t.HeaderHeight
      t.WindowSize←t.RowsToDisplay,(1⊃t.WindowIndex)⊃t.ColumnsPerIndex
-     t.DataWidth←+/t.FullWidths
+     t.DataWidth←+/t.Widths
      t.DataHeight←t.RowHeight×⊃t.DataSize
      t.MaxWindowIndex←t.DataSize-t.WindowSize[0],1++/∧\2</⌽t.ColumnsPerIndex
      ∨/t.WindowSize<1:0
