@@ -6,7 +6,7 @@
      t.Values←⍬ j Index t
      t.Names←t.Names[j]
      t.Types←t.Types[j]
-     t.Align←t.Align[j]
      t.SortDirection←t.SortDirection[j]
+     t.Changed←1
      t.Parent Resize 1
  }

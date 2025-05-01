@@ -7,8 +7,6 @@
      t.RowNumbers←0
      t.FreezeColumns←0
      t.InsertRows←0
-     t.MoveRows←0
-     t.MoveColumns←0
      t.InsertColumns←0
      t.tabindex←0
      t.CellMode←0   ⍝ 0←→ReadyMode, 1←→EnterMode, 2←→EditMode

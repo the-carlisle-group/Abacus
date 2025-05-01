@@ -1,0 +1,6 @@
+ SetDynamicCSS←{
+     t←⍵
+     d←t.Document
+     s←(##.ComposeRules DynamicCSS t)~⎕UCS 13
+     d'data-grid-style'A.SetProperty'textContent's
+ }

@@ -1,5 +1,6 @@
  RenameColumn←{
      t←⍵
+     HandleInput t:0
      ~t.InsertColumns:0
      c←1⊃t.DataCell
      p←⎕NS''

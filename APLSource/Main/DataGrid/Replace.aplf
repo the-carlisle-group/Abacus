@@ -1,0 +1,18 @@
+ Replace←{
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ Matrix, Upper left corner index
+     t←⍺
+     m i←⍵
+     r c←i+⍳¨⍴m
+     e←⎕NS''
+     e.Event←'BeforeCellChange'
+     e.CellIndex←i
+     e.OldValue←r c IndexValues t
+     e.NewValue←m
+     t Fire e:1
+     t.Values[r;c]←e.NewValue
+     t.Changed←1
+     _←Refresh t
+     e.Event←'CellChange'
+     t Fire e
+ }

@@ -2,7 +2,6 @@
      t←⍺
      s←{(⌊/⍵),⌈/⍵}t.DataCell t.Selection
      r c←(0⊃s)+⍳¨1+⊃-/⌽s
-     v←(≢r)⌿⍉⍪(NewRow t)[c]
-     t.Values[r;c]←v
-     Refresh t
+     m←(≢r)⌿⍉⍪(NewRow t)[c]
+     t Replace m(0⊃s)
  }

@@ -1,0 +1,6 @@
+ EventList←{
+     e←⊂'CellChange'
+     e,←⊂'BeforeCellChange'
+     e,←⊂'CellMove'
+     e
+ }

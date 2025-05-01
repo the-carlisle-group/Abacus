@@ -1,5 +1,6 @@
  TestAllDataTypes←{
    ⍝ ⎕TID=0:∇&0
+     3
      t←GetTable 0
      t.Write←1
      t.RowNumbers←1

@@ -8,5 +8,6 @@
      t.Values←t.Inverted{⍺:e∘⍀¨⍵ ⋄ e⍀⍵}t.Values
      t.Values[i;]←NewRow t
      t.DataSize+←1 0
+     t.Changed←1
      Refresh t
  }

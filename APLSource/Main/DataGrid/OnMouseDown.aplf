@@ -10,12 +10,11 @@
      c←t.BodyCells
      i←e.Index
      i≡t.TableCell:0
+     lc←t.TableCell⌷c
      t.TableCell←i
      t.WindowCell←t.TableCell-0,t.ColumnOffset
      t.DataCell←t.WindowCell+t.WindowIndex
      t.Selection←t.DataCell
-     ⍝ Need to go back to no refresh here, just change current cell
-     ⍝ and all properties, otherwise we kill mouse click event firing....
-     ⍝ As we have overwritten the inner html
-     Refresh t
+     _←lc e A.MoveClass'window-cell'
+     e A.FireEvent'focus'
  }

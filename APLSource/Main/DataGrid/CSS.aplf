@@ -1,6 +1,7 @@
  CSS←{
      Rule←##.NewRule
-     Padding←'.25em .5em'
+     ⍝ Padding←'.25em .5em'
+     Padding←'0 .5em'
      Border←'solid 1px gray'
      ⍝ ************************
      s←Rule'.data-grid'
@@ -78,11 +79,8 @@
      r.box_sizing←'border-box'
      r.padding←Padding
      r.border←'none'
-     r.position←'absolute'
      r.width←'100%'
      r.height←'100%'
-     r.top←0
-     r.left←0
      ⍝ *******************************
      r←s Rule'.c'
      r.text_align←'left'
