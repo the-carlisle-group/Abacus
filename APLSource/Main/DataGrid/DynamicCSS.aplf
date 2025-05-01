@@ -3,7 +3,7 @@
      Rule←##.NewRule
      px←{'px',⍨⍕⍵}
      ⍝ ************************
-     s←Rule'.data-grid'
+     s←Rule''
      ⍝ ************************
      r←s Rule'thead'
      r.font_family←'Tahoma'
@@ -23,5 +23,5 @@
      r.font_family←'APL385 Unicode'
      r.font_size←px t.FontSize
      ⍝ ***************************
-     {1↓⍵.Rules}##.UnNestCSS s
+     s
  }

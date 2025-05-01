@@ -4,7 +4,5 @@
      h←⍵ GetElementByTag'head'
      s←h New'style'
      s.id←'main-style'
-     s←h New'style'
-     s.id←'data-grid-style'
      0
  }

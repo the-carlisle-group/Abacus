@@ -2,6 +2,8 @@
      ⍝ ⍺ ←→ Parent
      ⍝ ⍵ ←→ Element
      ⍵=0:0
+     r←⍺ GetElementsWhere'id'⍵.id
+     1=≢r:⊃r ⍝ Already Exists
      ⍝ _←⍺ ExecuteOnElement'appendChild(document.createElement("',⍵.Tag,'"))'
      j←'(()=>{ const el = document.createElement("',⍵.Tag,'");'
      j,←'el.id ="',⍵.id,'";'
@@ -11,5 +13,5 @@
      ⍵.Parent←⍺
      ⍺.Content,←⍵
      ⍵.Document←⍺.Document
-     ⍵ SetOuterHTML ⍵
+     ⍵⊣⍵ SetOuterHTML ⍵
  }

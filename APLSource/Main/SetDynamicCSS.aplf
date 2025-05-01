@@ -1,0 +1,13 @@
+ SetDynamicCSS←{
+     ⍝ ⍺ ←→ Component Instance
+     ⍝ ⍵ ←→ CSS
+     d←⍺.Document
+     h←⊃d.Content
+     s←New'style'
+     s.id←⍺.id,'-style'
+     s←h AppendChild s
+     ⍵.Selector←'#',⍺.id
+     u←{1↓⍵.Rules}UnNestCSS ⍵
+     v←(ComposeRules u)~⎕UCS 13
+     s SetProperty'textContent'v
+ }
