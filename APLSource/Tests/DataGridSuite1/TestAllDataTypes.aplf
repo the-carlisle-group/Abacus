@@ -2,15 +2,18 @@
    ⍝ ⎕TID=0:∇&0
      3
      t←GetTable 0
-     t.Write←1
      t.RowNumbers←1
      t.InsertRows←1
-     t.MoveRows←1
      t.InsertColumns←1
-     t.MoveColumns←1
-     t.Names←'CheckBox' 'Select' 'MultiSelect' 'AutoComplete' 'Char' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date'
-     t.Types←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Char' 'Int' 'Dec1' 'Dec2' 'Dec3' 'Float' 'Date'
-     t.Align←'center' 'left' 'left' 'left' 'left' 'right' 'right' 'right' 'right' 'right' 'right'  ⍝ We don't need this any more!
+     c←⎕NS¨11⍴⊂''
+     t.Columns←c
+     c.Name←'CheckBox' 'Select' 'MultiSelect' 'AutoComplete' 'Char' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date'
+     c.Type←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Char' 'Int' 'Dec1' 'Dec2' 'Dec3' 'Float' 'Date'
+     (1⊃c).Options←A'labama' 'New Jersey' 'New Hamshire' 'New York' 'California' 'Nevada'
+     (2⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach'
+     (3⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach' 'toDate' 'toChar' 'toNumeric'
+
+
      n←100
      v←⊂n⍴1 0 0
      v,←⊂n⍴'Alabama' '' 'Alabama' 'New York' '' 'California'
@@ -24,11 +27,7 @@
      v,←⊂3÷⍨⍳n
      v,←⊂n⍴20251201+⍳31
      t.Values←⍉↑v
-     t.SortDirection←0
-     t.AutoCompleteItems←9⍴⊂''
-     t.AutoCompleteItems[1]←⊂'Alabama' 'New Jersey' 'New Hamshire' 'New York' 'California' 'Nevada'
-     t.AutoCompleteItems[2]←⊂'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach'
-     t.AutoCompleteItems[3]←⊂'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach' 'toDate' 'toChar' 'toNumeric'
+
      t.Init←0
      _←t.Parent A.DataGrid.Resize 0
      0

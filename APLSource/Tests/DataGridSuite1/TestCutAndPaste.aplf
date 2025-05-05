@@ -5,11 +5,11 @@
      Press'Shift' 'ArrowDown':
      Press'Shift' 'ArrowRight':
      Press'Ctrl' 'X':
-     Assert ClipBoard≡2 2⍴'aardsda01' '1,981' 'aaronha01' '1,934':
+     Assert ClipBoard≡2 2⍴'aardsda01' '1981' 'aaronha01' '1934':
      Press'ArrowDown':
      Press'ArrowDown':
      Press'Ctrl' 'V':
      Assert(2 2↑2↓t.Values)≡2 2⍴'aardsda01' 1981 'aaronha01' 1934:
-     Assert(2 2↑2↓BrowserValues)≡2 2⍴'aardsda01' '1,981' 'aaronha01' '1,934':
+     Assert(2 2↑2↓BrowserValues)≡2 2⍴'aardsda01' '1981' 'aaronha01' '1934':
      0
  }

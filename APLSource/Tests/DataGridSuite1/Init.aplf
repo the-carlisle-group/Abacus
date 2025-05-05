@@ -1,17 +1,11 @@
  Init←{
      t←⍵
      p←t.DataSource
-     t.Write←1
      t.RowNumbers←1
      t.InsertRows←1
-     t.MoveRows←1
      t.InsertColumns←1
-     t.MoveColumns←1
      t.Values←p.Values
-     t.Names←p.Names
-     t.Types←p.Types
-     t.SortDirection←p.SortDirection           ⍝ Should default
-     t.AutoCompleteItems←p.AutoCompleteItems   ⍝ Should default
+     t.Columns←p.Columns
      t.OnBeforeCellChange←A.FQP'OnBeforeCellChange'
      t.OnCellChange←A.FQP'OnCellChange'
      t.OnCellMove←A.FQP'OnCellMove'

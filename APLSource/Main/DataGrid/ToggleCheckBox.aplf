@@ -1,7 +1,7 @@
  ToggleCheckBox←{
      t←⍵
      r c←t.DataCell
-     'CheckBox'≢c⊃t.Types:0
+     'CheckBox'≢c⊃t.Columns.Type:0
      t.Values[r;c]←~t.Values[r;c]
      1⊣Refresh t   ⍝ Don't really need to do all this.
  }

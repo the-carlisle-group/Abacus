@@ -1,4 +1,4 @@
  NewRow←{
      t←⍵
-     '' 0 0['Char' 'Int'⍳t.Types]
+     '' 0 0['Char' 'Int'⍳t.Columns.Type]
  }

@@ -10,19 +10,23 @@
      p←ConvertType¨v
      c←≢n
      t←⎕NS''
-     t.Names←n
      t.Values←⍉↑{2=⍴⍴⍵:A.ntbs ⍵ ⋄ ⍵}¨p.Value
-     ⍝ t.Values←p.Value
-     t.Types←p.Type
-     t.Align←p.Align
-     t.SortDirection←c⍴0
-     t.AutoCompleteItems←c⍴⊂''
+     cc←⎕NS¨c⍴⊂''
+     t.Columns←cc
+     cc.Name←n
+     cc.Type←p.Type
+     cc.Options←⊂''
      ~∨/n∊⊂'birthCity':t
+
+     j←n⍳⊂'birthYear'
+     (j⊃cc).FormatString←'LI4'
+     (j⊃cc).ValidateFunction←'{((⍵≥1800)∧⍵≤2100) ⍵ ''birthYear must be between 1800 and 2100''}'
+
      j←n⍳⊂'birthCity'
-     t.AutoCompleteItems[j]←⊂∪t.Values[;j]
+     (j⊃cc).Options←∪t.Values[;j]
      j←n⍳⊂'birthCountry'
-     t.AutoCompleteItems[j]←⊂∪t.Values[;j]
+     (j⊃cc).Options←∪t.Values[;j]
      j←n⍳⊂'birthState'
-     t.AutoCompleteItems[j]←⊂∪t.Values[;j]
+     (j⊃cc).Options←∪t.Values[;j]
      t
  }

@@ -33,7 +33,7 @@
      i.Oninput←A.FQP'OnInput'
      i.Onblur←A.FQP'OnInputBlur'
      ai←⎕NS''
-     ai.AutoCompleteItems←(1⊃t.DataCell)⊃t.AutoCompleteItems
+     ai.AutoCompleteItems←(1⊃t.DataCell)⊃t.Columns.Options
      i.Document←⍵.Document
      _←i ##.AutoComplete.Init ai
      e←A.New'div'

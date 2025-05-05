@@ -1,0 +1,6 @@
+ FormatColumn←{
+     ⍝ ⍺ ←→ Column Schema Space
+     ⍝ ⍵ ←→ Column Values
+     f←⍎⍺.FormatFunction
+     ⍺ f↑⍵
+ }

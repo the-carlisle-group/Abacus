@@ -1,6 +1,7 @@
  AppendRow←{
      t←⍵
-     ~⍵.Write∧⍵.InsertRows:0
+     t.ReadOnly:0
+     ~t.InsertRows:0
      i j←t.DataCell
      n m←t.DataSize
      r←NewRow t

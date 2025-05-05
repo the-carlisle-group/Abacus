@@ -4,7 +4,7 @@
      Press'Ctrl' 'Home':
      Assert(⊃BrowserValues)≡'aardsda01':
      Press'Ctrl' 'Shift' 'Delete':
-     Assert(⊃BrowserValues)≡'1,981':
+     Assert(⊃BrowserValues)≡'1981':
      ⊃Press¨6⍴⊂'Ctrl' 'Shift' 'Delete':
      Assert(⊃BrowserValues)≡,'0':
      0

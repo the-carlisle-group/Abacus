@@ -1,6 +1,6 @@
  ComputeHeaderClass←{
      t←⍵
-     n←≢t.Names
-     c←'hc'∘,¨(t.RowNumbers/'r'),'lrcllr'['Char' 'Date' 'CheckBox' 'Select' 'MultiSelect'⍳t.Types]
-     c,¨' sorted-down' '' ' sorted-up'[(t.RowNumbers/1),1+n⍴t.SortDirection]
+     n←≢t.Columns
+     c←'hc'∘,¨(t.RowNumbers/'r'),'lrcllr'['Char' 'Date' 'CheckBox' 'Select' 'MultiSelect'⍳t.Columns.Type]
+     c,¨' sorted-down' '' ' sorted-up'[(t.RowNumbers/1),1+n⍴t.Columns.SortDirection]
  }

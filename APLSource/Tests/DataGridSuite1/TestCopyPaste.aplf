@@ -6,12 +6,12 @@
      Press'Shift' 'ArrowUp':
      Press'Shift' 'ArrowRight':
      Press'Ctrl' 'C':
-     Assert ClipBoard≡2 2⍴'zwilldu01' '1,888' 'zychto01' '1,990':
+     Assert ClipBoard≡2 2⍴'zwilldu01' '1888' 'zychto01' '1990':
      Press'ArrowUp':
      Press'ArrowUp':
      Press'ArrowUp':
      Press'Ctrl' 'V':
      Assert(t.Values⌷⍨t.DataCell+⍳¨2 2)≡2 2⍴'zwilldu01' 1888 'zychto01' 1990:
-     Assert(2↑¯4 2↑BrowserValues)≡2 2⍴'zwilldu01' '1,888' 'zychto01' '1,990':
+     Assert(2↑¯4 2↑BrowserValues)≡2 2⍴'zwilldu01' '1888' 'zychto01' '1990':
      0
  }

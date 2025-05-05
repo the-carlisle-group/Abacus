@@ -43,7 +43,7 @@
      p≡'Ctrl+':t.Parent Resize 1⊣t.FontSize←32⌊t.FontSize+2
      p≡'Ctrl-':t.Parent Resize 1⊣t.FontSize←8⌈t.FontSize-2
      (⊂p)∊'Ctrlc' 'CtrlC':t Copy 0
-     ~t.Write:0
+     t.ReadOnly:0
      (⊂p)∊'Ctrlx' 'CtrlX':t Cut 0
      (⊂p)∊'Ctrlv' 'CtrlV':t Paste 0
      p≡'Delete':t Delete 0

@@ -1,0 +1,5 @@
+ FMT_Num←{
+     s←⍺.FormatString
+     0=≢s:ntbs⍕⍪⍵
+     ntbs s ⎕FMT ⍵
+ }

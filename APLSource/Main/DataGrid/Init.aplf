@@ -2,14 +2,15 @@
      g←⍵
      t←g.Table
      t.Inverted←1=≢⍴t.Values
-     n←≢t.Names
+     t.Columns←DefaultColumnProperties t
+     n←≢t.Columns
      t.HeaderHeight←4×t.FontSize
      t.RowHeight←2×t.FontSize
      _←g ##.SetDynamicCSS DynamicCSS t
      t.DataSize←{t.Inverted:(≢0⊃⍵),≢⍵ ⋄ ⍴⍵}t.Values
      t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
      t.Widths←t ComputeWidths 0
-     t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Names
+     t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Columns.Name
      t.ColumnOffset←t.RowNumbers+t.FreezeColumns
      t.WindowCell←t{2=⍺.⎕NC'WindowCell':⍺.WindowCell ⋄ ⍵}0,-t.FreezeColumns
      t.WindowIndex←t{2=⍺.⎕NC'WindowIndex':⍺.WindowIndex ⋄ ⍵}0,t.FreezeColumns
@@ -19,9 +20,8 @@
      t.HeaderStyles←ComputeHeaderStyles t
      t.HeaderClass←ComputeHeaderClass t
      t.ColumnClass←ComputeColumnClass t
-     t.AutoCompleteItems←n↑t.AutoCompleteItems,n⍴⊂''
-     t.FMT←'FMT_'∘,¨t.Types
-     t.VFI←'VFI_'∘,¨t.Types
+     t.FMT←'FMT_'∘,¨t.Columns.Type
+     t.VFI←'VFI_'∘,¨t.Columns.Type
      t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight
      t.WindowPadding←3 5
      t.Init←1

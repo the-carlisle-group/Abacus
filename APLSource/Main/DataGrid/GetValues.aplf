@@ -2,7 +2,8 @@
      ⍺.Inverted:⍺ GetValuesInverted ⍵
      i k←⍵
      v←i k⌷⍺.Values
-     v←⍉↑⍺.FMT[k]{(⍎⍺)↑⍵}¨↓⍉v
+     v←⍉↑⍺.Columns[k]FormatColumn¨↓⍉v
+     ⍝ v←⍉↑⍺.FMT[k]{(⍎⍺)↑⍵}¨↓⍉v
      ~⍺.RowNumbers:v
      v,⍨ntbs'LCI15'⎕FMT i+1
  }

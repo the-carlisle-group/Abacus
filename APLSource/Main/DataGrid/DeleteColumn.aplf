@@ -4,9 +4,7 @@
      c←1⊃t.DataCell
      j←c~⍨⍳1⊃t.DataSize
      t.Values←⍬ j Index t
-     t.Names←t.Names[j]
-     t.Types←t.Types[j]
-     t.SortDirection←t.SortDirection[j]
+     t.Columns←t.Columns[j]
      t.Changed←1
      t.Parent Resize 1
  }

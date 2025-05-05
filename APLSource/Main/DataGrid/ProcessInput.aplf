@@ -1,17 +1,24 @@
  ProcessInput←{
      i←⍵
      t←i A.GetNearest'table'
-     vfi←⍎(1⊃t.DataCell)⊃t.VFI
-     b pv em←t vfi i.value
-     b:i ShowDataEntryError em
+     ⍝ vfi←⍎(1⊃t.DataCell)⊃t.VFI
+     ⍝ b pv em←t vfi i.value
+     ⍝ b:i ShowDataEntryError em
+     s←(1⊃t.DataCell)⊃t.Columns
+     pfn←⍎s.ParseFunction
+     b pv em←s pfn i.value
+     ~b:i ShowDataEntryError em
+     vfn←⍎s.ValidateFunction
+     b pv em←s vfn pv
+     ~b:i ShowDataEntryError em
      e←⎕NS''
      e.Event←'BeforeCellChange'
      e.CellIndex←t.DataCell
      e.OldValue←t GetValue t.DataCell
      e.NewValue←pv
      t Fire e:1
-     fmt←⍎(1⊃t.DataCell)⊃t.FMT
-     fv←⊃fmt e.NewValue
+     fmt←⍎s.FormatFunction
+     fv←⊃s fmt e.NewValue
      _←t SetValue e.NewValue
      t.OptiTable.Body.Values[⊂t.TableCell]←⊂fv
      c←i A.GetNearest'td'

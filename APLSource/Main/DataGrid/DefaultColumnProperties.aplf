@@ -1,0 +1,14 @@
+ DefaultColumnProperties←{
+     t←⍵
+     m←ColumnTypeInfo 0
+     c←t.Columns
+     i←m[;0]⍳c.Type
+     n←≢c
+     d←⎕NS¨n⍴⊂''
+     d.Type d.Class d.Justify d.FormatFunction d.FormatString d.ParseFunction d.ValidateFunction←↓⍉m[i;]
+     d.SortDirection←0
+     d.Options←⊂''
+     d.Inverted←t.Inverted
+     _←d{q←⍺ ⋄ 'q'⎕NS ⍵}¨c ⍝ Simplify in v20 to:  d ⎕NS¨c
+     d
+ }

@@ -5,14 +5,12 @@
      g←t.Parent
      c←1⊃t.DataCell
      (⍺=¯1)∧c=0:0
-     (⍺=1)∧c=¯1+≢t.Names:0
+     (⍺=1)∧c=¯1+≢t.Columns:0
      i←c,c+⍺
      j←⍳1⊃t.DataSize
      j[i]←⌽i
      t.Values←⍬ j Index t
-     t.Names←t.Names[j]
-     t.Types←t.Types[j]
-     t.SortDirection←t.SortDirection[j]
+     t.Columns←t.Columns[j]
      _←g Resize 1
      t Move t.DataCell+0 ⍺
  }

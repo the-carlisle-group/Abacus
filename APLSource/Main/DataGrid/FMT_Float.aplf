@@ -1,3 +1,4 @@
  FMT_Float←{
-     ntbs⍕⍪⍵
+     0=≢⍺.FormatString:ntbs⍕⍪⍵
+     ntbs('L',⍺.FormatString)⎕FMT ⍵
  }

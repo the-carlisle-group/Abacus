@@ -9,5 +9,7 @@
      ⍝ v Varchar (todo)
      ⍝ o Object  (todo)
      t←⍵
-     (t.RowNumbers/'r'),'cdbsmn'['Char' 'Date' 'CheckBox' 'Select' 'MultiSelect'⍳t.Types]
+     m←ColumnTypeInfo 0
+     c←m[m[;0]⍳t.Columns.Type;1]
+     (t.RowNumbers/'r'),c
  }

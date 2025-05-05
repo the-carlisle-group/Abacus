@@ -1,5 +1,5 @@
  VFI_Int←{
      b v←vfi↑,⊂⍵
-     (b≡,1)∧323≥⎕DR v:0(⊃v)''
-     1 0 'Invalid entry; not an integer'
+     (b≡,1)∧323≥⎕DR v:1(⊃v)''
+     0 0 'Invalid entry; not an integer'
  }
