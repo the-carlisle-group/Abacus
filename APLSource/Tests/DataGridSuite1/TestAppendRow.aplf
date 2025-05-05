@@ -1,6 +1,6 @@
  TestAppendRow←{
      ⎕TID=0:∇&0
-     t←GetTable 0
+     t←ReInit 0
      Assert 20081 24≡⍴t.Values:
      Press'Ctrl' 'Home':
      Press'Ctrl' 'ArrowDown':

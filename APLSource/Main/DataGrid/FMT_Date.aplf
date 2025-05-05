@@ -1,3 +1,0 @@
- FMT_Date←{
-     ntbs'BG<9999/99/99>'⎕FMT ⍵
- }

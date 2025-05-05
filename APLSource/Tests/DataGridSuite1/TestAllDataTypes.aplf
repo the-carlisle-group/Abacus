@@ -1,18 +1,17 @@
  TestAllDataTypes←{
    ⍝ ⎕TID=0:∇&0
-     3
      t←GetTable 0
      t.RowNumbers←1
      t.InsertRows←1
      t.InsertColumns←1
-     c←⎕NS¨11⍴⊂''
+     c←⎕NS¨12⍴⊂''
      t.Columns←c
-     c.Name←'CheckBox' 'Select' 'MultiSelect' 'AutoComplete' 'Char' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date'
-     c.Type←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Char' 'Int' 'Dec1' 'Dec2' 'Dec3' 'Float' 'Date'
-     (1⊃c).Options←A'labama' 'New Jersey' 'New Hamshire' 'New York' 'California' 'Nevada'
+     c.Name←'CheckBox' 'Select' 'MultiSelect' 'AutoComplete' 'Char' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date' 'FormattedFloat'
+     c.Type←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Char' 'Int' 'Dec1' 'Dec2' 'Dec3' 'Float' 'Date' 'Float'
+     (1⊃c).Options←'Alabama' 'New Jersey' 'New Hamshire' 'New York' 'California' 'Nevada'
      (2⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach'
      (3⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach' 'toDate' 'toChar' 'toNumeric'
-
+     (⊃⌽c).FormatString←'F20.2'
 
      n←100
      v←⊂n⍴1 0 0
@@ -26,6 +25,7 @@
      v,←⊂1000×⍳n
      v,←⊂3÷⍨⍳n
      v,←⊂n⍴20251201+⍳31
+     v,←⊂3÷⍨⍳n
      t.Values←⍉↑v
 
      t.Init←0
