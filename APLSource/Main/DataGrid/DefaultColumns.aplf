@@ -1,0 +1,10 @@
+ DefaultColumns←{
+     t←⍵
+     2=t.⎕NC'Columns':0
+     n←⊃⌽⍴⍵.Values
+     c←⎕NS¨n⍴⊂''
+     c.Name←n↑⊃,/,¨∘.,\3⍴⊂,¨⎕A
+     c.Type←InferColumnType¨↓⍉⍵.Values
+     t.Columns←c
+     0
+ }

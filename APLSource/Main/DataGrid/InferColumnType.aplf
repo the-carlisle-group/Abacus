@@ -1,0 +1,7 @@
+ InferColumnType←{
+     2=≡⍵:'Char'
+     d←80|⎕DR ⍵
+     d=0:'Char'
+     d=3:'Int'
+     'Float'
+ }

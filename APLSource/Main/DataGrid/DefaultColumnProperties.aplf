@@ -1,5 +1,6 @@
  DefaultColumnProperties←{
      t←⍵
+     _←DefaultColumns t
      m←ColumnTypeInfo 0
      c←t.Columns
      i←m[;0]⍳c.Type
