@@ -49,10 +49,13 @@
      r.font_weight←'normal' ⍝ Odd this need to be here and not in DynamicCSS
      r.overflow←'hidden'
      ⍝ *******************************
-     r←s Rule'.hcl'
+     r←s Rule'.al'
      r.text_align←'left'
      ⍝ *******************************
-     r←s Rule'.hcr'
+     r←s Rule'.ac'
+     r.text_align←'center'
+     ⍝ *******************************
+     r←s Rule'.ar'
      r.text_align←'right'
      ⍝ ***************************
      r←s Rule'td'
@@ -82,28 +85,28 @@
      r.width←'100%'
      r.height←'100%'
      ⍝ *******************************
-     r←s Rule'.c'
-     r.text_align←'left'
-     ⍝ *******************************
-     r←s Rule'.n'
-     r.text_align←'right'
-     ⍝ *******************************
-     r←s Rule'.d'
-     r.text_align←'right'
-     ⍝ *******************************
-     r←s Rule'.s'
-     r.text_align←'left'
-     ⍝ *******************************
-     r←s Rule'.m'
-     r.text_align←'left'
+    ⍝ r←s Rule'.c'
+⍝     r.text_align←'left'
+⍝     ⍝ *******************************
+⍝     r←s Rule'.n'
+⍝     r.text_align←'right'
+⍝     ⍝ *******************************
+⍝     r←s Rule'.d'
+⍝     r.text_align←'right'
+⍝     ⍝ *******************************
+⍝     r←s Rule'.s'
+⍝     r.text_align←'left'
+⍝     ⍝ *******************************
+⍝     r←s Rule'.m'
+⍝     r.text_align←'left'
      ⍝  **********************
      r←s Rule'.s.window-cell::after'
      r.content←'"∨"'
      r.position←'absolute'
-     r.right←'5px'
+     r.top←'.25em'
+     r.right←'.25em'
      ⍝ *******************************
      r←s Rule'.b'
-     r.text_align←'center'
      r.font_family←'Arial'
      r.padding←0
      r.font_size←'24px'
@@ -114,7 +117,6 @@
      ⍝ *********************************
      r←s Rule'.r'
      r.border←0
-     r.text_align←'center'
      r.font_family←'Arial Narrow'
      r.color←'darkgray'
      ⍝ *********************************
@@ -131,7 +133,9 @@
      r←s Rule'.more-to-left::before'
      r.content←'"<"'
      r.color←'gray'
+     r.vertical_align←'middle'
      r.position←'absolute'
+     r.top←'.25em'
      r.left←0
      ⍝ *******************************
      r←s Rule'.highlight1'

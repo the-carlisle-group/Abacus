@@ -20,7 +20,7 @@
 
      j←n⍳⊂'birthYear'
      (j⊃cc).FormatString←'LI4'
-     (j⊃cc).ValidateFunction←'{((⍵≥1800)∧⍵≤2100) ⍵ ''birthYear must be between 1800 and 2100''}'
+     (j⊃cc).OnValidate←'{((⍵≥1800)∧⍵≤2100) ⍵ ''birthYear must be between 1800 and 2100''}'
 
      j←n⍳⊂'birthCity'
      (j⊃cc).Options←∪t.Values[;j]

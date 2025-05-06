@@ -1,3 +1,4 @@
  FMT_Char←{
-     ntbs ⍵
+     ⍺.Inverted:ntbs ⍵
+     ⍵
  }

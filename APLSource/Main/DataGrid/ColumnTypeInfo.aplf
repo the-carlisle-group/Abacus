@@ -1,5 +1,5 @@
  ColumnTypeInfo←{
-     ⍝ Type, 'class, Justify, FormatFunction, FormatString, ParseFunction, ValidateFunction
+     ⍝ Type, 'class, Align, OnFormat, FormatString, OnParse, OnValidate
      p←⊂'Char' 'c' 'l' 'FMT_Char' '' 'VFI_Char' 'Validate'
      p,←⊂'Date' 'd' 'r' 'FMT_Num' 'BG<9999/99/99>' 'VFI_Date' 'Validate'
      p,←⊂'CheckBox' 'b' 'c' 'FMT_CheckBox' '' '' 'Validate'

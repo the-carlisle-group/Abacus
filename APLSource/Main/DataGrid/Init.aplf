@@ -19,9 +19,7 @@
      t.TableCell←t.WindowCell+0,t.ColumnOffset
      t.HeaderStyles←ComputeHeaderStyles t
      t.HeaderClass←ComputeHeaderClass t
-     t.ColumnClass←ComputeColumnClass t
-     t.FMT←'FMT_'∘,¨t.Columns.Type
-     t.VFI←'VFI_'∘,¨t.Columns.Type
+     t.ColumnClass←((t.RowNumbers/'r'),t.Columns.Class),¨' ',¨'a',¨(t.RowNumbers/'r'),t.Columns.Align
      t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight
      t.WindowPadding←3 5
      t.Init←1
