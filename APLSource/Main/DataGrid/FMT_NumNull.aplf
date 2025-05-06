@@ -1,0 +1,9 @@
+ FMT_NumNull←{
+     v←⍵
+     i←⍸⍵∊⊂⍺.Null
+     v[i]←0
+     s←⍺.FormatString
+     f←ntbs{0=≢s:⍕⍪⍵ ⋄ s ⎕FMT ⍵}v
+     f[i]←⊂''
+     f
+ }

@@ -1,0 +1,6 @@
+ OnParseRGB←{
+     b v←⎕VFI ⍵
+     0=≢b:1 v''
+     (v≡⌊v)∧(b≡3⍴1)∧∧/(v≥0)∧v≤255:1 v''
+     0 0 'Value must be 3 integers from 0 to 255.'
+ }

@@ -1,4 +1,5 @@
  VFI_Int←{
+     0=≢⍵:1 ⍺.Null''
      b v←vfi↑,⊂⍵
      (b≡,1)∧323≥⎕DR v:1(⊃v)''
      0 0 'Invalid entry; not an integer'

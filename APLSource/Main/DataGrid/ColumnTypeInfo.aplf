@@ -1,14 +1,14 @@
  ColumnTypeInfo←{
-     ⍝ Type, 'class, Align, OnFormat, FormatString, OnParse, OnValidate
-     p←⊂'Char' 'c' 'l' 'FMT_Char' '' 'VFI_Char' 'Validate'
-     p,←⊂'Date' 'd' 'r' 'FMT_Num' 'BG<9999/99/99>' 'VFI_Date' 'Validate'
-     p,←⊂'CheckBox' 'b' 'c' 'FMT_CheckBox' '' '' 'Validate'
-     p,←⊂'Select' 's' 'l' 'FMT_Char' '' '' 'Validate'
-     p,←⊂'MultiSelect' 'm' 'l' 'FMT_Char' '' '' 'Validate'
-     p,←⊂'Int' 'n' 'r' 'FMT_Num' 'LCI20' 'VFI_Int' 'Validate'
-     p,←⊂'Float' 'n' 'r' 'FMT_Num' '' 'VFI_Float' 'Validate'
-     p,←⊂'Dec1' 'n' 'r' 'FMT_Num' 'LK¯1CF20.1' 'VFI_Dec1' 'Validate'
-     p,←⊂'Dec2' 'n' 'r' 'FMT_Num' 'LK¯2CF20.2' 'VFI_Dec2' 'Validate'
-     p,←⊂'Dec3' 'n' 't' 'FMT_Num' 'LK¯3CF20.3' 'VFI_Dec3' 'Validate'
+     ⍝ Type, 'class, Align, OnFormat, FormatString, OnParse, OnValidate, Default, Null
+     p←⊂'Char' 'c' 'l' 'FMT_Char' '' 'VFI_Char' 'Validate' '' ''
+     p,←⊂'Date' 'd' 'r' 'FMT_Num' 'BG<9999/99/99>' 'VFI_Date' 'Validate' 0 0
+     p,←⊂'CheckBox' 'b' 'c' 'FMT_CheckBox' '' '' 'Validate' 0 0
+     p,←⊂'Select' 's' 'l' 'FMT_Char' '' '' 'Validate' '' ''
+     p,←⊂'MultiSelect' 'm' 'l' 'FMT_Char' '' '' 'Validate' '' ''
+     p,←⊂'Int' 'n' 'r' 'FMT_Num' 'LCI20' 'VFI_Int' 'Validate' 0 0
+     p,←⊂'Float' 'n' 'r' 'FMT_Num' '' 'VFI_Float' 'Validate' 0 0
+     p,←⊂'Dec1' 'n' 'r' 'FMT_Num' 'LK¯1CF20.1' 'VFI_Dec1' 'Validate' 0 0
+     p,←⊂'Dec2' 'n' 'r' 'FMT_Num' 'LK¯2CF20.2' 'VFI_Dec2' 'Validate' 0 0
+     p,←⊂'Dec3' 'n' 't' 'FMT_Num' 'LK¯3CF20.3' 'VFI_Dec3' 'Validate' 0 0
      ↑p
  }

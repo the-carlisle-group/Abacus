@@ -4,7 +4,7 @@
      ~t.InsertRows:0
      i j←t.DataCell
      n m←t.DataSize
-     r←NewRow t
+     r←t.Columns.Default
      t.Values←t.Values⍪r
      t.DataSize+←1 0
      t.MaxWindowIndex+←1 0

@@ -1,4 +1,5 @@
  FMT_Num←{
+     326=⎕DR ⍵:⍺ FMT_NumNull ⍵
      s←⍺.FormatString
      0=≢s:ntbs⍕⍪⍵
      ntbs s ⎕FMT ⍵

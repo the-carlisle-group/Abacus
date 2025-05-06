@@ -1,0 +1,3 @@
+ OnFormatRGB←{
+     {1↓,' ','ZI3'⎕FMT ⍵}¨⍵
+ }

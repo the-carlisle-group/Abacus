@@ -5,7 +5,7 @@
      i←m[;0]⍳c.Type
      n←≢c
      d←⎕NS¨n⍴⊂''
-     d.Type d.Class d.Align d.OnFormat d.FormatString d.OnParse d.OnValidate←↓⍉(m⍪⊂'')[i;]
+     d.Type d.Class d.Align d.OnFormat d.FormatString d.OnParse d.OnValidate d.Default d.Null←↓⍉(m⍪⊂'')[i;]
      d.SortDirection←0
      d.Options←⊂''
      d.Inverted←t.Inverted
