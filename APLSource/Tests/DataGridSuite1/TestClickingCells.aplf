@@ -1,0 +1,11 @@
+ TestClickingCells←{
+     3
+     ⎕TID=0:∇&0
+     t←GetTable 0
+     c←A.BodyCells t
+     id←c[2;2].id
+     Click id:0
+
+
+
+ }

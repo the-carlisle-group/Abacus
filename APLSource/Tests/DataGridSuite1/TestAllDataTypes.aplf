@@ -1,55 +1,7 @@
  TestAllDataTypes←{
-   ⍝ ⎕TID=0:∇&0
-     t←GetTable 0
-     t.RowNumbers←1
-     t.InsertRows←1
-     t.InsertColumns←1
-     c←⎕NS¨14⍴⊂''
-     t.Columns←c
-     c.Name←'CheckBox' 'Select' 'MultiSelect' 'AutoComplete' 'Char' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date' 'FormattedFloat' 'CustomType' 'RGB'
-     c.Type←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Char' 'Int' 'Dec1' 'Dec2' 'Dec3' 'Float' 'Date' 'Float' 'MyCustomType' 'RGB'
-     (1⊃c).Options←'Alabama' 'New Jersey' 'New Hamshire' 'New York' 'California' 'Nevada'
-     (2⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach'
-     (3⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach' 'toDate' 'toChar' 'toNumeric'
-     (1⊃⌽c).FormatString←'F20.2'
-
-     ⍝ Try a custom type
-     ct←12⊃c
-     ct.OnFormat←'{{1↓∊'','',¨⍵}¨⍵}'
-     ct.OnParse←'{1 ('',''(≠⊆⊢),⍵)''''}'
-     ct.OnValidate←'{(∧/⍵∊''NY'' ''NJ'' ''CT'')(∪⍵)''Must be in tri-state area.''}'
-     ct.Align←'l'
-
-     ⍝ Try a custom type
-     ct←13⊃c
-     ct.OnFormat←A.FQP'OnFormatRGB'
-     ct.OnParse←A.FQP'OnParseRGB'
-     ct.OnValidate←'{1 ⍵ ''''}' ⍝ Should not need to define this
-     ct.Align←'r'
-
-
-     n←100
-     v←⊂n⍴1 0 0
-     v,←⊂n⍴'Alabama' '' 'Alabama' 'New York' '' 'California'
-     v,←⊂n⍴'Onions' 'Spinach',n⍴⊂''
-     v,←⊂n⍴(⊂'This is a really long string'),n⍴⊂''
-     v,←⊂n⍴'One' 'Two' 'Three' 'Four' 'Five' 'Six' 'Seven' 'Eight' 'Nine'
-     v,←⊂⍳n
-     v,←⊂10×⍳n
-     v,←⊂100×⍳n
-     v,←⊂1000×⍳n
-     v,←⊂3÷⍨⍳n
-     v,←⊂n⍴20251201+⍳31
-     v,←⊂3÷⍨⍳n
-     v,←⊂n⍴''('NY' 'NJ' 'CT')(,⊂'NY')  ⍝ CustomType, a list. 'NY,CA,VT'
-     v,←⊂n⍴⍬(0 0 0)(255 255 255)(27 255 156)
-     t.Values←⍉↑v
-
-
-
-
-
-     t.Init←0
-     _←t.Parent A.DataGrid.Resize 0
+     ⎕TID=0:∇&0
+     t←ReInitAllDataTypes 0
+     Assert'Values' 'Columns' 'ReadOnly'≡3↑A.DataGrid.PropList'':
+     Assert'CellChange' 'BeforeCellChange'≡2↑A.DataGrid.EventList'':
      0
  }

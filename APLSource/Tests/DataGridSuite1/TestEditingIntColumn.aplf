@@ -1,6 +1,6 @@
  TestEditingIntColumn←{
      ⎕TID=0:∇&0
-     t←GetTable 0
+     t←ReInit 0
      Press'Ctrl' 'Home':
      Press'ArrowRight':
      Assert t.Values[0;1 2 3]≡1981 12 27:

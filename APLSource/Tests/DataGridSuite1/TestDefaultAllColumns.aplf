@@ -1,0 +1,9 @@
+ TestDefaultAllColumns←{
+     ⎕TID=0:∇&0
+     t←Init GetTable 0
+     _←t.⎕EX'Columns'
+     _←t.Parent A.DataGrid.Resize 0
+     Assert t.Columns.Name≡(≢t.Columns)↑,¨⎕A:
+     Assert'Char' 'Int' 'Int'≡3↑t.Columns.Type:
+     0
+ }

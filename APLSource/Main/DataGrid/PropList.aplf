@@ -1,9 +1,6 @@
  PropList←{
      p←⊂'Values'          ⍝ Required (mat or inverted)
-     p,←⊂'Names'          ⍝ Corresponding to Values
-     p,←⊂'Types'          ⍝ Correponding to Values
-     p,←⊂'ReadOnlyColumns'⍝ Boolean vector corresponding to 1⊃⍴Values
-     p,←⊂'ReadOnlyRows'   ⍝   ''                            0⊃⍴Values
+     p,←⊂'Columns'        ⍝ Corresponding to Values
      p,←⊂'ReadOnly'       ⍝
      p,←⊂'RowNumbers'     ⍝ Display row numbers. 1|0.
      p,←⊂'FontSize'       ⍝ Pixels. Defaults to 18
