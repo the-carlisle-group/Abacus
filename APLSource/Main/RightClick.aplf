@@ -1,0 +1,15 @@
+ RightClick←{
+     ⍝ ⍺ ←→ document
+     ⍝ ⍵ ←→ id
+     e←⍺ GetElementById ⍵
+     n←⎕NS''
+     n.button←2
+     n.bubbles←⊂'true'
+     n.cancellable←⊂'true'
+     j←⎕JSON n
+     _←e ExecuteOnElement'dispatchEvent(new MouseEvent(''mousedown'',',j,'))'
+     _←e ExecuteOnElement'dispatchEvent(new MouseEvent(''mouseup'',',j,'))'
+     ⍺.Document.Waiting←1
+     _←e ExecuteOnElement'dispatchEvent(new MouseEvent(''contextmenu'',',j,'))'
+     0⊣⎕TGET DoneToken
+ }

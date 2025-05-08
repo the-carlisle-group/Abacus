@@ -1,5 +1,5 @@
  OnScrollBarMouseMove←{
-     ⍵.MouseButton≠1:0
+     ⍵.MouseButtons≠1:0
      tr←⍵.CurrentTarget
      th←⍵.Target
      t←tr.Parent.Table

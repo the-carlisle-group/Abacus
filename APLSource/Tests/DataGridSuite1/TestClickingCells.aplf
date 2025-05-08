@@ -1,11 +1,12 @@
  TestClickingCells←{
-     3
      ⎕TID=0:∇&0
      t←GetTable 0
      c←A.BodyCells t
      id←c[2;2].id
-     Click id:0
-
-
+     Document A.LeftClick id:
+     id←c[3;2].id
+     Document A.RightClick id:
+     Press'Escape':
+     0
 
  }

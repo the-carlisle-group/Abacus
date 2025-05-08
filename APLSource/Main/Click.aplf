@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ document
      ⍝ ⍵ ←→ id
      ⍝ ⍵ ←→ Element
-     ⍝ ⍵ ←→ Element (clientY clientX) (offsetX offsetY)
+     ⍝ ⍵ ←→ Element (clientY clientX offsetX offsetY)
      ~IsString ⍵:(0⊃⍵)MouseDownAt(1⊃⍵)
      e←⍺ GetElementById ⍵
      b←2=e.⎕NC'Onclick'

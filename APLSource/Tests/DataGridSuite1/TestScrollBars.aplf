@@ -1,6 +1,6 @@
  TestScrollBars←{
-     4
      ⎕TID=0:∇&0
+     _←⎕DL 0.1
      t←100 ReInit 0
      Press'Ctrl' 'Home':
      Assert t.DataCell≡0 0:

@@ -2,6 +2,7 @@
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ Event
      ⍺=0:0
+     ⍺.Document.Waiting←1
      _←⍺ ExecuteOnElement ⍵,'()'
-     ⎕TGET EventToken
+     ⎕TGET DoneToken
  }
