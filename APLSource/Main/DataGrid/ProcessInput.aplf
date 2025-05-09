@@ -15,7 +15,7 @@
      e.NewValue←pv
      t Fire e:1
      fmt←⍎s.OnFormat
-     fv←⊃s fmt⊂e.NewValue
+     fv←⊃s fmt,⊂e.NewValue
      _←t SetValue e.NewValue
      t.OptiTable.Body.Values[⊂t.TableCell]←⊂fv
      c←i A.GetNearest'td'

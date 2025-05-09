@@ -13,7 +13,7 @@
      (2⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach'
      (3⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach' 'toDate' 'toChar' 'toNumeric'
      (2⊃⌽c).FormatString←'F20.2'
-
+     (2⊃⌽c).Null←⎕NULL
      ⍝ Try a custom type
      ct←12⊃c
      ct.OnFormat←'{{1↓∊'','',¨⍵}¨⍵}'
@@ -41,7 +41,7 @@
      v,←⊂1000×⍳n
      v,←⊂3÷⍨⍳n
      v,←⊂n⍴20251201+⍳31
-     v,←⊂3÷⍨⍳n
+     v,←⊂n⍴(3⍴⎕NULL),3÷⍨⍳n
      v,←⊂n⍴''('NY' 'NJ' 'CT')(,⊂'NY')  ⍝ CustomType, a list. 'NY,CA,VT'
      v,←⊂n⍴⍬(0 0 0)(255 255 255)(27 255 156)
      t.Values←⍉↑v

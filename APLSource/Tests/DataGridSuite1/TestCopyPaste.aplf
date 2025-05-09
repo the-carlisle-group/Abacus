@@ -13,5 +13,25 @@
      Press'Ctrl' 'V':
      Assert(t.Values⌷⍨t.DataCell+⍳¨2 2)≡2 2⍴'zwilldu01' 1888 'zychto01' 1990:
      Assert(2↑¯4 2↑BrowserValues)≡2 2⍴'zwilldu01' '1888' 'zychto01' '1990':
+     Press'Ctrl' 'Home':
+     Press'Shift' 'ArrowRight':
+     Press'Shift' 'ArrowRight':
+     Press'Ctrl' 'C':
+     Press'Ctrl' 'Home':
+     Press'ArrowDown':
+     Press'Shift' 'ArrowDown':
+     Press'Shift' 'ArrowDown':
+     Press'Shift' 'ArrowDown':
+     Press'Ctrl' 'V':
+     Press'Ctrl' 'Home':
+     0⊣{Press'ArrowRight'}¨⍳4:
+     Press'Shift' 'ArrowDown':
+     Press'Shift' 'ArrowDown':
+     Press'Ctrl' 'C':
+     Press'ArrowDown':
+     Press'ArrowDown':
+     Press'ArrowDown':
+     Press'Shift' 'ArrowRight':
+     Press'Ctrl' 'V':
      0
  }

@@ -6,7 +6,5 @@
      Document A.LeftClick id:
      id←c[3;2].id
      Document A.RightClick id:
-     Press'Escape':
      0
-
  }
