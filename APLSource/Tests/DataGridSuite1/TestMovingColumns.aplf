@@ -4,9 +4,9 @@
      Press'Ctrl' 'Home':
      Assert t.DataCell≡0 0:
      sv←t.Values[;0 1]
-     Press'Ctrl' 'Shift' 'ArrowRight':
+     Press'Shift' 'Alt' 'ArrowRight':
      Assert sv≡t.Values[;1 0]:
-     Press'Ctrl' 'Shift' 'ArrowLeft':
+     Press'Shift' 'Alt' 'ArrowLeft':
      Assert sv≡t.Values[;0 1]:
      0
  }

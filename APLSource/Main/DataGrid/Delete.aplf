@@ -1,6 +1,6 @@
  Delete←{
      t←⍺
-     s←{(⌊/⍵),⌈/⍵}t.DataCell t.Selection
+     s←{(⌊/⍵),⌈/⍵}t.Selection
      r c←(0⊃s)+⍳¨1+⊃-/⌽s
      m←(≢r)⌿⍉⍪(t.Columns.Null)[c]
      t Replace m(0⊃s)

@@ -8,7 +8,7 @@
      t.WindowIndex[1]←m⌊p+c
      t.DataCell[1]←(1⊃t.DataSize)⌊p+1⊃t.DataCell
      ⍝ Do we need this↓↓↓
-     t.Selection←t.DataCell
+     t.Selection←2⍴⊂t.DataCell
      t.WindowCell←t.DataCell-t.WindowIndex
      t.TableCell[1]←t.RowNumbers+t.WindowCell[1]
      ⍝ ↑↑↑↑↑

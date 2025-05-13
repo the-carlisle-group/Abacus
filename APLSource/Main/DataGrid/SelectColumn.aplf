@@ -1,0 +1,7 @@
+ SelectColumn←{
+     ⍝ Extends current selection to entire column(s)
+     t←⍺
+     n m←t.DataSize-1
+     t.Selection←0 n,¨1⊃¨t.Selection
+     Refresh t
+ }

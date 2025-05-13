@@ -28,16 +28,20 @@
      p≡'PageDown':MovePageDown t
      p≡'AltPageUp':MovePageLeft t
      p≡'AltPageDown':MovePageRight t
-     p≡'ShiftArrowRight':t Select t.Selection+0 1
-     p≡'ShiftArrowLeft':t Select t.Selection-0 1
-     p≡'ShiftArrowUp':t Select t.Selection-1 0
-     p≡'ShiftArrowDown':t Select t.Selection+1 0
-     p≡'ShiftHome':t Select t.Selection[0],0
-     p≡'ShiftEnd':t Select t.Selection[0],t.DataSize[1]-1
-     p≡'CtrlShiftHome':t Select 0 0
-     p≡'CtrlShiftEnd':t Select t.DataSize-1
+     p≡'ShiftArrowRight':t Select 0 1
+     p≡'ShiftArrowLeft':t Select 0 ¯1
+     p≡'ShiftArrowUp':t Select ¯1 0
+     p≡'ShiftArrowDown':t Select 1 0
+     p≡'ShiftHome':t SelectTo 0,⍨⊃SelectionCorner t
+     p≡'ShiftEnd':t SelectTo(⊃SelectionCorner t),t.DataSize[1]-1
+     p≡'CtrlShiftArrowUp':t SelectTo 0,1⊃SelectionCorner t
+     p≡'CtrlShiftArrowDown':t SelectTo(t.DataSize[0]-1),1⊃SelectionCorner t
+     p≡'CtrlShiftHome':t SelectTo 0 0
+     p≡'CtrlShiftEnd':t SelectTo t.DataSize-1
      p≡'ShiftPageUp':SelectPageUp                  ⍝ TODO
      p≡'ShiftPageDown':SelectPageDown              ⍝ TODO
+     p≡'Ctrl ':t SelectColumn 0
+     p≡'Shift ':t SelectRow 0
      p≡'F6':t FreezeColumns 0
      p≡'F5':t.Parent Resize 1
      p≡'Ctrl+':t.Parent Resize 1⊣t.FontSize←32⌊t.FontSize+2
@@ -58,9 +62,9 @@
      p≡'CtrlShiftInsert':InsertColumn t            ⍝ TODO!
      p≡'CtrlShiftDelete':DeleteColumn t
      p≡'CtrlF2':RenameColumn t                     ⍝ Needs Work!
-     p≡'CtrlShiftArrowLeft':¯1 MoveColumn t
-     p≡'CtrlShiftArrowRight':1 MoveColumn t
-     p≡'CtrlShiftArrowUp':MoveRowUp t
-     p≡'CtrlShiftArrowDown':MoveRowDown t
+     p≡'ShiftAltArrowLeft':¯1 MoveColumn t
+     p≡'ShiftAltArrowRight':1 MoveColumn t
+     p≡'ShiftAltArrowUp':MoveRowUp t
+     p≡'ShiftAltArrowDown':MoveRowDown t
      0
  }

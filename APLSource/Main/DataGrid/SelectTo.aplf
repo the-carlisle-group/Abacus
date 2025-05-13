@@ -1,0 +1,7 @@
+ SelectTo←{
+     ⍝ Select area from active cell to coordinates ⍵
+     s←⍺.DataCell ⍵
+     ⍺.Selection←(⌊/s),⌈/s
+     _←⍵ AdjustWindow ⍺
+     Refresh ⍺
+ }

@@ -1,0 +1,7 @@
+ SelectRow←{
+     ⍝ Extend current selection to entire row
+     t←⍺
+     n m←t.DataSize-1
+     t.Selection←(⊃¨t.Selection),¨0 m
+     Refresh t
+ }

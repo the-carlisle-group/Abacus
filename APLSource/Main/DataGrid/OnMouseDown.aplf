@@ -5,16 +5,17 @@
      HandleInput t:0
      e.Selected∧⍵.MouseButton=2:0
      _←ClearSelection t
-     e.Tag≡'th':OnClickHeaderCell ⍵
+     e.Tag≡'th':t SelectColumn 0  ⍝ OnClickHeaderCell ⍵
      t.SelectInProgress←1
      c←t.BodyCells
      i←e.Index
+     ¯1=(1⊃i)-t.RowNumbers:t SelectRow 0
      i≡t.TableCell:0
      lc←t.TableCell⌷c
      t.TableCell←i
      t.WindowCell←t.TableCell-0,t.ColumnOffset
      t.DataCell←t.WindowCell+t.WindowIndex
-     t.Selection←t.DataCell
+     t.Selection←2⍴⊂t.DataCell
      _←lc e A.MoveClass'window-cell'
      e A.FireEvent'focus'
  }

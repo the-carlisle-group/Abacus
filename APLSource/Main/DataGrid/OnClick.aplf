@@ -2,6 +2,7 @@
      e←⍵.Target
      t←⍵.CurrentTarget
      r c←t.DataCell
+     c=¯1:0
      ct←c⊃t.Columns.Type
      ct≡'Select':⍵ ShowPickList t
      ct≡'CheckBox':ToggleCheckBox t

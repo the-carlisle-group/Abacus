@@ -6,7 +6,7 @@
      p←(c-1)⊃t.ScrollIntoViewIndex
      t.WindowIndex[1]←p
      t.DataCell[1]←0⌈(1⊃t.DataCell)-c-p
-     t.Selection←t.DataCell
+     t.Selection←2⍴⊂t.DataCell
      t.WindowCell←t.DataCell-t.WindowIndex
      t.TableCell[1]←t.RowNumbers+t.WindowCell[1]
      Refresh t

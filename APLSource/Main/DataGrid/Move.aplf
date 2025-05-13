@@ -11,7 +11,7 @@
      e.OldCellIndex←⍺.DataCell
      e.NewCellIndex←⍵
      ⍺.DataCell←⍵
-     ⍺.Selection←⍵
+     ⍺.Selection←2⍴⊂⍵
      ⍵ AdjustWindow ⍺:e Refresh ⍺
      bc←⍺.BodyCells
      lc←tc⌷bc
