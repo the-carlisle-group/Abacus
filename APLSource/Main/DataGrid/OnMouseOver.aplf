@@ -12,9 +12,10 @@
          cl:d[1]←t.WindowIndex[1]-1  ⍝ Crossing to left
          0
      }0
-     d≡t.Selection:0
-     t.Selection←d
+     s←{(⌊/⍵),⌈/⍵}t.DataCell d
+     s≡t.Selection:0
+     t.Selection←s
      t.Selection≡t.DataCell:ClearSelection t
-     _←t.Selection AdjustWindow t
+     _←d AdjustWindow t
      Refresh t
  }
