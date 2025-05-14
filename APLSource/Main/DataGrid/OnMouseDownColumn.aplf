@@ -1,0 +1,16 @@
+ OnMouseDownColumn←{
+     ⍝ Click on Column Header
+     ⍝ Make first cell of column active
+     e←⍵.Target         ⍝ Know it's th
+     t←⍵.CurrentTarget
+     t.SelectType←'Column'
+     c←t.HeaderCells
+     i←e.Index
+     t.TableCell←0,i
+     t.WindowCell←t.TableCell-0,t.ColumnOffset
+     t.DataCell←t.WindowCell+t.WindowIndex
+     n m←t.DataSize-1
+     t.Selection←t.DataCell(n,1⊃t.DataCell)
+     _←Refresh t
+     0
+ }

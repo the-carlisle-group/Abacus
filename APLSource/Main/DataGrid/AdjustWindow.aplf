@@ -2,6 +2,30 @@
      ⍝ ⍺ ←→ DataCell, or any Cell (index into Values)
      ⍝ ⍵ ←→ Table
      ⍝ ← ←→ 1 for actual change, 0 for no change
+
+
+     ⍝ What if we get rid of TableCell and WindowCell?
+
+     ⍝ Track **ActiveCell**. This is the current cell (DataCell) index into Values
+     ⍝ It may or may not be in the window (may or may not be visible)
+     ⍝ Track **WindowIndex**. This is the index into Values of upperleft corner
+     ⍝ of scrollable grid. It does not include frozen columns
+
+     ⍝ In order to highlight any cells (td elements) in visible window
+     ⍝ we need to map indices into Values to indices into <td> elements.
+
+     ⍝ Conversely, if we click on <td> or <th> element we need a mapping back
+     ⍝ to values.
+
+
+
+
+
+
+
+
+
+
      d←⍺
      u←⍵.FreezeColumns≤1⊃d
      f←~u

@@ -1,0 +1,11 @@
+ OnMouseOverColumn←{
+     t←⍵.CurrentTarget
+     e←⍵.Target
+     c←1⊃t TableCell2DataCell 0,⊃⌽e.Index
+     m n←t.DataSize-1
+     s←(⌊/,⌈/)t.DataCell(m,c)
+     s≡t.Selection:0
+     t.Selection←s
+     _←(⊃s)AdjustWindow t
+     Refresh t
+ }

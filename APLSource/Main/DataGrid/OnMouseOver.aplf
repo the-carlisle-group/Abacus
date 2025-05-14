@@ -1,8 +1,9 @@
  OnMouseOver←{
      t←⍵.CurrentTarget
      ~t.SelectInProgress:0
+     t.SelectType≡'Column':OnMouseOverColumn ⍵
+     t.SelectType≡'Row':OnMouseOverRow ⍵
      c←⍵.Target
-     c.Tag≢'td':0
      i←⊃⍸c=t.BodyCells
      d←t TableCell2DataCell i
      cr←(i[1]=t.ColumnOffset)∧(t.WindowIndex[1]≠0)∧(i[1]>t.DataCell[1])        ⍝ Crossing right
@@ -12,10 +13,9 @@
          cl:d[1]←t.WindowIndex[1]-1  ⍝ Crossing to left
          0
      }0
-     s←{(⌊/⍵),⌈/⍵}t.DataCell d
+     s←(⌊/,⌈/)t.DataCell d
      s≡t.Selection:0
      t.Selection←s
-     t.Selection≡t.DataCell:ClearSelection t
      _←d AdjustWindow t
      Refresh t
  }

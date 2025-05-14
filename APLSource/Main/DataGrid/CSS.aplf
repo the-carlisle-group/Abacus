@@ -68,12 +68,13 @@
      ⍝ *****************************
      r←s Rule'td:focus'
      r.outline←'none'
-     ⍝ *********************************
-     r←s Rule'.window-cell'
-     r.background_color←'orange'
      ⍝ ********************************
      r←s Rule'.selected-range'
-     r.background_color←'green'
+     r.background_color←'lightgray'
+     ⍝ *********************************
+     r←s Rule'.window-cell'
+     r.border←'solid 2px black'
+     ⍝ r.background_color←'orange'
      ⍝ *********************************
      r←s Rule'.in-cell'
      r.padding←0

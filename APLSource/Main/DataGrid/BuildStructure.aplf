@@ -7,7 +7,10 @@
      bc.Selected←0
      bc.Index←⍳r c
      t.BodyCells←bc
-     t.HeaderCells←##.HeaderCells t
+     hc←,##.HeaderCells t
+     hc.Selected←0
+     hc.Index←⍳c
+     t.HeaderCells←hc
      _←A.SetParent t
      e←A.Elements t
      e.Document←d

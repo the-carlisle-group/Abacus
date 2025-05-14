@@ -1,0 +1,13 @@
+ OnMouseOverRow←{
+     t←⍵.CurrentTarget
+     c←⍵.Target
+     c.Tag≢'td':0
+     i←⊃⍸c=t.BodyCells
+     r←⊃t TableCell2DataCell i
+     m n←t.DataSize-1
+     s←(⌊/,⌈/)t.DataCell(r,n)
+     s≡t.Selection:0
+     t.Selection←s
+     _←(⊃s)AdjustWindow t
+     Refresh t
+ }

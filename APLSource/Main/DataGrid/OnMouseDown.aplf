@@ -5,11 +5,13 @@
      HandleInput t:0
      e.Selected∧⍵.MouseButton=2:0
      _←ClearSelection t
-     e.Tag≡'th':t SelectColumn 0  ⍝ OnClickHeaderCell ⍵
      t.SelectInProgress←1
+     t.SelectType←'Cell'
+     e.Tag≡'th':t OnMouseDownColumn ⍵
      c←t.BodyCells
      i←e.Index
-     ¯1=(1⊃i)-t.RowNumbers:t SelectRow 0
+     ¯1=(1⊃i)-t.RowNumbers:t OnMouseDownRow ⍵
+     t.SelectType←'Cell'
      i≡t.TableCell:0
      lc←t.TableCell⌷c
      t.TableCell←i

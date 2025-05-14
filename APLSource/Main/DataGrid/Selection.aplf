@@ -1,15 +1,8 @@
  Selection←{
      v←⍵
      t←⍺
-
-     ⍝ ensures 2 corners.
-     ⍝ q←2↑(⊆t.Selection),⊂t.DataCell
-     ⍝ t.Selection≡t.DataCell:v
-     q←t.Selection
-     q≡2⍴⊂t.DataCell:v
-     ⍝ s←{(⌊/⍵),⌈/⍵}t.DataCell t.Selection
-     s←(⌊/q),⌈/q
-
+     s←t.Selection
+     s≡2⍴⊂t.DataCell:v
      b←t.FreezeColumns∧.≤1⊃¨s  ⍝ enitre range is past frozen columns
      r c←(0⊃s)+⍳¨1+⊃-/⌽s
      r c←r c-b×t.WindowIndex

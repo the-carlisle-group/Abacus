@@ -1,5 +1,5 @@
- SelectRow←{
-     ⍝ Extend current selection to entire row
+ ExtendSelectRow←{
+     ⍝ Extend current selection to entire row(s) - all columns
      t←⍺
      n m←t.DataSize-1
      t.Selection←(⊃¨t.Selection),¨0 m

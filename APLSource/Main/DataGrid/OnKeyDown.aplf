@@ -40,8 +40,8 @@
      p≡'CtrlShiftEnd':t SelectTo t.DataSize-1
      p≡'ShiftPageUp':SelectPageUp                  ⍝ TODO
      p≡'ShiftPageDown':SelectPageDown              ⍝ TODO
-     p≡'Ctrl ':t SelectColumn 0
-     p≡'Shift ':t SelectRow 0
+     p≡'Ctrl ':t ExtendSelectColumn 0
+     p≡'Shift ':t ExtendSelectRow 0
      p≡'F6':t FreezeColumns 0
      p≡'F5':t.Parent Resize 1
      p≡'Ctrl+':t.Parent Resize 1⊣t.FontSize←32⌊t.FontSize+2
