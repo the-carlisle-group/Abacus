@@ -6,7 +6,7 @@
      _←Init⍣(⍵∨~t.Init)⊣g
      p←t.Parent
      0=p.⎕NC'Width':0
-     t.AvailableWidth←p.Width-+/t.ColumnOffset↑t.Widths
+     t.AvailableWidth←p.Width-+/t.FixedColumns↑t.Widths
      t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.RowNumbers↓t.Widths
      0∊t.ColumnsPerIndex:0
      t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
@@ -18,7 +18,7 @@
      ∨/t.WindowSize<1:0
      t.WindowCell←t.WindowCell⌊t.WindowSize-1
      t.DataCell←t.WindowIndex+t.WindowCell
-     t.TableCell←t.WindowCell+0,t.ColumnOffset
+     t.TableCell←t.WindowCell+0,t.FixedColumns
      _←g ResizeScrollBars''
      _←BuildStructure t
      Refresh t

@@ -22,7 +22,7 @@
      }0
      o.Body.Cells.class←bc
      ⍺.WindowIndex[1]≤⍺.FreezeColumns:o
-     bc[;⍺.ColumnOffset]←bc[;⍺.ColumnOffset],¨⊂' more-to-left'
+     bc[;⍺.FixedColumns]←bc[;⍺.FixedColumns],¨⊂' more-to-left'
      o.Body.Cells.class←bc
      o
  }

@@ -15,7 +15,7 @@
      i≡t.TableCell:0
      lc←t.TableCell⌷c
      t.TableCell←i
-     t.WindowCell←t.TableCell-0,t.ColumnOffset
+     t.WindowCell←t.TableCell-0,t.FixedColumns
      t.DataCell←t.WindowCell+t.WindowIndex
      t.Selection←2⍴⊂t.DataCell
      _←lc e A.MoveClass'window-cell'

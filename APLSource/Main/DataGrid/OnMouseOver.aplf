@@ -6,8 +6,8 @@
      c←⍵.Target
      i←⊃⍸c=t.BodyCells
      d←t TableCell2DataCell i
-     cr←(i[1]=t.ColumnOffset)∧(t.WindowIndex[1]≠0)∧(i[1]>t.DataCell[1])        ⍝ Crossing right
-     cl←(i[1]=t.ColumnOffset-1)∧(t.WindowIndex[1]≠0)∧(i[1]<t.DataCell[1])      ⍝ On Border crossing left
+     cr←(i[1]=t.FixedColumns)∧(t.WindowIndex[1]≠0)∧(i[1]>t.DataCell[1])        ⍝ Crossing right
+     cl←(i[1]=t.FixedColumns-1)∧(t.WindowIndex[1]≠0)∧(i[1]<t.DataCell[1])      ⍝ On Border crossing left
      _←{
          cr:d[1]←t.FreezeColumns     ⍝ Crossing Border to right
          cl:d[1]←t.WindowIndex[1]-1  ⍝ Crossing to left

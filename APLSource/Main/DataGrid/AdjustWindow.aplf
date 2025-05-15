@@ -39,6 +39,6 @@
      ⍵.WindowCell←⍺-⍵.WindowIndex
      b←⍵.FreezeColumns>1⊃d ⍝ Modify
      ⍵.WindowCell[1]←b⊃(⍵.WindowCell[1])((1⊃d)-⍵.FreezeColumns)
-     ⍵.TableCell←⍵.WindowCell+0,⍵.ColumnOffset
+     ⍵.TableCell←⍵.WindowCell+0,⍵.FixedColumns
      x≢0 0
  }

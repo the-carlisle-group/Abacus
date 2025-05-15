@@ -11,12 +11,12 @@
      t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
      t.Widths←t ComputeWidths 0
      t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Columns.Name
-     t.ColumnOffset←t.RowNumbers+t.FreezeColumns
+     t.FixedColumns←t.RowNumbers+t.FreezeColumns
      t.WindowCell←t{2=⍺.⎕NC'WindowCell':⍺.WindowCell ⋄ ⍵}0,-t.FreezeColumns
      t.WindowIndex←t{2=⍺.⎕NC'WindowIndex':⍺.WindowIndex ⋄ ⍵}0,t.FreezeColumns
      t.DataCell←t.WindowIndex+t.WindowCell ⍝ Or (0 0)
      t.Selection←2⍴⊂t.DataCell
-     t.TableCell←t.WindowCell+0,t.ColumnOffset
+     t.TableCell←t.WindowCell+0,t.FixedColumns
      t.HeaderStyles←ComputeHeaderStyles t
      t.HeaderClass←ComputeHeaderClass t
      t.ColumnClass←((t.RowNumbers/'r'),t.Columns.Class),¨' ',¨'a',¨(t.RowNumbers/'r'),t.Columns.Align

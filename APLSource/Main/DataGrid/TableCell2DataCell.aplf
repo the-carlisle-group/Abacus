@@ -3,7 +3,7 @@
      ⍝ ⍵ ←→ TableCell index
      ⍝ ← ←→ DataCell index
      ⍝ SIMPLIFY!!!!
-     wc←⍵-0,⍺.ColumnOffset   ⍝ WindowCell
+     wc←⍵-0,⍺.FixedColumns   ⍝ WindowCell
      dc←wc+⍺.WindowIndex     ⍝ DataCell
      wc[1]≥0:dc
      dc[1]←⍺.FreezeColumns+wc[1]

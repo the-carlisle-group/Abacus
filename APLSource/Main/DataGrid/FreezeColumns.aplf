@@ -4,7 +4,7 @@
      n>4:0
      f←n×n≠t.FreezeColumns
      t.FreezeColumns←f
-     t.ColumnOffset←f+t.RowNumbers
+     t.FixedColumns←f+t.RowNumbers
      t.WindowCell[1]←×-f
      t.WindowIndex[1]←f
      t Resize 0
