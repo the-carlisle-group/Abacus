@@ -8,9 +8,9 @@
      i←e.Index
      t.TableCell←0,i
      t.WindowCell←t.TableCell-0,t.FixedColumns
-     t.DataCell←t.WindowCell+t.WindowIndex
+     t.ActiveCell←t.WindowCell+t.WindowIndex
      n m←t.DataSize-1
-     t.Selection←t.DataCell(n,1⊃t.DataCell)
+     t.Selection←t.ActiveCell(n,1⊃t.ActiveCell)
      _←Refresh t
      0
  }

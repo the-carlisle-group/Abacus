@@ -1,7 +1,7 @@
  DeleteColumn←{
      t←⍵
      ~t.InsertColumns:0
-     c←1⊃t.DataCell
+     c←1⊃t.ActiveCell
      j←c~⍨⍳1⊃t.DataSize
      t.Values←⍬ j Index t
      t.Columns←t.Columns[j]

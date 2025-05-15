@@ -5,40 +5,40 @@
      m n←⍴t.Values
      Assert m n≡20081 24:
      Press'Ctrl' 'Home':
-     Assert t.DataCell≡0 0:
+     Assert t.ActiveCell≡0 0:
      Assert(⊃BrowserCells)HasClass cc:
      Press'Ctrl' 'End':
-     Assert t.DataCell≡m n-1:
+     Assert t.ActiveCell≡m n-1:
      Assert(⊃⌽⊖BrowserCells)HasClass cc:
      Press'Home':
-     Assert t.DataCell≡(m-1),0:
+     Assert t.ActiveCell≡(m-1),0:
      Assert(⊃⊖BrowserCells)HasClass cc:
      Press'Ctrl' 'ArrowUp':
-     Assert t.DataCell≡0 0:
+     Assert t.ActiveCell≡0 0:
      Press'ArrowDown':
-     Assert t.DataCell≡1 0:
+     Assert t.ActiveCell≡1 0:
      Press'ArrowRight':
-     Assert t.DataCell≡1 1:
+     Assert t.ActiveCell≡1 1:
      Press'Ctrl' 'ArrowDown':
-     Assert t.DataCell≡(m-1)1:
+     Assert t.ActiveCell≡(m-1)1:
      Press'ArrowUp':
-     Assert t.DataCell≡(m-2)1:
+     Assert t.ActiveCell≡(m-2)1:
      Press'Ctrl' 'ArrowRight':
-     Assert t.DataCell≡(m-2)(n-1):
+     Assert t.ActiveCell≡(m-2)(n-1):
      Press'Ctrl' 'ArrowLeft':
-     Assert t.DataCell≡(m-2)0:
+     Assert t.ActiveCell≡(m-2)0:
      Press'Ctrl' 'Home':
      Press'End':
-     Assert t.DataCell≡0,n-1:
+     Assert t.ActiveCell≡0,n-1:
      Assert(⊃⌽BrowserCells)HasClass cc:
      Press'Home':
      Press'PageDown':
-     Assert t.DataCell≡(⊃t.WindowSize),0:
+     Assert t.ActiveCell≡(⊃t.WindowSize),0:
      Press'PageUp':
-     Assert t.DataCell≡0 0:
+     Assert t.ActiveCell≡0 0:
      Press'Alt' 'PageDown':
-     Assert t.DataCell≡0,1⊃t.WindowSize:
+     Assert t.ActiveCell≡0,1⊃t.WindowSize:
      Press'Alt' 'PageUp':
-     Assert t.DataCell≡0 0:
+     Assert t.ActiveCell≡0 0:
      0
  }

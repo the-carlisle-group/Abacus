@@ -3,12 +3,12 @@
      t←GetTable 0
      Press'Ctrl' 'Home':
      Press'ArrowRight':
-     Assert t.DataCell≡0 1:
-     ov←t.DataCell⌷t.Values
+     Assert t.ActiveCell≡0 1:
+     ov←t.ActiveCell⌷t.Values
      Enter'blah blah':
      Press'Enter':
-     Assert t.DataCell≡0 1:
-     Assert ov≡t.DataCell⌷t.Values:
+     Assert t.ActiveCell≡0 1:
+     Assert ov≡t.ActiveCell⌷t.Values:
      Press'Escape':
      Press'Escape':
      0

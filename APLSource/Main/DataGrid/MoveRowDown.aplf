@@ -2,7 +2,7 @@
      t←⍵
      HandleInput t:0
      ~t.InsertRows:0
-     i←⊃t.DataCell
+     i←⊃t.ActiveCell
      i=¯1+⊃t.DataSize:0
      k←i,i+1
      j←⍳⊃t.DataSize
@@ -10,5 +10,5 @@
      t.Values←j ⍬ Index t
      t.Changed←1
      _←Refresh t
-     t Move t.DataCell+1 0
+     t Move t.ActiveCell+1 0
  }

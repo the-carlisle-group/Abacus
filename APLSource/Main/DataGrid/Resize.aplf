@@ -17,7 +17,7 @@
      t.MaxWindowIndex←t.DataSize-t.WindowSize[0],1++/∧\2</⌽t.ColumnsPerIndex
      ∨/t.WindowSize<1:0
      t.WindowCell←t.WindowCell⌊t.WindowSize-1
-     t.DataCell←t.WindowIndex+t.WindowCell
+     t.ActiveCell←t.WindowIndex+t.WindowCell
      t.TableCell←t.WindowCell+0,t.FixedColumns
      _←g ResizeScrollBars''
      _←BuildStructure t

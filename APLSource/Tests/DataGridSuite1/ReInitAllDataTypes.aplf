@@ -1,6 +1,6 @@
  ReInitAllDataTypes←{
      t←GetTable 0
-     t.DataCell←0 0
+     t.ActiveCell←0 0
      t.WindowIndex←0 0
      t.RowNumbers←1
      t.InsertRows←1

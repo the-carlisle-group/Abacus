@@ -3,7 +3,7 @@
      HandleInput t:0
      ~t.InsertColumns:0
      g←t.Parent
-     c←1⊃t.DataCell
+     c←1⊃t.ActiveCell
      (⍺=¯1)∧c=0:0
      (⍺=1)∧c=¯1+≢t.Columns:0
      i←c,c+⍺
@@ -12,5 +12,5 @@
      t.Values←⍬ j Index t
      t.Columns←t.Columns[j]
      _←g Resize 1
-     t Move t.DataCell+0 ⍺
+     t Move t.ActiveCell+0 ⍺
  }

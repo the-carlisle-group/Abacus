@@ -14,8 +14,8 @@
      t.FixedColumns←t.RowNumbers+t.FreezeColumns
      t.WindowCell←t{2=⍺.⎕NC'WindowCell':⍺.WindowCell ⋄ ⍵}0,-t.FreezeColumns
      t.WindowIndex←t{2=⍺.⎕NC'WindowIndex':⍺.WindowIndex ⋄ ⍵}0,t.FreezeColumns
-     t.DataCell←t.WindowIndex+t.WindowCell ⍝ Or (0 0)
-     t.Selection←2⍴⊂t.DataCell
+     t.ActiveCell←t.WindowIndex+t.WindowCell ⍝ Or (0 0)
+     t.Selection←2⍴⊂t.ActiveCell
      t.TableCell←t.WindowCell+0,t.FixedColumns
      t.HeaderStyles←ComputeHeaderStyles t
      t.HeaderClass←ComputeHeaderClass t

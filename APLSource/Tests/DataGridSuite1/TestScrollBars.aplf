@@ -3,19 +3,19 @@
      _←⎕DL 0.1
      t←100 ReInit 0
      Press'Ctrl' 'Home':
-     Assert t.DataCell≡0 0:
+     Assert t.ActiveCell≡0 0:
      Assert t.WindowIndex≡0 0:
      Click VerticalScrollBar At 1000 1000:
-     Assert t.DataCell≡0 0:
+     Assert t.ActiveCell≡0 0:
      Assert t.WindowIndex≡t.WindowSize×1 0:
      Click VerticalScrollBar At 0 0:
-     Assert t.DataCell≡0 0:
+     Assert t.ActiveCell≡0 0:
      Assert t.WindowIndex≡0 0:
      Click HorizontalScrollBar At 1000 1000:
-     Assert t.DataCell≡0 0:
+     Assert t.ActiveCell≡0 0:
      Assert t.WindowIndex≡t.WindowSize×0 1:
      Click HorizontalScrollBar At 0 0:
-     Assert t.DataCell≡0 0:
+     Assert t.ActiveCell≡0 0:
      Assert t.WindowIndex≡0 0:
      0
  }

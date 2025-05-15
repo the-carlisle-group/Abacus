@@ -16,8 +16,8 @@
      lc←t.TableCell⌷c
      t.TableCell←i
      t.WindowCell←t.TableCell-0,t.FixedColumns
-     t.DataCell←t.WindowCell+t.WindowIndex
-     t.Selection←2⍴⊂t.DataCell
+     t.ActiveCell←t.WindowCell+t.WindowIndex
+     t.Selection←2⍴⊂t.ActiveCell
      _←lc e A.MoveClass'window-cell'
      e A.FireEvent'focus'
  }

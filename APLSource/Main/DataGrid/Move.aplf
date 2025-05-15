@@ -1,6 +1,6 @@
  Move←{
      ⍝ ⍺ ←→Table
-     ⍝ ⍵ ←→ DataCell
+     ⍝ ⍵ ←→ ActiveCell
      HandleInput ⍺:0
      _←ClearSelection ⍺
      tc←⍺.TableCell
@@ -8,9 +8,9 @@
      ∨/(⍵<0)∨⍵≥⍺.DataSize:0
      e←⎕NS''
      e.Event←'CellMove'
-     e.OldCellIndex←⍺.DataCell
+     e.OldCellIndex←⍺.ActiveCell
      e.NewCellIndex←⍵
-     ⍺.DataCell←⍵
+     ⍺.ActiveCell←⍵
      ⍺.Selection←2⍴⊂⍵
      ⍵ AdjustWindow ⍺:e Refresh ⍺
      bc←⍺.BodyCells

@@ -1,6 +1,6 @@
  SetValue←{
      t v←⍺ ⍵
-     i j←t.DataCell
+     i j←t.ActiveCell
      ~t.Inverted:0⊣t.Values[⊂i j]←⊂v
      c←j⊃t.Values
      _←{2=⍴⍴c:c[i;]←(1⊃⍴c)↑v ⋄ c[i]←v}0

@@ -12,7 +12,7 @@
      Press'ArrowDown':
      Press'ArrowDown':
      Press'End':
-     Assert sg.DataCell≡2 21:
+     Assert sg.ActiveCell≡2 21:
      cg←GetElementFromBrowser'CSVdata'
      v←A.BodyValues cg
      Assert(2⊃⊢/v)≡,'1':

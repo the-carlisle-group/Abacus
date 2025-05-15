@@ -1,15 +1,15 @@
  DeleteRow←{
      t←⍵
      ~t.InsertRows:0
-     i j←t.DataCell
+     i j←t.ActiveCell
      n m←t.DataSize
      b←(0@i)n⍴1
      t.Values←t.Inverted{⍺:b∘⌿¨⍵ ⋄ b⌿⍵}t.Values
      t.DataSize-←1 0
      t.Change←1
      l←⊃t.WindowIndex=t.MaxWindowIndex
-     t.DataCell-←l 0
-     t.Selection←2⍴⊂t.DataCell
+     t.ActiveCell-←l 0
+     t.Selection←2⍴⊂t.ActiveCell
      t.WindowIndex-←l 0
      t.MaxWindowIndex-←1 0
      _←t.Parent ResizeScrollBars''

@@ -6,10 +6,10 @@
      p←c⊃t.ColumnsPerIndex
      m=c:0
      t.WindowIndex[1]←m⌊p+c
-     t.DataCell[1]←(1⊃t.DataSize)⌊p+1⊃t.DataCell
+     t.ActiveCell[1]←(1⊃t.DataSize)⌊p+1⊃t.ActiveCell
      ⍝ Do we need this↓↓↓
-     t.Selection←2⍴⊂t.DataCell
-     t.WindowCell←t.DataCell-t.WindowIndex
+     t.Selection←2⍴⊂t.ActiveCell
+     t.WindowCell←t.ActiveCell-t.WindowIndex
      t.TableCell[1]←t.RowNumbers+t.WindowCell[1]
      ⍝ ↑↑↑↑↑
      Refresh t

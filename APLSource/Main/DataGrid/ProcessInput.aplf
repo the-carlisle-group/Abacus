@@ -1,7 +1,7 @@
  ProcessInput←{
      i←⍵
      t←i A.GetNearest'table'
-     s←(1⊃t.DataCell)⊃t.Columns
+     s←(1⊃t.ActiveCell)⊃t.Columns
      pfn←⍎s.OnParse
      b pv em←s pfn i.value
      ~b:i ShowDataEntryError em
@@ -10,8 +10,8 @@
      ~b:i ShowDataEntryError em
      e←⎕NS''
      e.Event←'BeforeCellChange'
-     e.CellIndex←t.DataCell
-     e.OldValue←t GetValue t.DataCell
+     e.CellIndex←t.ActiveCell
+     e.OldValue←t GetValue t.ActiveCell
      e.NewValue←pv
      t Fire e:1
      fmt←⍎s.OnFormat

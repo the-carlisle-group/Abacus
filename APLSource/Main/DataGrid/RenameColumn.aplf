@@ -2,7 +2,7 @@
      t←⍵
      HandleInput t:0
      ~t.InsertColumns:0
-     c←1⊃t.DataCell
+     c←1⊃t.ActiveCell
      p←⎕NS''
      p.Title←'Rename column'
      p.Label←'Rename to:'

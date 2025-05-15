@@ -3,5 +3,5 @@
      ⍝ and return the corner opposite the current cell.
      t←⍵
      c←(8⍴1 0)⊂(∊t.Selection)[0 1 0 3 2 3 2 1]
-     ⊃c/⍨2⌽c∊⊂t.DataCell
+     ⊃c/⍨2⌽c∊⊂t.ActiveCell
  }

@@ -1,12 +1,12 @@
  AdjustWindow←{
-     ⍝ ⍺ ←→ DataCell, or any Cell (index into Values)
+     ⍝ ⍺ ←→ ActiveCell, or any Cell (index into Values)
      ⍝ ⍵ ←→ Table
      ⍝ ← ←→ 1 for actual change, 0 for no change
 
 
      ⍝ What if we get rid of TableCell and WindowCell?
 
-     ⍝ Track **ActiveCell**. This is the current cell (DataCell) index into Values
+     ⍝ Track **ActiveCell**. This is the current cell (ActiveCell) index into Values
      ⍝ It may or may not be in the window (may or may not be visible)
      ⍝ Track **WindowIndex**. This is the index into Values of upperleft corner
      ⍝ of scrollable grid. It does not include frozen columns

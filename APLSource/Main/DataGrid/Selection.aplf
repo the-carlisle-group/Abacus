@@ -2,7 +2,7 @@
      v←⍵
      t←⍺
      s←t.Selection
-     s≡2⍴⊂t.DataCell:v
+     s≡2⍴⊂t.ActiveCell:v
      b←t.FreezeColumns∧.≤1⊃¨s  ⍝ enitre range is past frozen columns
      r c←(0⊃s)+⍳¨1+⊃-/⌽s
      r c←r c-b×t.WindowIndex

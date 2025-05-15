@@ -7,9 +7,9 @@
      Assert 6=≢g.Values:
      Assert 255=≢0⊃g.Values:
      Press'ArrowRight':
-     Assert g.DataCell≡0 1:
+     Assert g.ActiveCell≡0 1:
      Press'ArrowRight':
-     Assert g.DataCell≡0 2:
+     Assert g.ActiveCell≡0 2:
      Enter'Hello world!':
      Press'Enter':
      Assert'Hello world!'≡⊃A.ntbs 1↑2⊃g.Values:

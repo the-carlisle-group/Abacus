@@ -10,6 +10,6 @@
      ⍝ Read-only Properties:
      p,←⊂'Changed'        ⍝ Has Values property been changed.
      p,←⊂'WindowIndex'    ⍝ Index of upper left corner
-     p,←⊂'DataCell'       ⍝ Current Cell (should probably rename this)
+     p,←⊂'ActiveCell'       ⍝ Current Cell (should probably rename this)
      p
  }

@@ -1,6 +1,6 @@
  VFI_Char←{
      0=≢⍵:1 ⍺.Null''
      ~⍺.Inverted:1 ⍵''
-     l←(1⊃⍺.DataCell)⊃⍺.MaxLength
+     l←(1⊃⍺.ActiveCell)⊃⍺.MaxLength
      1(l↑⍵)''
  }

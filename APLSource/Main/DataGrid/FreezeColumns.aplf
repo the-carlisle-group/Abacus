@@ -1,6 +1,6 @@
  FreezeColumns←{
      t←⍺
-     n←1+1⊃t.DataCell
+     n←1+1⊃t.ActiveCell
      n>4:0
      f←n×n≠t.FreezeColumns
      t.FreezeColumns←f

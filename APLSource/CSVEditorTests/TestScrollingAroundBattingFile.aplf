@@ -6,22 +6,22 @@
      g←GetElementById'CSVdata'
      Assert 22=≢g.Values:
      Assert 107429=≢⊃g.Values:
-     Assert g.DataCell≡0 0:
+     Assert g.ActiveCell≡0 0:
      Press'ArrowRight':
-     Assert g.DataCell=0 1:
+     Assert g.ActiveCell=0 1:
      Press'ArrowDown':
-     Assert g.DataCell=1 1:
+     Assert g.ActiveCell=1 1:
      Press'ArrowLeft':
-     Assert g.DataCell=1 0:
+     Assert g.ActiveCell=1 0:
      Press'ArrowUp':
-     Assert g.DataCell=0 0:
+     Assert g.ActiveCell=0 0:
      Press'End':
-     Assert g.DataCell=0 21:
+     Assert g.ActiveCell=0 21:
      Press'Home':
-     Assert g.DataCell=0 0:
+     Assert g.ActiveCell=0 0:
      Press'Ctrl' 'End':
-     Assert g.DataCell=107428 21:
+     Assert g.ActiveCell=107428 21:
      Press'Ctrl' 'Home':
-     Assert g.DataCell=0 0:
+     Assert g.ActiveCell=0 0:
      0
  }

@@ -3,7 +3,7 @@
      v≡⍵.Value:0
      g←⍵.DataGrid  ⍝ SHould this be this?
      t←g.Table
-     c←1⊃t.DataCell
+     c←1⊃t.ActiveCell
      d←g.Document
      e←(⊂v)∊t.Columns.Name
      e:1⊣d ##.AlertBox.Show'Column name "',v,'" already exists.'

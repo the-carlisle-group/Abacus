@@ -1,7 +1,7 @@
  OnClick←{
      e←⍵.Target
      t←⍵.CurrentTarget
-     r c←t.DataCell
+     r c←t.ActiveCell
      c=¯1:0
      ct←c⊃t.Columns.Type
      ct≡'Select':⍵ ShowPickList t

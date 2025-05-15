@@ -3,7 +3,7 @@
      ⍝ ⍵ ←→ <table> element
      ⍺←0
      t←⍵
-     ct←(1⊃t.DataCell)⊃t.Columns.Type
+     ct←(1⊃t.ActiveCell)⊃t.Columns.Type
      ct≡'CheckBox':ToggleCheckBox t
      ct≡'Select':⍺ ShowPickList t
      m←t.CellMode

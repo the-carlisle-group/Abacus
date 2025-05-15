@@ -7,21 +7,21 @@
      b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
      p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
      p≡'Escape':Escape t
-     p≡'Enter':t Move t.DataCell+1 0
-     p≡'ShiftEnter':t Move t.DataCell-1 0
-     p≡'Tab':t Move t.DataCell+0 1
-     p≡'ShiftTab':t Move t.DataCell-0 1
+     p≡'Enter':t Move t.ActiveCell+1 0
+     p≡'ShiftEnter':t Move t.ActiveCell-1 0
+     p≡'Tab':t Move t.ActiveCell+0 1
+     p≡'ShiftTab':t Move t.ActiveCell-0 1
      m=2:0
-     p≡'ArrowRight':t Move t.DataCell+0 1
-     p≡'ArrowLeft':t Move t.DataCell-0 1
-     p≡'ArrowUp':t Move t.DataCell-1 0
-     p≡'ArrowDown':t Move t.DataCell+1 0
-     p≡'CtrlArrowUp':t Move 0,t.DataCell[1]
-     p≡'CtrlArrowDown':t Move(t.DataSize[0]-1),t.DataCell[1]
-     p≡'CtrlArrowLeft':t Move t.DataCell[0],0
-     p≡'CtrlArrowRight':t Move t.DataCell[0],t.DataSize[1]-1
-     p≡'Home':t Move t.DataCell[0],0
-     p≡'End':t Move t.DataCell[0],t.DataSize[1]-1
+     p≡'ArrowRight':t Move t.ActiveCell+0 1
+     p≡'ArrowLeft':t Move t.ActiveCell-0 1
+     p≡'ArrowUp':t Move t.ActiveCell-1 0
+     p≡'ArrowDown':t Move t.ActiveCell+1 0
+     p≡'CtrlArrowUp':t Move 0,t.ActiveCell[1]
+     p≡'CtrlArrowDown':t Move(t.DataSize[0]-1),t.ActiveCell[1]
+     p≡'CtrlArrowLeft':t Move t.ActiveCell[0],0
+     p≡'CtrlArrowRight':t Move t.ActiveCell[0],t.DataSize[1]-1
+     p≡'Home':t Move t.ActiveCell[0],0
+     p≡'End':t Move t.ActiveCell[0],t.DataSize[1]-1
      p≡'CtrlHome':t Move 0 0
      p≡'CtrlEnd':t Move t.DataSize-1
      p≡'PageUp':MovePageUp t

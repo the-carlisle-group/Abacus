@@ -4,9 +4,9 @@
      0=0⊃t.WindowIndex:0
      i←-0⊃t.WindowSize
      t.WindowIndex[0]←0⌈i+0⊃t.WindowIndex
-     t.DataCell[0]←0⌈i+0⊃t.DataCell
-     t.Selection←2⍴⊂t.DataCell
-     t.WindowCell←t.DataCell-t.WindowIndex
+     t.ActiveCell[0]←0⌈i+0⊃t.ActiveCell
+     t.Selection←2⍴⊂t.ActiveCell
+     t.WindowCell←t.ActiveCell-t.WindowIndex
      t.TableCell[0]←t.WindowCell[0]
      Refresh t
  }
