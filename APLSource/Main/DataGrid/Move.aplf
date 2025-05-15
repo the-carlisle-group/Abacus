@@ -16,7 +16,7 @@
      bc←⍺.BodyCells
      lc←tc⌷bc
      nc←⍺.TableCell⌷bc
-     _←lc nc A.MoveClass'window-cell'
+     _←lc nc A.MoveClass'active-cell'
      _←nc A.FireEvent'focus'
      _←⍺ Fire e
      0

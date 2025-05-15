@@ -17,7 +17,7 @@
      bc←t Selection bc
      _←{
          ∨/t.TableCell<0:0
-         bc[⊂t.TableCell]←⊂((⊂t.TableCell)⊃bc),' window-cell'
+         bc[⊂t.TableCell]←⊂((⊂t.TableCell)⊃bc),' active-cell'
          0
      }0
      o.Body.Cells.class←bc

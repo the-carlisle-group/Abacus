@@ -1,7 +1,7 @@
  TestCellNavigation←{
      ⎕TID=0:∇&0
      t←ReInit 0
-     cc←'window-cell'
+     cc←'active-cell'
      m n←⍴t.Values
      Assert m n≡20081 24:
      Press'Ctrl' 'Home':

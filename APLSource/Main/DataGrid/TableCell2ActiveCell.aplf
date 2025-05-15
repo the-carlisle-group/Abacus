@@ -1,0 +1,11 @@
+ TableCell2ActiveCell←{
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ TableCell index
+     ⍝ ← ←→ ActiveCell index
+     ⍝ SIMPLIFY!!!!
+     wc←⍵-0,⍺.FixedColumns   ⍝ WindowCell
+     ac←wc+⍺.WindowIndex     ⍝ ActiveCell
+     wc[1]≥0:ac
+     ac[1]←⍺.FreezeColumns+wc[1]
+     ac
+ }

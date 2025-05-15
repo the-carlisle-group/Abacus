@@ -72,7 +72,7 @@
      r←s Rule'.selected-range'
      r.background_color←'lightgray'
      ⍝ *********************************
-     r←s Rule'.window-cell'
+     r←s Rule'.active-cell'
      r.border←'solid 2px black'
      ⍝ r.background_color←'orange'
      ⍝ *********************************
@@ -101,7 +101,7 @@
 ⍝     r←s Rule'.m'
 ⍝     r.text_align←'left'
      ⍝  **********************
-     r←s Rule'.s.window-cell::after'
+     r←s Rule'.s.active-cell::after'
      r.content←'"∨"'
      r.position←'absolute'
      r.top←'.25em'
