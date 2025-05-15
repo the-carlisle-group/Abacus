@@ -7,7 +7,6 @@
      t.WindowIndex[1]←p
      t.ActiveCell[1]←0⌈(1⊃t.ActiveCell)-c-p
      t.Selection←2⍴⊂t.ActiveCell
-     t.WindowCell←t.ActiveCell-t.WindowIndex
-     t.TableCell[1]←t.RowNumbers+t.WindowCell[1]
+     t.TableCell←t ActiveCell2TableCell t.ActiveCell
      Refresh t
  }

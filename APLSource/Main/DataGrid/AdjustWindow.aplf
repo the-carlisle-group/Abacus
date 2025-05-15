@@ -4,7 +4,6 @@
      ⍝ ⍵ ←→ Table
      ⍝ ← ←→ 1 for actual change, 0 for no change
      ⍝ Changes the Window
-
      d←⍺
      u←⍵.FreezeColumns≤1⊃d
      f←~u
@@ -12,12 +11,10 @@
      p q←(⊂d)-s e
      x←(p×(p<0)×1,u)+q×q>0
      ⍵.WindowIndex+←x
+     ⍵≡0 0:0
      ⍵.WindowIndex[1]←(x[1]>0)⊃(⍵.WindowIndex[1])((1⊃⍺)⊃⍵.ScrollIntoViewIndex)
      r c←⍵.WindowIndex
      ⍵.WindowSize[1]←c⊃⍵.ColumnsPerIndex
-     ⍵.WindowCell←⍺-⍵.WindowIndex
-     b←⍵.FreezeColumns>1⊃d ⍝ Modify
-     ⍵.WindowCell[1]←b⊃(⍵.WindowCell[1])((1⊃d)-⍵.FreezeColumns)
-     ⍵.TableCell←⍵.WindowCell+0,⍵.FixedColumns
-     x≢0 0
+     ⍵.TableCell←⍵ ActiveCell2TableCell ⍵.ActiveCell
+     1
  }

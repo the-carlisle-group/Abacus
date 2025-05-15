@@ -1,0 +1,12 @@
+ ActiveCell2TableCell←{
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ ActiveCell
+     ⍝ ← ←→ TableCell
+     i←⍺.WindowIndex
+     r←⍺.RowNumbers
+     d←0 r+⍵-i
+     ⍝ Deal with frozen columns!
+     ∨/d<0:2⍴¯1
+     ∨/d>⍺.WindowSize:2⍴¯1
+     d
+ }
