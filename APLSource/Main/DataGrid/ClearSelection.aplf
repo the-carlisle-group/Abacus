@@ -1,6 +1,7 @@
  ClearSelection←{
      ⍵.Selection≡2⍴⊂⍵.ActiveCell:0
      ⍵.Selection←2⍴⊂⍵.ActiveCell
+     ⍵.SelectType←'Cell'
      _←⍵.ActiveCell AdjustWindow ⍵
      Refresh ⍵
  }

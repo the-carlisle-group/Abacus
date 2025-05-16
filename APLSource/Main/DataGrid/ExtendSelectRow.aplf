@@ -3,5 +3,6 @@
      t←⍺
      n m←t.DataSize-1
      t.Selection←(⊃¨t.Selection),¨0 m
+     t.SelectType←(t.SelectType≡'Column')⊃'Row' 'All'
      Refresh t
  }

@@ -1,0 +1,8 @@
+ ExtendSelectAll←{
+     ⍝ Extends current selection to entire grid
+     t←⍺
+     n m←t.DataSize-1
+     t.Selection←(0 0)(n m)
+     t.SelectType←'All'
+     Refresh t
+ }
