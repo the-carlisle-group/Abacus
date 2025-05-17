@@ -1,10 +1,10 @@
  Select←{
-     t←⍺
-     e←⍵       ⍝ Expansion  0 1, or ¯1 0, etc.
-     d←|1⊃e    ⍝ Direction, 0 for row 0, or 1 for column
-     b←⊃d⊃¨t.Selection≠⊂t.ActiveCell ⍝ 1 for modify UL, 0 for BR
-     t.Selection+←b⌽0 e
-     o←SelectionCorner t
-     _←o AdjustWindow t
-     Refresh t
+     ⍺.SelectType←'Cell'
+     c←⍵+SelectionCorner ⍺
+     s←(⌊/,⌈/)⍺.ActiveCell c
+     ¯1∊⊃s:0
+     ∨/⍺.DataSize=1⊃s:0
+     ⍺.Selection←s
+     _←c AdjustWindow ⍺
+     Refresh ⍺
  }
