@@ -1,0 +1,9 @@
+ RefreshActiveCellClass←{
+     ⍝ Active cell moved due to keyboard or mouse,
+     ⍝ but Index not changed, so only only partial refresh needed.
+     _←⍺.HeaderCells[1⊃¨⍵.Index]A.MoveClass'selected-range'
+     _←⍺.BodyCells[(0⊃¨⍵.Index),¨0]A.MoveClass'selected-range'
+     _←⍵ A.MoveClass'active-cell'
+     0
+
+ }

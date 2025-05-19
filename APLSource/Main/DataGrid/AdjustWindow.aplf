@@ -11,10 +11,11 @@
      p q←(⊂d)-s e
      x←(p×(p<0)×1,u)+q×q>0
      ⍵.WindowIndex+←x
-     ⍵≡0 0:0
+     ⍝x≡0 0:0
      ⍵.WindowIndex[1]←(x[1]>0)⊃(⍵.WindowIndex[1])((1⊃⍺)⊃⍵.ScrollIntoViewIndex)
      r c←⍵.WindowIndex
      ⍵.WindowSize[1]←c⊃⍵.ColumnsPerIndex
      ⍵.TableCell←⍵ ActiveCell2TableCell ⍵.ActiveCell
+     x≢0 0
      1
  }

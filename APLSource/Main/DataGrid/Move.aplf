@@ -1,11 +1,12 @@
  Move←{
      ⍝ ⍺ ←→Table
-     ⍝ ⍵ ←→ ActiveCell
+     ⍝ ⍵  ←→ ActiveCell
      HandleInput ⍺:0
      _←ClearSelection ⍺
      tc←⍺.TableCell
      (⊃⍵)=⊃⍺.DataSize:AppendRow ⍺
      ∨/(⍵<0)∨⍵≥⍺.DataSize:0
+
      e←⎕NS''
      e.Event←'CellMove'
      e.OldCellIndex←⍺.ActiveCell
@@ -13,10 +14,11 @@
      ⍺.ActiveCell←⍵
      ⍺.Selection←2⍴⊂⍵
      ⍵ AdjustWindow ⍺:e Refresh ⍺
+
      bc←⍺.BodyCells
      lc←tc⌷bc
      nc←⍺.TableCell⌷bc
-     _←lc nc A.MoveClass'active-cell'
+     ⍺ RefreshActiveCellClass lc nc
      _←nc A.FireEvent'focus'
      _←⍺ Fire e
      0

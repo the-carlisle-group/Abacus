@@ -24,6 +24,7 @@
      t.Width←0
      t.Highlight←0
      t.Selection←⍬
+     t.SelectType←'Cell'
      t.SelectInProgress←0
      t.IgnoreNextKey←0
      t.FontSize←18
