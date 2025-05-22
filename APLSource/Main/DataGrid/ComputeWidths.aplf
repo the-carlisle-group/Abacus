@@ -1,5 +1,8 @@
  ComputeWidths←{
+     ⍝ This needs major work
+     ⍝ Also, allow explicity setting width in Column space
      t←⍺
-     c←(t.RowNumbers/4),12⌈{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
+     r←t.RowNumbers/4+2×1<≢t.HeaderValues
+     c←r,12⌈{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
      c×t.FontSize
  }

@@ -9,7 +9,7 @@
      r.font_family←'Tahoma'
      r.font_size←px t.FontSize
      ⍝ ********************
-     r←s Rule'thead>tr'
+     r←s Rule'thead'
      r.height←px t.HeaderHeight
      ⍝ *********************************
      r←s Rule'tbody'

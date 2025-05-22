@@ -17,7 +17,7 @@
      ⍝ We know r and c, so we can do col titles here
      o←t.OptiTable
      h←o.Header
-     h.Cells.class[c]←h.Cells.class[c],¨⊂('All' 'Column'∊⍨⊂t.SelectType)⊃' selected-range' ' selected-range-all'
+     h.Cells.class[;c]←h.Cells.class[;c],¨⊂('All' 'Column'∊⍨⊂t.SelectType)⊃' selected-range' ' selected-range-all'
      ⍝ And Row number here
      v[r;t.RowNumbers/0]←v[r;t.RowNumbers/0],¨⊂('All' 'Row'∊⍨⊂t.SelectType)⊃' selected-range' ' selected-range-all'
      ⍝ Return body cell class

@@ -2,14 +2,14 @@
      t←⍵
      d←t.Document
      (r c)←t.WindowPadding+t.RowsToDisplay(⌈/t.ColumnsPerIndex)
-     t.Content←{⍵.Content}A.NewTable(r c⍴⊂'')(c⍴⊂'')
+     t.Content←{⍵.Content}A.NewTable(r c⍴⊂'')(t.HeaderRowCount c⍴⊂'')
      bc←##.BodyCells t
      bc.Selected←0
      bc.Index←⍳r c
      t.BodyCells←bc
-     hc←,##.HeaderCells t
+     hc←##.HeaderCells t
      hc.Selected←0
-     hc.Index←⍳c
+     hc.Index←(⊂¯1 1)×(⊂1 0)+⊖⍳⍴hc
      t.HeaderCells←hc
      _←A.SetParent t
      e←A.Elements t
@@ -21,5 +21,6 @@
      o.(Header Body).id←t.Content.id
      o.Header.Rows.id←(##.HeaderRows t).id
      o.Body.Cells.tabindex←'0'
+     o.Header.Cells.tabindex←'0'
      0
  }

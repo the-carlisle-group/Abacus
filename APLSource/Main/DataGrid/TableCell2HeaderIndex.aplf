@@ -1,0 +1,6 @@
+ TableCell2HeaderIndex←{
+     ⍺←⍵.TableCell
+     r c←⍺
+     i←r+⍵.HeaderRowCount
+     i c
+ }

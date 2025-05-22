@@ -1,6 +1,7 @@
  SetValue←{
      t v←⍺ ⍵
      i j←t.ActiveCell
+     i<0:0⊣t.HeaderValues[⊂i j+t.HeaderRowCount 0]←⊂v
      ~t.Inverted:0⊣t.Values[⊂i j]←⊂v
      c←j⊃t.Values
      _←{2=⍴⍴c:c[i;]←(1⊃⍴c)↑v ⋄ c[i]←v}0

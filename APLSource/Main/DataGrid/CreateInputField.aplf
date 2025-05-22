@@ -1,27 +1,14 @@
  CreateInputField←{
-     ⍝ ****************↓↓↓↓ OLD COMMENTS↓↓↓↓
-     ⍝ Inside <td>:
-     ⍝ 1. Remove the padding of td
-     ⍝ 2. Create a new div (input-cell) to hold <input> element
-     ⍝    This div is positioned "relative", so input can be absolute with respect to it.
-     ⍝    The input element is positioned "absolute", 100% width.
-     ⍝ 3. Create a new div (input-temp) with existing content,
-     ⍝    and original td padding to maintain column width.
-     ⍝    If this is not done, and the widest content cell is being edited
-     ⍝    the column will resize to the next widest content cell.
-     ⍝ 4. Set the outerHMTL of <td> so class is changed too.
-     ⍝ **************↑↑↑↑↑ OLD COMMENTS ↑↑↑
-
      ⍝ When editing a cell, the <td> gets its content replaced
      ⍝ with the <input> element. If the cell has the widest content of the
      ⍝ column, the column width shrinks to the next widest as the <input>
      ⍝ element, even with text in it, does not force the column to stay wide enough...
      t←⍵
-     td←t.TableCell⌷t.BodyCells
+     td←GetTableCell t
      _←t.LastAnchor A.RemoveProperty'anchor-name'
      _←td A.SetAnchorName'--input-cell'
      t.LastAnchor←td
-     v←⊃t.TableCell⌷t.OptiTable.Body.Values
+     v←GetTableCellValue t
      ⍺←v
      i←A.New'input'
      i.id←'grid-input'
@@ -39,7 +26,6 @@
      e←A.New'div'
      e.id←'grid-error'  ⍝ CSS
      c←i,e              ⍝ New Content
-
      _←td A.SetInnerHTML c
      _←td A.AddClass'in-cell'
      n←⍕≢⍺

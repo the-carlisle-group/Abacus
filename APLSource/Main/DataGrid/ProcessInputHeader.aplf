@@ -1,0 +1,26 @@
+ ProcessInputHeader←{
+     ⎕←'edit the header'
+     i←⍵
+     t←i A.GetNearest'table'
+     e←⎕NS''
+     e.Event←'BeforeHeaderCellChange'
+     e.CellIndex←t.ActiveCell
+     e.OldValue←'get the old value' ⍝ t GetValue t.ActiveCell
+     e.NewValue←i.value
+     t Fire e:1
+     j←TableCell2HeaderIndex t
+     t.OptiTable.Header.Values[⊂j]←⊂i.value
+     _←t SetValue e.NewValue
+     ⍝ Encapsulate this from Init:
+     t.ColumnTitles←(t.RowNumbers/⊆t.HeaderRowTitles),t.HeaderValues ⍝
+     ⍝
+     c←i A.GetNearest'th'
+     _←i A.RemoveAttribute'onblur'
+     _←c A.SetInnerHTML e.NewValue
+     _←c A.RemoveClass'in-cell'
+     t.CellMode←0
+     t.Changed←1
+     e.Event←'HeaderCellChange'
+     _←t Fire e
+     0
+ }

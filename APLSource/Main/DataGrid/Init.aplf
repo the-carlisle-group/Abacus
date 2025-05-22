@@ -3,14 +3,19 @@
      t←g.Table
      t.Inverted←1=≢⍴t.Values
      t.Columns←DefaultColumnProperties t
+     ⍝ Always a mat.
+     t.HeaderValues←{2=⍵.⎕NC'HeaderValues':⍵.HeaderValues ⋄ {(1,⍴⍵)⍴⍵}t.Columns.Name}t
+     t.HeaderRowCount←≢t.HeaderValues
      n←≢t.Columns
-     t.HeaderHeight←4×t.FontSize
+     ⍝ For now: Total header height....
+     t.HeaderHeight←(≢t.HeaderValues)×3×t.FontSize ⍝ Number of header rows ...
      t.RowHeight←2×t.FontSize
      _←g ##.SetDynamicCSS DynamicCSS t
      t.DataSize←{t.Inverted:(≢0⊃⍵),≢⍵ ⋄ ⍴⍵}t.Values
      t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
      t.Widths←t ComputeWidths 0
-     t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Columns.Name
+     ⍝ t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Columns.Name
+     t.ColumnTitles←(t.RowNumbers/⊆t.HeaderRowTitles),t.HeaderValues ⍝
      t.FixedColumns←t.RowNumbers+t.FreezeColumns
      t.WindowIndex←t{2=⍺.⎕NC'WindowIndex':⍺.WindowIndex ⋄ ⍵}0,t.FreezeColumns
      t.ActiveCell←t{2=⍺.⎕NC'ActiveCell':⍺.ActiveCell ⋄ ⍵}0 0

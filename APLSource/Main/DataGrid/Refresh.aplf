@@ -8,8 +8,7 @@
      _←t ##.SetProperty'innerHTML'(##.Sanitize h)
      _←RefreshScrollBars t
      t.TableCell≡¯1 ¯1:t A.FireEvent'focus'
-     bc←t.BodyCells
-     c←t.TableCell⌷bc
+     c←GetTableCell t
      _←c A.FireEvent'focus'
      t Fire e
  }

@@ -1,0 +1,8 @@
+ GoToHeaderRow←{
+     ~⍺.EditHeader:0
+     ¯1≠0⊃⍵:0
+     ⍺.ActiveCell←⍵
+     ⍺.Selection←2⍴⊂⍵
+     _←(0⌈⍵)AdjustWindow ⍺
+     Refresh ⍺
+ }

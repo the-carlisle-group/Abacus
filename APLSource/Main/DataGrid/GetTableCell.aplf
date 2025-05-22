@@ -1,0 +1,8 @@
+ GetTableCell←{
+     ⍝ Get th or td element
+     ⍺←⍵.TableCell
+     0≤0⊃⍺:⍺⌷⍵.BodyCells
+     r c←⍺
+     i←r+⍵.HeaderRowCount
+     i c⌷⍵.HeaderCells
+ }

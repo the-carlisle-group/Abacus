@@ -4,7 +4,7 @@
      e←⍵.Target         ⍝ Know it's th
      t←⍵.CurrentTarget
      c←t.HeaderCells
-     i←e.Index
+     i←1⊃e.Index
      r←t.RowNumbers∧i=0 ⍝ Select All
      t.SelectType←r⊃'Column' 'All'
      t.SelectInProgress←~r

@@ -7,10 +7,17 @@
      nr nc←⍴v
      o←⍺.OptiTable
      h←o.Header
-     h.Values←(1,nc)⍴⍺.ColumnTitles[q]
+     h.Values←⍺.ColumnTitles[;q]
      h.Cells.style←⍺.HeaderStyles[q]
-     h.Cells.class←⍺.HeaderClass[q]
-     h.Cells.id←nc↑t.HeaderCells.id
+     h.Cells.class←(t.HeaderRowCount nc)⍴⍺.HeaderClass[q]
+     _←{
+         ∧/t.TableCell≥0:0
+         r c←t.TableCell
+         r←r+t.HeaderRowCount
+         h.Cells.class[⊂r c]←⊂((⊂r c)⊃h.Cells.class),' active-cell'
+         0
+     }0
+     h.Cells.id←(t.HeaderRowCount nc)↑t.HeaderCells.id
      o.Body.Values←v
      o.Body.Cells.id←(nr nc)↑t.BodyCells.id
      bc←t Highlight i q(nr nc⍴⍺.ColumnClass[q])

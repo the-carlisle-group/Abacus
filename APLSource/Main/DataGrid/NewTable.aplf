@@ -28,6 +28,8 @@
      t.SelectInProgress←0
      t.IgnoreNextKey←0
      t.FontSize←18
+     t.HeaderRowTitles←''
+     t.EditHeader←0
      t.Init←0
      t
  }
