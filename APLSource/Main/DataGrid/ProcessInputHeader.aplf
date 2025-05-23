@@ -1,5 +1,4 @@
  ProcessInputHeader←{
-     ⎕←'edit the header'
      i←⍵
      t←i A.GetNearest'table'
      e←⎕NS''
