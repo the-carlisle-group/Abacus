@@ -6,6 +6,7 @@
      ⍝ Always a mat.
      t.HeaderValues←{2=⍵.⎕NC'HeaderValues':⍵.HeaderValues ⋄ {(1,⍴⍵)⍴⍵}t.Columns.Name}t
      t.HeaderRowCount←≢t.HeaderValues
+     t.Headers←DefaultHeaderProperties t
      n←≢t.Columns
      ⍝ For now: Total header height....
      t.HeaderHeight←(≢t.HeaderValues)×3×t.FontSize ⍝ Number of header rows ...
@@ -15,7 +16,7 @@
      t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
      t.Widths←t ComputeWidths 0
      ⍝ t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Columns.Name
-     t.ColumnTitles←(t.RowNumbers/⊆t.HeaderRowTitles),t.HeaderValues ⍝
+     t.ColumnTitles←(t.RowNumbers/t.Headers.Title),t.HeaderValues ⍝
      t.FixedColumns←t.RowNumbers+t.FreezeColumns
      t.WindowIndex←t{2=⍺.⎕NC'WindowIndex':⍺.WindowIndex ⋄ ⍵}0,t.FreezeColumns
      t.ActiveCell←t{2=⍺.⎕NC'ActiveCell':⍺.ActiveCell ⋄ ⍵}0 0

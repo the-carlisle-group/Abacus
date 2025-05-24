@@ -11,6 +11,7 @@
      h.Cells.style←⍺.HeaderStyles[q]
      h.Cells.class←(t.HeaderRowCount nc)⍴⍺.HeaderClass[q]
      _←{
+         t.TableCell≡¯1 ¯1:0
          ∧/t.TableCell≥0:0
          r c←t.TableCell
          r←r+t.HeaderRowCount

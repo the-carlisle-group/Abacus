@@ -1,0 +1,11 @@
+ DefaultHeaderProperties←{
+     t←⍵
+     n←t.HeaderRowCount
+     d←⎕NS¨n⍴⊂''
+     d.Title←⊂''
+     d.ReadOnly←1
+     0=t.⎕NC'Headers':d
+     h←t.Headers
+     _←d{q←⍺ ⋄ 'q'⎕NS ⍵}¨h ⍝ Simplify in v20 to:  d ⎕NS¨h
+     d
+ }

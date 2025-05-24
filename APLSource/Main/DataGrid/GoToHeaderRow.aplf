@@ -1,5 +1,5 @@
  GoToHeaderRow←{
-     ~⍺.EditHeader:0
+     ⊃⌽⍺.Headers.ReadOnly:0
      ¯1≠0⊃⍵:0
      0>1⊃⍵:0
      ∨/⍵≥⍺.DataSize:0

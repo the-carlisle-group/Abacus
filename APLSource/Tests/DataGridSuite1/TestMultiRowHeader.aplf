@@ -2,9 +2,10 @@
      ⎕TID=0:∇&0
      t←Init GetTable 0
      t.HeaderValues←↑2⍴⊂t.Columns.Name
-     t.HeaderRowTitles←'Source:' 'Target:'
-     t.EditHeader←1
+     h←⎕NS¨2⍴⊂''
+     h.Title←'Source:' 'Target:'
+     h.ReadOnly←1 0
+     t.Headers←h
      _←t.Parent A.DataGrid.Resize 0
      0
-
  }
