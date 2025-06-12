@@ -1,6 +1,9 @@
  Layout←{
      s←⍬
      ⍝ ***********************
+     s,←r←Rule'@view-transition'
+     r.navigation←'auto'
+     ⍝ **********************
      s,←r←Rule'html'
      r.font_size←'16px'
      r.background_color←'White' ⍝ 'Black'

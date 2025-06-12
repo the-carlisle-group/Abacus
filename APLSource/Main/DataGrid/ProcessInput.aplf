@@ -1,7 +1,6 @@
  ProcessInput←{
      i←⍵
      i.Parent.Tag≡'th':ProcessInputHeader ⍵
-     ⎕←'regular edit'
      t←i A.GetNearest'table'
      s←(1⊃t.ActiveCell)⊃t.Columns
      pfn←⍎s.OnParse
