@@ -2,16 +2,18 @@
      New←##.Menu.New
      Add←##.Menu.Add
      m←New''
-     i←m Add'Cut' 'Ctrl+Shift+Alt+X'(A.FQP'OnCut')
-     i←m Add'Copy' 'Ctrl+C'(A.FQP'OnCopy')
-     i←m Add'Paste' 'Ctrl+V'(A.FQP'OnPaste')0 0 1  ⍝ (separator active checked)
-     i.Checked←1                          ⍝ Can do later if needed
-     s←m Add New'Column'                  ⍝ Create a submenu and add it
-     i←s Add'Delete' 'Ctrl+Del'(A.FQP'OnColumnDelete')
-     i←s Add'Create' 'Ctrl+Ins'(A.FQP'OnColumnCreate')
-     i←s Add'More' 'Ctrl+Ins'(A.FQP'OnColumnCreate')
-     i←s Add'Stuff' 'Ctrl+Ins'(A.FQP'OnColumnCreate')
+     i←m Add'Cut' 'Ctrl+Shift+Alt+X' 'OnCut'
+     i←m Add'Copy' 'Ctrl+C' 'OnCopy'
+     i←m Add'Paste' 'Ctrl+V' 'OnPaste' 0 0 1
+     s←m Add New'Column'
+     i←s Add'Delete' 'Ctrl+Del' 'OnColumnDelete'
+     i←s Add'Create' 'Ctrl+Ins' 'OnColumnCreate'
 
+     i←s Add'More' 'Ctrl+Ins' 'OnColumnCreate'
+     i←s Add'Stuff' 'Ctrl+Ins' 'OnColumnCreate'
 
+     s2←s Add New'Sub2'
+     i←s2 Add'AAA' 'Ctrl+A' 'OnColumnDelete'
+     i←s2 Add'BBB' 'Ctrl"b' 'OnColumnDelete'
      ⍵ ##.Menu.Show m
  }

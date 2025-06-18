@@ -1,0 +1,14 @@
+ Init←{
+     ⍝ ⍺ ←→ Event Message
+     ⍝ ⍵ ←→ Menu Component
+     d←⍺.Document
+     m←⍵
+     m.Onkeydown←A.FQP'OnKeyDown'
+     m.Onclick←A.FQP'OnClick'
+     m.Onmouseover←A.FQP'OnMouseOver'
+     m.Ontoggle←A.FQP'OnToggle'
+     m.Context←⍺
+     b←A.GetBody d
+     _←d A.SetDefaultId A.Elements m
+     b A.AppendChild m
+ }

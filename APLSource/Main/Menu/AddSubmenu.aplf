@@ -1,14 +1,8 @@
  AddSubmenu←{
      m←⍺
-
-     b←⎕UCS 8250
      b←'&gt;'
-     b←'&#62'
      c←A.New¨{'span'⍵}¨''(⊃⍵.Content)''(⊂⊂b)
-
-     ⍝ i←m A.New'li'(⍵.Content,⍵)
      i←m A.New'li'(c,⍵)
-
      i.Type←'Menu'
      i.tabindex←0
      i.class←''

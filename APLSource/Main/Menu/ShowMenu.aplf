@@ -1,0 +1,9 @@
+ ShowMenu←{
+     ⍝ ⍺ ←→ Menu
+     ⍝ ⍵ ←→ Anchor
+     ⍺←⊃⌽⍵.Content
+     _←⍵ A.SetAnchorName'--sub-menu'
+     _←⍺ A.SetPositionAnchor'--sub-menu'
+     _←⍺ A.ExecuteOnElement'showPopover()'
+     ##.SetFocus⊃⍺.Content
+ }

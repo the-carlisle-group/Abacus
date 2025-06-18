@@ -10,10 +10,8 @@
      s.font_family←'Arial'
      s.font_size←'1.25rem'
      s.text_wrap←'nowrap'
-     ⍝ s.background_color←'gray'
-     s.position_anchor←'--context-menu'
-     ⍝ s.inset_area←'bottom right'
      s.inset_area←'right'
+     s.position_area←'right'
      s.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
      ⍝ ************************
      r←s Rule'li'

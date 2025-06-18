@@ -3,11 +3,9 @@
      t.Tag≢'li':0
      m←⍵.CurrentTarget
      c←t.Parent.Content
-
-     ⍝ f←c⊃⍨c.class⍳⊂'sel-item'
      f←⊃c.Selected/c
      _←f t ##.MoveClass'sel-item'
      (f t).Selected←0 1
+     t.Type≡'Menu':ShowMenu t
      A.SetFocus t
-
  }

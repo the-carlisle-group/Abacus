@@ -2,7 +2,7 @@
      ⍝ ⍵ ←→ Event Message
      m←⍵.CurrentTarget
      i←⍵.Target ##.GetNearest'li'
-     i.Type≡'Menu':ShowSubMenu i
+     i.Type≡'Menu':ShowMenu i
      ~i.Active:0
      f←⍎i.Function
      _←##.DeleteElement m
