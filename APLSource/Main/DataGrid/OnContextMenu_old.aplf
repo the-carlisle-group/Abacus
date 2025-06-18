@@ -1,0 +1,8 @@
+ OnContextMenu_old←{
+     p←⎕NS''
+     p.Label←'Cut' 'Copy' 'Paste' '' 'Delete' '' 'Column'
+     p.Shortcut←'Ctrl+X' 'Ctrl+C' 'Ctrl+V' '' 'Del' '' '>'
+     p.Function←A.FQP¨'OnCut' 'OnCopy' 'OnPaste' '' 'OnDelete' '' 'ShowColumnMenu'
+     p.Active←1
+     ⍵ ##.ContextMenu.Show p
+ }

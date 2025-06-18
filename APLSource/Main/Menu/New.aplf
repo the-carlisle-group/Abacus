@@ -1,0 +1,9 @@
+ New←{
+     ⎕THIS.A←##
+     m←A.New'menu'⍵
+     m.class←'menu'
+     m.popover←'auto'
+     m.Toggled←0
+     ⍝ m.tabindex←0
+     m
+ }

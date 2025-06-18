@@ -1,6 +1,5 @@
  OnToggle←{
-     0
-     m←⍵.Target
+     m←⍵.CurrentTarget
      0=m.Toggled:m.Toggled←1
      _←m.Context.Target A.RemoveProperty'anchor-name'
      m ##.DeleteElement m

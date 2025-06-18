@@ -1,0 +1,7 @@
+ SetPostitionAnchor←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Anchor name
+     ⍺=0:0
+     j←'document.getElementById("',⍺.id,'").style.positionAnchor="',⍵,'"'
+     ⍺.Document ExecuteJavaScript j
+ }

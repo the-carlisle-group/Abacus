@@ -1,0 +1,8 @@
+ ShowColumnMenu←{
+     p←⎕NS''
+     p.Label←'Delete' 'Create'
+     p.Shortcut←'Ctrl+Shift+X' 'Ctrl+Shift+C'
+     p.Function←A.FQP¨'OnColumnDelete' 'OnColumnCreate'
+     p.Active←1
+     ⍵ ##.ContextMenu.Show p
+ }

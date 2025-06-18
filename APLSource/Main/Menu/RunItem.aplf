@@ -1,17 +1,10 @@
  RunItem←{
      ⍝ ⍵ ←→ Event Message
      m←⍵.CurrentTarget
-     c←m.Content
-     i←c.class⍳⊂'sel-item'
-
-
-     f←⍎i⊃m.Functions
-     s←'>'=⊃i⊃m.Shortcuts    ⍝ Is it a submenu
-     s:f ⍵
-
-
-
-
+     i←⍵.Target ##.GetNearest'li'
+     i.Type≡'Menu':ShowSubMenu i
+     ~i.Active:0
+     f←⍎i.Function
      _←##.DeleteElement m
      _←m.Context.Target A.RemoveProperty'anchor-name'
      _←##.SetFocus m.Context.Target

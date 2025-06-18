@@ -1,0 +1,6 @@
+ HideSubMenu←{
+     i←⍵.Target
+     s←i.Parent
+     _←s A.ExecuteOnElement'hidePopover()'
+     ##.SetFocus⊃s.Parent
+ }

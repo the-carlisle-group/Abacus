@@ -1,7 +1,7 @@
  CSS←{
      Rule←##.NewRule
      ⍝ ************************
-     s←Rule'.context-menu'
+     s←Rule'.menu'
      s.user_select←'none'
      s.padding←'.25em'
      s.list_style←'none'

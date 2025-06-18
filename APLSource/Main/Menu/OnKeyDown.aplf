@@ -1,11 +1,11 @@
  OnKeyDown←{
-     l←⍵.CurrentTarget
      k←⍵.Key
      b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
      p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
-     ⍝ p≡'Escape':Close ⍵.CurrentTarget
      p≡'Enter':RunItem ⍵
-     p≡'ArrowUp':l Move 1
-     p≡'ArrowDown':l Move ¯1
+     p≡'ArrowUp':⍵ Move 1
+     p≡'ArrowDown':⍵ Move ¯1
+     p≡'ArrowRight':ShowSubMenu ⍵.Target
+     p≡'ArrowLeft':HideSubMenu ⍵
      0
  }

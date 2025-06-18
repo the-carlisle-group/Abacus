@@ -1,0 +1,24 @@
+ Add←{
+     m←⍺
+     9=⎕NC'⍵':m AddSubmenu ⍵
+     v←⍵,(≢⍵)↓'' '' '' 0 1 0
+
+     cm←(5⊃v)/⎕UCS 10004
+
+     c←A.New¨{'span'⍵}¨cm(0⊃v)(1⊃v)''
+
+
+
+
+     i←m A.New'li'c ⍝ (0⊃v)
+     i.(Label Shortcut Function Separator Active Checked)←v
+     i.Type←'Item'
+     i.tabindex←'0'
+
+
+     n←≢m.Content
+     m.Content.class←n↑(⊂'sel-item'),n⍴⊂''
+     m.Content.Selected←n↑1
+     _←{4⊃v:0 ⋄ i.class,←' inactive' ⋄ 0}0
+     i
+ }

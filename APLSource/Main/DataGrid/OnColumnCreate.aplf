@@ -1,0 +1,4 @@
+ OnColumnCreate←{
+     ⎕←'On Column Create!'
+     0
+ }

@@ -1,0 +1,6 @@
+ Close←{
+     m←⍵
+     _←##.DeleteElement m
+     _←m.Context.Target A.RemoveProperty'anchor-name'
+     ##.SetFocus m.Context.Target
+ }

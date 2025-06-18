@@ -1,0 +1,4 @@
+ OnColumnDelete←{
+     ⎕←'On Column Delete!'
+     0
+ }

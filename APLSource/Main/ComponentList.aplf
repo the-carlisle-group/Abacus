@@ -11,7 +11,7 @@
      l,←⊂'TextEdit'
      l,←⊂'ToolTip'
      l,←⊂'ToggleGroup'
-     l,←⊂'ContextMenu'
+     l,←⊂'Menu'
      l,←⊂'PickList'
      l
  }
