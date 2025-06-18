@@ -3,7 +3,7 @@
      t.Tag≢'li':0
      m←⍵.CurrentTarget
      c←t.Parent.Content
-     f←⊃c.Selected/c
+     f←⊃(c.Selected,1)/c,t
      _←f t ##.MoveClass'sel-item'
      (f t).Selected←0 1
      t.Type≡'Menu':ShowMenu t

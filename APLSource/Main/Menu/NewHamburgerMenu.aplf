@@ -1,0 +1,9 @@
+ NewHamburgerMenu←{
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ [unused]
+     p m←⍺ ⍵
+     c←⎕UCS 9776
+     b←⍺ ##.New'button'c
+     b.class←'hamburger-menu'
+     b
+ }

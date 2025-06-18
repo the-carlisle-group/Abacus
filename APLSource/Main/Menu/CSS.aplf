@@ -10,8 +10,8 @@
      s.font_family←'Arial'
      s.font_size←'1.25rem'
      s.text_wrap←'nowrap'
-     s.inset_area←'right'
-     s.position_area←'right'
+     ⍝ s.inset_area←'right'
+     ⍝ s.position_area←'right' ⍝ 'right'
      s.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
      ⍝ ************************
      r←s Rule'li'
@@ -36,5 +36,24 @@
      r←s Rule'.inactive'
      r.opacity←0.6
      ⍝ *********************************
-     ##.UnNestCSS s
+     z←##.UnNestCSS s
+     ⍝ More for menu-bar
+     s←Rule'.menu-bar'
+     s.user_select←'none'
+     s.padding←'.5rem'
+     s.list_style←'none'
+     s.display←'flex'
+     s.gap←'1rem'
+     s.font_family←'Arial'
+     s.font_size←'1.25rem'
+     s.text_wrap←'nowrap'
+     z,←s
+     ⍝ More
+     s←Rule'.hamburger-menu'
+     s.width←'100px'
+     s.padding←0
+     s.font_size←'48px'
+     z,←s
+     ⍝
+     z
  }

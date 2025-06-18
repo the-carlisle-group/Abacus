@@ -1,11 +1,21 @@
  CSS←{
 
-
      ⍬
+
      ⍝ NOTHING FOR NOW
 
      Rule←A.NewRule
      s←Rule''
+
+     r←s Rule'hamburger-button'
+     s.width←'100px'
+     s.font_size←'72px'
+     s
+
+
+
+
+
      ⍝ Reset
      r←s Rule'*'
      r.margin←0

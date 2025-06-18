@@ -1,4 +1,4 @@
- BuildMenu←{
+ OnHamburgerMenu←{
      New←##.Main.Menu.New
      Add←##.Main.Menu.Add
      m←New''
@@ -14,7 +14,5 @@
      i←s Add'Large Icons' 'Ctrl+L' 'OnViewLarge'
      i←s Add'Small Icons' 'Ctrl+S' 'OnViewSmall'
      i←s Add'List' 'Ctrl+Q' 'OnViewList'
-     m
-     ⍝ ⍺ ##.Main.Menu.NewMenuBar m
-     ⍝ ⍺ ##.Main.Menu.NewHamburgerMenu m
+     ⍵ ##.Main.Menu.Show m
  }

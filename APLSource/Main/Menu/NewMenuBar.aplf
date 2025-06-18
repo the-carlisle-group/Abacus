@@ -1,0 +1,21 @@
+ NewMenuBar←{
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ Menu
+     p m←⍺ ⍵
+     m.class←'menu-bar'
+     _←m.⎕EX'popover'
+
+     ⍝ m.Onkeydown←A.FQP'OnKeyDown'
+     m.Onclick←A.FQP'OnClick'
+     ⍝ m.Onmouseover←A.FQP'OnMouseOver'
+
+
+
+     c←m.Content.Content
+     m.Content.Content←{(1⊃⍵.Content),4⊃⍵}¨c
+
+
+
+     ⍺.Content,←m
+     0
+ }
