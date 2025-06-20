@@ -4,10 +4,12 @@
      a←b A.AutoComplete.New''
      d.AutoCompleteElement←a
      h←b A.New'header'
-     mm←BuildMenu''
-     hb←h ##.Main.Menu.NewHamburgerMenu 0
-     hb.Onclick←A.FQP'OnHamburgerMenu'
 
+     ⍝ Try out a menu bar
+     mb←h A.Menu.NewMenuBar'BuildMenu'
+     ⍝ Or a HamburgerMenu
+     ⍝ hb←h A.Menu.NewHamburgerMenu'BuildMenu'
+⍝    ⍝
 
      h1←h A.New'h1' 'filename'
 

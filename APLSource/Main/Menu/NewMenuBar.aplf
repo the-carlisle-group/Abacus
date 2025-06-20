@@ -1,21 +1,13 @@
  NewMenuBar←{
      ⍝ ⍺ ←→ Parent
-     ⍝ ⍵ ←→ Menu
-     p m←⍺ ⍵
-     m.class←'menu-bar'
-     _←m.⎕EX'popover'
-
-     ⍝ m.Onkeydown←A.FQP'OnKeyDown'
-     m.Onclick←A.FQP'OnClick'
-     ⍝ m.Onmouseover←A.FQP'OnMouseOver'
-
-
-
-     c←m.Content.Content
-     m.Content.Content←{(1⊃⍵.Content),4⊃⍵}¨c
-
-
-
-     ⍺.Content,←m
-     0
+     ⍝ ⍵ ←→ BuildMenu function
+     f←1 A.FQP ⍵
+     b←⍺ A.New'menu'
+     b.BuildFunction←f
+     b.class←'menu-bar'
+     b.Onclick←A.FQP'OnClickMenuBar'
+     c←((⍎f)0).Content.Content
+     l←b A.New¨{'li'⍵.Content}¨1⊃¨c
+     l.tabindex←0
+     b
  }

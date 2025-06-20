@@ -1,9 +1,9 @@
  NewHamburgerMenu←{
      ⍝ ⍺ ←→ Parent
-     ⍝ ⍵ ←→ [unused]
-     p m←⍺ ⍵
-     c←⎕UCS 9776
-     b←⍺ ##.New'button'c
+     ⍝ ⍵ ←→ Build Function
+     b←⍺ ##.New'button'(⎕UCS 9776)
      b.class←'hamburger-menu'
+     b.BuildFunction←1 ##.FQP ⍵
+     b.Onclick←A.FQP'OnClickHamburger'
      b
  }

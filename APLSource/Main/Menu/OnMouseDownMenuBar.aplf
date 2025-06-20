@@ -1,0 +1,9 @@
+ OnMouseDownMenuBar←{
+     mb←⍵.CurrentTarget
+     mi←⍵.Target
+     i←mb.Content⍳mi
+     f←⍎mb.BuildFunction
+     m←f 0
+     s←⊃⌽i⊃m.Content.Content
+     ⍵ Show s
+ }

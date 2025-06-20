@@ -11,10 +11,10 @@
      i←s Add'Copy' 'Ctrl+C' 'OnCopy'
      i←s Add'Paste' 'Ctrl+V' 'OnPaste'
      s←m Add New'View'
-     i←s Add'Large Icons' 'Ctrl+L' 'OnViewLarge'
-     i←s Add'Small Icons' 'Ctrl+S' 'OnViewSmall'
      i←s Add'List' 'Ctrl+Q' 'OnViewList'
+     s2←s Add New'Icons'
+     i←s2 Add'Small' 'Ctrl+L' 'OnViewLarge'
+     i←s2 Add'Medium' 'Ctrl+M' 'OnViewMedium'
+     i←s2 Add'Large' 'Ctrl+S' 'OnViewSmall'
      m
-     ⍝ ⍺ ##.Main.Menu.NewMenuBar m
-     ⍝ ⍺ ##.Main.Menu.NewHamburgerMenu m
  }

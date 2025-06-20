@@ -1,0 +1,5 @@
+ OnClickHamburger←{
+     b←⍵.Target
+     m←(⍎b.BuildFunction)0
+     ⍵ Show m
+ }
