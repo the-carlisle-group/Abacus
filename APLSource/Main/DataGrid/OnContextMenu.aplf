@@ -2,18 +2,40 @@
      New←##.Menu.New
      Add←##.Menu.Add
      m←New''
-     i←m Add'Cut' 'Ctrl+Shift+Alt+X' 'OnCut'
+     i←m Add'Cut' 'Ctrl+X' 'OnCut'
      i←m Add'Copy' 'Ctrl+C' 'OnCopy'
-     i←m Add'Paste' 'Ctrl+V' 'OnPaste' 0 0 1
-     s←m Add New'Column'
-     i←s Add'Delete' 'Ctrl+Del' 'OnColumnDelete'
-     i←s Add'Create' 'Ctrl+Ins' 'OnColumnCreate'
+     i←m Add'Paste' 'Ctrl+V' 'OnPaste'
+     i←m Add'Delete (clear contents)' 'Del' 'OnDelete' 1
+     i←m Add'Copy with headers' '' 'OnCopyWithHeaders' 1
+     i←m Add'Copy as Markdown' '' 'OnCopyAsMarkdown'
+     i←m Add'Find and replace...' 'Ctrl+F' 'OnFindAndReplace' 1
+     i←m Add'Go to column' 'Ctrl+G' 'OnGotoColumn'
 
-     i←s Add'More' 'Ctrl+Ins' 'OnColumnCreate'
-     i←s Add'Stuff' 'Ctrl+Ins' 'OnColumnCreate'
+     rm←m Add New'Row' 1
+     i←rm Add'Insert' 'Ctrl+Ins' 'OnInsertRow'
+     i←rm Add'Delete' 'Ctrl+Del' 'OnDeleteRow'
+     i←rm Add'Move up' 'Shift+Alt+UpArrow' 'OnMoveRowUp '
+     i←rm Add'Move down' 'Shift+Alt+DownArrow' 'OnMoveRowDown'
+     i←rm Add'Copy down' 'Shift+Alt+DownArrow' 'OnCopyRowDown'
 
-     s2←s Add New'Sub2'
-     i←s2 Add'AAA' 'Ctrl+A' 'OnColumnDelete'
-     i←s2 Add'BBB' 'Ctrl"b' 'OnColumnDelete'
+     cm←m Add New'Column'
+     i←cm Add'Move left' 'Ctrl+Alt+LeftArrow' 'OnMoveColumnLeft'
+     i←cm Add'Move right' 'Ctrl+Alt+RightArrow' 'OnMoveColumnRight' 1
+     i←cm Add'Rename...' '' 'OnRenameColumn'
+     i←cm Add'Convert to Char' '' 'OnConvertToChar '
+     i←cm Add'Convert to numeric' '' 'OnConvertToNumeric'
+     i←cm Add'Delete' '' 'OnDeleteColumn' 1
+
+     im←cm Add New'Insert'
+     i←im Add'Char' '' 'InsertColumn'
+     i←im Add'Integer' '' 'InsertColumn'
+     i←im Add'Date' '' 'InsertColumn'
+     i←im Add'Float' '' 'InsertColumn'
+
+     ⍝ Add custom column types here.
+     fm←m Add New'Font'
+     i←fm Add'Increase font size' 'Ctrl +' ''
+     i←fm Add'Decrease font size' 'Ctrl +' ''
+     ⍝ ⎕←##.Render m
      ⍵ ##.Menu.Show m
  }

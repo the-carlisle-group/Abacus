@@ -17,24 +17,16 @@
      h2←d A.ElementByTag'h2'
      _←h2 A.SetInnerHTML(fmt r),' rows by ',(fmt c),' columns'
      c←≢n
-     t←⎕NS''
-     t.Names←n
+     cc←⎕NS¨c⍴⊂''
+     cc.Name←n
+     cc.Type←⊂'Char'
+     cc.Options←⊂''
+     g←d A.GetElementById'CSVdata'
+     _←g A.DataGrid.Clear 0
+     t←g.Table            ⍝ #.Abacus.Tests.DataGridSuite1.Start
      t.Values←v
-     t.Types←c⍴⊂'Char'
-     t.Align←c⍴⊂'left'
-     t.SortDirection←c⍴0
-     g←A.DataGrid.New''   ⍝ #.Abacus.Main.DataGrid.OnResize
-     g.id←'CSVdata'
-     g.Write←1
-     g.RowNumbers←1
-     g.Values←t.Values
-     g.Names←t.Names
-     g.Types←t.Types
-     g.Align←t.Align
-     g.SortDirection←t.SortDirection
+     t.Columns←cc
      _←d A.DataGrid.Init g
-     m←d A.ElementByTag'main'
-     _←m A.SetInnerHTML g
      _←g A.DataGrid.Resize 0
      ⍝ Can't automate below in test yet!
      ⍝ _←d A.AlertBox.Show'File loaded.'

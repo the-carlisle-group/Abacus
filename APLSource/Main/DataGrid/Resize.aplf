@@ -3,7 +3,8 @@
      ⍝ ⍵ ←→ 1, Force Init
      g←⍺
      t←g.Table
-     _←Init⍣(⍵∨~t.Init)⊣g
+     r←Init⍣(⍵∨~t.Init)⊣g
+     r=1:0
      p←t.Parent
      0=p.⎕NC'Width':0
      t.AvailableWidth←p.Width-+/t.FixedColumns↑t.Widths

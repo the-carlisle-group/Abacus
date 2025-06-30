@@ -4,18 +4,15 @@
      a←b A.AutoComplete.New''
      d.AutoCompleteElement←a
      h←b A.New'header'
-
      ⍝ Try out a menu bar
      mb←h A.Menu.NewMenuBar'BuildMenu'
      ⍝ Or a HamburgerMenu
      ⍝ hb←h A.Menu.NewHamburgerMenu'BuildMenu'
-⍝    ⍝
-
      h1←h A.New'h1' 'filename'
-
      m←b A.New'main'
-
-     ⍝ g←m A.DataGrid.New'' ⍝ Dont even need this here
+     g←m A.DataGrid.New''
+     g.Table.RowNumbers←1
+     g.id←'CSVdata'
      f←b A.New'footer'
      h2←f A.New'h2' 'x rows by n columns'
      d.Theme←##.Themes.Dark 0                ⍝ d.Theme←A.GetTheme 'Dark' or d.Theme←'Dark'

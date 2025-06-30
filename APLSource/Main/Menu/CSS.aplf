@@ -3,7 +3,7 @@
      ⍝ ************************
      s←Rule'.menu'
      s.user_select←'none'
-     s.padding←'.25em'
+     s.padding←'.5rem 0'
      s.list_style←'none'
      s.border←'1px solid gray'
      s.border_radius←'.5em'
@@ -16,22 +16,32 @@
      ⍝ ************************
      r←s Rule'li'
      ⍝ r.user_select←'none'
-     r.padding←'.25rem 1rem'
      r.border←'none'
      r.border_radius←'5px'
+     ⍝ ************************
+     r←s Rule'li>div'
      r.display←'flex'
+     r.padding←'.5rem 1rem'
+     r.margin←'0 .25rem'
      r.gap←'1rem'
      r.justify_content←'space-between'
+     ⍝ **********************************
+     r←s Rule'.separator::before'
+     r.content←'""'
+     r.display←'block'
+     r.border_bottom←'1px solid black'
+     r.margin←'.25rem 0'
      ⍝ *********************************
      r←s Rule'span:nth-child(2)'
      r.padding_right←'4rem'
      r.flex_grow←1
      ⍝ *********************************
      r←s Rule'span:nth-child(1)'
-     r.min_width←'1rem'
+     r.min_width←'.75rem'
      ⍝ *********************************
-     r←s Rule'.sel-item'
+     r←s Rule'.sel-item>div'
      r.background_color←'lightblue'
+     r.border_radius←'5px'
      ⍝ *********************************
      r←s Rule'.inactive'
      r.opacity←0.6

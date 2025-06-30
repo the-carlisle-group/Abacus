@@ -1,9 +1,11 @@
  New←{
+     ⍝ ⍵ ←→ Caption [Leading separator]
      ⎕THIS.A←##
-     m←A.New'menu'⍵
+     c s←2↑0,⍨⊆⍵
+     m←A.New'menu'c
      m.class←'menu'
      m.popover←'auto'
      m.Toggled←0
-     ⍝ m.tabindex←0
+     m.Separator←s
      m
  }

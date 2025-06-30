@@ -1,6 +1,7 @@
  NewMenuBar←{
      ⍝ ⍺ ←→ Parent
      ⍝ ⍵ ←→ BuildMenu function
+     ⎕THIS.A←##
      f←1 A.FQP ⍵
      b←⍺ A.New'menu'
      b.BuildFunction←f

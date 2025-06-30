@@ -8,8 +8,8 @@
      r.border←0
      r.display←'flex'
      r.flex_direction←'column'
-     r.min_height←'100vh'
-     r.max_height←'100vh'
+     r.height←'100vh'
+     r.width←'100vw'
      ⍝ Header
      r←s Rule'body>header'
      r.background_color←'steelblue'
@@ -17,10 +17,7 @@
      r.padding←'1rem'
      ⍝ Main
      r←s Rule'body>main'
-     r.contain←'strict'
      r.flex←1
-     r.position←'relative'
-     r.overflow←'clip'
      ⍝ Footer
      r←s Rule'body>footer'
      r.background_color←'steelblue'

@@ -5,7 +5,7 @@
      p←⎕NS''
      p.Title←'Open File'
      p.Label←'File name:'
-     p.Value←''
+     p.Value←'c:/DataSets/Baseball2023/batting.csv'
      p.OnOK←A.FQP'Open'
      ⍵.Document A.PromptBox.Show p
  }

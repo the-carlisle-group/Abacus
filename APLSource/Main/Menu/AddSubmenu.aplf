@@ -2,10 +2,10 @@
      m←⍺
      b←'&gt;'
      c←A.New¨{'span'⍵}¨''(⊃⍵.Content)''(⊂⊂b)
-     i←m A.New'li'(c,⍵)
+     i←m A.New'li'(A.New'div'(c,⍵))
      i.Type←'Menu'
      i.tabindex←0
-     i.class←''
+     i.class←⍵.Separator/'separator'
      i.Selected←0
      ⍵.Content←''
      ⍵

@@ -1,0 +1,13 @@
+ Clear←{
+     ⍝ ⍵ ←→ 0 for light, 1 for strong
+     ⍝ ⍺ ←→ DataGrid
+     ⍵:0⊣⍺.Table←⍺ NewTable''
+     t←⍺.Table
+     _←t.⎕EX'HeaderValues'
+     _←t.⎕EX'WindowIndex'
+     _←t.⎕EX'ActiveCell'
+     _←t.⎕EX'Values'
+     _←t.⎕EX'Columns'
+     _←t.⎕EX'Headers'
+     0
+ }

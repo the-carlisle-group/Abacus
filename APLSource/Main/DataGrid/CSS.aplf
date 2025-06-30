@@ -5,6 +5,7 @@
      Border←'solid 1px gray'
      ⍝ ************************
      s←Rule'.data-grid'
+     s.contain←'strict'
      s.display←'grid'
      s.grid_auto_flow←'row'
      s.grid_template_columns←'auto 20px'

@@ -1,5 +1,6 @@
  NewTable←{
      t←⍺ A.NewTable''
+     ⍝ t.Columns←⍬
      t.OptiTable←A.NewOptiTable ⍬
      t.LastAnchor←0
      t.EntryError←0
