@@ -4,6 +4,7 @@
      t.RowNumbers←1
      t.InsertRows←1
      t.InsertColumns←1
+     t.CustomColumnInserts←('Format' 'Char')('Hide' 'CheckBox')('Inactive' 'CheckBox')('DisplayName' 'Char')('Name' 'Char')('Expression' 'Char')('Value' 'Char')
      t.Values←p.Values
      t.Columns←p.Columns
      t.OnBeforeCellChange←A.FQP'OnBeforeCellChange'
