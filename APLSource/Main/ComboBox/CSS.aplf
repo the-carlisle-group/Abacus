@@ -1,0 +1,23 @@
+ CSS←{
+     Rule←##.NewRule
+     ⍝ ************************
+     s←Rule'.combo-box'
+     s.display←'flex'
+     s.align_items←'center'
+     s.gap←'1em'
+     s.font_family←'Arial'
+     s.font_size←'1.5rem'
+     ⍝ ************************
+     r←s Rule'select'
+     ⍝ r.font_family←'Arial'
+     r.font_size←'1.5rem'
+     ⍝ r.appearance←'base-select' ⍝ No until Chrome 135
+     r.padding←'.25em'
+
+
+     ⍝ r←s Rule'::picker(select)'
+     ⍝ r.appearance←'base-select'
+
+     ⍝ **************************
+     ##.UnNestCSS s
+ }

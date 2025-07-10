@@ -9,9 +9,12 @@
      l,←⊂'ProgressBar'
      l,←⊂'PromptBox'
      l,←⊂'TextEdit'
+     l,←⊂'ComboBox'
+     l,←⊂'CheckBox'
      l,←⊂'ToolTip'
      l,←⊂'ToggleGroup'
      l,←⊂'Menu'
      l,←⊂'PickList'
+     l,←⊂'FieldSet'
      l
  }

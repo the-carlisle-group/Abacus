@@ -1,0 +1,26 @@
+ CSS←{
+     Rule←##.NewRule
+     ⍝ Default, vertical field set
+     s←Rule'.field-set'
+     s.display←'grid'
+     s.align_items←'center'
+     s.grid_auto_flow←'row'
+     s.grid_template_columns←'auto auto'
+     s.gap←'1em'
+     s.padding←'2em'
+     s.border←'none'
+     ⍝ *************************
+     r←s Rule'>*'
+     r.display←'contents'
+     ⍝ *************************
+     z←##.UnNestCSS s
+     ⍝ ************************
+     s←Rule'.field-set-grid'
+     s.display←'grid'
+     s.gap←'1em'
+     s.padding←'2em'
+     s.grid_auto_flow←'row'
+     s.grid_template_columns←'auto auto'
+     ⍝ ************************
+     z,s
+ }

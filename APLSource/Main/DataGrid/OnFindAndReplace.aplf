@@ -1,0 +1,5 @@
+ OnFindAndReplace←{
+     t←⍺.CurrentTarget
+     f←⊃⌽t.Parent.Content
+     f A.ExecuteOnElement'show()'
+ }

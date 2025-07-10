@@ -161,5 +161,10 @@
      r.inset_area←'bottom right'
      r.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
      ⍝ *************************************
+     ⍝ MOVE THIS!
+     r←s Rule'.find-and-replace'
+     r.inset←'0'
+     r.margin←'auto'
+
      ##.UnNestCSS s
  }

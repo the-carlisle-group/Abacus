@@ -1,0 +1,25 @@
+ Build←{
+     ⎕THIS.A←#.Abacus.Main
+     g←⍺
+     f←g A.New'dialog'
+     f.class←'find-and-replace'
+     h1←f A.New'h1' 'Find and Replace'
+
+     s←f A.FieldSet.New'' ⍝ Default class is vert
+     e1←s A.TextEdit.New'Find what:' 'FindWhat' '' '' 0
+     e2←s A.TextEdit.New'Look in:' 'LookIn' '' '' 0
+     e3←s A.TextEdit.New'Replace with:' 'ReplaceWith' '' '' 0
+
+     fg←f A.FieldSet.New''
+     ⍝ fg.class←'field-set-grid'
+     e1←fg A.CheckBox.New'Match case' 'MatchCase' 0
+     s1←fg A.ComboBox.New'Search by' 'SearchBy'('Rows' 'Columns')'Rows'
+     e2←fg A.CheckBox.New'Match entire cell contents' 'MatchEntireCellContents' 0
+     e3←fg A.CheckBox.New'Use regular expressions' 'UseRegex' 0
+     ⍝ Cant add grid here as infinite loop.
+     ⍝ Maybe find an replace should be outside grid component?
+     ⍝ Or need to be smart and know its a "nested" grid.
+     ⍝ Or only add FindAndReplace after creating the grid, take it out of New
+     ⍝ rg←f A.DataGrid.New''
+     f
+ }

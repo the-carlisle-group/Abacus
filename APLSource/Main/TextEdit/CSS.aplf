@@ -2,18 +2,18 @@
      Rule←##.NewRule
      ⍝ ************************
      s←Rule'.text-edit'
+     s.display←'flex'
+     s.align_items←'center'
      s.font_family←'Arial'
-     s.font_size←'1.25'
-     s.padding←'2em'
+     s.font_size←'1.5em'
      ⍝ ************************
-     r←s Rule'>input'
+     r←s Rule'input'
      r.font_family←'APL385 Unicode'
-     r.font_size←'1.25rem'
-     r.padding←'.5em 2em'
-     r.margin←'2rem'
+     r.font_size←'1.5rem'
+     r.padding←'.5em'
      r.placeholder←'enter a selection expression, e.g. State in "NY"'
-     r.border←'none'
+     r.border←'1px solid black'
      r.border_radius←'.5rem'
-     r.width←'60rem'
+     ⍝ r.width←'60rem'
      ##.UnNestCSS s
  }

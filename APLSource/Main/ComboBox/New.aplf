@@ -1,22 +1,21 @@
  New←{
      ⍝ Label
      ⍝ Name
+     ⍝ Options
      ⍝ Value
-     ⍝ AutocompleteItems
-     ⍝ Style Vertical(default)|Horizontal
-     c n v a d←⍵
+     c n o v←⍵
      A←##
      d←⍺ A.New'div'
-     d.class←'text-edit'
+     d.class←'combo-box'
      l←d A.New'label'c
      l.for←n
-     i←d A.New'input'
-     i.id←n
+     s←d A.New'select'(A.New¨{'option'⍵}¨o)
+     s.id←n          ⍝ Or name
      ⍝ i.Onblur←A.FQP'OnInputBlur'
      ⍝ i.Oninput←A.FQP'OnInput'
      ⍝ i.Onkeydown←A.FQP'OnKeyDown'
-     i.value←v
-     i.CurrentValue←v
-     i.OriginalValue←v
+     ⍝ i.value←v
+     ⍝ i.CurrentValue←v
+     ⍝ i.OriginalValue←v
      d
  }

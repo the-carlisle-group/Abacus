@@ -8,5 +8,6 @@
      h←g NewScrollBar'h-scrollbar'
      c←g A.New'div'
      c.class←'data-grid-corner'
+     f←g FindAndReplace.Build''
      g
  }

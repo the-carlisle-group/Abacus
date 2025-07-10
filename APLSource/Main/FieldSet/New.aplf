@@ -1,0 +1,8 @@
+ New←{
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ DOM Content
+     ⍺←⊢
+     c←⍺ ##.New'FieldSet'⍵
+     c.class←'field-set'
+     c
+ }
