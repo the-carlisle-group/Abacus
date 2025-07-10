@@ -1,0 +1,19 @@
+ New←{
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ Legend, Options
+     c o←⍵
+     id←o~¨' '
+     ⍺←⊢
+     A←##
+     g←A.New'legend'c
+     d←⍺ A.New'fieldset'g
+     d.class←'radio-group'
+     i←A.New¨{'input' ''}¨o
+     i.type←⊂'radio'
+     i.name←⊂c~''
+     i.id←id
+     l←A.New¨{'label'⍵}¨o
+     l.for←id
+     d.Content,←A.New¨{'div'⍵}¨↓⍉↑i l
+     d
+ }

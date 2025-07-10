@@ -13,6 +13,7 @@
      l,←⊂'CheckBox'
      l,←⊂'ToolTip'
      l,←⊂'ToggleGroup'
+     l,←⊂'RadioGroup'
      l,←⊂'Menu'
      l,←⊂'PickList'
      l,←⊂'FieldSet'
