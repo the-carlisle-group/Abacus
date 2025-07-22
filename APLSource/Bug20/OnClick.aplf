@@ -1,0 +1,4 @@
+ OnClick←{
+     ⎕←'Button clicked!'
+     0
+ }

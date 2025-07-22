@@ -1,0 +1,9 @@
+ RunTest1←{
+     ⍝ This works in V18 and V19, the websocket connection is made
+     ⍝ In V20, the websocket connection fails.
+     ⎕THIS.A←##.Main
+     d←BuildDoc 0
+     f←A.NewForm d
+     _←f.ShowDevTools 1
+     f
+ }

@@ -32,7 +32,9 @@ function onError(evt){
          console.log(evt);
 }
 
-window.onload = APLInit;
+// window.onload = APLInit;
+window.onload = setTimeout(APLInit,500);
+
 
 function onOpen(evt){
          // ws.send ('{"Event": "WSOpen", "SessionID": sessionID}');

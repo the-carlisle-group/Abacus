@@ -1,0 +1,8 @@
+ New←{
+   ⍝ ⍺ ←→ Parent
+   ⍝ ⍵ ←→ Buttons
+     ⍺←⊢
+     d←⍺ ##.New'div'⍵
+     d.class←'button-group'
+     d
+ }

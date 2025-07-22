@@ -15,8 +15,8 @@
      _←'sp3'f.⎕WC'Splitter'f.hr2 f.hr3('Style' 'Horz')('Align' 'Top')
      ⍝ In v19, without this delay, the WebSocketUpgrade
      ⍝    in #.Abacus.Main.OnWebSocketUpgrade event does not fire
-     dl←0.01     ⍝ Use this in v19
-     ⍝ dl←0      ⍝ In 18.2, no delay is ok
+     ⍝ dl←0.01     ⍝ Use this in v19
+     dl←0      ⍝ In 18.2, no delay is ok
      _←⎕DL dl
      _←f.hr1 A.SetApp A.InitApp Build''
      _←⎕DL dl

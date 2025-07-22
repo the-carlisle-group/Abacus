@@ -17,7 +17,22 @@
      e2←fg A.CheckBox.New'Match entire cell contents' 'MatchEntireCellContents' 0
      e3←fg A.CheckBox.New'Use regular expressions' 'UseRegex' 0
 
-     rg←f A.RadioGroup.New'Options'('One' 'Two' 'Three')
+     ⍝ rg←f A.RadioGroup.New'Options'('One' 'Two' 'Three')
+
+
+     b←A.Button.New'Find' 'OnFind'     ⍝ Add shortcut, etc.
+     b,←A.Button.New'First' 'OnFirst'
+     b,←A.Button.New'Prev' 'OnFirst'
+     b,←A.Button.New'Next' 'OnFirst'
+     b,←A.Button.New'Last' 'OnFirst'
+     b,←A.Button.New'Replace all' 'OnReplaceAll'
+     b,←A.Button.New'Replace' 'OnReplace'
+     ⍝ b,←A.New'div'   ⍝ Place holder
+     ⍝ b,←A.New'div'   ⍝ Place holder
+     b,←A.Button.New'Close' 'OnClose'
+     bg←f A.ButtonGroup.New b
+     bg.class←'button-group-grid-rows-2'
+
 
 
 
