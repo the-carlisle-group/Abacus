@@ -1,20 +1,9 @@
  NewApplication←{
      a←⎕NS''
-     ⍝ Rumba Server
-     s←#.Rumba.Core.NewServer 0
-     s.Trap←0
-     s.UseCongaHTTP←1
-     s.Context←⎕THIS
-     s.OnRequest←'OnRequestRumba'
-     s.OnWebSocketUpgrade←'OnWSUpgradeRumba'
-     s.OnWebSocketReceive←'OnWSReceiveRumba'
-     s.Application←a
-     ⍝ Application properties
      a.Name←'[Application]'
-     a.Server←s
+     a.Server←NewRumbaServer a
      a.Sessions←⍬
      a.BuildFunction←''
      a.HTMLRendererProperties←DefaultHRProperties 0
-     ⍝ Return Application object
      a
  }
