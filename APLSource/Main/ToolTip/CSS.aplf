@@ -9,12 +9,8 @@
      s.padding←'10px'
      s.border_radius←'5px'
      s.position_anchor←'--tool-tip'
-     ⍝ Both of the following properies are changing in Chrome!
-     ⍝ https://developer.chrome.com/blog/anchor-syntax-changes?hl=en
-     ⍝ inset-area will be position-area from Chrome 129
-     ⍝ position-try-options will be position-try-fallbacks from Chrome 128
-     s.inset_area←'bottom right'
-     s.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
+     s.position_area←'bottom right'
+     s.position_try_fallbacks←'flip-block, flip-inline, flip-block flip-inline'
      s.opacity←0
      s.transition←'opacity .5s'
      s
