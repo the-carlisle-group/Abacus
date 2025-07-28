@@ -1,21 +1,19 @@
  New←{
      ⍝ Label
      ⍝ Name
-     ⍝ Options
      ⍝ Value
-     c n o v←⍵
+     ⍝ Options
+     c n v o←⍵
      A←##
      d←⍺ A.New'div'
      d.class←'drop-list'
      l←d A.New'label'c
      l.for←n
-     s←d A.New'select'(A.New¨{'option'⍵}¨o)
-     s.id←n          ⍝ Or name
-     ⍝ i.Onblur←A.FQP'OnInputBlur'
-     ⍝ i.Oninput←A.FQP'OnInput'
-     ⍝ i.Onkeydown←A.FQP'OnKeyDown'
-     ⍝ i.value←v
-     ⍝ i.CurrentValue←v
-     ⍝ i.OriginalValue←v
+     op←A.New¨{'option'⍵}¨o
+     cs←(o⍳⊂v)⊃,⍨op
+     cs.selected←'selected'
+     s←d A.New'select'op
+     s.id←n
+     d.Oninput←A.FQP'OnInput'
      d
  }

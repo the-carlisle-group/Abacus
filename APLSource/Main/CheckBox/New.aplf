@@ -1,23 +1,18 @@
  New←{
      ⍝ Label
      ⍝ Name/id
-     ⍝ Value
+     ⍝ Value (1|0)
      c n v←⍵
      A←##
      d←⍺ A.New'div'
+     d.Value←v
      d.class←'check-box'
      i←d A.New'input'
      i.type←'checkbox'
+     _←{v:i.checked←'checked' ⋄ 0}v
      i.id←n
      l←d A.New'label'c
      l.for←n
-
-
-     ⍝ i.Onblur←A.FQP'OnInputBlur'
-     ⍝ i.Oninput←A.FQP'OnInput'
-     ⍝ i.Onkeydown←A.FQP'OnKeyDown'
-     ⍝ i.value←v
-     ⍝ i.CurrentValue←v
-     ⍝ i.OriginalValue←v
+     d.Oninput←A.FQP'OnInput'
      d
  }
