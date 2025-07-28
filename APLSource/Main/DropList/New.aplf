@@ -6,7 +6,7 @@
      c n o v←⍵
      A←##
      d←⍺ A.New'div'
-     d.class←'combo-box'
+     d.class←'drop-list'
      l←d A.New'label'c
      l.for←n
      s←d A.New'select'(A.New¨{'option'⍵}¨o)

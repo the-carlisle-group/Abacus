@@ -1,7 +1,7 @@
  CSS←{
      Rule←##.NewRule
      ⍝ ************************
-     s←Rule'.combo-box'
+     s←Rule'.drop-list'
      s.display←'flex'
      s.align_items←'center'
      s.gap←'1em'
