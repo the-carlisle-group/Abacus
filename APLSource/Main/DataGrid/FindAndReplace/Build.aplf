@@ -13,7 +13,7 @@
      fg←f A.FieldSet.New''
      fg.class←'field-set-grid'
      e1←fg A.CheckBox.New'Match case' 'MatchCase' 0
-     s1←fg A.ComboBox.New'Search by' 'SearchBy'('Rows' 'Columns')'Rows'
+     s1←fg A.ComboBox.New'Search by' 'SearchBy'('Rows' 'Columns' 'California' 'New York' 'Connecticut' 'Rock and Roll' 'Hellow World!')'Rows'
      e2←fg A.CheckBox.New'Match entire cell contents' 'MatchEntireCellContents' 0
      e3←fg A.CheckBox.New'Use regular expressions' 'UseRegex' 0
 

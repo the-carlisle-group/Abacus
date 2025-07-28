@@ -7,17 +7,33 @@
      s.gap←'1em'
      s.font_family←'Arial'
      s.font_size←'1.5rem'
-     ⍝ ************************
-     r←s Rule'select'
-     ⍝ r.font_family←'Arial'
-     r.font_size←'1.5rem'
-     ⍝ r.appearance←'base-select' ⍝ No until Chrome 135
-     r.padding←'.25em'
-
-
-     ⍝ r←s Rule'::picker(select)'
-     ⍝ r.appearance←'base-select'
-
+     ⍝ ***********************************
+     r←s Rule'select' ⍝ ,::picker(select)'
+     r.appearance←'base-select'
+     r.padding←'.25em .5em'
+     ⍝ **********************************
+     r←s Rule'option:focus'
+     r.background←'#ddd'
+     ⍝ *****************************
+     r←s Rule'select::picker-icon'
+     r.color←'#999'
+     r.transition←'0.4s rotate'
+     ⍝ ********************
+     r←s Rule'select:open::picker-icon'
+     r.rotate←'180deg'
+     ⍝ *********************
+     r←s Rule'option'
+     r.gap←'5px'
+     r.border_radius←'5px'
+     r.padding←'2px 10px'
+     ⍝ *****************************
+     r←s Rule'option:checked'
+     r.font_weight←'bold'
+     ⍝ ******************
+     r←s Rule' ::picker(select)' ⍝ NEED SPACE!
+     r.padding←'.5rem'
+     r.border_radius←'10px'
+     r.appearance←'base-select'
      ⍝ **************************
      ##.UnNestCSS s
  }

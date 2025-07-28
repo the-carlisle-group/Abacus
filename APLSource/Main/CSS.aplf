@@ -18,6 +18,7 @@
      ⍝ Input
      r←s Rule'*:focus'
      r.outline←'none'
+
      ⍝ dialog
      r←s Rule'dialog'
      s.border_radius←'1em'
