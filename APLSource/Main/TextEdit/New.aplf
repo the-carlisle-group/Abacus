@@ -3,20 +3,21 @@
      ⍝ Name
      ⍝ Value
      ⍝ AutocompleteItems
-     ⍝ Style Vertical(default)|Horizontal
-     c n v a d←⍵
+     c n v a←4↑⍵,'' ''
      A←##
      d←⍺ A.New'div'
-     d.class←'text-edit'
+     d.Value←v
+     d.Name←n
+     d.class←'TextEdit'
      l←d A.New'label'c
      l.for←n
      i←d A.New'input'
-     i.id←n
-     ⍝ i.Onblur←A.FQP'OnInputBlur'
-     ⍝ i.Oninput←A.FQP'OnInput'
-     ⍝ i.Onkeydown←A.FQP'OnKeyDown'
      i.value←v
-     i.CurrentValue←v
-     i.OriginalValue←v
+     i.id←n
+     d.Oninput←A.FQP'OnInput'
+     ⍝ i.Onblur←A.FQP'OnInputBlur'
+     ⍝ i.Onkeydown←A.FQP'OnKeyDown'
+     ⍝ i.CurrentValue←v
+     ⍝ i.OriginalValue←v
      d
  }

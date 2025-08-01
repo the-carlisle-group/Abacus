@@ -5,8 +5,9 @@
      c n v←⍵
      A←##
      d←⍺ A.New'div'
+     d.Name←n
      d.Value←v
-     d.class←'check-box'
+     d.class←'CheckBox'
      i←d A.New'input'
      i.type←'checkbox'
      _←{v:i.checked←'checked' ⋄ 0}v

@@ -11,6 +11,8 @@
      l,←⊂'TextEdit'
      l,←⊂'DropList'
      l,←⊂'CheckBox'
+     l,←⊂'NumberInput'
+     l,←⊂'DateInput'
      l,←⊂'ToolTip'
      l,←⊂'ToggleGroup'
      l,←⊂'RadioGroup'

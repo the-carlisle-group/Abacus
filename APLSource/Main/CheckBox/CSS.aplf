@@ -1,7 +1,7 @@
  CSS←{
      Rule←##.NewRule
      ⍝ ************************
-     s←Rule'.check-box'
+     s←Rule'.CheckBox'
      s.display←'flex'
      s.align_items←'center'
      s.gap←'.5em'

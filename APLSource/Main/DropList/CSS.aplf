@@ -1,7 +1,7 @@
  CSS←{
      Rule←##.NewRule
      ⍝ ************************
-     s←Rule'.drop-list'
+     s←Rule'.DropList'
      s.display←'flex'
      s.align_items←'center'
      s.gap←'1em'

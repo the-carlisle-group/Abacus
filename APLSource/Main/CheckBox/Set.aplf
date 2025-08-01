@@ -1,0 +1,7 @@
+ Set←{
+     ⍝ ⍺ ←→ Element (Component)
+     ⍝ ⍵ ←→ Value
+     ⍺.Value←⍵
+     i←0⊃⍺.Content
+     i ##.ExecuteOnElement'checked = ',⍵⊃'false' 'true'
+ }

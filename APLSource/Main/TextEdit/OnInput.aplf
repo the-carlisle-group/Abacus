@@ -1,6 +1,6 @@
  OnInput←{
-     ⍝  ⎕←'Key Input in input element'
      i←⍵.CurrentTarget
-     i.value←⍵.Value
+     i.Value←⍵.Value
+     ⎕←'Text Edit on Innput:'i.Value
      0
  }

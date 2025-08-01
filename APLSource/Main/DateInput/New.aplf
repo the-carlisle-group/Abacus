@@ -1,0 +1,19 @@
+ New←{
+     ⍝ Label
+     ⍝ Name
+     ⍝ Value  YYYYMMDD
+     c n v←⍵
+     ⎕THIS.A←##
+     d←⍺ A.New'div'
+     d.Name←n
+     d.Value←v
+     d.class←'DateInput'
+     l←d A.New'label'c
+     l.for←n
+     i←d A.New'input'
+     i.type←'date'
+     i.value←,'BG<9999-99-99>'⎕FMT v
+     i.id←n
+     d.Onchange←A.FQP'OnChange'
+     d
+ }
