@@ -1,0 +1,14 @@
+ Find←{
+     p c←⍺ ⍵
+     p.UseRegex:p RegExFind c
+     v←c._Value
+     h w←⍴v
+     s←p.FindWhat
+     w<≢s:h⍴0
+     mc←p.MatchCase
+     me←p.MatchEntireCell
+     mc∧~me:∨/s⍷v
+     mc∧me:v∧.=w↑s
+     (~mc)∧~me:∨/s⍷⍥⎕C v
+     (~mc)∧me:v∧.=⍥⎕C w↑s
+ }

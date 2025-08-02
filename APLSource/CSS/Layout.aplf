@@ -3,6 +3,23 @@
      ⍝ ***********************
      s,←r←Rule'@view-transition'
      r.navigation←'auto'
+
+
+
+ ⍝     s,←r←Rule'::view-transition-old(root),::view-transition-new(root)'
+ ⍝     r.animation←'fade 0.3s ease both'
+
+
+⍝s,←r←Rule'@keyframes fade'
+⍝  from { opacity: 0; }
+⍝  to   { opacity: 1; }
+⍝}
+
+
+
+
+
+
      ⍝ **********************
      s,←r←Rule'html'
      r.font_size←'16px'

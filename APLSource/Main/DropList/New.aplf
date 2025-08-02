@@ -1,0 +1,20 @@
+ New←{
+     ⍝ Label
+     ⍝ Name
+     ⍝ Value
+     ⍝ Options
+     c n v o←⍵
+     A←##
+     d←⍺ A.New'div'
+     d.class←'DropList'
+     d.Name←n
+     l←d A.New'label'c
+     l.for←n
+     op←A.New¨{'option'⍵}¨o
+     cs←(o⍳⊂v)⊃,⍨op
+     cs.selected←'selected'
+     s←d A.New'select'op
+     s.id←n
+     d.Oninput←A.FQP'OnInput'
+     d
+ }

@@ -1,0 +1,9 @@
+ Get←{
+     ⍝ ⍵ ←→ DOM node
+     ⍝ ← ←→ Namespace of Values from ⍵
+     e←Elements ⍵
+     c←e ⎕VGET⊂'Value'⎕NULL
+     k←e/⍨~c∊⎕NULL
+     0=≢k:()
+     +()⎕VSET(↑k.Name)k.Value
+ }

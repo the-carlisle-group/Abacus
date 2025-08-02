@@ -1,0 +1,9 @@
+ New←{
+  ⍝ ⍺ ←→ Parent
+  ⍝ ⍵ ←→ Caption, Callback
+     ⍺←⊢
+     c f←⍵
+     b←⍺ ##.New'button'c
+     b.Onclick←1 ##.FQP f
+     b
+ }

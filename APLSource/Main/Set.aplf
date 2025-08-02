@@ -1,0 +1,11 @@
+ Set←{
+     ⍝ ⍺ ←→ DOM node
+     ⍝ ⍵ ←→ Namespace of values
+     e←⍺ GetElementsWith'Name'
+     m←e.Name
+     n v←↓⍉↑⍵ ⎕VGET ¯2
+     i j←m n⍳¨⊂m∩n
+     0=≢i:0
+     c←⎕VGET e[i].class
+     e[i]c.Set v[j]
+ }

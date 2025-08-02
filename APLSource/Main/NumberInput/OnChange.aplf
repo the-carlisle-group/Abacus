@@ -1,0 +1,6 @@
+ OnChange←{
+     d←⍵.CurrentTarget
+     v←Parse ⍵.Value
+     f←d.FormatString Format v
+     d Set Parse f
+ }

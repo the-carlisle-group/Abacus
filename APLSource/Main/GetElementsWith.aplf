@@ -1,0 +1,5 @@
+ GetElementsWith←{
+     ⍝ Get elements that have attribute ⍵
+     e←{1=⍴⍴⍵:⍵ ⋄ Elements ⍵}⍺
+     e/⍨2.1=e.⎕NC⊂⊂⍵
+ }

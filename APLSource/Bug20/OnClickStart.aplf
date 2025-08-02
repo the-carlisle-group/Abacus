@@ -1,0 +1,5 @@
+ OnClickStart←{
+     d←BuildDoc 0
+     _←A.InitApp d
+     fmF2.hrH A.SetApp d
+ }

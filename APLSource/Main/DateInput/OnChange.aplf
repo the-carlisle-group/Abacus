@@ -1,0 +1,8 @@
+ OnChange←{
+     d←⍵.CurrentTarget
+     i←⍵.Target
+     n←⊃1⊃⎕VFI ⍵.Value~'-'
+     ⎕←⍕n
+     d.Value←n
+     0
+ }

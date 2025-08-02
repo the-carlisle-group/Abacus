@@ -1,0 +1,15 @@
+ RunTest2←{
+     _←⎕EX'fmF' 'fmF2'
+     ⎕THIS.A←##.Main
+     _←'fmF'⎕WC'Form' 'Form 1'
+     _←'bnB'fmF.⎕WC'Button' 'Press Me to Start'
+     fmF.bnB.onSelect←'OnClickStart'
+     _←'fmF2'⎕WC'Form' 'Form 2'
+     _←fmF2 A.NewHTMLRenderer'hrH'
+     fmF2.Posn←fmF.Posn+20
+     ⍝ ↓↓↓↓ These two lines make it work in V20
+     ⍝ _←fmF2.hrH.ShowDevTools 1
+     ⍝ fmF2.hrH.HTML←' '
+     ⍝ ↑↑↑↑ but not needed in V18 or V19
+     ⎕DQ'.'
+ }

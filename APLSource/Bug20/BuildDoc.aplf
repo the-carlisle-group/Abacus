@@ -1,0 +1,7 @@
+ BuildDoc←{
+     b←A.New'button' 'Press Me'
+     b.Onclick←A.FQP'OnClick'
+     d←A.NewDocument b
+     d.Caption←'Test'
+     d
+ }

@@ -1,0 +1,8 @@
+ Set←{
+     ⍝ ⍺ ←→ Element (Component)
+     ⍝ ⍵ ←→ Value
+     ⍺.Value←⍵
+     s←⍺.FormatString Format ⍵
+     i←1⊃⍺.Content
+     i A.SetValue s
+ }
