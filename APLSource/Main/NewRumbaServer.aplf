@@ -9,5 +9,5 @@
      s.OnWebSocketUpgrade←'OnWSUpgradeRumba'
      s.OnWebSocketReceive←'OnWSReceiveRumba'
      s.Application←⍵
-     0
+     s
  }

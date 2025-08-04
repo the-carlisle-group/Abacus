@@ -4,5 +4,5 @@
      n←⊃1⊃⎕VFI ⍵.Value~'-'
      ⎕←⍕n
      d.Value←n
-     0
+     ⍵ ##.Execute'OnChange'
  }

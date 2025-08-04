@@ -14,6 +14,6 @@
      i.id←n
      l←d A.New'label'c
      l.for←n
-     d.Oninput←A.FQP'OnInput'
+     d.Onchange←A.FQP'OnChange'
      d
  }

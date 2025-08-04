@@ -15,6 +15,7 @@
      i.value←v
      i.id←n
      d.Oninput←A.FQP'OnInput'
+     d.Onchange←A.FQP'OnChange'
      ⍝ i.Onblur←A.FQP'OnInputBlur'
      ⍝ i.Onkeydown←A.FQP'OnKeyDown'
      ⍝ i.CurrentValue←v

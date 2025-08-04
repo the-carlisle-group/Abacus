@@ -1,6 +1,7 @@
- OnInput←{
+ OnChange←{
      i←⍵.CurrentTarget
      i.Value←~i.Value
      ⎕←'Input: ',i.Value
+     _←⍵ ##.Execute'OnChange'
      0
  }
