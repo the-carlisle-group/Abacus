@@ -8,7 +8,7 @@
      l,←⊂'MenuRibbon'
      l,←⊂'ProgressBar'
      l,←⊂'PromptBox'
-     l,←⊂'TextEdit'
+     l,←⊂'TextInput'
      l,←⊂'DropList'
      l,←⊂'CheckBox'
      l,←⊂'NumberInput'

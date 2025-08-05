@@ -1,7 +1,7 @@
  CSS←{
      Rule←##.NewRule
      ⍝ ************************
-     s←Rule'.TextEdit'
+     s←Rule'.TextInput'
      s.display←'flex'
      s.align_items←'center'
      s.font_family←'Arial'

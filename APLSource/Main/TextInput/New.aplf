@@ -8,7 +8,7 @@
      d←⍺ A.New'div'
      d.Value←v
      d.Name←n
-     d.class←'TextEdit'
+     d.class←'TextInput'
      l←d A.New'label'c
      l.for←n
      i←d A.New'input'

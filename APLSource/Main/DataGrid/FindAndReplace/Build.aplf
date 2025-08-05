@@ -6,10 +6,10 @@
      h1←f A.New'h1' 'Find and Replace'
 
      s←f A.FieldSet.New'' ⍝ Default class is vert
-     e1←s A.TextEdit.New'Find what:' 'FindWhat' 'hello world'
-     e2←s A.TextEdit.New'Look in:' 'LookIn' ''
+     e1←s A.TextInput.New'Find what:' 'FindWhat' 'hello world'
+     e2←s A.TextInput.New'Look in:' 'LookIn' ''
      e2.OnChange←A.FQP'OnChangeLookIn'
-     e3←s A.TextEdit.New'Replace with:' 'ReplaceWith' ''
+     e3←s A.TextInput.New'Replace with:' 'ReplaceWith' ''
      e4←s A.NumberInput.New'Balance:' 'Balance' 125000 'P<$>CF12.2'
      e4←s A.DateInput.New'Maturity date:' 'MatDate' 20350101
 
