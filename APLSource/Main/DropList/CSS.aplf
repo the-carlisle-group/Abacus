@@ -1,5 +1,5 @@
  CSS←{
-     Rule←##.NewRule
+     Rule←A.NewRule
      ⍝ ************************
      s←Rule'.DropList'
      s.display←'flex'
@@ -35,5 +35,5 @@
      r.border_radius←'10px'
      r.appearance←'base-select'
      ⍝ **************************
-     ##.UnNestCSS s
+     A.UnNestCSS s
  }

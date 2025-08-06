@@ -1,0 +1,5 @@
+ Init←{
+     s←1⊃⎕VGET 9
+     s.A←⎕THIS
+     0
+ }

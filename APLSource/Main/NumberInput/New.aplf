@@ -1,21 +1,18 @@
  New←{
-     ⍝ Label
-     ⍝ Name
-     ⍝ Value
-     ⍝ Format
-     c n v f←⍵
-     ⎕THIS.A←##
+     p←(
+         'Name' ''
+         'Label' ''
+         'Value' 0
+         'Format' 'I10'
+     )A.InitProps ⍵
      d←⍺ A.New'div'
-     d.FormatString←f
-     d.Value←v
-     d.Name←n
+     d←d ⎕NS p
      d.class←'NumberInput'
-     l←d A.New'label'c
-     l.for←n
+     l←d A.New'label'p.Label
+     l.for←p.Name
      i←d A.New'input'
-     i.value←' '~⍨,f ⎕FMT v
-     i.id←n
+     i.value←' '~⍨,p.Format ⎕FMT p.Value
+     i.id←p.Name
      d.Onchange←A.FQP'OnChange'
-     ⍝ d.Oninput←A.FQP'OnInput'
      d
  }

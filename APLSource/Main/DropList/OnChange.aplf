@@ -1,5 +1,4 @@
  OnChange←{
-     ⎕←'Change'
      i←⍵.CurrentTarget
      i.Value←⍵.Value
      _←⍵ ##.Execute'OnChange'

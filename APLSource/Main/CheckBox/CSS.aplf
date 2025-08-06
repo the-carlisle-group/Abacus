@@ -1,17 +1,17 @@
  CSS←{
-     Rule←##.NewRule
+     Rule←A.NewRule
      ⍝ ************************
      s←Rule'.CheckBox'
      s.display←'flex'
      s.align_items←'center'
      s.gap←'.5em'
      s.font_family←'Arial'
-     s.font_size←'1em'
+     s.font_size←'1.5em'
      ⍝ *******************************
      r←s Rule'input'
      r.width←'30px'
      r.height←'30px'
      r.accent_color←'steelblue'
      ⍝ ***************************
-     ##.UnNestCSS s
+     A.UnNestCSS s
  }

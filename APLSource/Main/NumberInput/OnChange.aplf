@@ -1,6 +1,7 @@
  OnChange←{
      d←⍵.CurrentTarget
      v←Parse ⍵.Value
-     f←d.FormatString Format v
-     d Set Parse f
+     f←d.Format Format v
+     _←d Set Parse f
+     ⍵ ##.Execute'OnChange'
  }

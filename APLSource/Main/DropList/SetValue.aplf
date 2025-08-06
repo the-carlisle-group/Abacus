@@ -1,4 +1,4 @@
- Set←{
+ SetValue←{
      ⍝ ⍺ ←→ Component
      ⍝ ⍵ ←→ Value
      ⍺.Value←⍵

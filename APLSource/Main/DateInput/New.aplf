@@ -1,19 +1,17 @@
  New←{
-     ⍝ Label
-     ⍝ Name
-     ⍝ Value  YYYYMMDD
-     c n v←⍵
-     ⎕THIS.A←##
-     d←⍺ A.New'div'
-     d.Name←n
-     d.Value←v
+     d←(⍺ A.New'div')⎕NS(
+         'Name' ''
+         'Label' ''
+         'Value' 0 ⍝ YYYYMMDD or 0 for null
+         'OnChange' ''
+     )A.InitProps ⍵
      d.class←'DateInput'
-     l←d A.New'label'c
-     l.for←n
+     l←d A.New'label'd.Label
+     l.for←d.Name
      i←d A.New'input'
      i.type←'date'
-     i.value←,'BG<9999-99-99>'⎕FMT v
-     i.id←n
+     i.value←,'BG<9999-99-99>'⎕FMT d.Value
+     i.id←d.Name
      d.Onchange←A.FQP'OnChange'
      d
  }

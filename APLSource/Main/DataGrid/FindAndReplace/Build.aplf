@@ -6,19 +6,19 @@
      h1←f A.New'h1' 'Find and Replace'
 
      s←f A.FieldSet.New'' ⍝ Default class is vert
-     e1←s A.TextInput.New'Find what:' 'FindWhat' 'hello world'
-     e2←s A.TextInput.New'Look in:' 'LookIn' ''
+     e1←s A.TextInput.New'FindWhat' 'Find what:' 'hello world'
+     e2←s A.TextInput.New'LookIn' 'Look in:'
      e2.OnChange←A.FQP'OnChangeLookIn'
-     e3←s A.TextInput.New'Replace with:' 'ReplaceWith' ''
-     e4←s A.NumberInput.New'Balance:' 'Balance' 125000 'P<$>CF12.2'
-     e4←s A.DateInput.New'Maturity date:' 'MatDate' 20350101
+     e3←s A.TextInput.New'ReplaceWith' 'Replace with:'
+     e4←s A.NumberInput.New'Balance' 'Balance:' 125000 'P<$>CF12.2'
+     e4←s A.DateInput.New'MatDate' 'Maturity date:' 20350101
 
      fg←f A.FieldSet.New''
      fg.class←'field-set-grid'
-     e1←fg A.CheckBox.New'Match case' 'MatchCase' 0
-     s1←fg A.DropList.New'Search by' 'SearchBy' 'New York'('Rows' 'Columns' 'California' 'New York' 'Connecticut' 'Rock and Roll' 'Hellow World!')
-     e2←fg A.CheckBox.New'Match entire cell contents' 'MatchEntireCellContents' 0
-     e3←fg A.CheckBox.New'Use regular expressions' 'UseRegex' 1
+     e1←fg A.CheckBox.New'MatchCase' 'Match case'
+     s1←fg A.DropList.New'SearchBy' 'Search by:' 'New York'('Rows' 'Columns' 'California' 'New York' 'Connecticut' 'Rock and Roll' 'Hellow World!')
+     e2←fg A.CheckBox.New'MatchEntireCellContents' 'Match entire cell contents'
+     e3←fg A.CheckBox.New'UseRegex' 'Use regular expressions' 1
 
      ⍝ rg←f A.RadioGroup.New'Options'('One' 'Two' 'Three')
 

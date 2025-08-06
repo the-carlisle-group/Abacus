@@ -1,7 +1,8 @@
- Set←{
+ SetValue←{
      ⍝ ⍺ ←→ Element (Component)
      ⍝ ⍵ ←→ Value
      ⍺.Value←⍵
+     s←,'BG<9999-99-99>'⎕FMT ⍵
      i←1⊃⍺.Content
-     i ##.SetValue ⍵
+     i A.SetValue s
  }

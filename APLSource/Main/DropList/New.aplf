@@ -1,20 +1,20 @@
  New←{
-     ⍝ Label
-     ⍝ Name
-     ⍝ Value
-     ⍝ Options
-     c n v o←⍵
-     A←##
-     d←⍺ A.New'div'
+     ⍺←0
+     d←(⍺ A.New'div')⎕NS(
+         'Name' ''
+         'Label' ''
+         'Value' ''
+         'Options' ''
+         'OnChange' ''
+     )A.InitProps ⍵
      d.class←'DropList'
-     d.Name←n
-     l←d A.New'label'c
-     l.for←n
-     op←A.New¨{'option'⍵}¨o
-     cs←(o⍳⊂v)⊃,⍨op
+     l←d A.New'label'd.Label
+     l.for←d.Name
+     op←A.New¨{'option'⍵}¨d.Options
+     cs←(d.Options⍳⊂d.Value)⊃,⍨op
      cs.selected←'selected'
      s←d A.New'select'op
-     s.id←n
+     s.id←d.Name
      d.Onchange←A.FQP'OnChange'
      d
  }

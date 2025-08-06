@@ -1,5 +1,5 @@
  CSS←{
-     Rule←##.NewRule
+     Rule←A.NewRule
      ⍝ ************************
      s←Rule'.NumberInput'
      s.display←'flex'
@@ -15,5 +15,5 @@
      r.border←'1px solid black'
      r.border_radius←'.5rem'
      ⍝ r.width←'60rem'
-     ##.UnNestCSS s
+     A.UnNestCSS s
  }
