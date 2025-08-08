@@ -7,5 +7,5 @@
      _←⍺ A.SetPositionAnchor'--sub-menu'
      _←⍺ A.SetInsetArea h⊃'right span-bottom' 'bottom span-right'
      _←⍺ A.ExecuteOnElement'showPopover()'
-     ##.SetFocus⊃⍺.Content
+     A.SetFocus⊃⍺.Content
  }

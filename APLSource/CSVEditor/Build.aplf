@@ -7,7 +7,7 @@
      ⍝ Try out a menu bar
      mb←h A.Menu.NewMenuBar'BuildMenu'
      ⍝ Or a HamburgerMenu
-     hb←h A.Menu.NewHamburgerMenu'BuildMenu'
+     ⍝ hb←h A.Menu.NewHamburgerMenu'BuildMenu'
      h1←h A.New'h1' 'filename'
      m←b A.New'main'
      g←m A.DataGrid.New''

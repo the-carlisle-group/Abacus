@@ -1,13 +1,5 @@
  GetElementsWith←{
      ⍝ Get elements that have attribute ⍵
-
-     ⍝ OR this:
-     ⍝ **************
-     ⍝ c←e ⎕VGET⊂⍵ ''
-     ⍝ k←e/⍨~c∊⊂''
-
-
-
      e←{1=⍴⍴⍵:⍵ ⋄ Elements ⍵}⍺
      e/⍨2.1=e.⎕NC⊂⊂⍵
  }

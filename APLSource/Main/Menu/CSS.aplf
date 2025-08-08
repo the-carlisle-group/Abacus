@@ -1,5 +1,5 @@
  CSS←{
-     Rule←##.NewRule
+     Rule←A.NewRule
      ⍝ ************************
      s←Rule'.menu'
      s.user_select←'none'
@@ -46,7 +46,7 @@
      r←s Rule'.inactive'
      r.opacity←0.6
      ⍝ *********************************
-     z←##.UnNestCSS s
+     z←A.UnNestCSS s
      ⍝ More for menu-bar
      s←Rule'.menu-bar'
      s.user_select←'none'

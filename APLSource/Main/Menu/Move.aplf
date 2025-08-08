@@ -5,7 +5,7 @@
      ⍝ b←c.class∊⊂'sel-item'
      b←c.Selected
      i←⍵{(⍸⍵),⍸⍺⌽⍵}b
-     _←c[i]##.MoveClass'sel-item'
+     _←c[i]A.MoveClass'sel-item'
      c[i].Selected←0 1
      A.SetFocus 1⊃c[i]
  }

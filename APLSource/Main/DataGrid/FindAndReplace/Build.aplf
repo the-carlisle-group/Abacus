@@ -45,7 +45,5 @@
      ⍝ Or need to be smart and know its a "nested" grid.
      ⍝ Or only add FindAndReplace after creating the grid, take it out of New
      ⍝ rg←f A.DataGrid.New''
-
-
      f
  }

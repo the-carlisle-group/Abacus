@@ -1,0 +1,4 @@
+ HasProp2←{
+     ⍝ ⍵ ←→ Array of spaces
+     0≠≢¨⍵ ⎕VGET⊂'Name' ''
+ }

@@ -1,0 +1,6 @@
+ BuildNSS←{
+     ⍺←1000
+     s←{()}¨⍳⍺
+     b←?⍺⍴2
+     s ⎕VSET¨b⍴¨⊂⊂('Name' 'Value')
+ }

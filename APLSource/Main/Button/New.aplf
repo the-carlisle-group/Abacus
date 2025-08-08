@@ -1,6 +1,6 @@
  New←{
-  ⍝ ⍺ ←→ Parent
-  ⍝ ⍵ ←→ Caption, Callback
+     ⍝ ⍺ ←→ Parent
+     ⍝ ⍵ ←→ Caption, Callback
      ⍺←⊢
      c f←⍵
      b←⍺ ##.New'button'c

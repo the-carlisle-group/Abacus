@@ -1,0 +1,4 @@
+ HasProp1←{
+     ⍝ ⍵ ←→ Array of spaces
+     ∊2=⍵.⎕NC⊂'Name'
+ }
