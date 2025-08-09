@@ -1,47 +1,46 @@
  OnContextMenu←{
-     New←##.Menu.New
-     Add←##.Menu.Add
-     m←New''
-     i←m Add'Cut' 'Ctrl+X' 'OnCut'
-     i←m Add'Copy' 'Ctrl+C' 'OnCopy'
-     i←m Add'Paste' 'Ctrl+V' 'OnPaste'
-     i←m Add'Delete (clear contents)' 'Del' 'OnDelete' 1
-     i←m Add'Copy with headers' '' 'OnCopyWithHeaders' 1
-     i←m Add'Copy as Markdown' '' 'OnCopyAsMarkdown'
-     i←m Add'Find and replace...' 'Ctrl+F' 'OnFindAndReplace' 1
-     i←m Add'Go to column' 'Ctrl+G' 'OnGotoColumn'
-
-     rm←m Add New'Row' 1
-     i←rm Add'Insert' 'Ctrl+Ins' 'OnInsertRow'
-     i←rm Add'Delete' 'Ctrl+Del' 'OnDeleteRow'
-     i←rm Add'Move up' 'Shift+Alt+UpArrow' 'OnMoveRowUp '
-     i←rm Add'Move down' 'Shift+Alt+DownArrow' 'OnMoveRowDown'
-     i←rm Add'Copy down' 'Shift+Alt+DownArrow' 'OnCopyRowDown'
-
-     cm←m Add New'Column'
-     i←cm Add'Move left' 'Ctrl+Alt+LeftArrow' 'OnMoveColumnLeft'
-     i←cm Add'Move right' 'Ctrl+Alt+RightArrow' 'OnMoveColumnRight' 1
-     i←cm Add'Rename...' '' 'OnRenameColumn'
-     i←cm Add'Convert to Char' '' 'OnConvertToChar '
-     i←cm Add'Convert to numeric' '' 'OnConvertToNumeric'
-     i←cm Add'Delete' '' 'OnDeleteColumn' 1
-
-     im←cm Add New'Insert'
-     i←im Add'Char' '' 'InsertColumn'
-     i←im Add'Integer' '' 'InsertColumn'
-     i←im Add'Date' '' 'InsertColumn'
-     i←im Add'CheckBox' '' 'InsertColumn'
-     i←im Add'Float' '' 'InsertColumn'
-
+     NewMenu←##.Menu.New
+     NewItem←##.Menu.NewItem
+     m←NewMenu''
+     i←m NewItem'Cut' 'Ctrl+X' 'OnCut'
+     i←m NewItem'Copy' 'Ctrl+C' 'OnCopy'
+     i←m NewItem'Paste' 'Ctrl+V' 'OnPaste'
+     i←m NewItem'Delete (clear contents)' 'Del' 'OnDelete' 1
+     i←m NewItem'Copy with headers' '' 'OnCopyWithHeaders' 1
+     i←m NewItem'Copy as Markdown' '' 'OnCopyAsMarkdown'
+     i←m NewItem'Find and replace...' 'Ctrl+F' 'OnFindAndReplace' 1
+     i←m NewItem'Go to column' 'Ctrl+G' 'OnGotoColumn'
+     ⍝ *******************
+     rm←m NewMenu'Row' 1
+     i←rm NewItem'Insert' 'Ctrl+Ins' 'OnInsertRow'
+     i←rm NewItem'Delete' 'Ctrl+Del' 'OnDeleteRow'
+     i←rm NewItem'Move up' 'Shift+Alt+UpArrow' 'OnMoveRowUp '
+     i←rm NewItem'Move down' 'Shift+Alt+DownArrow' 'OnMoveRowDown'
+     i←rm NewItem'Copy down' 'Shift+Alt+DownArrow' 'OnCopyRowDown'
+     ⍝ ************************
+     cm←m NewMenu⊂'Column'
+     i←cm NewItem'Move left' 'Ctrl+Alt+LeftArrow' 'OnMoveColumnLeft'
+     i←cm NewItem'Move right' 'Ctrl+Alt+RightArrow' 'OnMoveColumnRight' 1
+     i←cm NewItem'Rename...' '' 'OnRenameColumn'
+     i←cm NewItem'Convert to Char' '' 'OnConvertToChar '
+     i←cm NewItem'Convert to numeric' '' 'OnConvertToNumeric'
+     i←cm NewItem'Delete' '' 'OnDeleteColumn' 1
+     ⍝ *************************
+     im←cm NewMenu⊂'Insert'
+     i←im NewItem'Char' '' 'InsertColumn'
+     i←im NewItem'Integer' '' 'InsertColumn'
+     i←im NewItem'Date' '' 'InsertColumn'
+     i←im NewItem'CheckBox' '' 'InsertColumn'
+     i←im NewItem'Float' '' 'InsertColumn'
      _←{
          0=≢⍵:0
          n←{n t←⍵ ⋄ '"',n,'"',' (',t,')'}¨⍵
-         i←im Add¨n{⍺'' 'InsertColumn'⍵}¨1↑⍨≢n
+         i←im NewItem¨n{⍺'' 'InsertColumn'⍵}¨1↑⍨≢n
          0
      }⍵.CurrentTarget.CustomColumnInserts
-
-     fm←m Add New'Font'
-     i←fm Add'Increase font size' 'Ctrl +' ''
-     i←fm Add'Decrease font size' 'Ctrl +' ''
+     ⍝ *********************
+     fm←m NewMenu⊂'Font'
+     i←fm NewItem'Increase font size' 'Ctrl +' ''
+     i←fm NewItem'Decrease font size' 'Ctrl +' ''
      ⍵ ##.Menu.Show m
  }

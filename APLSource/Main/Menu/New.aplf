@@ -1,10 +1,22 @@
  New←{
-     ⍝ ⍵ ←→ Caption [Leading separator]
-     c s←2↑0,⍨⊆⍵
-     m←A.New'menu'c
+     ⍺←0
+     m←(A.New'menu')⎕NS(
+         'Label' ''
+         'Separator' 0
+     )A.InitProps ⍵
+     m.Content←m.Label
      m.class←'menu'
      m.popover←'auto'
      m.Toggled←0
-     m.Separator←s
+     0=⍺:m  ⍝ Top level menu
+     ⍝ Its a submenu:
+     b←'&gt;'
+     c←A.New¨{'span'⍵}¨''(m.Content)''(⊂⊂b)
+     i←⍺ A.New'li'(A.New'div'(c,m))
+     i.Type←'Menu'
+     i.tabindex←0
+     i.class←m.Separator/'separator'
+     i.Selected←0
+     m.Content←''
      m
  }

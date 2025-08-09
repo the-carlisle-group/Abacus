@@ -1,0 +1,21 @@
+ NewItem←{
+     i←(⍺ A.New'li')⎕NS(
+         'Label' ''
+         'Shortcut' ''
+         'Function' ''
+         'Separator' 0
+         'Active' 1
+         'Checked' 0
+     )A.InitProps ⍵
+     cm←i.Checked/⎕UCS 10004
+     c←A.New¨{'span'⍵}¨cm i.Label i.Shortcut''
+     i.Content←A.New'div'c
+     i.Function←1 A.FQP i.Function
+     i.Type←'Item'
+     i.tabindex←'0'
+     i.Selected←i=⊃⍺.Content
+     i.class←i.Selected/'sel-item'
+     i.class,←(~i.Active)/' inactive'
+     i.class,←i.Separator/' separator'
+     i
+ }
