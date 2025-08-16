@@ -6,7 +6,7 @@
          'Separator' 0
          'Active' 1
          'Checked' 0
-     )A.InitProps ⍵
+     )A.Default ⍵
      cm←i.Checked/⎕UCS 10004
      c←A.New¨{'span'⍵}¨cm i.Label i.Shortcut''
      i.Content←A.New'div'c

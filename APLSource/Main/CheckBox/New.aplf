@@ -5,7 +5,7 @@
          'Label' ''
          'Value' 0
          'OnChange' ''
-     )A.InitProps ⍵
+     )A.Default ⍵
      d.class←'CheckBox'
      i←d A.New'input'
      i.type←'checkbox'

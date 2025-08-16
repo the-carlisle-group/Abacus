@@ -4,7 +4,7 @@
          'Label' ''
          'Value' 0
          'Format' 'I10'
-     )A.InitProps ⍵
+     )A.Default ⍵
      d←⍺ A.New'div'
      d←d ⎕NS p
      d.class←'NumberInput'

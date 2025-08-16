@@ -1,11 +1,13 @@
- InitProps←{
+ Default←{
      ⍝ ⍺ ←→ Default name/value pairs
      ⍝ ⍵ ←→ Given argument
      ⍝ ← ←→ A new space with ⍺ overiddden by ⍵
+     ⍝ See also DVP
      d←()⎕VSET ⍺
      9=⎕NC'⍵':d ⎕NS ⍵
-     n←⊃¨⍺
-     m←n↑⍨≢⍵
-     p←m{2∧.=(≢⍵),|≡⍵:⍵ ⋄ ⍺ ⍵}¨⍵
-     +d ⎕NS()⎕VSET p/⍨n∊⍨⊃¨p
+     n←' '~⍨¨(≢⍵)↑⊃¨⍺
+     p←n{(2=≢⍵)∧1≠≡⍵:⍵
+         ⍺≡'':⍺
+         ⍺ ⍵}¨⍵
+     d ⎕NS()⎕VSET p~⊂''
  }

@@ -1,0 +1,7 @@
+ Verify←{
+     (n v r)←↓⍉↑3↑¨⍺,¨0
+     m←⍵.⎕NL ¯2
+     ~∧/m∊⍨r/n:11 ⎕SIGNAL⍨'Required parameter: ',⊃r/n
+     0≠≢m~n:11 ⎕SIGNAL⍨'Invalid parameter name: ',⊃m~n
+     ⍵
+ }

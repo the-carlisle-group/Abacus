@@ -6,7 +6,7 @@
          'Value' ''
          'Options' ''
          'OnChange' ''
-     )A.InitProps ⍵
+     )A.Default ⍵
      d.class←'DropList'
      l←d A.New'label'd.Label
      l.for←d.Name

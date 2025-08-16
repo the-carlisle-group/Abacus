@@ -3,13 +3,12 @@
      m←(A.New'menu')⎕NS(
          'Label' ''
          'Separator' 0
-     )A.InitProps ⍵
+     )A.Default ⍵
      m.Content←m.Label
      m.class←'menu'
      m.popover←'auto'
      m.Toggled←0
-     0=⍺:m  ⍝ Top level menu
-     ⍝ Its a submenu:
+     0=⍺:m  ⍝ Top Level menu
      b←'&gt;'
      c←A.New¨{'span'⍵}¨''(m.Content)''(⊂⊂b)
      i←⍺ A.New'li'(A.New'div'(c,m))

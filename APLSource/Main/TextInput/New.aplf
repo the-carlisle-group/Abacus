@@ -5,7 +5,7 @@
          'Value' ''
          'AutocompleteItems' ''
          'OnChange' ''
-     )A.InitProps ⍵
+     )A.Default ⍵
      d.class←'TextInput'
      l←d A.New'label'd.Label
      l.for←d.Name

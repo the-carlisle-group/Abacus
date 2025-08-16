@@ -1,0 +1,13 @@
+ DVP←{
+     ⍝ Default and Verify Parameters
+     ⍝ ⍺ ←→ Default name/value pairs  (Optional 1 for required)
+     ⍝ ⍵ ←→ Given argument
+     ⍝ ← ←→ A new space with ⍺ overiddden by ⍵
+     d←()⎕VSET 2↑¨⍺
+     9=⎕NC'⍵':d ⎕NS ⍺ Verify ⍵
+     n←' '~⍨¨(≢⍵)↑⊃¨⍺
+     p←n{(2=≢⍵)∧1≠≡⍵:⍵
+         ⍺≡'':⍺
+         ⍺ ⍵}¨⍵
+     d ⎕NS ⍺ Verify()⎕VSET p~⊂''
+ }
