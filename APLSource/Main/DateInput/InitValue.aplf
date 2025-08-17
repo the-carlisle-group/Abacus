@@ -1,8 +1,9 @@
- SetValue←{
+ InitValue←{
      ⍝ ⍺ ←→ Element (Component)
      ⍝ ⍵ ←→ Value
      ⍺.Value←⍵
-     s←⍺.Format Format ⍵
+     s←,'BG<9999-99-99>'⎕FMT ⍵
      i←1⊃⍺.Content
-     i A.SetValue s
+     i.value←s
+     0
  }

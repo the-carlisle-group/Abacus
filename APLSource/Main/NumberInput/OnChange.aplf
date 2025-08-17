@@ -2,6 +2,6 @@
      d←⍵.CurrentTarget
      v←Parse ⍵.Value
      f←d.Format Format v
-     _←d Set Parse f
+     _←d SetValue Parse f
      ⍵ ##.Execute'OnChange'
  }

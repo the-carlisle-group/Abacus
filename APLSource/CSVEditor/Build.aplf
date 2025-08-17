@@ -19,5 +19,6 @@
      d.LayoutStyle←##.Layouts.Doric d.Theme  ⍝ d.Layout←d A.GetLayout 'Doric' or  d.Layout←'Doric'
      d.AppStyle←CSS d.Theme
      ⍝ d.Style←CSS d.Theme
+     d.FileSettings←()
      d
  }

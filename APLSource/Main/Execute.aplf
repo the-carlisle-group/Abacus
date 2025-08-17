@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Event Message
      ⍝ ⍵ ←→ Name of callback
      c←⍺.CurrentTarget
-     f←c ⎕VGET ⍵
+     f←c ⎕VGET⊂⍵''
      0=≢f:0
      (⍎f)⍺
  }

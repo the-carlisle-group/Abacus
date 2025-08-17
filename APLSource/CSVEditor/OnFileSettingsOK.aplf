@@ -1,3 +1,6 @@
  OnFileSettingsOK←{
+     d←⍵
+     p←A.Get d
+     d.Document.FileSettings←p
      0
  }

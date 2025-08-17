@@ -10,10 +10,10 @@
      l←d A.New'label'd.Label
      l.for←d.Name
      i←d A.New'input'
-     i.value←d.Value
      i.id←d.Name
      d.Oninput←A.FQP'OnInput'
      d.Onchange←A.FQP'OnChange'
      ⍝ i.Onblur←A.FQP'OnInputBlur'
+     _←d InitValue d.Value
      d
  }

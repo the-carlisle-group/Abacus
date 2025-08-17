@@ -9,10 +9,10 @@
      d.class←'CheckBox'
      i←d A.New'input'
      i.type←'checkbox'
-     _←{⍵:i.checked←'checked' ⋄ 0}d.Value
      i.id←d.Name
      l←d A.New'label'd.Label
      l.for←d.Name
      d.Onchange←A.FQP'OnChange'
+     _←d InitValue d.Value
      d
  }

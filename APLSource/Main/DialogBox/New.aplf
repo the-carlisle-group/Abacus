@@ -1,17 +1,17 @@
  New←{
-     ⍝ ⍵ ←→ Propspace: Title,Subtitle,Content,OnOK
-     p←⍵
-     ⎕THIS.A←##
-     d←A.New'dialog'
-     d.class←'dialog-box'
-     d.OnOK←p.OnOK
-     a←d ##.AutoComplete.New''  ⍝ Needed!
+     d←(A.New'dialog')⎕NS(
+         'Title' ''
+         'Subtitle' ''
+         'Contents'⍬
+         'OnOK' ''
+     )A.DVP ⍵
+     d.class←'DialogBox'
      d.Onclose←A.FQP'OnCancel'
      h←d A.New'header'
-     h1←h A.New'h1'p.Title
-     ⍝ h2←h A.New'h2'p.Subtitle
-     s←d A.New'section'
-     s.Content←p.Content
+     h1←h A.New'h1'd.Title
+     h2←h A.New'h2'd.Subtitle
+     s←d A.New'section'd.Contents
+     ⍝ a←d ##.AutoComplete.New''  ⍝ Needed! ⍝ Why?
      b←A.New¨{'button'⍵}¨'OK' 'Cancel'
      b.Onclick←A.FQP¨'OnOK' 'OnCancel'
      li←A.New¨{'li'⍵}¨b

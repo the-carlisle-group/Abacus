@@ -11,8 +11,8 @@
      l←d A.New'label'p.Label
      l.for←p.Name
      i←d A.New'input'
-     i.value←' '~⍨,p.Format ⎕FMT p.Value
      i.id←p.Name
      d.Onchange←A.FQP'OnChange'
+     _←d InitValue d.Value
      d
  }

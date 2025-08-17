@@ -1,7 +1,7 @@
  CSS←{
      Rule←##.NewRule
      ⍝ ************************
-     s←Rule'.dialog-box'
+     s←Rule'.DialogBox'
      s.width←'75%'
      s.height←'75%'
      s.border←'none'

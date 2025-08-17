@@ -1,46 +1,16 @@
  OnFileSettings←{
      d←⍵.Document
+     s←A.FieldSet.New''
+     i←s A.DropList.New'Separator' 'Separator:' ''('Comma' 'Pipe' 'Tab')
+     i←s A.DropList.New'TextQualifier' 'Textqualifier:'('Options'('DoubleQuote' 'Quote'))
+     i←s A.NumberInput.New'MaxRows' 'Maximum Rows:' 256 'CI15'
+     i←s A.CheckBox.New'AutoConvert' 'Auto convert:'
+     _←d.FileSettings A.InitValues s
      p←⎕NS''
      p.Title←'Testing'
      p.Subtitle←'This is a test.'
-     p.Content←A.New'div' 'Hello World!'
+     p.Contents←s
      p.OnOK←A.FQP'OnFileSettingsOK'
      b←A.DialogBox.New p
      d A.ShowModal b
-
-
-
-     ⍝ See how this works ↑↑↑
-
-
-
-
-
-
-     ⍝ FOR LATER:
-
-     A.PropertySheet.New
-
-
-     'Delimiter' ⍝ Name
-                 ⍝ Label
-                 ⍝ Autocomplete values
-                 ⍝
-     p←⎕NS''
-     p.Caption←'File Properties'
-     p.Fields←⊂'Delimiter' 'Delimiter'
-     p.Fields,←⊂'QuoteChar' 'Quote character'
-     p.Fields,←⊂'EscapeChar' 'Escape character'
-     p.Fields,←⊂'Encoding' 'Encoding'
-
-
-     ⎕CSV
-     p.OnOK←A.FQP'OnFileSettingsOK'
-
-     f←A.PropertyBox.New p
-
-
-     A.PropertyBox.Show'File Properties'
-
-     d A.PromptBox.Show'Open File' 'File name:'f(A.FQP'Open')
  }

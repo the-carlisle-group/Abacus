@@ -1,8 +1,9 @@
- SetValue←{
+ InitValue←{
      ⍝ ⍺ ←→ Element (Component)
      ⍝ ⍵ ←→ Value
      ⍺.Value←⍵
      s←⍺.Format Format ⍵
      i←1⊃⍺.Content
-     i A.SetValue s
+     i.value←s
+     0
  }

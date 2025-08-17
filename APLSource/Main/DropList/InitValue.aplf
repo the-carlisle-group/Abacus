@@ -1,0 +1,10 @@
+ InitValue←{
+     ⍝ ⍺ ←→ Component
+     ⍝ ⍵ ←→ Value
+     ⍺.Value←⍵
+     op←1⊃⍺.Content
+     o←⊃¨op.Content.Content
+     cs←(o⍳⊂⍵)⊃,⍨op.Content
+     cs.selected←'selected'
+     0
+ }

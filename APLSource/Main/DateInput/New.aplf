@@ -10,8 +10,8 @@
      l.for←d.Name
      i←d A.New'input'
      i.type←'date'
-     i.value←,'BG<9999-99-99>'⎕FMT d.Value
      i.id←d.Name
      d.Onchange←A.FQP'OnChange'
+     _←d InitValue d.Value
      d
  }

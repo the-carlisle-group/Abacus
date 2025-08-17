@@ -1,0 +1,8 @@
+ InitValue←{
+     ⍝ ⍺ ←→ Element (Component)
+     ⍝ ⍵ ←→ Value
+     ⍺.Value←⍵
+     i←0⊃⍺.Content
+     _←i ⎕VSET d.Value/2⍴⊂'checked'
+     0
+ }
