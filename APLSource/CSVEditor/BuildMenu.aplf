@@ -15,7 +15,7 @@
      i←s NewItem'List' 'Ctrl+Q' 'OnViewList'
      s2←s NewMenu⊂'Icons'
      i←s2 NewItem'Small' 'Ctrl+L' 'OnViewLarge'
-     i←s2 NewItem'Medium' 'Ctrl+M' 'OnViewMedium' 0 0 1  ⍝ Checked
-     i←s2 NewItem'Large' 'Ctrl+S' 'OnViewSmall' 0 0 0    ⍝ Inactive
+     i←s2 NewItem'Medium' 'Ctrl+M' 'OnViewMedium'
+     i←s2 NewItem'Large' 'Ctrl+S' 'OnViewSmall'
      m
  }

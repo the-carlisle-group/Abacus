@@ -1,0 +1,4 @@
+ OnViewMedium←{
+     ⍵.Document A.AlertBox.Show'The View Medium feature is not yet implemented.'
+
+ }

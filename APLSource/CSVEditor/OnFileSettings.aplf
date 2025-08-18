@@ -2,9 +2,9 @@
      d←⍵.Document
      s←A.FieldSet.New''
      i←s A.DropList.New'Separator' 'Separator:' ''('Comma' 'Pipe' 'Tab')
-     i←s A.DropList.New'TextQualifier' 'Textqualifier:'('Options'('DoubleQuote' 'Quote'))
+     i←s A.DropList.New'TextQualifier' 'Text qualifier:'('Options'('DoubleQuote' 'Quote'))
      i←s A.NumberInput.New'MaxRows' 'Maximum Rows:' 256 'CI15'
-     i←s A.CheckBox.New'AutoConvert' 'Auto convert:'
+     i←s A.CheckBox.New'AutoConvert' 'Auto convert'
      _←d.FileSettings A.InitValues s
      p←⎕NS''
      p.Title←'Testing'
