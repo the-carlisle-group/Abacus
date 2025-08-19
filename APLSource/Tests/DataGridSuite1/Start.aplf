@@ -1,6 +1,7 @@
  Start←{
      ⍺←0
      ⎕THIS.A←##.##.Main
+     _←A.Init 0
      p←⍵ ReadCSVFile GetFileName'People.csv'
      g←A.DataGrid.New''
      g.id←'the-datagrid'

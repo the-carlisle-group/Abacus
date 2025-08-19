@@ -1,7 +1,0 @@
- SetInsetArea←{
-     ⍝ ⍺ ←→ Element
-     ⍝ ⍵ ←→ Anchor name
-     ⍺=0:0
-     j←'document.getElementById("',⍺.id,'").style.insetArea="',⍵,'"'
-     ⍺.Document ExecuteJavaScript j
- }

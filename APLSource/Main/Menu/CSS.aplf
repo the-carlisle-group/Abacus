@@ -2,6 +2,12 @@
      Rule←A.NewRule
      ⍝ ************************
      s←Rule'.menu'
+     ⍝ s.position←'fixed'
+     ⍝ s.margin←0     ⍝ MDD says these needed, but apparently not
+     ⍝ s.inset←'auto'
+     ⍝ s.inset←'0 0 0 -1em' ⍝ We can shift around
+     ⍝ s.position_area←'right' ⍝ Done dynamically
+     s.position_try←'flip-block, flip-inline, flip-block flip-inline'
      s.user_select←'none'
      s.padding←'.5rem 0'
      s.list_style←'none'
@@ -10,9 +16,6 @@
      s.font_family←'Arial'
      s.font_size←'1.25rem'
      s.text_wrap←'nowrap'
-     ⍝ s.inset_area←'right'
-     ⍝ s.position_area←'right' ⍝ 'right'
-     s.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
      ⍝ ************************
      r←s Rule'li'
      ⍝ r.user_select←'none'

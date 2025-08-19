@@ -1,11 +1,9 @@
  ShowMenu←{
      ⍝ ⍺ ←→ Menu
      ⍝ ⍵ ←→ Anchor
-     h←⍵.Tag≡'button' ⍝ And class is hamburger...  or menu bar
+     h←⍵.Parent.class≡'menu-bar'
      ⍺←⊃⌽⊃⍵.Content.Content
-     _←⍵ A.SetAnchorName'--sub-menu'
-     _←⍺ A.SetPositionAnchor'--sub-menu'
-     _←⍺ A.SetInsetArea h⊃'right span-bottom' 'bottom span-right'
-     _←⍺ A.ExecuteOnElement'showPopover()'
+     _←⍺ A.SetStyle'positionArea'(h⊃'right span-bottom' 'bottom span-right')
+     _←⍺ A.ExecuteOnElement'showPopover({source:document.getElementById("',⍵.id,'")})'
      A.SetFocus⊃⍺.Content
  }
