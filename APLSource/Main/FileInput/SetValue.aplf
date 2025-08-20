@@ -3,5 +3,5 @@
      ⍝ ⍵ ←→ Value
      ⍺.Value←⍵
      i←1⊃⍺.Content
-     i A.SetValue ⍵
+     i A.SetValue{⍵/⍨1+⍵='\'}⍵
  }

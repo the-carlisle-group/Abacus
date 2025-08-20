@@ -1,0 +1,20 @@
+ OnBrowse←{
+     d←⍵.Document
+     f←''
+     c←'Select a file'
+     _←'f'⎕WC'FileBox'c d.BrowseFolder
+     f.onFileBoxCancel←1
+     f.onFileBoxOK←1
+     l←⊂'*.*' 'All Files (*.*)'
+     l,←⊂'*.csv' 'CSV Files (*.csv)'
+     l,←⊂'*.xlsx' 'Excel Files (*.xlsx)'
+     l,←⊂'*.txt' 'Text Files (*.txt)'
+     f.Filters←l
+     f.Index←{⍵×⍵≠≢l}(0⊃¨l)⍳⊂'*.csv'
+     r←f.Wait
+     'FileBoxOK'≢1⊃r:0
+     d.BrowseFolder←f.Directory
+     n←2⊃r
+     p←⍵.Target.Parent
+     p SetValue n
+ }

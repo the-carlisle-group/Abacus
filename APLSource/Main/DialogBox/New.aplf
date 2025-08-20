@@ -4,6 +4,8 @@
          'Subtitle' ''
          'Contents'⍬
          'OnOK' ''
+         'OKCaption' 'OK'
+         'CancelCaption' 'Cancel'
      )A.DVP ⍵
      d.class←'DialogBox'
      d.Onclose←A.FQP'OnCancel'
@@ -12,7 +14,7 @@
      h2←h A.New'h2'd.Subtitle
      s←d A.New'section'd.Contents
      ⍝ a←d ##.AutoComplete.New''  ⍝ Needed! ⍝ Why?
-     b←A.New¨{'button'⍵}¨'OK' 'Cancel'
+     b←A.New¨{'button'⍵}¨d.OKCaption d.CancelCaption
      b.Onclick←A.FQP¨'OnOK' 'OnCancel'
      li←A.New¨{'li'⍵}¨b
      m←d A.New'menu'li

@@ -1,0 +1,10 @@
+ OnChange←{
+     ⎕←'OnChange!'
+     0
+
+     v←⍵.Value
+     ⎕←'Value:',⍕v
+     p←⍵.Target.Parent
+     t←1⊃p.Content
+     t A.SetValue v
+ }

@@ -20,5 +20,6 @@
      d.AppStyle←CSS d.Theme
      ⍝ d.Style←CSS d.Theme
      d.FileSettings←()
+     d.BrowseFolder←''
      d
  }

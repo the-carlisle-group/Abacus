@@ -1,7 +1,8 @@
- SetValue←{
+ InitValue←{
      ⍝ ⍺ ←→ Element (Component)
      ⍝ ⍵ ←→ Value
      ⍺.Value←⍵
      i←1⊃⍺.Content
-     i A.SetValue ⍵
+     i.value←{⍵/⍨1+⍵='\'}⍵
+     0
  }

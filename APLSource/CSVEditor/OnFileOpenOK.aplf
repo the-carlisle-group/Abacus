@@ -1,0 +1,10 @@
+ OnFileOpenOK←{
+     p←A.GetValues ⍵
+     f←##.CSVEditorTests.GetFileName p.FileName
+     f~←'"'
+     (('\'=f)/f)←'/'
+     d←⍵.Document
+     ⍝ Does file exist: d A.AlertBox.Show 'File not found.'
+     _←d Open f
+     0
+ }

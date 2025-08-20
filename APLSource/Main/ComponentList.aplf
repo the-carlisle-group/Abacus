@@ -13,6 +13,7 @@
      l,←⊂'CheckBox'
      l,←⊂'NumberInput'
      l,←⊂'DateInput'
+     l,←⊂'FileInput'
      l,←⊂'ToolTip'
      l,←⊂'ToggleGroup'
      l,←⊂'RadioGroup'
