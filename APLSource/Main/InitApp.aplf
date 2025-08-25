@@ -1,5 +1,6 @@
  InitApp←{
      ⍝ ⍵ ←→ Document
+     _←Init 0
      d←⍵
      d.TestMode←0
      d.SessionID←NewGUID'N'

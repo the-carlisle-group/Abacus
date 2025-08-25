@@ -1,5 +1,6 @@
  Init←{
-     s←1⊃⎕VGET 9
+     ⍝ s←1⊃⎕VGET 9 ⍝ Must work in 18.2 for now
+     s←⍎¨ComponentList''
      s.A←⎕THIS
      0
  }
