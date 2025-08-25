@@ -1,4 +1,113 @@
-# Abacus Release 0.0.16                    
+# Abacus Release 0.0.17                    
+1. Fix Init to work with 18.2
+2. Start work on FileInput component
+3. Update menu anchor positioning to reflect chromium changes
+4. Cleanup CSVEditor
+5. Start rewrite of DialogBox component
+6. Cleanup
+7. Cleanup Menu component
+8. Fix issue with NewMenuBar
+9. Revamp input components
+10. Rename TextEdit TextInput
+11. Changes to input components
+12. Revamp input components and add Get and Set function
+13. Wire up CheckBox and DropList changes to APLDOM
+14. Rename ComboBox component to DropList
+15. Update ComboBox component to use customizable select
+16. Update CSS anchor positioning declaration names
+17. Remove Rumba dependency for desktop apps
+18. Fix websocket init race condition
+19. Start work on RadioGroup component
+20. Start work on TextEdit, ComboBox, CheckBox, and FieldSet components
+21. Add CopyWithHeaders to DataGrid
+22. Add custom column name and type inserts to DataGrid context menu
+23. Work on Menu and Grid components
+24. More work on Menu component
+25. More work on Menu component
+26. Cleanyp Menu Component
+27. Start work on Menu component
+28. Fix broken test on editing decimal types
+29. Encapsulate header properties in a namespace
+30. Tweak scrolling when in header
+31. Allow multirow header and editing of header rows
+32. DataGrid cleanup and refactoring
+33. Fix DataGrid issue with cell selection
+34. Work on DataGrid selection CSS, and add select all
+35. Eliminate WindowCell var in DataGrid component
+36. Change DataGrid CSS class window-cell to active-cell
+37. In DataGrid, change propname DataCell to ActiveCell
+38. In the DataGrid, rename var ColumnOffset to FixedColumns
+39. Work on full row and column select DataGrid
+40. Fix selection via mouse drag
+41. Cleanup
+42. Revamp DataGrid range selection
+43. Work on DataGrid Tests
+44. Improve simulating mouse clicks for testing
+45. Minor work on DataGrid test suite
+46. Provide default for Columns property of DataGrid
+47. Add Default and Null properties to DataGrid
+48. Tweak DataGrid CSS
+49. DataGrid cleanup
+50. Consolidate DataGrid column properties
+51. Generalize dynamic CSS for multiple instances and any component
+52. More work on DataGrid events
+53. Set cap and floor for DataGrid font size
+54. DataGrid cleanup
+55. Cleanup DataGrid sizing and scrolling
+56. More work on DataGrid events
+57. Start DataGrid component event design
+58. Cleanup windowing in DataGrid component
+59. Minor cleanup in DataGrid
+60. Clean up DataGrid header styles and classes
+61. Cleanp AutoComplete component
+62. Fix up DataGrid decimal types
+63. First pass at Select and CheckBox field types in DataGrid
+64. Tweak Click test function for mouse position
+65. Clean up DataGrid tests
+66. Emhance test framework to drive mouse events
+67. Work on DataGrid test suite
+68. Enhance Abacus test framework code coverage
+69. Work on DataGrid tests
+70. More work on DataGrid tests
+71. Work on DataGrid tests
+72. Remove obsolete testing parameter
+73. Improve DataGrid tests
+74. Delete olf obsolete tests
+75. Re-org anf fix-up of DataGrid tests
+76. Start revamp of DataGrid test suite
+77. Fix issue with DataGrid horiontal scroll bar
+78. Fix issue with resizing when table is smaller than parent
+79. More work on scroll bars
+80. Fix name issue, now
+81. Fix name issue
+82. WIP
+83. Improvements to dragging DataGrid scrollbars
+84. More DataGrid scrollbar cleanup
+85. Cleanup scroll bar code
+86. More cleanup
+87. More cleanup
+88. Cleanup
+89. Add scroll bars to DataGrid component
+90. Fix DataGrid in-cell editing, and add double click event
+91. More work on DataGrid paste
+92. Start work on coercing data types for DataGrid paste
+93. More work on DataGrid Paste
+94. More work on cut/copy/paste
+95. More work on select and cut/copy/paste
+96. More work on PopupMenu (now ContextMenu)
+97. More work on PopupMenu component
+98. Start work on PopupMenu component
+99. Minor nicety
+100. Cleanup
+101. Start work on selection and cut/copy/paste for DataGrid
+102. Fix to CSVEditor
+103. Specify HTMLRenderer Properties at Application level (Issue #21)
+104. Second pass at optimized table
+105. First pass at optimized generalized table
+106. HTMX configuration
+107. Allow more ways to specify attributes in 3rd element of New function argument
+
+# Abacus Release 0.0.16 2025-01-07 14:39:12
 1. More HTMX changes
 2. Bring over HTML and CSS and htmx stuff from Rumba
 
