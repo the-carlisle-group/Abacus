@@ -6,6 +6,7 @@
          'Value' ''
          'Options' ''
          'OnChange' ''
+         'Disabled' 0
      )A.Default ⍵
      d.class←'DropList'
      l←d A.New'label'd.Label
@@ -13,6 +14,7 @@
      op←A.New¨{'option'⍵}¨d.Options
      s←d A.New'select'op
      s.id←d.Name
+     _←s ⎕VSET d.Disabled/⊂2⍴⊂'disabled'
      d.Onchange←A.FQP'OnChange'
      _←d InitValue d.Value
      d

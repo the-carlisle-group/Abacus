@@ -1,0 +1,10 @@
+ SetComponentDisabled←{
+     ⍝ ⍺ ←→ DOM node
+     ⍝ ⍵ ←→ Name or Component name, Boolean 1/0
+     ⍺←⊢
+     c←⍺ GetComponent 0⊃⍵
+     e←Elements c
+     d←e/⍨e.Tag∊'button' 'fieldset' 'optgroup' 'option' 'select' 'textarea' 'input'
+     0=≢d:0
+     0⊣d{⍺ SetBoolean'disabled'⍵}¨1⊃⍵
+ }

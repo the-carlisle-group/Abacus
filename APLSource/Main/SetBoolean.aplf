@@ -1,0 +1,6 @@
+ SetBoolean←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ attribute, Boolean(1|0)
+     (a b)←⍵
+     ⍺ ExecuteOnElement a,' = ',b⊃'false' 'true'
+ }
