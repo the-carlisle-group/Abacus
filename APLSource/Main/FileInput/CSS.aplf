@@ -6,16 +6,14 @@
      s.padding←'1em'
      s.gap←'1em'
      s.align_items←'center'
-     s.font_family←'Arial'
-     s.font_size←'1.5em'
      ⍝ ************************
      r←s Rule'input'
-     r.font_family←'APL385 Unicode'
-     r.font_size←'1.5rem'
-     r.padding←'.5em'
-     r.placeholder←'enter a selection expression, e.g. State in "NY"'
-     r.border←'1px solid black'
-     r.border_radius←'.5rem'
-     ⍝ ********************************
+⍝     r.font_family←'APL385 Unicode'
+⍝     r.font_size←'1.5rem'
+⍝     r.padding←'.5em'
+⍝     r.placeholder←'enter a selection expression, e.g. State in "NY"'
+⍝     r.border←'1px solid black'
+⍝     r.border_radius←'.5rem'
+⍝     ⍝ ********************************
      A.UnNestCSS s
  }

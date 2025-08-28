@@ -3,7 +3,7 @@
      s←Rule'.auto-complete'
      s.z_index←9
      s.color←'white'
-     s.background_color←⍵.BodyBackgroundColor
+     s.background_color←'var(--background-color)'
      ⍝ s.box_sizing←'border-box'
      s.border←'.5px solid gray'
      s.border_radius←'10px'
@@ -18,7 +18,7 @@
      ⍝ r.padding←'.1rem .2rem'
      ⍝ r.padding←'.2em' '1em' '.2em' '1em'
      r←s Rule'.active-item'
-     r.color←⍵.HighlightColor
+     r.color←'yellow'
      r.background_color←#.Abacus.CSS.GrayScale 30
      ##.UnNestCSS s
  }

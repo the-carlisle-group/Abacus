@@ -3,7 +3,7 @@
      d←(⍺ A.New'div')⎕NS(
          'Name' ''
          'Label' ''
-         'Value' 'c:\One\Slath\asdf.csv'
+         'Value' ''
          'OnChange' ''
      )A.Default ⍵
      d.class←'FileInput'

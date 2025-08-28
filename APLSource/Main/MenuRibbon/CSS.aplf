@@ -7,7 +7,7 @@
      r←s1 Rule'>button'
      r.padding←'.5em .5em'
      r.font_size←'1rem'
-     r.color←⍵.BodyColor
+     r.color←'pink'
      ⍝ r.background_color←⍵.BodyBackgroundColor
      r.font_family←'Verdana'
      r.border_radius←'2px 2px 0 0'
@@ -17,10 +17,10 @@
      ⍝ r.background_color←⍵.HighlightBackgroundColor
 
      s3←Rule'.active-menu-item'
-     s3.background_color←⍵.BodyBackgroundColor2
+     s3.background_color←'pink' ⍝ ⍵.BodyBackgroundColor2
 
      s4←Rule'.inactive-menu-item'
-     s4.background_color←⍵.BodyBackgroundColor
+     s4.background_color←'pink' ⍝ ⍵.BodyBackgroundColor
 
 
      s5←Rule'.active-menu-subitem'
@@ -28,20 +28,18 @@
      s5.background_color←'red'
 
      s6←Rule'.inactive-menu-subitem'
-     s6.color←⍵.BodyColor
-
-
+     s6.color←'pink' ⍝ ⍵.BodyColor
 
 
 
      s2←Rule'.menu-ribbon-sub'
-     s2.background_color←⍵.BodyBackgroundColor2
+     s2.background_color←'pink' ⍝ ⍵.BodyBackgroundColor2
 
      r←s2 Rule'>button'
      r.padding←'.5em .5em'
      r.font_size←'1.25rem'
-     r.color←⍵.BodyColor
-     r.background_color←⍵.BodyBackgroundColor2
+     r.color←'pink' ⍝ ⍵.BodyColor
+     r.background_color←'pink'⍝ ⍵.BodyBackgroundColor2
      r.font_family←'Verdana'
      r.border_radius←'10px'
      r.border←'none'

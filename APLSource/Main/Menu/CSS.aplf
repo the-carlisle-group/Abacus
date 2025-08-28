@@ -2,19 +2,23 @@
      Rule←A.NewRule
      ⍝ ************************
      s←Rule'.menu'
+
      ⍝ s.position←'fixed'
      ⍝ s.margin←0     ⍝ MDD says these needed, but apparently not
      ⍝ s.inset←'auto'
-     ⍝ s.inset←'0 0 0 -1em' ⍝ We can shift around
+     s.inset←'1rem 0 0 -1rem' ⍝ We can shift around
      ⍝ s.position_area←'right' ⍝ Done dynamically
+     s.background_color←'inherit'
+     s.color←'inherit'
      s.position_try←'flip-block, flip-inline, flip-block flip-inline'
      s.user_select←'none'
      s.padding←'.5rem 0'
      s.list_style←'none'
-     s.border←'1px solid gray'
+     s.border←'1px solid var(--border-color)'
+
      s.border_radius←'.5em'
-     s.font_family←'Arial'
-     s.font_size←'1.25rem'
+     ⍝ s.font_family←'Arial'
+     ⍝ s.font_size←'1.25rem'
      s.text_wrap←'nowrap'
      ⍝ ************************
      r←s Rule'li'
@@ -43,7 +47,7 @@
      r.min_width←'.75rem'
      ⍝ *********************************
      r←s Rule'.sel-item>div'
-     r.background_color←'lightblue'
+     r.background_color←'var(--accent-color-1)'
      r.border_radius←'5px'
      ⍝ *********************************
      r←s Rule'.inactive'
@@ -58,7 +62,7 @@
      s.display←'flex'
      s.gap←'1rem'
      s.font_family←'Arial'
-     s.font_size←'1.25rem'
+     ⍝ ⍝ s.font_size←'1.25rem'
      s.text_wrap←'nowrap'
      z,←s
      ⍝ More

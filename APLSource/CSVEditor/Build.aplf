@@ -15,9 +15,9 @@
      g.id←'CSVdata'
      f←b A.New'footer'
      h2←f A.New'h2' 'x rows by n columns'
-     d.Theme←##.Themes.Dark 0                ⍝ d.Theme←A.GetTheme 'Dark' or d.Theme←'Dark'
+     d.Theme←##.Themes.AbacusDark 0                ⍝ d.Theme←A.GetTheme 'Dark' or d.Theme←'Dark'
      d.LayoutStyle←##.Layouts.Doric d.Theme  ⍝ d.Layout←d A.GetLayout 'Doric' or  d.Layout←'Doric'
-     d.AppStyle←CSS d.Theme
+     d.AppStyle←CSS 0
      ⍝ d.Style←CSS d.Theme
      d.FileSettings←()
      d.BrowseFolder←''

@@ -1,8 +1,8 @@
  OnFileOpen←{
-     ⍝ ⍝ f←'c:/DataSets/Baseball2019/batting.csv'
+     f←'c:/DataSets/Baseball2019/batting.csv'
      ⍝ f←'c:/DataSets/Large Files/GB3.csv'
      d←⍵.Document
-     i←A.FileInput.New'FileName' 'File name:'
+     i←A.FileInput.New'FileName' 'File name:'f
      p←⎕NS''
      p.Title←'Open'
      p.OKCaption←'Open'

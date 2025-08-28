@@ -3,8 +3,8 @@
      s←Rule''
      ⍝ Body
      r←s Rule'body'
-     r.color←⍵.BodyColor
-     r.background_color←⍵.BodyBackgroundColor
+     ⍝ r.color←'white'
+     ⍝ r.background_color←'var(--background-color)'
      r.border←0
      r.display←'flex'
      r.flex_direction←'column'
@@ -12,16 +12,23 @@
      r.width←'100vw'
      ⍝ Header
      r←s Rule'body>header'
-     r.background_color←'steelblue'
-     r.font_family←'Arial'
+     ⍝ r.background_color←'steelblue'
+     ⍝ r.font_family←'Arial'
+     r.border←'solid 1px var(--border-color)'
      r.padding←'1rem'
+
      ⍝ Main
+     r.border←'solid 1px var(--border-color)'
+
      r←s Rule'body>main'
+     r.border←'solid 1px var(--border-color)'
      r.flex←1
      ⍝ Footer
      r←s Rule'body>footer'
-     r.background_color←'steelblue'
-     r.font_family←'Arial'
+     ⍝ r.background_color←'steelblue'
+     ⍝ r.font_family←'Arial'
+     r.border←'solid 3px var(--border-color)'
+
      r.padding←'1rem'
      s
  }

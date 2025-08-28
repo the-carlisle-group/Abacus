@@ -1,0 +1,21 @@
+ AbacusDark←{
+     r←##.Main.NewRule':root'
+     ⍝ Typography
+     r.font_family←'Arial'                  ⍝ System default
+     r.font_size←'20px'                     ⍝ System default
+     r.__system_font_family←r.font_family   ⍝ In case needed when not inherited
+     r.__system_font_size←r.font_size       ⍝ In case needed when not inherited
+     r.__user_input_font_family←'APL385 Unicode'
+     r.__code_font_family←'APL385 Unicode'
+
+     ⍝ Colors
+     r.__text_color←'hsl(0, 0%, 90%)'
+     r.__background_color←'hsl(230, 10%, 15%)' ⍝ Was 240 10 10
+     r.__selected_background_color←'hsl(0, 0%, 60%)'
+     r.__selected_text_color←'white'
+     r.__border_color←'hsl(0, 0%, 80%)' ⍝ Compute from background?
+     r.__accent_color_1←'royalblue'
+     r.__accent_color_2←'orange'
+     ⍝ ***********************
+     r
+ }

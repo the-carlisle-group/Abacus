@@ -7,34 +7,53 @@
      r←s Rule'*'
      r.margin←0
      r.padding←0
-
-     ⍝ Temp
-     ⍝r←s Rule'li:nth-child(2)'
-     ⍝r.color←'red'
-     ⍝r.flex_grow←2
-
-
-
-     ⍝ Input
+     ⍝ Focus
      r←s Rule'*:focus'
      r.outline←'none'
-
-     ⍝ dialog
-     r←s Rule'dialog'
-     s.border_radius←'1em'
-     s.padding←0
-     s.margin←'auto'
-     ⍝ dialog h1
-     r←s Rule'dialog h1'
-     r.font_family←'Arial'
-     r.font_size←'1.5rem'
-     r.padding←'1rem'
-     r.background_color←'steelblue'
-     ⍝ dialog button
-     r←s Rule'dialog button'
-     r.height←'3rem'
-     r.width←'10rem'
-     r.font_size←'1.25rem'
+     r.border←'2px solid var(--accent-color-1)' ⍝ Do for certain things only
+     ⍝ Body
+     r←s Rule'body'
+     r.color←'var(--text-color)'
+     r.background_color←'var(--background-color)'
+     ⍝ Input
+     r←s Rule'input'
+     r.font_family←'var(--user-input-font-family)'
+     r.font_size←'1rem'
+     r.color←'inherit'
+     r.background_color←'inherit'
+     r.padding←'.5rem'
+     r.border←'2px solid'
      r.border_radius←'.25rem'
+     ⍝ Button
+     r←s Rule'button'
+     r.border_radius←'.5rem'
+     r.padding←'.5rem'
+     r.color←'inherit'
+     r.background_color←'inherit'
+     r.border←'2px solid var(--accent-color-1)'
+     r.font_size←'1rem'
+     s
+
+
+
+     ⍝
+⍝     ⍝ dialog
+⍝     r←s Rule'dialog'
+⍝     s.border_radius←⍵.BorderRadius
+⍝     s.padding←0
+⍝     s.margin←'auto'
+⍝     ⍝ dialog h1
+⍝     r←s Rule'dialog h1'
+⍝     r.font_family←'Arial'
+⍝     r.font_size←'1.5rem'
+⍝     r.padding←'1rem'
+⍝     r.background_color←'steelblue'
+⍝
+⍝     ⍝ dialog button
+⍝     ⍝ r←s Rule'dialog button'
+⍝     ⍝ r.height←'3rem'
+     ⍝ r.width←'10rem'
+     ⍝ r.font_size←'1.25rem'
+     ⍝ r.border_radius←'.25rem'
      s
  }

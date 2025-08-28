@@ -4,20 +4,20 @@
 
      s←Rule'.extended-input'
      s.border←'2px solid gray'
-     s.background_color←⍵.BodyBackgroundColor
+     s.background_color←'var(--background-color)'
      s.border_radius←'5px'
      s.display←'flex'
      s.align_items←'center'
      s.padding_left←'1em'
      r←s Rule':focus-within'
-     r.border←'2px solid ',⍵.AccentColor1
+     r.border←'2px solid ','yellow'
 
      ⍝ Label
      r←s Rule'>label'
      r.font_family←'Arial'
      r.font_size←'1.5rem'
      r.padding←'.5em'
-     r.color←⍵.AccentColor1
+     r.color←'var(--accent-color-1)'
      r.font_weight←'bold'
 
      ⍝ Input
@@ -28,8 +28,7 @@
      r.font_size←'1.25rem'
      r.padding←'.5em .5em'
      r.border←'none'
-     r.color←⍵.BodyColor
-     r.background_color←⍵.BodyBackgroundColor
+     r.background_color←'var(--background-color)'
 
      ⍝ Buttons
      r←s Rule'>button'
@@ -39,11 +38,11 @@
      r.border←'none'
      r.border_radius←'5px'
      r.min_width←'3em'
-     r.color←⍵.BodyColor
-     r.background_color←⍵.BodyBackgroundColor
+     r.color←'yellow'
+     r.background_color←'var(--background-color)'
      ⍝ Hover
      r←s Rule'>button:hover'
-     r.background_color←⍵.HighlightBackgroundColor
+     r.background_color←'pink'
 
      A.UnNestCSS s
  }

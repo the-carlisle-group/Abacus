@@ -2,8 +2,9 @@
      d←⍵
      0=d.⎕NC'LayoutStyle':⍬
      l←d.LayoutStyle            ⍝ User supplied Layout
-     m←CSS d.Theme              ⍝ Abacus Default CSS (common for all components)
-     c←ComponentStyles d.Theme  ⍝ Component CSS
+     m←CSS 0                    ⍝ Abacus Default CSS (common for all components)
+     c←ComponentStyles 0        ⍝ Component CSS
      u←d.AppStyle               ⍝
-     l,m,c,u                    ⍝ ORDER!!!!
+     t←d.Theme
+     t,l,m,c,u                  ⍝ ORDER!!!!
  }

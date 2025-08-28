@@ -10,15 +10,15 @@
      r.padding←'.25em'
      r.border←'none'
      r.border_radius←'5px'
-     r.color←⍵.BodyColor
-     r.background_color←⍵.BodyBackgroundColor
+     r.color←'pink' ⍝ ⍵.BodyColor
+     r.background_color←'pink' ⍝ ⍵.BodyBackgroundColor
      r.width←'2em'
      r.font_weight←'bold'
      ⍝ Hover
      r←s Rule'>button:hover'
-     r.background_color←⍵.HighlightBackgroundColor
+     r.background_color←'pink'  ⍝ ⍵.HighlightBackgroundColor
      ⍝ Selected
      r←s Rule'.selected'
-     r.border←'2px solid ',⍵.AccentColor1
+     r.border←'2px solid pink'  ⍝ ,⍵.AccentColor1
      A.UnNestCSS s
  }
