@@ -1,6 +1,6 @@
  OnFileSettingsOK←{
      d←⍵
-     p←A.Get d
+     p←A.GetComponentValues d
      d.Document.FileSettings←p
      0
  }
