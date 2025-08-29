@@ -1,7 +1,10 @@
  GetComponents←{
      ⍝ ⍵ ← APL DOM node
+     ⍝ ⍺ ←→ 0 for namespace result, 1 for array
      ⍝ ← ←→ Namespace of components
+     ⍺←0
      e←⍵ GetElementsWith'Name'
+     ⍺:e
      0=≢⍵:()
      ()⎕VSET(↑e.Name)e
  }
