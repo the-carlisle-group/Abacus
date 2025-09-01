@@ -1,3 +1,5 @@
  OnViewLarge←{
-     ⍵.Document A.AlertBox.Show'The View Large feature is not yet implemented.'
+     m←⊂'This is paragraph one. It has a couple of sentences.'
+     m,←⊂'This is paragraph two. The View Large feature is not yet implemented.'
+     ⍵.Document A.AlertBox.Show m
  }

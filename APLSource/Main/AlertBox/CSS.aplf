@@ -5,7 +5,7 @@
      s.width←'40rem'
      s.border←'none'
      s.border_radius←'.5rem'
-     s.padding←0  ⍝ '1rem'
+     s.padding←'1rem'
      s.position←'fixed'
      s.left←'50%'
      s.top←'50%'
@@ -16,7 +16,7 @@
      ⍝ ************************
      r←s Rule'p'
      r.font_family←'Arial'
-     r.padding←'2rem'
+     r.padding←'.5rem'
      ⍝ ************************
      r←s Rule'button'
      r.height←'2rem'

@@ -1,11 +1,11 @@
  New←{
      ⍝ ⍵ ←→ Message
      ⍝ ← ←→ New dialog element
-     m←⍵
+     m←⊆⍵
      A←##
      d←A.New'dialog'
      d.class←'alert-box'
-     p←d A.New'p'm
+     p←d A.New¨{'p'⍵}¨m
      b←d A.New'button' 'OK'
      b.Onclick←A.FQP'OnOK'
      d.Onclose←A.FQP'OnOK'
