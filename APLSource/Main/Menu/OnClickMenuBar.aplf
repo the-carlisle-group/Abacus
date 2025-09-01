@@ -1,6 +1,7 @@
  OnClickMenuBar←{
      mb←⍵.CurrentTarget
      mi←⍵.Target
+     mi.Tag≢'li':0
      i←mb.Content⍳mi
      f←⍎mb.BuildFunction
      m←f 0
