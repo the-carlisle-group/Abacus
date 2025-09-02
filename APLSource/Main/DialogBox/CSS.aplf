@@ -4,14 +4,14 @@
      s←Rule'.DialogBox'
      s.background_color←'inherit'
      s.color←'inherit'
-     s.width←'75%'
-     s.height←'75%'
+     ⍝ s.width←'75%'
+     ⍝ s.height←'75%'
      ⍝ s.border←'none'
      s.border_radius←'1em'
      s.padding←0
      s.margin←'auto'
-     s.display←'flex'
-     s.flex_direction←'column'
+     ⍝ s.display←'flex'
+     ⍝ s.flex_direction←'column'
      ⍝ ************************
      r←s Rule'> header'
      r.font_family←'Arial'
@@ -29,24 +29,20 @@
      r.padding←'1rem'
      ⍝ ***********************
      r←s Rule' > Section'
-     r.flex←1
+     ⍝ r.flex←1
      r.position←'relative'
      r.overflow←'clip'
      ⍝ ************************
-     r←s Rule'> menu'
-     r.list_style_type←'none'
+     r←s Rule'> footer'
      r.display←'flex'
      r.justify_content←'center'
      r.gap←'1rem'
      r.padding←'1rem'
      r.border_radius←'0 0 1em 1em'
      r.border←'1px solid var(--border-color)'
-
      ⍝ ************************
-     ⍝ r←s Rule'> menu button'
-     ⍝ r.height←'3rem'
-     ⍝ r.width←'10rem'
-     ⍝ r.font_size←'1.25rem'
-     ⍝ r.border_radius←'.25rem'
+     r←s Rule'> footer  button'
+     r.min_width←'6rem'
+     ⍝
      ##.UnNestCSS s
  }

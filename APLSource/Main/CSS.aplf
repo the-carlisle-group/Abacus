@@ -32,6 +32,15 @@
      r.background_color←'inherit'
      r.border←'2px solid var(--accent-color-1)'
      r.font_size←'1rem'
+     ⍝ Dialog
+     r←s Rule'dialog'
+     r.background_color←'inherit'
+     r.color←'inherit'
+     r.border←'2px solid var(--accent-color-1)'
+     r.border_radius←'.25rem'
+     ⍝ r.padding←0
+     r.margin←'auto'
+     ⍝ ***********************
      s
 
 
