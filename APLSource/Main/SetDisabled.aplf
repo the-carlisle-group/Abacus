@@ -1,0 +1,8 @@
+ SetDisabled←{
+   ⍝ ⍺ ←→ Element
+   ⍝ ⍵ ←→ 1|0
+     e←Elements ⍺
+     d←e/⍨e.Tag∊'button' 'fieldset' 'optgroup' 'option' 'select' 'textarea' 'input'
+     0=≢d:0
+     0⊣d{⍺ SetBoolean'disabled'⍵}¨⍵
+ }
