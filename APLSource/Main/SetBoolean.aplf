@@ -2,5 +2,7 @@
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ attribute, Boolean(1|0)
      (a b)←⍵
+     _←⍺ ⎕VSET b/⊂a a⊣⍺.⎕EX a
+     NoClient ⍺:0
      ⍺ ExecuteOnElement a,' = ',b⊃'false' 'true'
  }

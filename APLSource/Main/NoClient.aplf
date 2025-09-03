@@ -1,0 +1,4 @@
+ NoClient←{
+     ⍝ ⍵ ←→ Element
+     0=⍵.⎕NC'Document.Client'
+ }
