@@ -7,6 +7,8 @@
      r.__system_font_size←r.font_size       ⍝ In case needed when not inherited
      r.__user_input_font_family←'APL385 Unicode'
      r.__code_font_family←'APL385 Unicode'
+     ⍝ Borders
+     r.__border_radius←'.5rem'
 
      ⍝ Colors
      r.__text_color←'hsl(0, 0%, 90%)'

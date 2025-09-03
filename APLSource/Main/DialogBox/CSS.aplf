@@ -34,15 +34,8 @@
      r.overflow←'clip'
      ⍝ ************************
      r←s Rule'> footer'
-     r.display←'flex'
-     r.justify_content←'center'
-     r.gap←'1rem'
-     r.padding←'1rem'
      r.border_radius←'0 0 1em 1em'
      r.border←'1px solid var(--border-color)'
-     ⍝ ************************
-     r←s Rule'> footer  button'
-     r.min_width←'6rem'
      ⍝
      ##.UnNestCSS s
  }

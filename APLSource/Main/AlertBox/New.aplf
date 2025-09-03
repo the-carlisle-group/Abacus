@@ -1,12 +1,13 @@
  New←{
-     ⍝ ⍵ ←→ Message
-     ⍝ ← ←→ New dialog element
-     m←⊆⍵
-     A←##
-     d←A.New'dialog'
+     d←(A.New'dialog')⎕NS(
+         'Message' ''
+         'Width' '30rem'
+     )A.Default ⍵
      d.class←'alert-box'
-     p←d A.New¨{'p'⍵}¨m
-     b←d A.New'button' 'OK'
+     p←d A.New¨{'p'⍵}¨⊆d.Message
+     s←d A.New'div'
+     s.class←'dialog-buttons'
+     b←s A.New'button' 'OK'
      b.Onclick←A.FQP'OnOK'
      d.Onclose←A.FQP'OnOK'
      d

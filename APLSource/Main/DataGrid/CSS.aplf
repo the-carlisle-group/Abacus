@@ -39,6 +39,9 @@
      r.overflow←'hidden'
      r.width←'fit-content'
      r.height←'fit-content'
+     ⍝ **********************
+     r←s Rule'tbody'
+     r.cursor←'cell'
      ⍝ ********************
      r←s Rule'tbody>tr'
      r.box_sizing←'border-box'

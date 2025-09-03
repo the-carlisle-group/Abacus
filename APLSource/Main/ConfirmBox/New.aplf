@@ -1,19 +1,23 @@
  New←{
-     ⍝ ⍵ ←→ Title Caption [Options]
-     ⍝ ← ←→ new dialog element
-     t c o←3↑(⊆⍵),⊂'Yes' 'No'
-     A←##
-     d←A.New'dialog'
+     d←(A.New'dialog')⎕NS(
+         'Title' 'Confirmation'
+         'Message' 'Continue?'
+         'Options'('Yes' 'No')
+         'Width' '30rem'
+     )A.Default ⍵
      d.class←'confirm-box'
+     d.style←'width:',d.Width
      d.Onclose←A.FQP'OnClose'
      d.Unqueued←'close'
      d.Tid←⎕TID
-     h1←d A.New'h1't
-     p←d A.New'p'c
-     m←d A.New'menu'
-     b←m A.New¨{'button'⍵}¨o
-     b.Name←o
+     h1←d A.New'h1'd.Title
+     p←d A.New¨{'p'⍵}¨⊆d.Message
+     m←A.New'section'p
+     f←d A.New'footer'
+     f.class←'dialog-buttons'
+     b←f A.New¨{'button'⍵}¨d.Options
+     b.Name←d.Options
      b.Onclick←⊂A.FQP'OnSelect'
-     b.Unqueued←'click'
+     b.Unqueued←⊂'click'
      d
  }

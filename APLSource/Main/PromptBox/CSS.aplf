@@ -2,49 +2,12 @@
      Rule←##.NewRule
      ⍝ ************************
      s←Rule'.prompt-box'
-     s.width←'40rem'
-     s.border←'none'
-     s.border_radius←'.5rem'
-     s.padding←0  ⍝ '1rem'
-     s.margin←'auto'
-     r←s Rule'::backdrop'
-     r.backdrop_filter←'blur(2px)'
-     ⍝ h1
-     r←s Rule'h1'
-     r.font_family←'Arial'
-     r.font_size←'1.5rem'
-     r.padding←'1rem'
-     r.background_color←'steelblue'
-     ⍝ ************************
-     r←s Rule'label'
-     r.font_family←'Arial'
-     r.font_size←'1.5rem'
-     r.padding←'1rem'
-     r.display←'block'
-     r.width←'80%'
-     r.margin←'auto'
-     ⍝ ****************************
-     r←s Rule'input'
-     r.font_family←'APL385 Unicode'
-     r.font_size←'1.5rem'
-     r.padding←'1rem'
-     r.display←'block'
-     r.width←'80%'
-     r.border_radius←'5px'
-     r.margin←'auto'
-     r.border←'1px solid black'
-     ⍝ ************************
-     r←s Rule'menu'
+     ⍝ ***********************
+     r←s Rule'.TextInput'
      r.display←'flex'
-     r.justify_content←'center'
-     r.gap←'1rem'
-     r.padding←'2rem 2rem 2rem 2rem'
-     ⍝ ************************
-     r←s Rule'button'
-     r.height←'3rem'
-     r.width←'10rem'
-     r.font_size←'1.25rem'
-     r.border_radius←'.25rem'
-     ⍝ ************************
-     ##.UnNestCSS s
+     r.flex_direction←'column'
+     r.padding←'2rem 2rem 1rem 2rem'
+     r.gap←'.5rem'
+     ⍝ *************************
+     A.UnNestCSS s
  }

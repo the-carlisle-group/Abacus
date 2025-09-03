@@ -6,7 +6,7 @@
      ul br←t.Selection
      d←1+⊃-/br ul
      p q←d ExtendPasteData a
-     p≢⍴q:t.Document ##.AlertBox.Show'Paste data and selection dimensions do not match.'
+     p≢⍴q:t.Document ##.AlertBox.Show⊂'Paste data and selection dimensions do not match.'
      t.Selection←ul(ul+p-1)
      r c←ul+⍳¨p
      m←⍉t.Columns.Type[c](Coerce⍤0 1)⍉q

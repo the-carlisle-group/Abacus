@@ -6,7 +6,7 @@
      c←1⊃t.ActiveCell
      d←g.Document
      e←(⊂v)∊t.Columns.Name
-     e:1⊣d ##.AlertBox.Show'Column name "',v,'" already exists.'
+     e:1⊣d ##.AlertBox.Show⊂'Column name "',v,'" already exists.'
      (c⊃t.Columns).Name←v
      t.Changed←1
      0⊣g Resize 1

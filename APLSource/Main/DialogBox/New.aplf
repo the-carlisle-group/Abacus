@@ -18,6 +18,7 @@
      b.Onclick←A.FQP¨'OnOK' 'OnCancel'
      ⍝ li←A.New¨{'li'⍵}¨b
      f←d A.New'footer'b
+     f.class←'dialog-buttons'
      ⍝ m←d A.New'menu'li
      d
  }
