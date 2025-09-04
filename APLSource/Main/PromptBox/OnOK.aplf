@@ -1,10 +1,8 @@
  OnOK←{
-     t←⍵.CurrentTarget
-     d←t A.GetNearest'dialog'
+     d←⍵.DialogBox
      c←d A.GetComponent'PromptBox'
      d.NewValue←c.Value
-     f←⍎d.OnOK
-     r←f d
-     r:0
-     A.DeleteElement d
+     f←d.OnOK
+     0=≢f:0
+     (⍎f)⍵
  }

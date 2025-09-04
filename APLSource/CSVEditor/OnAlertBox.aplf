@@ -2,5 +2,5 @@
      m←⊂'The alert box displays a message. It may have multiple paragraphs.'
      m,←⊂'The argument to AlertBox.Show is a simple vector or vector of vectors for multiple paragraphs.'
      m,←⊂'This is a third paragraph.'
-     ⍵.Document A.AlertBox.Show⊂m
+     ⍵.Document A.Alert'Warning!'m
  }

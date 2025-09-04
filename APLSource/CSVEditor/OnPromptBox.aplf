@@ -3,7 +3,7 @@
      p.Title←'This a a PromptBox Component'
      p.Label←'It has a label:'
      p.Value←'And a starting value'
-     p.OnOK←'OnPromptBoxOK'
-     p.OnCancel←'OnPromptBoxCancel'
+     p.OnOK←A.FQP'OnPromptBoxOK'
+     p.OnCancel←A.FQP'OnPromptBoxCancel'
      ⍵.Document A.PromptBox.Show p
  }

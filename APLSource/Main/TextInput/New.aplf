@@ -1,4 +1,5 @@
  New←{
+     ⍺←0
      d←(⍺ A.New'div')⎕NS(
          'Name' ''
          'Label' ''

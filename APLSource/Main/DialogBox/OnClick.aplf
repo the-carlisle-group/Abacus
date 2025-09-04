@@ -1,0 +1,10 @@
+ OnClick←{
+     b←⍵.Target
+     d←b A.GetNearest'dialog'
+     i←b.Parent.Content⍳b
+     f←i⊃d.OnClick
+     0=≢f:A.DeleteElement d
+     ⍵.DialogBox←d
+     1≡(⍎f)⍵:0
+     A.DeleteElement d
+ }

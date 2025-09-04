@@ -1,0 +1,8 @@
+ OnClose←{
+     d←⍵.Target
+     f←d.OnClose
+     0=≢f:A.DeleteElement d
+     ⍵.DialogBox←d
+     1≡(⍎f)⍵:0
+     A.DeleteElement d
+ }

@@ -4,7 +4,8 @@
      p.Message←⊂'It can have multiple paragraphs in the message'
      p.Message,←⊂'It can have as many buttons as you want, labeled as you want.'
      p.Message,←⊂'Unlike PromptBox and AlertBox, it has no callbacks. It waits for the user to click a button, and then returns the caption of the button that was pressed.'
-     p.Options←'This' 'That' 'Or' 'The other'
+     p.Buttons←'This' 'That' 'Or' 'The other'
+     p.Width←'40rem'
      r←⍵.Document A.ConfirmBox.Show p
-     ⍵.Document A.AlertBox.Show⊂'You pressed "',r,'"'
+     ⍵.Document A.AlertBox.Show'Result'('You pressed "',r,'"')
  }

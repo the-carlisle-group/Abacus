@@ -35,50 +35,35 @@
      r.min_width←'6rem'
      ⍝ Paragraph
      r←s Rule'p'
-     r.padding←'.5rem 1rem'
-     ⍝ Dialog buttons
-     r←s Rule'.dialog-buttons'
-     r.display←'flex'
-     r.justify_content←'center'
-     r.gap←'1rem'
-     r.padding←'1rem'
+     r.margin_bottom←'.75rem'
+     ⍝ r.padding←'.5rem 1rem'
+     ⍝ ****************************************
      ⍝ Dialog
-     r←s Rule'dialog'
-     r.background_color←'inherit'
-     r.color←'inherit'
-     r.border←'2px solid var(--accent-color-1)'
-     r.border_radius←'var(--border-radius)'
-     r.min_width←'30rem'
-     r.margin←'auto'
-     ⍝ ***********************
-     r←s Rule'dialog>h1'
-     r.font_size←'1.25rem'
-     r.font_weight←'600'
-     r.padding←'.5rem 2rem'
-     r.background_color←'steelblue'
-     ⍝ ***************
-     r←s Rule'dialog>section'
-     r.padding←'2rem'
-     s
-
-     ⍝
-⍝     ⍝ dialog
+     ⍝⍝ ****************************************
 ⍝     r←s Rule'dialog'
-⍝     s.border_radius←⍵.BorderRadius
-⍝     s.padding←0
-⍝     s.margin←'auto'
-⍝     ⍝ dialog h1
-⍝     r←s Rule'dialog h1'
-⍝     r.font_family←'Arial'
-⍝     r.font_size←'1.5rem'
-⍝     r.padding←'1rem'
+⍝     r.background_color←'inherit'
+⍝     r.color←'inherit'
+⍝     r.border←'2px solid var(--accent-color-1)'
+⍝     r.border_radius←'var(--border-radius)'
+⍝     r.min_width←'30rem'
+⍝     r.margin←'auto'
+⍝     ⍝ ***********************
+⍝     r←s Rule'dialog>h1'
+⍝     r.font_size←'1.25rem'
+⍝     r.font_weight←'600'
+⍝     r.padding←'.5rem 2rem'
 ⍝     r.background_color←'steelblue'
-⍝
-⍝     ⍝ dialog button
-⍝     ⍝ r←s Rule'dialog button'
-⍝     ⍝ r.height←'3rem'
-     ⍝ r.width←'10rem'
-     ⍝ r.font_size←'1.25rem'
-     ⍝ r.border_radius←'.25rem'
+⍝     ⍝ ***************
+⍝     r←s Rule'dialog>section'
+⍝     r.padding←'1rem 2rem'
+⍝     ⍝ Dialog Footer
+⍝     r←s Rule'dialog>footer'
+⍝     r.display←'flex'
+⍝     r.justify_content←'center'
+⍝     r.gap←'1rem'
+⍝     r.padding_bottom←'1rem'
+⍝     ⍝ **********************
+     ⍝ *****************************************
+     ⍝ *****************************************
      s
  }

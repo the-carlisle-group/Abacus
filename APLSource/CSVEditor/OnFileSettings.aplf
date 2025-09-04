@@ -7,10 +7,11 @@
      i←s A.CheckBox.New'AutoConvert' 'Auto convert'
      _←d.FileSettings A.InitValues s
      p←⎕NS''
-     p.Title←'Testing'
-     p.Subtitle←'This is a test.'
-     p.Contents←s
-     p.OnOK←A.FQP'OnFileSettingsOK'
-     b←A.DialogBox.New p
-     d A.ShowModal b
+     p.Title←'File Settings'
+     p.Subtitle←'Specify CSV properties'
+     p.BodyContent←s
+     p.Buttons←'OK' 'Cancel'
+     p.OnClick←(A.FQP'OnFileSettingsOK')''
+     p.Width←'40rem'
+     d A.DialogBox.Show p
  }

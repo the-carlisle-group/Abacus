@@ -1,5 +1,4 @@
  OnClose←{
-     d←⍵.CurrentTarget ##.GetNearest'dialog'
-     _←##.DeleteElement d
+     d←⍵.DialogBox
      0⊣''⎕TPUT d.Tid
  }

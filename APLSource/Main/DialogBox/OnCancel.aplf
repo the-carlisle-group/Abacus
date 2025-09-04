@@ -1,3 +1,0 @@
- OnCancel←{
-     A.DeleteElement ⍵.CurrentTarget A.GetNearest'dialog'
- }

@@ -1,41 +1,38 @@
  CSS←{
      Rule←##.NewRule
-     ⍝ ************************
+     ⍝ ****************************************
      s←Rule'.DialogBox'
      s.background_color←'inherit'
      s.color←'inherit'
-     ⍝ s.width←'75%'
-     ⍝ s.height←'75%'
-     ⍝ s.border←'none'
-     s.border_radius←'1em'
-     s.padding←0
+     s.border←'2px solid var(--accent-color-1)'
+     s.border_radius←'var(--border-radius)'
      s.margin←'auto'
-     ⍝ s.display←'flex'
-     ⍝ s.flex_direction←'column'
-     ⍝ ************************
-     r←s Rule'> header'
-     r.font_family←'Arial'
-     r.padding←'1rem'
-     ⍝ r.background_color←'steelblue'
-     r.border←'1px solid var(--border-color)'
-     r.border_radius←'1em 1em 0 0'
-     ⍝ ************************
-     r←s Rule'> header > h1'
-     r.font_family←'Arial'
-     r.padding←'.5rem'
-     ⍝ ************************
-     r←s Rule'> header > h2'
-     r.font_family←'Arial'
-     r.padding←'1rem'
+     ⍝ *******************
+     r←s Rule'header'
+     r.background_color←'steelblue'
+     r.padding←'1rem' ⍝  2rem'
+     r.display←'flex'
+     r.flex_direction←'column'
+     r.gap←'.2rem'
      ⍝ ***********************
-     r←s Rule' > Section'
-     ⍝ r.flex←1
-     r.position←'relative'
-     r.overflow←'clip'
-     ⍝ ************************
-     r←s Rule'> footer'
-     r.border_radius←'0 0 1em 1em'
-     r.border←'1px solid var(--border-color)'
-     ⍝
+     r←s Rule'header>h1'
+     r.font_size←'1.25rem'
+     r.font_weight←'600'
+     ⍝ ***********************
+     r←s Rule'header>h2'
+     r.font_size←'1rem'
+     r.font_weight←'500'
+     ⍝ ***************
+     r←s Rule'section'
+     r.padding←'1rem 2rem'
+     ⍝ r.position←'relative' ⍝ Maybe needed for DataGrid
+     ⍝ r.overflow←'clip'     ⍝ ......
+     ⍝ Dialog Footer
+     r←s Rule'footer'
+     r.display←'flex'
+     r.justify_content←'center'
+     r.gap←'1rem'
+     r.padding_bottom←'1rem'
+     ⍝ **********************
      ##.UnNestCSS s
  }

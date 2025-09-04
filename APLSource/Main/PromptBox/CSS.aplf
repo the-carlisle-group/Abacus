@@ -1,13 +1,3 @@
  CSS←{
-     Rule←##.NewRule
-     ⍝ ************************
-     s←Rule'.prompt-box'
-     ⍝ ***********************
-     r←s Rule'.TextInput'
-     r.display←'flex'
-     r.flex_direction←'column'
-     r.padding←'2rem 2rem 1rem 2rem'
-     r.gap←'.5rem'
-     ⍝ *************************
-     A.UnNestCSS s
+     ⍬
  }

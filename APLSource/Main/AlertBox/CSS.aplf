@@ -1,11 +1,3 @@
  CSS←{
-     Rule←##.NewRule
-     ⍝ ************************
-     s←Rule'.alert-box'
-     s.padding←'1rem'
-     ⍝ ************************
-     r←s Rule'::backdrop'
-     r.backdrop_filter←'blur(1px)'
-     ⍝ ************************
-     ##.UnNestCSS s
+     ⍬
  }

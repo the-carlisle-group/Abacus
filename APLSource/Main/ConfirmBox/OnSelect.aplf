@@ -1,6 +1,6 @@
  OnSelect←{
-     d←⍵.CurrentTarget ##.GetNearest'dialog'
+     d←⍵.DialogBox
      _←##.DeleteElement d
-     v←⍵.CurrentTarget.Name
+     v←⍵.Target.Name
      0⊣v ⎕TPUT d.Tid
  }

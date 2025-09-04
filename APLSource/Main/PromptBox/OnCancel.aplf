@@ -1,9 +1,8 @@
  OnCancel←{
-     d←⍵.CurrentTarget A.GetNearest'dialog'
+     d←⍵.DialogBox
      c←d A.GetComponent'PromptBox'
      d.NewValue←c.Value
      f←d.OnCancel
-     0=≢f:A.DeleteElement d
-     (⍎f)d:0
-     A.DeleteElement d
+     0=≢f:0
+     (⍎f)⍵
  }

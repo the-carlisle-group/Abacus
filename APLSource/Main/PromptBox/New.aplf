@@ -1,5 +1,5 @@
  New←{
-     d←(A.New'dialog')⎕NS(
+     w←(
          'Title' ''
          'Label' ''
          'Value' ''
@@ -7,18 +7,9 @@
          'OnCancel' ''
          'Width' '30rem'
      )A.Default ⍵
-     d.OnOK←2 A.FQP d.OnOK
-     d.OnCancel←2 A.FQP d.OnCancel
-     d.class←'prompt-box'
-     d.style←'width:',d.Width
-     d.Onclose←A.FQP'OnCancel'
-     h1←d A.New'h1'⍵.Title
-     c←d ##.TextInput.New'PromptBox'd.Label d.Value
-     ⍝ i.id←'Prompt'           ⍝ Is there a better way for tests?
-     f←d A.New'footer'
-     f.class←'dialog-buttons'
-     b←f A.New¨{'button'⍵}¨'OK' 'Cancel'
-     b.id←'OK' 'Cancel'
-     b.Onclick←A.FQP¨'OnOK' 'OnCancel'
-     d
+     c←A.TextInput.New'PromptBox'w.Label w.Value
+     w.BodyContent←c
+     w.OnClick←A.FQP¨'OnOK' 'OnCancel'
+     w.OnClose←A.FQP'OnCancel'
+     A.DialogBox.New w
  }

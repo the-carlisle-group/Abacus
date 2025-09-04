@@ -1,14 +1,10 @@
  New←{
-     d←(A.New'dialog')⎕NS(
+     w←(
+         'Title' ''
          'Message' ''
-         'Width' '30rem'
+         'Width' '20rem'
      )A.Default ⍵
-     d.class←'alert-box'
-     p←d A.New¨{'p'⍵}¨⊆d.Message
-     s←d A.New'div'
-     s.class←'dialog-buttons'
-     b←s A.New'button' 'OK'
-     b.Onclick←A.FQP'OnOK'
-     d.Onclose←A.FQP'OnOK'
-     d
+     w.BodyContent←A.New¨{'p'⍵}¨⊆w.Message
+     w.Buttons←'OK'
+     A.DialogBox.New w
  }

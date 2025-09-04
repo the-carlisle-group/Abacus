@@ -1,5 +1,5 @@
  OnPromptBoxCancel←{
-     d←⍵
+     d←⍵.DialogBox
      d.Value≡d.NewValue:0
      p←()
      p.Title←'You have made changes.'
