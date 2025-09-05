@@ -3,5 +3,7 @@
      ⍝ ← ←→ Namespace of Values from ⍵
      e←⍵ GetElementsWith'Name'
      0=≢e:()
-     +()⎕VSET(↑e.Name)e.Value
+     c←e/⍨2.1=e.⎕NC⊂⊂'Value'
+     0=≢c:()
+     +()⎕VSET(↑c.Name)c.Value
  }

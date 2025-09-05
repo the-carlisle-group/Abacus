@@ -9,38 +9,9 @@
      w.OnClick←A.FQP'OnSelect'
      w.OnClose←A.FQP'OnClose'
      d←A.DialogBox.New w
-     f←2⊃d.Content                 ⍝ Footer
+     f←2⊃d.Content
      f.Unqueued←'click'
-     d.Unqueued←'close'
      d.Unqueued←'close'
      d.Tid←⎕TID
      d
-
-
-
-
-
-
-
-
-    ⍝ d←(A.New'dialog')⎕NS(
-⍝         'Title' 'Confirmation'
-⍝         'Message' 'Continue?'
-⍝         'Options'('Yes' 'No')
-⍝         'Width' '30rem'
-⍝     )A.Default ⍵
-⍝     d.class←'confirm-box'
-⍝     d.style←'width:',d.Width
-⍝     h←d A.New'h1'd.Title
-⍝     m←d A.New'section'
-⍝     p←m A.New¨{'p'⍵}¨⊆d.Message
-⍝     f←d A.New'footer'
-⍝     b←f A.New¨{'button'⍵}¨d.Options
-⍝     b.Name←d.Options
-⍝     b.Onclick←⊂A.FQP'OnSelect'
-⍝     b.Unqueued←⊂'click'
-⍝     d.Onclose←A.FQP'OnClose'
-⍝     d.Unqueued←'close'
-⍝     d.Tid←⎕TID
-⍝     d
  }

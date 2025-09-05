@@ -1,7 +1,0 @@
- GetValues←{
-     ⍝ ⍵ ←→ DOM node
-     ⍝ ← ←→ Namespace of Values from ⍵
-     e←⍵ GetElementsWith'Name'
-     0=≢e:()
-     +()⎕VSET(↑e.Name)e.Value
- }
