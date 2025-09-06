@@ -3,19 +3,13 @@
      ⍝ ************************
      s←Rule'.DropList'
      s.display←'flex'
-     s.align_items←'center'
-     s.gap←'1em'
-     ⍝ s.font_family←'Arial'
-     ⍝ s.font_size←'1.5rem'
-
+     s.flex_direction←'column'
+     s.gap←'.5rem'
      ⍝ ***********************************
      r←s Rule'select' ⍝ ,::picker(select)'
      r.border←'1px solid var(--border-color)'
-
      r.appearance←'base-select'
      r.padding←'.5rem'
-
-
      ⍝ **********************************
      r←s Rule'option:focus'
      r.background_color←'var(--accent-color-1)'

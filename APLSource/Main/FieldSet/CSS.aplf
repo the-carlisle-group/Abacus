@@ -1,26 +1,32 @@
  CSS←{
      Rule←##.NewRule
+     s←Rule''
      ⍝ Default, vertical field set
-     s←Rule'.field-set'
-     s.display←'grid'
-     s.align_items←'center'
-     s.grid_auto_flow←'row'
-     s.grid_template_columns←'auto auto'
-     s.gap←'1em'
-     s.padding←'2em'
-     s.border←'none'
+     r←s Rule'.fieldset-stacked'
+     r.display←'flex'
+     r.flex_direction←'column'
+     r.gap←'1rem'
+     r.border←'none'
+     ⍝ ***************************
+     ⍝ Grid
+     r←s Rule'.fieldset-inline'
+     r.display←'grid'
+     r.align_items←'center'
+     r.grid_auto_flow←'row'
+     r.grid_template_columns←'auto 1fr'
+     r.gap←'1rem'
+     r.border←'none'
      ⍝ *************************
-     r←s Rule'>*'
+     r←s Rule'.fieldset-inline>div'
      r.display←'contents'
-     ⍝ *************************
-     z←##.UnNestCSS s
      ⍝ ************************
-     s←Rule'.field-set-grid'
-     s.display←'grid'
-     s.gap←'1em'
-     s.padding←'2em'
-     s.grid_auto_flow←'row'
-     s.grid_template_columns←'auto auto'
-     ⍝ ************************
-     z,s
+     r←s Rule'.fieldset-border'
+     r.border←'2px solid'
+     r.border_radius←'.25rem'
+     r.padding←'1rem'
+     ⍝
+     r←s Rule'fieldset>legend'
+     r.padding←'0 1rem'
+     ⍝ r.display←'contents'
+     s
  }

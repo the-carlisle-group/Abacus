@@ -34,8 +34,8 @@
      r.font_size←'1rem'
      r.min_width←'6rem'
      ⍝ Paragraph
-     r←s Rule'p'
-     r.margin_bottom←'.75rem'
+     ⍝ r←s Rule'p'
+     ⍝ r.margin_bottom←'.75rem'
      ⍝ r.padding←'.5rem 1rem'
      ⍝ ****************************************
      ⍝ Dialog

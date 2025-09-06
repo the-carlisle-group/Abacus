@@ -1,0 +1,18 @@
+ OnBasicDialog←{
+     d←⍵.Document
+     s←A.FieldSet.New''
+     i←s A.TextInput.New'TextInput' 'Text input:'
+     i←s A.NumberInput.New'NumericInput' 'Numeric input:' 256 'CI15'
+     i←s A.DateInput.New'DateInput' 'Date input:' 20261231
+     i←s A.DropList.New'DropListInput' 'Drop list input:' ''('Comma' 'Pipe' 'Tab')
+     i←s A.CheckBox.New'Checkbox' 'Check box input'
+     _←d.FileSettings A.InitValues s
+     p←⎕NS''
+     p.Title←'Basic Dialog Component'
+     p.Subtitle←'Showing all the input component types.'
+     p.BodyContent←s
+     p.Buttons←'OK' 'Cancel'
+     p.OnClick←(A.FQP'OnFileSettingsOK')''
+     p.Width←'20rem'
+     d A.DialogBox.Show p
+ }

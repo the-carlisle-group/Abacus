@@ -1,8 +1,14 @@
  New←{
-     ⍝ ⍺ ←→ Parent
-     ⍝ ⍵ ←→ DOM Content
-     ⍺←⊢
-     c←⍺ ##.New'FieldSet'⍵
-     c.class←'field-set'
-     c
+     ⍺←0
+     d←(⍺ A.New'fieldset')⎕NS(
+         'Legend' ''
+         'Format' 'stacked'     ⍝ stacked|inline inputs
+         'Border' 0             ⍝ 0|1
+     )A.Default ⍵
+     l←A.New'legend'd.Legend
+     d.Content,←l/⍨0≠≢d.Legend
+     c←'fieldset','-',d.Format
+     c,←d.Border/' fieldset-border'
+     d.class←c
+     d
  }

@@ -11,10 +11,15 @@
      i←s NewItem'Cut' 'Ctrl+X' 'OnCut'
      i←s NewItem'Copy' 'Ctrl+C' 'OnCopy'
      i←s NewItem'Paste' 'Ctrl+V' 'OnPaste'
-     s←m NewMenu⊂'Test'
+     s←m NewMenu⊂'Sample'
      i←s NewItem'Alert box' 'Ctrl+L' 'OnAlertBox'
      i←s NewItem'Prompt box' 'Ctrl+M' 'OnPromptBox'
      i←s NewItem'Confirm box' 'Ctrl+S' 'OnConfirmBox'
+     i←s NewItem'Basic dialog' 'Ctrl+S' 'OnBasicDialog'
+     i←s NewItem'Basic dialog 2' 'Ctrl+S' 'OnBasicDialog2'
+     i←s NewItem'Basic dialog 3' 'Ctrl+S' 'OnBasicDialog3'
+
+
      s←m NewMenu⊂'View'
      i←s NewItem'List' 'Ctrl+Q' 'OnViewList'
      s2←s NewMenu⊂'Icons'

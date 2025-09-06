@@ -3,15 +3,11 @@
      ⍝ ************************
      s←Rule'.DateInput'
      s.display←'flex'
-     s.align_items←'center'
+     s.flex_direction←'column'
+     s.gap←'.5rem'
      ⍝ ************************
      r←s Rule'input'
      r.text_align←'right'
-     ⍝r.font_family←'APL385 Unicode'
-⍝     r.font_size←'1.5rem'
-⍝     r.padding←'.5em'
-⍝     r.border←'1px solid black'
-⍝     r.border_radius←'.5rem'
-⍝     ⍝ r.width←'60rem'
+     ⍝ ************************
      A.UnNestCSS s
  }

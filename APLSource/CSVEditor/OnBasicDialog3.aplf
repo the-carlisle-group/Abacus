@@ -1,0 +1,24 @@
+ OnBasicDialog3←{
+     d←⍵.Document
+     s←A.FieldSet.New'' 'stacked' 1
+     i←s A.TextInput.New'TextInput' 'Text input:'
+     i←s A.NumberInput.New'NumericInput' 'Numeric input:' 256 'CI15'
+     i←s A.DateInput.New'DateInput' 'Date input:' 20261231
+     i←s A.DropList.New'DropListInput' 'Drop list input:' ''('Comma' 'Pipe' 'Tab')
+     i←s A.FileInput.New'FileInput' 'File input'
+
+     s2←A.FieldSet.New'Some checkboxes'('Border' 1)
+     i←s2 A.CheckBox.New'Checkbox1' 'One'
+     i←s2 A.CheckBox.New'Checkbox2' 'Two'
+     i←s2 A.CheckBox.New'Checkbox3' 'Three'
+
+
+     p←⎕NS''
+     p.Title←'Basic Dialog Box 3'
+     p.Subtitle←'Showing fields in two fieldsets, with borders and legend'
+     p.BodyContent←s,s2
+     p.Buttons←'OK' 'Cancel'
+     p.OnClick←(A.FQP'OnFileSettingsOK')''
+     p.Width←'40rem'
+     d A.DialogBox.Show p
+ }

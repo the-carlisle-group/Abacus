@@ -1,0 +1,17 @@
+ OnBasicDialog2←{
+     d←⍵.Document
+     s←A.FieldSet.New⊂'Format' 'inline'
+     i←s A.TextInput.New'TextInput' 'Text input:'
+     i←s A.NumberInput.New'NumericInput' 'Numeric input:' 256 'CI15'
+     i←s A.DateInput.New'DateInput' 'Date input:' 20261231
+     i←s A.DropList.New'DropListInput' 'Drop list input:' ''('Comma' 'Pipe' 'Tab')
+     _←d.FileSettings A.InitValues s
+     p←⎕NS''
+     p.Title←'Basic Dialog Box 2'
+     p.Subtitle←'Showing fields in a grid layout.'
+     p.BodyContent←s
+     p.Buttons←'OK' 'Cancel'
+     p.OnClick←(A.FQP'OnFileSettingsOK')''
+     p.Width←'40rem'
+     d A.DialogBox.Show p
+ }

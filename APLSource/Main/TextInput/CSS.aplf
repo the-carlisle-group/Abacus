@@ -2,14 +2,12 @@
      Rule←A.NewRule
      ⍝ ************************
      s←Rule'.TextInput'
-     ⍝ s.display←'flex'
-     ⍝ s.align_items←'center'
-     ⍝ s.font_family←'Arial'
-     ⍝ s.font_size←'1.5em'
-
+     s.display←'flex'
+     s.flex_direction←'column'
+     s.gap←'.5rem'
      ⍝ ************************
      r←s Rule'input'
-     r.background_color←'inherit'
+     ⍝ r.background_color←'inherit'
      ⍝ r.font_family←'APL385 Unicode'
      ⍝ r.font_size←'1.5rem'
      ⍝ r.padding←'.5em'

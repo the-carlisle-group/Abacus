@@ -12,6 +12,6 @@
      p.BodyContent←s
      p.Buttons←'OK' 'Cancel'
      p.OnClick←(A.FQP'OnFileSettingsOK')''
-     p.Width←'40rem'
+     ⍝ p.Width←'80rem'
      d A.DialogBox.Show p
  }
