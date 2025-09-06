@@ -7,11 +7,13 @@
          'OnChange' ''
      )A.Default ⍵
      d.class←'FileInput'
-     d.id←d.Name
      l←d A.New'label'd.Label
-     i←d A.New'input'
+     l.for←d.Name
+     n←d A.New'div'
+     i←n A.New'input'
+     i.id←d.Name
      d.Oninput←A.FQP'OnInput'
-     b←d A.New'button' 'Browse...'
+     b←n A.New'button' 'Browse...'
      b.Onclick←A.FQP'OnBrowse'
      d.Oninput←A.FQP'OnInput'
      d.Onchange←A.FQP'OnChange'

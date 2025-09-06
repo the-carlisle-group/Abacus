@@ -7,7 +7,7 @@
      s.gap←'.5rem'
      ⍝ ***********************************
      r←s Rule'select' ⍝ ,::picker(select)'
-     r.border←'1px solid var(--border-color)'
+     r.border←'2px solid var(--border-color)'
      r.appearance←'base-select'
      r.padding←'.5rem'
      ⍝ **********************************

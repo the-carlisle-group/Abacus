@@ -1,6 +1,7 @@
  OnBasicDialog←{
      d←⍵.Document
      s←A.FieldSet.New''
+     i←s A.FileInput.New'FileInput' 'File input:'
      i←s A.TextInput.New'TextInput' 'Text input:'
      i←s A.NumberInput.New'NumericInput' 'Numeric input:' 256 'CI15'
      i←s A.DateInput.New'DateInput' 'Date input:' 20261231
@@ -13,6 +14,6 @@
      p.BodyContent←s
      p.Buttons←'OK' 'Cancel'
      p.OnClick←(A.FQP'OnFileSettingsOK')''
-     p.Width←'20rem'
+     p.Width←'30rem'
      d A.DialogBox.Show p
  }

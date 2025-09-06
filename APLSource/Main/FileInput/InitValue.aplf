@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Element (Component)
      ⍝ ⍵ ←→ Value
      ⍺.Value←⍵
-     i←1⊃⍺.Content
+     i←1 0⊃⍺.Content.Content
      i.value←{⍵/⍨1+⍵='\'}⍵
      0
  }

@@ -5,7 +5,7 @@
      i←s A.NumberInput.New'NumericInput' 'Numeric input:' 256 'CI15'
      i←s A.DateInput.New'DateInput' 'Date input:' 20261231
      i←s A.DropList.New'DropListInput' 'Drop list input:' ''('Comma' 'Pipe' 'Tab')
-     i←s A.FileInput.New'FileInput' 'File input'
+     i←s A.FileInput.New'FileInputX' 'File input'
 
      s2←A.FieldSet.New'Some checkboxes'('Border' 1)
      i←s2 A.CheckBox.New'Checkbox1' 'One'

@@ -23,10 +23,10 @@
      r.background_color←'inherit'
      r.padding←'.5rem'
      r.border←'2px solid'
-     r.border_radius←'.25rem'
+     r.border_radius←'var(--border-radius)'
      ⍝ Button
      r←s Rule'button'
-     r.border_radius←'.5rem'
+     r.border_radius←'var(--border-radius)'
      r.padding←'.5rem'
      r.color←'inherit'
      r.background_color←'inherit'
