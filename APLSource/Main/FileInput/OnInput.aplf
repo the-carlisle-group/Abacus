@@ -1,4 +1,0 @@
- OnInput←{
-     ⎕←'On Input from text input'
-     0
- }

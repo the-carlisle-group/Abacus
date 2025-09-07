@@ -1,4 +1,4 @@
- OnBrowse←{
+ OnPicker←{
      d←⍵.Document
      f←''
      c←'Select a file'
@@ -15,6 +15,5 @@
      'FileBoxOK'≢1⊃r:0
      d.BrowseFolder←f.Directory
      n←2⊃r
-     p←⍵.Target.Parent.Parent
-     p SetValue n
+     ⍺ A.TextInput.SetValue n
  }

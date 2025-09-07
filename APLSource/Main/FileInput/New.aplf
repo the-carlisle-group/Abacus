@@ -1,22 +1,12 @@
  New←{
      ⍺←0
-     d←(⍺ A.New'div')⎕NS(
+     w←(
          'Name' ''
          'Label' ''
          'Value' ''
          'OnChange' ''
      )A.Default ⍵
-     d.class←'FileInput'
-     l←d A.New'label'd.Label
-     l.for←d.Name
-     n←d A.New'div'
-     i←n A.New'input'
-     i.id←d.Name
-     d.Oninput←A.FQP'OnInput'
-     b←n A.New'button' 'Browse...'
-     b.Onclick←A.FQP'OnBrowse'
-     d.Oninput←A.FQP'OnInput'
-     d.Onchange←A.FQP'OnChange'
-     _←d InitValue d.Value
-     d
+     w.PickerCaption←'Browse...'
+     w.OnPicker←A.FQP'OnPicker'
+     ⍺ A.TextInput.New w
  }

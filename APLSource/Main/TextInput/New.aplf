@@ -5,16 +5,21 @@
          'Label' ''
          'Value' ''
          'AutocompleteItems' ''
+         'PickerCaption' ''
+         'OnPicker' ''
          'OnChange' ''
      )A.Default ⍵
-     d.class←'TextInput'
-     l←d A.New'label'd.Label
-     l.for←d.Name
-     i←d A.New'input'
-     i.id←d.Name
+     d.class←'TextInputEx'
      d.Oninput←A.FQP'OnInput'
      d.Onchange←A.FQP'OnChange'
-     ⍝ i.Onblur←A.FQP'OnInputBlur'
+     l←d A.New'label'd.Label
+     l.for←d.Name
+     n←d A.New'div'
+     i←n A.New'input'
+     i.id←d.Name
      _←d InitValue d.Value
+     0=≢d.OnPicker:d
+     b←n A.New'button'd.PickerCaption
+     b.Onclick←A.FQP'OnPicker'
      d
  }

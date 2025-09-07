@@ -1,19 +1,23 @@
  CSS←{
      Rule←A.NewRule
      ⍝ ************************
-     s←Rule'.TextInput'
+     s←Rule'.TextInputEx'
      s.display←'flex'
      s.flex_direction←'column'
      s.gap←'.5rem'
      ⍝ ************************
+     r←s Rule'>div'
+     r.display←'flex'
+     r.border←'2px solid'
+     r.border_radius←'var(--border-radius)'
+     ⍝ **********************
      r←s Rule'input'
-     ⍝ r.background_color←'inherit'
-     ⍝ r.font_family←'APL385 Unicode'
-     ⍝ r.font_size←'1.5rem'
-     ⍝ r.padding←'.5em'
-     ⍝ r.placeholder←'enter a selection expression, e.g. State in "NY"'
-     ⍝ r.border←'1px solid black'
-     ⍝ r.border_radius←'.5rem'
-     ⍝ r.width←'60rem'
+     r.border←'none'
+     r.flex←1
+     ⍝ **********************
+     r←s Rule'button'
+     r.border←'none'
+     r.min_width←0
+     ⍝ **********************
      A.UnNestCSS s
  }

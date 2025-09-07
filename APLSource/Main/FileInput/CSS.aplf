@@ -1,22 +1,3 @@
  CSS←{
-     Rule←A.NewRule
-     ⍝ ************************
-     s←Rule'.FileInput'
-     s.display←'flex'
-     s.flex_direction←'column'
-     s.gap←'.5rem'
-     ⍝ ************************
-     r←s Rule'>div'
-     r.display←'flex'
-     r.border←'2px solid'
-     r.border_radius←'var(--border-radius)'
-     ⍝ **********************
-     r←s Rule'input'
-     r.border←'none'
-     r.flex←1
-     ⍝ **********************
-     r←s Rule'button'
-     r.border←'none'
-     ⍝ **********************
-     A.UnNestCSS s
+     ⍬
  }

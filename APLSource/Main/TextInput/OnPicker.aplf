@@ -1,0 +1,7 @@
+ OnPicker←{
+     b←⍵.Target
+     e←b.Parent.Parent
+     f←e.OnPicker
+     0=≢f:0
+     e(⍎f)⍵
+ }
