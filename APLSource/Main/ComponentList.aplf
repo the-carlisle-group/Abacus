@@ -20,5 +20,6 @@
      l,←⊂'Menu'
      l,←⊂'PickList'
      l,←⊂'FieldSet'
+     l,←⊂'FindAndReplace'
      l
  }

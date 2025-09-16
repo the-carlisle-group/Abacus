@@ -1,0 +1,15 @@
+ Goto←{
+     d←⍺.Target A.GetNearest'dialog'
+     FindAll d:0
+     i←d GetLocation ⍵
+     a←d.SearchAxis
+     k←d.FoundCells
+     i<0:0
+     i=≢k:0
+     j←a⌽i⊃k
+     g←d.DataGrid
+     _←g.Table A.DataGrid.Move j
+     fg←⊃d A.GetElementsByClass'data-grid'⍝ Find Resultd Grid
+     fg.Table A.DataGrid.Move i,0
+     0
+ }

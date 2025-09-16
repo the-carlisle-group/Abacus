@@ -1,0 +1,5 @@
+ RegExReplace←{
+     ⍝ ⍵ ←→ DataToSearch, SearchPattern, TransformationPattern
+     v s t←⍵
+     (s ⎕R t⍠'Mode' 'M')v
+ }

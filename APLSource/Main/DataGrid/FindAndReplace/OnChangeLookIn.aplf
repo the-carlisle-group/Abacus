@@ -1,4 +1,0 @@
- OnChangeLookIn←{
-     ⎕←'On Change lookin!'
-     0
- }

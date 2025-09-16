@@ -1,0 +1,8 @@
+ Search←{
+     ⍝ ⍺ ←→ Settings
+     ⍝ ⍵ ←→ Column values
+     n v←⍵
+     b←⍺ Find v
+     v←b ListFoundCells n v
+     b v
+ }

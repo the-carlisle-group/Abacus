@@ -1,0 +1,37 @@
+ CSS←{
+     Rule←##.NewRule
+     ⍝ ****************************************
+     s←Rule'.FindAndReplace'
+     s.background_color←'inherit'
+     s.color←'inherit'
+     s.border←'2px solid var(--accent-color-1)'
+     s.border_radius←'var(--border-radius)'
+     s.width←'30rem'
+     s.height←'40rem'
+     s.margin←'auto'
+     s.inset←0
+     s.display←'flex'
+     s.flex_direction←'column'
+     ⍝ ***********************
+     r←s Rule'h1'
+     r.background_color←'steelblue'
+     r.padding←'.5rem 1rem'
+     r.font_size←'1rem'
+     r.font_weight←'600'
+     ⍝ ***************
+     r←s Rule'fieldset'
+     r.padding←'1rem 2rem'
+     ⍝ r.display←'flex'
+     ⍝ r.flex_direction←'column'
+     ⍝ r.gap←'1rem'
+     ⍝ r.position←'relative' ⍝ Maybe needed for DataGrid
+     ⍝ r.overflow←'clip'     ⍝ ......
+     ⍝ **********************
+     r←s Rule'.button-group'
+     r.display←'grid'
+     r.grid_auto_flow←'row'
+     r.grid_template_columns←'1fr 1fr 1fr 1fr'
+     r.grid_template_rows←'1fr 1fr'
+     ⍝ *************************
+     ##.UnNestCSS s
+ }

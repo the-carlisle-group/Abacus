@@ -7,6 +7,11 @@
      r.flex_direction←'column'
      r.gap←'1rem'
      r.border←'none'
+     ⍝ **********************
+     r←s Rule'.fieldset-stacked-row'
+     r.display←'flex'
+     r.gap←'1rem'
+     r.border←'none'
      ⍝ ***************************
      ⍝ Grid
      r←s Rule'.fieldset-inline'

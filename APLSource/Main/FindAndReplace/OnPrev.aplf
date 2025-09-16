@@ -1,0 +1,3 @@
+ OnPrev←{
+     ⍵ Goto'Prev'
+ }

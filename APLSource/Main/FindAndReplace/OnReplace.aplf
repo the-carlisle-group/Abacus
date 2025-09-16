@@ -1,0 +1,15 @@
+ OnReplace←{
+     d←⍵.Target A.GetNearest'dialog'
+     g←d.DataGrid
+     t←g.Table
+     p←A.GetComponentValues d
+     sp←GetSearchPattern p
+     tp←p.ReplaceWith
+     i j←t.ActiveCell
+     v←t A.DataGrid.GetValue i j
+     r←(sp ⎕R tp)v
+     _←t A.DataGrid.SetValue r
+     c←A.DataGrid.GetTableCell t
+     _←c A.SetInnerHTML r
+     OnNext ⍵
+ }

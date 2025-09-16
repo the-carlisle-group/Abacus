@@ -5,9 +5,9 @@
      i←A.FileInput.New'FileName' 'File name:'f
      p←⎕NS''
      p.Title←'Open'
-     p.OKCaption←'Open'
-     p.Contents←i
-     p.OnOK←A.FQP'OnFileOpenOK'
+     p.Buttons←'Open' 'Cancel'
+     p.BodyContent←i
+     p.OnClick←(A.FQP'OnFileOpenOK')''
      b←A.DialogBox.New p
      d A.ShowModal b
  }

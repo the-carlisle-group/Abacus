@@ -1,0 +1,21 @@
+ RegExFind←{
+     p c←⍺ ⍵
+     e←#.FlipDB.Main.Evaluate_Code
+     (e.regexSearch c p.RegEx)._Value
+
+
+
+     regexSearch←{
+     ⍝ ⍵ ←→ Value, SearchPattern(s)
+     ⍝ m←'\^$*+?.|{}[]()'    ⍝ Note for future optimization with ⍷
+         p←1 ∆RegexArgs ⍵
+         v←p.Variant
+         b←≢¨p.Patterns{(⍺ ⎕S 0⍠v)⍵}¨p.Data
+         new←∆FlipDB.Boolean.New
+         p.IsScalar:new(↑b)0 0
+         new b 0 1
+     }
+
+
+
+ }

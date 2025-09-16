@@ -1,0 +1,29 @@
+ New←{
+     d←(A.New'dialog')⎕NS(
+         'DataGrid' 0
+     )A.Default ⍵
+     d.class←'FindAndReplace'
+     d.LastSettings←''
+     h1←d A.New'h1' 'Find and Replace'
+     s←d A.FieldSet.New⊂'Format' 'inline'
+     e1←s A.TextInput.New'FindWhat' 'Find what:'
+     e2←s A.TextInput.New'ReplaceWith' 'Replace with:'
+     fg←d A.FieldSet.New⊂'Format' 'stacked-row'
+     e1←fg A.CheckBox.New'MatchCase' 'Match case'
+     e2←fg A.CheckBox.New'MatchEntireCell' 'Match entire cell contents'
+     e3←fg A.CheckBox.New'UseRegex' 'Use regular expressions'
+     e4←fg A.DropList.New'SearchBy' 'Search by:' 'Columns'('Options'('Rows' 'Columns'))
+     bg←d A.New'div'
+     bg.class←'button-group'
+     b←A.Button.New'Find' 'OnFind'     ⍝ Add shortcut, etc.
+     b,←A.Button.New'Replace all' 'OnReplaceAll'
+     b,←A.Button.New'Replace' 'OnReplace'
+     b,←A.Button.New'Close' 'OnClose'
+     b,←A.Button.New'First' 'OnFirst'
+     b,←A.Button.New'Prev' 'OnPrev'
+     b,←A.Button.New'Next' 'OnNext'
+     b,←A.Button.New'Last' 'OnLast'
+     bg.Content←b
+     g←d ##.DataGrid.New''
+     d
+ }

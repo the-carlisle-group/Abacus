@@ -1,0 +1,5 @@
+ ListFoundCells←{
+     n v←⍵
+     i←⍸⍺
+     (⊂n),⍉↑(i+1)(↓v[i;])
+ }

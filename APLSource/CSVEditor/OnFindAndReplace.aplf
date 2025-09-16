@@ -1,0 +1,5 @@
+ OnFindAndReplace←{
+     d←⍵.Document
+     g←↑d A.GetElementsByClass'data-grid'
+     d A.FindAndReplace.Show g
+ }

@@ -6,6 +6,7 @@
      i←s NewItem'Open' 'Ctrl+O' 'OnFileOpen'
      i←s NewItem'Save' 'Ctrl+S' 'OnFileSave'
      i←s NewItem'Save As...' 'Ctrl+A' 'OnFileSaveAs'
+     i←s NewItem'Find and Replace...' 'Ctrl+F' 'OnFindAndReplace'
      i←s NewItem'Settings' '' 'OnFileSettings'
      s←m NewMenu⊂'Edit'
      i←s NewItem'Cut' 'Ctrl+X' 'OnCut'

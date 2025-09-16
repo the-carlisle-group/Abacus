@@ -1,0 +1,10 @@
+ GetLocation←{
+     d←⍺
+     a←d.SearchAxis
+     k←d.FoundCells
+     j←a⌽d.DataGrid.Table.ActiveCell
+     ⍵≡'First':0
+     ⍵≡'Last':¯1+≢k
+     ⍵≡'Next':1+k⍸⊂j
+     ⍵≡'Prev':(-k∊⍨⊂j)+k⍸⊂j
+ }

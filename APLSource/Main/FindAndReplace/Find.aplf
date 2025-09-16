@@ -1,7 +1,6 @@
  Find←{
-     p c←⍺ ⍵
-     p.UseRegex:p RegExFind c
-     v←c._Value
+     p v←⍺ ⍵
+     p.UseRegex:p RegExFind v
      h w←⍴v
      s←p.FindWhat
      w<≢s:h⍴0

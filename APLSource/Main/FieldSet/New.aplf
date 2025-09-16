@@ -2,7 +2,7 @@
      ⍺←0
      d←(⍺ A.New'fieldset')⎕NS(
          'Legend' ''
-         'Format' 'stacked'     ⍝ stacked|inline inputs
+         'Format' 'stacked'     ⍝ stacked|inline|inline-row|stacked-row inputs
          'Border' 0             ⍝ 0|1
      )A.Default ⍵
      l←A.New'legend'd.Legend

@@ -1,0 +1,29 @@
+ OnReplaceAll←{
+     d←⍵.Target A.GetNearest'dialog'
+     g←d.DataGrid
+     t←g.Table
+     p←A.GetComponentValues d
+     sp←GetSearchPattern p
+     tp←p.ReplaceWith
+
+
+
+     t.Inverted:ReplaceAllInverted
+
+     ReplaceAll
+
+
+     {(sp ⎕R tp)v}¨c
+     i← ⍝  Column indices
+     m[;i]
+
+       ⍝ If not inverted
+
+
+
+
+
+
+
+     0
+ }

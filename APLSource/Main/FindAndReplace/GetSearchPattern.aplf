@@ -1,0 +1,10 @@
+ GetSearchPattern←{
+     mc←⍵.MatchCase
+     me←⍵.MatchEntireCell
+     nr←~⍵.UseRegex
+     fw←∊nr 1 nr/'\Q'⍵.FindWhat'\E'
+     me∧mc:'^',fw,'$'
+     me∧~mc:'(?i)^',fw,'$'
+     mc:fw
+     '(?i)',fw
+ }
