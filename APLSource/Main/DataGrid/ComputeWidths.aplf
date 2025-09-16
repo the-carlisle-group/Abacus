@@ -3,6 +3,6 @@
      ⍝ Also, allow explicity setting width in Column space
      t←⍺
      r←t.RowNumbers/4+2×1<≢t.HeaderValues
-     c←r,12⌈{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
+     c←r,12⌈1⊃¨2↑¨⍴¨t.Columns.Value
      c×t.FontSize
  }

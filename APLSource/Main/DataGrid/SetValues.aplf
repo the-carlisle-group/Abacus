@@ -1,0 +1,15 @@
+ SetValues←{
+    ⍝ ⍺ ←→ Table
+    ⍝ ⍵ ←→ Matrix, upperleft corner
+     t←⍺
+     m i←⍵
+     ri ci←i+⍳¨⍴m
+     c←t.Columns[ci]
+     c.Value←c.Value{
+         v←⍺
+         1=≢⍴v:v⊣v[ri]←⍵ ⋄
+         w←1⊃⍴v
+         v⊣v[ri;]←w↑[1]↑⍵
+     }¨↓⍉m
+     0
+ }

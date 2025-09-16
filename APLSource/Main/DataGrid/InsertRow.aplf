@@ -5,8 +5,11 @@
      i j←t.ActiveCell
      n m←t.DataSize
      e←(0@i)1⍴⍨n+1
-     t.Values←t.Inverted{⍺:e∘⍀¨⍵ ⋄ e⍀⍵}t.Values
-     t.Values[i;]←t.Columns.Default
+     c←t.Columns
+     c.Value←e∘⍀¨c.Value
+     ⍝ This wont work....
+     ⍝ Try SetValue¨
+     ⍝ t.Values[i;]←t.Columns.Default
      t.DataSize+←1 0
      t.Changed←1
      Refresh t

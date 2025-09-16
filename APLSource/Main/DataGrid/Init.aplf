@@ -1,21 +1,18 @@
  Init←{
      g←⍵
      t←g.Table
-     0=t.⎕NC'Values':1  ⍝ No data
-     ⍝ 0=≢t.Columns:1 ⍝ No Columns, no data
-     t.Inverted←1=≢⍴t.Values
+     0=t.⎕NC'Columns':1
      t.Columns←DefaultColumnProperties t
      ⍝ Always a mat.
      t.HeaderValues←{2=⍵.⎕NC'HeaderValues':⍵.HeaderValues ⋄ {(1,⍴⍵)⍴⍵}⍵.Columns.Name}t
      t.HeaderRowCount←≢t.HeaderValues
      t.Headers←DefaultHeaderProperties t
-     n←≢t.Columns
      ⍝ For now: Total header height....
      t.HeaderHeight←(≢t.HeaderValues)×3×t.FontSize ⍝ Number of header rows ...
      t.RowHeight←2×t.FontSize
      _←g ##.SetDynamicCSS DynamicCSS t
-     t.DataSize←{t.Inverted:(≢0⊃⍵),≢⍵ ⋄ ⍴⍵}t.Values
-     t.MaxLength←{t.Inverted:1⊃¨2↑¨⍴¨⍵ ⋄ ⌈⌿≢¨⍵}t.Values
+     t.DataSize←(≢⊃t.Columns.Value),≢t.Columns
+     t.Columns.MaxLength←1⊃¨2↑¨⍴¨t.Columns.Value
      t.Widths←t ComputeWidths 0
      ⍝ t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Columns.Name
      t.ColumnTitles←(t.RowNumbers/t.Headers.Title),t.HeaderValues ⍝

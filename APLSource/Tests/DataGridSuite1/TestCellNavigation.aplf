@@ -2,7 +2,7 @@
      ⎕TID=0:∇&0
      t←ReInit 0
      cc←'active-cell'
-     m n←⍴t.Values
+     m n←t.DataSize
      Assert m n≡20081 24:
      Press'Ctrl' 'Home':
      Assert t.ActiveCell≡0 0:

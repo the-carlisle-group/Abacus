@@ -3,7 +3,6 @@
      ~t.InsertColumns:0
      c←1⊃t.ActiveCell
      j←c~⍨⍳1⊃t.DataSize
-     t.Values←⍬ j Index t
      t.Columns←t.Columns[j]
      t.Changed←1
      t.Parent Resize 1

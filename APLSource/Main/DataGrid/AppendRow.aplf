@@ -5,6 +5,7 @@
      i j←t.ActiveCell
      n m←t.DataSize
      r←t.Columns.Default
+     ⍝ This aint gonna work!
      t.Values←t.Values⍪r
      t.DataSize+←1 0
      t.MaxWindowIndex+←1 0

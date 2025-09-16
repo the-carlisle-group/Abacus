@@ -21,13 +21,13 @@
      _←h2 A.SetInnerHTML(fmt r),' rows by ',(fmt c),' columns'
      c←≢n
      cc←⎕NS¨c⍴⊂''
+     cc.Value←v
      cc.Name←n
      cc.Type←⊂'Char'
      cc.Options←⊂''
      g←d A.GetElementById'CSVdata'
      _←g A.DataGrid.Clear 0
      t←g.Table            ⍝ #.Abacus.Tests.DataGridSuite1.Start
-     t.Values←v
      t.Columns←cc
      _←d A.DataGrid.Init g
      _←g A.DataGrid.Resize 0

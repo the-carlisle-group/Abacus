@@ -1,4 +1,3 @@
  GetValue←{
-     ⍺.Inverted:(0⊃⍵)⌷(1⊃⍵)⊃⍺.Values
-     ⊃⍵⌷⍺.Values
+     (0⊃⍵)⌷(1⊃⍵)⊃⍺.Columns.Value
  }

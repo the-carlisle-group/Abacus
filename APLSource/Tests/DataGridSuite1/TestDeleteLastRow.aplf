@@ -1,10 +1,10 @@
  TestDeleteLastRow←{
      ⎕TID=0:∇&0
      t←GetTable 0
-     Assert 20081 24≡⍴t.Values:
+     Assert 20081 24≡t.DataSize:
      Press'Ctrl' 'Home':
      Press'Ctrl' 'ArrowDown':
      Press'Ctrl' 'Delete':
-     Assert 20080 24≡⍴t.Values:
+     Assert 20080 24≡t.DataSize:
      0
  }

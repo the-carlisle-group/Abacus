@@ -2,9 +2,9 @@
      t v←⍺ ⍵
      i j←t.ActiveCell
      i<0:0⊣t.HeaderValues[⊂i j+t.HeaderRowCount 0]←⊂v
-     ~t.Inverted:0⊣t.Values[⊂i j]←⊂v
-     c←j⊃t.Values
-     _←{2=⍴⍴c:c[i;]←(1⊃⍴c)↑v ⋄ c[i]←v}0
-     t.Values[j]←⊂c
+     c←j⊃t.Columns
+     d←c.Value
+     _←{2=≢⍴d:d[i;]←(1⊃⍴d)↑v ⋄ d[i]←⊂v}0
+     c.Value←d
      0
  }

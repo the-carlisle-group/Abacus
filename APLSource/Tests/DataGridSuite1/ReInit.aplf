@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Number of rows in grid
      ⍝ ← ←→ <table>
      t←Init GetTable 0
-     ⍺←≢t.Values
-     t.Values←⍺↑t.Values
+     ⍺←≢(⊃t.Columns).Value
+     t.Columns.Value←⍺↑¨t.Columns.Value
      t⊣t.Parent A.DataGrid.Resize 0
  }

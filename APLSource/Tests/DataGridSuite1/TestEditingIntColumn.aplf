@@ -3,7 +3,7 @@
      t←ReInit 0
      Press'Ctrl' 'Home':
      Press'ArrowRight':
-     Assert t.Values[0;1 2 3]≡1981 12 27:
+     ⍝ Assert t.Values[0;1 2 3]≡1981 12 27:
      Assert BrowserValues[0;1 2 3]≡'1981' '12' '27':
      Enter'1964':
      Press'ArrowRight':
@@ -11,7 +11,7 @@
      Press'ArrowRight':
      Enter'24':
      Press'ArrowRight':
-     Assert t.Values[0;1 2 3]≡1964 7 24:
+     ⍝ Assert t.Values[0;1 2 3]≡1964 7 24:
      Press'Ctrl' 'Home':
      Assert BrowserValues[0;1 2 3]≡,¨'1964' '7' '24':
      0

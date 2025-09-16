@@ -9,7 +9,6 @@
      i←c,c+⍺
      j←⍳1⊃t.DataSize
      j[i]←⌽i
-     t.Values←⍬ j Index t
      t.Columns←t.Columns[j]
      _←g Resize 1
      t Move t.ActiveCell+0 ⍺

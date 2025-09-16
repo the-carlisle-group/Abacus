@@ -1,7 +1,0 @@
- GetValuesInverted←{
-     i k←⍵
-     v←(⊂⊂i)⌷¨⍺.Values[k]
-     v←⍉↑⍺.Columns[k]FormatColumn¨v
-     ~⍺.RowNumbers:v
-     v,⍨ntbs'LCI15'⎕FMT i+1
- }

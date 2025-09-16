@@ -9,8 +9,8 @@
      e.CellIndex←i
      e.OldValue←r c IndexValues t
      e.NewValue←m
-     t Fire e:1
-     t.Values[r;c]←e.NewValue
+     t Fire e:1    ⍝ New Value can change
+     _←t SetValues e.NewValue i
      t.Changed←1
      _←Refresh t
      e.Event←'CellChange'

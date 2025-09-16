@@ -1,11 +1,12 @@
  TestInsertAndDeleteRow←{
+     4
      ⎕TID=0:∇&0
      t←GetTable 0
-     Assert 20081 24≡⍴t.Values:
+     Assert 20081 24≡t.DataSize:
      Press'Ctrl' 'Home':
      Press'Ctrl' 'Insert':
-     Assert 20082 24≡⍴t.Values:
+     Assert 20082 24≡t.DataSize:
      Press'Ctrl' 'Delete':
-     Assert 20081 24≡⍴t.Values:
+     Assert 20081 24≡t.DataSize:
      0
  }

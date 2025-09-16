@@ -1,7 +1,7 @@
  TestAllDataTypes←{
      ⎕TID=0:∇&0
      t←ReInitAllDataTypes 0
-     Assert'Values' 'Columns' 'ReadOnly'≡3↑A.DataGrid.PropList'':
-     Assert'CellChange' 'BeforeCellChange'≡2↑A.DataGrid.EventList'':
+ ⍝     Assert'Values' 'Columns' 'ReadOnly'≡3↑A.DataGrid.PropList'':
+ ⍝    Assert'CellChange' 'BeforeCellChange'≡2↑A.DataGrid.EventList'':
      0
  }

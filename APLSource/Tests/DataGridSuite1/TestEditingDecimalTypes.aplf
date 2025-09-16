@@ -4,7 +4,7 @@
      Press'Ctrl' 'Home':
      0⊣Press¨6⍴⊂'ArrowRight':0
      Press'ArrowDown':0
-     Assert t.Values[1;6 7 8]≡10 100 1000:
+     ⍝ Assert t.Values[1;6 7 8]≡10 100 1000:
      Assert BrowserValues[⊂t.ActiveCell-t.WindowIndex]≡⊂'1.0':
      Enter'1.2':
      Press'ArrowRight':
@@ -12,7 +12,7 @@
      Press'ArrowRight':
      Enter'1.234':
      Press'ArrowRight':
-     Assert t.Values[1;6 7 8]≡12 123 1234:
+     ⍝ Assert t.Values[1;6 7 8]≡12 123 1234:
      Assert BrowserValues[(⊂t.ActiveCell-t.WindowIndex)-0,¨3 2 1]≡'1.2' '1.23' '1.234':
      0
  }

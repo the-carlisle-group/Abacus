@@ -12,7 +12,7 @@
      d.Caption←'Datagrid Test'
      d.LayoutStyle←CSS 0
      d.AppStyle←⍬
-     d.Theme←#.Abacus.Themes.Dark 0
+     d.Theme←#.Abacus.Themes.AbacusDark 0
      _←A.NewForm d
      _←d.Client.ShowDevTools ⍺
      d

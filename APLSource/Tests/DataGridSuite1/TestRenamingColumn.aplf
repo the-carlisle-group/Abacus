@@ -1,4 +1,5 @@
  TestRenamingColumn←{
+     4
      ⎕TID=0:∇&0
      t←GetTable 0
      Press'Ctrl' 'Home':

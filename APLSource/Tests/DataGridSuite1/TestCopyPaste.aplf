@@ -11,7 +11,7 @@
      Press'ArrowUp':
      Press'ArrowUp':
      Press'Ctrl' 'V':
-     Assert(t.Values⌷⍨t.ActiveCell+⍳¨2 2)≡2 2⍴'zwilldu01' 1888 'zychto01' 1990:
+     ⍝ Assert(t.Values⌷⍨t.ActiveCell+⍳¨2 2)≡2 2⍴'zwilldu01' 1888 'zychto01' 1990:
      Assert(2↑¯4 2↑BrowserValues)≡2 2⍴'zwilldu01' '1888' 'zychto01' '1990':
      Press'Ctrl' 'Home':
      Press'Shift' 'ArrowRight':

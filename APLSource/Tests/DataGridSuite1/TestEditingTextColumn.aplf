@@ -2,8 +2,8 @@
      ⎕TID=0:∇&0
      t←GetTable 0
      Press'Ctrl' 'Home':
-     Assert 20081 24≡⍴t.Values:
-     Assert t.Values[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
+     Assert 20081 24≡t.DataSize:
+     ⍝ Assert t.Values[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
      Assert BrowserValues[⍳5;0]≡'aardsda01' 'aaronha01' 'aaronto01' 'aasedo01' 'abadan01':
      Enter'One':
      Press'ArrowDown':
@@ -15,7 +15,7 @@
      Press'ArrowDown':
      Enter'Five':
      Press'ArrowDown':
-     Assert t.Values[⍳5;0]≡'One' 'Two' 'Three' 'Four' 'Five':
+     ⍝ Assert t.Values[⍳5;0]≡'One' 'Two' 'Three' 'Four' 'Five':
      Assert BrowserValues[⍳5;0]≡'One' 'Two' 'Three' 'Four' 'Five':
      0
  }

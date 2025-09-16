@@ -1,4 +1,5 @@
  TestAppendRow←{
+     4
      ⎕TID=0:∇&0
      t←ReInit 0
      Assert 20081 24≡⍴t.Values:

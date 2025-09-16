@@ -31,10 +31,10 @@
 
      n←100
      v←⊂n⍴1 0 0
-     v,←⊂n⍴'Alabama' '' 'Alabama' 'New York' '' 'California'
-     v,←⊂n⍴'Onions' 'Spinach',n⍴⊂''
-     v,←⊂n⍴(⊂'This is a really long string'),n⍴⊂''
-     v,←⊂n⍴'One' 'Two' 'Three' 'Four' 'Five' 'Six' 'Seven' 'Eight' 'Nine'
+     v,←⊂↑n⍴'Alabama' '' 'Alabama' 'New York' '' 'California'
+     v,←⊂↑n⍴'Onions' 'Spinach',n⍴⊂''
+     v,←⊂↑n⍴(⊂'This is a really long string'),n⍴⊂''
+     v,←⊂↑n⍴'One' 'Two' 'Three' 'Four' 'Five' 'Six' 'Seven' 'Eight' 'Nine'
      v,←⊂⍳n
      v,←⊂10×⍳n
      v,←⊂100×⍳n
@@ -44,9 +44,10 @@
      v,←⊂n⍴(3⍴⎕NULL),3÷⍨⍳n
      v,←⊂n⍴''('NY' 'NJ' 'CT')(,⊂'NY')  ⍝ CustomType, a list. 'NY,CA,VT'
      v,←⊂n⍴⍬(0 0 0)(255 255 255)(27 255 156)
-     t.Values←⍉↑v
+     c.Value←v
 
-
+     t.Init←0
+     _←t.⎕EX'HeaderValues'
      _←t.Parent A.DataGrid.Resize 1
      t
  }

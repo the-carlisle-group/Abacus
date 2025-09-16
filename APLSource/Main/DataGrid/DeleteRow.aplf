@@ -4,7 +4,8 @@
      i j←t.ActiveCell
      n m←t.DataSize
      b←(0@i)n⍴1
-     t.Values←t.Inverted{⍺:b∘⌿¨⍵ ⋄ b⌿⍵}t.Values
+     c←t.Columns
+     c.Value←b∘⌿¨c.Value
      t.DataSize-←1 0
      t.Change←1
      l←⊃t.WindowIndex=t.MaxWindowIndex

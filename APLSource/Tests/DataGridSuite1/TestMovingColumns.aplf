@@ -3,10 +3,10 @@
      t←GetTable 0
      Press'Ctrl' 'Home':
      Assert t.ActiveCell≡0 0:
-     sv←t.Values[;0 1]
+     sv←t.Columns[0 1].Value
      Press'Shift' 'Alt' 'ArrowRight':
-     Assert sv≡t.Values[;1 0]:
+     Assert sv≡t.Columns[1 0].Value:
      Press'Shift' 'Alt' 'ArrowLeft':
-     Assert sv≡t.Values[;0 1]:
+     Assert sv≡t.Columns[0 1].Value:
      0
  }
