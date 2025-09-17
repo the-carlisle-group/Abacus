@@ -5,6 +5,7 @@
      Press'Ctrl' 'Home':
      Assert'playerID'≡⊃t.Columns.Name:
      Press'Ctrl' 'F2':
+     ⍝ Need to set Element to Dialog Box or to
      Enter'PID':
      Click'OK':
      Assert'PID'≡⊃t.Columns.Name:

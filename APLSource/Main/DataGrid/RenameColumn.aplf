@@ -9,5 +9,5 @@
      p.OnOK←##.FQP'OnRenameColumnOK'
      p.Value←c⊃t.Columns.Name
      p.DataGrid←t.Parent
-     t.Document ##.PromptBox.Show p
+     t.Document A.PromptBox.Show p
  }

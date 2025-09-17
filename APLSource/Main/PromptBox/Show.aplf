@@ -1,3 +1,5 @@
  Show←{
-     ⍺ ##.ShowModal New ⍵
+     d←New ⍵
+     _←⍺ A.ShowModal d
+     A.SetFocus d A.GetComponent'PromptBox'
  }

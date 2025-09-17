@@ -1,10 +1,12 @@
  Click←{
      ⍝ ⍺ ←→ document
-     ⍝ ⍵ ←→ id
+     ⍝ ⍵ ←→ id|Name
      ⍝ ⍵ ←→ Element
      ⍝ ⍵ ←→ Element (clientY clientX offsetX offsetY)
      ~IsString ⍵:(0⊃⍵)MouseDownAt(1⊃⍵)
-     e←⍺ GetElementById ⍵
+     a←⌽Elements ⍺
+     o←,↓⍉↑a ⎕VGET('id' '')('Name' '')
+     e←(o⍳⊂⍵)⊃a,a
      b←2=e.⎕NC'Onclick'
      v←b⊃'mousedown' 'click'
      ⍺.Waiting←1

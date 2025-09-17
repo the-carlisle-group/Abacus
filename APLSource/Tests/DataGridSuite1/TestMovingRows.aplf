@@ -1,13 +1,12 @@
  TestMovingRows←{
-     4
      ⎕TID=0:∇&0
      t←GetTable 0
      Press'Ctrl' 'Home':
      Assert t.ActiveCell≡0 0:
-     sv←t.Values[0 1;]
+     sv←GetValues(0 1)(0 1)
      Press'Shift' 'Alt' 'ArrowDown':
-     Assert sv≡t.Values[1 0;]:
+     Assert sv≡GetValues(1 0)(0 1):
      Press'Shift' 'Alt' 'ArrowUp':
-     Assert sv≡t.Values[0 1;]:
+     Assert sv≡GetValues(0 1)(0 1):
      0
  }

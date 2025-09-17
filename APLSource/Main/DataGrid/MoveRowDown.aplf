@@ -5,9 +5,9 @@
      i←⊃t.ActiveCell
      i=¯1+⊃t.DataSize:0
      k←i,i+1
-     j←⍳⊃t.DataSize
-     j[k]←⌽k
-     t.Values←j ⍬ Index t
+     j←⌽k
+     c←t.Columns
+     _←c{((⊂j)⌷⍺.Value)←⍵}¨t IndexValues k ⍬
      t.Changed←1
      _←Refresh t
      t Move t.ActiveCell+1 0
