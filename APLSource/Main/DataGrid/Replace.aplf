@@ -7,7 +7,7 @@
      e←⎕NS''
      e.Event←'BeforeCellChange'
      e.CellIndex←i
-     e.OldValue←r c IndexValues t
+     e.OldValue←t GetValues r c
      e.NewValue←m
      t Fire e:1    ⍝ New Value can change
      _←t SetValues e.NewValue i

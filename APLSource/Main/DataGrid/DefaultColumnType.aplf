@@ -1,0 +1,10 @@
+ DefaultColumnType←{
+     t←⍵ ⎕VGET⊂'Type' ''
+     0≠≢t:t
+     v←⍵.Value
+     2=≢⍴v:'Char'
+     d←80|⎕DR⊃v
+     d=0:'VarChar'
+     d=3:'Int'
+     'Float'
+ }

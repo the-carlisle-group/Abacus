@@ -1,15 +1,14 @@
  TestEnteringBadData←{
-     4
      ⎕TID=0:∇&0
      t←GetTable 0
      Press'Ctrl' 'Home':
      Press'ArrowRight':
      Assert t.ActiveCell≡0 1:
-     ov←t.ActiveCell⌷t.Values
+     ov←GetValues t.ActiveCell
      Enter'blah blah':
      Press'Enter':
      Assert t.ActiveCell≡0 1:
-     Assert ov≡t.ActiveCell⌷t.Values:
+     Assert ov≡GetValues t.ActiveCell:
      Press'Escape':
      Press'Escape':
      0

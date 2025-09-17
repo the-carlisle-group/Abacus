@@ -3,7 +3,7 @@
      i j←t.WindowIndex+⍳¨(t.WindowSize+t.WindowPadding)⌊t.DataSize-t.WindowIndex
      k←(⍳⍺.FreezeColumns),j
      q←(⍺.RowNumbers/0),k+⍺.RowNumbers
-     v←⍺ GetValues i k
+     v←⍺ GetFormattedValues i k
      nr nc←⍴v
      o←⍺.OptiTable
      h←o.Header

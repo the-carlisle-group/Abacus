@@ -1,6 +1,7 @@
  ColumnTypeInfo←{
      ⍝ Type, 'class, Align, OnFormat, FormatString, OnParse, OnValidate, Default, Null
      p←⊂'Char' 'c' 'l' 'FMT_Char' '' 'VFI_Char' 'Validate' '' ''
+     p,←⊂'VarChar' 'c' 'l' 'FMT_VarChar' '' 'VFI_VarChar' 'Validate' '' ''
      p,←⊂'Date' 'd' 'r' 'FMT_Num' 'BG<9999/99/99>' 'VFI_Date' 'Validate' 0 0
      p,←⊂'CheckBox' 'b' 'c' 'FMT_CheckBox' '' '' 'Validate' 0 0
      p,←⊂'Select' 's' 'l' 'FMT_Char' '' '' 'Validate' '' ''

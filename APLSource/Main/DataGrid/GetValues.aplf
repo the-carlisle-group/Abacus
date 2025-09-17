@@ -1,8 +1,11 @@
  GetValues←{
-     i k←⍵
-     c←⍺.Columns[k]
-     v←(⊂⊂i)⌷¨c.Value
-     v←⍉↑c FormatColumn¨v
-     ~⍺.RowNumbers:v
-     v,⍨ntbs'LCI15'⎕FMT i+1
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ Row indices, column indices
+     ⍝ ← ←→ Matrix of values
+     v←⍺ IndexValues,¨⍵
+     s←0=(≢⍴)¨⍵
+     m←⍉↑{2=≢⍴⍵:ntbs ⍵ ⋄ ⍵}¨v
+     ∧/s:⊃m
+     1∊s:,m
+     m
  }

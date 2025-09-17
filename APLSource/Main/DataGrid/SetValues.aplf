@@ -1,6 +1,6 @@
  SetValues←{
-    ⍝ ⍺ ←→ Table
-    ⍝ ⍵ ←→ Matrix, upperleft corner
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ Matrix, upperleft corner
      t←⍺
      m i←⍵
      ri ci←i+⍳¨⍴m

@@ -1,13 +1,12 @@
  TestAppendRow←{
-     4
      ⎕TID=0:∇&0
      t←ReInit 0
-     Assert 20081 24≡⍴t.Values:
+     Assert 20081 24≡t.DataSize:
      Press'Ctrl' 'Home':
      Press'Ctrl' 'ArrowDown':
      Press'ArrowDown':
-     Assert 20082 24≡⍴t.Values:
+     Assert 20082 24≡t.DataSize:
      Press'Ctrl' 'Delete':
-     Assert 20081 24≡⍴t.Values:
+     Assert 20081 24≡t.DataSize:
      0
  }

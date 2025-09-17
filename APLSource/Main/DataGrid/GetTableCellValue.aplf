@@ -1,8 +1,8 @@
  GetTableCellValue←{
      ⍝ Get th or td element value
      ⍺←⍵.TableCell
-     0≤0⊃⍺:⍺⌷⍵.OptiTable.Body.Values
+     0≤0⊃⍺:⊃⍺⌷⍵.OptiTable.Body.Values
      r c←⍺
      i←r+⍵.HeaderRowCount
-     i c⌷⍵.OptiTable.Header.Values
+     ⊃i c⌷⍵.OptiTable.Header.Values
  }

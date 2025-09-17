@@ -7,9 +7,10 @@
      e←(0@i)1⍴⍨n+1
      c←t.Columns
      c.Value←e∘⍀¨c.Value
-     ⍝ This wont work....
-     ⍝ Try SetValue¨
-     ⍝ t.Values[i;]←t.Columns.Default
+     c.Value←c.Value{v←⍺
+         1=≢⍴v:v⊣v[i]←⊂⍵
+         v⊣v[i;]←(1⊃⍴v)↑⍵
+     }¨c.Default
      t.DataSize+←1 0
      t.Changed←1
      Refresh t

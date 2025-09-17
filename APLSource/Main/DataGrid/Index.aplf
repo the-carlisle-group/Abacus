@@ -1,9 +1,10 @@
  Index←{
+     OBSOLETE
      ⍝ ⍺ ←→ Rows, Columns ⍬ for all
      j k←⍺
      t←⍵
      v←t.Columns.Value
      0=≢j:v[k]
-     0=≢k:(⊂⊂j)∘⌷¨v
-     (⊂⊂j)∘¨v[k]
+     0=≢k:(⊂⊂j)⌷¨v
+     (⊂⊂j)⌷¨v[k]
  }

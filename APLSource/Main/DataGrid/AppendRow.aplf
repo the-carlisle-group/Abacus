@@ -4,9 +4,8 @@
      ~t.InsertRows:0
      i j←t.ActiveCell
      n m←t.DataSize
-     r←t.Columns.Default
-     ⍝ This aint gonna work!
-     t.Values←t.Values⍪r
+     c←t.Columns
+     c.Value←c.Value{1=≢⍴⍺:⍺,⊂⍵ ⋄ ⍺⍪(1⊃⍴⍺)↑⍵}¨c.Default
      t.DataSize+←1 0
      t.MaxWindowIndex+←1 0
      t Move t.ActiveCell+1 0

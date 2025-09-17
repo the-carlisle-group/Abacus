@@ -1,5 +1,4 @@
  TestInsertAndDeleteRow←{
-     4
      ⎕TID=0:∇&0
      t←GetTable 0
      Assert 20081 24≡t.DataSize:

@@ -1,11 +1,11 @@
  TestInCellEditing←{
-     4
      ⎕TID=0:∇&0
      t←ReInit 0
      Press'Ctrl' 'Home':
+     ⊃Press¨6⍴⊂'ArrowRight':
      Press'F2':
-     Enter'One':
+     Enter'Colorado':
      Press'Enter':
-     Assert t.Values[0;0]≡⊂'aardsda01One':
+     Assert'DenverColorado'≡GetValues 0 6:
      0
  }

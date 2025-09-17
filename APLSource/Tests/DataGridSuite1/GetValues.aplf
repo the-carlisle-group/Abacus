@@ -1,0 +1,4 @@
+ GetValues←{
+     ⍺←Element
+     ⍺ A.DataGrid.GetValues ⍵
+ }

@@ -1,0 +1,8 @@
+ GetFormattedValues←{
+     i k←⍵
+     c←⍺.Columns[k]
+     v←(⊂⊂i)⌷¨c.Value
+     v←⍉↑c FormatColumn¨v
+     ~⍺.RowNumbers:v
+     v,⍨ntbs'LCI15'⎕FMT i+1
+ }
