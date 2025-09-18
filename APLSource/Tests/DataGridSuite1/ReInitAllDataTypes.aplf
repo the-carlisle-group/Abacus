@@ -5,24 +5,24 @@
      t.RowNumbers←1
      t.InsertRows←1
      t.InsertColumns←1
-     c←⎕NS¨14⍴⊂''
+     c←⎕NS¨15⍴⊂''
      t.Columns←c
-     c.Name←'CheckBox' 'Select' 'MultiSelect' 'AutoComplete' 'Char' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date' 'FormattedFloat' 'CustomType' 'RGB'
-     c.Type←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Char' 'Int' 'Dec1' 'Dec2' 'Dec3' 'Float' 'Date' 'Float' 'MyCustomType' 'RGB'
+     c.Name←'CheckBox' 'Select' 'MultiSelect' 'AutoComplete' 'Char' 'VarChar' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date' 'FormattedFloat' 'CustomType' 'RGB'
+     c.Type←'CheckBox' 'Select' 'MultiSelect' 'Char' 'Char' 'VarChar' 'Int' 'Dec1' 'Dec2' 'Dec3' 'Float' 'Date' 'Float' 'MyCustomType' 'RGB'
      (1⊃c).Options←'Alabama' 'New Jersey' 'New Hamshire' 'New York' 'California' 'Nevada'
      (2⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach'
      (3⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach' 'toDate' 'toChar' 'toNumeric'
      (2⊃⌽c).FormatString←'F20.2'
      (2⊃⌽c).Null←⎕NULL
      ⍝ Try a custom type
-     ct←12⊃c
+     ct←13⊃c
      ct.OnFormat←'{{1↓∊'','',¨⍵}¨⍵}'
      ct.OnParse←'{1 ('',''(≠⊆⊢),⍵)''''}'
      ct.OnValidate←'{(∧/⍵∊''NY'' ''NJ'' ''CT'')(∪⍵)''Must be in tri-state area.''}'
      ct.Align←'l'
 
      ⍝ Try a custom type
-     ct←13⊃c
+     ct←14⊃c
      ct.OnFormat←A.FQP'OnFormatRGB'
      ct.OnParse←A.FQP'OnParseRGB'
      ct.OnValidate←'{1 ⍵ ''''}' ⍝ Should not need to define this
@@ -35,6 +35,7 @@
      v,←⊂↑n⍴'Onions' 'Spinach',n⍴⊂''
      v,←⊂↑n⍴(⊂'This is a really long string'),n⍴⊂''
      v,←⊂↑n⍴'One' 'Two' 'Three' 'Four' 'Five' 'Six' 'Seven' 'Eight' 'Nine'
+     v,←⊂n⍴'This is a long string' '' 'A Short one' 'Strings of different length' '' 'Some empty'
      v,←⊂⍳n
      v,←⊂10×⍳n
      v,←⊂100×⍳n

@@ -1,0 +1,15 @@
+ TestEditingVarCharColumn←{
+     ⎕TID=0:∇&0
+     t←ReInitAllDataTypes 0
+     Press'Ctrl' 'Home':
+     0⊣Press¨5⍴⊂'ArrowRight':
+     Assert'This is a long string' '' 'A Short one'≡GetValues(⍳3)5:
+     Enter'Short':
+     Press'ArrowDown':
+     Enter'A longer phrase':
+     Press'ArrowDown':
+     Enter'blah':
+     Press'ArrowDown':
+     Assert'Short' 'A longer phrase' 'blah'≡GetValues(⍳3)5:
+     0
+ }

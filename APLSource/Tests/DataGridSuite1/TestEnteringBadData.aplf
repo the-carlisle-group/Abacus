@@ -1,6 +1,6 @@
  TestEnteringBadData←{
      ⎕TID=0:∇&0
-     t←GetTable 0
+     t←ReInit 0
      Press'Ctrl' 'Home':
      Press'ArrowRight':
      Assert t.ActiveCell≡0 1:
