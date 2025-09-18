@@ -30,6 +30,8 @@
      t.IgnoreNextKey←0
      t.FontSize←18
      t.CustomColumnInserts←⍬
+     t.HeaderTitles←''
+     t.HeaderReadOnly←1
      t.Init←0
      t
  }

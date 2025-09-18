@@ -1,11 +1,10 @@
  TestMultiRowHeader←{
      ⎕TID=0:∇&0
      t←Init GetTable 0
-     t.HeaderValues←↑2⍴⊂t.Columns.Name
+     t.Columns.HeaderValues←{⍵ ⍵}¨t.Columns.Name
      h←⎕NS¨2⍴⊂''
-     h.Title←'Source:' 'Target:'
-     h.ReadOnly←1 0
-     t.Headers←h
+     t.HeaderTitles←'Source:' 'Target:'
+     t.HeaderReadOnly←1 0
      _←t.Parent A.DataGrid.Resize 0
      0
  }

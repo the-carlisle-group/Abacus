@@ -3,11 +3,10 @@
      ⍝ ⍺ ←→ DataGrid
      ⍵:0⊣⍺.Table←⍺ NewTable''
      t←⍺.Table
+     t.Init←0
      _←t.⎕EX'HeaderValues'
      _←t.⎕EX'WindowIndex'
      _←t.⎕EX'ActiveCell'
-     _←t.⎕EX'Values'
      _←t.⎕EX'Columns'
-     _←t.⎕EX'Headers'
      0
  }

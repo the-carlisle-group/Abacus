@@ -9,5 +9,7 @@
      d.Name←n↑⊃,/,¨∘.,\3⍴⊂,¨⎕A
      d.SortDirection←0
      d.Options←⊂''
-     d ⎕NS¨c
+     _←d ⎕NS¨c
+     d.HeaderValues←{⍵ ⎕VGET⊂'HeaderValues'⍵.Name}¨c
+     d
  }

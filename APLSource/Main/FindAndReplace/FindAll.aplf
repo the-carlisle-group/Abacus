@@ -8,17 +8,15 @@
      j≡d.LastSettings:0
      d.LastSettings←j
      d.SearchAxis←p.SearchBy≡'Columns'
-     b l←↓⍉↑p Search¨g.Table.Columns.Name{⍺ ⍵}¨g.Table.Values
+     b l←↓⍉↑p Search¨g.Table.Columns.Name{⍺ ⍵}¨g.Table.Columns.Value
      l←⊃⍪/l
      c←()()()
      c.Name←'Column' 'Row' 'Value'
      c.Type←'Char' 'Int' 'Char'
-     v←↑¨↓⍉{⍵:l ⋄ l[⍋l[;1];]}d.SearchAxis
-     c[d.SearchAxis⌽⍳2]←c[⍳2]
-     v[d.SearchAxis⌽⍳2]←v[⍳2]
+     c.Value←↑¨↓⍉{⍵:l ⋄ l[⍋l[;1];]}d.SearchAxis
+     c[(~d.SearchAxis)⌽⍳2]←c[⍳2]
      rg←⊃d A.GetElementsByClass'data-grid'      ⍝ Result grid on dialog box
      rg.Table.RowNumbers←1
-     rg.Table.Values←v
      rg.Table.Columns←c
      _←A.DataGrid.Init rg
      _←rg A.DataGrid.Resize 0

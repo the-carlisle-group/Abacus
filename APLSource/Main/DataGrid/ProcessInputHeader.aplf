@@ -11,7 +11,7 @@
      t.OptiTable.Header.Values[⊂j]←⊂i.value
      _←t SetValue e.NewValue
      ⍝ Encapsulate this from Init:
-     t.ColumnTitles←(t.RowNumbers/t.Headers.Title),t.HeaderValues ⍝
+     t.ColumnTitles←(t.RowNumbers/t.HeaderTitles),t.HeaderValues ⍝
      ⍝
      c←i A.GetNearest'th'
      _←i A.RemoveAttribute'onblur'

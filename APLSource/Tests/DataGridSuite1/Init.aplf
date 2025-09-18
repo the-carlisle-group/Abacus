@@ -10,6 +10,5 @@
      t.OnCellChange←A.FQP'OnCellChange'
      t.OnCellMove←A.FQP'OnCellMove'
      t.Init←0
-     _←t.⎕EX'HeaderValues'
      t
  }

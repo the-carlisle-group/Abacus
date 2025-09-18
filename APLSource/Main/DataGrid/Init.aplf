@@ -3,10 +3,10 @@
      t←g.Table
      0=t.⎕NC'Columns':1
      t.Columns←DefaultColumnProperties t
-     ⍝ Always a mat.
-     t.HeaderValues←{2=⍵.⎕NC'HeaderValues':⍵.HeaderValues ⋄ {(1,⍴⍵)⍴⍵}⍵.Columns.Name}t
+     t.HeaderValues←⍉↑,¨⊆¨t.Columns.HeaderValues
      t.HeaderRowCount←≢t.HeaderValues
-     t.Headers←DefaultHeaderProperties t
+     t.HeaderTitles←{⍵↑⊆t.HeaderTitles,⍵⍴⊂''}t.HeaderRowCount
+     t.HeaderReadOnly←{⍵↑t.HeaderReadOnly,⍵⍴1}t.HeaderRowCount
      ⍝ For now: Total header height....
      t.HeaderHeight←(≢t.HeaderValues)×3×t.FontSize ⍝ Number of header rows ...
      t.RowHeight←2×t.FontSize
@@ -15,7 +15,7 @@
      t.Columns.MaxLength←1⊃¨2↑¨⍴¨t.Columns.Value
      t.Widths←t ComputeWidths 0
      ⍝ t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Columns.Name
-     t.ColumnTitles←(t.RowNumbers/t.Headers.Title),t.HeaderValues ⍝
+     t.ColumnTitles←(t.RowNumbers/t.HeaderTitles),t.HeaderValues ⍝
      t.FixedColumns←t.RowNumbers+t.FreezeColumns
      t.WindowIndex←t{2=⍺.⎕NC'WindowIndex':⍺.WindowIndex ⋄ ⍵}0,t.FreezeColumns
      t.ActiveCell←t{2=⍺.⎕NC'ActiveCell':⍺.ActiveCell ⋄ ⍵}0 0
