@@ -9,6 +9,6 @@
      e:1⊣d ##.AlertBox.Show⊂'Column name "',v,'" already exists.'
      (c⊃t.Columns).Name←v
      t.HeaderValues←{(1,⍴⍵)⍴⍵}t.Columns.Name
-     t.Changed←1
+     _←t SetChanged 0
      0⊣g Resize 1
  }

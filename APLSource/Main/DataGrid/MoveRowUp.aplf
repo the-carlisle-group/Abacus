@@ -7,7 +7,7 @@
      k←i,i-1
      j←⌽k
      _←t.Columns{((⊂j)⌷⍺.Value)←⍵}¨t IndexValues k ⍬
-     t.Changed←1
+     _←t SetChanged 0
      _←Refresh t
      t Move t.ActiveCell-1 0
  }

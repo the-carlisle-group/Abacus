@@ -1,7 +1,13 @@
- z←y ReplaceAll x;sp;tp;ri;ci;i;t
- ⍝ Replace all values for non inverted data
- ⍝ Column/row indices to seach/replace
- ri←
- :For i :In ci
-     t.Values[ri;i]←(sp ⎕R tp)t.Values[ri;i]
- :EndFor
+ ReplaceAll←{
+     ⍝ ⍺ ←→ Search pattern, transformation pattern, hit count of hits
+     ⍝ ⍵ ←→ Column space, Indices
+     c h←⍵
+     i←⍸,h≠0
+     0=≢i:0
+     sp tp←⍺
+     m←c.Type≡'Char'
+     v←A.ntbs⍣m⊢c.Value
+     v[i]←(sp ⎕R tp)v[i]
+     c.Value←↑⍣m⊢v
+     0
+ }

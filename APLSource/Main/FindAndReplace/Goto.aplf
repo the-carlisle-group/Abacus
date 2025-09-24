@@ -8,7 +8,7 @@
      i=≢k:0
      j←a⌽i⊃k
      g←d.DataGrid
-     _←g.Table A.DataGrid.Move j
+     _←g.Table A.DataGrid.MoveTo j
      fg←⊃d A.GetElementsByClass'data-grid'⍝ Find Resultd Grid
      fg.Table A.DataGrid.Move i,0
      0

@@ -5,6 +5,6 @@
      td←p.Context.Target
      _←t SetValue p.Value
      _←td A.SetInnerHTML p.Value
-     t.Changed←1
+     _←t SetChanged 0
      0
  }

@@ -1,0 +1,7 @@
+ FindEach←{
+     ~⍵⊃⍺.ColumnMask:0
+     c←⍵⊃⍺.Columns
+     ~'Char' 'VarChar'∊⍨⊂c.Type:0
+     ⍺.UseRegex:⍺ FindEachViaRegEx c
+     ⍺ FindEachViaAPL c
+ }

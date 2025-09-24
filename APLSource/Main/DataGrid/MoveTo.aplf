@@ -1,0 +1,12 @@
+ MoveTo←{
+     ⍝ Move for FindAndReplace
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ ActiveCell
+     tc←⍺.TableCell
+     ⍺.ActiveCell←⍵
+     ⍵ AdjustWindow ⍺:Refresh ⍺
+     lc←tc GetTableCell ⍺
+     nc←GetTableCell ⍺
+     _←⍺ RefreshActiveCellClass lc nc
+     0
+ }

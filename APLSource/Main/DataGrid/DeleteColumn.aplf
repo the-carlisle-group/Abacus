@@ -4,6 +4,6 @@
      c←1⊃t.ActiveCell
      j←c~⍨⍳1⊃t.DataSize
      t.Columns←t.Columns[j]
-     t.Changed←1
+     _←t SetChanged 0
      t.Parent Resize 1
  }

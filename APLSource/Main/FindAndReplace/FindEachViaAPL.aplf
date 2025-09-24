@@ -1,0 +1,17 @@
+ FindEachViaAPL←{
+     c←⍵
+     t←c.Type
+     vc←t≡'VarChar'
+     b←⍺.RowMask
+     ic←~⍺.MatchCase
+     me←⍺.MatchEntireCell
+     f←⎕C⍣ic
+     s←f ⍺.FindWhat
+     v←b⌿c.Value
+     vc∧me:b\(⊂s)≡¨f v
+     vc∧~me:b\+/¨(⊂s)⍷¨f v
+     w←1⊃⍴v
+     w<≢s:0
+     me:b\(f v)∧.=w↑s
+     b\+/s⍷f v
+ }

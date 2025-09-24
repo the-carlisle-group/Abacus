@@ -2,25 +2,37 @@
      d←⍵
      p←A.GetComponentValues d
      g←d.DataGrid
-     0=≢p.FindWhat~' ':1 ⍝ Clear out
+     t←g.Table
+     s←g.Table.Selection
+     rg←⊃d A.GetElementsByClass'data-grid'      ⍝ Result grid on dialog box
+     ⍝ 0=≢p.FindWhat~' ':1
+     p.Selection←s
      p.RegEx←GetSearchPattern p
+     ⍝ p.RegExReplace←?
      j←⎕JSON p
-     j≡d.LastSettings:0
+     (g.Table.LastChangeTime<d.FindTime)∧j≡d.LastSettings:0
+     _←rg A.SetStyle'display' 'none'
      d.LastSettings←j
+     p.(RowMask ColumnMask)←(≡/s)∨t.DataSize↑¨{0 1/⍨(⊃⍵),1+-/⌽⍵}¨↓⍉↑s
+     p.Columns←g.Table.Columns
+     d.FindTime←2 ⎕DT⊂⎕TS
      d.SearchAxis←p.SearchBy≡'Columns'
-     b l←↓⍉↑p Search¨g.Table.Columns.Name{⍺ ⍵}¨g.Table.Columns.Value
+     n←p FindEach¨⍳≢g.Table.Columns
+     l←n ListFoundCells¨g.Table.Columns
      l←⊃⍪/l
+     d.Found←n       ⍝ Maybe not boolean,
+     d.FoundCells←⍸(⍉⍣(~d.SearchAxis))↑n≠0
+     0=≢l:1⊣d.Document A.Alert'Nothing found'
      c←()()()
      c.Name←'Column' 'Row' 'Value'
-     c.Type←'Char' 'Int' 'Char'
-     c.Value←↑¨↓⍉{⍵:l ⋄ l[⍋l[;1];]}d.SearchAxis
+     c.Type←'VarChar' 'Int' 'VarChar'
+     c.Value←↓⍉{⍵:l ⋄ l[⍋l[;1];]}d.SearchAxis
      c[(~d.SearchAxis)⌽⍳2]←c[⍳2]
-     rg←⊃d A.GetElementsByClass'data-grid'      ⍝ Result grid on dialog box
+     ⍝ rg←⊃d A.GetElementsByClass'data-grid'      ⍝ Result grid on dialog box
      rg.Table.RowNumbers←1
      rg.Table.Columns←c
      _←A.DataGrid.Init rg
      _←rg A.DataGrid.Resize 0
-     d.FoundCells←⍸(⍉⍣(~d.SearchAxis))↑b
-     0=≢d.FoundCells:d.Document A.Alert'Nothing found.'
+     _←rg A.SetStyle'display' 'grid'
      0
  }

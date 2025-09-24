@@ -4,6 +4,7 @@
      )A.Default ⍵
      d.class←'FindAndReplace'
      d.LastSettings←''
+     d.FindTime←0
      h1←d A.New'h1' 'Find and Replace'
      s←d A.FieldSet.New⊂'Format' 'inline'
      e1←s A.TextInput.New'FindWhat' 'Find what:'

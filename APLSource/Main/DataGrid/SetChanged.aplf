@@ -1,0 +1,5 @@
+ SetChanged←{
+     ⍺.Changed←1
+     ⍺.LastChangeTime←2 ⎕DT⊂⎕TS
+     0
+ }

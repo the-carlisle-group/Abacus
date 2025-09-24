@@ -18,7 +18,7 @@
      _←c A.SetInnerHTML e.NewValue
      _←c A.RemoveClass'in-cell'
      t.CellMode←0
-     t.Changed←1
+     _←t SetChanged 0
      e.Event←'HeaderCellChange'
      _←t Fire e
      0

@@ -1,7 +1,0 @@
- z←y ReplaceAllInverted x;sp;tp;ri;ci;i;t
- ⍝ Replace all values for non inverted data
- ⍝ Column/row indices to seach/replace
- ri←
- :For i :In ci
-     t.Values[ri;i]←(sp ⎕R tp)t.Values[ri;i]
- :EndFor

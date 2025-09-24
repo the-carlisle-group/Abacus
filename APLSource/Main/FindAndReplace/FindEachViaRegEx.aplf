@@ -1,0 +1,8 @@
+ FindEachViaRegEx←{
+     c←⍵
+     m←c.Type≡'Char'
+     b←⍺.RowMask
+     v←A.ntbs⍣m⊢b⌿c.Value
+     h←(⍺.RegEx ⎕S 2)v
+     b\+/(⍳≢v)∘.=h
+ }

@@ -1,6 +1,0 @@
- Clear←{
-     f←⍵
-     _←##.Grid.Clear f.Results
-     f._SearchPattern←''
-     0
- }

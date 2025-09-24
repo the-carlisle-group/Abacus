@@ -1,5 +1,6 @@
  ListFoundCells←{
-     n v←⍵
-     i←⍸⍺
-     (⊂n),⍉↑(i+1)(↓v[i;])
+     i←⍸,⍺≠0
+     v←(⊂i)⌷⍵.Value
+     v←(A.ntbs⍣(2=≢⍴v))v
+     (⊂⍵.Name),⍉↑(i+1)v
  }

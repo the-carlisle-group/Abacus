@@ -12,6 +12,6 @@
          v⊣v[i;]←(1⊃⍴v)↑⍵
      }¨c.Default
      t.DataSize+←1 0
-     t.Changed←1
+     _←t SetChanged 0
      Refresh t
  }
