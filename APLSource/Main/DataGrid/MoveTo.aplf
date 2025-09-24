@@ -4,6 +4,7 @@
      ⍝ ⍵ ←→ ActiveCell
      tc←⍺.TableCell
      ⍺.ActiveCell←⍵
+     ⍺.Selection←(≡/⍺.Selection)⊃⍺.Selection(2⍴⊂⍵)
      ⍵ AdjustWindow ⍺:Refresh ⍺
      lc←tc GetTableCell ⍺
      nc←GetTableCell ⍺

@@ -6,7 +6,7 @@
      s←g.Table.Selection
      rg←⊃d A.GetElementsByClass'data-grid'      ⍝ Result grid on dialog box
      ⍝ 0=≢p.FindWhat~' ':1
-     p.Selection←s
+     _←p ⎕VSET(≢/s)/⊂'Selection's ⍝ Only if
      p.RegEx←GetSearchPattern p
      ⍝ p.RegExReplace←?
      j←⎕JSON p
