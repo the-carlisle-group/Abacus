@@ -21,6 +21,7 @@
      l←n ListFoundCells¨g.Table.Columns
      l←⊃⍪/l
      d.Found←n       ⍝ Maybe not boolean,
+     d.FoundMessage←SpellResults n
      d.FoundCells←⍸(⍉⍣(~d.SearchAxis))↑n≠0
      0=≢l:1⊣d.Document A.Alert'Nothing found'
      c←()()()
@@ -34,5 +35,6 @@
      _←A.DataGrid.Init rg
      _←rg A.DataGrid.Resize 0
      _←rg A.SetStyle'display' 'grid'
+     0⊣d.Document A.Alert d.FoundMessage
      0
  }

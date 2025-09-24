@@ -1,0 +1,17 @@
+ SpellResults←{
+     f←{' '~⍨,'CI12'⎕FMT ⍵}
+     k←↑⍵
+     r←+/∨⌿k
+     c←+/∨/k
+     m←∨/∨/k>1
+     l←+/+/k≠0
+     o←+/+/k
+     l=0:'Nothing found'
+     l=1:'1 cell found'
+     cc←(f c),' column',(c>1)/'s'
+     rr←(f r),' row',(r>1)/'s'
+     m:(f o),' occurrances found in ',(f l),' cells across ',rr,' and ',cc
+     r=1:(f l),' cells found in ',rr
+     c=1:(f l),' cells found in ',cc
+     (f l),' cells found across ',rr,' and ',cc
+ }
