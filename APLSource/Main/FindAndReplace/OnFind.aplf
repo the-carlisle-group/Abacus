@@ -1,3 +1,8 @@
  OnFind←{
-     OnNext ⍵
+     _←OnNext ⍵           ⍝ Or OnFirst
+     d←⍵.Target A.GetNearest'section'
+     fs←SpellFoundSummary d
+     fd←SpellFoundDetail d
+     fm←(⊂fs),fd
+     d.Document A.AlertBox.Show'Found'fm
  }

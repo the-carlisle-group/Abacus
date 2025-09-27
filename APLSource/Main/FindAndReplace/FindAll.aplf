@@ -9,6 +9,7 @@
      _←p ⎕VSET(≢/s)/⊂'Selection's ⍝ Only if
      p.RegEx←GetSearchPattern p
      ⍝ p.RegExReplace←?
+     ⍝!!! This looks at Find What value too, and thus will run , when it shoul not
      j←⎕JSON p
      (g.Table.LastChangeTime<d.FindTime)∧j≡d.LastSettings:0
      _←rg A.SetStyle'display' 'none'
@@ -21,9 +22,8 @@
      l←n ListFoundCells¨g.Table.Columns
      l←⊃⍪/l
      d.Found←n       ⍝ Maybe not boolean,
-     d.FoundMessage←SpellResults n
      d.FoundCells←⍸(⍉⍣(~d.SearchAxis))↑n≠0
-     0=≢l:1⊣d.Document A.Alert'Nothing found'
+     0=≢l:1 ⍝ 1⊣d.Document A.Alert'Nothing found'
      c←()()()
      c.Name←'Column' 'Row' 'Value'
      c.Type←'VarChar' 'Int' 'VarChar'
@@ -35,6 +35,5 @@
      _←A.DataGrid.Init rg
      _←rg A.DataGrid.Resize 0
      _←rg A.SetStyle'display' 'grid'
-     0⊣d.Document A.Alert d.FoundMessage
      0
  }

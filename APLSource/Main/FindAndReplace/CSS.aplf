@@ -5,11 +5,11 @@
      s.background_color←'inherit'
      s.color←'inherit'
      s.border←'2px solid var(--accent-color-1)'
-     s.border_radius←'var(--border-radius)'
-     s.width←'30rem'
-     s.height←'40rem'
-     s.margin←'auto'
-     s.inset←0
+     ⍝ s.border_radius←'var(--border-radius)'
+     ⍝ s.width←'30rem'
+     ⍝ s.height←'40rem'
+     ⍝ s.margin←'auto'
+     ⍝ s.inset←0
      s.display←'flex'
      s.flex_direction←'column'
      ⍝ ***********************

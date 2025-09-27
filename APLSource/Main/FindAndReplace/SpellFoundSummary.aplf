@@ -1,6 +1,6 @@
- SpellResults←{
+ SpellFoundSummary←{
      f←{' '~⍨,'CI12'⎕FMT ⍵}
-     k←↑⍵
+     k←↑⍵.Found
      r←+/∨⌿k
      c←+/∨/k
      m←∨/∨/k>1

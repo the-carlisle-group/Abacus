@@ -1,5 +1,6 @@
  New←{
-     d←(A.New'dialog')⎕NS(
+     ⍺←0
+     d←(⍺ A.New'section')⎕NS(     ⍝ Was 'dialog'
          'DataGrid' 0
      )A.Default ⍵
      d.class←'FindAndReplace'

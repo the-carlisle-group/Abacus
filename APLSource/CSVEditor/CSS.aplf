@@ -1,17 +1,14 @@
  CSS←{
-
-
-     ⍬
-     ⍝ NOTHING FOR NOW
-
      Rule←A.NewRule
      s←Rule''
-
-     r←s Rule'hamburger-button'
-     s.width←'100px'
-     s.font_size←'72px'
+     r←s Rule'main'
+     ⍝ r.display←'flex'
+     r.display←'grid'
+     r.grid_auto_flow←'row'
+     r.grid_template_columns←'4fr 1fr'
+     r.grid_template_rows←'1fr'
+     r.resize←'horizontal'
      s
-
 
 
 

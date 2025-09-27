@@ -1,11 +1,11 @@
  Goto←{
-     d←⍺.Target A.GetNearest'dialog'
+     d←⍺.Target A.GetNearest'section'
      FindAll d:0
      i←d GetLocation ⍵
      a←d.SearchAxis
      k←d.FoundCells
-     i<0:0
-     i=≢k:0
+     i<0:d.Document A.Alert'No more found above.'
+     i=≢k:d.Document A.Alert'No more found below.'
      j←a⌽i⊃k
      g←d.DataGrid
      _←g.Table A.DataGrid.MoveTo j

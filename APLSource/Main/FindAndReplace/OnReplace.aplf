@@ -1,5 +1,5 @@
  OnReplace←{
-     d←⍵.Target A.GetNearest'dialog'
+     d←⍵.Target A.GetNearest'section'
      g←d.DataGrid
      t←g.Table
      p←A.GetComponentValues d

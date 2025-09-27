@@ -1,6 +1,9 @@
  OnReplaceAll←{
-     d←⍵.Target A.GetNearest'dialog'
+     d←⍵.Target A.GetNearest'section'
      _←FindAll d:0
+     m←SpellFoundDetail d
+     r←d.Document A.ConfirmBox.Show'Replace All'm('Buttons'('Replace' 'Cancel'))
+     r≢'Replace':0
      g←d.DataGrid
      t←g.Table
      p←A.GetComponentValues d
@@ -10,6 +13,6 @@
      ⍝ g ##.DataGrid.Resize 1 ⍝ Column widths could change
      ⍝ We need to keep upper left corner the same....
      ⍝ But cols could get wider....
-     ##.DataGrid.Refresh t
-     0
+     _←A.DataGrid.Refresh t
+     d.Document A.Alert'Replacements made.'
  }

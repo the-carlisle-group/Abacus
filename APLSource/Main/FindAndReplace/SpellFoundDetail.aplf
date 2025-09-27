@@ -1,0 +1,8 @@
+ SpellFoundDetail←{
+     d←⍵
+     k←+/¨d.Found
+     b←k>0
+     c←d.DataGrid.Table.Columns.Name
+     n←A.ntbs'LCI12'⎕FMT b/k
+     n{⍺,' occurances in ',⍵}¨b/c
+ }
