@@ -4,6 +4,7 @@
      a.Server←NewRumbaServer a
      a.Sessions←⍬
      a.BuildFunction←''
+     a.StartupFunction←''
      a.HTMLRendererProperties←DefaultHRProperties 0
      a
  }

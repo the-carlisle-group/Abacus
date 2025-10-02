@@ -1,0 +1,5 @@
+ Startup←{
+     ⎕←'CSVEditor started!'
+     d←⍵
+     0
+ }

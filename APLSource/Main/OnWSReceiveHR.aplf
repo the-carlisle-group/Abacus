@@ -3,6 +3,6 @@
      h←⊃⍵
      d←h.Document
      j←⎕JSON 3⊃⍵
-     j.Event≡'WSOpen':0
+     j.Event≡'WSOpen':OnStartup d
      d OnWSReceive j
  }

@@ -1,6 +1,0 @@
- OnApplicationStartUp←{
-     d←⍺
-     0=d.⎕NC'OnStartUp':0
-     0=≢d.OnStartUp:0
-     d(⍎d.OnStartUp)0
- }

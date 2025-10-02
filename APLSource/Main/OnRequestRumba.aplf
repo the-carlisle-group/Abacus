@@ -10,6 +10,7 @@
      s←c.Server
      a←s.Application
      d←InitApp(⍎a.BuildFunction)0
+     d.Application←a
      a.Sessions,←d
      r←#.Rumba.Core.NewResponse ⍵
      r.Content←##.Main.DOM2HTML d

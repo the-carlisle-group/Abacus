@@ -12,6 +12,7 @@
      h.Caption←⍵.Caption
      h.onClose←'OnClose'
      _←InitApp ⍵
+     ⍵.Application←⍺
      _←h SetApp ⍵
      h
  }

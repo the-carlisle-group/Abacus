@@ -1,0 +1,7 @@
+ OnStartup←{
+     d←⍵
+     a←d.Application
+     0=≢a.StartupFunction:0
+     (⍎a.StartupFunction)d
+     0
+ }

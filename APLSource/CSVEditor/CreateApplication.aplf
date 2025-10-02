@@ -2,5 +2,6 @@
      a←A.NewApplication 0
      a.Name←'Abacus CSV Editor'
      a.BuildFunction←'#.Abacus.CSVEditor.Build'
+     a.StartupFunction←'#.Abacus.CSVEditor.Startup'
      a
  }
