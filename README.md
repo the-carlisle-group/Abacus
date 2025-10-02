@@ -1,10 +1,4 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="logo.svg">
-  <source media="(prefers-color-scheme: light)" srcset="logo.svg">
-  <img src="logo.svg" alt="Logo">
-</picture>
-
-<picture>
   <source media="(prefers-color-scheme: dark)" srcset="abacusuidark.svg">
   <source media="(prefers-color-scheme: light)" srcset="abacusuilight.svg">
   <img src="abacusuilight.svg" alt="Project diagram">
