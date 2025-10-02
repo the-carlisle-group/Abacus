@@ -1,0 +1,18 @@
+ TestNoValues←{
+     ⍝ For large tables, unlikley to allow inserting rows,columns
+     ⍝ Set Nulls to ⎕NULL for numbers
+     ⍝ Set minimum display of rows to 10 or something ike that (make it a parameter
+     ⍝
+
+     ⎕TID=0:∇&0
+     t←GetTable 0
+     y←'Char' 'VarChar' 'Int' 'Float' 'CheckBox' 'Dec1' 'Dec2' 'Dec3' 'Date'
+     t.RowMinimum←10
+     c←⎕NS¨(≢y)⍴⊂''
+     c.Type←y
+     c.Name←y
+     t.Columns←c
+     t.Init←0
+     _←t.Parent A.DataGrid.Resize 0
+     0
+ }

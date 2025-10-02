@@ -10,6 +10,7 @@
      d.SortDirection←0
      d.Options←⊂''
      _←d ⎕NS¨c
+     d.Value←⍵.RowMinimum DefaultColumnValue¨d
      d.HeaderValues←{⍵ ⎕VGET⊂'HeaderValues'⍵.Name}¨c
      d
  }

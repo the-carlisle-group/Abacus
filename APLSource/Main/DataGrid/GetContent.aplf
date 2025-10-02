@@ -25,6 +25,7 @@
      bc←t Selection bc
      _←{
          ∨/t.TableCell<0:0
+         0=≢bc:0
          bc[⊂t.TableCell]←⊂((⊂t.TableCell)⊃bc),' active-cell'
          0
      }0

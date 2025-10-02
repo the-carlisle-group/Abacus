@@ -5,8 +5,8 @@
      ⍝ f←##.CSVEditorTests.GetFileName ⍵.NewValue
      ⍝ f~←'"'
      ⍝ (('\'=f)/f)←'/'
-     (d f)←⍺ ⍵  ⍝ Document, FileName
-     rc fn←d ToBlockedDCF f
+     (d p)←⍺ ⍵  ⍝ Document, Settings
+     rc fn←d ToBlockedDCF p
      rc=1:1                  ⍝ rc is 0 1 or 2    NOT BOOLEAN!
      rc fn2←d ToDCF fn
      rc=1:1
@@ -16,7 +16,7 @@
      c←≢n
      fmt←{' '~⍨,'CI20'⎕FMT ⍵}
      h1←d A.ElementByTag'h1'   ⍝ Wrap this?
-     _←h1 A.SetInnerHTML f     ⍝ ...
+     _←h1 A.SetInnerHTML p.FileName     ⍝ ...
      h2←d A.ElementByTag'h2'
      _←h2 A.SetInnerHTML(fmt r),' rows by ',(fmt c),' columns'
      c←≢n

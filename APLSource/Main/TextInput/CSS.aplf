@@ -1,7 +1,7 @@
  CSS←{
      Rule←A.NewRule
      ⍝ ************************
-     s←Rule'.TextInputEx'
+     s←Rule'.TextInput'
      s.display←'flex'
      s.flex_direction←'column'
      s.gap←'.5rem'

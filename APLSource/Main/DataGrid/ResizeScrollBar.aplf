@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Scrollbar
      ⍺.ContentLength←0⊃⍵
      ⍺.TrackLength←1⊃⍵
-     ⍺.ThumbLength←20⌈⍺.TrackLength⌊⍺.TrackLength{⍺×⍺÷⍵}⍺.ContentLength
+     ⍺.ThumbLength←20⌈⍺.TrackLength⌊⍺.TrackLength{⍺×⍺÷⍵}1⌈⍺.ContentLength
      ⍺.MaxTopLeft←⍺.TrackLength-⍺.ThumbLength
      th←⊃⍺.Content
      p←⍺.Vert⊃'width' 'height'

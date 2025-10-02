@@ -1,0 +1,7 @@
+ GetVariants←{
+     p←⍵
+     v←⊂'Separator'(('Comma' 'Pipe' 'Tab'⍳⊂p.Delimiter)⊃',|',⎕UCS 9)
+     v,←⊂'QuoteChar'(('None' 'Quote' 'DoubleQuote'⍳⊂p.TextQualifier)⊃'' '''' '"')
+     v,←⊂'Ragged'(p.ColumnLimit>0)
+     v
+ }

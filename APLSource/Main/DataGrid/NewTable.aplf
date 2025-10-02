@@ -2,6 +2,7 @@
      t←⍺ A.NewTable''
      ⍝ t.Columns←⍬
      t.OptiTable←A.NewOptiTable ⍬
+     t.RowMinimum←10
      t.LastAnchor←0
      t.EntryError←0
      t.ReadOnly←0

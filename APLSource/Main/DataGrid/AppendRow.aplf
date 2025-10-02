@@ -7,6 +7,7 @@
      c←t.Columns
      c.Value←c.Value{1=≢⍴⍺:⍺,⊂⍵ ⋄ ⍺⍪(1⊃⍴⍺)↑⍵}¨c.Default
      t.DataSize+←1 0
-     t.MaxWindowIndex+←1 0
-     t Move t.ActiveCell+1 0
+     t.MaxWindowIndex+←1 0 ⍝ Need to compute this!
+     _←t Move t.ActiveCell+1 0
+     Refresh t             ⍝ Don't need this if lots of rows already
  }

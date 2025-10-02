@@ -3,8 +3,9 @@
      f←##.CSVEditorTests.GetFileName p.FileName
      f~←'"'
      (('\'=f)/f)←'/'
-     d←⍵.Document
+     p.FileName←f
+     p.Variants←GetVariants p
      ⍝ Does file exist: d A.AlertBox.Show 'File not found.'
-     _←d Open f
+     _←⍵.Document Open p
      0
  }

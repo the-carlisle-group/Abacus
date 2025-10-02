@@ -3,10 +3,12 @@
      ~t.InsertRows:0
      i j←t.ActiveCell
      n m←t.DataSize
+     k←n>t.RowMinimum
      b←(0@i)n⍴1
      c←t.Columns
      c.Value←b∘⌿¨c.Value
-     t.DataSize-←1 0
+     c.Value←c.Value{k:⍺ ⋄ 1=≢⍴⍺:⍺,⊂⍵ ⋄ ⍺⍪(1⊃⍴⍺)↑⍵}¨c.Default
+     t.DataSize-←k 0
      t.Change←1
      l←⊃t.WindowIndex=t.MaxWindowIndex
      t.ActiveCell-←l 0

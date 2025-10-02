@@ -1,19 +1,13 @@
  ToBlockedDCF←{
-
-                ⍝ ⍵ ←→ CSVFile Name
+     p←⍵       ⍝ ⍵ ←→ Settings
      ⍺←0        ⍝ Document - no doc, no progress bar!
-     c←'.bdcf'GetTempFile ⍵
+     c←'.bdcf'GetTempFile p.FileName
      _←3 ⎕NDELETE c
-     p←⎕NS''
      p.Status←'Rows read: 0'
-     p.RowLimit←0
-     p.ColumnLimit←0
      p.RowsProcessed←0
      p.BlocksProcessed←0
-     p.BlockSize←25000
      p.Widths←0
-     p.ColumnLimit←0
-     p.CSVTie←⍵ ⎕NTIE 0
+     p.CSVTie←p.FileName ⎕NTIE 0
      p.DCFTie←c ⎕FCREATE 0
      p.Names←ReadHeader p
      p.Complete←0

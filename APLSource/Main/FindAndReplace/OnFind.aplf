@@ -4,5 +4,5 @@
      fs←SpellFoundSummary d
      fd←SpellFoundDetail d
      fm←(⊂fs),fd
-     d.Document A.AlertBox.Show'Found'fm
+     d.Document A.AlertBox.Show'Found'('Message'fm)
  }

@@ -1,6 +1,5 @@
  ReadHeader←{
      p←⍵
-     o←⊂'Records' 1
-     o,←⊂'Ragged'(p.ColumnLimit>0)
-     ,(⎕CSV⍠o)p.CSVTie'',(p.ColumnLimit>0)/⊂p.ColumnLimit⍴1
+     o←p.Variants,⊂'Records' 1
+     ,(⎕CSV⍠o)p.CSVTie p.Encoding,(p.ColumnLimit>0)/⊂p.ColumnLimit⍴1
  }

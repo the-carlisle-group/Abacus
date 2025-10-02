@@ -1,0 +1,6 @@
+ DefaultColumnValue←{
+     2=⍵.⎕NC'Value':⍵.Value
+     ⍵.Type≡'Char':↑⍺⍴⊂⍵.Null
+     ⍵.Type≡'VarChar':⍺⍴⊂⍵.Null
+     ⍺⍴⍵.Null
+ }

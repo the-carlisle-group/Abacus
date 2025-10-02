@@ -9,7 +9,7 @@
          'OnPicker' ''
          'OnChange' ''
      )A.Default ⍵
-     d.class←'TextInputEx'
+     d.class←'TextInput'
      d.Oninput←A.FQP'OnInput'
      d.Onchange←A.FQP'OnChange'
      l←d A.New'label'd.Label
