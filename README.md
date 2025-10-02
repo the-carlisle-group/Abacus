@@ -1,8 +1,8 @@
+![Abacus UI Graphic](abacusuidark.svg)
+
 > Take care of the code, be gentle to the computer, and make beautiful stuff on your screens.
 
 Håkon Wium Lie 
-
-![Abacus UI Graphic](abacusuidark.svg)
 
 # Abacus UI, an HTML Framework for Dyalog APL
 
