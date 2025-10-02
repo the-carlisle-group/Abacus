@@ -1,4 +1,8 @@
-![Abacus UI Graphic](abacusuidark.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="abacusuidark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="abacusuilight.svg">
+  <img src="abacusuilight.svg" alt="Project diagram">
+</picture>
 
 > Take care of the code, be gentle to the computer, and make beautiful stuff on your screens.
 
