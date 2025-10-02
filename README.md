@@ -2,11 +2,9 @@
 
 Håkon Wium Lie 
 
-
 ![Abacus UI Graphic](abacusuidark.svg)
 
-
-# Abacus, an HTML Framework for Dyalog APL
+# Abacus UI, an HTML Framework for Dyalog APL
 
 (See the wiki for documentation) 
 
