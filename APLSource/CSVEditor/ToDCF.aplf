@@ -11,7 +11,7 @@
      g←ReadAndWriteColumn
      p←⎕NS''
      p.Iterator←n
-     p.Caption←'Assembling columns...'
+     p.Title←'Assembling columns...'
      p.SourceTie←s
      p.TargetTie←t
      p.Indices←i

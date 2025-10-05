@@ -36,6 +36,8 @@
      r.justify_content←'center'
      r.gap←'1rem'
      r.padding_bottom←'1rem'
+     r.padding_left←'.5rem'
+     r.padding_right←'.5rem'
      ⍝ **********************
      ##.UnNestCSS s
  }

@@ -30,7 +30,7 @@
      r.min_height←'100vh'
      r.max_height←'100vh'
      ⍝ Header
-     r←s Rule'body>header'
+     r←s Rule'body header'
      r.background_color←'steelblue'
      r.font_family←'Arial'
      r.padding←'1rem'

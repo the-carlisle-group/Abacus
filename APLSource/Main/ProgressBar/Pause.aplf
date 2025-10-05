@@ -4,5 +4,6 @@
      t←'Process paused'
      c←''
      b←'Cancel' 'Resume' 'Truncate'
-     ⍺.Document A.ConfirmBox.Show t c b
+     z←⍺.Document A.ConfirmBox.Show t c('Buttons'b)'25rem'
+     z
  }

@@ -1,5 +1,5 @@
  ToBlockedDCF←{
-     p←⍵       ⍝ ⍵ ←→ Settings
+     p←⍵        ⍝ ⍵ ←→ Settings
      ⍺←0        ⍝ Document - no doc, no progress bar!
      c←'.bdcf'GetTempFile p.FileName
      _←3 ⎕NDELETE c
@@ -13,7 +13,7 @@
      p.Complete←0
      _←p.Names ⎕FAPPEND p.DCFTie
      f←ReadAndWriteBlock
-     p.Caption←'Preprocessing CSV file'
+     p.Title←'Preprocessing CSV file'
      p.Iterator←⍬
      r←⍺ f A.ProgressBar.Run p
      _←⎕NUNTIE p.CSVTie

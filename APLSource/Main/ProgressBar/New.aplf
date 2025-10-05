@@ -1,23 +1,27 @@
  New←{
-     c i←⍵ ⍝ Max
-     d←A.New'dialog'
-     d.Iterator←i
-     d.class←'progress-bar'
-     d.id←'progress-bar'
-     d.(Pause Cancel)←0
-     d.Unqueued←'close'
-     d.Onclose←A.FQP'OnClose'
-     h1←d A.New'h1'c
-     s←d A.New'p'
+     w←(
+         'Title' 'Progress'
+         'Iterator'⍬
+         'Width' '30rem'
+     )A.Default ⍵
+     s←A.New'p'
      s.id←'progress-bar-status'
      p←A.New'progress'
      p.id←'progress'
-     p.max←≢i
+     p.max←≢w.Iterator
      p.value←'0'
-     d.Content,←(0<≢i)/p
-     b←d A.New'button' 'Pause'
+     w.BodyContent←s,(0<≢w.Iterator)/p
+     w.Buttons←'Pause'
+     w.OnClose←A.FQP'OnClose'
+     w.OnClick←A.FQP'OnPause'
+     d←A.DialogBox.New w
+     d.Iterator←w.Iterator
+     d.id←'progress-bar'
+     d.(Pause Cancel)←0
+     f←2⊃d.Content
+     f.Unqueued←'click'
+     b←⊃f.Content
      b.id←'Pause'
-     b.Unqueued←'click'
-     b.Onclick←A.FQP'OnPause'
+     d.Unqueued←'close'
      d
  }

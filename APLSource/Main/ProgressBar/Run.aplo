@@ -1,6 +1,5 @@
  Run←{
-     ⎕THIS.A←##
-     p←New ⍵.Caption ⍵.Iterator
+     p←New('Title'⍵.Title)('Iterator'⍵.Iterator)
      _←⍺ A.ShowModal p
      op←⍎(0=≢⍵.Iterator)⊃'Determinate' 'Indeterminate'
      r←p ⍺⍺ op ⍵

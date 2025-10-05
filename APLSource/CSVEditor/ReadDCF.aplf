@@ -1,6 +1,6 @@
  ReadDCF←{
      p←⎕NS''
-     p.Caption←'Reading columns...'
+     p.Title←'Reading columns...'
      p.TargetTie←⍵ ⎕FTIE 0
      p.Iterator←⎕FREAD p.TargetTie 1
      p.Status←p.Iterator

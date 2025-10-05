@@ -33,37 +33,14 @@
      r.border←'2px solid var(--accent-color-1)'
      r.font_size←'1rem'
      r.min_width←'6rem'
-     ⍝ Paragraph
-     ⍝ r←s Rule'p'
-     ⍝ r.margin_bottom←'.75rem'
-     ⍝ r.padding←'.5rem 1rem'
-     ⍝ ****************************************
-     ⍝ Dialog
-     ⍝⍝ ****************************************
-⍝     r←s Rule'dialog'
-⍝     r.background_color←'inherit'
-⍝     r.color←'inherit'
-⍝     r.border←'2px solid var(--accent-color-1)'
-⍝     r.border_radius←'var(--border-radius)'
-⍝     r.min_width←'30rem'
-⍝     r.margin←'auto'
-⍝     ⍝ ***********************
-⍝     r←s Rule'dialog>h1'
-⍝     r.font_size←'1.25rem'
-⍝     r.font_weight←'600'
-⍝     r.padding←'.5rem 2rem'
-⍝     r.background_color←'steelblue'
-⍝     ⍝ ***************
-⍝     r←s Rule'dialog>section'
-⍝     r.padding←'1rem 2rem'
-⍝     ⍝ Dialog Footer
-⍝     r←s Rule'dialog>footer'
-⍝     r.display←'flex'
-⍝     r.justify_content←'center'
-⍝     r.gap←'1rem'
-⍝     r.padding_bottom←'1rem'
-⍝     ⍝ **********************
-     ⍝ *****************************************
-     ⍝ *****************************************
+     ⍝ *****************************
+     r←s Rule'progress'
+     r.display←'block'
+     r.width←'90%'
+     r.height←'1rem'
+     r.margin←'auto'
+     r.padding_top←'3rem'
+     r.padding_bottom←'2rem'
+     ⍝ *****************************
      s
  }
