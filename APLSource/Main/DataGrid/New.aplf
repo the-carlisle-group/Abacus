@@ -3,6 +3,7 @@
      ⍺←⊣
      g←⍺ A.New'div'
      g.class←'data-grid'
+     g.Display←'grid'
      g.Table←g NewTable''
      v←g NewScrollBar'v-scrollbar'
      h←g NewScrollBar'h-scrollbar'

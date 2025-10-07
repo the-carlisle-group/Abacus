@@ -1,5 +1,6 @@
  Startup←{
      ⎕←'CSVEditor started!'
      d←⍵
-     0
+     m←A.GetMain d
+     m A.Arrange⍉⍪0 1 1 1
  }

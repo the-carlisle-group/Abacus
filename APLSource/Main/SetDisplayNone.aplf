@@ -1,0 +1,7 @@
+ SetDisplayNone←{
+     ⍝ ⍺ ←→ Element
+     ⍝ ⍵ ←→ Boolean  0|1
+     ⍵:⍺ SetStyle'display' 'none'
+     v←⍺ ⎕VGET⊂'Display' 'block'
+     ⍺ SetStyle'display'v
+ }

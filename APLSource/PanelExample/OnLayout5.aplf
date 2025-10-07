@@ -1,0 +1,3 @@
+ OnLayout5←{
+     SetLayout5 ⍵.Document
+ }

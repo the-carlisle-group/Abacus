@@ -1,13 +1,12 @@
  Arrange←{
      ⍝ ⍺ ←→ grid element
      ⍝ ⍵ ←→ Arrangement matrix
-     d←⍺.Document
      g←⍺
      c←g.Content
      m←{1 3∊⍨10|⎕DR ⍵:⍵ ⋄ c.id⍳⊆⍵}⍵
      u←∪,m
-     b←u∊⍨⍳≢g.Content
-     _←b{⍺:d Show ⍵.id ⋄ d Hide ⍵.id}¨c
+     b←~u∊⍨⍳≢c
+     _←c SetDisplayNone¨b
      i←(⊂⍳2)+1+(⊣/,⊢/)¨⍸¨⊂[⍳2]m∘.=u
      a←{'/'@(' '∘=)⍕∊⍵}¨i
      f←{'repeat(',(⍕⍵),', 1fr)'}

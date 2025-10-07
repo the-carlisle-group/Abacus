@@ -7,5 +7,7 @@
      i←s NewItem'Layout 2' 'Ctrl+S' 'OnLayout2'
      i←s NewItem'Layout 3' 'Ctrl+A' 'OnLayout3'
      i←s NewItem'Layout 4' 'Ctrl+F' 'OnLayout4'
+     i←s NewItem'Layout 5' 'Ctrl+F' 'OnLayout5'
+
      m
  }

@@ -2,48 +2,6 @@
      Rule←A.NewRule
      s←Rule''
      r←s Rule'main'
-     ⍝ r.display←'flex'
      r.display←'grid'
-     r.grid_auto_flow←'row'
-     r.grid_template_columns←'1fr' ⍝ '4fr' '1fr'
-     r.grid_template_rows←'1fr'
-     r.resize←'horizontal'
-     s
-
-
-
-
-     ⍝ Reset
-     r←s Rule'*'
-     r.margin←0
-     r.padding←0
-     ⍝
-     r←s Rule'input:focus'
-     r.outline←'none'
-     ⍝ Body
-     r←s Rule'body'
-     r.color←⍵.BodyColor
-     r.background_color←⍵.BodyBackgroundColor
-     r.border←0
-     r.display←'flex'
-     r.flex_direction←'column'
-     r.min_height←'100vh'
-     r.max_height←'100vh'
-     ⍝ Header
-     r←s Rule'body header'
-     r.background_color←'steelblue'
-     r.font_family←'Arial'
-     r.padding←'1rem'
-     ⍝ Main
-     r←s Rule'body>main'
-     r.contain←'strict'
-     r.flex←1
-     r.position←'relative'
-     r.overflow←'clip'
-     ⍝ Footer
-     r←s Rule'body>footer'
-     r.background_color←'steelblue'
-     r.font_family←'Arial'
-     r.padding←'1rem'
      s
  }
