@@ -1,0 +1,6 @@
+ SetLayout3←{
+     d←⍵
+     m←A.GetMain d
+     l←⍉⍪'blue' 'red' 'red'
+     m A.Arrange l
+ }

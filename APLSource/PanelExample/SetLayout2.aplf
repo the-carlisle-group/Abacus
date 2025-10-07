@@ -1,0 +1,7 @@
+ SetLayout2←{
+     d←⍵
+     m←A.GetMain d
+     l←[1 2 2 2 2 2 4 4
+     ]
+     m A.Arrange l-1
+ }

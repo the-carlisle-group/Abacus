@@ -1,0 +1,15 @@
+ Build←{
+     d←A.NewDocument''
+     b←A.GetBody d
+     h←b A.New'header'
+     mb←h A.Menu.NewMenuBar'BuildMenu'
+     h1←h A.New'h1' 'Panel Example'
+     m←b A.New'main'
+     c←m A.New¨{'div'⍵}¨A.New¨{'h2'⍵}¨'Red' 'Yellow' 'Blue' 'Green'
+     c.class←⊂'panel'
+     c.id←'red' 'yellow' 'blue' 'green'
+     d.Theme←##.Themes.AbacusDark 0          ⍝ d.Theme←A.GetTheme 'Dark' or d.Theme←'Dark'
+     d.LayoutStyle←##.Layouts.Doric d.Theme  ⍝ d.Layout←d A.GetLayout 'Doric' or  d.Layout←'Doric'
+     d.AppStyle←CSS 0
+     d
+ }

@@ -1,0 +1,11 @@
+ BuildMenu←{
+     NewMenu←##.Main.Menu.New
+     NewItem←##.Main.Menu.NewItem
+     m←NewMenu''
+     s←m NewMenu⊂'Layouts'
+     i←s NewItem'Layout 1' 'Ctrl+O' 'OnLayout1'
+     i←s NewItem'Layout 2' 'Ctrl+S' 'OnLayout2'
+     i←s NewItem'Layout 3' 'Ctrl+A' 'OnLayout3'
+     i←s NewItem'Layout 4' 'Ctrl+F' 'OnLayout4'
+     m
+ }

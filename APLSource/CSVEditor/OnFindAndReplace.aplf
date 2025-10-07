@@ -1,5 +1,10 @@
  OnFindAndReplace←{
      d←⍵.Document
-     g←⊃d A.GetElementsByClass'data-grid'
-     d A.FindAndReplace.Show g
+     m←A.GetMain d
+     f←d A.GetElementByClass'FindAndReplace'
+     b←f.Visible
+     _←{⍵:d A.Hide f.id ⋄ d A.Show f.id}b
+     _←m A.SetStyle'gridTemplateColumns'(b⊃'4fr 1fr' '1fr')
+     f.Visible←~b
+     0
  }

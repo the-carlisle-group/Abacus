@@ -15,9 +15,8 @@
      g←m A.DataGrid.New''
      g.Table.RowNumbers←1
      g.id←'CSVdata'
-
      s←m A.FindAndReplace.New,g
-
+     s.Visible←0
      f←b A.New'footer'
      h2←f A.New'h2' 'x rows by n columns'
      d.Theme←##.Themes.AbacusDark 0                ⍝ d.Theme←A.GetTheme 'Dark' or d.Theme←'Dark'
