@@ -3,12 +3,16 @@
      _←Init 0
      d←⍵
      d.TestMode←0
+     d.Theme←d ⎕VGET⊂'Theme'(##.Themes.AbacusDark 0)
+     d.LayoutStyle←d ⎕VGET⊂'LayoutStyle'(##.Layouts.Doric 0)
+     d.AppStyle←d ⎕VGET⊂'AppStyle'⍬
      d.SessionID←NewGUID'N'
      d.Script←BuildJavaScript d
      d.Style←CollectCSS d
      d.NextId←0
      d.Waiting←0
      b←GetBody d
+     b.oncontextmenu←'return false;'
      t←ToolTip.New''
      a←AutoComplete.New''
      b.Content←b.Content,⍨a,t

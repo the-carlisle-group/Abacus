@@ -5,6 +5,5 @@
      mt←hd New'meta'
      mt.charset←'utf-8'
      b←h New'body'⍵
-     b.oncontextmenu←'return false;'
      h
  }

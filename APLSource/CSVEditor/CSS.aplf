@@ -1,7 +1,3 @@
  CSS←{
-     Rule←A.NewRule
-     s←Rule''
-     r←s Rule'main'
-     r.display←'grid'
-     s
+     ⍬
  }

@@ -13,6 +13,7 @@
      r.border←'2px solid var(--accent-color-1)' ⍝ Do for certain things only
      ⍝ Body
      r←s Rule'body'
+     r.user_select←'none'
      r.color←'var(--text-color)'
      r.background_color←'var(--background-color)'
      ⍝ Input
