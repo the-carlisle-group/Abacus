@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="AbacusDark.svg">
   <source media="(prefers-color-scheme: light)" srcset="AbacusLight.svg">
-  <img src="AbacusLight.svg" alt="Project diagram">
+  <img src="AbacusLight.svg" alt="Project diagram" style="width: 50%; height: auto;">
 </picture>
 
 > Take care of the code, be gentle to the computer, and make beautiful stuff on your screens.
