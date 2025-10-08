@@ -35,7 +35,7 @@ Convert markdown to HTML.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="PuzzleDark.svg">
   <source media="(prefers-color-scheme: light)" srcset="PuzzleLight.svg">
-  <img src="PuzzleLight.svg" alt="Project diagram">
+  <img src="PuzzleDark.svg" alt="Project diagram">
 </picture>
 
 
