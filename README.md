@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="abacusuidark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="abacusuilight.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="AbacusDark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="AbacusLight.svg">
   <img src="abacusuilight.svg" alt="Project diagram">
 </picture>
 
@@ -32,3 +32,12 @@ Encapsulate HTML, CSS and functionality for reusable web components.
 ## Markdown
 
 Convert markdown to HTML.
+
+picture>
+  <source media="(prefers-color-scheme: dark)" srcset="PuzzleDark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="PuzzleLight.svg">
+  <img src="abacusuilight.svg" alt="Project diagram">
+</picture>
+
+
+
