@@ -1,10 +1,22 @@
  New←{
-     ⎕THIS.A←##
      ⍺←⊣
+     w←(
+         'Name' ''
+         'Columns'⍬
+         'RowNumbers' 1
+         'ReadOnly' 0
+         'InsertRows' 1
+         'InsertColumns' 0
+         'FreezeColumns' 0
+         'RowMinimum' 10
+         'HeaderRowTitles' ''
+         'HeaderReadOnly' 1
+         'CustomColumnInserts'⍬
+     )A.Default ⍵
      g←⍺ A.New'div'
-     g.class←'data-grid'
+     g.class←'DataGrid'
      g.Display←'grid'
-     g.Table←g NewTable''
+     g.Table←w ⎕NS⍨g NewTable''
      v←g NewScrollBar'v-scrollbar'
      h←g NewScrollBar'h-scrollbar'
      c←g A.New'div'

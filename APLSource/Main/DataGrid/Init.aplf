@@ -1,7 +1,7 @@
  Init←{
      g←⍵
      t←g.Table
-     0=t.⎕NC'Columns':1
+     0=≢t.Columns:1
      t.Columns←DefaultColumnProperties t
      t.HeaderValues←⍉↑,¨⊆¨t.Columns.HeaderValues
      t.HeaderRowCount←≢t.HeaderValues

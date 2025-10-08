@@ -2,5 +2,5 @@
      ⎕←'CSVEditor started!'
      d←⍵
      m←A.GetMain d
-     m A.Arrange⍉⍪0 1 1 1
+     m A.Arrange⍉⍪0 0 0 1
  }

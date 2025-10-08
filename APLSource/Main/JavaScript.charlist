@@ -55,7 +55,7 @@ function execCode(id,code) {
 function sendAPLResize(e){
        var b = {Event: e.type,
                   DataGrids: [] };
-       const dg = Array.from (document.getElementsByClassName ('data-grid'));
+       const dg = Array.from (document.getElementsByClassName ('DataGrid'));
 
             dg.forEach ((x)=>{
             b.DataGrids.push ({
