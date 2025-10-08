@@ -4,7 +4,7 @@
      Padding←'0 .5em'
      Border←'solid 1px var(--border-color)'
      ⍝ ************************
-     s←Rule'.DataGrid'
+     s←Rule'.',⊃⌽'.'(≠⊆⊢)⍕⎕THIS ⍝ .DataGrid
      s.contain←'strict'
      s.display←'grid'
      s.grid_auto_flow←'row'

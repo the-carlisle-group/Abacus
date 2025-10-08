@@ -14,7 +14,8 @@
          'CustomColumnInserts'⍬
      )A.Default ⍵
      g←⍺ A.New'div'
-     g.class←'DataGrid'
+     g.class←⊃⌽'.'(≠⊆⊢)⍕⎕THIS
+     g.Class←⎕THIS
      g.Display←'grid'
      g.Table←w ⎕NS⍨g NewTable''
      v←g NewScrollBar'v-scrollbar'
