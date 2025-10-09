@@ -1,18 +1,22 @@
- Arrange←{
+ Arrange_New←{
      ⍝ ⍺ ←→ grid element
      ⍝ ⍵ ←→ Arrangement matrix
-     g←⍺
-     c←g.Content
      w←{1 3∊⍨10|⎕DR ⍵:⍵ ⋄ c.id⍳⊆⍵}⍵
      m←⍉∘∪⍣2⊢w
+     rp←{(≢⍵)÷⍨2-⍨/(⍵⍳∪⍵),≢⍵}w
+     cp←{(≢⍵)÷⍨2-⍨/(⍵⍳∪⍵),≢⍵}⍉w
+     g←⍺
+     c←g.Content
      u←∪,m
      b←~u∊⍨⍳≢c
      _←c SetDisplayNone¨b
      i←(⊂⍳2)+1+(⊣/,⊢/)¨⍸¨⊂[⍳2]m∘.=u
      a←{'/'@(' '∘=)⍕∊⍵}¨i
-     rp cp←{⍕{'fr',⍨⍕⍵}¨(100×(≢⊢)⌸⍵)÷≢⍵}¨w(⍉w)
-     _←g SetStyle'gridTemplateRows'rp
-     _←g SetStyle'gridTemplateColumns'cp
+     gtr←⍕{(⍕⍵),'%'}¨100×rp
+     gtc←⍕{(⍕⍵),'%'}¨100×cp
+     f←{'repeat(',(⍕⍵),', 1fr)'}
+     _←g SetStyle'gridTemplateRows'gtr
+     _←g SetStyle'gridTemplateColumns'gtc
      _←c[u]SetStyle¨{'gridArea'⍵}¨a
      0
  }
