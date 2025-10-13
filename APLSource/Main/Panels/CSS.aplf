@@ -1,0 +1,8 @@
+ CSS←{
+     Rule←##.NewRule
+     ⍝ *********************
+     s←Rule'.Panels'
+     s.display←'grid'
+     ⍝ *********************
+     s
+ }

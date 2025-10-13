@@ -1,0 +1,22 @@
+ Init←{
+     ⍝ ⍵ ←→ grid element
+     g←⍵
+     c←g.Content
+     w←{1 3∊⍨10|⎕DR ⍵:⍵ ⋄ c.id⍳⊆⍵}g.GridTemplateAreas
+     rh cw←⌊{(100×(≢⊢)⌸⍵)÷≢⍵}¨w(⍉w)
+     m←⍉∘∪⍣2⊢w
+     u←∪,m
+     h←~u∊⍨⍳≢c          ⍝ Hidden (not shown)
+     i←(⊣/,⊢/)¨⍸¨⊂[⍳2]m∘.=u
+     l←(⊂⍳2)+1+i
+     a←{'/'@(' '∘=)⍕∊⍵}¨l
+     g.Hidden←h
+     g.RowHeights←rh
+     g.ColumnWidths←cw
+     g.GridTemplateAreas←m
+     g.AreaBorders←i
+     g.GridAreas←a
+     g.GTR←GetGridTemplateRows g
+     g.GTC←GetGridTemplateColumns g
+     0
+ }

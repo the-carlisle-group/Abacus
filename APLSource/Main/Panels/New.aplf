@@ -1,0 +1,33 @@
+ New←{
+     ⍺←0
+     g←(⍺ A.New'div')⎕NS(
+         'Content' ''
+         'GridTemplateAreas'⍬
+         'GridTemplateRows' ''
+         'GridTemplateColumns' ''
+         'AutoSize' 0
+         'AutoSizeRows' 0
+         'AutoSizeColumns' 0
+         'Resizeable' 0
+         'ResizeFactor' 1
+         'Gap' '0'
+         'Padding' '0'
+     )A.Default ⍵
+     g.class←'Panels'
+     g.Class←⎕THIS
+     _←Init g
+     s←()
+     s.gap←g.Gap
+     s.padding←g.Padding
+     s.grid_template_rows←g.GTR
+     s.grid_template_columns←g.GTC
+     g.style←A.ComposeInlineStyle s
+
+
+     g.Content.style←{'grid-area:',⍵}¨g.GridAreas
+     ~g.Resizeable:g
+     g.tabindex←0
+     g.Content.tabindex←0
+     g.Onkeydown←A.FQP'OnKeyDown'
+     g
+ }

@@ -1,0 +1,6 @@
+ GetGridTemplateColumns←{
+     v←⍵.GridTemplateColumns
+     0<≢v:1↓∊' ',¨v
+     ⍵.AutoSize∨⍵.AutoSizeColumns:∊1↓' ',¨(≢⍵.Content)⍴⊂'auto'
+     Format ⍵.ColumnWidths
+ }

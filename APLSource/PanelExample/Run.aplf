@@ -5,6 +5,5 @@
      a←A.NewApplication 0
      a.Name←'Panel Arrangement Sample'
      a.BuildFunction←'#.Abacus.PanelExample.Build'
-     ⍝ a.StartupFunction←'#.Abacus.CSVEditor.Startup'
      a A.StartDesktopApplication 0
  }

@@ -1,0 +1,16 @@
+ ResizeTrack←{
+     g←⍵.CurrentTarget
+     k←5↓⍵.Key
+     a←'Left' 'Right'∊⍨⊂k   ⍝ Axis 0 ←→ Row, 1 ←→ column
+     d←'Down' 'Right'∊⍨⊂k   ⍝ Direction 0 is ←↑ 1 is ↓→
+     i←g.Content⍳⍵.Target   ⍝ What panel index are we on  (0 1 2 etc.)
+     j←i d a⊃g.AreaBorders
+     n←a⊃'RowHeights' 'ColumnWidths'
+     s←g ⎕VGET n
+     f←g.ResizeFactor
+     e←((~d)∧j=0)∨d∧j=¯1+≢s
+     s[j,j+-⍣e⊢d⊃¯1 1]+←f×e⌽1 ¯1
+     _←g ⎕VSET⊂n s
+     p←'gridTemplate',a⊃'Rows' 'Columns'
+     g A.SetStyle p(Format s)
+ }

@@ -6,7 +6,7 @@
      d←⍵.Document
      c←A.FileInput.New'FileName' 'File name:'f
 
-     c,←fs←A.FieldSet.New'File settings' 'stacked-row' 1
+     c,←fs←A.FieldSet.New'File settings' 'inline' 1
      fs.Content,←A.DropList.New'Delimiter' 'Delimiter:' 'Tab'('Comma' 'Pipe' 'Tab')
      fs.Content,←A.DropList.New'TextQualifier' 'Text qualifier:' 'None'('None' 'Quote' 'DoubleQuote')
      fs.Content,←A.DropList.New'Encoding' 'Encoding:'('Options'('UTF-8' 'UTF-16LE' 'UTF-16BE' 'UTF-16' 'UTF-32LE' 'UTF-32BE' 'UTF-32' 'ASCII' 'ANSI' ''))
@@ -16,11 +16,15 @@
      fs2.Content,←A.NumberInput.New'ColumnLimit' 'Column limit:' 0 'CI16'
      fs2.Content,←A.NumberInput.New'MaxColumnWidth' 'Max column width:' 16 'CI16'
      fs2.Content,←A.NumberInput.New'BlockSize' 'Block size:' 128000 'CI16'
-
+     l←[0 0 0 0
+         1 1 2 2
+     ]
+     q←A.Panels.New c l('AutoSize' 1)
      p←⎕NS''
      p.Title←'Open'
      p.Buttons←'Open' 'Cancel'
-     p.BodyContent←c
+     p.BodyContent←q
+     p.Width←'45rem'
      p.OnClick←(A.FQP'OnFileOpenOK')(A.FQP'OnFileOpenCancel')
      b←A.DialogBox.New p
      d A.ShowModal b

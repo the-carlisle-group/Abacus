@@ -1,0 +1,7 @@
+ OnKeyDown←{
+     g←⍵.CurrentTarget
+     b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
+     k←⍵.Key,⍨∊b/'Ctrl' 'Shift' 'Alt'
+     (⊂k)∊'AltArrow'∘,¨'Left' 'Right' 'Up' 'Down':ResizeTrack ⍵
+     0
+ }

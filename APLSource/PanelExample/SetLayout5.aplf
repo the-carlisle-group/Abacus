@@ -1,5 +1,0 @@
- SetLayout5←{
-     d←⍵
-     m←A.GetMain d
-     m A.Arrange 1 1⍴⊂'red'
- }

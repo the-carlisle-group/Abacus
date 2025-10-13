@@ -1,17 +1,12 @@
  CSS←{
      Rule←A.NewRule
-
      s←Rule''
-     r←s Rule'main'
-     r.padding←'1.5rem'
-     r.display←'grid'
-     r.gap←'1.5rem'
 
      r←s Rule'.panel'
      r.border_radius←'.5rem'
 
      r←s Rule'h2'
-     r←r.padding←'3rem'
+     r←r.padding←'.5rem'
 
      r←s Rule'#red'
      r.color←'white'
@@ -28,6 +23,10 @@
      r←s Rule'#green'
      r.color←'white'
      r.background_color←'green'
+
+     r←s Rule'#orange'
+     r.color←'white'
+     r.background_color←'orange'
 
      s
  }

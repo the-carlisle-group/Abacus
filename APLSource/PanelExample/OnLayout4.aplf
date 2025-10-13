@@ -1,3 +1,4 @@
  OnLayout4←{
-     SetLayout4 ⍵.Document
+     p←⍵.Document A.GetElementByClass'Panels'
+     p A.Panels.ReArrange⍪'blue' 'red' 'red'
  }

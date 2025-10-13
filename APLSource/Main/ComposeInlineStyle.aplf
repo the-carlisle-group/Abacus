@@ -1,0 +1,7 @@
+ ComposeInlineStyle←{
+     ⍝ ⍵ ←→ Namespace of properties and values
+     ⍝ ← ←→ String like 'p1:v1;p2:v2..etc'
+     n v←↓⍉↑⍵ ⎕VGET ¯2
+     p←'-'@('_'∘=)¨n
+     1↓⊃,/';',¨p{⍺,':',⍵}¨v
+ }

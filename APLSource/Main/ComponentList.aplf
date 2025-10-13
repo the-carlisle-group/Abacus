@@ -21,5 +21,6 @@
      l,←⊂'PickList'
      l,←⊂'FieldSet'
      l,←⊂'FindAndReplace'
+     l,←⊂'Panels'
      l
  }
