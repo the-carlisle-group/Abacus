@@ -1,0 +1,9 @@
+ Run←{
+     ⍝ ← ←→  Document
+     ⎕THIS.A←##.Main
+     _←A.Init 0
+     a←A.NewApplication 0
+     a.Name←'Tab Exmple'
+     a.BuildFunction←'#.Abacus.TabExample.Build'
+     a A.StartDesktopApplication 0
+ }

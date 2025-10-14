@@ -22,5 +22,6 @@
      l,←⊂'FieldSet'
      l,←⊂'FindAndReplace'
      l,←⊂'Panels'
+     l,←⊂'Tabs'
      l
  }

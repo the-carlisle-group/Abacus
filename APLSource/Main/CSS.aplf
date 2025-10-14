@@ -43,5 +43,8 @@
      r.padding_top←'3rem'
      r.padding_bottom←'2rem'
      ⍝ *****************************
+     r←s Rule'.hidden'
+     r.display←'none'
+     ⍝ *****************************
      s
  }

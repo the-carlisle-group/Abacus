@@ -1,0 +1,14 @@
+ CSS←{
+     Rule←##.NewRule
+     ⍝ *********************
+     s←Rule'.Tabs'
+     ⍝ *********************
+     r←s Rule'>nav>button'
+     r.border←'none'
+     ⍝ Active button
+     r←s Rule'.active-tab'
+     r.color←'var(--selected-text-color)'
+     r.background_color←'var(--selected-background-color)'
+     ⍝ **************
+     A.UnNestCSS s
+ }

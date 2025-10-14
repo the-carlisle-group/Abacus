@@ -1,0 +1,18 @@
+ New←{
+     ⍺←0
+     d←(⍺ A.New'div')⎕NS(
+         'TabContent' ''
+         'Captions' ''
+     )A.Default ⍵
+     d.class←'Tabs'
+     d.Class←⎕THIS
+     h←1↓d.TabContent
+     h.class←h.class,¨⊂' hidden'
+     n←d A.New'nav'
+     n.Onclick←A.FQP'OnClick'
+     b←n A.New¨{'button'⍵}¨d.Captions
+     b.Active←0
+     (0⊃b).(class Active)←'active-tab' 1
+     d.Content,←d.TabContent
+     d
+ }
