@@ -1,0 +1,15 @@
+ Activate←{
+     ⍝ ⍺ ←→ Tab Control
+     ⍝ ⍵ ←→ Tab index
+     t i←⍺ ⍵
+     b c←t.Content.Content
+     j←b.Active⍳1
+     b[i].Active←1
+     _←b[i]A.AddClass'active-tab'
+     _←c[i]A.RemoveClass'hidden'
+     j=≢b:0
+     b[j].Active←0
+     _←b[j]A.RemoveClass'active-tab'
+     _←c[j]A.AddClass'hidden'
+     0
+ }

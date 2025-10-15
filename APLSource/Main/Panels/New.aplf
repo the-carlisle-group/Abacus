@@ -22,8 +22,6 @@
      s.grid_template_rows←g.GTR
      s.grid_template_columns←g.GTC
      g.style←A.ComposeInlineStyle s
-
-
      g.Content.style←{'grid-area:',⍵}¨g.GridAreas
      ~g.Resizeable:g
      g.tabindex←0

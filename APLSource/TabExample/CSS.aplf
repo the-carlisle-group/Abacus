@@ -4,6 +4,7 @@
 
      r←s Rule'.panel'
      r.border_radius←'.5rem'
+     r.height←'100%'
 
      r←s Rule'h2'
      r←r.padding←'.5rem'
@@ -27,6 +28,14 @@
      r←s Rule'#orange'
      r.color←'white'
      r.background_color←'orange'
+
+     r←s Rule'#pink'
+     r.color←'white'
+     r.background_color←'pink'
+
+     r←s Rule'#brown'
+     r.color←'white'
+     r.background_color←'brown'
 
      s
  }

@@ -4,15 +4,16 @@
          'TabContent' ''
          'Captions' ''
      )A.Default ⍵
-     d.class←'Tabs'
+     d.class←'tabs'
      d.Class←⎕THIS
-     h←1↓d.TabContent
-     h.class←h.class,¨⊂' hidden'
      n←d A.New'nav'
      n.Onclick←A.FQP'OnClick'
+     m←d A.New'section'd.TabContent
+     0=≢d.Captions:d
+     h←1↓m.Content
+     h.class←h.class,¨⊂' hidden'
      b←n A.New¨{'button'⍵}¨d.Captions
      b.Active←0
      (0⊃b).(class Active)←'active-tab' 1
-     d.Content,←d.TabContent
      d
  }

@@ -7,6 +7,7 @@
      r←s Rule'*'
      r.margin←0
      r.padding←0
+     r.box_sizing←'border-box'
      ⍝ Focus
      r←s Rule'*:focus'
      r.outline←'none'
@@ -42,9 +43,6 @@
      r.margin←'auto'
      r.padding_top←'3rem'
      r.padding_bottom←'2rem'
-     ⍝ *****************************
-     r←s Rule'.hidden'
-     r.display←'none'
      ⍝ *****************************
      s
  }

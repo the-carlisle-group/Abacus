@@ -8,7 +8,23 @@
      c←A.New¨{'div'⍵}¨A.New¨{'h2'⍵}¨l
      c.class←⊂'panel'
      c.id←'red' 'yellow' 'blue' 'green' 'orange'
-     p←m A.Tabs.New c l
+
+     ⍝ Add A Panels component
+     c2←A.New¨{'div'⍵}¨A.New¨{'h2'⍵}¨'Pink' 'Brown'
+     ⍝ c2.class←⊂'panel'
+     c2.id←'pink' 'brown'
+     q←()
+     q.Content←c2
+     q.GridTemplateAreas←[0 1 1 1 ⋄ ]
+     q.Gap←'1rem'
+     q.Padding←'1rem'
+     q.Resizeable←1
+     p←A.Panels.New q ⍝ A.Panels.CSS
+
+
+
+     ⍝
+     p←m A.Tabs.New(c,p)(l,⊂'Panel')
      f←b A.New'footer' 'This is the footer'
      d.AppStyle←CSS 0
      d

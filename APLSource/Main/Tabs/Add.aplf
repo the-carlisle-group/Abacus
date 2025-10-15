@@ -1,0 +1,14 @@
+ Add←{
+     ⍝ ⍺ ←→ Tabs component
+     ⍝ ⍵ ←→ Caption, Value
+     t←⍺
+     d←t.Document
+     n c←t.Content
+     k←≢n.Content
+     b←A.New'button'(0⊃⍵)
+     b.Active←0
+     _←d A.SetDefaultId b,A.Elements 1⊃⍵
+     _←n A.AppendChild b
+     _←c A.AppendChild 1⊃⍵
+     t Activate k
+ }

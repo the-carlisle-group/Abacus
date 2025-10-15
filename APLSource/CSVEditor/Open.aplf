@@ -15,23 +15,39 @@
      r←≢0⊃v
      c←≢n
      fmt←{' '~⍨,'CI20'⎕FMT ⍵}
-     h1←d A.ElementByTag'h1'   ⍝ Wrap this?
-     _←h1 A.SetInnerHTML p.FileName     ⍝ ...
-     h2←d A.ElementByTag'h2'
-     _←h2 A.SetInnerHTML(fmt r),' rows by ',(fmt c),' columns'
+
+    ⍝ h1←d A.ElementByTag'h1'   ⍝ Wrap this?
+    ⍝ _←h1 A.SetInnerHTML p.FileName     ⍝ ...
+    ⍝ h2←d A.ElementByTag'h2'
+    ⍝ _←h2 A.SetInnerHTML(fmt r),' rows by ',(fmt c),' columns'
+
      c←≢n
      cc←⎕NS¨c⍴⊂''
      cc.Value←v
      cc.Name←n
      cc.Type←⊂'Char'
      cc.Options←⊂''
-     g←d A.GetElementById'CSVdata'
-     _←g A.DataGrid.Clear 0
-     t←g.Table            ⍝ #.Abacus.Tests.DataGridSuite1.Start
-     t.Columns←cc
-     _←d A.DataGrid.Init g
-     _←g A.DataGrid.Resize 0
-     ⍝ Can't automate below in test yet!
-     ⍝ _←d A.AlertBox.Show'File loaded.'
+
+     ⍝g←d A.GetElementById'CSVdata'
+⍝     _←g A.DataGrid.Clear 0
+⍝     t←g.Table            ⍝ #.Abacus.Tests.DataGridSuite1.Start
+⍝     t.Columns←cc
+⍝     _←d A.DataGrid.Init g
+⍝     _←g A.DataGrid.Resize 0
+⍝
+
+     ⍝ New tab content
+     g←A.DataGrid.New''
+     g.Table.Columns←cc
+     g.Table.RowNumbers←1
+     s←A.FindAndReplace.New,g
+     pn←A.Panels.New(g s)([0 0 1 ⋄ ])('Resizeable' 1)('Padding' '.5rem')('Gap' '.5rem')
+     ⍝ Append the tab data
+     t←d A.GetElementById'MainTabControl'
+     sn←1⊃⎕NPARTS p.FileName
+     _←t A.Tabs.Add sn pn
+     ⍝ Don't need?
+     ⍝ _←d A.DataGrid.Init g
+     ⍝ _←g A.DataGrid.Resize 0
      0
  }

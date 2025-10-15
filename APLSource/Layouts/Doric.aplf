@@ -14,13 +14,11 @@
      r.padding←'1rem'
      ⍝ Main
      r←s Rule'main'
-     r.display←'grid'
      r.flex←1
      r.border←'solid 1px var(--border-color)'
      ⍝ Footer
-     r←s Rule'footer'
-     r.border←'solid 3px var(--border-color)'
+     r←s Rule'body>footer'
+     r.border←'solid 1px var(--border-color)'
      r.padding←'1rem'
-
      ##.Main.UnNestCSS s
  }

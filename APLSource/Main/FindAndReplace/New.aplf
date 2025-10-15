@@ -4,7 +4,6 @@
          'DataGrid' 0
      )A.Default ⍵
      d.class←'FindAndReplace'
-     d.Display←'flex'
      d.LastSettings←''
      d.FindTime←0
      h1←d A.New'h1' 'Find and Replace'

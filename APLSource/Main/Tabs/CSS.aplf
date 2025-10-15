@@ -1,10 +1,16 @@
  CSS←{
      Rule←##.NewRule
      ⍝ *********************
-     s←Rule'.Tabs'
+     s←Rule'.tabs'
+     s.display←'flex'
+     s.flex_direction←'column'
+     s.height←'100%'
      ⍝ *********************
      r←s Rule'>nav>button'
      r.border←'none'
+     ⍝ ******************
+     r←s Rule'>section'
+     r.flex←1
      ⍝ Active button
      r←s Rule'.active-tab'
      r.color←'var(--selected-text-color)'

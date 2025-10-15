@@ -1,0 +1,10 @@
+ PostCSS←{
+     ⍝ Main CSS for Abacus Applications That Must be Last
+     Rule←NewRule
+     s←Rule''
+     ⍝ *****************************
+     r←s Rule'.hidden'
+     r.display←'none'
+     ⍝ *****************************
+     s
+ }

@@ -5,5 +5,6 @@
      c←ComponentStyles 0
      u←d.AppStyle
      t←d.Theme
-     t,l,m,c,u
+     p←PostCSS 0
+     t,l,m,c,u,p
  }

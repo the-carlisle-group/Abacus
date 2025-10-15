@@ -1,14 +1,7 @@
  OnClick←{
      p←⍵.CurrentTarget
-     v←p.Content
+     t←p.Parent
      n←⍵.Target
-     o←(v.Active⍳1)⊃v
-     i j←v⍳o n
-     (o n).Active←0 1
-     _←o A.RemoveClass'active-tab'
-     _←n A.AddClass'active-tab'
-     c←1↓p.Parent.Content
-     _←c[j]A.RemoveClass'hidden'
-     _←c[i]A.AddClass'hidden'
-     0
+     i←n.Parent.Content⍳n
+     t Activate i
  }
