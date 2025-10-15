@@ -12,6 +12,11 @@
      r←s Rule'*:focus'
      r.outline←'none'
      r.border←'2px solid var(--accent-color-1)' ⍝ Do for certain things only
+     ⍝ Flex Containers
+     r←s Rule'body, main, .tabs, .flex'
+     r.display←'flex'
+     r.flex_direction←'column'
+     r.flex←1
      ⍝ Body
      r←s Rule'body'
      r.user_select←'none'

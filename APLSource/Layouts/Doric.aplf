@@ -1,11 +1,10 @@
  Doric←{
+     ⍝ GET RID OF THIS. LAYOUTS NOT NEEDED.
      Rule←##.Main.NewRule
      s←Rule''
      ⍝ Body
      r←s Rule'body'
      r.border←0
-     r.display←'flex'
-     r.flex_direction←'column'
      r.height←'100vh'
      r.width←'100vw'
      ⍝ Header
@@ -14,7 +13,6 @@
      r.padding←'1rem'
      ⍝ Main
      r←s Rule'main'
-     r.flex←1
      r.border←'solid 1px var(--border-color)'
      ⍝ Footer
      r←s Rule'body>footer'

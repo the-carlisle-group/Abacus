@@ -2,9 +2,6 @@
      Rule←##.NewRule
      ⍝ *********************
      s←Rule'.tabs'
-     s.display←'flex'
-     s.flex_direction←'column'
-     s.height←'100%'
      ⍝ *********************
      r←s Rule'>nav>button'
      r.border←'none'

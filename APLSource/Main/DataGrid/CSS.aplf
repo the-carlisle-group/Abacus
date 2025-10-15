@@ -10,8 +10,8 @@
      s.grid_auto_flow←'row'
      s.grid_template_columns←'auto 20px'
      s.grid_template_rows←'auto 20px'
-     s.height←'100%'     ⍝ Why?
-     s.width←'100%'      ⍝ Why?
+     s.height←'100%'
+     s.width←'100%'
      s.overflow←'hidden' ⍝ clip?
      ⍝ ************************
      r←s Rule'.scrollbar'
@@ -167,9 +167,9 @@
      r.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
      ⍝ *************************************
      ⍝ MOVE THIS!
-     r←s Rule'.find-and-replace'
-     r.inset←'0'
-     r.margin←'auto'
+     ⍝ r←s Rule'.find-and-replace'
+     ⍝ r.inset←'0'
+     ⍝ r.margin←'auto'
 
      ##.UnNestCSS s
  }

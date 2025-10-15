@@ -30,7 +30,7 @@
      r.background_color←'orange'
 
      r←s Rule'#pink'
-     r.color←'white'
+     r.color←'black'
      r.background_color←'pink'
 
      r←s Rule'#brown'
