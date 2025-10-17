@@ -10,8 +10,6 @@
      _←Init t
      d←A.NewDocument g
      d.Caption←'Datagrid Test'
-     d.LayoutStyle←CSS 0
-     d.AppStyle←⍬
      d.Theme←#.Abacus.Themes.AbacusDark 0
      _←A.NewForm d
      _←d.Client.ShowDevTools ⍺

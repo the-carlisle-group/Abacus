@@ -19,9 +19,23 @@
      r.flex←1
      ⍝ Body
      r←s Rule'body'
+     r.border←0
+     r.height←'100vh'
+     r.width←'100vw'
      r.user_select←'none'
      r.color←'var(--text-color)'
      r.background_color←'var(--background-color)'
+     ⍝ Header
+     r←s Rule'body>header'
+     r.border←'solid 1px var(--border-color)'
+     r.padding←'1rem'
+     ⍝ Main
+     r←s Rule'main'
+     r.border←'solid 1px var(--border-color)'
+     ⍝ Footer
+     r←s Rule'body>footer'
+     r.border←'solid 1px var(--border-color)'
+     r.padding←'1rem'
      ⍝ Input
      r←s Rule'input'
      r.font_family←'var(--user-input-font-family)'

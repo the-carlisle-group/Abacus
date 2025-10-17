@@ -1,10 +1,9 @@
  CollectCSS←{
      d←⍵
-     l←d.LayoutStyle
      m←CSS 0
      c←ComponentStyles 0
      u←d.AppStyle
      t←d.Theme
      p←PostCSS 0
-     t,l,m,c,u,p
+     t,m,c,u,p
  }
