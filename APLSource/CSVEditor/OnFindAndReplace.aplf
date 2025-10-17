@@ -1,10 +1,12 @@
  OnFindAndReplace←{
      d←⍵.Document
-     m←A.GetMain d
-     f←d A.GetElementByClass'FindAndReplace'
-     b←f.Visible
-     _←{⍵:d A.Hide f.id ⋄ d A.Show f.id}b
-     _←m A.SetStyle'gridTemplateColumns'(b⊃'4fr 1fr' '1fr')
-     f.Visible←~b
+     tc←d A.GetElementById'MainTabControl'
+     t←A.Tabs.GetActiveTab tc
+     f←t A.GetElementByClass'FindAndReplace'
+     p←f.Parent
+     h←f A.HasClass'hidden'
+     _←p A.Panels.ReArrange h⊃(⍉⍪)¨0(0 0 0 1)
      0
+     ⍝ This does not work↓↓
+     ⍝ d A.FireEvent'resize'
  }

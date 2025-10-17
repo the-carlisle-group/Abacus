@@ -9,13 +9,27 @@
      c.class←⊂'panel'
      c.id←'red' 'yellow' 'blue' 'green' 'orange'
 
+
+
+
+
+
+
      ⍝ Add A Panels component
      c2←A.New¨{'div'⍵}¨A.New¨{'h2'⍵}¨'Pink' 'Brown'
+     c2.class←⊂''
+
+
+
+
+
+
+
      ⍝ c2.class←⊂'panel'
      c2.id←'pink' 'brown'
      q←()
      q.Content←c2
-     q.GridTemplateAreas←[0 1 1 1 ⋄ ]
+     q.GridTemplateAreas←[0 ⋄ ]
      q.Gap←'1rem'
      q.Padding←'1rem'
      q.Resizeable←1

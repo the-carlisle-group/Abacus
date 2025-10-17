@@ -41,7 +41,7 @@
      g.Table.Columns←cc
      g.Table.RowNumbers←1
      s←A.FindAndReplace.New,g
-     pn←A.Panels.New(g s)([0 0 1 ⋄ ])('Resizeable' 1)('Padding' '.5rem')('Gap' '.5rem')
+     pn←A.Panels.New(g s)([0 ⋄ ])('Resizeable' 1)('Padding' '.5rem')('Gap' '.5rem')
      ⍝ Append the tab data
      t←d A.GetElementById'MainTabControl'
      sn←1⊃⎕NPARTS p.FileName

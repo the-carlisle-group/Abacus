@@ -1,0 +1,6 @@
+ GetActiveTab←{
+     ⍝ ⍵ ←→ Tab Control
+     t←⍵
+     b c←t.Content.Content
+     c⊃⍨b.Active⍳1
+ }

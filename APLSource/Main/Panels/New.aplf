@@ -22,7 +22,9 @@
      s.grid_template_rows←g.GTR
      s.grid_template_columns←g.GTC
      g.style←A.ComposeInlineStyle s
-     g.Content.style←{'grid-area:',⍵}¨g.GridAreas
+     c←g.Content
+     c.style←{'grid-area:',⍵}¨g.GridAreas
+     c.class←c.class,¨'' ' hidden'[g.Hidden]
      ~g.Resizeable:g
      g.tabindex←0
      g.Content.tabindex←0
