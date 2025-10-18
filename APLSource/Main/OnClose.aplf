@@ -1,6 +1,11 @@
  OnClose←{
      ⍝ OnClose of HTMLRenderer created here: NewForm
      h←0⊃⍵
-     _←CloseApp h
-     1
+     d←h.Document
+     a←d.Application
+     f←a.CloseFunction
+     0=≢f:1⊣CloseApp h
+     r←(⍎f)d
+     r:0
+     1⊣CloseApp h
  }

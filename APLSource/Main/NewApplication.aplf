@@ -5,6 +5,7 @@
      a.Sessions←⍬
      a.BuildFunction←''
      a.StartupFunction←''
+     a.CloseFunction←''
      a.HTMLRendererProperties←DefaultHRProperties 0
      a
  }

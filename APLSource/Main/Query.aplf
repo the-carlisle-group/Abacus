@@ -1,0 +1,15 @@
+ Query←{
+     ⍝ ⍵ ←→ Caption, Text
+     c t←⍵
+     m←''
+     m←⍎'m'⎕WC'MsgBox'
+     m.Caption←0⊃⍵
+     m.Style←'Query'
+     m.Btns←'Yes' 'NO'
+     m.Text←1⊃⍵
+     m.onMsgBtn1←1
+     m.onMsgBtn2←1
+     r←m.Wait
+     0≡r:1
+     'MsgBtn1'≡1⊃r
+ }

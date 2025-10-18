@@ -1,0 +1,5 @@
+ Close←{
+     ~A.Query'Close' 'Are you sure you want to close?'
+     ⍝ This will not work:
+     ⍝ 'No'≡⍵ A.Confirm'Close' 'Are you sure you want to close?'
+ }
