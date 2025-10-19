@@ -3,25 +3,15 @@
      b←A.GetBody d
      h←b A.New'header'
      mb←h A.Menu.NewMenuBar'BuildMenu'
-     ⍝ h1←h A.New'h1' 'filename'
      m←b A.New'main'
-
      t←m A.Tabs.New''
+     t.OnActivate←A.FQP'OnActivate'
      t.id←'MainTabControl'
-
-
-
-⍝     g←A.DataGrid.New''
-⍝     g.Table.RowNumbers←1
-⍝     g.id←'CSVdata'
-⍝     s←A.FindAndReplace.New,g
-⍝     s.id←'FindAndReplace'
-⍝     p←m A.Panels.New(g s)([0 0 1 ⋄ ])('Resizeable' 1)('Padding' '.5rem')('Gap' '.5rem')⍝ ('AutoSize' 1)
-⍝
-
-
      f←b A.New'footer'
-     h2←f A.New'h2' 'x rows by n columns'
+     l1←f A.New'h2'
+     l1.id←'FullFileName'
+     l2←f A.New'h2'
+     l2.id←'FileDimensions'
      d.FileSettings←()
      d.BrowseFolder←''
      d

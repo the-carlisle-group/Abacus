@@ -1,0 +1,17 @@
+ OnActivate←{
+     0
+     e←⍵
+     ⍺←t
+     d←⍺.Document
+
+     cc←(⍵.TabContent A.GetElementByClass'DataGrid').Table.Columns
+     r←≢(0⊃cc).Value
+     c←≢cc
+     fmt←{' '~⍨,'CI20'⎕FMT ⍵}
+     fd←(fmt r),' rows by ',(fmt c),' columns'
+     n←d A.ElementById'FullFileName'
+     _←n A.SetInnerHTML e.TabContent.FileName
+     n←d A.ElementById'FileDimensions'
+     _←n A.SetInnerHTML fd
+     0
+ }

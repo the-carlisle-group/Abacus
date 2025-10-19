@@ -1,0 +1,4 @@
+ FireResize←{
+     ⍝ ⍵ ←→ Document
+     ⍵ ExecuteJavaScript'window.dispatchEvent(new Event(''resize''))'
+ }

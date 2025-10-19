@@ -19,7 +19,7 @@
      l←[0 0 0 0
          1 1 2 2
      ]
-     q←A.Panels.New c l('AutoSize' 1)
+     q←A.Panels.New c l('AutoSize' 1)('Gap' '1rem')
      p←⎕NS''
      p.Title←'Open'
      p.Buttons←'Open' 'Cancel'

@@ -1,7 +1,7 @@
  OnClick←{
-     p←⍵.CurrentTarget
-     t←p.Parent
-     n←⍵.Target
-     i←n.Parent.Content⍳n
+     b←⍵.CurrentTarget
+     n←b.Parent
+     i←n.Content⍳b
+     t←n.Parent
      t Activate i
  }

@@ -1,0 +1,7 @@
+ OnActivate←{
+     ⍝ ⍺ ←→ TabControl
+     ⍝ i ←→ Index
+     f←⍺.OnActivate
+     0=≢f:0
+     ⍺(⍎f)
+ }

@@ -35,7 +35,8 @@
      ⍝ Footer
      r←s Rule'body>footer'
      r.border←'solid 1px var(--border-color)'
-     r.padding←'1rem'
+     r.padding←'.5rem'
+     r.height←'5rem'
      ⍝ Input
      r←s Rule'input'
      r.font_family←'var(--user-input-font-family)'

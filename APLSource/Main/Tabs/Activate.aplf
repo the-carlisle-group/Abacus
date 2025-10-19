@@ -2,14 +2,21 @@
      ⍝ ⍺ ←→ Tab Control
      ⍝ ⍵ ←→ Tab index
      t i←⍺ ⍵
+     d←t.Document
      b c←t.Content.Content
      j←b.Active⍳1
      b[i].Active←1
      _←b[i]A.AddClass'active-tab'
      _←c[i]A.RemoveClass'hidden'
-     j=≢b:0
+     e←⎕NS''
+     e.Event←'Activate'
+     e.TabIndex←i
+     e.TabButton←i⊃b
+     e.TabContent←i⊃c
+     _←t ##.DataGrid.Fire e
+     j=≢b:A.FireResize d
      b[j].Active←0
      _←b[j]A.RemoveClass'active-tab'
      _←c[j]A.AddClass'hidden'
-     0
+     A.FireResize d
  }

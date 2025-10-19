@@ -6,6 +6,7 @@
      n c←t.Content
      k←≢n.Content
      b←A.New'button'(0⊃⍵)
+     b.Onclick←A.FQP'OnClick'
      b.Active←0
      _←d A.SetDefaultId b,A.Elements 1⊃⍵
      _←n A.AppendChild b

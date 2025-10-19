@@ -6,7 +6,5 @@
      p←f.Parent
      h←f A.HasClass'hidden'
      _←p A.Panels.ReArrange h⊃(⍉⍪)¨0(0 0 0 1)
-     0
-     ⍝ This does not work↓↓
-     ⍝ d A.FireEvent'resize'
+     A.FireResize d
  }
