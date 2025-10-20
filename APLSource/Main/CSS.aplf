@@ -8,10 +8,7 @@
      r.margin←0
      r.padding←0
      r.box_sizing←'border-box'
-     ⍝ Focus
-     r←s Rule'*:focus'
      r.outline←'none'
-     r.border←'2px solid var(--accent-color-1)' ⍝ Do for certain things only
      ⍝ Flex Containers
      r←s Rule'body, main, .tabs, .flex'
      r.display←'flex'

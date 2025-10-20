@@ -67,12 +67,8 @@
      r.overflow←'hidden'
      r.padding←Padding
      r.border←Border
-     r.box_sizing←'border-box'
      r.position←'relative'
      ⍝ *****************************
-     r←s Rule'td:focus'
-     r.outline←'none'
-     ⍝ ********************************
      r←s Rule'.selected-range'
      r.color←'var(--selected-text-color)'
      r.background_color←'var(--selected-background-color)'
