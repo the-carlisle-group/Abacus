@@ -1,19 +1,6 @@
  NewTable←{
      t←⍺ A.NewTable''
-     ⍝ t.Columns←⍬
      t.OptiTable←A.NewOptiTable ⍬
-
-
-     ⍝t.RowMinimum←10
-⍝     t.ReadOnly←0
-⍝     t.RowNumbers←0
-⍝     t.FreezeColumns←0
-⍝     t.InsertRows←0
-⍝     t.InsertColumns←0
-⍝     t.CustomColumnInserts←⍬
-⍝     t.HeaderRowTitles←''
-⍝     t.HeaderReadOnly←1
-⍝
      t.LastAnchor←0
      t.EntryError←0
      t.tabindex←0

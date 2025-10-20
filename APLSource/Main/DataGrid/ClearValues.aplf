@@ -1,0 +1,6 @@
+ ClearValues←{
+   ⍝ ⍵ ←→ DataGrid
+     _←⍵.Table.⎕EX'WindowIndex' 'ActiveCell'
+     _←⍵.Table.Columns.⎕EX⊂'Value'
+     ⍵ Resize 1
+ }
