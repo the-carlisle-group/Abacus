@@ -2,6 +2,8 @@
      ⍝ OnClose of HTMLRenderer created here: NewForm
      h←0⊃⍵
      d←h.Document
+     m←d GetElementsByClass'DialogBox'
+     0<≢m:0
      a←d.Application
      f←a.CloseFunction
      0=≢f:1⊣CloseApp h

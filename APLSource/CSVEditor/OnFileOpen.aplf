@@ -16,8 +16,8 @@
      fs2.Content,←A.NumberInput.New'ColumnLimit' 'Column limit:' 0 'CI16'
      fs2.Content,←A.NumberInput.New'MaxColumnWidth' 'Max column width:' 16 'CI16'
      fs2.Content,←A.NumberInput.New'BlockSize' 'Block size:' 128000 'CI16'
-     l←[0 0 0 0
-         1 1 2 2
+     l←[0 0
+         1 2
      ]
      q←A.Panels.New c l('AutoSize' 1)('Gap' '1rem')
      p←⎕NS''
