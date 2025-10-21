@@ -1,5 +1,5 @@
  Indeterminate←{
-     _←⍺ Update ⍵.Status
+     _←⍺ UpdateStatus ⍵.Status
      c←⍺ Pause ⍵
      c≡'Cancel':1
      c≡'Truncate':2

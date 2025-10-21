@@ -1,0 +1,9 @@
+ UpdateStatus←{
+     s←⍺ A.ElementById'progress-bar-status'
+     _←s A.SetInnerHTML ⍵
+     0=≢⍺.Iterator:0
+     p←⍺ A.ElementById'progress'
+     n←⍕1+⍎p.value
+     p.value←n  ⍝ why doesn't SetProperty do this?
+     p A.SetProperty'value'n
+ }

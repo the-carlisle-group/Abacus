@@ -19,7 +19,7 @@
      i←s NewItem'Basic dialog' 'Ctrl+S' 'OnBasicDialog'
      i←s NewItem'Basic dialog 2' 'Ctrl+S' 'OnBasicDialog2'
      i←s NewItem'Basic dialog 3' 'Ctrl+S' 'OnBasicDialog3'
-
+     i←s NewItem'Progress bar 1' '' 'OnProgressBar1'
      s←m NewMenu⊂'View'
      i←s NewItem'List' 'Ctrl+Q' 'OnViewList'
      s2←s NewMenu⊂'Icons'

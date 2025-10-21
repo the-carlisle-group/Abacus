@@ -1,0 +1,6 @@
+ Begin←{
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵.Iterator←⍳⍵.Iterations
+     p←New ⍵
+     p⊣⍺ A.ShowModal p
+ }
