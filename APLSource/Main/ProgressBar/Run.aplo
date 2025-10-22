@@ -1,7 +1,7 @@
  Run←{
-     p←New('Title'⍵.Title)('Iterator'⍵.Iterator)
+     p←New('Title'⍵.Title)('Iterations'⍵.Iterations)('Truncate' 1)
      _←⍺ A.ShowModal p
-     op←⍎(0=≢⍵.Iterator)⊃'Determinate' 'Indeterminate'
+     op←⍎(0=⍵.Iterations)⊃'Determinate' 'Indeterminate'
      r←p ⍺⍺ op ⍵
      r⊣A.DeleteElement p
  }

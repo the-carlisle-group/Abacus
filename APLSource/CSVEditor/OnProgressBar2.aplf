@@ -5,7 +5,7 @@
  ⍝ ***********************************************************
  ⍝ Put up "modal" form with pause button, return component:
  d←x.Document
- p←d A.ProgressBar.Begin('Title' 'Progress')('Iterator'(⍬))('Truncate' 1)
+ p←d A.ProgressBar.Create⊂'Title' 'Progress'
  ⍝ Start up a loop:
  t←0
  :Repeat
@@ -19,7 +19,7 @@
      t+←⎕DL 0.2
  :Until t>20
  ⍝ Close the progress bar
- p A.ProgressBar.End''
+ p A.ProgressBar.Close''
  ⍝ Do any clean up
  ⍝ Analyze r in whatever way is convenient,
  ⍝ and take appropriate action, for example:

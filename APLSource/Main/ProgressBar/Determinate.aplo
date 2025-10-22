@@ -5,9 +5,9 @@
          c←p Pause 0
          c≡'Cancel':1 0⊣p.Cancel←1
          c≡'Truncate':2 0⊣p.Cancel←1
-         _←p UpdateStatus ⍵⊃w.Status
+         _←p UpdateStatus(⍵/⍨2=≡w.Status)⊃w.Status
          r←⍵ ⍺⍺ w
          0 r
-     }¨⍳≢⍺.Iterator
+     }¨⍳⍺.Iterations
      (⌈/b)(r/⍨b=0)
  }

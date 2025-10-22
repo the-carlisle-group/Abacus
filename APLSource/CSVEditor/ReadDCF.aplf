@@ -2,8 +2,8 @@
      p←⎕NS''
      p.Title←'Reading columns...'
      p.TargetTie←⍵ ⎕FTIE 0
-     p.Iterator←⎕FREAD p.TargetTie 1
-     p.Status←p.Iterator
+     p.Status←⎕FREAD p.TargetTie 1
+     p.Iterations←≢p.Status
      r v←⍺ ReadColumn A.ProgressBar.Run p
      _←⎕FUNTIE p.TargetTie
      r(↓⍉↑v)

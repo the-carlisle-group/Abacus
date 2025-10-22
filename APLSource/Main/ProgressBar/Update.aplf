@@ -2,5 +2,8 @@
      ⍝ ⍺ ←→ ProgressBar instance
      ⍝ ⍵ ←→ Message
      ⍝ ← ←→ 'Cancel'|'Resume'|'Truncate'
-     ⍺ Pause 0⊣⍺ UpdateStatus ⍵
+     p←⍺
+     p.Iteration+←1
+     0≠p.UpdatePeriod|p.Iteration:'Resume'
+     p Pause 0⊣p UpdateStatus ⍵
  }

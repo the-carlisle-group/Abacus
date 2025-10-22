@@ -1,22 +1,30 @@
  New←{
      w←(
          'Title' 'Progress'
-         'Iterator'⍬
+         'Iterations' 0
+         'Truncate' 0
+         'UpdatePeriod' 1
          'Width' '30rem'
+         'LanguageTable'[
+             'Pause' 'Pause'
+             'Cancel' 'Cancel'
+             'Resume' 'Resume'
+             'Truncate' 'Truncate'
+         ]
      )A.Default ⍵
      s←A.New'p'
      s.id←'progress-bar-status'
      p←A.New'progress'
      p.id←'progress'
-     p.max←≢w.Iterator
+     p.max←w.Iterations
      p.value←'0'
-     w.BodyContent←s,(0<≢w.Iterator)/p
+     w.BodyContent←s,(0<w.Iterations)/p
      w.Buttons←'Pause'
      w.OnClose←A.FQP'OnClose'
      w.OnClick←A.FQP'OnPause'
      d←A.DialogBox.New w
-     d.Iterator←w.Iterator
      d.id←'progress-bar'
+     d.Iteration←0
      d.(Pause Cancel)←0
      f←2⊃d.Content
      f.Unqueued←'click'

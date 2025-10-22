@@ -10,7 +10,7 @@
      i←2+c×⍳b
      g←ReadAndWriteColumn
      p←⎕NS''
-     p.Iterator←n
+     p.Iterations←c
      p.Title←'Assembling columns...'
      p.SourceTie←s
      p.TargetTie←t
