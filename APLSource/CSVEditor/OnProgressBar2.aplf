@@ -1,0 +1,33 @@
+ z←{y}OnProgressBar2 x;d;i;p;r;t
+ ⍝ Sample of conventional progress bar in Trad function
+ ⍝ With explicit calls to Begin/Update/End
+ ⍝ This is NON-deterministic, we do NOT know how many times we are going to loop
+ ⍝ ***********************************************************
+ ⍝ Put up "modal" form with pause button, return component:
+ d←x.Document
+ p←d A.ProgressBar.Begin('Title' 'Progress')('Iterator'(⍬))('Truncate' 1)
+ ⍝ Start up a loop:
+ t←0
+ :Repeat
+     ⍝ Update the progress bar with a new status and check if Pause has been clicked.
+     ⍝ It is good to update first, before doing work, though you don't have to.
+     ⍝ If Pause is clicked, puts up a a (truely) modal ConfirmBox
+     ⍝ with Cancel, Resume, and (optionally) Truncate buttons.
+     r←p A.ProgressBar.Update'Total time in seconds elapsed: ',⍕t
+     :If r≢'Resume' ⋄ :Leave ⋄ :EndIf
+     ⍝ Do some work, accumulate results, etc.
+     t+←⎕DL 0.2
+ :Until t>20
+ ⍝ Close the progress bar
+ p A.ProgressBar.End''
+ ⍝ Do any clean up
+ ⍝ Analyze r in whatever way is convenient,
+ ⍝ and take appropriate action, for example:
+ :Select r
+ :Case 'Cancel'
+     z←d A.Alert'You canceled the operation.'
+ :Case 'Truncate'
+     z←d A.Alert'You truncated the operation.'
+ :Case 'Resume'
+     z←d A.Alert'The operation completed.'
+ :EndSelect
