@@ -25,7 +25,6 @@
      p←(
          Title:'Progress Example #4'
          Status:'One' 'Two' 'Three' 'Four' 'Five' 'Six' 'Seven'
-         Iterations:7
          Truncate:1
      )
      ⍝ That is all we need, and now we can run the function under a progress bar

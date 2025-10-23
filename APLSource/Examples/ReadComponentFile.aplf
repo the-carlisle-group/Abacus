@@ -1,0 +1,12 @@
+ ReadComponentFile←{
+     ⍝ d ←→ Document
+     ⍝ ⍵ ←→ Componenent File Name
+     f←{⎕FREAD ⍵ ⍺.Iteration}
+     t←⍵ ⎕FTIE ¯1
+     n←1⊃⎕FSIZE ¯1
+     p←()
+     p.Iterations←n
+     p.Status←{'Reading component: ',⍕⍵}¨⍳n
+     rc rv←d f A.ProgressBar.Run t
+     ⎕FUNTIE t
+ }

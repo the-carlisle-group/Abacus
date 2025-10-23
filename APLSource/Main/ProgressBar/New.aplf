@@ -13,6 +13,7 @@
              'Truncate' 'Truncate'
          ]
      )A.Default ⍵
+     w.Iterations←(2=≡w.Status)⊃w.Iterations(≢w.Status)
      s←A.New'p'
      s.id←'progress-bar-status'
      p←A.New'progress'
