@@ -1,7 +1,15 @@
  Run←{
-     p←New('Title'⍵.Title)('Iterations'⍵.Iterations)('Truncate' 1)
+     p←New 1⊃⍵
      _←⍺ A.ShowModal p
-     op←⍎(0=⍵.Iterations)⊃'Determinate' 'Indeterminate'
-     r←p ⍺⍺ op ⍵
+     r←p ⍺⍺{
+         s←(⍺.Iteration/⍨2=≡⍺.Status)⊃⍺.Status
+         c←⍺ Update s
+         c≡'Cancel':1 ⍺.Result
+         c≡'Truncate':2 ⍺.Result
+         ⍺.Result,←⊂⍺ ⍺⍺ ⍵
+         ⍺.Done:0 ⍺.Result
+         ⍺.Iteration=⍺.Iterations:0 ⍺.Result
+         ⍺ ∇ ⍵
+     }0⊃⍵
      r⊣A.DeleteElement p
  }

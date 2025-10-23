@@ -5,6 +5,7 @@
          'Truncate' 0
          'UpdatePeriod' 1
          'Width' '30rem'
+         'Status' 'Working...'
          'LanguageTable'[
              'Pause' 'Pause'
              'Cancel' 'Cancel'
@@ -25,6 +26,8 @@
      d←A.DialogBox.New w
      d.id←'progress-bar'
      d.Iteration←0
+     d.Done←0
+     d.Result←⍬
      d.(Pause Cancel)←0
      f←2⊃d.Content
      f.Unqueued←'click'

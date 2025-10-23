@@ -1,0 +1,45 @@
+ OnProgressBar6←{
+     ⍝ Deterministic ProgressBar wtih predefined status messages
+     d←⍵.Document
+     ⍝ We need a function that is called on each iteration,
+     ⍝ to do do the work we want to do. In this case, just accumulating the time
+     ⍝ spent during a delay, and updating the progress bar status:
+     f←{
+         ⍝ ⍺ ←→ Progress Bar
+         ⍝ ⍵ ←→ Namesapce
+         ⎕DL 1
+     }
+     ⍝ We need a namespace (or var! - then no accumulation, but still useful)
+     ⍝ that will be the right argument to f.
+     ⍝ This will have in it any info or data the function f might need
+     ⍝ from any intialization variables to a file tie number, etc:
+     s←(TotalTime:0)
+     ⍝ The left argument supplied to f is the progress bar instance.
+     ⍝ We can use this to update the status, and to inquire about
+     ⍝ what iteration we are currently on.
+     ⍝ The result of this function can be anything and is passed
+     ⍝ though
+     ⍝ This gives the programmer the option o
+
+     ⍝ In addition we need a namespace or array argument for the progress bar
+     p←(
+         Title:'Progress Example #4'
+         Status:'One' 'Two' 'Three' 'Four' 'Five' 'Six' 'Seven'
+         Iterations:7
+         Truncate:1
+     )
+     ⍝ That is all we need, and now we can run the function under a progress bar
+     ⍝ using the Run operator.
+     ⍝ The right argument must be two things: a suitable argument for f,
+     ⍝ and a suitable argument for #.Abacus.Main.ProgressBar.New (which can be an empty
+     ⍝ vec '' or namepace ():
+     ⍝ RC
+     rc rv←d f A.ProgressBar.Run s p
+     ⍝ rc is either  0 1 2
+     ⍝ rv is a vector or results for each completed iteration.
+     ⍝ Note that +/rv should correpsond to s.TotalTime
+     ⍝ This exemplifies two different ways of accumulating results
+     ⍝ Note that if the operation is truncated, or even canceled,
+     ⍝ the results up until the cancelation are available in rv or in s.
+     0
+ }
