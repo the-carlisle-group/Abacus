@@ -1,5 +1,6 @@
  OnCancel←{
      d←⍵.CurrentTarget A.GetNearest'dialog'
-     _←⎕TKILL d.TID
-     ⍵.Document A.DeleteElement d
+     ~d.Paused:d.Canceled←1
+     d.Paused←0
+     1⊣'Cancel'⎕TPUT d.PauseToken
  }

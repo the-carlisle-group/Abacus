@@ -1,4 +1,4 @@
- New←{
+ New_Orig←{
      w←(
          'Title' 'Progress'
          'Iterations' 0
@@ -21,20 +21,19 @@
      p.max←w.Iterations
      p.value←'0'
      w.BodyContent←s,(0<w.Iterations)/p
-     w.Buttons←1 1 w.Truncate/'Cancel' 'Pause' 'Truncate'
+     w.Buttons←'Pause'
      w.OnClose←A.FQP'OnClose'
-     w.OnClick←A.FQP¨1 1 w.Truncate/'OnCancel' 'OnPause' 'OnTruncate'
+     w.OnClick←A.FQP'OnPause'
      d←A.DialogBox.New w
      d.id←'progress-bar'
      d.Iteration←0
      d.Done←0
      d.Result←⍬
-     d.(Paused Canceled Truncated)←0
+     d.(Pause Cancel)←0
      f←2⊃d.Content
      f.Unqueued←'click'
-     b←f.Content  ⍝ Might need to set some ids for tests
-     b.id←1 1 w.Truncate/'progress-'∘,¨'cancel' 'pause' 'truncate'
+     b←⊃f.Content
+     b.id←'Pause'
      d.Unqueued←'close'
-     d.PauseToken←⎕TID
      d
  }

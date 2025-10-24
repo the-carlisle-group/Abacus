@@ -1,4 +1,4 @@
- z←{y}OnProgressBar3 x;n;d;i;p;r
+ z←{y}OnProgressBar3 x;n;d;i;p;r;rc
  ⍝ Determinist progress bar in Trad function
  ⍝ Many iterations, throttled upate.
   ⍝ ***********************************************************
@@ -14,6 +14,10 @@
      ⍝ If Pause is clicked, puts up a a (truely) modal ConfirmBox
      ⍝ with Cancel, Resume, and (optionally) Truncate buttons.
      r←p A.ProgressBar.Update'Doing iteration: ',⍕1+i
+     :If r≡'Cancel'
+         rc←d A.ConfirmBox.Show⊂'Message' 'Are you sure you want to cancel?'
+         r←(rc≡'Yes')⊃'Resume'r
+     :EndIf
      :If r≢'Resume' ⋄ :Leave ⋄ :EndIf
      ⍝ Do some work, accumulate results, etc.
      z+←+/⍳100000

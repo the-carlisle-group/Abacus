@@ -1,5 +1,8 @@
  OnPause←{
+     ⍝ On Pause, or On Resume!
      d←⍵.CurrentTarget A.GetNearest'dialog'
-     d.Pause←1
-     1
+     b←d A.GetElementById'progress-pause'
+     _←b A.SetInnerHTML d.Paused⊃'Resume' 'Pause'
+     ~d.Paused:d.Paused←1
+     1⊣'Resume'⎕TPUT d.PauseToken
  }

@@ -1,15 +1,9 @@
- Update←{
+ Update_orig←{
      ⍝ ⍺ ←→ ProgressBar instance
      ⍝ ⍵ ←→ Message
      ⍝ ← ←→ 'Cancel'|'Resume'|'Truncate'
      p←⍺
      p.Iteration+←1
      0≠p.UpdatePeriod|p.Iteration:'Resume'
-     _←p UpdateStatus ⍵
-     p.Canceled:'Cancel'
-     p.Truncated:'Truncate'
-     ~p.Paused:'Resume'
-     r←⊃⎕TGET p.PauseToken
-     p.Paused←0
-     r
+     p Pause 0⊣p UpdateStatus ⍵
  }

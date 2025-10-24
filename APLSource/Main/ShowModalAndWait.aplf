@@ -9,5 +9,5 @@
      _←⍵ ExecuteOnElement'showModal()'
      _←PutDoneToken ⍵ ⍝ Needed if running in test mode
                       ⍝ because modal form would have been popped up by Click function
-     ⊃⎕TGET ⎕TID
+     ⊃⎕TGET ⎕TID      ⍝ Should be ⍵.Tid?
  }
