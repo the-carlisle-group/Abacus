@@ -5,7 +5,7 @@
  ⍝ ***********************************************************
  ⍝ Put up "modal" form with pause button, return component:
  d←x.Document
- p←d A.ProgressBar.Create('Title' 'Progress')('Iterations' 25)('Truncate' 1)
+ p←d A.ProgressBar.Create('Title' 'Progress')('Iterations' 25)('Truncate' 1)('UpdatePeriod' 5)
  ⍝ Start up a loop:
  :For i :In ⍳25
      ⍝ Update the progress bar with a new status and check if Pause has been clicked.

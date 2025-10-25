@@ -2,7 +2,7 @@
      p←New 1⊃⍵
      _←⍺ A.ShowModal p
      r←p ⍺⍺{
-         s←((1+⍺.Iteration)/⍨2=≡⍺.Status)⊃⍺.Status
+         s←((2=≡⍺.Status)/1+⍺.Iteration)⊃⍺.Status
          c←⍺ Update s
          c≡'Cancel':1 ⍺.Result
          c≡'Truncate':2 ⍺.Result

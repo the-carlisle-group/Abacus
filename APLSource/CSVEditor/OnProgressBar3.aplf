@@ -5,7 +5,7 @@
  ⍝ Put up "modal" form with pause button, return component:
  n←100000
  d←x.Document
- p←d A.ProgressBar.Create('Iterations'n)('UpdatePeriod' 256)('LanguageTable'['Cancel' 'Quit' ⋄ ])
+ p←d A.ProgressBar.Create('Iterations'n)('Truncate' 1)('UpdatePeriod' 10)('LanguageTable'['Cancel' 'Quit' ⋄ ])
  z←0
  ⍝ Start up a loop:
  :For i :In ⍳n

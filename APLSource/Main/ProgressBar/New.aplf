@@ -31,15 +31,11 @@
      w.OnClick←A.FQP¨1 1 w.Truncate/'OnCancel' 'OnPause' 'OnTruncate'
      d←A.DialogBox.New w
      d.id←'progress-bar'
-     d.Iteration←¯1
-     d.Done←0
-     d.Result←⍬
-     d.(Paused Canceled Truncated)←0
+     d.(Iteration Result)←¯1 ⍬
+     d.(Done Paused Canceled Truncated)←0
      f←2⊃d.Content
-     f.Unqueued←'click'
-     b←f.Content  ⍝ Might need to set some ids for tests
-     b.id←1 1 w.Truncate/'progress-'∘,¨'cancel' 'pause' 'truncate'
-     d.Unqueued←'close'
+     f.Content.id←1 1 w.Truncate/'progress-'∘,¨'cancel' 'pause' 'truncate'
+     (d f).Unqueued←'close' 'click'
      d.PauseToken←⎕TID
      d
  }
