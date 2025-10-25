@@ -1,5 +1,5 @@
  ReadAndWriteColumn←{
-     m←⎕FREAD ⍵.SourceTie(⍺+⍵.Indices)
+     m←⎕FREAD ⍵.SourceTie(⍺.Iteration+⍵.Indices)
      v←⊃⍪/m↑[1]⍨¨⌈/1⊃¨⍴¨m
      v ⎕FAPPEND ⍵.TargetTie
  }

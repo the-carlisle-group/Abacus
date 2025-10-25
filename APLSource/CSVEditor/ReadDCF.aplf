@@ -1,10 +1,11 @@
  ReadDCF←{
      p←⎕NS''
-     p.Title←'Reading columns...'
      p.TargetTie←⍵ ⎕FTIE 0
-     p.Status←⎕FREAD p.TargetTie 1
-     p.Iterations←≢p.Status
-     r v←⍺ ReadColumn A.ProgressBar.Run p
+     pb←(
+         'Title' 'Reading columns'
+         'Status'(⎕FREAD p.TargetTie 1)
+     )
+     r v←⍺ ReadColumn A.ProgressBar.Run p pb
      _←⎕FUNTIE p.TargetTie
      r(↓⍉↑v)
  }

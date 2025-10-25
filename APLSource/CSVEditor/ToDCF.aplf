@@ -10,13 +10,15 @@
      i←2+c×⍳b
      g←ReadAndWriteColumn
      p←⎕NS''
-     p.Iterations←c
-     p.Title←'Assembling columns...'
      p.SourceTie←s
      p.TargetTie←t
      p.Indices←i
-     p.Status←n
-     rc rv←⍺ g A.ProgressBar.Run p
+     pb←(
+         'Title' 'Assembling columns'
+         'Truncate' 1
+         'Status'n
+     )
+     rc rv←⍺ g A.ProgressBar.Run p pb
      _←⎕FUNTIE s t
      rc f
  }

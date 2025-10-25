@@ -31,7 +31,7 @@
      w.OnClick←A.FQP¨1 1 w.Truncate/'OnCancel' 'OnPause' 'OnTruncate'
      d←A.DialogBox.New w
      d.id←'progress-bar'
-     d.Iteration←0
+     d.Iteration←¯1
      d.Done←0
      d.Result←⍬
      d.(Paused Canceled Truncated)←0

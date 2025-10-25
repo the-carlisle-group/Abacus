@@ -3,7 +3,6 @@
      ⍺←0        ⍝ Document - no doc, no progress bar!
      c←'.bdcf'GetTempFile p.FileName
      _←3 ⎕NDELETE c
-     p.Status←'Rows read: 0'
      p.RowsProcessed←0
      p.BlocksProcessed←0
      p.Widths←0
@@ -13,9 +12,12 @@
      p.Complete←0
      _←p.Names ⎕FAPPEND p.DCFTie
      f←ReadAndWriteBlock
-     p.Title←'Preprocessing CSV file'
-     p.Iterations←0
-     r←⍺ f A.ProgressBar.Run p
+     pb←(
+         'Title' 'Preprocessing CSV file'
+         'Truncate' 1
+         'Status' 'Rows read: 0'
+     )
+     r←0⊃⍺ f A.ProgressBar.Run p pb
      _←⎕NUNTIE p.CSVTie
      _←⎕FUNTIE p.DCFTie
      ⍝ Should delete if file if cancelled
