@@ -52,14 +52,6 @@
      r.border←'2px solid var(--accent-color-1)'
      r.font_size←'1rem'
      r.min_width←'6rem'
-     ⍝ *****************************
-     r←s Rule'progress'
-     r.display←'block'
-     r.width←'90%'
-     r.height←'1rem'
-     r.margin←'auto'
-     r.padding_top←'3rem'
-     r.padding_bottom←'2rem'
-     ⍝ *****************************
+     ⍝ ***************************
      s
  }

@@ -1,0 +1,6 @@
+ SetVisible2←{
+     ⍝ ⍺ ←→ Component
+     ⍝ ⍵ ←→ Boolean
+     ⍵:⍺ RemoveClass'invisible'
+     ⍺ AddClass'invisible'
+ }

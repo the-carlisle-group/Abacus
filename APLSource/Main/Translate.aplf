@@ -1,0 +1,7 @@
+ Translate←{
+     t←⍺.LanguageTable
+     d←⍺.DefaultLanguageTable
+     n v←↓⍉t⍪d
+     s←2≠≡⍵
+     (⊃⍣s)v[n⍳⊆⍵]
+ }

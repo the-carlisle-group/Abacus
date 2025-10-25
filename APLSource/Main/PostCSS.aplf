@@ -6,5 +6,8 @@
      r←s Rule'.hidden'
      r.display←'none'
      ⍝ *****************************
+     r←s Rule'.invisible'
+     r.visibility←'hidden'
+     ⍝ *****************************
      s
  }

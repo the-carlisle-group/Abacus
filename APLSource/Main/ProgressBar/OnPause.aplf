@@ -2,7 +2,9 @@
      ⍝ On Pause, or On Resume!
      d←⍵.CurrentTarget A.GetNearest'dialog'
      b←d A.GetElementById'progress-pause'
-     _←b A.SetInnerHTML d.Paused⊃'Resume' 'Pause'
+     _←b A.SetInnerHTML d A.Translate d.Paused⊃'Resume' 'Pause'
+     i←d A.GetElementById'progress-paused-indicator'
+     _←i A.SetInvisible d.Paused
      ~d.Paused:d.Paused←1
      1⊣'Resume'⎕TPUT d.PauseToken
  }

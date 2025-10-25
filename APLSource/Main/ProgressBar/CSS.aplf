@@ -1,3 +1,37 @@
  CSS←{
-     ⍬
+     Rule←##.NewRule
+     s←Rule''
+     ⍝ *****************************
+     r←s Rule'progress'
+     r.appearance←'none'
+     r.border_radius←'var(--border-radius)'
+     r.width←'90%'
+     r.height←'3rem'
+     r.margin←'auto'
+     r.overflow←'hidden'
+     r.border←'2px solid gray'
+     r.padding←'.5rem'
+     ⍝ ***********************
+     r←s Rule'progress::-webkit-progress-value'
+     r.background_color←'gray'     ⍝ 'steelblue '
+     r.border_radius←'5px 0 0 5px' ⍝ 'var(--border-radius)'
+     ⍝ *********************
+     r←s Rule'progress::-webkit-progress-bar'
+     r.background_color←'inherit'
+     ⍝ ****************************
+     r←s Rule'.pulse'
+     r.color←'yellow'
+     r.text_align←'center'
+     r.animation←'pulse 2s ease-in-out infinite'
+     r←s Rule'@keyframes pulse'
+     r2←r Rule'0%, 100%'
+     r2.opacity←'1'
+     r2←r Rule'50%'
+     r2.opacity←'0.3'
+     ⍝ *****************************
+     r←s Rule'#progress-bar-status'
+     r.padding_top←'2rem'
+     r.width←'90%'
+     r.margin←'auto'
+     s
  }

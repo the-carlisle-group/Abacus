@@ -16,7 +16,7 @@
      r.__selected_background_color←'hsl(0, 0%, 60%)'
      r.__selected_text_color←'white'
      r.__border_color←'hsl(0, 0%, 80%)' ⍝ Compute from background?
-     r.__accent_color_1←'royalblue'
+     r.__accent_color_1←'steelblue'
      r.__accent_color_2←'orange'
      ⍝ ***********************
      r
