@@ -1,7 +1,6 @@
  Translate←{
      t←⍺.LanguageTable
-     d←⍺.DefaultLanguageTable
-     n v←↓⍉t⍪d
+     n v←↓⍉t
      s←2≠≡⍵
      (⊃⍣s)v[n⍳⊆⍵]
  }

@@ -6,14 +6,7 @@
          'UpdatePeriod' 1
          'Width' '30rem'
          'Status' 'Working...'
-         'LanguageTable'(0 2⍴⊂'')
-         'DefaultLanguageTable'[
-             'Pause' 'Pause'
-             'Cancel' 'Cancel'
-             'Resume' 'Resume'
-             'Truncate' 'Truncate'
-             'Paused' 'Paused'
-         ]
+         'LanguageTable'(LanguageTable'')
      )A.Default ⍵
      w.Iterations←(2=≡w.Status)⊃w.Iterations(≢w.Status)
      s←A.New'p'

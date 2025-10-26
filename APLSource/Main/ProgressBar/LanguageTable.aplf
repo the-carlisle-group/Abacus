@@ -1,0 +1,9 @@
+ LanguageTable←{
+     [
+         'Pause' 'Pause'
+         'Cancel' 'Cancel'
+         'Truncate' 'Truncate'
+         'Resume' 'Resume'
+         'Paused' 'Paused'
+     ]
+ }
