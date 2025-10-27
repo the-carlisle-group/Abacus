@@ -3,7 +3,7 @@
      g.GridTemplateAreas←⍵
      _←Init g
      c←g.Content
-     _←c A.SetVisible¨~g.Hidden
+     _←c A.SetHidden¨g.Hidden
      _←g A.SetStyle'gridTemplateRows'g.GTR
      _←g A.SetStyle'gridTemplateColumns'g.GTC
      _←c[⍸~g.Hidden]A.SetStyle¨{'gridArea'⍵}¨g.GridAreas

@@ -1,6 +1,0 @@
- SetVisible←{
-     ⍝ ⍺ ←→ Component
-     ⍝ ⍵ ←→ Boolean
-     ⍵:⍺ RemoveClass'hidden'
-     ⍺ AddClass'hidden'
- }

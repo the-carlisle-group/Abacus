@@ -1,0 +1,6 @@
+ SetHidden←{
+     ⍝ ⍺ ←→ Component
+     ⍝ ⍵ ←→ Boolean
+     ⍵:⍺ AddClass'hidden'
+     ⍺ RemoveClass'hidden'
+ }
