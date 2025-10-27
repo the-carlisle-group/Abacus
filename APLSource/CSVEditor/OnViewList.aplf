@@ -1,3 +1,0 @@
- OnViewList←{
-     ⍵.Document A.AlertBox.Show'The View List feature is not yet implemented.'
- }

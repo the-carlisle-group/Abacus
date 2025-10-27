@@ -15,5 +15,6 @@
      'FileBoxOK'≢1⊃r:0
      d.BrowseFolder←f.Directory
      n←2⊃r
+     (('\'=n)/n)←'/'
      ⍺ A.TextInput.SetValue n
  }

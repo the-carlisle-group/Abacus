@@ -1,7 +1,0 @@
- BuildMenu_old←{
-     s←⎕NS''
-     s.Items←'File' 'Edit'
-     s.SubItems←⊂'Open' 'Save' 'Save As' 'LRP' 'Settings'
-     s.SubItems,←⊂'Insert row' 'Delete row'
-     ⍺ A.MenuRibbon.New s
- }

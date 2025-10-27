@@ -1,4 +1,12 @@
  BuildMenu←{
+
+     ⍝tc←⍺ A.GetElementById'MainTabControl'
+⍝     t←A.Tabs.GetActiveTab tc
+⍝     f←t A.GetElementByClass'FindAndReplace'
+⍝     p←f.Parent
+⍝     h←f A.HasClass'hidden'
+⍝
+
      NewMenu←##.Main.Menu.New
      NewItem←##.Main.Menu.NewItem
      m←NewMenu''
@@ -6,32 +14,24 @@
      i←s NewItem'Open' 'Ctrl+O' 'OnFileOpen'
      i←s NewItem'Save' 'Ctrl+S' 'OnFileSave'
      i←s NewItem'Save As...' 'Ctrl+A' 'OnFileSaveAs'
-     i←s NewItem'Find and Replace...' 'Ctrl+F' 'OnFindAndReplace'('Checked' 1)
-     i←s NewItem'Settings' '' 'OnFileSettings'
-     s←m NewMenu⊂'Edit'
+     i←s s←m NewMenu⊂'Edit'
      i←s NewItem'Cut' 'Ctrl+X' 'OnCut'
      i←s NewItem'Copy' 'Ctrl+C' 'OnCopy'
      i←s NewItem'Paste' 'Ctrl+V' 'OnPaste'
      s←m NewMenu⊂'Sample'
-     i←s NewItem'Alert box' 'Ctrl+L' 'OnAlertBox'
-     i←s NewItem'Prompt box' 'Ctrl+M' 'OnPromptBox'
-     i←s NewItem'Confirm box' 'Ctrl+S' 'OnConfirmBox'
-     i←s NewItem'Basic dialog' 'Ctrl+S' 'OnBasicDialog'
-     i←s NewItem'Basic dialog 2' 'Ctrl+S' 'OnBasicDialog2'
-     i←s NewItem'Basic dialog 3' 'Ctrl+S' 'OnBasicDialog3'
-     i←s NewItem'Progress bar 1' '' 'OnProgressBar1'
+     i←s NewItem'Alert box' '' 'OnAlertBox'
+     i←s NewItem'Prompt box' '' 'OnPromptBox'
+     i←s NewItem'Confirm box' '' 'OnConfirmBox'
+     i←s NewItem'Basic dialog' '' 'OnBasicDialog'
+     i←s NewItem'Basic dialog 2' '' 'OnBasicDialog2'
+     i←s NewItem'Basic dialog 3' '' 'OnBasicDialog3'
+     i←s NewItem'Progress bar 1' '' 'OnProgressBar1'('Separator' 1)
      i←s NewItem'Progress bar 2' '' 'OnProgressBar2'
      i←s NewItem'Progress bar 3' '' 'OnProgressBar3'
      i←s NewItem'Progress bar 4' '' 'OnProgressBar4'
      i←s NewItem'Progress bar 5' '' 'OnProgressBar5'
      i←s NewItem'Progress bar 6' '' 'OnProgressBar6'
-
-
      s←m NewMenu⊂'View'
-     i←s NewItem'List' 'Ctrl+Q' 'OnViewList'
-     s2←s NewMenu⊂'Icons'
-     i←s2 NewItem'Small' 'Ctrl+L' 'OnViewSmall'
-     i←s2 NewItem'Medium' 'Ctrl+M' 'OnViewMedium'
-     i←s2 NewItem'Large' 'Ctrl+S' 'OnViewLarge'
+     i←s NewItem'Find and Replace...' 'Ctrl+F' 'OnFindAndReplace'('Checked' 1)
      m
  }

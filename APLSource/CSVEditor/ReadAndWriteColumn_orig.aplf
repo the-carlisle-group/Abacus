@@ -1,7 +1,0 @@
- ReadAndWriteColumn_orig←{
-     ⍝ ⍵ ←→ Column number
-     s t i←⍺
-     m←⎕FREAD s(⍵+i)
-     v←⊃⍪/m↑[1]⍨¨⌈/1⊃¨⍴¨m
-     v ⎕FAPPEND t
- }

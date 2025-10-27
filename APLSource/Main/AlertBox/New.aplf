@@ -1,6 +1,6 @@
  New←{
      w←(
-         'Title' ''
+         'Title' 'Alert'
          'Message' ''
          'Width' '20rem'
      )A.Default ⍵

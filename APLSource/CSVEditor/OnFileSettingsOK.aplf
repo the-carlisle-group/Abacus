@@ -1,6 +1,0 @@
- OnFileSettingsOK←{
-     d←⍵.DialogBox
-     p←A.GetComponentValues d
-     d.Document.FileSettings←p
-     0
- }

@@ -4,7 +4,7 @@
      mi.Tag≢'li':0
      i←mb.Content⍳mi
      f←⍎mb.BuildFunction
-     m←f 0
+     m←⍵.Document f 0
      s←⊃⌽i⊃m.Content.Content.Content
      s←4⊃⊃i⊃m.Content.Content.Content
      ⍵ Show s

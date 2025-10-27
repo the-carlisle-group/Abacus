@@ -2,6 +2,7 @@
      d←A.NewDocument''
      b←A.GetBody d
      h←b A.New'header'
+     h.Document←d
      mb←h A.Menu.NewMenuBar'BuildMenu'
      m←b A.New'main'
      t←m A.Tabs.New''
