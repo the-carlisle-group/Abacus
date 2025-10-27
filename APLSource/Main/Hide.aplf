@@ -1,6 +1,0 @@
- Hide←{
-     ⍝ ⍺ ←→ Documnet
-     ⍝ ⍵ ←→ id
-     j←'document.getElementById("',⍵,'").style.display="none"'
-     ⍺ ExecuteJavaScript j
- }

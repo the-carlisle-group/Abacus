@@ -4,6 +4,6 @@
      td←i A.GetNearest'td'
      i.EntryError←0
      e←td ##.GetElementById'grid-error'
-     _←e.Document ##.Hide e.id
+     _←e A.SetHidden 1
      0
  }

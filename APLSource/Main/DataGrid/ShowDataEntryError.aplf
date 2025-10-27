@@ -2,9 +2,9 @@
      i m←⍺ ⍵
      i.EntryError←1
      td←i A.GetNearest'td'
-     e←td ##.GetElementById'grid-error'
-     _←e ##.SetInnerHTML m
-     _←e.Document ##.Show e.id
-     _←##.SetFocus i
+     e←td A.GetElementById'grid-error'
+     _←e A.SetInnerHTML m
+     _←e A.SetHidden 0
+     _←A.SetFocus i
      1
  }

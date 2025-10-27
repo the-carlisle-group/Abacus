@@ -151,7 +151,6 @@
      r.color←'red'
      ⍝ ******************************
      r←s Rule'#grid-error'
-     r.display←'none'
      r.position←'fixed' ⍝'absolute' wont work here!
      r.z_index←'99'
      r.padding←'1em'
