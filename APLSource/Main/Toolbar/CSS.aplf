@@ -1,0 +1,9 @@
+ CSS←{
+     Rule←A.NewRule
+     ⍝ *********************
+     s←Rule'.toolbar'
+     s.display←'flex'
+     s.gap←'.5rem'
+     ⍝ *********************
+     s
+ }

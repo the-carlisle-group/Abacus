@@ -1,0 +1,14 @@
+ BuildDropDown←{
+     ⍝ A Dropdown is just a menu
+     ⍝ displayed as a button, usually in a toolbar.
+     ⍝ We can use the Menu.NewDropDown 'this-foo' to instantiate it.
+     ⍝ should not need the extra level
+     NewMenu←##.Main.Menu.New
+     NewItem←##.Main.Menu.NewItem
+     m←NewMenu''
+     ⍝ s←m NewMenu⊂'Dropdown'
+     i←m NewItem'Option 1' 'Ctrl+O' 'OnDropDownOp1'
+     i←m NewItem'Option 2' 'Ctrl+S' 'OnDropDownOp2'
+     i←m NewItem'Option 3' 'Ctrl+A' 'OnDropDownOp3'
+     m
+ }

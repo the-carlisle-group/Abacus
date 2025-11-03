@@ -1,0 +1,23 @@
+ CSS←{
+     Rule←A.NewRule
+     ⍝ *********************
+     s←Rule'.button-group'
+     s.display←'flex'
+     s.border_radius←'var(--border-radius)'
+     s.border←'2px solid var(--accent-color-1)'
+
+
+
+     ⍝**********************
+     r←s Rule'button'
+     r.border_radius←'0'
+     r.border←'none'
+     ⍝ *********************
+     r←s Rule'button:first-child'
+     r.border_radius←'10px 0 0 10px'
+     ⍝ ************************
+     r←s Rule'button:last-child'
+     r.border_radius←'0 10px 10px 0'
+     ⍝
+     A.UnNestCSS s
+ }

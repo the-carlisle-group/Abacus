@@ -23,5 +23,8 @@
      l,←⊂'FindAndReplace'
      l,←⊂'Panels'
      l,←⊂'Tabs'
+     l,←⊂'Toolbar'
+     l,←⊂'ButtonGroup'
+     l,←⊂'Button'
      l
  }

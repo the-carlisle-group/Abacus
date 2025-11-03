@@ -1,7 +1,7 @@
  ShowMenu←{
      ⍝ ⍺ ←→ Menu
      ⍝ ⍵ ←→ Anchor
-     h←⍵.Parent.class≡'menu-bar'
+     h←(⊂⍵.Parent.class)∊'menu-bar' 'toolbar'
      ⍺←⊃⌽⊃⍵.Content.Content
      _←⍺ A.SetStyle'positionArea'(h⊃'right span-bottom' 'bottom span-right')
      _←⍺ A.ExecuteOnElement'showPopover({source:document.getElementById("',⍵.id,'")})'

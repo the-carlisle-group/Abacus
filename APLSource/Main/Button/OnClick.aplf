@@ -1,0 +1,6 @@
+ OnClick←{
+     b←⍵.CurrentTarget
+     f←b.OnClick
+     0=≢f:0
+     (⍎f)⍵
+ }

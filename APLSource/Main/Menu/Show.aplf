@@ -2,5 +2,5 @@
      ⍝ ⍺ ←→ Event Message
      ⍝ ⍵ ←→ Menu Component
      _←⍺ Init ⍵
-     ⍵ ShowMenu ⍺.Target
+     ⍵ ShowMenu ⍺.CurrentTarget    ⍝ Target or CUrrent Target!?
  }

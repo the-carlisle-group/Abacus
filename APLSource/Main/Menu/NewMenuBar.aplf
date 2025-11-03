@@ -5,11 +5,12 @@
      b←⍺ A.New'menu'
      b.BuildFunction←f
      b.class←'menu-bar'
-     b.Onclick←A.FQP'OnClickMenuBar'
+     ⍝ b.Onclick←A.FQP'OnClickMenuBar'
      m←⍺.Document(⍎f)0
      c←m.Content.Content
      i←1⊃¨(0⊃¨c.Content).Content
      l←b A.New¨{'li'⍵}¨i
+     l.Onclick←⊂A.FQP'OnClickMenuBar'
      l.tabindex←0
      b
  }

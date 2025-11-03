@@ -52,6 +52,11 @@
      r.border←'2px solid var(--accent-color-1)'
      r.font_size←'1rem'
      r.min_width←'6rem'
+     ⍝ Icons
+     r←s Rule'.icon-tabler'
+     r.color←'lightgray'
+     ⍝r.width←'2rem'
+     ⍝r.height←'2rem'
      ⍝ ***************************
      s
  }

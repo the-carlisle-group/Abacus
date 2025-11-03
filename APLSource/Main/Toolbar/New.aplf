@@ -3,7 +3,7 @@
      d←(⍺ A.New'div')⎕NS(
          'Content' ''
      )A.Default ⍵
-     d.class←'button-group'
+     d.class←'toolbar'
      d.Class←⎕THIS
      d
  }

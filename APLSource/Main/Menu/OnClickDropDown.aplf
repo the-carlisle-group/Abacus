@@ -1,0 +1,6 @@
+ OnClickDropDown←{
+     b←⍵.CurrentTarget
+     f←⍎b.BuildFunction
+     m←⍵.Document f 0
+     ⍵ Show m
+ }

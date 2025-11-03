@@ -1,0 +1,15 @@
+ BuildToolbar←{
+     h←⍺
+     ⍝ ************* Try out a toolbar
+     b1←A.Button.New('Caption' 'Down')('Icon' 'SortDescending')('OnClick' 'OnDropDownOp1')
+     b11←A.Button.New('Caption' 'Up')('Icon' 'SortAscending')('OnClick' 'OnDropDownOp1')
+     b2←A.Button.New⊂'Icon' 'SortAscending'
+     b3←A.Button.New('Icon' 'Search')('OnClick' 'OnDropDownOp1')
+     b4←A.Button.New⊂'Icon' 'PDFFile'
+     b5←A.Button.New⊂'Icon' 'XLSFile'
+     bg←A.ButtonGroup.New⊂b3 b4 b5
+
+     dd←A.Menu.NewDropDown'Dropdown' 'BuildDropDown'
+
+     ⍺ A.Toolbar.New⊂b1 b11 bg b2 dd
+ }

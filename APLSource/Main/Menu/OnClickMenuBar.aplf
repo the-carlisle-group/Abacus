@@ -1,7 +1,6 @@
  OnClickMenuBar←{
-     mb←⍵.CurrentTarget
-     mi←⍵.Target
-     mi.Tag≢'li':0
+     mi←⍵.CurrentTarget
+     mb←mi.Parent
      i←mb.Content⍳mi
      f←⍎mb.BuildFunction
      m←⍵.Document f 0

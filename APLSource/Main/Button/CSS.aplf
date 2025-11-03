@@ -1,0 +1,11 @@
+ CSS←{
+     Rule←A.NewRule
+     ⍝ ******************
+     s←Rule'.button'
+     s.display←'flex'
+     ⍝ s.align_items←'center'
+     s.gap←'.5rem'
+     s
+     ⍝
+     A.UnNestCSS s
+ }

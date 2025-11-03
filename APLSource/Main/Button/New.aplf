@@ -1,9 +1,18 @@
  New←{
-     ⍝ ⍺ ←→ Parent
-     ⍝ ⍵ ←→ Caption, Callback
-     ⍺←⊢
-     c f←⍵
-     b←⍺ ##.New'button'c
-     b.Onclick←1 ##.FQP f
+     ⍺←0
+     b←(⍺ A.New'button')⎕NS(
+         'Caption' ''
+         'Icon' 'none'
+         'OnClick' ''
+         'Style' '' ⍝
+         'Width' ''
+     )A.Default ⍵
+     b.OnClick←1 A.FQP b.OnClick
+     b.class←'button'
+     i←(##.Icons 0)⎕VGET⊂b.Icon''
+     b.Content,←(0<≢i)/##.New'div'(⊂⊂i)  ⍝ Need div only because DOM2HTML does not handle ...
+     b.Content,←(0<≢b.Caption)/##.New'p'b.Caption
+     _←{0=≢b.Caption:b.style←'min-width:1rem' ⋄ 0}0
+     b.Onclick←A.FQP'OnClick'
      b
  }

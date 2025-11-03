@@ -6,7 +6,10 @@
      ⍝ s.position←'fixed'
      ⍝ s.margin←0     ⍝ MDD says these needed, but apparently not
      ⍝ s.inset←'auto'
-     s.inset←'1rem 0 0 -1rem' ⍝ We can shift around
+
+     ⍝ s.inset←'1rem 0 0 -1rem' ⍝ We can shift around
+
+
      ⍝ s.position_area←'right' ⍝ Done dynamically
      s.background_color←'inherit'
      s.color←'inherit'
@@ -71,6 +74,13 @@
      s.padding←0
      s.font_size←'48px'
      z,←s
+     ⍝ ****************
+     s←Rule'.dropdown-menu'
+     s.display←'flex'
+     s.align_items←'center'
+     s.gap←'1rem'
+     z,←s
+
      ⍝
      z
  }

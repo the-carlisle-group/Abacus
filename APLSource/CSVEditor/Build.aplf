@@ -4,6 +4,8 @@
      h←b A.New'header'
      h.Document←d
      mb←h A.Menu.NewMenuBar'BuildMenu'
+     tb←h BuildToolbar 0
+     ⍝ *******************
      m←b A.New'main'
      t←m A.Tabs.New''
      t.OnActivate←A.FQP'OnActivate'
