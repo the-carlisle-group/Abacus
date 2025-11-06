@@ -1,6 +1,7 @@
  New←{
      ⍺←0
      b←(⍺ A.New'button')⎕NS(
+         'Name' ''
          'Caption' ''
          'Icon' 'none'
          'OnClick' ''
