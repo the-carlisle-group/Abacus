@@ -12,6 +12,8 @@
          'HeaderRowTitles' ''
          'HeaderReadOnly' 1
          'CustomColumnInserts'⍬
+         'RowMask' 1
+         'ColumnIndices'⍬
      )A.Default ⍵
      g←⍺ A.New'div'
      g.class←⊃⌽'.'(≠⊆⊢)⍕⎕THIS

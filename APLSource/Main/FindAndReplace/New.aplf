@@ -17,14 +17,14 @@
      e4←fg A.DropList.New'SearchBy' 'Search by:' 'Columns'('Options'('Rows' 'Columns'))
      bg←d A.New'div'
      bg.class←'button-group'
-     b←A.Button.New'Find' 'OnFind'     ⍝ Add shortcut, etc.
-     b,←A.Button.New'Replace all' 'OnReplaceAll'
-     b,←A.Button.New'Replace' 'OnReplace'
-     b,←A.Button.New'Close' 'OnClose'
-     b,←A.Button.New'First' 'OnFirst'
-     b,←A.Button.New'Prev' 'OnPrev'
-     b,←A.Button.New'Next' 'OnNext'
-     b,←A.Button.New'Last' 'OnLast'
+     b←A.Button.New'Find' 'Find'('OnClick' 'OnFind')     ⍝ Add shortcut, etc.
+     b,←A.Button.New'ReplaceAll' 'Replace all'('OnClick' 'OnReplaceAll')
+     b,←A.Button.New'Replace' 'Replace'('OnClick' 'OnReplace')
+     b,←A.Button.New'Close' 'Close'('OnClick' 'OnClose')
+     b,←A.Button.New'First' 'First'('OnClick' 'OnFirst')
+     b,←A.Button.New'Prev' 'Prev'('OnClick' 'OnPrev')
+     b,←A.Button.New'Next' 'Next'('OnClick' 'OnNext')
+     b,←A.Button.New'Last' 'Last'('OnClick' 'OnLast')
      bg.Content←b
      g←d ##.DataGrid.New''
      d

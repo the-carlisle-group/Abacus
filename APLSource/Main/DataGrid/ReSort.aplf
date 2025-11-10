@@ -1,0 +1,13 @@
+ ReSort←{
+     t←⍺
+     c←t.Columns
+     i←⍵[⍋⍵]
+     s←c/⍨0≠c.SortDirection
+     0=≢s:i
+     s←s[⍒|s.SortDirection]
+     ⊃{
+         d←×⍺.SortDirection
+         d=¯1:⍵[⍒(⊂⍵)⌷⍺.Value]
+         d=1:⍵[⍋(⊂⍵)⌷⍺.Value]
+     }/s,⊂i
+ }

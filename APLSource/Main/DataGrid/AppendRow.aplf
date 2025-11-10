@@ -2,12 +2,11 @@
      t←⍵
      t.ReadOnly:0
      ~t.InsertRows:0
-     i j←t.ActiveCell
-     n m←t.DataSize
      c←t.Columns
      c.Value←c.Value{1=≢⍴⍺:⍺,⊂⍵ ⋄ ⍺⍪(1⊃⍴⍺)↑⍵}¨c.Default
+     t.RowIndices,←⊃t.DataSize
      t.DataSize+←1 0
-     t.MaxWindowIndex+←1 0 ⍝ Need to compute this!
+     t.MaxWindowIndex+←1 0
      _←t Move t.ActiveCell+1 0
-     Refresh t             ⍝ Don't need this if lots of rows already
+     Refresh t
  }

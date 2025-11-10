@@ -125,6 +125,11 @@
      r.border←0
      r.font_family←'Arial Narrow'
      r.color←'darkgray'
+     ⍝ ******************
+     r←s Rule'.filtered::after'
+     r.content←'"\2208"'
+     r.color←'darkgray'
+     r.margin_right←'2px'
      ⍝ *********************************
      r←s Rule'.sorted-up::before'
      r.content←'"',(⎕UCS 9650),'"'

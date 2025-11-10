@@ -41,6 +41,8 @@
      p≡'ShiftPageUp':SelectPageUp                  ⍝ TODO
      p≡'ShiftPageDown':SelectPageDown              ⍝ TODO
      p≡'CtrlA':t ExtendSelectAll 0
+     p≡'CtrlShiftS':t Sort 0
+     p≡'CtrlShiftF':t Filter 0
      p≡'Ctrl ':t ExtendSelectColumn 0
      p≡'Shift ':t ExtendSelectRow 0
      p≡'F6':t FreezeColumns 0

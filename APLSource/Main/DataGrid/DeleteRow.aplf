@@ -9,6 +9,7 @@
      c.Value←b∘⌿¨c.Value
      c.Value←c.Value{k:⍺ ⋄ 1=≢⍴⍺:⍺,⊂⍵ ⋄ ⍺⍪(1⊃⍴⍺)↑⍵}¨c.Default
      t.DataSize-←k 0
+     t.RowIndices←⍳⊃t.DataSize
      t.Change←1
      l←⊃t.WindowIndex=t.MaxWindowIndex
      t.ActiveCell-←l 0

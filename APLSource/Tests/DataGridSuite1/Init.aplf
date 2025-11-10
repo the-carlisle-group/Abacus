@@ -6,6 +6,13 @@
      t.InsertColumns←1
      t.CustomColumnInserts←('Format' 'Char')('Hide' 'CheckBox')('Inactive' 'CheckBox')('DisplayName' 'Char')('Name' 'Char')('Expression' 'Char')('Value' 'Char')
      t.Columns←p.Columns
+     ⍝ t.ColumnIndices←0 7 6
+     b←(#.Abacus.Main.ntbs 4⊃t.Columns.Value)∊⊂'Mexico'
+     t.RowIndices←⍸b
+
+     ⍝ t.RowIndices←⍸(#.Abacus.Main.ntbs 4⊃t.Columns.Value)∊⊂'Poland'
+
+
      t.OnBeforeCellChange←A.FQP'OnBeforeCellChange'
      t.OnCellChange←A.FQP'OnCellChange'
      t.OnCellMove←A.FQP'OnCellMove'

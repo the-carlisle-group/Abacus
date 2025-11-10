@@ -1,0 +1,23 @@
+ OnFilterOK←{
+     d←⍵.DialogBox
+     ⍝ t←d.Table
+     ⍝ g←t.Parent
+     ⍝ c←d.Column
+     t←#.Temp_Table
+     g←t.Parent
+     c←#.Temp_Column
+
+     v←{(~⍵∊', ')⊆⍵}d.NewValue
+     c.FilterValues←v
+     c.FilterMask←{0=≢v:1 ⋄ v∊⍨A.ntbs c.Value}0
+
+     t.RowIndices←⍸t.RowMask∧⊃∧/t.Columns.FilterMask
+     t.RowIndices←t ReSort t.RowIndices
+
+     t.DataSize←(≢t.RowIndices),≢t.Columns
+     g Resize 0
+
+     ⍝t.DataHeight←t.RowHeight×⊃t.DataSize
+     ⍝_←g ResizeScrollBars''
+     ⍝Refresh t
+ }

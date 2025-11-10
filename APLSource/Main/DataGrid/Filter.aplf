@@ -1,0 +1,22 @@
+ Filter←{
+     t←⍺
+     d←t.Document
+     t.InsertRows:d A.Alert'Filtering is not supported for DataGrids that allow row insertion.'
+     j k←t.ActiveCell
+     c←k⊃t.Columns
+     v←1↓∊',',¨c.FilterValues
+     p←()
+     p.Title←'Filter on ',c.Name
+     p.Label←'Select values:'
+     p.Value←v
+     p.OnOK←A.FQP'OnFilterOK'
+     ⍝ Does not survive 2 calls to ⎕NS!
+     ⍝ p.Table←t
+     ⍝ p.Column←c
+     ⍝ Need a place for this
+     ⍝ Need references, not clones!
+     #.Temp_Table←t
+     #.Temp_Column←c
+     ⍝
+     t.Document A.Prompt p
+ }

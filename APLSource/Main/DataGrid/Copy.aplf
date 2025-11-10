@@ -2,7 +2,8 @@
      t←⍺
      s←t.Selection
      r c←(0⊃s)+⍳¨1+⊃-/⌽s
-     v←0 t.RowNumbers↓t GetFormattedValues r c
+     i←t.RowIndices[r]
+     v←0 t.RowNumbers↓t GetFormattedValues i c r
      cb←⎕NEW⊂'Clipboard'
      cb.Array←v
      0

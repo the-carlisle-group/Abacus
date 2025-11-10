@@ -3,6 +3,17 @@
      t←g.Table
      0=≢t.Columns:1
      t.Columns←DefaultColumnProperties t
+     t.ColumnIndices←(0=≢t.ColumnIndices)⊃t.ColumnIndices(⍳≢t.Columns)
+
+     t.RowMask←(t.RowMask≡1)⊃t.RowMask((≢(0⊃t.Columns).Value)⍴1)
+     ⍝ Same codie iun OnFilterOK
+     t.RowIndices←⍸t.RowMask∧⊃∧/t.Columns.FilterMask
+     t.RowIndices←t ReSort t.RowIndices
+     ⍝ ↑↑↑↑↑
+
+     t.AllColumns←t.Columns
+     t.Columns←t.AllColumns[t.ColumnIndices]
+
      t.HeaderValues←⍉↑,¨⊆¨t.Columns.HeaderValues
      t.HeaderRowCount←≢t.HeaderValues
      t.HeaderRowTitles←{⍵↑⊆t.HeaderRowTitles,⍵⍴⊂''}t.HeaderRowCount
@@ -11,7 +22,7 @@
      t.HeaderHeight←(≢t.HeaderValues)×3×t.FontSize ⍝ Number of header rows ...
      t.RowHeight←2×t.FontSize
      _←g ##.SetDynamicCSS DynamicCSS t
-     t.DataSize←(≢⊃t.Columns.Value),≢t.Columns
+     t.DataSize←(≢t.RowIndices),≢t.Columns
      t.Columns.MaxLength←1⊃¨2↑¨⍴¨t.Columns.Value
      t.Widths←t ComputeWidths 0
      ⍝ t.ColumnTitles←(t.RowNumbers/⊂''),GetColTitles¨t.Columns.Name

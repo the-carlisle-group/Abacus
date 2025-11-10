@@ -1,15 +1,15 @@
  ColumnTypeInfo←{
-     ⍝ Type, 'class, Align, OnFormat, FormatString, OnParse, OnValidate, Default, Null, Empty
-     p←⊂'Char' 'c' 'l' 'FMT_Char' '' 'VFI_Char' 'Validate' '' ''
-     p,←⊂'VarChar' 'c' 'l' 'FMT_VarChar' '' 'VFI_VarChar' 'Validate' '' ''
-     p,←⊂'Date' 'd' 'r' 'FMT_Num' 'BG<9999/99/99>' 'VFI_Date' 'Validate' 0 0
-     p,←⊂'CheckBox' 'b' 'c' 'FMT_CheckBox' '' '' 'Validate' 0 0
-     p,←⊂'Select' 's' 'l' 'FMT_Char' '' '' 'Validate' '' ''
-     p,←⊂'MultiSelect' 'm' 'l' 'FMT_Char' '' '' 'Validate' '' ''
-     p,←⊂'Int' 'n' 'r' 'FMT_Num' 'LCI20' 'VFI_Int' 'Validate'⎕NULL ⎕NULL
-     p,←⊂'Float' 'n' 'r' 'FMT_Num' '' 'VFI_Float' 'Validate'⎕NULL ⎕NULL
-     p,←⊂'Dec1' 'n' 'r' 'FMT_Num' 'LK¯1CF20.1' 'VFI_Dec1' 'Validate'⎕NULL ⎕NULL
-     p,←⊂'Dec2' 'n' 'r' 'FMT_Num' 'LK¯2CF20.2' 'VFI_Dec2' 'Validate'⎕NULL ⎕NULL
-     p,←⊂'Dec3' 'n' 'r' 'FMT_Num' 'LK¯3CF20.3' 'VFI_Dec3' 'Validate'⎕NULL ⎕NULL
+     ⍝ Type, 'class, Align, OnFormat, FormatString, OnParse, OnValidate, Default, Null, Empty, SortDirection,FilterValues,FilterMask
+     p←⊂'Char' 'c' 'l' 'FMT_Char' '' 'VFI_Char' 'Validate' '' '' 0 '' 1
+     p,←⊂'VarChar' 'c' 'l' 'FMT_VarChar' '' 'VFI_VarChar' 'Validate' '' '' 0 '' 1
+     p,←⊂'Date' 'd' 'r' 'FMT_Num' 'BG<9999/99/99>' 'VFI_Date' 'Validate' 0 0 0 '' 1
+     p,←⊂'CheckBox' 'b' 'c' 'FMT_CheckBox' '' '' 'Validate' 0 0 0 '' 1
+     p,←⊂'Select' 's' 'l' 'FMT_Char' '' '' 'Validate' '' '' 0 '' 1
+     p,←⊂'MultiSelect' 'm' 'l' 'FMT_Char' '' '' 'Validate' '' '' 0 '' 1
+     p,←⊂'Int' 'n' 'r' 'FMT_Num' 'LCI20' 'VFI_Int' 'Validate'⎕NULL ⎕NULL 0 '' 1
+     p,←⊂'Float' 'n' 'r' 'FMT_Num' '' 'VFI_Float' 'Validate'⎕NULL ⎕NULL 0 '' 1
+     p,←⊂'Dec1' 'n' 'r' 'FMT_Num' 'LK¯1CF20.1' 'VFI_Dec1' 'Validate'⎕NULL ⎕NULL 0 '' 1
+     p,←⊂'Dec2' 'n' 'r' 'FMT_Num' 'LK¯2CF20.2' 'VFI_Dec2' 'Validate'⎕NULL ⎕NULL 0 '' 1
+     p,←⊂'Dec3' 'n' 'r' 'FMT_Num' 'LK¯3CF20.3' 'VFI_Dec3' 'Validate'⎕NULL ⎕NULL 0 '' 1
      ↑p
  }

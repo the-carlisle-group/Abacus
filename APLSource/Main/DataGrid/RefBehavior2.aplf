@@ -1,0 +1,9 @@
+ RefBehavior2←{
+     _←'abcd'⎕NS¨4⍴⊂''
+     b.C←c
+     _←a ⎕NS b
+     ⎕←'Does a.C refer to c: ',⍕a.C=c
+     _←d ⎕NS a
+     ⎕←'Does d.C refer to c: ',⍕d.C=c
+     'Done'
+ }

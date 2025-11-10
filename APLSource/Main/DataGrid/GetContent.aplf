@@ -1,9 +1,10 @@
  GetContent←{
      t←⍺
-     i j←t.WindowIndex+⍳¨(t.WindowSize+t.WindowPadding)⌊t.DataSize-t.WindowIndex
+     oi j←t.WindowIndex+⍳¨(t.WindowSize+t.WindowPadding)⌊t.DataSize-t.WindowIndex
+     i←t.RowIndices[oi]
      k←(⍳⍺.FreezeColumns),j
      q←(⍺.RowNumbers/0),k+⍺.RowNumbers
-     v←⍺ GetFormattedValues i k
+     v←⍺ GetFormattedValues i k oi
      nr nc←⍴v
      o←⍺.OptiTable
      h←o.Header
