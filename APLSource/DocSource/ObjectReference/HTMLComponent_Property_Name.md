@@ -1,15 +1,12 @@
-# HTMLComponent Object
+# HTMLComponent Name Property
 
-An HTMLComponent is an HTMLElement with, usually, child element, added behavior and CSS.  
-Therefore, any methods or properties of HTMLElement with work with components.
+The `Name` property specifies the name of the component.
 
-Components may be extremely complex, like the DataGrid component,
-or fairly simple like the Button component. 
+> NB: This is not the HTML `name` attribute.  
 
-This entry in the reference covers aspects that all components have in common.
-There is also entry for each individual component.
-
-A component is defined in a namepace. It must have a New function that creates the component
-and returns it. It may optionally have a CSS function.
-
-A component must have a `Name` property. This is distinct from the HTML `name` attribute.  
+Unlike ids, `Name` does not need to be unique within the document.
+However, the `Name` should be unique within some meaningful context.
+For example, some dialog component might have a number of text input components
+in it. These text inputs should all have different names. But you might
+have multiple instances of the dialog component up at once, and thus the
+document as a whole will have duplicate `Name` values, which is fine.  

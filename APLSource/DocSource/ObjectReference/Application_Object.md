@@ -1,4 +1,4 @@
 # Application Object
 
-Blah blah blah
+The `Application` object...
 

@@ -6,5 +6,6 @@ A new element is created with the New method:
 
 ~~~
       d←A.New 'div' 
-~~~ 
+~~~
+
 

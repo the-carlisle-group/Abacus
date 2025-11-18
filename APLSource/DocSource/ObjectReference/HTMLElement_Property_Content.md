@@ -20,7 +20,7 @@ Or specified after the fact:
   <span>Hello</span>
   world!
 </p>
-~~~  
+~~~
 
 The `Add` method may be used to add additional content to an element:
 

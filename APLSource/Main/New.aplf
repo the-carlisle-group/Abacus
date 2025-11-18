@@ -6,6 +6,7 @@
      s←IsString ⍵
      t c a←s⊃(3↑⍵,⊂⍬)(⍵''⍬)
      e←⎕NS''
+     _←e.⎕DF'HTMLElement'
      e.Tag←,t
      e.Parent←⍺
      e.Content←''

@@ -1,9 +1,9 @@
 # HTMLElement Tag Property
 
-The Tag property returns the type of the element.
-Usually this property is set by the `New` function and never changed.
+The `Tag` property returns the type of the element.
+Usually this property is set by the [New]() function and never changed.
 However, it may be set after the fact, which is useful for restructuring
-HTML documents the creation of which may be out of our control.
+existing HTML documents.
 
 ## Examples   
 
