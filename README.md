@@ -10,7 +10,11 @@ Håkon Wium Lie
 
 # Abacus UI, an HTML Framework for Dyalog APL
 
-(See the wiki for documentation) 
+### Documentation Update (11/18/2025)
+Up until now, the documentation, such as it is (more like development notes really), has been scattered on the associated
+repo [wiki](https://github.com/the-carlisle-group/Abacus/wiki) and on the [ToolOfThought](https://toolofthought.com) blog.
+We are now making a concerted effort to formalize the documention [here](https://the-carlisle-group.github.io/Abacus/), using another Carlisle Group open source 
+project [Exigo](https://github.com/the-carlisle-group/Exigo). Just starting, so totally incomplete, and please excuse the (lack of CSS), but it should fill out quickly.
 
 ## HTML
 
