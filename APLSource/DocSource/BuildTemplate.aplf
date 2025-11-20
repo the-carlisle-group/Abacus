@@ -1,0 +1,21 @@
+ BuildTemplate←{
+     A←##.Main
+     d←A.NewDocument''
+     hd←d A.GetElementByTag'head'
+     l←hd A.New'link'
+     l.rel←'stylesheet'
+     l.href←'/exigo.css'
+     b←A.GetBody d
+     h←b A.New'header'
+     ia←h A.New'a'
+     ia.href←'/'
+     i←ia A.New'img'
+     i.src←'/Images/AbacusLight.svg'
+     i.height←'80px'
+     i.width←'auto'
+     n←h A.New'nav'
+     l←n A.NewLink¨{⍵('/',⍵~' ')}¨'User Guide' 'Object Reference' 'Function Reference'
+     m←b A.New'main'
+     f←b A.New'footer'
+     d
+ }

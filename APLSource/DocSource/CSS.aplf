@@ -1,0 +1,136 @@
+ CSS←{
+     Rule←##.Main.NewRule
+     s←Rule''
+     ⍝
+     r←s Rule'*'
+     r.padding←0
+     r.margin←0
+     ⍝
+     r←s Rule'@font-face'
+     r.font_family←'"APL385 Unicode"'
+     r.src←'url("Images/apl385.ttf")'
+     ⍝ ***********************
+     r←s Rule'@view-transition'
+     r.navigation←'auto'
+     ⍝ **********************
+     r←s Rule'html'
+     r.font_family←'system-ui'
+     r.font_size←'16px'
+     r.background_color←'White'
+     ⍝ ***************
+     r←s Rule'body'
+     r.background_color←'White'
+     r.min_height←'100vh'
+     r.display←'flex'
+     r.flex_wrap←'wrap'
+     r.flex_direction←'column'
+     ⍝ ***********************
+     r←s Rule'header'
+     r.background_color←'lightgray'
+     r.padding←'1.5rem'
+     r.display←'flex'
+     r.gap←'2rem'
+     r.justify_content←'center'
+     r.align_items←'center'
+     ⍝ ********************
+     r←s Rule'header>nav'
+     r.display←'flex'
+     r.gap←'1rem'
+     ⍝ ********************
+     r←s Rule'header>nav>a'
+     r.text_decoration←'none'
+     r.padding←'.75rem 1rem'
+     r.border_radius←'4px'
+     r.color←'white'
+     r.background_color←'steelblue'
+     r.width←'12rem'
+     r.font_size←'1.2rem'
+     r.text_align←'center'
+     ⍝ ********************
+     r←s Rule'main>nav'
+     r.display←'flex'
+     r.flex_direction←'column'
+     ⍝ r.font_family←'APL385 Unicode'
+     r.gap←'.5rem'
+     ⍝ ********************
+     r←s Rule'main>nav>a'
+     r.text_decoration←'none'
+     ⍝ r.padding←'.75rem 1rem'
+     ⍝ r.border_radius←'4px'
+     r.color←'black'
+     ⍝ r.background_color←'steelblue'
+     ⍝ r.width←'12rem'
+     ⍝ r.font_size←'1.2rem'
+     ⍝ r.text_align←'center'
+
+     ⍝
+     r←s Rule'.member-list'
+     r.display←'flex'
+     r.flex_direction←'row'
+     r.flex_wrap←'wrap'
+     r.gap←'.5rem'
+     ⍝
+     r←s Rule'.member-list>a'
+     r.background_color←'steelblue'
+     r.color←'white'
+     r.padding←'.2rem .5rem'
+     r.border_radius←'5px'
+     r.text_decoration←'none'
+     r.font_family←'APL385 Unicode'
+     ⍝ ***********************
+     r←s Rule'main'
+     ⍝ r.max_width←'40rem'
+     ⍝ r.min_width←'40rem'
+     r.width←'40rem'
+     r.margin_left←'auto'
+     r.margin_right←'auto'
+     r.padding←'1rem'
+     r.flex←1
+     ⍝ **********************
+     r←s Rule'h1'
+     r.padding←'1rem 0'
+     r.font_size←'1.5rem'
+     ⍝ ************************
+     r←s Rule'h2'
+     r.padding←'.5rem 0 .2rem 0'
+     r.font_size←'1rem'
+     ⍝ ************************
+     r←s Rule'h3'
+     r.padding←'.5rem 0 .2rem 0'
+     r.font_size←'1rem'
+     ⍝ **********************
+     r←s Rule'p'
+     r.padding←'.25rem 0'
+     ⍝ *****************
+     r←s Rule'code'
+     r.font_family←'APL385 Unicode'
+     r.white_space←'pre'
+     ⍝ ****************
+     r←s Rule'pre'
+     r.margin←'0 0 .75rem 0'
+     r.padding←0
+     ⍝ ****************
+     r←s Rule'pre>code'
+     r.display←'block'
+     r.background_color←'LightGray'
+     r.padding←'1.5rem 2rem'
+     r.overflow←'auto'
+     r.border_radius←'5px'
+     ⍝ **************************
+     r←s Rule'body>footer'
+     r.background_color←'lightgray'
+     r.min_height←'5rem'
+     r.margin_top←'2rem'
+     ⍝ *************************
+     r←s Rule'body>footer>p'
+     r.text_align←'center'
+     r.padding_top←'2rem'
+     ⍝ *************************
+
+
+
+
+
+
+     s
+ }

@@ -1,6 +1,10 @@
 # HTMLElement Object
 
-The HTMLElement object represents an HTML element, like a `div`, an `h1`, or a `p`.
+## Description
+
+Represents an HTML element, like a `div`, an `h1`, or a `p`.
+
+## Commentary
 
 A new element is created with the New method:
 

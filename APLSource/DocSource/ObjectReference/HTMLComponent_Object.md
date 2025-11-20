@@ -1,7 +1,13 @@
 # HTMLComponent Object
 
-An HTMLComponent is an HTMLElement with, usually, child elements, added behavior and CSS.  
-Therefore, any methods or properties of HTMLElement will with work with components.
+## Description
+
+An HTMLElement with added content, behavior and CSS.
+  
+
+## Commentary
+
+As a component is an HTMLElement, any methods or properties of HTMLElement will work with components.
 
 Components may be extremely complex, like the DataGrid component,
 or fairly simple like the Button component. 

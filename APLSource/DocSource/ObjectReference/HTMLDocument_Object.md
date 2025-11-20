@@ -1,5 +1,11 @@
 # HTMLDocument Object
 
+## Description
+
+Represents an HTML document, the top node of the DOM, the `html` element.
+
+## Commentary
+
 The HTMLDocument object (often referered to simply as the document object)
 is simply the root HTMLElement object whose tag is `html`. This is in contrast to
 JavaScript, which makes a distinction between the document and the root html
