@@ -1,31 +1,29 @@
 # CSS
 
-The following code assumes the Abacus API is instantiated as `A`, that is:
+CSS is constructed in a similar way to HTML.
+The [NewRule]() function creates a new [CSSRule] object for a selector:
 
-~~~apl
-      A←#.Abacus.Main 
 ~~~
-
-The `NewRule` function creates a new CSS rule for a selector:
-
-~~~apl
      r1←A.NewRule 'h1'
      r2←A.NewRule 'h2,h3'
 ~~~
 
+> NB: `A←#.Abacus.Main`
+
 Declarations are made by simply assigning values to properties:
 
-~~~apl
+~~~
       r1.border←0
       r1.padding_top←'2rem'
       r2.font_size←'1.5rem'
-~~~ 
+~~~
 
-Properties with dashes, illegal in APL names, should be specified with underscores. Values may be numeric or text vector.
+Properties with dashes, illegal in APL names, should be specified with underscores.
+Values may be numeric or text vector.
 
-Rules are composed using the `ComposeRules` function:
+Rules are composed using the [ComposeRules]() function:
 
-~~~apl
+~~~
       A.ComposeRules r1 r2
 h1 {                                                                            
     border: 0;                                                                  
@@ -41,7 +39,7 @@ The result of `ComposeRules` is ready to be written to file or embedded in an HT
 
 Rules may be nested by providing the parent rule as a left argument to `NewRule`:
 
-~~~apl
+~~~
       pr←A.NewRule '@media print'
       r←pr A.NewRule 'p' 
       r.font+size←'10px'
@@ -51,12 +49,13 @@ Rules may be nested by providing the parent rule as a left argument to `NewRule`
     p {                                                   
         font-size: 10px;                                  
     }                                                     
-} 
-~~~ 
+}
+
+~~~
 
 Child rules may also be directly assigned:
 
-~~~apl
+~~~
       pr←A.NewRule '@media screen'
       pr.Rules←r1 r2 r3
       A.ComposeRules pr 
@@ -74,12 +73,13 @@ Child rules may also be directly assigned:
     p {                   
         border: 0;        
     }                     
-}            
+}
 ~~~
 
-A parent rule with an empty selector, may be used as a collection of rules, convenient for constructing a set of rules: 
+A parent rule with an empty selector may be used as a collection of rules,
+convenient for constructing a set of rules: 
 
-~~~apl
+~~~
 CreateStyleSheet←{
      s←A.NewRule ''
      r←s A.NewRule 'p' 
@@ -91,12 +91,12 @@ CreateStyleSheet←{
 }
 ~~~
 
-Often the right argument to a function like this will be a namespace containing, say, a theme, which is then used to specify many of the property values in the style sheet.
+A style sheet may be embedded in an HTLM document by specifying a `Style` property in the `html` element of the DOM.
+The Style property may be specified as a string (usually the result of `ComposeRules`) or an array of rule objects.
+The DOM2HTML function will compose the array of styles and create a style element under the head element when composing
+the HTML:
 
-A style sheet may be embedded in an HTLM document by specifying a `Style` property in the `html` element of the DOM. The Style property may 
-be specified as a string (usually the result of `ComposeRules`) or an array of rule objects. The DOM2HTML function will compose the array of styles and create a style element under the head element when composing the HTML:
-
-~~~apl
+~~~
      r1←A.NewRule 'p'
      r1.Border←0
      r2←A.NewRule 'Body'
@@ -122,6 +122,5 @@ be specified as a string (usually the result of `ComposeRules`) or an array of r
   <body>               
     <p>Hello world!</p>
   </body>              
-</html> 
+</html>
 ~~~
-

@@ -1,32 +1,31 @@
- CSS←{
-     A←##.Main
-     s←A.NewRule''
-     Rule←s∘A.NewRule
-     ⍝ *************
-     r←Rule'*'
+ CSS_Orig←{
+     Rule←##.Main.NewRule
+     s←Rule''
+     ⍝
+     r←s Rule'*'
      r.padding←0
      r.margin←0
      ⍝
-     r←Rule'@font-face'
+     r←s Rule'@font-face'
      r.font_family←'"APL385 Unicode"'
      r.src←'url("Images/apl385.ttf")'
      ⍝ ***********************
-     r←Rule'@view-transition'
+     r←s Rule'@view-transition'
      r.navigation←'auto'
      ⍝ **********************
-     r←Rule'html'
+     r←s Rule'html'
      r.font_family←'system-ui'
      r.font_size←'16px'
      r.background_color←'White'
      ⍝ ***************
-     r←Rule'body'
+     r←s Rule'body'
      r.background_color←'White'
      r.min_height←'100vh'
      r.display←'flex'
      r.flex_wrap←'wrap'
      r.flex_direction←'column'
      ⍝ ***********************
-     r←Rule'header'
+     r←s Rule'header'
      r.background_color←'lightgray'
      r.padding←'1.5rem'
      r.display←'flex'
@@ -34,11 +33,11 @@
      r.justify_content←'center'
      r.align_items←'center'
      ⍝ ********************
-     r←Rule'header>nav'
+     r←s Rule'header>nav'
      r.display←'flex'
      r.gap←'1rem'
      ⍝ ********************
-     r←Rule'header>nav>a'
+     r←s Rule'header>nav>a'
      r.text_decoration←'none'
      r.padding←'.75rem 1rem'
      r.border_radius←'4px'
@@ -48,13 +47,13 @@
      r.font_size←'1.2rem'
      r.text_align←'center'
      ⍝ ********************
-     r←Rule'main>nav'
+     r←s Rule'main>nav'
      r.display←'flex'
      r.flex_direction←'column'
      ⍝ r.font_family←'APL385 Unicode'
      r.gap←'.5rem'
      ⍝ ********************
-     r←Rule'main>nav>a'
+     r←s Rule'main>nav>a'
      r.text_decoration←'none'
      ⍝ r.padding←'.75rem 1rem'
      ⍝ r.border_radius←'4px'
@@ -65,13 +64,13 @@
      ⍝ r.text_align←'center'
 
      ⍝
-     r←Rule'.member-list'
+     r←s Rule'.member-list'
      r.display←'flex'
      r.flex_direction←'row'
      r.flex_wrap←'wrap'
      r.gap←'.5rem'
      ⍝
-     r←Rule'.member-list>a'
+     r←s Rule'.member-list>a'
      r.background_color←'steelblue'
      r.color←'white'
      r.padding←'.2rem .5rem'
@@ -79,7 +78,7 @@
      r.text_decoration←'none'
      r.font_family←'APL385 Unicode'
      ⍝ ***********************
-     r←Rule'main'
+     r←s Rule'main'
      ⍝ r.max_width←'40rem'
      ⍝ r.min_width←'40rem'
      r.width←'40rem'
@@ -88,30 +87,30 @@
      r.padding←'1rem'
      r.flex←1
      ⍝ **********************
-     r←Rule'h1'
+     r←s Rule'h1'
      r.padding←'1rem 0'
      r.font_size←'1.5rem'
      ⍝ ************************
-     r←Rule'h2'
+     r←s Rule'h2'
      r.padding←'.5rem 0 .2rem 0'
      r.font_size←'1rem'
      ⍝ ************************
-     r←Rule'h3'
+     r←s Rule'h3'
      r.padding←'.5rem 0 .2rem 0'
      r.font_size←'1rem'
      ⍝ **********************
-     r←Rule'p'
+     r←s Rule'p'
      r.padding←'.25rem 0'
      ⍝ *****************
-     r←Rule'code'
+     r←s Rule'code'
      r.font_family←'APL385 Unicode'
      r.white_space←'pre'
      ⍝ ****************
-     r←Rule'pre'
+     r←s Rule'pre'
      r.margin←'0 0 .75rem 0'
      r.padding←0
      ⍝ ****************
-     r←Rule'pre>code'
+     r←s Rule'pre>code'
      r.display←'block'
      r.background_color←'LightGray'
      r.padding←'1.5rem 2rem'
@@ -119,19 +118,19 @@
      r.border_radius←'5px'
      ⍝ Block quote
      ⍝ **************************
-     r←Rule'blockquote'
+     r←s Rule'blockquote'
      r.font_family←'Time New Roman'
      r.border_left←'.5em solid DarkGray'
      r.margin←'.5em 3em'
      r.padding_left←'1rem'
      r.font_style←'italic'
      ⍝ **************************
-     r←Rule'body>footer'
+     r←s Rule'body>footer'
      r.background_color←'lightgray'
      r.min_height←'5rem'
      r.margin_top←'2rem'
      ⍝ *************************
-     r←Rule'body>footer>p'
+     r←s Rule'body>footer>p'
      r.text_align←'center'
      r.padding_top←'2rem'
      ⍝ *************************

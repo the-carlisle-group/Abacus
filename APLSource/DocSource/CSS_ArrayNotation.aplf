@@ -1,4 +1,4 @@
- CSS←{
+ CSS_ArrayNotation←{
      A←##.Main
      s←A.NewRule''
      Rule←s∘A.NewRule

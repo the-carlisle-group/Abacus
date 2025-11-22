@@ -1,3 +1,5 @@
+> Take care of the code, be gentle to the computer, and make beautiful stuff on your screens. -- Håkon Wium Lie 
+
 # Abacus UI
 
 Abacus UI is a Dyalog APL framework for building desktop

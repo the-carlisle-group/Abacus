@@ -1,3 +1,4 @@
  Render←{
-     ⎕XML⍣2 DOM2HTML ⍵
+     ⍺←⍵
+     ⎕XML⍣2 DOM2HTML ⍺
  }

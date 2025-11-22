@@ -1,4 +1,4 @@
-# A Simple Desktop Application
+# A Simple Application
 
 Let's jump right in and create a very simple desktop application that keeps
 track of the number of times a button is clicked. All of the concepts
@@ -7,7 +7,7 @@ will be exlained in further detail in subsequent chapters.
 You can create a new namepace for the application, or just play around in the
 root namespace. Whatever your location remember to execute `A←#.Abacus.Main`
 So the Abacus functions can be located.
- 
+
 First we write a little function to build our document, which contains
 nothing but a button and a paragraph element:
 
@@ -27,7 +27,7 @@ to the `onclick` event. Note also that we have made up a variable and stored it 
 to track how many times it has been clicked. Both the name and location of this
 variable are arbitrary.
 
-Now we will need to implement the 'OnIncrement' function:
+Now we will need to implement the `OnIncrement` function:
 
 ~~~
 OnIncrement←{
@@ -51,7 +51,7 @@ Finally we need to create an Application object to run the app:
       d←a A.StartDesktopApplication ''
 ~~~
 
-The final result `d` is the HTMLDocument object created by our build function.
+The final result `d` is the [HTMLDocument]() object created by our build function.
 And on screen will be the assocated HTMLRenderer form with our application, ready for use. 
 
 Try it out!
