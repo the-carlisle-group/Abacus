@@ -1,0 +1,10 @@
+ NewMemberPage←{
+     ⍝ ⍵ ←→ e.g. 'HTMLElement_Method_GetElementById'
+     0≠⎕NC ⍵:'Already exists.'
+     _←⎕VSET⊂⍵(('# ',⍵)'' 'TODO')
+     _←⎕SE.UCMD']ACRE.SetChanged ',⍵
+     s←⊃⎕SE.UCMD']ACRE.Sourcefile ',⍵
+     t←(¯8↓s),'md'
+     _←t ⎕NMOVE s
+     ⍵
+ }

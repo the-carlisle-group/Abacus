@@ -1,5 +1,6 @@
  NewApplication←{
      a←⎕NS''
+     _←a ⎕DF'Application'
      a.Name←'[Application]'
      a.Server←NewRumbaServer a
      a.Sessions←⍬

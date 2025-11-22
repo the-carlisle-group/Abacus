@@ -1,0 +1,10 @@
+ GetElements←{
+     ⍝ ⍺|⍵ ←→ Element
+     ⍝ ← ←→ Vector of ⍵ and all sub elements
+     ⍺←⍵
+     IsElement←{⊃9=⎕NC'⍵'}
+     ~IsElement ⍺:⍬
+     ⍺,{c←{0=≢⍵:⍬ ⋄ ⍵/⍨IsElement¨⍵}⍺.Content
+         0=≢c:⍬
+         ⊃,/c,¨∇¨c}⍺
+ }

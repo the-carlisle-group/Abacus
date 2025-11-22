@@ -77,7 +77,10 @@
      r.padding←'.2rem .5rem'
      r.border_radius←'5px'
      r.text_decoration←'none'
-     r.font_family←'APL385 Unicode'
+     ⍝ r.font_family←'APL385 Unicode'
+
+
+
      ⍝ ***********************
      r←Rule'main'
      ⍝ r.max_width←'40rem'
@@ -89,7 +92,7 @@
      r.flex←1
      ⍝ **********************
      r←Rule'h1'
-     r.padding←'1rem 0'
+     r.padding←'2rem 0'
      r.font_size←'1.5rem'
      ⍝ ************************
      r←Rule'h2'
@@ -136,7 +139,15 @@
      r.padding_top←'2rem'
      ⍝ *************************
 
-
+     ⍝ ********************
+     r←Rule'h1>a'
+     r.font_size←'1rem'
+     r.font_weight←'normal'
+     r.background_color←'steelblue'
+     r.color←'white'
+     r.padding←'.2rem .5rem'
+     r.border_radius←'5px'
+     r.text_decoration←'none'
 
 
 
