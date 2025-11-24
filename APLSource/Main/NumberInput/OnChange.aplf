@@ -3,5 +3,5 @@
      v←Parse ⍵.Value
      f←d.Format Format v
      _←d SetValue Parse f
-     ⍵ ##.Execute'OnChange'
+     ⍵ A.Execute'OnChange'
  }

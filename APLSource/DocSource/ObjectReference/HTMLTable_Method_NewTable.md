@@ -1,4 +1,4 @@
-# NewTable
+# HTMLTable NewTable Method
 
 Creates a new HTML table element.
 

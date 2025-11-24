@@ -1,4 +1,4 @@
-# DOM2HTML
+# HTMLElement DOM2HTML Method
 
 Converts an HTMLElement into HTML. 
 
@@ -14,4 +14,5 @@ R←DOM2HTML X
       A.DOM2HTML A.New 'div' 'Hello world!'
 <div>Hello world!</div>
 ~~~
+
 

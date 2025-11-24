@@ -1,7 +1,8 @@
  GetComponentValues←{
-     ⍝ ⍵ ←→ DOM node
+     ⍝ ⍺|⍵ ←→ DOM node
      ⍝ ← ←→ Namespace of Values from ⍵
-     e←⍵ GetElementsWith'Name'
+     ⍺←⍵
+     e←⍺ GetElementsWith'Name'
      0=≢e:()
      c←e/⍨2.1=e.⎕NC⊂⊂'Value'
      0=≢c:()

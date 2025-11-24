@@ -1,14 +1,13 @@
-# NewRule
+# CSSRule NewRule Method
 
-Creates a new CSS rule.
+Create a new CSSRule.
 
 ~~~
-R←{Y} NewRule X
+      R←{I} NewRule X
 ~~~
 
-`X` is the selector.
-`Y` is an optional parent (for CSS nesting).
-`R` is a new rule object.
+`X` is the selector. I in an optional parent CSSRule.
+R is a new CSSRule instance.
 
 ## Examples
 

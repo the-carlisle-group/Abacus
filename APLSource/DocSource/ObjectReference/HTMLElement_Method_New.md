@@ -1,6 +1,6 @@
-# New
+# HTMLElement New Method
 
-The `New` function creates a new HTMLElement object.
+Creates a new HTMLElement object.
 
 ~~~
 R←{Y} New T [C [A]]
@@ -8,6 +8,8 @@ R←{Y} New T [C [A]]
 
 `T` is the tag. `C` is optional content. `A` is optional matrix of attribute
 names and values. `Y` is an optional parent element. `R` is the new HTMLElement.
+
+## Examples
 
 ~~~
       d←A.New'div'
@@ -17,3 +19,4 @@ names and values. `Y` is an optional parent element. `R` is the new HTMLElement.
       A.Render d
 <div class="myclass" id="myid">Hello world!</div>
 ~~~
+

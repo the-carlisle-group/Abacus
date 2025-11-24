@@ -1,4 +1,9 @@
 # Application Object
 
-The `Application` object...
+## Description
 
+Represents an Abacus application.
+
+## Commentary
+
+TODO

@@ -1,4 +1,4 @@
-# HTMLElement_Method_SetOuterHTML
+# HTMLElement SetOuterHTML Method
 
 Sets the outer HTML of an element.
 

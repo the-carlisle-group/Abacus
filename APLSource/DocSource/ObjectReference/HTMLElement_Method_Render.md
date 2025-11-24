@@ -1,4 +1,4 @@
-# Render
+# HTMLElement Render Method
 
 Converts a DOM node into HTML, formatted for display purposes. 
 
@@ -32,3 +32,4 @@ R←Render X
   <body>Hello World</body>
 </html>
 ~~~
+

@@ -2,6 +2,8 @@
 
 # Abacus UI
 
+> November 23, 2025: This site is under construction. We have done just enough CSS to make it not entirely heinous. The architecture is minimal. We are focused on adding content, and will return to the looks and functionality in the future. 
+
 Abacus UI is a Dyalog APL framework for building desktop
 and web applications under the browser. It aims to solve a seemingly
 intractable problem: how to move beyond the venerable Dyalog `⎕WC` 
