@@ -1,3 +1,3 @@
-# DataGrid_Property_CustomColumnInserts
+# DataGrid CustomColumnInserts Property
 
 TODO

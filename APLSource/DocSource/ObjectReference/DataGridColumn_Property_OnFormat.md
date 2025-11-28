@@ -1,7 +1,7 @@
 # DataGridColumn OnFormat Property
 
 A function that formats the column for display in HTML.
-The default value uses the FormatString with ⎕FMT,
+The default function uses the [FormatString]() property with `⎕FMT`,
 when appropriate, to format the value. 
 The right argument provided to the function is the vector of column values to be formatted.
 The left argument is the column specification namespace. 

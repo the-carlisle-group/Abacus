@@ -1,8 +1,8 @@
  StartDesktopApplication←{
-     ⍝ ⍺ ←→ Application object|OnBuild function
-     ⍝ ← ←→ Document
-     ⍺←⍵
-     d←(⍎⍺.BuildFunction)0
+     ⍝ ⍺ ←→ Application object
+     ⍝ ⍵ ←→ 0|Document
+     ⍺←NewApplication''
+     d←⍺{0=⍵:(⍎⍺.BuildFunction)0 ⋄ ⍵}⍵
      d.Caption←⍺.Name
      d⊣⍺ NewForm d
  }

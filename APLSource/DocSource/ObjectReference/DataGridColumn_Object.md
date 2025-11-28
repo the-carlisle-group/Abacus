@@ -6,12 +6,10 @@ Specifies a column for the DataGrid.
 
 ## Commentary
 
-A `DataGridColumn` defines a column in a DataGrid.
-
-A `DataGridColumn` is created as  plain namespace. There is no `New` function or constructor.
+A `DataGridColumn` is created as a plain namespace. There is no `New` function or constructor.
 
 To create a new `DataGridColumn` object, simply create a new namespace and 
-populate with desired properties:
+populate it with desired properties:
 
 ~~~
    c←()
