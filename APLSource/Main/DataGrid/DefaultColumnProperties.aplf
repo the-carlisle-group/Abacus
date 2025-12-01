@@ -7,9 +7,9 @@
      d←⎕NS¨n⍴⊂''
      d.Type d.Class d.Align d.OnFormat d.FormatString d.OnParse d.OnValidate d.Default d.Null d.SortDirection d.FilterValues d.FilterMask←↓⍉(m⍪⊂'')[i;]
      d.Name←n↑⊃,/,¨∘.,\3⍴⊂,¨⎕A
-     ⍝ d.SortDirection←0
-     ⍝ d.FilterValues←⊂''
-     ⍝ d.FilterMask←1
+     d.SortDirection←0
+     d.FilterValues←⊂''
+     d.FilterMask←1
      d.Options←⊂''
      _←d ⎕NS¨c
      d.Value←⍵.RowMinimum DefaultColumnValue¨d

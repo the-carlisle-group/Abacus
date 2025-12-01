@@ -1,0 +1,4 @@
+ ShowValues←{
+     g←Document A.GetElementByClass'DataGrid'
+     ⍉↑{2=≢⍴⍵:↓⍵ ⋄ ⍵}¨10↑¨g.Table.Columns.Value
+ }

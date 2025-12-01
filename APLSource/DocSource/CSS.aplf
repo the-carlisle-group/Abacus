@@ -100,8 +100,9 @@
      r.font_size←'1rem'
      ⍝ ************************
      r←Rule'h3'
-     r.padding←'.5rem 0 .2rem 0'
-     r.font_size←'1rem'
+     r.padding←'.5rem 0 0 0'
+     r.font_style←'bold'
+     r.font_size←'.75rem'
      ⍝ **********************
      r←Rule'p'
      r.padding←'.25rem 0'
@@ -149,7 +150,42 @@
      r.border_radius←'5px'
      r.text_decoration←'none'
 
-
+     ⍝ *******************
+     r←Rule'table'
+     r.margin_left←'4rem'
+     r.margin_top←'1rem'
+     r.margin_bottom←'1rem'
+     r.border_collapse←'collapse'
+     ⍝ *********************
+     r←Rule'td'
+     r.text_align←'left'
+     r.padding←'.3rem .75rem'
+     r.font_weight←'normal'
+     r.border←'none'
+     ⍝ *************************
+     r←Rule'th'
+     r.padding←'.3rem .75rem'
+     r.font_family←'Arial'
+     r.font_weight←'bold'
+     ⍝ *************************
+     r←Rule'thead'
+     r.word_wrap←'break-word'
+     r.vertical_align←'bottom'
+     r.border_bottom←'1px solid black'
+     ⍝ **************************
+     r←Rule'tbody tr'
+     r.border_bottom←'1px solid'
+     r.border_color←'LightGray'
+     ⍝ *************************
+     r←Rule'.right'
+     r.text_align←'right'
+     ⍝ *******************
+     r←Rule'.center'
+     r.text_align←'center'
+     ⍝ *******************
+     r←Rule'.left'
+     r.text_align←'left'
+     ⍝ *******************
 
 
      s

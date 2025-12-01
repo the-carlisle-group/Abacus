@@ -1,6 +1,6 @@
  FMT_Num←{
      326=⎕DR ⍵:⍺ FMT_NumNull ⍵
      s←⍺.FormatString
-     0=≢s:ntbs⍕⍪⍵
+     0=≢s:{⎕PP←16 ⋄ ~∘' '¨↓⍕⍪⍵}⍵
      ntbs s ⎕FMT ⍵
  }

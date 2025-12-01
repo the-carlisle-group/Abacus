@@ -5,6 +5,8 @@
      t.RowNumbers←1
      t.InsertRows←1
      t.InsertColumns←1
+     t.ColumnIndices←⍬
+     t.RowMask←1
      c←⎕NS¨15⍴⊂''
      t.Columns←c
      c.Name←'CheckBox' 'Select' 'MultiSelect' 'AutoComplete' 'Char' 'VarChar' 'Integer' 'Decimal1' 'Decimal2' 'Decimal3' 'Float' 'Date' 'FormattedFloat' 'CustomType' 'RGB'
@@ -12,8 +14,12 @@
      (1⊃c).Options←'Alabama' 'New Jersey' 'New Hamshire' 'New York' 'California' 'Nevada'
      (2⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach'
      (3⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach' 'toDate' 'toChar' 'toNumeric'
+     (4⊃c).OnValidate←'#.Abacus.Tests.DataGridSuite1.OnValidate'
      (2⊃⌽c).FormatString←'F20.2'
      (2⊃⌽c).Null←⎕NULL
+     (6⊃c).FormatString←'Q< mb>K¯6CF12.2'
+     (9⊃c).FormatString←'CF20.5'
+
      ⍝ Try a custom type
      ct←13⊃c
      ct.OnFormat←'{{1↓∊'','',¨⍵}¨⍵}'

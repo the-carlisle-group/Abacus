@@ -1,11 +1,9 @@
 # Components
 
-IN PROGRESS......
-
 An Abacus component is an HTMLElement, some child elements, some CSS, and some
-behavior. Components may be a simple as a text edit, or as complex as a DataGrid.
+behavior. Components may be as simple as the [CheckBox](), or as complex as the [DataGrid]().
 
-> NB Abacus components are not Web Components. No shadow DOM. 
+> Abacus components are not Web Components. There is no shadow DOM. 
 
 A component is implemented as a namespace. Lets's examine the code
 in the `NumberInput` component.
@@ -41,6 +39,9 @@ or a namespace. However they are supplied, the property names and values are inj
 the root element of the component, `d` in this case. By inspection, we can see
 the properties and default values of this component. All components begin this way.
 
+Propeteries are simple variables. There are no getter and setter functions, so
+sometimes initializion or refresh functions are provided. 
+
 The `Name` property uniquely identifies the component within some document node.
 Unlike the HTML `id` attribute, it does not need to be unique within the document as a whole.
 All components must have a `Name` property. This component has 3 additional
@@ -63,6 +64,12 @@ The right argument to OnChange, provided by Abacus, inludes a wealth of informat
 The `CurrentTarget` is the component itself, and the `Value` property is the value from the `<input>` element.
 We defined the <input> element as type=text, so we convert the text into a number using `Parse`   
 
+In addition to properites and methods, components may expose events. 
+The NumberInput component exposes a [Change]() event, with an implied 'OnChange' 
+property.  After the built-in OnChange function does what it needs to do,
+it calls the user-supplied event handler for the change event. This function is  
+supplied an event message as its right argument, and the object instance
+as its left argument.  
 
 
 The `Parse` and `Format` functions are fairly trivial:
@@ -77,11 +84,20 @@ Parse←{
  }
 ~~~
 
-
- 
-
 Finally, we have a `CSS` function to provide component-specific CSS:
 
-
-                               
-
+~~~
+CSS←{
+     Rule←A.NewRule
+     ⍝ ************************
+     s←Rule'.NumberInput'
+     s.display←'flex'
+     s.flex_direction←'column'
+     s.gap←'.5rem'
+     ⍝ ************************
+     r←s Rule'input'
+     r.text_align←'right'
+     ⍝ ************************
+     A.UnNestCSS s
+ }
+~~~
