@@ -3,6 +3,6 @@
      d←(↑⍣c)⍺⍴⊂⍵.Null
      v←⍵ ⎕VGET⊂'Value'd
      ⍺≤≢v:v
-     c:↑⍺↑(↓v),↓d
+     c:↑⍺↑v,⍥↓d
      ⍺↑v,d
  }
