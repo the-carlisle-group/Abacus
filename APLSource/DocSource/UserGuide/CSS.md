@@ -42,7 +42,7 @@ Rules may be nested by providing the parent rule as a left argument to `NewRule`
 ~~~
       pr←A.NewRule '@media print'
       r←pr A.NewRule 'p' 
-      r.font+size←'10px'
+      r.font_size←'10px'
       A.ComposeRules pr 
 @media print {                                            
 
@@ -91,7 +91,7 @@ CreateStyleSheet←{
 }
 ~~~
 
-A style sheet may be embedded in an HTLM document by specifying a `Style` property in the `html` element of the DOM.
+A style sheet may be embedded in an HTML document by specifying a `Style` property in the `html` element of the DOM.
 The Style property may be specified as a string (usually the result of `ComposeRules`) or an array of rule objects.
 The DOM2HTML function will compose the array of styles and create a style element under the head element when composing
 the HTML:
