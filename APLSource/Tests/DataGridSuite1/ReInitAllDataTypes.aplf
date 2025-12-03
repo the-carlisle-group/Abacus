@@ -35,7 +35,8 @@
      ct.Align←'r'
 
 
-     n←100
+     n←5
+     t.RowMinimum←10
      v←⊂n⍴1 0 0
      v,←⊂↑n⍴'Alabama' '' 'Alabama' 'New York' '' 'California'
      v,←⊂↑n⍴'Onions' 'Spinach',n⍴⊂''

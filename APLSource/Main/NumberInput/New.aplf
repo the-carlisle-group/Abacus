@@ -9,11 +9,11 @@
      n←'NumberInput'
      _←d.⎕DF n
      d.class←n
-     g.Class←⎕THIS
+     d.Class←⎕THIS
      l←d A.New'label'd.Label
      l.for←d.Name
      i←d A.New'input'
-     i.id←p.Name
+     i.id←d.Name
      d.Onchange←A.FQP'OnChange'
      _←d InitValue d.Value
      d

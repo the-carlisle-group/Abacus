@@ -8,7 +8,7 @@
          'InsertRows' 1
          'InsertColumns' 0
          'FreezeColumns' 0
-         'RowMinimum' 10
+         'RowMinimum' 0
          'HeaderRowTitles' ''
          'HeaderReadOnly' 1
          'CustomColumnInserts'⍬

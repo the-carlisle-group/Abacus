@@ -1,6 +1,8 @@
  DefaultColumnValue←{
-     2=⍵.⎕NC'Value':⍵.Value
-     ⍵.Type≡'Char':↑⍺⍴⊂⍵.Null
-     ⍵.Type≡'VarChar':⍺⍴⊂⍵.Null
-     ⍺⍴⍵.Null
+     c←⍵.Type⊂⍛∊'Char' 'Select' 'MultiSelect'
+     d←(↑⍣c)⍺⍴⊂⍵.Null
+     v←⍵ ⎕VGET⊂'Value'd
+     ⍺≤≢v:v
+     c:↑⍺↑(↓v),↓d
+     ⍺↑v,d
  }
