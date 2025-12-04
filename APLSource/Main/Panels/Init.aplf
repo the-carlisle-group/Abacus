@@ -15,7 +15,7 @@
      g.ColumnWidths←cw
      g.GridTemplateAreas←m
      g.AreaBorders←i
-     g.GridAreas←a
+     g.GridAreas←a[⍋u]
      g.GTR←GetGridTemplateRows g
      g.GTC←GetGridTemplateColumns g
      0

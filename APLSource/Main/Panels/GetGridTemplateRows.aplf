@@ -1,6 +1,7 @@
  GetGridTemplateRows←{
      v←⍵.GridTemplateRows
-     0<≢v:1↓∊' ',¨v
-     ⍵.AutoSize∨⍵.AutoSizeRows:∊1↓' ',¨(≢⍵.Content)⍴⊂'auto'
+     n←≢⍵.RowHeights
+     0<≢v:1↓∊' ',¨n⍴⊆v
+     ⍵.AutoSize∨⍵.AutoSizeRows:∊1↓' ',¨n⍴⊂'auto'
      Format ⍵.RowHeights
  }
