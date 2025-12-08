@@ -6,8 +6,8 @@
      s.gap←'.5rem'
      ⍝ *******************************
      r←s Rule'input'
-     r.width←'1.25rem'
-     r.height←'1.25rem'
+     r.width←'1rem'
+     r.height←'1rem'
      r.accent_color←'steelblue'
      ⍝ ***************************
      A.UnNestCSS s

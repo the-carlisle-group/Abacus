@@ -4,7 +4,8 @@
      ⍺←0
      IsString ⍵:⊂⍺''⍵(0 2⍴⊂'')0
      a←APLCallbackAttributes ⍵
-     a←a⍪ComposeAttributes ⍵
+     a⍪←ComposeAttributes ⍵
+     a⍪←SetInlineStyle ⍵
      3=≡⍵.Content:⊂⍺ ⍵.Tag'⍃'a(⊃⊃⍵.Content)
      c←Condense ⍵.Content
      IsString c:⊂⍺ ⍵.Tag c a 0

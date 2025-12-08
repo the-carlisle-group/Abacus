@@ -6,8 +6,8 @@
      rh cw←⌊{(100×(≢⊢)⌸⍵)÷≢⍵}¨w(⍉w)
      m←⍉∘∪⍣2⊢w
      u←∪,m
-     h←~u∊⍨⍳≢c          ⍝ Hidden (not shown)
-     i←(⊣/,⊢/)¨⍸¨⊂[⍳2]m∘.=u
+     h←~u∊⍨1+⍳≢c          ⍝ Hidden (not shown)
+     i←(⊣/,⊢/)¨⍸¨⊂[⍳2]m∘.=u~0
      l←(⊂⍳2)+1+i
      a←{'/'@(' '∘=)⍕∊⍵}¨l
      g.Hidden←h
@@ -15,7 +15,7 @@
      g.ColumnWidths←cw
      g.GridTemplateAreas←m
      g.AreaBorders←i
-     g.GridAreas←a[⍋u]
+     g.GridAreas←a[⍋u~0]
      g.GTR←GetGridTemplateRows g
      g.GTC←GetGridTemplateColumns g
      0

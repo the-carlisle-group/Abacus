@@ -1,0 +1,42 @@
+ FireUI←{
+     _←#.Abacus.Main.Init 0
+     ⎕THIS.A←#.Abacus.Main
+     d←A.NewDocument''
+     ⍝ ***************************
+     b←A.TextInput.New'SearchFor' 'Search for:'
+     b,←A.TextInput.New'StartHere' 'Start looking here:'
+     SearchAndStart←A.FieldSet.New⊂b
+     ⍝ **************
+     b←A.CheckBox.New'IsRegEx' 'Is RegEx'
+     b,←A.CheckBox.New'Greedy' 'Greedy'
+     Regex←A.FieldSet.New b'RegEx' 'stacked' 1
+     ⍝ **************
+     b←A.CheckBox.New'MatchCase' 'Match case'
+     b,←A.CheckBox.New'MatchValidOnly' 'Match valid names only'
+     b,←A.CheckBox.New'IgnoreReferences' 'Ignore references'
+     b,←A.CheckBox.New'IgnoreTatin' 'Ignore Tatin packages'
+     Options←A.FieldSet.New b'Options' 'stacked' 1
+     ⍝ **************
+     b←A.CheckBox.New'APLCode' 'APL code'
+     b,←A.CheckBox.New'Variables' 'Variables'
+     ObjectTypes←A.FieldSet.New b'Opject types' 'stacked' 1
+     ⍝ **************
+     b←A.CheckBox.New'Comments' 'Comments'
+     b,←A.CheckBox.New'Text' 'Text'
+     b,←A.CheckBox.New'Everything else' 'Everything else'
+     Scan←A.FieldSet.New b'Scan' 'stacked' 1
+     ⍝ ************************
+     Find←A.Button.New'Find' 'Find'('Width' '20rem')
+     Replace←A.Button.New'Replace' 'Replace...'('Width' '30rem')
+     Negate←A.CheckBox.New'NegateSearch' 'Negate search'
+     SearchResults←A.CheckBox.New'SearchResults' 'Search results'
+     Actions←A.Flex.New(Find Replace Negate SearchResults)('_AlignItems' 'center')
+     Results←A.DataGrid.New''
+     ⍝ Flex approach
+     b←A.GetBody d
+     b.Content,←SearchAndStart
+     b.Content,←A.Flex.New⊂Regex Options ObjectTypes Scan
+     b.Content,←Actions
+     b.Content,←Results
+     A.StartDesktopApplication d
+ }

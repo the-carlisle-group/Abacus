@@ -1,0 +1,6 @@
+ SetInlineStyle←{
+     2=⍵.⎕NC'style':0 2⍴⊂''
+     v←ComposeInlineStyles ⍵
+     0=≢v:0 2⍴⊂''
+     'style'v
+ }

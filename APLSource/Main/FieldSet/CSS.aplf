@@ -5,8 +5,10 @@
      r←s Rule'.fieldset-stacked'
      r.display←'flex'
      r.flex_direction←'column'
-     r.gap←'1rem'
+     r.gap←'.5rem'
      r.border←'none'
+     r.padding←'1rem'
+
      ⍝ **********************
      r←s Rule'.fieldset-stacked-row'
      r.display←'flex'

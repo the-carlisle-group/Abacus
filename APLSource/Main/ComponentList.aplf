@@ -26,5 +26,6 @@
      l,←⊂'Toolbar'
      l,←⊂'ButtonGroup'
      l,←⊂'Button'
+     l,←⊂'Flex'
      l
  }
