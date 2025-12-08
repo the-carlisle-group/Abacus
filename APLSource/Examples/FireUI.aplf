@@ -30,7 +30,7 @@
      Replace←A.Button.New'Replace' 'Replace...'('Width' '30rem')
      Negate←A.CheckBox.New'NegateSearch' 'Negate search'
      SearchResults←A.CheckBox.New'SearchResults' 'Search results'
-     Actions←A.Flex.New(Find Replace Negate SearchResults)('_AlignItems' 'center')
+     Actions←A.Flex.New(Find Replace Negate SearchResults)('_align_items' 'center')
      Results←A.DataGrid.New''
      ⍝ Flex approach
      b←A.GetBody d

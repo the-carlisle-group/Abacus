@@ -1,15 +1,11 @@
  ComposeInlineStyles←{
      ⍝ ⍵ ←→ Namespace of properties and values
-     ⍝ Pascal case ←→ kebab case
-     ⍝ FlexDirection ←→ flex-direction
+     ⍝ _flex_direction ←→ flex-direction
      ⍝ ← ←→ String like 'p1:v1;p2:v2..etc'
-     n←'_'⍵.⎕NL ¯2
-     k←(1⊃¨2↑¨n)∊⎕A
-     n←k/n
+     n←⎕C⍛(≡¨)⍛/'_'⍵.⎕NL ¯2
      0=≢n:''
      v←⍵ ⎕VGET n
-     f←{ ⍝ ~∨/⍵∊⎕A:1↓'-'@('_'∘=)⍵
-         ⎕C 1↓∊'-',¨(+\⍵∊⎕A)⊆⍵}
+     f←{1↓'-'@('_'∘=)⍵}
      p←f¨n
      1↓⊃,/';',¨p{⍺,':',⍵}¨v
  }
