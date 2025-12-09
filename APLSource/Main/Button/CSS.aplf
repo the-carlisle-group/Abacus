@@ -3,8 +3,8 @@
      ⍝ ******************
      s←Rule'.button'
      s.display←'flex'
-     ⍝ s.align_items←'center'
-     s.gap←'.5rem'
+     s.justify_content←'center'
+     s.gap←'.5rem'     ⍝   ##.Flex.New
      s
      ⍝
      A.UnNestCSS s

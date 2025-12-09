@@ -1,0 +1,8 @@
+ DefaultParentAndName←{
+     IsString ⍵:0 ⍵
+     2=≢⍵:⍵
+     3>≢⎕LC:⍵''
+     c←⎕LC[2]⊃⎕NR 2⊃⎕XSI
+     n←' '~⍨⊃¯2↑('←'≠c)⊆c
+     ⍵ n
+ }

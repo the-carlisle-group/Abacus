@@ -1,4 +1,4 @@
- New←{
+ New2←{
      ⍝ ⍺ ←→ [Parent, 0 - no parent]
      ⍝ ← ←→ Element
      ⍺←0

@@ -4,7 +4,7 @@
      ⍝ ← ←→ Table
      ⍺←0
      c←∊'thead' 'tbody' 'tfoot'{
-         0=≢⍵:⍬
+         0=≢⍵:''
          d←↑,↓⍵
          e←New ⍺
          r←e New¨{'tr'⍵}¨⍳≢d

@@ -1,13 +1,14 @@
  New←{
      ⍺←0
-     b←(⍺ A.New'button')⎕NS(
-         'Name' ''
+     (p n)←A.DefaultParentAndName ⍺
+     b←(p A.New'button')⎕NS(
          'Caption' ''
          'Icon' 'none'
          'OnClick' ''
          'Style' '' ⍝
          'Width' ''
      )A.Default ⍵
+     b.Name←n
      b.OnClick←1 A.FQP b.OnClick
      b.class←'button'
      i←(##.Icons 0)⎕VGET⊂b.Icon''

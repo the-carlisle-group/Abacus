@@ -2,41 +2,43 @@
      _←#.Abacus.Main.Init 0
      ⎕THIS.A←#.Abacus.Main
      d←A.NewDocument''
+     Body←A.GetBody d
+     Header←Body A.New'header' 'This is the header'
+     Main←Body A.New'main'
+     Footer←Body A.New'footer' 'This is the footer'
      ⍝ ***************************
-     b←A.TextInput.New'SearchFor' 'Search for:'
-     b,←A.TextInput.New'StartHere' 'Start looking here:'
-     SearchAndStart←A.FieldSet.New⊂b
+     SearchAndStart←Main A.FieldSet.New⊂'Border' 0
+     SearchFor←SearchAndStart A.TextInput.New'Search for:'
+     StartHere←SearchAndStart A.TextInput.New'Start looking here:'
+     ⍝ *********************
+     AllOptions←Main A.Flex.New''
      ⍝ **************
-     b←A.CheckBox.New'IsRegEx' 'Is RegEx'
-     b,←A.CheckBox.New'Greedy' 'Greedy'
-     Regex←A.FieldSet.New b'RegEx' 'stacked' 1
+     Regex←AllOptions A.FieldSet.New⊂'Legend' 'RegEx'
+     IsRegEx←Regex A.CheckBox.New'Is RegEx'
+     Greedy←Regex A.CheckBox.New'Greedy'
      ⍝ **************
-     b←A.CheckBox.New'MatchCase' 'Match case'
-     b,←A.CheckBox.New'MatchValidOnly' 'Match valid names only'
-     b,←A.CheckBox.New'IgnoreReferences' 'Ignore references'
-     b,←A.CheckBox.New'IgnoreTatin' 'Ignore Tatin packages'
-     Options←A.FieldSet.New b'Options' 'stacked' 1
+     Options←AllOptions A.FieldSet.New⊂'Legend' 'Options'
+     MatchCase←Options A.CheckBox.New'Match case'
+     MatchValidOnly←Options A.CheckBox.New'Match valid names only'
+     IgnoreReferences←Options A.CheckBox.New'Ignore references'
+     IgnoreTatin←Options A.CheckBox.New'Ignore Tatin packages'
      ⍝ **************
-     b←A.CheckBox.New'APLCode' 'APL code'
-     b,←A.CheckBox.New'Variables' 'Variables'
-     ObjectTypes←A.FieldSet.New b'Opject types' 'stacked' 1
+     ObjectTypes←AllOptions A.FieldSet.New⊂'Legend' 'Object types'
+     APLCode←ObjectTypes A.CheckBox.New'APL code'
+     Variables←ObjectTypes A.CheckBox.New'Variables'
      ⍝ **************
-     b←A.CheckBox.New'Comments' 'Comments'
-     b,←A.CheckBox.New'Text' 'Text'
-     b,←A.CheckBox.New'Everything else' 'Everything else'
-     Scan←A.FieldSet.New b'Scan' 'stacked' 1
+     Scan←AllOptions A.FieldSet.New⊂'Legend' 'Scan'
+     Comments←Scan A.CheckBox.New'Comments'
+     Text←Scan A.CheckBox.New'Text'
+     EverythingElse←Scan A.CheckBox.New'Everything else'
      ⍝ ************************
-     Find←A.Button.New'Find' 'Find'('Width' '20rem')
-     Replace←A.Button.New'Replace' 'Replace...'('Width' '30rem')
-     Negate←A.CheckBox.New'NegateSearch' 'Negate search'
-     SearchResults←A.CheckBox.New'SearchResults' 'Search results'
-     Actions←A.Flex.New(Find Replace Negate SearchResults)('_align_items' 'center')
-     Results←A.DataGrid.New''
-     ⍝ Flex approach
-     b←A.GetBody d
-     b.Content,←SearchAndStart
-     b.Content,←A.Flex.New⊂Regex Options ObjectTypes Scan
-     b.Content,←Actions
-     b.Content,←Results
+     Actions←Main A.Flex.New⊂'_align_items' 'center'
+     Find←Actions A.Button.New'Find'('_width' '10rem')
+     Replace←Actions A.Button.New'Replace...'('_width' '10rem')
+     Negate←Actions A.CheckBox.New'Negate search'
+     SearchResults←Actions A.CheckBox.New'Search results'
+     ⍝ **************************
+     Results←Main A.DataGrid.New''
+     ⍝ ****************************
      A.StartDesktopApplication d
  }

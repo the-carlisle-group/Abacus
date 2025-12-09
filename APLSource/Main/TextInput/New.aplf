@@ -1,7 +1,7 @@
  New←{
      ⍺←0
-     d←(⍺ A.New'div')⎕NS(
-         'Name' ''
+     (p n)←A.DefaultParentAndName ⍺
+     d←(p A.New'div')⎕NS(
          'Label' ''
          'Value' ''
          'AutocompleteItems' ''
@@ -9,6 +9,7 @@
          'OnPicker' ''
          'OnChange' ''
      )A.Default ⍵
+     d.Name←n
      d.class←'TextInput'
      d.Oninput←A.FQP'OnInput'
      d.Onchange←A.FQP'OnChange'

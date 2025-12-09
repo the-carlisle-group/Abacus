@@ -1,11 +1,12 @@
  New←{
      ⍺←0
-     d←(⍺ A.New'div')⎕NS(
-         'Name' ''
+     (p n)←A.DefaultParentAndName ⍺
+     d←(p A.New'div')⎕NS(
          'Label' ''
          'Value' 0
          'OnChange' ''
      )A.Default ⍵
+     d.Name←n
      d.class←'CheckBox'
      i←d A.New'input'
      i.type←'checkbox'

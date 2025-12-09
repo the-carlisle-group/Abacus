@@ -11,9 +11,11 @@
      ⍝ --------------- -------------- ----------- ------------ -------------
      ⍝ flex-direction justify-content align-items flex-wrap    align-content
      ⍝ -------------- --------------- ----------- ------------ -------------
+     ⍝       →↓             ←→            ↑↓
+     ⍝ -------------- --------------- ----------- ------------ -------------
      ⍝ row            flex-start      flex-start  nowrap       flex-start
      ⍝ column         flex-end        flex-end    wrap         flex-end
-     ⍝                center          center      wrap-reverse cener
+     ⍝                center          center      wrap-reverse center
      ⍝                space-between   stretch                  stretch
      ⍝                space-around    baseline                 space-between
      ⍝                space-evenly                             space-around
