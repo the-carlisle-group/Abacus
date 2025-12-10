@@ -1,5 +1,6 @@
 # HTMLElement GetComponentsSpace Method
 
+
 Gets a namespace of components.
 
 ~~~

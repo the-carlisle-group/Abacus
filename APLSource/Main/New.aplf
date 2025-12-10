@@ -9,5 +9,7 @@
      _←e.⎕DF e.Tag
      e.Tag←,e.Tag
      e.Parent←⍺
-     e⊣⍺ Add e
+     c←e.Content
+     e.Content←''
+     e⊣Add/⍺ e c
  }
