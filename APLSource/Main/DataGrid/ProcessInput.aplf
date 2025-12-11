@@ -12,12 +12,12 @@
      e←⎕NS''
      e.Event←'BeforeCellChange'
      e.CellIndex←t.ActiveCell
-     e.OldValue←t GetValue t.ActiveCell
+     e.OldValue←t GetCellValue t.ActiveCell
      e.NewValue←pv
      t Fire e:1
      fmt←⍎s.OnFormat
      fv←⊃s fmt,⊂e.NewValue
-     _←t SetValue e.NewValue
+     _←t SetCellValue e.NewValue
      t.OptiTable.Body.Values[⊂t.TableCell]←⊂fv
      c←i A.GetNearest'td'
      _←i A.RemoveAttribute'onblur'

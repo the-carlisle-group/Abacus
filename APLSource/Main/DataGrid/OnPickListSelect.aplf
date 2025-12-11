@@ -3,7 +3,7 @@
      p←⍵.CurrentTarget
      t←p.Context.CurrentTarget
      td←p.Context.Target
-     _←t SetValue p.Value
+     _←t SetCellValue p.Value
      _←td A.SetInnerHTML p.Value
      _←t SetChanged 0
      0

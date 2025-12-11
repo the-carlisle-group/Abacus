@@ -3,6 +3,6 @@
      ri ci←t.ActiveCell
      c←ci⊃t.Columns
      'CheckBox'≢c.Type:0
-     _←t SetValue~ri⊃c.Value
+     _←t SetCellValue~ri⊃c.Value
      1⊣Refresh t   ⍝ Don't really need to do all this.
  }

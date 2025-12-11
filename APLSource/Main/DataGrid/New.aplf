@@ -2,7 +2,7 @@
      ⍺←⊣
      w←(
          'Name' ''
-         'Columns'⍬
+         'Value'⍬
          'RowNumbers' 1
          'ReadOnly' 0
          'InsertRows' 1

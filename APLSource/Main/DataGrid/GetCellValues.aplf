@@ -1,4 +1,4 @@
- GetValues←{
+ GetCellValues←{
      ⍝ ⍺ ←→ Table
      ⍝ ⍵ ←→ Row indices, column indices
      ⍝ ← ←→ Matrix of values

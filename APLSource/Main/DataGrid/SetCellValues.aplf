@@ -1,4 +1,4 @@
- SetValues←{
+ SetCellValues←{
      ⍝ ⍺ ←→ Table
      ⍝ ⍵ ←→ Matrix, upperleft corner
      t←⍺

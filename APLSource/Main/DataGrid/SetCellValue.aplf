@@ -1,0 +1,11 @@
+ SetCellValue←{
+     t v←⍺ ⍵
+     i j←t.ActiveCell
+     i<0:0⊣t.HeaderValues[⊂i j+t.HeaderRowCount 0]←⊂v
+     k←i⊃t.RowIndices
+     c←j⊃t.Columns
+     d←c.Value
+     _←{2=≢⍴d:d[k;]←(1⊃⍴d)↑v ⋄ d[k]←⊂v}0
+     c.Value←d
+     0
+ }

@@ -4,12 +4,12 @@
      e←⎕NS''
      e.Event←'BeforeHeaderCellChange'
      e.CellIndex←t.ActiveCell
-     e.OldValue←'get the old value' ⍝ t GetValue t.ActiveCell
+     e.OldValue←'get the old value' ⍝ t GetCellValue t.ActiveCell
      e.NewValue←i.value
      t Fire e:1
      j←TableCell2HeaderIndex t
      t.OptiTable.Header.Values[⊂j]←⊂i.value
-     _←t SetValue e.NewValue
+     _←t SetCellValue e.NewValue
      ⍝ Encapsulate this from Init:
      t.ColumnTitles←(t.RowNumbers/t.HeaderRowTitles),t.HeaderValues ⍝
      ⍝
