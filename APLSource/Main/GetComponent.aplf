@@ -1,6 +1,6 @@
  GetComponent←{
-    ⍝ ⍺ ←→ APL DOM node
-    ⍝ ⍵ ←→ Component Name (or already a component (pass through)
+     ⍝ ⍺ ←→ APL DOM node
+     ⍝ ⍵ ←→ Component Name (or already a component (pass through)
      9=⎕NC'⍵':⍵
      e←⍺ GetElementsWith'Name'
      i←e.Name⍳⊂⍵

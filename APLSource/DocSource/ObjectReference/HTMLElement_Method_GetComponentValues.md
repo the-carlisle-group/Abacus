@@ -1,12 +1,17 @@
 # HTMLElement GetComponentValues Method
 
-Returns component values under an element.
+Returns all component name/value pairs under an element.
 
 ~~~
-   R←I GetComponentValues 0
-   R←GetComponentValues I
+      R←I GetComponentValues 0
+      R←GetComponentValues I
 ~~~
 
-`I` is an HTMLElement Instance. R is is namespace with the `Value`
-property of each component found in `I`. 
+`I` is an HTMLElement Instance. R is a vector of name/value pairs
+for each component found in `I`. 
 
+To get a namespace `S` of values use: 
+
+~~~
+      S←() ⎕VSET R
+~~~

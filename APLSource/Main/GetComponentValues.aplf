@@ -1,10 +1,10 @@
  GetComponentValues←{
      ⍝ ⍺|⍵ ←→ DOM node
-     ⍝ ← ←→ Namespace of Values from ⍵
+     ⍝ ← ←→ Name/Value pairs
      ⍺←⍵
      e←⍺ GetElementsWith'Name'
-     0=≢e:()
+     0=≢e:0/⊂'' ''
      c←e/⍨2.1=e.⎕NC⊂⊂'Value'
-     0=≢c:()
-     +()⎕VSET(↑c.Name)c.Value
+     0=≢c:0/⊂'' ''
+     c.Name{⍺ ⍵}¨c.Value
  }

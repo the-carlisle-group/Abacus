@@ -1,12 +1,16 @@
 # HTMLElement GetComponents Method
 
-Returns an array of all the components under an element.
+Returns a vector of name/value pairs of all the components under an element.
 
 ~~~
-      R←I GetComponents 0
+      R←I GetComponents ''
       R←GetComponents I 
-~~~ 
+~~~
 
-I is an HTMLElement instance. R is an array of components.
+I is an HTMLElement instance. R vector of name/value pairs.
 
-See also: [GetComponents]().
+For a namespace `S` of components use:
+
+~~~
+     S← () ⎕VSET R 
+~~~

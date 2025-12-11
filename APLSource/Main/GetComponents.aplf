@@ -1,6 +1,8 @@
  GetComponents←{
      ⍝ ⍺|⍵ ← APL DOM node
-     ⍝ ← ←→ Array of components
+     ⍝ ← ←→ Vector of name/value pairs of components
      ⍺←⍵
-     ⍺ GetElementsWith'Name'
+     c←⍺ GetElementsWith'Name'
+     0=≢c:0/⊂'' ''
+     c.Name{⍺ ⍵}¨c
  }

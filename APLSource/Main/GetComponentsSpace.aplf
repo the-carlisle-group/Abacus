@@ -1,8 +1,0 @@
- GetComponentsSpace←{
-     ⍝ ⍺|⍵ ← APL DOM node
-     ⍝ ← ←→ Namespace of components
-     ⍺←⍵
-     e←⍺ GetElementsWith'Name'
-     0=≢e:()
-     ()⎕VSET(↑e.Name)e
- }
