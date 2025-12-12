@@ -7,25 +7,24 @@
      d.LastSettings←''
      d.FindTime←0
      h1←d A.New'h1' 'Find and Replace'
-     s←d A.FieldSet.New⊂'Format' 'inline'
-     e1←s A.TextInput.New'FindWhat' 'Find what:'
-     e2←s A.TextInput.New'ReplaceWith' 'Replace with:'
-     fg←d A.FieldSet.New⊂'Format' 'stacked-row'
-     e1←fg A.CheckBox.New'MatchCase' 'Match case'
-     e2←fg A.CheckBox.New'MatchEntireCell' 'Match entire cell contents'
-     e3←fg A.CheckBox.New'UseRegex' 'Use regular expressions'
-     e4←fg A.DropList.New'SearchBy' 'Search by:' 'Columns'('Options'('Rows' 'Columns'))
+     s←d A.FieldSet.New('Format' 'inline')('Border' 0)
+     FindWhat←s A.TextInput.New'Find what:'
+     ReplaceWith←s A.TextInput.New'Replace with:'
+     fg←d A.FieldSet.New('Format' 'stacked-row')('Border' 0)
+     MatchCase←fg A.CheckBox.New'Match case'
+     MatchEntireCell←fg A.CheckBox.New'Match entire cell contents'
+     UseRegex←fg A.CheckBox.New'Use regular expressions'
+     SearchBy←fg A.DropList.New'Search by:' 'Columns'('Options'('Rows' 'Columns'))
      bg←d A.New'div'
      bg.class←'button-group'
-     b←A.Button.New'Find' 'Find'('OnClick' 'OnFind')     ⍝ Add shortcut, etc.
-     b,←A.Button.New'ReplaceAll' 'Replace all'('OnClick' 'OnReplaceAll')
-     b,←A.Button.New'Replace' 'Replace'('OnClick' 'OnReplace')
-     b,←A.Button.New'Close' 'Close'('OnClick' 'OnClose')
-     b,←A.Button.New'First' 'First'('OnClick' 'OnFirst')
-     b,←A.Button.New'Prev' 'Prev'('OnClick' 'OnPrev')
-     b,←A.Button.New'Next' 'Next'('OnClick' 'OnNext')
-     b,←A.Button.New'Last' 'Last'('OnClick' 'OnLast')
-     bg.Content←b
+     Find←bg A.Button.New'Find'('OnClick' 'OnFind')     ⍝ Add shortcut, etc.
+     ReplaceAll←bg A.Button.New'Replace all'('OnClick' 'OnReplaceAll')
+     Replace←bg A.Button.New'Replace'('OnClick' 'OnReplace')
+     Close←bg A.Button.New'Close'('OnClick' 'OnClose')
+     First←bg A.Button.New'First'('OnClick' 'OnFirst')
+     Prev←bg A.Button.New'Prev'('OnClick' 'OnPrev')
+     Next←bg A.Button.New'Next'('OnClick' 'OnNext')
+     Last←bg A.Button.New'Last'('OnClick' 'OnLast')
      g←d ##.DataGrid.New''
      d
  }

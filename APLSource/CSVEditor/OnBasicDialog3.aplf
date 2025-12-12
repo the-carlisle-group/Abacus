@@ -1,16 +1,16 @@
  OnBasicDialog3←{
      d←⍵.Document
-     s←A.FieldSet.New'' 'stacked' 1
-     i←s A.TextInput.New'TextInput' 'Text input:'
-     i←s A.NumberInput.New'NumericInput' 'Numeric input:' 256 'CI15'
-     i←s A.DateInput.New'DateInput' 'Date input:' 20261231
-     i←s A.DropList.New'DropListInput' 'Drop list input:' ''('Comma' 'Pipe' 'Tab')
-     i←s A.FileInput.New'FileInputX' 'File input'
+     s←A.FieldSet.New'' 'Some fields' 'stacked' 1
+     TextInput←s A.TextInput.New'Text input:'
+     NumericInput←s A.NumberInput.New'Numeric input:' 256 'CI15'
+     DateInput←s A.DateInput.New'Date input:' 20261231
+     DropListInput←s A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')
+     FileInputX←s A.FileInput.New'File input'
 
-     s2←A.FieldSet.New'Some checkboxes'('Border' 1)
-     i←s2 A.CheckBox.New'Checkbox1' 'One'
-     i←s2 A.CheckBox.New'Checkbox2' 'Two'
-     i←s2 A.CheckBox.New'Checkbox3' 'Three'
+     s2←A.FieldSet.New'' 'Some checkboxes'
+     Checkbox1←s2 A.CheckBox.New'One'
+     Checkbox2←s2 A.CheckBox.New'Two'
+     Checkbox4←s2 A.CheckBox.New'Three'
 
      p←⎕NS''
      p.Title←'Basic Dialog Box 3'

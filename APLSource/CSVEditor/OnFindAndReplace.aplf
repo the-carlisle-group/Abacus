@@ -5,6 +5,6 @@
      f←t A.GetElementByClass'FindAndReplace'
      p←f.Parent
      h←f A.HasClass'hidden'
-     _←p A.Panels.ReArrange h⊃(⍉⍪)¨0(0 0 0 1)
+     _←p A.Panels.ReArrange h⊃(⍉⍪)¨1(1 1 1 2)
      A.FireResize d
  }

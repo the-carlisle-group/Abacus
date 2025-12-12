@@ -1,13 +1,14 @@
  New←{
      ⍺←0
-     d←(⍺ A.New'div')⎕NS(
-         'Name' ''
+     (p n)←A.DefaultParentAndName ⍺
+     d←(p A.New'div')⎕NS(
          'Label' ''
          'Value' ''
          'Options' ''
          'OnChange' ''
          'Disabled' 0
      )A.Default ⍵
+     d.Name←n
      d.class←'DropList'
      l←d A.New'label'd.Label
      l.for←d.Name

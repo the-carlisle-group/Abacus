@@ -1,6 +1,6 @@
  FindAll←{
      d←⍵
-     p←A.GetComponentValues d
+     p←()⎕VSET A.GetComponentValues d
      g←d.DataGrid
      t←g.Table
      s←g.Table.Selection

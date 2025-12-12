@@ -4,32 +4,31 @@
      ⍝ f←'c:/DataSets/IMDd/title.akas.tsv'
      ⍝ f←'c:/DataSets/IMDd/title.basics.tsv'
      d←⍵.Document
-     c←A.FileInput.New'FileName' 'File name:'f
-
-     c,←fs←A.FieldSet.New'File settings' 'inline' 1
-     fs.Content,←A.DropList.New'Delimiter' 'Delimiter:' 'Comma'('Comma' 'Pipe' 'Tab')
-     fs.Content,←A.DropList.New'TextQualifier' 'Text qualifier:' 'None'('None' 'Quote' 'DoubleQuote')
-     fs.Content,←A.DropList.New'Encoding' 'Encoding:'('Options'('UTF-8' 'UTF-16LE' 'UTF-16BE' 'UTF-16' 'UTF-32LE' 'UTF-32BE' 'UTF-32' 'ASCII' 'ANSI' ''))
-
-     c,←fs2←A.FieldSet.New'Limits' 'inline' 1
-     fs2.Content,←A.NumberInput.New'RowLimit' 'Row limit:' 0 'I6'
-     fs2.Content,←A.NumberInput.New'ColumnLimit' 'Column limit:' 0 'CI16'
-     fs2.Content,←A.NumberInput.New'MaxColumnWidth' 'Max column width:' 16 'CI16'
-     fs2.Content,←A.NumberInput.New'BlockSize' 'Block size:' 128000 'CI16'
-
-     c,←fs3←A.FieldSet.New'Options' 'inline' 1
-     fs3.Content,←A.CheckBox.New'ReadOnly' 'Open read only' 1(A.FQP'OnReadOnlyChange')
-     fs3.Content,←A.CheckBox.New'InsertRows' 'Allow row insert and delete' 0(A.FQP'OnInsertRowsChange')
-     l←[0 0
-         1 2
-         3 3
-     ]
-     q←A.Panels.New c l('AutoSize' 1)('Gap' '1rem')
+     ⍝ *************************************
+     FileName←A.FileInput.New'File name:'f
+     ⍝ *************************************
+     AllOptions←A.Flex.New''
+     ⍝ *************************************
+     FileSettings←AllOptions A.FieldSet.New('Legend' 'File settings')('Format' 'inline')
+     Delimiter←FileSettings A.DropList.New'Delimiter:' 'Comma'('Comma' 'Pipe' 'Tab')
+     TextQualifier←FileSettings A.DropList.New'Text qualifier:' 'None'('None' 'Quote' 'DoubleQuote')
+     Encoding←FileSettings A.DropList.New'Encoding:'('Options'('UTF-8' 'UTF-16LE' 'UTF-16BE' 'UTF-16' 'UTF-32LE' 'UTF-32BE' 'UTF-32' 'ASCII' 'ANSI' ''))
+     ⍝ *************************************
+     Limits←AllOptions A.FieldSet.New('Legend' 'Limits')('Format' 'inline')
+     RowLimit←Limits A.NumberInput.New'RowLimit' 'Row limit:' 0 'I6'
+     ColumnLimit←Limits A.NumberInput.New'ColumnLimit' 'Column limit:' 0 'CI16'
+     MaxColumnWidth←Limits A.NumberInput.New'MaxColumnWidth' 'Max column width:' 16 'CI16'
+     BlockSize←Limits A.NumberInput.New'BlockSize' 'Block size:' 128000 'CI16'
+     ⍝ *************************************
+     Options←AllOptions A.FieldSet.New('Legend' 'Options')('Format' 'inline')
+     ReadOnly←Options A.CheckBox.New'Open read only' 1(A.FQP'OnReadOnlyChange')
+     InsertRows←Options A.CheckBox.New'Allow row insert and delete' 0(A.FQP'OnInsertRowsChange')
+     ⍝ *************************************
      p←⎕NS''
      p.Title←'Open'
      p.Buttons←'Open' 'Cancel'
-     p.BodyContent←q
-     p.Width←'45rem'
+     p.BodyContent←FileName AllOptions
+     p.Width←'60rem'
      p.OnClick←(A.FQP'OnFileOpenOK')(A.FQP'OnFileOpenCancel')
      b←A.DialogBox.New p
      d A.ShowModal b

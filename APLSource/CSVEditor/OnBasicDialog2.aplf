@@ -1,10 +1,10 @@
  OnBasicDialog2←{
      d←⍵.Document
-     s←A.FieldSet.New⊂'Format' 'inline'
-     i←s A.TextInput.New'TextInput' 'Text input:'
-     i←s A.NumberInput.New'NumericInput' 'Numeric input:' 256 'CI15'
-     i←s A.DateInput.New'DateInput' 'Date input:' 20261231
-     i←s A.DropList.New'DropListInput' 'Drop list input:' ''('Comma' 'Pipe' 'Tab')
+     s←A.FieldSet.New('Format' 'inline')('Border' 0)
+     TextInput←s A.TextInput.New'Text input:'
+     NumericInput←s A.NumberInput.New'Numeric input:' 256 'CI15'
+     DateInput←s A.DateInput.New'Date input:' 20261231
+     DropListInput←s A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')
      _←d.FileSettings A.InitValues s
      p←⎕NS''
      p.Title←'Basic Dialog Box 2'

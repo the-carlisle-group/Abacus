@@ -1,5 +1,5 @@
  OnFileOpenOK←{
-     p←A.GetComponentValues ⍵.DialogBox
+     p←()⎕VSET A.GetComponentValues ⍵.DialogBox
      f←##.CSVEditorTests.GetFileName p.FileName
      f~←'"'
      (('\'=f)/f)←'/'

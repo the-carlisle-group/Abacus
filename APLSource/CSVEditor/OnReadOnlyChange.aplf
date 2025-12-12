@@ -1,5 +1,6 @@
  OnReadOnlyChange←{
      b←⍵.CurrentTarget
      ~b.Value:0
-     b.Parent A.SetComponentValue'InsertRows' 0
+     c←b.Parent A.GetComponent'InsertRows'
+     c A.SetComponentValue 0
  }

@@ -33,8 +33,8 @@
      g.Table.RowNumbers←1
      g.Table.ReadOnly←p.ReadOnly
      g.Table.InsertRows←p.InsertRows
-     s←A.FindAndReplace.New,g
-     pn←A.Panels.New(g s)([0 ⋄ ])('Resizeable' 1) ⍝ ('Padding' '.5rem')('Gap' '.5rem')
+     s←A.FindAndReplace.New⊂'DataGrid'g
+     pn←A.Panels.New(g s)([1 ⋄ ])('Resizeable' 1) ⍝ ('Padding' '.5rem')('Gap' '.5rem')
 
 
      pn.FileName←fn

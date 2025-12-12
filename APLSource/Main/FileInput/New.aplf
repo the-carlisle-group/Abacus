@@ -1,12 +1,12 @@
  New←{
      ⍺←0
+     (p n)←A.DefaultParentAndName ⍺
      w←(
-         'Name' ''
          'Label' ''
          'Value' ''
          'OnChange' ''
      )A.Default ⍵
      w.PickerCaption←'Browse...'
      w.OnPicker←A.FQP'OnPicker'
-     ⍺ A.TextInput.New w
+     p n A.TextInput.New w
  }

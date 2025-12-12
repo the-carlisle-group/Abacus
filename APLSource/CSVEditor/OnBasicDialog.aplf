@@ -1,12 +1,12 @@
  OnBasicDialog←{
      d←⍵.Document
-     s←A.FieldSet.New''
-     i←s A.FileInput.New'FileInput' 'File input:'
-     i←s A.TextInput.New'TextInput' 'Text input:'
-     i←s A.NumberInput.New'NumericInput' 'Numeric input:' 256 'CI15'
-     i←s A.DateInput.New'DateInput' 'Date input:' 20261231
-     i←s A.DropList.New'DropListInput' 'Drop list input:' ''('Comma' 'Pipe' 'Tab')
-     i←s A.CheckBox.New'Checkbox' 'Check box input'
+     s←A.FieldSet.New⊂'Border' 0
+     FileInput←s A.FileInput.New'File input:'
+     TextInput←s A.TextInput.New'Text input:'
+     NumericInput←s A.NumberInput.New'Numeric input:' 256 'CI15'
+     DateInput←s A.DateInput.New'Date input:' 20261231
+     DropListInput←s A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')
+     Checkbox←s A.CheckBox.New'Check box input'
      _←d.FileSettings A.InitValues s
      p←⎕NS''
      p.Title←'Basic Dialog Component'

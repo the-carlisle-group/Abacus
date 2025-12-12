@@ -7,8 +7,8 @@
          'OnCancel' ''
          'Width' '30rem'
      )A.Default ⍵
-     c←A.TextInput.New'PromptBox'w.Label w.Value
-     w.BodyContent←c
+     PromptBox←A.TextInput.New w.Label w.Value
+     w.BodyContent←PromptBox
      w.OnClick←A.FQP¨'OnOK' 'OnCancel'
      w.OnClose←A.FQP'OnCancel'
      A.DialogBox.New w
