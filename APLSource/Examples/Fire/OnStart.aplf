@@ -1,0 +1,6 @@
+ OnStart←{
+     ⎕←'Starting Fire!'
+     d←⍵
+     _←A.SetFocus d A.GetComponent'SearchFor'
+     0
+ }

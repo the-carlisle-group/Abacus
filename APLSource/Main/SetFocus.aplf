@@ -1,4 +1,13 @@
  SetFocus←{
-     ⍝ ⍵ ←→ Element
-     ⍵ ExecuteOnElement'focus()'
+     ⍝ ⍺|⍵ ←→ Element/Component
+     ⍺←⍵
+     l←'input' 'textarea' 'select' 'button'
+     b←⍺.Tag⊂⍛∊l
+     t←0 '0'∊⍨⍺ ⎕VGET⊂'tabindex'⎕NULL
+     b∨t:⍺ ExecuteOnElement'focus()'
+     e←Elements ⍺
+     0=≢e:0
+     f←(e.Tag∊l)/e
+     0=≢f:0
+     (⊃f)ExecuteOnElement'focus()'
  }

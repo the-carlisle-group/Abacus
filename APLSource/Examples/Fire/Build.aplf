@@ -1,4 +1,4 @@
- FireUI←{
+ Build←{
      _←#.Abacus.Main.Init 0
      ⎕THIS.A←#.Abacus.Main
      d←A.NewDocument''
@@ -40,5 +40,5 @@
      ⍝ **************************
      Results←Main A.DataGrid.New''
      ⍝ ****************************
-     A.StartDesktopApplication d
+     d
  }

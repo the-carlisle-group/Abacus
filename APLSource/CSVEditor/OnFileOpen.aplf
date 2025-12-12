@@ -15,10 +15,10 @@
      Encoding←FileSettings A.DropList.New'Encoding:'('Options'('UTF-8' 'UTF-16LE' 'UTF-16BE' 'UTF-16' 'UTF-32LE' 'UTF-32BE' 'UTF-32' 'ASCII' 'ANSI' ''))
      ⍝ *************************************
      Limits←AllOptions A.FieldSet.New('Legend' 'Limits')('Format' 'inline')
-     RowLimit←Limits A.NumberInput.New'RowLimit' 'Row limit:' 0 'I6'
-     ColumnLimit←Limits A.NumberInput.New'ColumnLimit' 'Column limit:' 0 'CI16'
-     MaxColumnWidth←Limits A.NumberInput.New'MaxColumnWidth' 'Max column width:' 16 'CI16'
-     BlockSize←Limits A.NumberInput.New'BlockSize' 'Block size:' 128000 'CI16'
+     RowLimit←Limits A.NumberInput.New'Row limit:' 0 'I6'
+     ColumnLimit←Limits A.NumberInput.New'Column limit:' 0 'CI16'
+     MaxColumnWidth←Limits A.NumberInput.New'Max column width:' 16 'CI16'
+     BlockSize←Limits A.NumberInput.New'Block size:' 128000 'CI16'
      ⍝ *************************************
      Options←AllOptions A.FieldSet.New('Legend' 'Options')('Format' 'inline')
      ReadOnly←Options A.CheckBox.New'Open read only' 1(A.FQP'OnReadOnlyChange')

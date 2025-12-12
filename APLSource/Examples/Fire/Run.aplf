@@ -1,0 +1,9 @@
+ Run←{
+     ⎕THIS.A←#.Abacus.Main
+     a←A.NewApplication''
+     a.BuildFunction←A.FQP'Build'
+     a.StartupFunction←A.FQP'OnStart'
+     ⍝ A.OnBuild←A.FQP 'Build'
+     ⍝ A.OnStart←A.FQP←'OnStart'
+     a A.StartDesktopApplication 0
+ }
