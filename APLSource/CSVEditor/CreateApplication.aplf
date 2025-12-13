@@ -3,6 +3,6 @@
      a.Name←'Abacus CSV Editor'
      a.OnBuild←'#.Abacus.CSVEditor.Build'
      a.OnStart←'#.Abacus.CSVEditor.Startup'
-     a.OnClose←'#.Abacus.CSVEditor.Close'
+     a.OnBeforeClose←'#.Abacus.CSVEditor.Close'
      a
  }

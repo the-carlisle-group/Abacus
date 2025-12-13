@@ -6,7 +6,7 @@
      a.Sessions←⍬
      a.OnBuild←''
      a.OnStart←''
-     a.OnClose←''
+     a.OnBeforeClose←''
      a.HTMLRendererProperties←DefaultHRProperties 0
      a
  }
