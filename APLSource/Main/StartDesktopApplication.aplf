@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Application object
      ⍝ ⍵ ←→ 0|Document
      ⍺←NewApplication''
-     d←⍺{0=⍵:(⍎⍺.BuildFunction)0 ⋄ ⍵}⍵
+     d←⍺{0=⍵:(⍎⍺.OnBuild)0 ⋄ ⍵}⍵
      d.Caption←⍺.Name
      d⊣⍺ NewForm d
  }

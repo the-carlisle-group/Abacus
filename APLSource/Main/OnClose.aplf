@@ -5,7 +5,7 @@
      m←d GetElementsByClass'DialogBox'
      0<≢m:0
      a←d.Application
-     f←a.CloseFunction
+     f←a.OnClose
      0=≢f:1⊣CloseApp h
      r←(⍎f)d
      r:0

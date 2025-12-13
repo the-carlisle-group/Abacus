@@ -1,8 +1,8 @@
  CreateApplication←{
      a←A.NewApplication 0
      a.Name←'Abacus CSV Editor'
-     a.BuildFunction←'#.Abacus.CSVEditor.Build'
-     a.StartupFunction←'#.Abacus.CSVEditor.Startup'
-     a.CloseFunction←'#.Abacus.CSVEditor.Close'
+     a.OnBuild←'#.Abacus.CSVEditor.Build'
+     a.OnStart←'#.Abacus.CSVEditor.Startup'
+     a.OnClose←'#.Abacus.CSVEditor.Close'
      a
  }
