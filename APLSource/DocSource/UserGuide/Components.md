@@ -75,3 +75,32 @@ Inline styles can be added to components, just like basic HTML elements:
   <label for="MyCheckBox">Check here</label>                                
 </div>
 ~~~
+
+## Events
+
+Components may raise events. For each event, the component
+will have a corresonding `On[Eventt]` property for 
+specifying an event  callback function. For example, the DataGrid
+component has a [BeforeCellChange]() event, and thus a corresponding
+`OnBeforeCellChange` property. Only the event is documented.
+
+The right argument provided to the event handler is a namespace containing
+at least three items:
+
+|Name      |Value|
+|:==========|:=====|
+|Event     | The event name, e.g. 'BeforeCellChange`|  
+|Component | The component that fired the event     |
+|Document  | The associated document                |
+
+There will typically be more event-specific items in the event message space. 
+
+If an event name begins with `Before`, then, depending on the specific event,
+it may be altered or prevented. A callback function should return a 0 for normal
+event processing, and a `1` to cancel the event. To the extent the specific 
+event allows it, the event may be altered by having the callback function
+reset certain veriables in the event message space. 
+
+
+
+

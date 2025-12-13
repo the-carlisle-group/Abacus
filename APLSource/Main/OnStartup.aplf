@@ -2,6 +2,7 @@
      d←⍵
      a←d.Application
      0=≢a.OnStart:0
-     (⍎a.OnStart)d
-     0
+     e←(Event:'Start')
+     e.Document←⍵
+     (⍎a.OnStart)e
  }

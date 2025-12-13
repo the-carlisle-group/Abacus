@@ -1,5 +1,4 @@
- OnClose←{
-     OBSOLETE
+ OnBeforeClose←{
      ⍝ OnClose of HTMLRenderer created here: NewForm
      h←0⊃⍵
      d←h.Document
@@ -8,7 +7,9 @@
      a←d.Application
      f←a.OnClose
      0=≢f:1⊣CloseApp h
-     r←(⍎f)d
+     e←(Event:'BeforeClose')
+     e.Document←d
+     r←(⍎f)e
      r:0
      1⊣CloseApp h
  }
