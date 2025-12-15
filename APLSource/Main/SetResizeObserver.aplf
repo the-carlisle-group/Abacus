@@ -1,0 +1,9 @@
+ SetResizeObserver←{
+     ⍝ ⍺ ←→ Document
+     ⍝ DOM Element(s)
+     e←∊Elements¨⍵
+     f←e ⎕VGET⊂'OnResize' ''
+     v←(~f∊⊂'')/e
+     0=≢v:0
+     ⍺{⍺ ExecuteJavaScript'resizeObserver.observe(document.getElementById("',⍵,'"))'}¨v.id
+ }

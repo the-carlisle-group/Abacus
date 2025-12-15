@@ -1,4 +1,6 @@
  SetValue←{
      ⍺.Table.Columns←⍵
-     ⍺ Resize 1
+     _←Init ⍺
+     0 0≡⍺.(Width Height):0
+     ⍺ Resize 0
  }

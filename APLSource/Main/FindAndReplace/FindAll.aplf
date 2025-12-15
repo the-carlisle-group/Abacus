@@ -31,9 +31,12 @@
      c[(~d.SearchAxis)⌽⍳2]←c[⍳2]
      ⍝ rg←⊃d A.GetElementsByClass'data-grid'      ⍝ Result grid on dialog box
      rg.Table.RowNumbers←1
-     rg.Table.Columns←c
-     _←A.DataGrid.Init rg
-     _←rg A.DataGrid.Resize 0
-     _←rg A.SetStyle'display' 'grid'
+     _←rg A.DataGrid.SetValue c
+
+     ⍝ rg.Table.Columns←c
+     ⍝ _←A.DataGrid.Init rg
+     ⍝ _←rg A.DataGrid.Resize 0
+
+     _←rg A.SetStyle'display' 'grid'  ⍝ ?????
      0
  }

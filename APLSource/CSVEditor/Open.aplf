@@ -53,5 +53,6 @@
      bc←A.New¨{'span'⍵}¨sn fd  ⍝ Tab button content
      bc.class←'shortname' 'dimensions'
      _←t A.Tabs.Add bc pn
-     A.FireResize d
+     g A.DataGrid.SetValue cc
+     ⍝ A.FireResize d
  }

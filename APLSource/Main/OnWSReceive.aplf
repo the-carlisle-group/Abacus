@@ -5,7 +5,6 @@
      c←⍵
      c.Event≡'SJSR':c.result ⎕TPUT c.id
      c.Document←d
-     c.Event≡'resize':OnWindowResize c
      c.CurrentTargetId≡'':0        ⍝ How does this happen?
      c.CurrentTarget←d GetElementById c.CurrentTargetId
      c.Target←d{⍵≡'':0 ⋄ 6::0 ⋄ ⍺ GetElementById ⍵}c.TargetId

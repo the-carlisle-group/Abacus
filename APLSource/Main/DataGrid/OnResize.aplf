@@ -1,10 +1,8 @@
  OnResize←{
-     d←⍺.Document
-     e←d A.ElementsWhere'id'⍵.Id
-     0=≢e:0
-     g←⊃e
-     0 0≡⍵.(Width Height):0
-     ⍝ ¯20 for scroll bars
-     g.(Width Height)←¯20+⍵.Width ⍵.Height
+     ⍝ ⍵ ←→ Event message space
+     g←⍵.CurrentTarget
+     0 0≡⍵.(Width Height):0                ⍝ Not visible
+     g.(Width Height)←¯20+⍵.Width ⍵.Height ⍝ ¯20 for scroll bars
+     g.Table.Init=0:0
      g Resize 0
  }

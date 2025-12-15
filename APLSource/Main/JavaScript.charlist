@@ -12,17 +12,17 @@ function APLInit(){
    ws.onmessage = function(evt) { onMessage(evt) };
    ws.onerror = function(evt) { onError(evt) };
    
-   window.addEventListener ("resize",debounce((event) => sendAPLResize(event)));
+   // ****** window.addEventListener ("resize",debounce((event) => sendAPLResize(event)));
       
  }
  
-function  debounce (func, timeout = 100){
-          let timer;
-          return (...args) => {
-          clearTimeout(timer);
-          timer = setTimeout(()=>{func.apply(this,args);},timeout);
-          };
-}
+//function  debounce (func, timeout = 100){
+//          let timer;
+//          return (...args) => {
+//          clearTimeout(timer);
+//          timer = setTimeout(()=>{func.apply(this,args);},timeout);
+//          };
+//}
 
 function onClose(evt){
          console.log(evt);
@@ -34,7 +34,6 @@ function onError(evt){
 
 // window.onload = APLInit;
 window.onload = setTimeout(APLInit,500);
-
 
 function onOpen(evt){
          // ws.send ('{"Event": "WSOpen", "SessionID": sessionID}');
@@ -52,22 +51,49 @@ function execCode(id,code) {
          ws.send (m)
 }
 
-function sendAPLResize(e){
-       var b = {Event: e.type,
-                  DataGrids: [] };
-       const dg = Array.from (document.getElementsByClassName ('DataGrid'));
+//function sendAPLResize(e){
+//       var b = {Event: e.type,
+//                  DataGrids: [] };
+//       const dg = Array.from (document.getElementsByClassName ('DataGrid'));
+//
+//            dg.forEach ((x)=>{
+//            b.DataGrids.push ({
+//               Id:x.id,
+//               Height:x.clientHeight, 
+//               Width:x.clientWidth,
+//                })
+//            })
+//
+//      const m = JSON.stringify(b); 
+//      ws.send (m)
+//}
 
-            dg.forEach ((x)=>{
-            b.DataGrids.push ({
-               Id:x.id,
-               Height:x.clientHeight, 
-               Width:x.clientWidth,
-                })
-            })
+// Create a single ResizeObserver (efficient for multiple elements)
+const resizeObserver = new ResizeObserver(entries => {
 
-      const m = JSON.stringify(b); 
-      ws.send (m)
-}
+if (resizeObserver.timeoutId) {
+    clearTimeout(resizeObserver.timeoutId);
+  }
+   
+  
+  // Set new timeout (e.g., 100–200ms is good for most UI work)
+  resizeObserver.timeoutId = setTimeout(() => {
+  // This runs only after 150ms of no new resize events
+
+  for (const entry of entries) {
+       const e = entry.target;
+       const b = {Event: "Resize",
+                  TargetId: e.id, 
+                  CurrentTargetId: e.id, 
+                  Height: e.clientHeight,
+                  Width: e.clientWidth}; 
+       const m = JSON.stringify(b); 
+       ws.send (m)
+  }
+    // Clean up
+    resizeObserver.timeoutId = null;
+  }, 150);
+});
 
 function sendAPLRequest(e){
       // const ce=[e.currentTarget.className,e.currentTarget.tagName,e.type,e.key].join();

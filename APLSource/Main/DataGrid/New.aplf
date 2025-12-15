@@ -16,6 +16,8 @@
          'ColumnIndices'⍬
      )A.Default ⍵
      g←⍺ A.New'div'
+     g.(Width Height)←0
+     g.OnResize←A.FQP'OnResize'
      g.class←⊃⌽'.'(≠⊆⊢)⍕⎕THIS
      g.Class←⎕THIS
      g.Table←w ⎕NS⍨g NewTable''

@@ -1,12 +1,8 @@
  Resize←{
-     ⍝ ⍵ ←→ 0, use value of t.Init
-     ⍝ ⍵ ←→ 1, Force Init
      g←⍺
+
      t←g.Table
-     r←Init⍣(⍵∨~t.Init)⊣g
-     r=1:0
-     p←t.Parent
-     0=p.⎕NC'Width':0
+     p←t.Parent     ⍝ That's g!
      t.AvailableWidth←p.Width-+/t.FixedColumns↑t.Widths
      t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.RowNumbers↓t.Widths
      0∊t.ColumnsPerIndex:0
