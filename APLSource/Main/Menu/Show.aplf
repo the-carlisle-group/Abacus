@@ -2,5 +2,11 @@
      ⍝ ⍺ ←→ Event Message
      ⍝ ⍵ ←→ Menu Component
      _←⍺ Init ⍵
-     ⍵ ShowMenu ⍺.CurrentTarget    ⍝ Target or CUrrent Target!?
+     ⍝ For a drop down menu  button it needs to be CurrentTarget
+     ⍝     See NewDropDown
+     ⍝         OnClickDropDown
+     ⍝ For the DataGrid context menu it need to be Target
+     ⍝      #.Abacus.Main.DataGrid.OnContextMenu
+     ⍝ RESOLVE THIS PROBLEM!
+     ⍵ ShowMenu ⍺.Target   ⍝ Target or CUrrent Target!?
  }
