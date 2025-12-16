@@ -3,6 +3,6 @@
      g←⍵.CurrentTarget
      0 0≡⍵.(Width Height):0                ⍝ Not visible
      g.(Width Height)←¯20+⍵.Width ⍵.Height ⍝ ¯20 for scroll bars
-     g.Table.Init=0:0
+     _←1 Init g
      g Resize 0
  }

@@ -1,6 +1,5 @@
  Resize←{
      g←⍺
-
      t←g.Table
      p←t.Parent     ⍝ That's g!
      t.AvailableWidth←p.Width-+/t.FixedColumns↑t.Widths

@@ -28,15 +28,14 @@
      cc.Type←⊂'Char'
      cc.Options←⊂''
      ⍝ New tab content
-     g←A.DataGrid.New''
-     g.Table.Columns←cc
-     g.Table.RowNumbers←1
-     g.Table.ReadOnly←p.ReadOnly
-     g.Table.InsertRows←p.InsertRows
+     g←A.DataGrid.New(
+         'Columns'cc
+         'RowNumbers' 1
+         'ReadOnly'p.ReadOnly
+         'InsertRows'p.InsertRows
+     )
      s←A.FindAndReplace.New⊂'DataGrid'g
      pn←A.Panels.New(g s)([1 ⋄ ])('Resizeable' 1) ⍝ ('Padding' '.5rem')('Gap' '.5rem')
-
-
      pn.FileName←fn
 
 
@@ -53,6 +52,7 @@
      bc←A.New¨{'span'⍵}¨sn fd  ⍝ Tab button content
      bc.class←'shortname' 'dimensions'
      _←t A.Tabs.Add bc pn
-     g A.DataGrid.SetValue cc
-     ⍝ A.FireResize d
+
+     0
+
  }
