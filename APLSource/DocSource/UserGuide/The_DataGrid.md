@@ -38,12 +38,18 @@ We can try this out with:
 The `Columns` property is the only DataGrid property that must be supplied by the programmer.
 All other properties have a default value.   
 
-All of DataGridColumn properties are optional, but either the [Type]() or [Value]() property
+All of the DataGridColumn properties are optional, but either the [Type]() or [Value]() property
 must be specified. If no types are defined, they are inferred from the values, and if no values
 are supplied then they default to empty columns.  If both are supplied they must be in agreement.
 It is good practive to explicilty define your types.
 
+When resetting the `Columns` property, the [SetComponentValue]() method should be used:
 
+~~~
+      g A.SetComponentValue c
+~~~
+
+This sets the `Columns` property and reinitializes the grid.
 
 ## Column Types
 
@@ -73,7 +79,7 @@ is 'CI20.2'
 Decimal values are provided as a simple integer vector with an implied decimal.
 The [FormatString]()property controls how the values are displayed. The default
 string for Dec3 is `F20.3`, and thus the value `6785` is displayed as `6.785`. 
-  
+
 ### Float
 
 Float values are provided as a simple vector. The [FormatString]() property
