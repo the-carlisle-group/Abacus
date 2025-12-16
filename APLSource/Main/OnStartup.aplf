@@ -1,6 +1,7 @@
  OnStartup←{
      d←⍵
      a←d.Application
+     _←SetResizeObserver⍨d
      0=≢a.OnStart:0
      e←(Event:'Start')
      e.Document←⍵

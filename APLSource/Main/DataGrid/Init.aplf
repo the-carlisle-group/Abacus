@@ -36,10 +36,6 @@
      t.ColumnClass←((t.RowNumbers/'r'),t.Columns.Class),¨' ',¨'a',¨(t.RowNumbers/'r'),t.Columns.Align
      t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight
      t.WindowPadding←3 5
-     ⍝ t.Init=1:0
-     ⍝ WE MIGHT NEED THIS HERE TO IF GRID IS CREATED
-     ⍝ AT INITIAL DESIGN TIME. NO HARM DOING TWICE?
-     ⍝ _←g.Document A.ExecuteJavaScript'resizeObserver.observe(document.getElementById("',g.id,'"))'
      t.Init←1
      0
  }
