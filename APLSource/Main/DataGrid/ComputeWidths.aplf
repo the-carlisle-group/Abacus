@@ -2,7 +2,7 @@
      ⍝ This needs major work
      ⍝ Also, allow explicity setting width in Column space
      t←⍺
-     r←t.RowNumbers/4+2×1<≢t.HeaderValues
+     r←4+2×1<≢⊃t.Columns.HeaderValues
      c←r,12⌈1⊃¨2↑¨⍴¨t.Columns.Value
      c×t.FontSize
  }

@@ -1,13 +1,15 @@
  RenameColumn←{
      t←⍵
+     t.ReadOnly:0
      HandleInput t:0
-     ~t.InsertColumns:0
-     c←1⊃t.ActiveCell
+     ~t.RenameColumns:0
+     c←(1⊃t.ActiveCell)⊃t.Columns
+     ~c.CanRename:0
      p←⎕NS''
      p.Title←'Rename column'
      p.Label←'Rename to:'
      p.OnOK←##.FQP'OnRenameColumnOK'
-     p.Value←c⊃t.Columns.Name
+     p.Value←c.Name
      p.DataGrid←t.Parent
      t.Document A.PromptBox.Show p
  }

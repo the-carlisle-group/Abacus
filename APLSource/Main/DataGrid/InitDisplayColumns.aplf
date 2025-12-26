@@ -1,0 +1,11 @@
+ InitDisplayColumns←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ List of column names
+     t←⍺.Table
+     l←⊆⍵
+     n←t.Columns.Name
+     t.DisplayColumns←l
+     i←(n⍳l)~≢n
+     t.ColumnIndices←(0=≢i)⊃i(⍳≢n)
+     0
+ }

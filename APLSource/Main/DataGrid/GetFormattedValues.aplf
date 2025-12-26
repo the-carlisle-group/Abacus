@@ -1,6 +1,7 @@
  GetFormattedValues←{
      i k oi←⍵
-     c←⍺.Columns[k]
+     a←⍺.Columns[⍺.ColumnIndices]
+     c←a[k]
      v←(⊂⊂i)⌷¨c.Value
      v←⍉↑c FormatColumn¨v
      ~⍺.RowNumbers:v

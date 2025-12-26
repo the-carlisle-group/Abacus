@@ -1,5 +1,6 @@
  InsertRow←{
      t←⍵
+     t.ReadOnly:0
      ~t.InsertRows:0
      HandleInput t:0
      i j←t.ActiveCell

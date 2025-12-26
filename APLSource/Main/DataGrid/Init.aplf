@@ -5,34 +5,32 @@
      ⍺∧t.Init:1
      0=≢t.Columns:1
      t.Columns←DefaultColumnProperties t
-     t.ColumnIndices←(0=≢t.ColumnIndices)⊃t.ColumnIndices(⍳≢t.Columns)
-     t.RowMask←(t.RowMask≡1)⊃t.RowMask((≢(0⊃t.Columns).Value)⍴1)
-     ⍝ Same code in OnFilterOK
-     t.RowIndices←⍸t.RowMask∧⊃∧/t.Columns.FilterMask
-     t.RowIndices←t ReSort t.RowIndices
-     ⍝ ↑↑↑↑↑
-     t.AllColumns←t.Columns
-     t.Columns←t.AllColumns[t.ColumnIndices]
-     t.HeaderValues←⍉↑,¨⊆¨t.Columns.HeaderValues
-     t.HeaderRowCount←≢t.HeaderValues
+     c←t.Columns
+     r←(Align:'r' ⋄ Class:'r' ⋄ SortDirection:0)    ⍝ For row numbers
+     t.RowNumberColumn←r
+     a←r,c   ⍝ All columns, inlcuding row numbers
+     _←g InitDisplayColumns t.DisplayColumns
+     _←g InitRowMask t.RowMask
+     c.HeaderValues←↓↑,¨⊆¨c.HeaderValues  ⍝ V of V, same length
+     t.HeaderRowCount←≢⊃c.HeaderValues
      t.HeaderRowTitles←{⍵↑⊆t.HeaderRowTitles,⍵⍴⊂''}t.HeaderRowCount
      t.HeaderReadOnly←{⍵↑t.HeaderReadOnly,⍵⍴1}t.HeaderRowCount
      ⍝ For now: Total header height....
-     t.HeaderHeight←(≢t.HeaderValues)×3×t.FontSize ⍝ Number of header rows ...
+     t.HeaderHeight←t.HeaderRowCount×3×t.FontSize ⍝ Number of header rows ...
      t.RowHeight←2×t.FontSize
      _←g ##.SetDynamicCSS DynamicCSS t
-     t.DataSize←(≢t.RowIndices),≢t.Columns
-     t.Columns.MaxLength←1⊃¨2↑¨⍴¨t.Columns.Value
-     t.Widths←t ComputeWidths 0
-     t.ColumnTitles←(t.RowNumbers/t.HeaderRowTitles),t.HeaderValues ⍝
+     t.DataSize←≢¨t.RowIndices t.ColumnIndices
+     c.MaxLength←1⊃¨2↑¨⍴¨c.Value
+     a.Width←t ComputeWidths 0
+     a.ColumnTitle←(t.HeaderRowTitles),c.HeaderValues
      t.FixedColumns←t.RowNumbers+t.FreezeColumns
      t.WindowIndex←0,t.FreezeColumns
      t.ActiveCell←0 0
      t.Selection←2⍴⊂t.ActiveCell
-     t.HeaderStyles←ComputeHeaderStyles t
-     t.HeaderClass←ComputeHeaderClass t
-     t.ColumnClass←((t.RowNumbers/'r'),t.Columns.Class),¨' ',¨'a',¨(t.RowNumbers/'r'),t.Columns.Align
-     t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight
+     a.HeaderStyle←ComputeHeaderStyles a
+     a.HeaderClass←ComputeHeaderClass a
+     a.ColumnClass←(a.Class),¨' ',¨'a',¨a.Align
+     t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight ⍝ Move into a (column spaces)
      t.WindowPadding←3 5
      t.Init←1
      0

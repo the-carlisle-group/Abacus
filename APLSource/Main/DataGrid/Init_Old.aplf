@@ -1,0 +1,39 @@
+ Init_Old←{
+     ⍺←0
+     g←⍵
+     t←g.Table
+     ⍺∧t.Init:1
+     0=≢t.Columns:1
+     t.Columns←DefaultColumnProperties t
+     t.ColumnIndices←(0=≢t.ColumnIndices)⊃t.ColumnIndices(⍳≢t.Columns)
+     t.RowMask←(t.RowMask≡1)⊃t.RowMask((≢(0⊃t.Columns).Value)⍴1)
+     ⍝ Same code in OnFilterOK
+     t.RowIndices←⍸t.RowMask∧⊃∧/t.Columns.FilterMask
+     t.RowIndices←t ReSort t.RowIndices
+     ⍝ ↑↑↑↑↑
+     ⍝ t.AllColumns←t.Columns
+     ⍝ t.Columns←t.AllColumns[t.ColumnIndices]
+     t.HeaderValues←⍉↑,¨⊆¨t.Columns.HeaderValues
+     t.HeaderRowCount←≢t.HeaderValues
+     t.HeaderRowTitles←{⍵↑⊆t.HeaderRowTitles,⍵⍴⊂''}t.HeaderRowCount
+     t.HeaderReadOnly←{⍵↑t.HeaderReadOnly,⍵⍴1}t.HeaderRowCount
+     ⍝ For now: Total header height....
+     t.HeaderHeight←(≢t.HeaderValues)×3×t.FontSize ⍝ Number of header rows ...
+     t.RowHeight←2×t.FontSize
+     _←g ##.SetDynamicCSS DynamicCSS t
+     t.DataSize←(≢t.RowIndices),≢t.Columns
+     t.Columns.MaxLength←1⊃¨2↑¨⍴¨t.Columns.Value
+     t.Widths←t ComputeWidths 0
+     t.ColumnTitles←(t.RowNumbers/t.HeaderRowTitles),t.HeaderValues ⍝
+     t.FixedColumns←t.RowNumbers+t.FreezeColumns
+     t.WindowIndex←0,t.FreezeColumns
+     t.ActiveCell←0 0
+     t.Selection←2⍴⊂t.ActiveCell
+     t.HeaderStyles←ComputeHeaderStyles t
+     t.HeaderClass←ComputeHeaderClass t
+     t.ColumnClass←((t.RowNumbers/'r'),t.Columns.Class),¨' ',¨'a',¨(t.RowNumbers/'r'),t.Columns.Align
+     t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight
+     t.WindowPadding←3 5
+     t.Init←1
+     0
+ }

@@ -32,7 +32,6 @@
          'Columns'cc
          'RowNumbers' 1
          'ReadOnly'p.ReadOnly
-         'InsertRows'p.InsertRows
      )
      s←A.FindAndReplace.New⊂'DataGrid'g
      pn←A.Panels.New(g s)([1 ⋄ ])('Resizeable' 1) ⍝ ('Padding' '.5rem')('Gap' '.5rem')

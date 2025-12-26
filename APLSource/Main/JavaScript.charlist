@@ -103,6 +103,19 @@ function sendAPLRequest(e){
       if (pd){
                 e.preventDefault();
        }     
+      
+      
+      //if (e.type === 'keydown') {
+      //   if (e.key === 'S') && (e.ctrlKey || e.metaKey)) {
+      //      e.preventDefault();
+      //   }
+      //}
+  
+
+      
+      
+           
+      
       const r = e.target.getBoundingClientRect();
       const q = e.currentTarget.getBoundingClientRect();
       const s = window.getComputedStyle(e.target);

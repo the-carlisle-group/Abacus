@@ -5,15 +5,28 @@
          'Columns'⍬
          'RowNumbers' 1
          'ReadOnly' 0
+         ⍝ Only Applicable if ReadOnly←0
          'InsertRows' 1
-         'InsertColumns' 0
-         'FreezeColumns' 0
-         'RowMinimum' 0
+         'DeleteRows' 1
+         'InsertColumns' 1
+         'DeleteColumns' 1
+         'MoveRows' 1
+         'MoveColumns' 1
+         'RenameColumns' 1
+         'RowMinimum' 10        ⍝ Non negative integer
+         'CustomColumnInserts'⍬
+         ⍝ Only Applicable if ReadOnly←1
+         'FilterRows' 1
+         'SortRows' 1
+         'FilterColumns' 1
+         'SortColumns' 1        ⍝ Boolean
+         'RowMask' 1
+         'DisplayColumns' ''
+         ⍝ Always applicable:
+         'FreezeColumns' 0      ⍝ Non negative integer
          'HeaderRowTitles' ''
          'HeaderReadOnly' 1
          'CustomColumnInserts'⍬
-         'RowMask' 1
-         'ColumnIndices'⍬
      )A.Default ⍵
      g←⍺ A.New'div'
      g.(Width Height)←0

@@ -1,1 +1,14 @@
- InsertColumn
+ InsertColumn←{
+     t←⍵
+     t.ReadOnly:0
+     ~t.InsertColumns:0
+     i←1⊃t.ActiveCell
+     c←⎕NS i⊃t.Columns
+     c.Name,←'_Copy'
+     c.ColumnTitle[0]←⊂c.Name
+     t.Columns←(i↑t.Columns),c,i↓t.Columns
+     t.DataSize+←0 1
+     t.ColumnIndices←⍳≢t.Columns
+     _←t SetChanged 0
+     t.Parent Resize 1
+ }

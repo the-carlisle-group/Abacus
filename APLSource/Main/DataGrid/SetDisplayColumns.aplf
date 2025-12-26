@@ -1,0 +1,10 @@
+ SetDisplayColumns←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ List of column names
+     _←⍺ InitDisplayColumns ⍵
+     t←⍺.Table
+     t.DataSize←≢¨t.RowIndices t.ColumnIndices
+     t.ActiveCell[1]←0
+     t.WindowIndex[1]←0
+     ⍺ Resize 0
+ }

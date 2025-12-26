@@ -1,7 +1,8 @@
  MoveRowUp←{
      t←⍵
+     t.ReadOnly:0
      HandleInput t:0
-     ~t.InsertRows:0
+     ~t.MoveRows:0
      i←⊃t.ActiveCell
      i=0:0
      k←i,i-1

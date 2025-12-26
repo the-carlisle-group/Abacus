@@ -1,0 +1,9 @@
+ InitRowMask←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ boolean vec
+     t←⍺.Table
+     t.RowMask←(⍵≡1)⊃⍵((≢(0⊃t.Columns).Value)⍴1)
+     t.RowIndices←⍸t.RowMask∧⊃∧/t.Columns.FilterMask
+     t.RowIndices←t ReSort t.RowIndices
+     0
+ }

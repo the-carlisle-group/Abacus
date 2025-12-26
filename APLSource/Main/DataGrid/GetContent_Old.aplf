@@ -1,6 +1,5 @@
- GetContent←{
+ GetContent_Old←{
      t←⍺
-     a←t.Columns[t.ColumnIndices],⍨t.RowNumbers/t.RowNumberColumn
      oi j←t.WindowIndex+⍳¨(t.WindowSize+t.WindowPadding)⌊t.DataSize-t.WindowIndex
      i←t.RowIndices[oi]
      k←(⍳⍺.FreezeColumns),j
@@ -9,9 +8,9 @@
      nr nc←⍴v
      o←⍺.OptiTable
      h←o.Header
-     h.Values←⍉↑a.ColumnTitle[q]
-     h.Cells.style←a.HeaderStyle[q]
-     h.Cells.class←(t.HeaderRowCount nc)⍴a.HeaderClass[q]
+     h.Values←⍺.ColumnTitles[;q]
+     h.Cells.style←⍺.HeaderStyles[q]
+     h.Cells.class←(t.HeaderRowCount nc)⍴⍺.HeaderClass[q]
      _←{
          t.TableCell≡¯1 ¯1:0
          ∧/t.TableCell≥0:0
@@ -23,7 +22,7 @@
      h.Cells.id←(t.HeaderRowCount nc)↑t.HeaderCells.id
      o.Body.Values←v
      o.Body.Cells.id←(nr nc)↑t.BodyCells.id
-     bc←t Highlight i q(nr nc⍴a.ColumnClass[q])
+     bc←t Highlight i q(nr nc⍴⍺.ColumnClass[q])
      bc←t Selection bc
      _←{
          ∨/t.TableCell<0:0

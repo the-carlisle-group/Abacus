@@ -10,6 +10,8 @@
      d.SortDirection←0
      d.FilterValues←⊂''
      d.FilterMask←1
+     d.CanDelete←1
+     d.CanRename←1
      d.Options←⊂''
      _←d ⎕NS¨c
      d.Value←⍵.RowMinimum DefaultColumnValue¨d

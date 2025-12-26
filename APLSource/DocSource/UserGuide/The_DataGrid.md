@@ -179,4 +179,36 @@ For example, an event handler may be specified for the [CellChange]() event like
 ~~~
 
 The right argument provided to the event handler is an event message,
-the left argument is a reference to the grid,
+the left argument is a reference to the grid.
+
+## The ReadOnly Property
+
+The [ReadOnly]() property fundamentally determines how the DataGrid operates,
+and controls the applicabily of many other properties.
+When ReadOnly is `0`, the grid supports in-cell editing, cut and paste,
+inserting and deleting rows and columns, and moving rows and columns.
+
+While these features are supported when ReadOnly is `0`,
+they may be restricted by specifying other properties of the DataGrid
+and DataGridColumn objects. For example with ReadOnly set to `0` and
+[DeleteColumns]() set `0`,  you can have an editable grid
+where the user cannot delete columns. 
+
+All of these changes affect the [Columns]() property of the DataGrid,
+and of course the `Value` property of the DataGridColumn objects that
+compose it.
+
+When ReadOnly is `1`, none of the above features are supported.
+The user may not edit, cut, paste or delete, may not move, add or delete
+rows or columns, etc.
+However, the user may sort the grid, based on any column or set of columns,
+may restrict the rows to be displayed, and may sort and restrict the columns
+to be displayed. In other words users may change the view of the data
+to suit their needs at the moment. 
+
+None of these changes to the visible values affect the Columns property.
+
+The [SetRowMask]() method allows you to specify the 
+the rows to be viewed under program control. 
+The [SetDisplayColumns]() method allows you to specify the order and
+visibilty of the the columns.

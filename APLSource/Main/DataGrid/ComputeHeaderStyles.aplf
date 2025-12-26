@@ -1,4 +1,4 @@
  ComputeHeaderStyles←{
-     w←(⍕¨⍵.Widths),¨⊂'px'
+     w←(⍕¨⍵.Width),¨⊂'px'
      'width:'∘,¨w
  }

@@ -1,0 +1,10 @@
+ SetRowMask←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ boolean vec
+     _←⍺ InitRowMask ⍵
+     t←⍺.Table
+     t.DataSize←≢¨t.RowIndices t.ColumnIndices
+     t.ActiveCell[0]←0
+     t.WindowIndex[0]←0
+     ⍺ Resize 0
+ }

@@ -1,15 +1,14 @@
- Resize←{
+ Resize_Old←{
      g←⍺
      t←g.Table
-     c←t.Columns[t.ColumnIndices]
-     a←c,⍨t.RowNumbers/t.RowNumberColumn
-     t.AvailableWidth←g.Width-+/t.FixedColumns↑a.Width
-     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex a.Width
+     p←t.Parent     ⍝ That's g!
+     t.AvailableWidth←p.Width-+/t.FixedColumns↑t.Widths
+     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.RowNumbers↓t.Widths
      0∊t.ColumnsPerIndex:0
      t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
-     t.RowsToDisplay←⌊t.RowHeight÷⍨g.Height-t.HeaderHeight
+     t.RowsToDisplay←⌊t.RowHeight÷⍨p.Height-t.HeaderHeight
      t.WindowSize←t.RowsToDisplay,(1⊃t.WindowIndex)⊃t.ColumnsPerIndex
-     t.DataWidth←+/a.Width
+     t.DataWidth←+/t.Widths
      t.DataHeight←t.RowHeight×⊃t.DataSize
      t.MaxWindowIndex←t.DataSize-t.WindowSize[0],1++/∧\2</⌽t.ColumnsPerIndex
      ∨/t.WindowSize<1:0

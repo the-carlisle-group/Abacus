@@ -1,9 +1,13 @@
  DeleteColumn←{
      t←⍵
-     ~t.InsertColumns:0
-     c←1⊃t.ActiveCell
-     j←c~⍨⍳1⊃t.DataSize
-     t.Columns←t.Columns[j]
+     t.ReadOnly:0
+     ~t.DeleteColumns:0
+     i←1⊃t.ActiveCell
+     c←i⊃t.Columns
+     ~c.CanDelete:0
+     t.Columns~←c
+     t.DataSize-←0 1
+     t.ColumnIndices←⍳≢t.Columns
      _←t SetChanged 0
      t.Parent Resize 1
  }

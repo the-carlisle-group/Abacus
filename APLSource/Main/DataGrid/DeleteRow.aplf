@@ -1,6 +1,7 @@
  DeleteRow←{
      t←⍵
-     ~t.InsertRows:0
+     t.ReadOnly:0
+     ~t.DeleteRows:0
      i j←t.ActiveCell
      n m←t.DataSize
      k←n>t.RowMinimum
