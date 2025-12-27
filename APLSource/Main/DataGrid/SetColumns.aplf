@@ -1,0 +1,5 @@
+ SetColumns←{
+   ⍝ ⍺ ←→ Grid Instance
+   ⍝ ⍵ ←→ Array of GridDataColumn objects.
+     ⍺ SetValue ⍵
+ }

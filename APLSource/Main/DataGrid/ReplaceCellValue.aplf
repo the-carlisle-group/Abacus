@@ -1,0 +1,11 @@
+ ReplaceCellValue←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ Value, Location
+     v i←⍵
+     r c←i
+     g←⍺
+     t←⍺.Table
+     ci←{##.IsString ⍵:t.Columns.Name⍳⊂⍵ ⋄ ⍵}c
+     _←t SetCellValues(⍪⊆v)(r ci)
+     Refresh t
+ }
