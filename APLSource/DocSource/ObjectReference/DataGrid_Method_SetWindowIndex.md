@@ -1,6 +1,6 @@
 # DataGrid SetWindowIndex Method
 
-Sets the WindowIndex property.
+Sets the [WindowIndex]() property.
 
 ~~~
 Z←G SetWindowIndex R C
