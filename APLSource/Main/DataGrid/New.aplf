@@ -5,6 +5,8 @@
          'Columns'⍬
          'RowNumbers' 1
          'ReadOnly' 0
+         'ActiveCell'(0 0)
+         'WindowIndex'(0 0)
          ⍝ Only Applicable if ReadOnly←0
          'InsertRows' 1
          'DeleteRows' 1

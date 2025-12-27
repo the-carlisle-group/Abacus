@@ -1,0 +1,8 @@
+ SetWindowIndex←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ Row, column index
+     i←⍺ ToIndex ⍵
+     t←⍺.Table
+     t.WindowIndex←i⌊t.MaxWindowIndex
+     Refresh t
+ }

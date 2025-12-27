@@ -1,0 +1,8 @@
+ ToIndex←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ row index, column name or index
+     ⍝ ← ←→ row index, column index
+     (r c)←⍵
+     ~##.IsString c:⍵
+     r,⍺.Table.Columns.Name⍳⊂c
+ }

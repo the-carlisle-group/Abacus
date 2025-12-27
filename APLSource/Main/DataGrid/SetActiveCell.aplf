@@ -1,0 +1,7 @@
+ SetActiveCell←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ Row, column index
+     i←⍺ ToIndex ⍵
+     t←⍺.Table
+     t Move 0⌈i⌊t.DataSize-1
+ }

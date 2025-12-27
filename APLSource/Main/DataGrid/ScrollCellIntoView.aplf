@@ -1,0 +1,7 @@
+ ScrollCellIntoView←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ Row, column index
+     i←⍺ ToIndex ⍵
+     ~i AdjustWindow ⍺.Table:0
+     Refresh ⍺.Table
+ }
