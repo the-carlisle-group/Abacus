@@ -1,3 +1,0 @@
-# DataGrid ColumnIndices Property
-
-TODO
