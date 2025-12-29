@@ -49,7 +49,7 @@
      p≡'CtrlShiftF3':t Filter 0
      p≡'Ctrl ':t ExtendSelectColumn 0
      p≡'Shift ':t ExtendSelectRow 0
-     p≡'F6':t FreezeColumns 0
+     ⍝ p≡'F6':t FreezeColumns 0
      p≡'F5':t.Parent Resize 1
      p≡'Ctrl+':t.Parent Resize 1⊣t.FontSize←32⌊t.FontSize+2
      p≡'Ctrl-':t.Parent Resize 1⊣t.FontSize←8⌈t.FontSize-2
