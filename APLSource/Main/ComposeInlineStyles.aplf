@@ -3,9 +3,9 @@
      ⍝ _flex_direction ←→ flex-direction
      ⍝ ← ←→ String like 'p1:v1;p2:v2..etc'
      n←⎕C⍛(≡¨)⍛/'_'⍵.⎕NL ¯2
-     0=≢n:''
      v←⍵ ⎕VGET n
      f←{1↓'-'@('_'∘=)⍵}
      p←f¨n
-     1↓⊃,/';',¨p{⍺,':',⍵}¨v
+     m←(⍉↑p v)⍪⍵.InlineStyles
+     1↓⊃,/';',¨{⍺,':',⍵}/(≠m[;0])⌿m
  }

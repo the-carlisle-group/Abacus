@@ -1,9 +1,10 @@
  ComposeAttributes←{
      n←⍵.⎕NL ¯2
      k←~(⊃¨n)∊⎕A,'_'
-     ~∨/k:0 2⍴⊂''
+     ~∨/k:⍵.Attributes
      m←k/n
      v←⍵⍎¨m
      p←'-'@('_'∘=)¨m
-     ⍉↑p v
+     a←(⍉↑p v)⍪⍵.Attributes
+     (≠a[;0])⌿a
  }

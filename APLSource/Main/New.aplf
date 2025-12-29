@@ -5,6 +5,8 @@
      e←(
          'Tag' ''
          'Content' ''
+         'Attributes'(0 2⍴⊂'')
+         'InlineStyles'(0 2⍴⊂'')
      )Default ⍵
      _←e.⎕DF e.Tag
      e.Tag←,e.Tag
