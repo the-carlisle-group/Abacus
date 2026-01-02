@@ -30,10 +30,28 @@ We can add content when creating a new element:
 <div>Hello world!</div>
 ~~~
 
-The `New` method accepts two explicit properties [Tag](), and [Content](HTMLElement/Properties/Content),
+The `New` method accepts four explicit properties [Tag](), [Content](HTMLElement/Properties/Content),
+[Attributes]() and [InlineStyles](),
 which, like `⎕WC`, may be specified by position or by name.
-HTML attributes may also be specified in the argument to `New`. These
-must be specified by name:
+The `Attributes` and `InlineStyles` properties are specified as
+tow-column matrices of names and values:
+
+~~~
+      a←[
+         'class' 'c1'
+         'id' 'id1'
+        ]
+      s←[ 
+         'width' '10px'
+         'color' 'red'
+         'margin-left' '1rem'
+        ]
+      e←A.New 'div' 'Hello world!' a s
+      A.Render e
+<div class="c1" id="id1" style="width:10px;color:red;margin-left:1rem">Hello world!</div>
+~~~
+
+HTML attributes may also be specified explicitly in the argument to `New`:
 
 ~~~
       e←A.New 'div' 'Hello world!'  ('id' 'myid')
@@ -60,7 +78,7 @@ of a dash when needed:
 <div class="mydiv" data-value="abc" id="myid"></div>
 ~~~
 
-Inline styles may be specified by preceeding them with an underscore:
+Inline styles may be directly specified by preceeding them with an underscore:
 
 ~~~
       e←A.New 'div' ('id' 'myid') ('_width' '7rem')

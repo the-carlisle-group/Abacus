@@ -1,3 +1,5 @@
  Alert←{
-     ⍺ AlertBox.Show⊂'Message'⍵
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ Message
+     AlertBox.Show ⍺ AlertBox.New⊂'Message'⍵
  }

@@ -1,3 +1,5 @@
  Show←{
-     ⍺ A.ShowModal New ⍵
+     ⍝ ⍺|⍵ ←→ AlertBox
+     ⍺←⍵
+     ⍺.Document A.ShowModal ⍺
  }

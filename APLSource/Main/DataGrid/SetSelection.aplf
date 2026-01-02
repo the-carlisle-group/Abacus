@@ -1,0 +1,10 @@
+ SetSelection←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ upperleft, bottom right cell address.
+     ⍝ ← ←→ Selection property
+     t←⍺.Table
+     s←⍺ ToIndex¨⍵
+     t.SelectType←(2⊥∧/⍉↑0 ¯1=s)⊃'Cell' 'Row' 'Column' 'All'
+     t.Selection←s+0,⊂t.DataSize×¯1=1⊃s
+     t.Selection⊣Refresh t
+ }

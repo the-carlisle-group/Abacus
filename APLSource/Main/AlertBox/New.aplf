@@ -1,10 +1,11 @@
  New←{
+     ⍺←0
      w←(
          'Title' 'Alert'
          'Message' ''
-         'Width' '20rem'
+         '_width' '20rem'
      )A.Default ⍵
      w.BodyContent←A.New¨{'p'⍵}¨⊆w.Message
      w.Buttons←'OK'
-     A.DialogBox.New w
+     ⍺ A.DialogBox.New w
  }

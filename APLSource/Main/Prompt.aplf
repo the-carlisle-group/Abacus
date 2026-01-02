@@ -1,3 +1,5 @@
  Prompt←{
-     ⍺ PromptBox.Show ⍵
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ Title, Label, Value, OnOK, OnCancel
+     PromptBox.Show ⍺ PromptBox.New ⍵
  }

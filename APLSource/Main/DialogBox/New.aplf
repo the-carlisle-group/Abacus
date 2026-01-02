@@ -1,4 +1,5 @@
  New←{
+     ⍺←0
      d←(A.New'dialog')⎕NS(
          'Title' ''
          'Subtitle' ''
@@ -6,8 +7,10 @@
          'Buttons'('OK' 'Cancel')
          'OnClick' ''
          'OnClose' ''
+         'Wait' 0
          'Width' '40rem'
      )A.Default ⍵
+     d.Document←⍺
      d.Buttons←⊆d.Buttons
      d.OnClick←(≢d.Buttons)⍴⊆d.OnClick
      d.class←'DialogBox'

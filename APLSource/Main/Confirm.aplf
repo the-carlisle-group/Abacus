@@ -1,3 +1,5 @@
  Confirm←{
-     ⍺ ConfirmBox.Show ⍵
+     ⍝ ⍺ ←→Document
+     ⍝ ⍵ ←→ Title, Message, Buttons
+     ConfirmBox.Show ⍺ ConfirmBox.New ⍵
  }

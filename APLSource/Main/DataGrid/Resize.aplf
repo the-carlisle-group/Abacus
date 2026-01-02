@@ -1,6 +1,7 @@
  Resize←{
      g←⍺
      t←g.Table
+     0=≢t.Columns:0
      c←t.Columns[t.ColumnIndices]
      a←c,⍨t.RowNumbers/t.RowNumberColumn
      t.AvailableWidth←g.Width-+/t.FixedColumns↑a.Width

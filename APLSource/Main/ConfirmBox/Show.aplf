@@ -1,3 +1,5 @@
  Show←{
-     ⍺ ##.ShowModalAndWait New ⍵
+     ⍝ ⍺|⍵ ConfirmBox
+     ⍺←⍵
+     ⍺.Document ##.ShowModalAndWait ⍺
  }
