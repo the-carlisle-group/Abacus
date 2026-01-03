@@ -1,0 +1,13 @@
+ OnKeyDownCustom←{
+     ⍝ ⍺ ←→ Full Key e.g.: CtrlShiftF10
+     ⍝ ⍵ ←→ table
+     ⍝ ← ←→ 1 to abort handling by DataGrid, 0 to continue
+     0=≢⍵.OnKeyDown:0
+     ⍵.CellMode≠0:0
+     e←⎕NS''
+     e.Event←'KeyDown'
+     e.Component←⍵.Parent
+     e.Document←⍵.Document
+     e.Key←⍺
+     (⍎⍵.OnKeyDown)e
+ }

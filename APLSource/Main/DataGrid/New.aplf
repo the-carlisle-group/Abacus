@@ -29,6 +29,7 @@
          'HeaderRowTitles' ''
          'HeaderReadOnly' 1
          'CustomColumnInserts'⍬
+         'OnKeyDown' ''
      )A.Default ⍵
      g←⍺ A.New'div'
      g.(Width Height)←0

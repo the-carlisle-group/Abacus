@@ -4,7 +4,8 @@
      _←A.Init 0
      p←⍵ ReadCSVFile GetFileName'People.csv'
      g←A.DataGrid.New''
-     g.Table.ReadOnly←1
+     g.Table.OnKeyDown←A.FQP'OnKeyDown'
+     g.Table.ReadOnly←0
      g.id←'the-datagrid'
      t←g.Table
      t.DataSource←p

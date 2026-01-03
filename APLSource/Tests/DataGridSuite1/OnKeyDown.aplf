@@ -1,0 +1,4 @@
+ OnKeyDown←{
+     ⍵.Key≡'ShiftF10':1⊣⎕←'ShiftF10!'
+     0
+ }
