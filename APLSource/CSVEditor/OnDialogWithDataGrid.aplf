@@ -1,0 +1,25 @@
+ OnDialogWithDataGrid←{
+     d←⍵.Document
+     eg←d A.GetElementByClass'DataGrid'
+     ⍝ c←eg.Table.Columns
+
+
+     c←⎕NS¨3⍴⊂''
+     c.Name←'FirstName' 'LastName' 'DOB'
+     c.Type←'VarChar' 'VarChar' 'Date'
+     c.Value←(
+         'Johann' 'Wolfgang' 'Ludvig'
+         'Bach' 'Mozart' 'Beethoven'
+         19991231 20010101 2250101
+     )
+     g←A.DataGrid.New('Columns'c)('Autofocus' 1)
+     p←⎕NS''
+     p.Title←'Dialog Box'
+     p.Subtitle←'Showing a DataGrid.'
+     p.BodyContent←g
+     p.Buttons←'OK' 'Cancel'
+     p.OnClick←'' ''
+     p._width←'60rem'
+     p._height←'40rem'
+     d A.DialogBox.Show p
+ }

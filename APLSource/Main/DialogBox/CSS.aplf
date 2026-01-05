@@ -2,6 +2,8 @@
      Rule←##.NewRule
      ⍝ ****************************************
      s←Rule'.DialogBox'
+     s.display←'flex'
+     s.flex_direction←'column'
      s.background_color←'inherit'
      s.color←'inherit'
      s.border←'2px solid var(--accent-color-1)'
@@ -25,6 +27,7 @@
      ⍝ ***************
      r←s Rule'section'
      r.padding←'1rem 2rem'
+     r.flex←'1'
      r.display←'flex'
      r.flex_direction←'column'
      r.gap←'1rem'

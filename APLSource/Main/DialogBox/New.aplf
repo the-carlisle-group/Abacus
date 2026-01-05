@@ -7,7 +7,6 @@
          'Buttons'('OK' 'Cancel')
          'OnClick' ''
          'OnClose' ''
-         'Wait' 0
          '_width' '40rem'
      )A.Default ⍵
      d.Document←⍺

@@ -1,6 +1,7 @@
  DeleteElement←{
      ⍝ ⍵ ←→ Element
      ⍝ ← ←→ 0
+     _←⍵.Document UnObserve ⍵
      _←⍵ ExecuteOnElement'remove()'
      p←⍵.Parent
      p.Content~←⍵
