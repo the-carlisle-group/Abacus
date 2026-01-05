@@ -68,6 +68,10 @@
      r.padding←Padding
      r.border←Border
      r.position←'relative'
+     ⍝ *************************
+     r←s Rule'td:focus'
+     ⍝ r.color←'red'
+     r.border←'solid 3px var(--border-color)'
      ⍝ *****************************
      r←s Rule'.selected-range'
      r.color←'var(--selected-text-color)'
@@ -77,8 +81,8 @@
      r←s Rule'.selected-range-all'
      r.background_color←'steelblue'
      ⍝ *********************************
-     r←s Rule'.active-cell'
-     r.border←'solid 3px var(--border-color)'
+     ⍝r←s Rule'.active-cell'
+     ⍝r.border←'solid 3px var(--border-color)'
      ⍝ r.background_color←'orange'
      ⍝ *********************************
      r←s Rule'.in-cell'
@@ -87,7 +91,9 @@
      r←s Rule'input'
      r.box_sizing←'border-box'
      r.padding←Padding
-     r.border←'none'
+     ⍝ r.border←'none'
+     r.border_radius←'0'
+     r.border←'solid 3px var(--border-color)'
      r.width←'100%'
      r.height←'100%'
      ⍝ *******************************

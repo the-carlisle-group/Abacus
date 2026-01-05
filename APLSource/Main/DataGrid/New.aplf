@@ -30,6 +30,7 @@
          'HeaderReadOnly' 1
          'CustomColumnInserts'⍬
          'OnKeyDown' ''
+         'Autofocus' 0
      )A.Default ⍵
      g←⍺ A.New'div'
      g.(Width Height)←0

@@ -1,14 +1,14 @@
  Refresh←{
-     ⍝ ⍺ ←→ Optional Event To Fire
-     ⍺←0
-     e←⍺
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ Return ⍵ for convenience of next function call
      t←⍵
      o←t GetContent''
      h←##.RenderOptiTable o
      _←t ##.SetProperty'innerHTML'(##.Sanitize h)
      _←RefreshScrollBars t
-     t.TableCell≡¯1 ¯1:t A.FireEvent'focus'
-     c←GetTableCell t
-     _←c A.FireEvent'focus'
-     t Fire e
+     ⍝ Need to move this somewhere↓↓↓↓
+     ⍝ Maybe GoToHeaderRow?
+     ⍝ t.TableCell≡¯1 ¯1:t A.FireEvent'focus'
+     ⍝ ↑↑↑↑↑↑↑↑↑↑↑↑↑
+     ⍵
  }

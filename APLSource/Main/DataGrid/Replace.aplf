@@ -12,7 +12,7 @@
      t Fire e:1    ⍝ New Value can change
      _←t SetCellValues e.NewValue i
      _←t SetChanged 0
-     _←Refresh t
+     _←Focus Refresh t
      e.Event←'CellChange'
      t Fire e
  }

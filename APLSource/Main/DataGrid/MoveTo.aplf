@@ -5,7 +5,7 @@
      tc←⍺.TableCell
      ⍺.ActiveCell←⍵
      ⍺.Selection←(≡/⍺.Selection)⊃⍺.Selection(2⍴⊂⍵)
-     ⍵ AdjustWindow ⍺:Refresh ⍺
+     ⍵ AdjustWindow ⍺:0⊣Focus Refresh ⍺
      lc←tc GetTableCell ⍺
      nc←GetTableCell ⍺
      _←⍺ RefreshActiveCellClass lc nc

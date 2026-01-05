@@ -1,6 +1,7 @@
  Run←{
      ⎕THIS.A←#.Abacus.Main
      a←A.NewApplication''
+     a.HTMLRendererProperties←('Posn'(0 0))('Size'(100 100))
      a.OnBuild←A.FQP'Build'
      a.OnStart←A.FQP'OnStart'
      a A.StartDesktopApplication 0

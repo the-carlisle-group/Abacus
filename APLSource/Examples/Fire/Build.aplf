@@ -38,7 +38,15 @@
      Negate←Actions A.CheckBox.New'Negate search'
      SearchResults←Actions A.CheckBox.New'Search results'
      ⍝ **************************
-     Results←Main A.DataGrid.New''
+     c←⎕NS¨3⍴⊂''
+     c.Name←'FirstName' 'LastName' 'DOB'
+     c.Type←'VarChar' 'VarChar' 'Date'
+     c.Value←(
+         'Johann' 'Wolfgang' 'Ludvig'
+         'Bach' 'Mozart' 'Beethoven'
+         19991231 20010101 2250101
+     )
+     Results←Main A.DataGrid.New('Columns'c)('Autofocus' 0)
      ⍝ ****************************
      d
  }

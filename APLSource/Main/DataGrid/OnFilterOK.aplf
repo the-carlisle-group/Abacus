@@ -15,8 +15,8 @@
      t.RowIndices←t ReSort t.RowIndices
 
      t.DataSize←(≢t.RowIndices),≢t.Columns
-     g Resize 0
-
+     _←g Resize 0
+     0⊣Focus t
      ⍝t.DataHeight←t.RowHeight×⊃t.DataSize
      ⍝_←g ResizeScrollBars''
      ⍝Refresh t

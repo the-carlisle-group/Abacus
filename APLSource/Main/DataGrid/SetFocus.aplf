@@ -1,0 +1,5 @@
+ SetFocus←{
+     ⍝ ⍺|⍵ ←→ Grid
+     ⍺←⍵
+     Focus ⍺.Table
+ }

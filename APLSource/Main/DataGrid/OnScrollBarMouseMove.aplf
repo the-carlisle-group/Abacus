@@ -12,5 +12,5 @@
      k←0⌈n⌊i+⌊n×j
      i[tr.Horz]←tr.Horz⊃k
      t.WindowIndex←i
-     Refresh t
+     0⊣Focus Refresh t
  }

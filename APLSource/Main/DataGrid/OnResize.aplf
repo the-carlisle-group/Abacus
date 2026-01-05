@@ -4,5 +4,10 @@
      0 0≡⍵.(Width Height):0                ⍝ Not visible
      g.(Width Height)←¯20+⍵.Width ⍵.Height ⍝ ¯20 for scroll bars
      _←1 Init g
-     g Resize 0
+     _←g Resize 0
+     t←g.Table
+     b←t.Autofocus
+     t.Autofocus←0
+     b:Focus t
+     0
  }

@@ -8,13 +8,12 @@
          'OnClick' ''
          'OnClose' ''
          'Wait' 0
-         'Width' '40rem'
+         '_width' '40rem'
      )A.Default ⍵
      d.Document←⍺
      d.Buttons←⊆d.Buttons
      d.OnClick←(≢d.Buttons)⍴⊆d.OnClick
      d.class←'DialogBox'
-     d.style←'width:',d.Width
      h←d A.New'header'(A.New¨'h1' 'h2'{⍺ ⍵}¨d.Title d.Subtitle)
      m←d A.New'section'd.BodyContent
      b←A.New¨{'button'⍵}¨d.Buttons

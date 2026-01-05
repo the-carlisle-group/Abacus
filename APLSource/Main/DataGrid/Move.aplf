@@ -13,11 +13,11 @@
      e.NewCellIndex←⍵
      ⍺.ActiveCell←⍵
      ⍺.Selection←2⍴⊂⍵
-     ⍵ AdjustWindow ⍺:e Refresh ⍺
+     ⍵ AdjustWindow ⍺:(Focus Refresh ⍺)Fire e
      lc←tc GetTableCell ⍺
      nc←GetTableCell ⍺
      _←⍺ RefreshActiveCellClass lc nc
-     _←nc A.FireEvent'focus'
+     _←nc Focus ⍺
      _←⍺ Fire e
      0
  }

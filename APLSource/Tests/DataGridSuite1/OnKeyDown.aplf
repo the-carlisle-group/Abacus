@@ -1,4 +1,5 @@
  OnKeyDown←{
-     ⍵.Key≡'ShiftF10':1⊣⎕←'ShiftF10!'
-     0
+     ⍵.Key≢'ShiftF10':0
+     _←⍵.Document A.Alert'You pressed F10!'
+     1
  }

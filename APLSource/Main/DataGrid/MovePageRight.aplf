@@ -9,5 +9,5 @@
      t.ActiveCell[1]←(1⊃t.DataSize)⌊p+1⊃t.ActiveCell
      t.Selection←2⍴⊂t.ActiveCell
      t.TableCell←t ActiveCell2TableCell t.ActiveCell
-     Refresh t
+     0⊣Focus Refresh t
  }

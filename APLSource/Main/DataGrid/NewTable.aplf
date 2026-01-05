@@ -3,7 +3,7 @@
      t.OptiTable←A.NewOptiTable ⍬
      t.LastAnchor←0
      t.EntryError←0
-     t.tabindex←0
+     ⍝ t.tabindex←0 ⍝ NOT USED?
      t.CellMode←0   ⍝ 0←→ReadyMode, 1←→EnterMode, 2←→EditMode
      t.AutoCompleteActive←0
      t.Changed←0

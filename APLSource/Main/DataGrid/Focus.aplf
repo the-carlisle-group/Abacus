@@ -1,0 +1,8 @@
+ Focus←{
+     ⍝ ⍺ ←→ Cell element
+     ⍝ ⍵ ←→ Table
+     ⍝ ← ←→ Pass thru table for convenience
+     ⍺←GetTableCell ⍵
+     _←⍺ A.FireEvent'focus'
+     ⍵
+ }

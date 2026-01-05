@@ -8,5 +8,5 @@
      t.DataSize+←1 0
      t.MaxWindowIndex+←1 0
      _←t Move t.ActiveCell+1 0
-     Refresh t
+     0⊣Focus Refresh t
  }

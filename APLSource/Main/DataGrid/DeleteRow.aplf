@@ -18,5 +18,5 @@
      t.WindowIndex-←l 0
      t.MaxWindowIndex-←1 0
      _←t.Parent ResizeScrollBars''
-     Refresh t
+     0⊣Focus Refresh t
  }
