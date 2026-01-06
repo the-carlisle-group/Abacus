@@ -4,7 +4,7 @@
          'Iterations' 0
          'Truncate' 0
          'UpdatePeriod' 1
-         'Width' '30rem'
+         '_width' '30rem'
          'Status' 'Working...'
          'LanguageTable'(LanguageTable'')
      )A.Default ⍵
@@ -26,7 +26,7 @@
      d.id←'progress-bar'
      d.(Iteration Result)←¯1 ⍬
      d.(Done Paused Canceled Truncated)←0
-     f←2⊃d.Content
+     f←3⊃d.Content
      f.Content.id←1 1 w.Truncate/'progress-'∘,¨'cancel' 'pause' 'truncate'
      (d f).Unqueued←'close' 'click'
      d.PauseToken←⎕TID

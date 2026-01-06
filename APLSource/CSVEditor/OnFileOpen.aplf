@@ -28,7 +28,6 @@
      p.Title←'Open'
      p.Buttons←'Open' 'Cancel'
      p.BodyContent←FileName AllOptions
-     p.Width←'60rem'
      p.OnClick←(A.FQP'OnFileOpenOK')(A.FQP'OnFileOpenCancel')
      b←A.DialogBox.New p
      d A.ShowModal b

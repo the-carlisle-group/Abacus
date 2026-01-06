@@ -1,5 +1,5 @@
  OnPromptBoxOK←{
      d←⍵   ⍝ Dialog
-     _←d.Document A.AlertBox.Show⊂'You pressed OK!'
+     _←d.Document A.Alert'You pressed OK!'
      0
  }

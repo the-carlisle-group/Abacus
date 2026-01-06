@@ -1,4 +1,5 @@
  New←{
+     ⍺←0
      w←(
          'Title' ''
          'Label' ''
@@ -11,5 +12,5 @@
      w.BodyContent←PromptBox
      w.OnClick←A.FQP¨'OnOK' 'OnCancel'
      w.OnClose←A.FQP'OnCancel'
-     A.DialogBox.New w
+     ⍺ A.DialogBox.New w
  }

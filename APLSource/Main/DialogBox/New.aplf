@@ -7,8 +7,8 @@
          'Buttons'('OK' 'Cancel')
          'OnClick' ''
          'OnClose' ''
-         '_width' '40rem'
      )A.Default ⍵
+     a←d A.AutoComplete.New''
      d.Document←⍺
      d.Buttons←⊆d.Buttons
      d.OnClick←(≢d.Buttons)⍴⊆d.OnClick

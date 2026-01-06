@@ -17,7 +17,7 @@
      p.Subtitle←'Showing fields in two fieldsets, with borders and legend'
      p.BodyContent←s,s2
      p.Buttons←'OK' 'Cancel'
-     p.OnClick←(A.FQP'OnFileSettingsOK')''
+     p.OnClick←'' ''
      p._width←'40rem'
      d A.DialogBox.Show p
  }

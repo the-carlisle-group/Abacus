@@ -5,5 +5,5 @@
      p.Value←'And a starting value'
      p.OnOK←A.FQP'OnPromptBoxOK'
      p.OnCancel←A.FQP'OnPromptBoxCancel'
-     ⍵.Document A.PromptBox.Show p
+     ⍵.Document A.Prompt p
  }

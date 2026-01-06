@@ -6,12 +6,18 @@
 
      c←⎕NS¨3⍴⊂''
      c.Name←'FirstName' 'LastName' 'DOB'
-     c.Type←'VarChar' 'VarChar' 'Date'
+     c.Type←'VarChar' 'Char' 'Date'
+     (1⊃c).Options←'Bach' 'Mozart' 'Beethoven' 'List' 'Hayden' 'Brahms'
+
      c.Value←(
          'Johann' 'Wolfgang' 'Ludvig'
-         'Bach' 'Mozart' 'Beethoven'
+         ['Bach'
+             'Mozart'
+             'Beethoven'
+         ]
          19991231 20010101 2250101
      )
+
      g←A.DataGrid.New('Columns'c)('Autofocus' 1)
      p←⎕NS''
      p.Title←'Dialog Box'

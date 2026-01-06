@@ -4,5 +4,5 @@
      p←()
      p.Title←'You have made changes.'
      p.Caption←'Are you sure you want to discard them?'
-     'Yes'≢d.Document A.ConfirmBox.Show p
+     'Yes'≢d.Document A.Confirm p
  }

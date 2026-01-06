@@ -11,7 +11,7 @@
      p.Subtitle←'Showing fields in a grid layout.'
      p.BodyContent←s
      p.Buttons←'OK' 'Cancel'
-     p.OnClick←(A.FQP'OnFileSettingsOK')''
+     p.OnClick←'' ''
      p._width←'40rem'
      d A.DialogBox.Show p
  }
