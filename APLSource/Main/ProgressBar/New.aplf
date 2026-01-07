@@ -18,7 +18,7 @@
      fp←A.New'p'(w A.Translate'Paused')
      fp.id←'progress-paused-indicator'
      fp.class←'pulse invisible'
-     w.BodyContent←s,((0<w.Iterations)/p),fp
+     w.MainContent←s,((0<w.Iterations)/p),fp
      w.Buttons←1 1 w.Truncate/w A.Translate'Cancel' 'Pause' 'Truncate'
      w.OnClose←A.FQP'OnClose'
      w.OnClick←A.FQP¨1 1 w.Truncate/'OnCancel' 'OnPause' 'OnTruncate'

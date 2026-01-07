@@ -22,7 +22,7 @@
      p←⎕NS''
      p.Title←'Dialog Box'
      p.Subtitle←'Showing a DataGrid.'
-     p.BodyContent←g
+     p.MainContent←g
      p.Buttons←'OK' 'Cancel'
      p.OnClick←'' ''
      p._width←'60rem'

@@ -1,4 +1,4 @@
  OnClose←{
-     d←⍵.DialogBox
+     d←⍵.Component
      0⊣''⎕TPUT d.Tid
  }

@@ -9,7 +9,7 @@
      p←⎕NS''
      p.Title←'Basic Dialog Box 2'
      p.Subtitle←'Showing fields in a grid layout.'
-     p.BodyContent←s
+     p.MainContent←s
      p.Buttons←'OK' 'Cancel'
      p.OnClick←'' ''
      p._width←'40rem'

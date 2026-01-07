@@ -5,7 +5,7 @@
          'Message' ''
          '_width' '20rem'
      )A.Default ⍵
-     w.BodyContent←A.New¨{'p'⍵}¨⊆w.Message
+     w.MainContent←A.New¨{'p'⍵}¨⊆w.Message
      w.Buttons←'OK'
      ⍺ A.DialogBox.New w
  }

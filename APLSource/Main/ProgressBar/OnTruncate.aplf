@@ -1,5 +1,5 @@
  OnTruncate←{
-     d←⍵.CurrentTarget A.GetNearest'dialog'
+     d←⍵.Component
      ~d.Paused:d.Truncated←1
      d.Paused←0
      1⊣'Truncate'⎕TPUT d.PauseToken

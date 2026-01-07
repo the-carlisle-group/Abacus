@@ -1,9 +1,0 @@
- Pause←{
-     ~⍺.Pause:'Resume'
-     ⍺.Pause←0
-     t←'Process paused'
-     c←''
-     b←1 1 ⍺.Truncate/'Cancel' 'Resume' 'Truncate'
-     z←⍺.Document A.ConfirmBox.Show t c('Buttons'b)'25rem'
-     z
- }

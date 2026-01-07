@@ -1,5 +1,5 @@
  OnCancel←{
-     d←⍵.CurrentTarget A.GetNearest'dialog'
+     d←⍵.Component
      ~d.Paused:d.Canceled←1
      d.Paused←0
      1⊣'Cancel'⎕TPUT d.PauseToken

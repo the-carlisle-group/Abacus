@@ -2,7 +2,10 @@
      d←⍵.Target
      f←d.OnClose
      0=≢f:A.DeleteElement d
-     ⍵.DialogBox←d
-     1≡(⍎f)⍵:0
+     e←()
+     e.Event←'Close'
+     e.Document←d.Document
+     e.Component←d
+     1≡(⍎f)e:0
      A.DeleteElement d
  }

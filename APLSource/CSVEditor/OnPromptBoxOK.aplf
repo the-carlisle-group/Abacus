@@ -1,5 +1,4 @@
  OnPromptBoxOK←{
-     d←⍵   ⍝ Dialog
-     _←d.Document A.Alert'You pressed OK!'
-     0
+     'Hello world!'≡⍵.NewValue:0
+     1⊣⍵.Document A.Alert'You must enter "Hello world!" to exit.'
  }

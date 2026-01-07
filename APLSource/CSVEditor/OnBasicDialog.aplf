@@ -11,7 +11,7 @@
      p←⎕NS''
      p.Title←'Basic Dialog Component'
      p.Subtitle←'Showing all the input component types.'
-     p.BodyContent←s
+     p.MainContent←s
      p.Buttons←'OK' 'Cancel'
      p.OnClick←'' ''
      p._width←'30rem'

@@ -2,6 +2,5 @@
      ⍝ ⍺ ←→ Document
      ⍝ ⍵.Iterator←⍳⍵.Iterations
      ⍝ See New function for argument
-     p←New ⍵
-     p⊣⍺ A.ShowModal p
+     p⊣Show ⍺ New ⍵
  }

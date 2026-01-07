@@ -1,6 +1,6 @@
  OnPause←{
      ⍝ On Pause, or On Resume!
-     d←⍵.CurrentTarget A.GetNearest'dialog'
+     d←⍵.Component
      b←d A.GetElementById'progress-pause'
      _←b A.SetInnerHTML d A.Translate d.Paused⊃'Resume' 'Pause'
      i←d A.GetElementById'progress-paused-indicator'

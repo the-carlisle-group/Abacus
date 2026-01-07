@@ -1,5 +1,0 @@
- OnCancel_Orig←{
-     d←⍵.CurrentTarget A.GetNearest'dialog'
-     _←⎕TKILL d.TID
-     ⍵.Document A.DeleteElement d
- }

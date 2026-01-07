@@ -15,7 +15,7 @@
      p←⎕NS''
      p.Title←'Basic Dialog Box 3'
      p.Subtitle←'Showing fields in two fieldsets, with borders and legend'
-     p.BodyContent←s,s2
+     p.MainContent←s,s2
      p.Buttons←'OK' 'Cancel'
      p.OnClick←'' ''
      p._width←'40rem'

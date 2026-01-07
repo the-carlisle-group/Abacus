@@ -1,8 +1,7 @@
  OnPromptBoxCancel←{
-     d←⍵.DialogBox
-     d.Value≡d.NewValue:0
+     ⍵.OldValue≡⍵.NewValue:0
      p←()
      p.Title←'You have made changes.'
      p.Caption←'Are you sure you want to discard them?'
-     'Yes'≢d.Document A.Confirm p
+     'Yes'≢⍵.Document A.Confirm p
  }

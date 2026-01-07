@@ -3,7 +3,7 @@
      d←(A.New'dialog')⎕NS(
          'Title' ''
          'Subtitle' ''
-         'BodyContent'⍬
+         'MainContent'⍬
          'Buttons'('OK' 'Cancel')
          'OnClick' ''
          'OnClose' ''
@@ -14,7 +14,7 @@
      d.OnClick←(≢d.Buttons)⍴⊆d.OnClick
      d.class←'DialogBox'
      h←d A.New'header'(A.New¨'h1' 'h2'{⍺ ⍵}¨d.Title d.Subtitle)
-     m←d A.New'section'd.BodyContent
+     m←d A.New'section'd.MainContent
      b←A.New¨{'button'⍵}¨d.Buttons
      b.Name←d.Buttons
      f←d A.New'footer'b

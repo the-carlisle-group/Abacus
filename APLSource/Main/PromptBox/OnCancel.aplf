@@ -1,7 +1,9 @@
  OnCancel←{
-     d←⍵.DialogBox
+     d←⍵.Component
      c←d A.GetComponent'PromptBox'
-     d.NewValue←c.Value
+     ⍵.Event←'Cancel'
+     ⍵.OldValue←d.Value
+     ⍵.NewValue←c.Value
      f←d.OnCancel
      0=≢f:0
      (⍎f)⍵

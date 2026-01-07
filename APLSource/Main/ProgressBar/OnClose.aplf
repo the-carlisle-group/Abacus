@@ -1,5 +1,5 @@
  OnClose←{
-     d←⍵.CurrentTarget A.GetNearest'dialog'
+     d←⍵.Component
      d.Pause←1
-     d A.ExecuteOnElement'showModal()' ⍝ Reopen!
+     0⊣d A.ExecuteOnElement'showModal()' ⍝ Reopen!
  }
