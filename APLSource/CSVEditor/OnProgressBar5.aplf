@@ -10,11 +10,11 @@
      f←{
          ⍝ ⍺ ←→ Progress Bar
          ⍝ ⍵ ←→ Namesapce
-         d←⎕DL 0.2
-         ⍵.TotalTime+←d
+         t←⎕DL 0.2
+         ⍵.TotalTime+←t
          ⍺.Status←'Total time so far: ',(⍕⍵.TotalTime),' after iteration ',⍕⍺.Iteration
-         ⍺.Done←⍵.TotalTime>10
-         d
+         ⍺.Exit←⍵.TotalTime>10
+         t
      }
      ⍝ We need a namespace (or var! - then no accumulation, but still useful)
      ⍝ that will be the right argument to f.
@@ -24,25 +24,9 @@
      ⍝ The left argument supplied to f is the progress bar instance.
      ⍝ We can use this to update the status, and to inquire about
      ⍝ what iteration we are currently on.
-     ⍝ The result of this function can be anything and is passed
-     ⍝ though
-     ⍝ This gives the programmer the option o
-
-     ⍝ In addition we need a namespace or array argument for the progress bar
-     ⍝ Iterations defaults to zero, which means we don't know how many ahead of time.
-     ⍝ So we don't really need to set it.
-     p←(
-         Title:'Progress Example #4'
-         Iterations:0
-         Truncate:1
-     )
-     ⍝ That is all we need, and now we can run the function under a progress bar
-     ⍝ using the Run operator.
-     ⍝ The right argument must be two things: a suitable argument for f,
-     ⍝ and a suitable argument for #.Abacus.Main.ProgressBar.New (which can be an empty
-     ⍝ vec '' or namepace ():
-     ⍝ RC
-     rc rv←d f A.ProgressBar.Run s p
+     ⍝ The result of this function can be anything and is passed through
+     p←d A.ProgressBar.New'Progress Example #5' 0 1
+     rc rv←p f A.ProgressBar.Run s
      ⍝ rc is either  0 1 2
      ⍝ rv is a vector or results for each completed iteration.
      ⍝ Note that +/rv should correpsond to s.TotalTime

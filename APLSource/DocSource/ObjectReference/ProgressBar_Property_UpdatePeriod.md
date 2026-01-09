@@ -1,3 +1,4 @@
-# ProgressBar_Property_UpdatePeriod
+# ProgressBar UpdatePeriod Property
 
-TODO
+Specifies how often the progress bar should be updated. The default is `1`, for each 
+time through the loop.

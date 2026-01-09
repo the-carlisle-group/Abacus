@@ -1,11 +1,14 @@
  New←{
+     ⍺←0
      w←(
          'Title' 'Progress'
          'Iterations' 0
+         'Cancel' 1
+         'Pause' 1
          'Truncate' 0
          'UpdatePeriod' 1
          '_width' '30rem'
-         'Status' 'Working...'
+         'Status' ''
          'LanguageTable'(LanguageTable'')
      )A.Default ⍵
      w.Iterations←(2=≡w.Status)⊃w.Iterations(≢w.Status)
@@ -19,15 +22,16 @@
      fp.id←'progress-paused-indicator'
      fp.class←'pulse invisible'
      w.MainContent←s,((0<w.Iterations)/p),fp
-     w.Buttons←1 1 w.Truncate/w A.Translate'Cancel' 'Pause' 'Truncate'
+     b←w.(Cancel Pause Truncate)
+     w.Buttons←b/w A.Translate'Cancel' 'Pause' 'Truncate'
      w.OnClose←A.FQP'OnClose'
-     w.OnClick←A.FQP¨1 1 w.Truncate/'OnCancel' 'OnPause' 'OnTruncate'
-     d←A.DialogBox.New w
+     w.OnClick←A.FQP¨b/'OnCancel' 'OnPause' 'OnTruncate'
+     d←⍺ A.DialogBox.New w
      d.id←'progress-bar'
      d.(Iteration Result)←¯1 ⍬
-     d.(Done Paused Canceled Truncated)←0
+     d.(Exit Paused Canceled Truncated)←0
      f←3⊃d.Content
-     f.Content.id←1 1 w.Truncate/'progress-'∘,¨'cancel' 'pause' 'truncate'
+     f.Content.id←b/'progress-'∘,¨'cancel' 'pause' 'truncate'
      (d f).Unqueued←'close' 'click'
      d.PauseToken←⎕TID
      d

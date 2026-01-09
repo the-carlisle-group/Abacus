@@ -1,3 +1,4 @@
-# ProgressBar_Property_Truncate
+# ProgressBar Truncate Property
 
-TODO
+Boolean. Specifies if the Truncate button is visible and active.
+The default it `0`.

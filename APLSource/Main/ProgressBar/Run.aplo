@@ -1,15 +1,16 @@
  Run←{
-     p←New 1⊃⍵
-     _←⍺ A.ShowModal p
-     r←p ⍺⍺{
-         s←((2=≡⍺.Status)/1+⍺.Iteration)⊃⍺.Status
-         c←⍺ Update s
-         c≡'Cancel':1 ⍺.Result
-         c≡'Truncate':2 ⍺.Result
+     ⍝ ⍺⍺ ←→ Iteration Function
+     ⍝ ⍺ ←→ Progress bar
+     ⍝ ⍵ ←→ Suitable argument for ⍺⍺
+     _←⍺ Show 0
+     r←⍺ ⍺⍺{
+         c←⍺ Update ⍺.Status
+         c≡'Cancel':c ⍺.Result
+         c≡'Truncate':c ⍺.Result
          ⍺.Result,←⊂⍺ ⍺⍺ ⍵
-         ⍺.Done:0 ⍺.Result
-         ⍺.Iteration=⍺.Iterations-1:0 ⍺.Result
+         ⍺.Exit:c ⍺.Result
+         ⍺.Iteration=⍺.Iterations-1:c ⍺.Result
          ⍺ ∇ ⍵
-     }0⊃⍵
-     r⊣A.DeleteElement p
+     }⍵
+     r⊣A.DeleteElement ⍺
  }

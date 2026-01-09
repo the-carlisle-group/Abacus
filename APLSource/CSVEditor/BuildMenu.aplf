@@ -31,7 +31,6 @@
      i←s NewItem'Progress bar 3' '' 'OnProgressBar3'
      i←s NewItem'Progress bar 4' '' 'OnProgressBar4'
      i←s NewItem'Progress bar 5' '' 'OnProgressBar5'
-     i←s NewItem'Progress bar 6' '' 'OnProgressBar6'
      s←m NewMenu⊂'View'
      i←s NewItem'Find and Replace...' 'Ctrl+F' 'OnFindAndReplace'('Checked' 1)
      m

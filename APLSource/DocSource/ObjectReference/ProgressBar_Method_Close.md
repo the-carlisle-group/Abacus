@@ -1,3 +1,15 @@
-# ProgressBar_Method_Close
+# ProgressBar Close Method
 
-TODO
+Closes the progress bar.
+
+~~~
+R←I Close 0
+~~~
+
+or
+
+~~~
+R←Close I
+~~~
+
+`I` is a progress bar instance. R is `0`.

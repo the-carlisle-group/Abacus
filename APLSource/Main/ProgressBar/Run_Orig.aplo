@@ -1,0 +1,15 @@
+ Run_Orig←{
+     p←New 1⊃⍵
+     _←⍺ A.ShowModal p
+     r←p ⍺⍺{
+         s←((2=≡⍺.Status)/1+⍺.Iteration)⊃⍺.Status
+         c←⍺ Update s
+         c≡'Cancel':1 ⍺.Result
+         c≡'Truncate':2 ⍺.Result
+         ⍺.Result,←⊂⍺ ⍺⍺ ⍵
+         ⍺.Done:0 ⍺.Result
+         ⍺.Iteration=⍺.Iterations-1:0 ⍺.Result
+         ⍺ ∇ ⍵
+     }0⊃⍵
+     r⊣A.DeleteElement p
+ }

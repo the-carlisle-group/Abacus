@@ -1,6 +1,6 @@
  Create←{
      ⍝ ⍺ ←→ Document
-     ⍝ ⍵.Iterator←⍳⍵.Iterations
      ⍝ See New function for argument
-     p⊣Show ⍺ New ⍵
+     p←⍺ New ⍵
+     p⊣Show p
  }

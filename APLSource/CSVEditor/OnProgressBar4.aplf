@@ -1,6 +1,6 @@
  OnProgressBar4←{
      ⍝ A more functional approach to progress bars.
-     ⍝ A determinitic example
+     ⍝ A deterministic example
      d←⍵.Document
      ⍝ We need a function that is called on each iteration,
      ⍝ to do do the work we want to do. In this case, just accumulating the time
@@ -8,10 +8,10 @@
      f←{
          ⍝ ⍺ ←→ Progress Bar
          ⍝ ⍵ ←→ Namesapce
-         d←⎕DL 0.2
-         ⍵.TotalTime+←d
+         t←⎕DL 0.2
+         ⍵.TotalTime+←t
          ⍺.Status←'Total time so far: ',(⍕⍵.TotalTime),' after iteration ',⍕⍺.Iteration
-         d
+         t
      }
      ⍝ We need a namespace (or var! - then no accumulation, but still useful)
      ⍝ that will be the right argument to f.
@@ -21,27 +21,19 @@
      ⍝ The left argument supplied to f is the progress bar instance.
      ⍝ We can use this to update the status, and to inquire about
      ⍝ what iteration we are currently on.
-     ⍝ The result of this function can be anything and is passed
-     ⍝ though
-     ⍝ This gives the programmer the option o
-
-     ⍝ In addition we need a namespace or array argument for the progress bar
-     p←(
-         Title:'Progress Example #4'
-         Iterations:25
-         Truncate:1
-     )
+     ⍝ The result of this function can be anything and is passed through.
      ⍝ That is all we need, and now we can run the function under a progress bar
      ⍝ using the Run operator.
-     ⍝ The right argument must be two things: a suitable argument for f,
-     ⍝ and a suitable argument for #.Abacus.Main.ProgressBar.New (which can be an empty
-     ⍝ vec '' or namepace ():
-     ⍝ RC
-     rc rv←d f A.ProgressBar.Run s p
-     ⍝ rc is either  0 1 2
+     ⍝ First create a new progress bar:
+     p←d A.ProgressBar.New'Progress Example #4' 25 1
+     ⍝ Then use the Run operator:
+     rc rv←p f A.ProgressBar.Run s
+     ⎕←rc
+     ⎕←rv
+     ⍝ rc is either 'Resume' 'Cancel' or 'Truncate'
      ⍝ rv is a vector or results for each completed iteration.
-     ⍝ Note that +/rv should correpsond to s.TotalTime
-     ⍝ This exemplifies two different ways of accumulating results
+     ⍝ Note that in this case +/rv should correpsond to s.TotalTime
+     ⍝ This demonstrates two different ways of accumulating results.
      ⍝ Note that if the operation is truncated, or even canceled,
      ⍝ the results up until the cancelation are available in rv or in s.
      0
