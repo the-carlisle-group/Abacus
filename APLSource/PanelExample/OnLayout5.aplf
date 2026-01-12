@@ -1,4 +1,4 @@
  OnLayout5←{
      p←⍵.Document A.GetElementByClass'Panels'
-     p A.Panels.ReArrange[0 ⋄ ]⍝1 1⍴⊂'red'
+     p A.Panels.SetGridTemplateAreas[1 ⋄ ]⍝1 1⍴⊂'red'
  }

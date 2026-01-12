@@ -8,5 +8,6 @@
      i←s NewItem'Layout 3' '' 'OnLayout3'
      i←s NewItem'Layout 4' '' 'OnLayout4'
      i←s NewItem'Layout 5' '' 'OnLayout5'
+     i←s NewItem'Layout 6' '' 'OnLayout6'
      m
  }

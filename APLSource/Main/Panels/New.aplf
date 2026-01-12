@@ -2,7 +2,7 @@
      ⍺←0
      g←(⍺ A.New'div')⎕NS(
          'Content' ''
-         'GridTemplateAreas'⍬
+         'GridTemplateAreas'(0 0⍴0)
          'GridTemplateRows' ''
          'GridTemplateColumns' ''
          'AutoSize' 0
@@ -10,20 +10,14 @@
          'AutoSizeColumns' 0
          'Resizeable' 0
          'ResizeFactor' 1
-         'Gap' '0'
-         'Padding' '0'
      )A.Default ⍵
      g.class←'Panels'
      g.Class←⎕THIS
      _←Init g
-     s←()
-     s.gap←g.Gap
-     s.padding←g.Padding
-     s.grid_template_rows←g.GTR
-     s.grid_template_columns←g.GTC
-     g.style←A.ComposeInlineStyle s
+     g._grid_template_rows←g.GTR
+     g._grid_template_columns←g.GTC
      c←g.Content
-     c.style←{'grid-area:',⍵}¨g.GridAreas
+     c[⍸~g.Hidden]._grid_area←g.GridAreas
      c.class←c.class,¨'' ' hidden'[g.Hidden]
      ~g.Resizeable:g
      g.tabindex←0

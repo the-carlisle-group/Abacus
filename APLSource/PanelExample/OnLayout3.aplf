@@ -1,4 +1,4 @@
  OnLayout3←{
      p←⍵.Document A.GetElementByClass'Panels'
-     p A.Panels.ReArrange⍉⍪'blue' 'red' 'red'
+     p A.Panels.SetGridTemplateAreas⍉⍪'blue' 'red' 'red'
  }

@@ -1,18 +1,19 @@
 # Panels GridTemplateAreas Property
 
-The GridTemplateAreas property is matrix that graphically specifies
+The GridTemplateAreas property is a matrix that graphically specifies
 how the grid items should be layed out.
 Grid items may be identified by index (just the order they appear in 
-the content) or by id.
+the content) or by id. The index is given in `⎕IO←1`, as 0 is used 
+to indicate an empty grid cell.
 
 For example, if there are 4 elements in the [Content]() property,
 then:
 
 ~~~
      g.GridTemplateAreas←[
-                           0 0 1
-                           2 3 3
-                           2 3 3
+                           1 1 2
+                           3 4 4
+                           3 4 4
                         ]
 ~~~
 

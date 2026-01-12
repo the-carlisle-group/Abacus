@@ -1,0 +1,9 @@
+ New←{
+     ⍺←0
+     d←(⍺ A.New'div')⎕NS(
+         'Content' ''
+         '_display' 'grid'
+         '_gap' '1rem'
+     )A.Default ⍵
+     d
+ }

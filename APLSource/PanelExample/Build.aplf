@@ -10,12 +10,17 @@
      c.id←'red' 'yellow' 'blue' 'green' 'orange'
      q←()
      q.Content←c
-     q.GridTemplateAreas←[
-         0 0 0
-         1 2 3
-         4 4 4]
-     q.Gap←'1rem'
-     q.Padding←'1rem'
+     ⍝q.GridTemplateAreas←[
+⍝         1 1 1
+⍝         2 3 4
+⍝         5 5 5]
+⍝     q.GridTemplateAreas←[
+⍝         1 2 2 3
+⍝     ]
+⍝
+
+     q._gap←'1rem'
+     q._padding←'1rem'
      q.Resizeable←1
      p←m A.Panels.New q
      f←b A.New'footer' 'This is the footer'

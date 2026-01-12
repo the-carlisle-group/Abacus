@@ -1,4 +1,4 @@
- ReArrange←{
+ SetGridTemplateAreas←{
      g←⍺
      g.GridTemplateAreas←⍵
      _←Init g
