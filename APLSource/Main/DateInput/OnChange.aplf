@@ -1,8 +1,13 @@
  OnChange←{
-     d←⍵.CurrentTarget
-     i←⍵.Target
+     c←⍵.CurrentTarget
      n←⊃1⊃⎕VFI ⍵.Value~'-'
-     ⎕←⍕n
-     d.Value←n
-     ⍵ ##.Execute'OnChange'
+     c.Value←n
+     f←c.OnChange
+     0=≢f:0
+     e←⎕NS''
+     e.Event←'Change'
+     e.Component←c
+     e.Document←⍵.Document
+     e.Value←c.Value
+     (⍎f)e
  }

@@ -13,12 +13,13 @@
      p.SourceTie←s
      p.TargetTie←t
      p.Indices←i
-     pb←(
+     pb←⍺ A.ProgressBar.New(
          'Title' 'Assembling columns'
+         ⍝ 'Iterations'(≢n)
          'Truncate' 1
          'Status'n
      )
-     rc rv←⍺ g A.ProgressBar.Run p pb
+     rc rv←pb g A.ProgressBar.Run p
      _←⎕FUNTIE s t
      rc f
  }

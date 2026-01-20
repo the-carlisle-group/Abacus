@@ -1,14 +1,14 @@
  ReadAndWriteBlock←{
      l←⍵.RowLimit
      r←⍵.BlockSize{l=0:⍺ ⋄ ⍺⌊l-⍵}⍵.RowsProcessed
-     r=0:⍺.Done←1
+     r=0:⍺.Exit←1
      o←⍵.Variants
      o,←⊂'Invert' 2
      o,←⊂'Records'r
      v←(⎕CSV⍠o)⍵.CSVTie ⍵.Encoding,(⍵.ColumnLimit>0)/⊂⍵.ColumnLimit⍴1
      ⍝ d←o TrapRead t'',(⍵.ColumnLimit>0)/⊂⍵.ColumnLimit⍴1
      n←≢⊃v
-     n=0:⍺.Done←1
+     n=0:⍺.Exit←1
      v←⍵.MaxColumnWidth{⍺=0:↑⍵ ⋄ w←⌈/≢¨⍵ ⋄ w≤⍺:↑⍵ ⋄ ↑⍺↑¨⍵}¨v
      _←v ⎕FAPPEND¨⍵.DCFTie
      ⍵.Widths⌈←1⊃⍴¨v

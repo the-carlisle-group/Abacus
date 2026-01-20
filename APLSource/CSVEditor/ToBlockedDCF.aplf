@@ -12,12 +12,12 @@
      p.Complete←0
      _←p.Names ⎕FAPPEND p.DCFTie
      f←ReadAndWriteBlock
-     pb←(
+     pb←⍺ A.ProgressBar.New(
          'Title' 'Preprocessing CSV file'
          'Truncate' 1
          'Status' 'Rows read: 0'
      )
-     r←0⊃⍺ f A.ProgressBar.Run p pb
+     r←0⊃pb f A.ProgressBar.Run p
      _←⎕NUNTIE p.CSVTie
      _←⎕FUNTIE p.DCFTie
      ⍝ Should delete if file if cancelled

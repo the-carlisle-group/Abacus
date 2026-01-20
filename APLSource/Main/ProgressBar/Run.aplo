@@ -4,7 +4,8 @@
      ⍝ ⍵ ←→ Suitable argument for ⍺⍺
      _←⍺ Show 0
      r←⍺ ⍺⍺{
-         c←⍺ Update ⍺.Status
+         s←((2=≡⍺.Status)/1+⍺.Iteration)⊃⍺.Status
+         c←⍺ Update s
          c≡'Cancel':c ⍺.Result
          c≡'Truncate':c ⍺.Result
          ⍺.Result,←⊂⍺ ⍺⍺ ⍵

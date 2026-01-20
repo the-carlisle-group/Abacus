@@ -1,5 +1,6 @@
  OnStartup←{
      d←⍵
+     d.Connected←1
      a←d.Application
      _←SetResizeObserver⍨d
      0=≢a.OnStart:0

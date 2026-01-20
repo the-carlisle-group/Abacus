@@ -10,6 +10,7 @@
      d.Style←CollectCSS d
      d.NextId←0
      d.Waiting←0
+     d.Connected←0
      b←GetBody d
      b.oncontextmenu←'return false;'
      t←ToolTip.New''

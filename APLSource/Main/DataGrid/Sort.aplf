@@ -3,10 +3,11 @@
      ~t.ReadOnly:t.Document A.Alert'Sorting is not supported for editable DataGrids.'
      j k←t.ActiveCell
      c←k⊃t.Columns
-     s←×c.SortDirection
-     d←1 ¯1 0[¯1 0 1⍳s]
+     ⍝ s←×c.SortDirection
+     ⍝ d←1 ¯1 0[¯1 0 1⍳s]
+     d←⍵
      c.SortDirection←d×1+⌈/|t.Columns.SortDirection
      t.RowIndices←t ReSort t.RowIndices
      t.Columns.HeaderClass←ComputeHeaderClass t.Columns
-     Refresh t
+     Focus Refresh t
  }

@@ -16,5 +16,6 @@
      d.BrowseFolder←f.Directory
      n←2⊃r
      (('\'=n)/n)←'/'
-     ⍺ A.TextInput.SetValue n
+     _←⍵.Component A.TextInput.SetValue n
+     A.TextInput.FireChangeEvent ⍵.Component
  }

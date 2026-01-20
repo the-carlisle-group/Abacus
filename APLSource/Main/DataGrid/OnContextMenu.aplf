@@ -2,7 +2,10 @@
      NewMenu←##.Menu.New
      NewItem←##.Menu.NewItem
      m←NewMenu''
-     i←m NewItem'Cut' 'Ctrl+X' 'OnCut'
+     i←m NewItem'Sort up' 'Alt+UpArrow' 'OnSortUp'
+     i←m NewItem'Sort down' 'Alt+DownArrow' 'OnSortDown'
+     i←m NewItem'Unsort' 'Alt+LeftArrow' 'OnUnsort'
+     i←m NewItem'Cut' 'Ctrl+X' 'OnCut' 1
      i←m NewItem'Copy' 'Ctrl+C' 'OnCopy'
      i←m NewItem'Paste' 'Ctrl+V' 'OnPaste'
      i←m NewItem'Delete (clear contents)' 'Del' 'OnDelete' 1

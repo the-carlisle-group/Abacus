@@ -5,6 +5,7 @@
          'Label' ''
          'Value' 0
          'Format' 'I10'
+         'OnChange' ''
      )A.Default ⍵
      d.Name←n
      c←'NumberInput'

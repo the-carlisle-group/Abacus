@@ -1,6 +1,7 @@
  SetValue←{
      ⍝ ⍺ ←→ Element (Component)
      ⍝ ⍵ ←→ Value
+     ~A.IsConnected:⍺ InitValue ⍵
      ⍺.Value←⍵
      s←⍺.Format Format ⍵
      i←1⊃⍺.Content

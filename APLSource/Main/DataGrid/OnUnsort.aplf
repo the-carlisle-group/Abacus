@@ -1,0 +1,3 @@
+ OnUnsort←{
+     ⍺.CurrentTarget Sort 0
+ }

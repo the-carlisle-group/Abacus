@@ -1,7 +1,12 @@
  OnPicker←{
      b←⍵.Target
-     e←b.Parent.Parent
-     f←e.OnPicker
+     c←b.Parent.Parent
+     f←c.OnPicker
      0=≢f:0
-     e(⍎f)⍵
+     e←⎕NS''
+     e.Event←'Picker'
+     e.Component←c
+     e.Document←⍵.Document
+     e.Value←c.Value
+     (⍎f)e
  }

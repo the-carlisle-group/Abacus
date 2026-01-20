@@ -1,0 +1,21 @@
+ Bui
+ d←A.NewDocument''
+ b←A.GetBody d
+ h←b A.New'header'
+ h.Document←d
+ mb←h A.Menu.NewMenuBar'BuildMenu'
+ tb←h BuildToolbar 0
+     ⍝ *******************
+ m←b A.New'main'
+ t←m A.Tabs.New''
+ t.OnActivate←A.FQP'OnActivate'
+ t.id←'MainTabControl'
+ f←b A.New'footer'
+ l1←f A.New'h2'
+ l1.id←'FullFileName'
+ l2←f A.New'h2'
+ l2.id←'FileDimensions'
+ d.FileSettings←()
+ d.BrowseFolder←''
+ d
+ }

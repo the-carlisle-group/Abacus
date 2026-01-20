@@ -1,0 +1,11 @@
+ FireChangeEvent←{
+     ⍺←⍵
+     f←⍺.OnChange
+     0=≢f:0
+     e←⎕NS''
+     e.Event←'Change'
+     e.Component←⍺
+     e.Document←⍺.Document
+     e.Value←⍺.Value
+     (⍎f)e
+ }

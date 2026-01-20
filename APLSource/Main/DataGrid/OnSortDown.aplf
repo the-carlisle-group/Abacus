@@ -1,0 +1,3 @@
+ OnSortDown←{
+     ⍺.CurrentTarget Sort ¯1
+ }

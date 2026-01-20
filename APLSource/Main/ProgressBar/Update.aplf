@@ -3,7 +3,7 @@
      ⍝ ⍵ ←→ Message
      ⍝ ← ←→ 'Cancel'|'Resume'|'Truncate'
      p←⍺
-     p.Status←⍵
+     p.Status←(2=≡p.Status)⊃⍵ p.Status
      p.Iteration+←1
      0≠p.UpdatePeriod|p.Iteration:'Resume'
      _←p UpdateStatus ⍵

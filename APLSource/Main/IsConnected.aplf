@@ -1,0 +1,5 @@
+ IsConnected←{
+     ⍝ ⍵ ←→ Element
+     0=⍵.⎕NC'Document':0
+     ⍵.Document.Connected
+ }

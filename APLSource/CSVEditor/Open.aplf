@@ -7,11 +7,11 @@
      ⍝ (('\'=f)/f)←'/'
      (d p)←⍺ ⍵  ⍝ Document, Settings
      rc fn←d ToBlockedDCF p
-     rc=1:1                  ⍝ rc is 0 1 or 2    NOT BOOLEAN!
+     rc≡'Cancel':1                  ⍝ rc is 0 1 or 2    NOT BOOLEAN!
      rc fn2←d ToDCF fn
-     rc=1:1
+     rc≡'Cancel':1
      rc(n v)←d ReadDCF fn2
-     rc=1:1
+     rc≡'Cancel':1
      r←≢0⊃v
      c←≢n
      fmt←{' '~⍨,'CI20'⎕FMT ⍵}
