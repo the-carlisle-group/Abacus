@@ -1,7 +1,7 @@
  OnBasicDialog2←{
      d←⍵.Document
      s←A.FieldSet.New('Format' 'inline')('Border' 0)
-     TextInput←s A.TextInput.New'Text input:'
+     TextInput←s A.TextInput.New'Text input (with autocomplete):'('AutocompleteItems'(#.Abacus.Main.⎕NL ¯3))
      NumericInput←s A.NumberInput.New'Numeric input:' 256 'CI15'
      DateInput←s A.DateInput.New'Date input:' 20261231
      DropListInput←s A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')

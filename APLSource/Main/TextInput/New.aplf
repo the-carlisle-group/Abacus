@@ -18,6 +18,11 @@
      n←d A.New'div'
      i←n A.New'input'
      i.id←d.Name
+
+     ai←()
+     ai.AutoCompleteItems←d.AutocompleteItems
+     _←i A.AutoComplete.Init ai
+
      _←d InitValue d.Value
      0=≢d.OnPicker:d
      b←n A.New'button'd.PickerCaption
