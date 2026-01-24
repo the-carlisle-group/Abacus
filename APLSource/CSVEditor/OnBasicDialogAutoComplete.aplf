@@ -1,0 +1,26 @@
+ OnBasicDialogAutoComplete←{
+     d←⍵.Document
+     s←A.FieldSet.New('Format' 'stacked')('Border' 0)
+     ao←'Bach' 'Beethoven' 'Brahms' 'Mozart' 'Hayden' 'Schubert'
+     TextInput1←s A.TextInput.New'Simple autocomplete:'('Options'ao)
+     ao←(
+         Item:'Bach' 'Beethoven' 'Brahms' 'Mozart' 'Hayden' 'Schubert'
+         Type:'Baroque;' 'Classical' 'Classical' 'Classical' 'Classical' 'Romantic'
+     )
+     TextInput2←s A.TextInput.New'Simple with description:'('Options'ao)
+     ao←()
+     ao.Item←'Parent1' 'Parent2' 'Parent1/Child1' 'Parent1/Child2'
+     ao.Separator←'/'
+     TextInput3←s A.TextInput.New'Hierarchical supplying FQP with / separator:'('Options'ao)
+     ao←()
+     ao.(Item Type)←GetWorkspaceTree2 #
+     TextInput4←s A.TextInput.New'Hierarchical supplying treeview style'('Options'ao)
+     p←⎕NS''
+     p.Title←'Autocomplete in TextInput Component'
+     p.Subtitle←'Various techniques.'
+     p.MainContent←s
+     p.Buttons←'OK' 'Cancel'
+     p.OnClick←'' ''
+     p._width←'60rem'
+     d A.DialogBox.Show p
+ }

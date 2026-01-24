@@ -54,6 +54,6 @@
      v,←⊂n⍴⍬(0 0 0)(255 255 255)(27 255 156)
      c.Value←v
      t.Init←0
-     _←t.Parent A.DataGrid.Resize 1
+     _←t.Parent A.DataGrid.SetColumns c
      t
  }

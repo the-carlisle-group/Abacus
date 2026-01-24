@@ -1,0 +1,11 @@
+ GetWorkspaceTree←{
+     ⍝ ⍵←→Namespace
+     ⍝ ← ←→ FQN Type suitable for autocomplete
+     ⌽↓⍉↑⊃,/{
+         n←⍕⍵
+         z←⊂'namespace'n
+         z,←'variable'∘{⍺ ⍵}¨n∘,¨'.',¨⍵.⎕NL ¯2
+         z,←'function'∘{⍺ ⍵}¨n∘,¨'.',¨⍵.⎕NL ¯3
+         z,'operator'∘{⍺ ⍵}¨n∘,¨'.',¨⍵.⎕NL ¯4
+     }¨refs ⍵
+ }

@@ -1,12 +1,23 @@
  Init←{
-     i←⍺
-     ⎕THIS.A←##
-     a←⍵.AutoCompleteItems
-     ⍝ 0=≢a:0
-     i.AutoCompleteItems←a
-     i.AutoCompleteElement←0
-     i.TriggerKeys←(⊂'Backspace'),∪' '~⍨∊a
-     i.autocomplete←'off'
-     i.Onkeydown←A.FQP'OnKeyDown'
+     ⍝ ⍺ ←→ <input> Element
+     ⍝ ⍵ ←→ Options vector or space with Item, Depth, Type
+     e←⍺
+     w←{9=⎕NC'⍵':⍵ ⋄ (Item:⍵)}⍵
+     n←≢w.Item
+     d←2=w.⎕NC'Depth'
+     p←⎕NS(Type:n⍴⊂'' ⋄ Separator:'.' ⋄ )w
+     s←p.Separator
+     p.Name←{d:⍵ ⋄ {⊃⌽s(≠⊆⊢),⍵}¨⍵}p.Item
+     p.FQN←{~d:⍵.Item ⋄ s ToFQN ⍵.Depth ⍵.Item}p
+     p.Depth←{d:⍵.Depth ⋄ +/¨s=⍵.Item}p
+     g←p.Depth{0∧.=⍺:⍋⍵ ⋄ ⍳≢⍺}p.Name
+     p.Name←p.Name[g]
+     p.Type←p.Type[g]
+     p.FQN←p.FQN[g]
+     p.Desc←p.Name{⍺,(⍵≢'')/,'; ',⍵}¨p.Type
+     e.Options←p
+     e.TriggerKeys←(⊂'Backspace'),p.Separator,∪' '~⍨∊p.Name
+     e.autocomplete←'off'
+     e.Onkeydown←A.FQP'OnKeyDown'
      0
  }

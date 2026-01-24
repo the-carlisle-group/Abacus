@@ -1,6 +1,7 @@
  OnKeyDown←{
      k←⍵.Key
      e←⍵.CurrentTarget ⍝ Input element
+     p←e.Options
      k≡'Shift':0
      ck←⍵.CtrlKey≡⊂'true'
      l←GetAutoCompleteElement e
@@ -19,11 +20,14 @@
      ~(⊂k)∊,¨e.TriggerKeys:Clear e
      rc st←GetStartText ⍵
      rc:Clear e
-     i←e.AutoCompleteItems
-     b←((≢st)↑¨i)∊⊂st
+     n←≢st
+     d←+/st=p.Separator
+     b←(d=p.Depth)∧(⊂st)≡¨n↑¨p.FQN
+
+     ⍝ b←((≢st)↑¨i)∊⊂st
      ~∨/b:Clear e
      l.(Mask StartText)←b st
-     c←##.New¨{'div'⍵}¨b/i
+     c←##.New¨{'div'⍵}¨b/p.Desc
      c.id←⍵.Document ##.NextIds≢c
      c.class←⊂''
      (0⊃c).class←'active-item'

@@ -2,7 +2,7 @@
      e←⍵.Target
      l←e.AutoCompleteElement
      b←ActiveItemMask l
-     v←(≢l.StartText)↓⊃b/l.Mask/e.AutoCompleteItems
+     v←(≢l.StartText)↓⊃b/l.Mask/e.Options.FQN
      t←⍵.Value
      s←⍵.SelectionStart
      t2←(s↑t),v,s↓t

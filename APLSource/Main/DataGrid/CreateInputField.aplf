@@ -19,10 +19,8 @@
      i.OriginalValue←v
      i.Oninput←A.FQP'OnInput'
      i.Onblur←A.FQP'OnInputBlur'
-     ai←⎕NS''
-     ai.AutoCompleteItems←(1⊃t.ActiveCell)⊃t.Columns.Options
      i.Document←⍵.Document
-     _←i ##.AutoComplete.Init ai
+     _←i ##.AutoComplete.Init(1⊃t.ActiveCell)⊃t.Columns.Options
      e←A.New'div'
      e.id←'grid-error'  ⍝ CSS
      e.class←'hidden'   ⍝

@@ -1,0 +1,23 @@
+ ToFQN←{
+     ⍝ ⍺ ←→ Separator
+     ⍝ ⍵ ←→ Depth Items
+     ⍺←'.'
+     s←⍺
+     d i←⍵
+     0=≢i:i
+     ,∘⊃¨{⍺,s,⍵}/¨i{
+         ⍵↑¨↓(' ',⍺)⌷⍨⊂⍵{
+             (⍺∘.≥⍵)×⌈⍀(1+⍳⍴⍺)×[0]⍺∘.=⍵
+         }1+⍳⌈/⍵
+     }1+d-⌊/d
+⍝ ⍵ depth vector
+⍝ ⍺ atomic names
+⍝ ← fully qualified names
+⍝ 'one' 'two 'three' f00 0 1 0
+⍝ 1 0   1   1 0 ⌈ 1 0   1 0   1 0
+⍝ 0 1 × 2 → 0 2 ⍀ 1 2 × 1 1 → 1 2
+⍝ 1 0   3   3 0   3 2   1 0   3 0
+⍝ 'one' 'one.two' 'three'
+
+⍝ ((⊂''),⍺) can just be (' ',⍺)
+ }

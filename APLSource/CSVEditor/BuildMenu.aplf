@@ -22,6 +22,7 @@
      i←s NewItem'Alert box' '' 'OnAlertBox'
      i←s NewItem'Prompt box' '' 'OnPromptBox'
      i←s NewItem'Confirm box' '' 'OnConfirmBox'
+     i←s NewItem'Autocomplete' '' 'OnBasicDialogAutoComplete'
      i←s NewItem'Basic dialog' '' 'OnBasicDialog'
      i←s NewItem'Basic dialog 2' '' 'OnBasicDialog2'
      i←s NewItem'Basic dialog 3' '' 'OnBasicDialog3'

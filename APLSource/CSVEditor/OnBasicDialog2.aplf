@@ -1,7 +1,16 @@
  OnBasicDialog2←{
      d←⍵.Document
      s←A.FieldSet.New('Format' 'inline')('Border' 0)
-     TextInput←s A.TextInput.New'Text input (with autocomplete):'('AutocompleteItems'(#.Abacus.Main.⎕NL ¯3))
+     ⍝ ao←'#' '#.One' '#.One.One' '#.One.Two' '#.One.Three' '#.Two' '#.Two.One'
+     ⍝ ao←'#' '#.One' '#.Two' '#.One.One' '#.One.Two' '#.One.Three' '#.Two.One'
+     ⍝ ao←#.Abacus.Main.⎕NL ¯3
+     ao←()
+     ao.(Item Type)←GetWorkspaceTree #
+     ⍝ ao.Item←'#' 'One' 'One' 'Two' 'Three' 'Two' 'One'
+     ⍝ ao.Depth←0 1 2 2 2 1 2
+     ⍝ ao.Type←(≢ao.Depth)⍴⊂'namespace'
+     ⍝ ao.Separator←'/'
+     TextInput←s A.TextInput.New'Text input (with autocomplete):'('Options'ao)
      NumericInput←s A.NumberInput.New'Numeric input:' 256 'CI15'
      DateInput←s A.DateInput.New'Date input:' 20261231
      DropListInput←s A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')
