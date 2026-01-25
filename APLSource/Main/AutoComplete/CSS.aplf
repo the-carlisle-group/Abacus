@@ -1,24 +1,34 @@
  CSS←{
      Rule←##.NewRule
      s←Rule'.auto-complete'
+     s.list_style←'none'
      s.z_index←9
-     s.color←'white'
+     ⍝ s.color←'white'
      s.background_color←'var(--background-color)'
-     ⍝ s.box_sizing←'border-box'
      s.border←'.5px solid gray'
      s.border_radius←'10px'
      s.max_height←'20em'
      s.min_width←'6em'
      s.position←'fixed'
      s.overflow←'hidden' ⍝ 'auto'
-     s.padding←'1em'
+     s.padding←'.5em'
+     ⍝ *********************************************
      r←s Rule':empty'
      r.display←'none'
-     r←s Rule'div'
-     ⍝ r.padding←'.1rem .2rem'
-     ⍝ r.padding←'.2em' '1em' '.2em' '1em'
+     ⍝ *********************************************
+     r←s Rule'li'
+     r.padding←'2px'
+     r.border_radius←'4px'
+     ⍝ *********************************************
      r←s Rule'.active-item'
      r.color←'yellow'
      r.background_color←#.Abacus.CSS.GrayScale 30
+     ⍝ *********************************************
+     r←s Rule'li>span:nth-child(2)'
+     r.padding_left←'1em'
+     r.font_family←'var(--system-font-family)'
+     r.font_style←'italic'
+     r.color←#.Abacus.CSS.GrayScale 80
+     ⍝ *********************************************
      ##.UnNestCSS s
  }

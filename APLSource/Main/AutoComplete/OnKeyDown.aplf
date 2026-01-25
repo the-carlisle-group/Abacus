@@ -23,17 +23,15 @@
      n←≢st
      d←+/st=p.Separator
      b←(d=p.Depth)∧(⊂st)≡¨n↑¨p.FQN
-
-     ⍝ b←((≢st)↑¨i)∊⊂st
      ~∨/b:Clear e
      l.(Mask StartText)←b st
-     c←##.New¨{'div'⍵}¨b/p.Desc
-     c.id←⍵.Document ##.NextIds≢c
+     c←{{A.New'li'⍵}{A.New'span'⍵}¨⍵}¨b/↓⍉↑p.Name p.Type
+     c.id←⍵.Document A.NextIds≢c
      c.class←⊂''
      (0⊃c).class←'active-item'
      _←l SetPosition ⍵
-     _←l ##.SetProperty'style.font'⍵.Font
-     _←l ##.SetInnerHTML c
+     _←l A.SetProperty'style.font'⍵.Font
+     _←l A.SetInnerHTML c
      t←⍵.CurrentTarget A.GetNearest'table'
      0=t:0
      t.AutoCompleteActive←1

@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Parent (Body)
      ⍺←0
      ⎕THIS.A←##
-     a←⍺ A.New'div'
+     a←⍺ A.New'ul'
      a.class←'auto-complete'
      a
  }
