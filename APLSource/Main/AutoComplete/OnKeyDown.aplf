@@ -1,5 +1,7 @@
  OnKeyDown←{
+
      k←⍵.Key
+     ⎕←'Key: ',k
      e←⍵.CurrentTarget ⍝ Input element
      p←e.Options
      k≡'Shift':0
@@ -14,7 +16,7 @@
      a∧k≡'ArrowRight':StopNextKeyStroke ⍵⊣SelectItem ⍵   ⍝ Not like VS Code
      ⍝ a∧k≡'Enter':StopNextKeyStroke ⍵⊣1 SelectItem ⍵
      a∧k≡'Tab':StopNextKeyStroke ⍵⊣1 SelectItem ⍵
-     a∧k≡'Escape':StopNextKeyStroke ⍵⊣1 Clear e
+     a∧k≡'Escape':e A.ExecuteOnElement'stopPropagation()'⊣StopNextKeyStroke ⍵⊣1 Clear e
      a∧k≡'ArrowDown':ResetCursor ⍵⊣1 OnArrowUpDown ⍵
      a∧k≡'ArrowUp':ResetCursor ⍵⊣¯1 OnArrowUpDown ⍵
      ~(⊂k)∊,¨e.TriggerKeys:Clear e

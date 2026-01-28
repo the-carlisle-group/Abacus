@@ -1,13 +1,13 @@
  Sort←{
-     t←⍺
-     ~t.ReadOnly:t.Document A.Alert'Sorting is not supported for editable DataGrids.'
-     j k←t.ActiveCell
-     c←k⊃t.Columns
-     ⍝ s←×c.SortDirection
-     ⍝ d←1 ¯1 0[¯1 0 1⍳s]
-     d←⍵
-     c.SortDirection←d×1+⌈/|t.Columns.SortDirection
-     t.RowIndices←t ReSort t.RowIndices
-     t.Columns.HeaderClass←ComputeHeaderClass t.Columns
-     Focus Refresh t
+     ⍝ ⍺ ←→ Table
+     ⍝ ⍵ ←→ Sort Direction ¯1, 0, 1
+     ~⍺.SortRows:0
+     ⍺.ReadOnly:⍺ SortReadOnly ⍵
+     j k←⍺.ActiveCell
+     c←⍺.Columns
+     c.SortDirection←⍵×k=⍳≢c
+     g←⍺ ReSort ⍺.RowIndices
+     c.Value←g∘(⊂⍛⌷)¨c.Value
+     c.HeaderClass←ComputeHeaderClass c
+     Focus Refresh ⍺
  }

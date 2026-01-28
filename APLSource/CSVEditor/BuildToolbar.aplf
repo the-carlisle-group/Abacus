@@ -2,7 +2,9 @@
      h←⍺
      ⍝ ************* Try out a toolbar
      b1←A.Button.New('Name' 'SortDown')('Caption' 'Down')('Icon' 'SortDescending')('OnClick' 'OnDropDownOp1')
+     b1.ToolTip←'This is the sort down button'
      b11←A.Button.New('Name' 'SortUp')('Caption' 'Up')('Icon' 'SortAscending')('OnClick' 'OnDropDownOp1')
+     b11.ToolTip←'This is the sort up button'
      b2←A.Button.New('Name' 'SortUp2')('Icon' 'SortAscending')
      b3←A.Button.New('Icon' 'Search')('OnClick' 'OnDropDownOp1')
      b4←A.Button.New⊂'Icon' 'PDFFile'

@@ -2,7 +2,12 @@
 
 Boolean scalar. Determines if the user may sort the rows of the grid.
 
-Only applicable if [ReadOnly]() is `1`.
+If [ReadOnly]() is `1`, sorting is virtual. The `Value` properties
+of [DataGridColumn]() objects are not changed.
 
-The [SortDirection] property of the [DataGridolumn]() object
-may be used to specify an initial order. 
+If `ReadOnly` is `0`, then the sorting is physical, 
+and `Value` properties of the `DataGridColumn` objects are changed.
+
+The [SortDirection]() property of the [DataGridColumn]() object
+may be used to specify an initial order,
+or to query the sort order. 

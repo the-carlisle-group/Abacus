@@ -4,5 +4,6 @@
      ⎕THIS.A←##
      a←⍺ A.New'ul'
      a.class←'auto-complete'
+     ⍝ a.popover←'auto'
      a
  }

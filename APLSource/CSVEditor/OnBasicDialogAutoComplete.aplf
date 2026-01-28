@@ -15,6 +15,14 @@
      ao←()
      ao.(Item Type)←GetWorkspaceTree2 #
      TextInput4←s A.TextInput.New'Hierarchical supplying treeview style'('Options'ao)
+
+     ao←()
+     ao.Item←'#.Abacus' '#.Abacus.Main' '#.Exigo' '#.Exigo.Main'
+     TextInput5←s A.TextInput.New'Simple autocomplete:'('Options'ao)
+
+
+
+
      p←⎕NS''
      p.Title←'Autocomplete in TextInput Component'
      p.Subtitle←'Various techniques.'

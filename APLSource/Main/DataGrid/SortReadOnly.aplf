@@ -1,0 +1,11 @@
+ SortReadOnly←{
+     ⍝ ⍵←Sort Direction ¯1, 0, 1
+     t←⍺
+     j k←t.ActiveCell
+     c←k⊃t.Columns
+     d←⍵
+     c.SortDirection←d×1+⌈/|t.Columns.SortDirection
+     t.RowIndices←t ReSort t.RowIndices
+     t.Columns.HeaderClass←ComputeHeaderClass t.Columns
+     Focus Refresh t
+ }

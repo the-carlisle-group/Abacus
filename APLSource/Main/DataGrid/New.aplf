@@ -8,20 +8,20 @@
          'ActiveCell'(0 0)
          'WindowIndex'(0 0)
          ⍝ Only Applicable if ReadOnly←0
-         'InsertRows' 1
-         'DeleteRows' 1
-         'InsertColumns' 1
-         'DeleteColumns' 1
-         'MoveRows' 1
-         'MoveColumns' 1
-         'RenameColumns' 1
+         'InsertRows' 1         ⍝ Can
+         'DeleteRows' 1         ⍝ Can
+         'InsertColumns' 1      ⍝ Can
+         'DeleteColumns' 1      ⍝ Can
+         'MoveRows' 1           ⍝ Can
+         'MoveColumns' 1        ⍝ Can
+         'RenameColumns' 1      ⍝ Can
          'RowMinimum' 10        ⍝ Non negative integer
          'CustomColumnInserts'⍬
          ⍝ Only Applicable if ReadOnly←1
-         'FilterRows' 1
-         'SortRows' 1
-         'FilterColumns' 1
-         'SortColumns' 1        ⍝ Boolean
+         'FilterRows' 1         ⍝ Can
+         'SortRows' 1           ⍝ Can
+         'FilterColumns' 1      ⍝ Can
+         'SortColumns' 1        ⍝ Can Boolean
          'RowMask' 1
          'DisplayColumns' ''
          ⍝ Always applicable:

@@ -19,5 +19,6 @@
      e.TriggerKeys←(⊂'Backspace'),p.Separator,∪' '~⍨∊p.Name
      e.autocomplete←'off'
      e.Onkeydown←A.FQP'OnKeyDown'
+     ⍝ e.StopPropagation←⊂'keydown' 'Escape'
      0
  }
