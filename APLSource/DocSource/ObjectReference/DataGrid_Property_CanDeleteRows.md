@@ -1,6 +1,6 @@
-# DataGrid DeleteRows Property
+# DataGrid CanDeleteRows Property
 
-Boolean scalar. Allow or disallow to delete rows. The default is `1`.
+Boolean scalar. Allow or disallow deleteing rows. The default is `1`.
 
 This property only applies if ReadOnly is `0`.
 If ReadOnly is `1`, rows may not be deleted.

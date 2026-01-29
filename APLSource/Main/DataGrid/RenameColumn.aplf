@@ -2,7 +2,7 @@
      t←⍵
      t.ReadOnly:0
      HandleInput t:0
-     ~t.RenameColumns:0
+     ~t.CanRenameColumns:0
      c←(1⊃t.ActiveCell)⊃t.Columns
      ~c.CanRename:0
      p←⎕NS''

@@ -1,7 +1,7 @@
  Sort←{
      ⍝ ⍺ ←→ Table
      ⍝ ⍵ ←→ Sort Direction ¯1, 0, 1
-     ~⍺.SortRows:0
+     ~⍺.CanSortRows:0
      ⍺.ReadOnly:⍺ SortReadOnly ⍵
      j k←⍺.ActiveCell
      c←⍺.Columns

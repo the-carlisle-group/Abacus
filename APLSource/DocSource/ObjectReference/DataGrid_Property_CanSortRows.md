@@ -1,4 +1,4 @@
-# DataGrid SortRows Property
+# DataGrid CanSortRows Property
 
 Boolean scalar. Determines if the user may sort the rows of the grid.
 

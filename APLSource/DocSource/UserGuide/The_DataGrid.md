@@ -54,14 +54,14 @@ This sets the `Columns` property and reinitializes the grid.
 ## The ReadOnly Property
 
 The [ReadOnly]() property fundamentally determines how the DataGrid operates,
-and controls the applicabily of many other properties.
+and controls the applicability of many other properties.
 When ReadOnly is `0`, the grid supports in-cell editing, cut and paste,
 inserting and deleting rows and columns, and moving rows and columns.
 
 While these features are supported when ReadOnly is `0`,
 they may be restricted by specifying other properties of the DataGrid
 and DataGridColumn objects. For example with ReadOnly set to `0` and
-[DeleteColumns]() set `0`,  you can have an editable grid
+[CanDeleteColumns]() set `0`,  you can have an editable grid
 where the user cannot delete columns. 
 
 All of these changes affect the [Columns]() property of the DataGrid,

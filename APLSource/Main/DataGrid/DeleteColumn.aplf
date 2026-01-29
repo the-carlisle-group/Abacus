@@ -1,7 +1,7 @@
  DeleteColumn←{
      t←⍵
      t.ReadOnly:0
-     ~t.DeleteColumns:0
+     ~t.CanDeleteColumns:0
      i←1⊃t.ActiveCell
      c←i⊃t.Columns
      ~c.CanDelete:0

@@ -2,7 +2,7 @@
      t←⍵
      t.ReadOnly:0
      HandleInput t:0
-     ~t.MoveRows:0
+     ~t.CanMoveRows:0
      i←⊃t.ActiveCell
      i=¯1+⊃t.DataSize:0
      k←i,i+1

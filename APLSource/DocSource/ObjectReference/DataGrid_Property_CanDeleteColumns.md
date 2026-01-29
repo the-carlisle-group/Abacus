@@ -1,4 +1,4 @@
-# DataGrid DeleteColumns Property
+# DataGrid CanDeleteColumns Property
 
 Boolean scalar. Allow or disallow column deletion. The default is `1`.
 

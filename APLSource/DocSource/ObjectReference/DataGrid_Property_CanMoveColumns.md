@@ -1,4 +1,4 @@
-# DataGrid MoveColumns Property
+# DataGrid CanMoveColumns Property
 
 Boolean scalar. Allow or disallow moving columns. The default is `1`.
 

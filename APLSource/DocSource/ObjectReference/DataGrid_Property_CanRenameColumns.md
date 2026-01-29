@@ -1,4 +1,4 @@
-# DataGrid RenameColumns Property
+# DataGrid CanRenameColumns Property
 
 Boolean scalar. Allow or disallow column renaming. The default is `1`.
 

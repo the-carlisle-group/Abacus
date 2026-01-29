@@ -1,7 +1,7 @@
  InsertColumn←{
      t←⍵
      t.ReadOnly:0
-     ~t.InsertColumns:0
+     ~t.CanInsertColumns:0
      i←1⊃t.ActiveCell
      c←⎕NS i⊃t.Columns
      c.Name,←'_Copy'

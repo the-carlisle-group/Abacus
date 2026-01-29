@@ -1,4 +1,4 @@
-# DataGrid InsertColumns Property
+# DataGrid CanInsertColumns Property
 
 Boolean scalar. Allow or disallow column insertion. Default to `1`.
 
