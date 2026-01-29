@@ -1,8 +1,9 @@
  ComputeWidths←{
+     ⍝ ⍵ ←→ User supplied
      ⍝ This needs major work
-     ⍝ Also, allow explicity setting width in Column space
      t←⍺
      r←4+2×1<≢⊃t.Columns.HeaderValues
-     c←r,12⌈1⊃¨2↑¨⍴¨t.Columns.Value
-     c×t.FontSize
+     c←t.FontSize×r,12⌈1⊃¨2↑¨⍴¨t.Columns.Value
+     w←0,⍵
+     w+(w=0)×c
  }

@@ -21,7 +21,7 @@
      _←g ##.SetDynamicCSS DynamicCSS t
      t.DataSize←≢¨t.RowIndices t.ColumnIndices
      c.MaxLength←1⊃¨2↑¨⍴¨c.Value
-     a.Width←t ComputeWidths 0
+     a.Width←t ComputeWidths t.Columns.Width
      a.ColumnTitle←(t.HeaderRowTitles),c.HeaderValues
      t.FixedColumns←t.RowNumbers+t.FreezeColumns
      t.WindowIndex←0,t.FreezeColumns
