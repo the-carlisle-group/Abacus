@@ -1,0 +1,6 @@
+ OnToggle←{
+     a←⍵.CurrentTarget
+     a.Active←⍵.NewState≡'open'
+     a.Active:0
+     a A.SetInnerHTML''
+ }

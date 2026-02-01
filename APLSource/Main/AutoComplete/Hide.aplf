@@ -1,0 +1,4 @@
+ Hide←{
+     ⍝ ⍵ ←→ AutoComplete Element
+     ⍵ A.ExecuteOnElement'hidePopover()'
+ }

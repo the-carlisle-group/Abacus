@@ -5,7 +5,6 @@
      t.EntryError←0
      ⍝ t.tabindex←0 ⍝ NOT USED?
      t.CellMode←0   ⍝ 0←→ReadyMode, 1←→EnterMode, 2←→EditMode
-     t.AutoCompleteActive←0
      t.Changed←0
      t.LastChangeTime←2 ⎕DT⊂⎕TS
      t.Onclick←A.FQP'OnClick'
@@ -22,7 +21,6 @@
      t.Selection←⍬
      t.SelectType←'Cell'
      t.SelectInProgress←0
-     t.IgnoreNextKey←0
      t.FontSize←18
      t.Init←0
      t

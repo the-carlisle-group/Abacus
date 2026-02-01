@@ -1,12 +1,12 @@
  SelectItem←{
      e←⍵.Target
-     l←e.AutoCompleteElement
-     b←ActiveItemMask l
+     l←⍵.Document.AutoComplete
+     b←l.Content.class∊⊂'active-item'
      v←(≢l.StartText)↓⊃b/l.Mask/e.Options.FQN
      t←⍵.Value
      s←⍵.SelectionStart
      t2←(s↑t),v,s↓t
-     _←e ##.SetValue t2
+     _←e A.SetValue t2
      _←e SetCursor s+≢v
-     Clear e
+     Hide l
  }

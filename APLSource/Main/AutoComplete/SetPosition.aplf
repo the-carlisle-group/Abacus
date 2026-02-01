@@ -10,7 +10,7 @@
      f←'px',⍨⍕
      t←f top
      l←f pl+left+cw×ss+2×nb
-     _←e ##.SetProperty'style.top't
-     _←e ##.SetProperty'style.left'l
+     _←e A.SetProperty'style.top't
+     _←e A.SetProperty'style.left'l
      0
  }

@@ -1,9 +1,11 @@
  New←{
      ⍝ ⍺ ←→ Parent (Body)
      ⍺←0
-     ⎕THIS.A←##
      a←⍺ A.New'ul'
+     a.Active←0
+     a.StopPropagation←0
      a.class←'auto-complete'
-     ⍝ a.popover←'auto'
+     a.popover←'auto'
+     a.Ontoggle←A.FQP'OnToggle'
      a
  }

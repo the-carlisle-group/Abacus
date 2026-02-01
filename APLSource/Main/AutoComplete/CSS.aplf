@@ -2,8 +2,7 @@
      Rule←##.NewRule
      s←Rule'.auto-complete'
      s.list_style←'none'
-     s.z_index←9
-     ⍝ s.color←'white'
+     s.color←'white'
      s.background_color←'var(--background-color)'
      s.border←'.5px solid gray'
      s.border_radius←'10px'
@@ -12,9 +11,6 @@
      s.position←'fixed'
      s.overflow←'hidden' ⍝ 'auto'
      s.padding←'.5em'
-     ⍝ *********************************************
-     r←s Rule':empty'
-     r.display←'none'
      ⍝ *********************************************
      r←s Rule'li'
      r.padding←'2px'

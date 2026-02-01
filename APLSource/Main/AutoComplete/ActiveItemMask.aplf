@@ -1,6 +1,0 @@
- ActiveItemMask←{
-     ⍝ ⍵ ←→ Autocomplete Element
-     ⍝ ← ←→ Boolean mask marking active item
-     e←AutoCompleteElements ⍵
-     e.class∊⊂'active-item'
- }

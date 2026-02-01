@@ -8,7 +8,6 @@
          'OnClick' ''
          'OnClose' ''
      )A.Default ⍵
-     a←d A.AutoComplete.New''
      d.Document←⍺
      d.Buttons←⊆d.Buttons
      d.OnClick←(≢d.Buttons)⍴⊆d.OnClick

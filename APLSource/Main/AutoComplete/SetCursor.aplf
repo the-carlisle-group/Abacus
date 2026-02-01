@@ -2,6 +2,6 @@
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ Start [End]
      s e←⍕¨2⍴⍵
-     _←⍺ ##.SetProperty'selectionStart's
-     ⍺ ##.SetProperty'selectionEnd'e
+     _←⍺ A.SetProperty'selectionStart's
+     ⍺ A.SetProperty'selectionEnd'e
  }

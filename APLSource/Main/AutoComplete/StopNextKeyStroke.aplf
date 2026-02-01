@@ -1,7 +1,0 @@
- StopNextKeyStroke←{
-     e←⍵.CurrentTarget
-     t←e A.GetNearest'table'
-     t=0:0
-     t.IgnoreNextKey←1
-     0
- }

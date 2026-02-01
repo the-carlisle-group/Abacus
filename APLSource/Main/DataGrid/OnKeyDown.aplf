@@ -1,7 +1,8 @@
  OnKeyDown←{
      t←⍵.CurrentTarget
-     t.IgnoreNextKey:t.IgnoreNextKey←0
-     t.AutoCompleteActive:0
+     a←⍵.Document.AutoComplete
+     a.Active:0
+     a.StopPropagation:a.StopPropagation←0
      m←t.CellMode
      k←⍵.Key
      ⍝ ⎕←⍵.Key

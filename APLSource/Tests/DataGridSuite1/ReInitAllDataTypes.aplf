@@ -14,7 +14,7 @@
      (1⊃c).Options←'Alabama' 'New Jersey' 'New Hamshire' 'New York' 'California' 'Nevada'
      (2⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach'
      (3⊃c).Options←'Bacon' 'Ham' 'Sausage' 'Cheese' 'Peppers' 'Onions' 'Spinach' 'toDate' 'toChar' 'toNumeric'
-     (4⊃c).OnValidate←'#.Abacus.Tests.DataGridSuite1.OnValidate'
+     ⍝ (4⊃c).OnValidate←'#.Abacus.Tests.DataGridSuite1.OnValidate'
      (2⊃⌽c).FormatString←'F20.2'
      (2⊃⌽c).Null←⎕NULL
      (6⊃c).FormatString←'Q< mb>K¯6CF12.2'
