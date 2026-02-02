@@ -1,0 +1,5 @@
+ OnToggle←{
+     a←⍵.CurrentTarget
+     ⍵.NewState≡'open':0
+     A.DeleteElement a
+ }

@@ -4,7 +4,7 @@
      s.list_style←'none'
      s.color←'white'
      s.background_color←'var(--background-color)'
-     s.border←'.5px solid gray'
+     s.border←'1px solid gray'
      s.border_radius←'10px'
      s.max_height←'20em'
      s.min_width←'6em'

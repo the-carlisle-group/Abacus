@@ -1,6 +1,5 @@
  OnKeyDown←{
      k←⍵.Key
-     ⍝ ⎕←'Key: ',k
      e←⍵.CurrentTarget ⍝ Input element
      p←e.Options
      k≡'Shift':0
@@ -12,9 +11,8 @@
      (~a)∧k≡'ArrowUp':1 History ⍵
      ⍝ ck∧k≡'Enter':(⍎e.OnCtrlEnter)⍵ ⍝ WHERE DID WE USE THIS?
      a∧k≡'ArrowRight':SelectItem ⍵    ⍝ Not like VS Code
-     ⍝ a∧k≡'Enter':StopNextKeyStroke ⍵⊣1 SelectItem ⍵
+     ⍝a∧k≡'Enter':Hide l
      a∧k≡'Tab':SelectItem ⍵
-     ⍝ a∧k≡'Escape':StopNextKeyStroke ⍵  ⍝ ⊣1 Clear e
      a∧k≡'ArrowDown':ResetCursor ⍵⊣1 OnArrowUpDown ⍵
      a∧k≡'ArrowUp':ResetCursor ⍵⊣¯1 OnArrowUpDown ⍵
      ~(⊂k)∊,¨e.TriggerKeys:Hide l

@@ -7,10 +7,20 @@
      b[0]∨←~∨/b
      i.class←'' 'sel-item'[b]
      d←p.Context.Document
-     _←p.Context.Target A.SetAnchorName'--pick-list'
+     ⍝ _←p.Context.Target A.SetAnchorName'--pick-list'
      b←A.GetBody d
      _←d A.SetDefaultId A.Elements p
      _←b A.AppendChild p
-     _←p A.ExecuteOnElement'showPopover()'
+
+     id←p.Context.Target.id
+     ⍝_←p A.SetStyle'positionArea' 'bottom span-right'
+     _←p A.ExecuteOnElement'showPopover({source:document.getElementById("',id,'")})'
+
+
+     ⍝ _←p A.ExecuteOnElement'showPopover()'
+
+
+
+
      ##.SetFocus p
  }

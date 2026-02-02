@@ -3,19 +3,24 @@
      ⍝ ************************
      s←Rule'.pick-list'
      s.list_style←'none'
-     s.border_radius←'.5em'
      s.font_family←'Arial'
      s.font_size←'1em'
      s.text_wrap←'nowrap'
-     s.position_anchor←'--pick-list'
-     s.inset_area←'bottom'
+     s.color←'white'
+     s.background_color←'var(--background-color)'
+
+     s.border←'1px solid gray'
+     s.border_radius←'10px'
+
+     s.position_area←'bottom span-right'
      s.position_try_options←'flip-block, flip-inline, flip-block flip-inline'
      ⍝ ************************
      r←s Rule'li'
      r.padding←'.5em'
      ⍝ *********************************
      r←s Rule'.sel-item'
-     r.background_color←'red'
+     r.color←'yellow'
+     r.background←'gray'
      ⍝ *******************************
      ##.UnNestCSS s
  }

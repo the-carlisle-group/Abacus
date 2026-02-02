@@ -7,5 +7,6 @@
      c.Onkeydown←A.FQP'OnKeyDown'
      c.Onclick←A.FQP'SelectIt'
      c.Onmouseover←A.FQP'OnMouseOver'
+     c.Ontoggle←A.FQP'OnToggle'
      c
  }

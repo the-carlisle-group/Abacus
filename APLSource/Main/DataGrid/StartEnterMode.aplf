@@ -1,12 +1,12 @@
  StartEnterMode←{
      ⍝ ⍺ ←→ Starting text
      ⍝ ⍵ ←→ table
+     k←⍺.Key
      t←⍵
+     ct←(1⊃t.ActiveCell)⊃t.Columns.Type
+     ct≡'CheckBox':0
+     ct≡'Select':⍺ ShowPickList t
      t.CellMode←1
-     ⍝ ⍺ CreateInputField ⍵
-     ⍝ Probably need this for autocomplete
-     ⍝ But could be problematic to further fire events
-     ⍝ that have call backs in APL... messy
-     i←''CreateInputField ⍵
-     i A.FireKeyDownOnInput ⍺
+     i←''CreateInputField t
+     i A.FireKeyDownOnInput k
  }
