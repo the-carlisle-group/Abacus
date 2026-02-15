@@ -1,5 +1,8 @@
 > Take care of the code, be gentle to the computer, and make beautiful stuff on your screens. -- Håkon Wium Lie 
 
+
+> We make software the old-fashioned way, we write it.
+
 # Abacus UI
 
 > November 23, 2025: This site is under construction. We have done just enough CSS to make it not entirely heinous. The architecture is minimal. We are focused on adding content, and will return to the looks and functionality in the future. 

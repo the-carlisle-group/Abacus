@@ -8,7 +8,9 @@
      r.margin←0
      r.padding←0
      r.box_sizing←'border-box'
+
      r.outline←'none'
+
      ⍝ Flex Containers
      r←s Rule'body, main, .tabs, .flex'
      r.display←'flex'
@@ -58,5 +60,14 @@
      ⍝r.width←'2rem'
      ⍝r.height←'2rem'
      ⍝ ***************************
+
+     ⍝
+     r←s Rule'.aui-IconButton>svg'
+     r.height←'48px'
+     r.width←'auto'
+
+
+
+
      s
  }

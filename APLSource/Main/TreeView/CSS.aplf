@@ -1,7 +1,7 @@
  CSS←{
      Rule←##.NewRule
      ⍝ *********************
-     s←Rule'.tabs'
+     s←Rule'.treeview'
      ⍝ *****************
      r←s Rule'nav'
      r.padding←'3px'

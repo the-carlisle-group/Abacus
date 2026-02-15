@@ -1,4 +1,5 @@
  SetDefaultId←{
+     0=≢⍵:0
      b←0=⍵.⎕NC⊂⊂'id'
      i←⍺ NextIds+/b
      0=≢i:0

@@ -5,7 +5,7 @@
      w←{9=⎕NC'⍵':⍵ ⋄ (Item:⍵)}⍵
      n←≢w.Item
      d←2=w.⎕NC'Depth'
-     p←⎕NS(Type:n⍴⊂'' ⋄ Separator:'.' ⋄ )w
+     p←⎕NS(Type:n⍴⊂'' ⋄ Separator:'.')w
      s←p.Separator
      p.Name←{d:⍵ ⋄ {⊃⌽s(≠⊆⊢),⍵}¨⍵}p.Item
      p.FQN←{~d:⍵.Item ⋄ s ToFQN ⍵.Depth ⍵.Item}p

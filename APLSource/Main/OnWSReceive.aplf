@@ -5,7 +5,7 @@
      c←⍵
      c.Event≡'SJSR':c.result ⎕TPUT c.id
      c.Document←d
-     c.CurrentTargetId≡'':0        ⍝ How does this happen?
+     c.CurrentTargetId≡'':0
      c.CurrentTarget←d GetElementById c.CurrentTargetId
      c.Target←d{⍵≡'':0 ⋄ 6::0 ⋄ ⍺ GetElementById ⍵}c.TargetId
      HandleUnqueuedRequest c:0

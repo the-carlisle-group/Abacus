@@ -1,0 +1,18 @@
+ New←{
+     ⍺←0
+     d←(⍺ A.New'ul')⎕NS(
+         'Items' ''
+         'Depth' ''
+         'OnSelect' ''
+     )A.Default ⍵
+     d.class←'treeview'
+     d.Class←⎕THIS
+
+     New
+
+     A.New'li'
+
+
+
+     d
+ }
