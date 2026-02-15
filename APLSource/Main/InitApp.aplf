@@ -23,6 +23,7 @@
      _←SetParent d
      d.ToolTip←t
      d.AutoComplete←a
+     d.ToolTipsVisible←1
      d.QueuedThread←ThreadQueue&0
      d
  }
