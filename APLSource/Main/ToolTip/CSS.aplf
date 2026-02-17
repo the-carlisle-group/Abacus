@@ -8,7 +8,7 @@
      s.font_size←'1.5rem'
      s.padding←'10px'
      s.border_radius←'5px'
-     s.position_anchor←'--tool-tip'
+     s.position_anchor←'--mouse-anchor'
      s.position_area←'bottom right'
      s.position_try_fallbacks←'flip-block, flip-inline, flip-block flip-inline'
      s.opacity←0

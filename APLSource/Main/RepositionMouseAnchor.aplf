@@ -1,0 +1,5 @@
+ RepositionMouseAnchor←{
+     ⍝ ⍵ ←→ Event Message
+     r c←{'px',⍨⍕⍵}¨2↑⍵.MouseViewportPosition
+     ⍵.Document.MouseAnchor SetStyle¨('top'r)('left'c)
+ }

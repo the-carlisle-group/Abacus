@@ -1,7 +1,5 @@
  ExecuteJavaScript←{
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ JavaScript
-     ⍝ c←⍺.Client
-     ⍝ c.WebSocketSend c.WebSocketID ⍵ 1 1
      ⍺ WebSocketSend ⍵
  }

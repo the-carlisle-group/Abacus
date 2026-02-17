@@ -151,7 +151,7 @@ function sendAPLRequest(e){
                 CurrentTargetSize: [q.height,q.width],
                 TargetPosition: [r.top,r.left],
                 TargetSize: [r.height,r.width]
-            };
+                };
       const m = JSON.stringify(b); 
       ws.send (m)
 }

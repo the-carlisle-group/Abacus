@@ -67,7 +67,9 @@
      r.width←'auto'
 
 
-
-
+     ⍝ **************
+     r←s Rule'#MouseAnchor'
+     r.anchor_name←'--mouse-anchor'
+     r.position←'absolute'
      s
  }

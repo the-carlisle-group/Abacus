@@ -15,7 +15,8 @@
      b.oncontextmenu←'return false;'
      t←ToolTip.New''
      a←AutoComplete.New''
-     b.Content←b.Content,⍨a,t
+     ma←New'div'('id' 'MouseAnchor')
+     b.Content←b.Content,⍨ma,a,t
      e←Elements d
      _←ToolTip.Init e
      e.Document←d
@@ -24,6 +25,7 @@
      d.ToolTip←t
      d.AutoComplete←a
      d.ToolTipsVisible←1
+     d.MouseAnchor←ma
      d.QueuedThread←ThreadQueue&0
      d
  }
