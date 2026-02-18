@@ -7,6 +7,7 @@
          'OnClick' ''
          'Style' '' ⍝
          'Width' ''
+         'Disabled' 0
      )A.Default ⍵
      b.Name←n
      b.OnClick←1 A.FQP b.OnClick

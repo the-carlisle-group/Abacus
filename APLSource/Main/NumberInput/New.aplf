@@ -6,6 +6,7 @@
          'Value' 0
          'Format' 'I10'
          'OnChange' ''
+         'Disabled' 0
      )A.Default ⍵
      d.Name←n
      c←'NumberInput'

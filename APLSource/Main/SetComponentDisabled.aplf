@@ -3,5 +3,6 @@
      ⍝ ⍵ ←→ Name or Component, Boolean 1/0
      ⍺←⊢
      c←⍺ GetComponent 0⊃⍵
+     c.Disabled←1⊃⍵
      c SetDisabled 1⊃⍵
  }

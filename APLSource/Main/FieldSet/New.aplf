@@ -6,6 +6,7 @@
          'Legend' ''
          'Format' 'stacked'     ⍝ stacked|inline|inline-row|stacked-row inputs
          'Border' 1             ⍝ 0|1
+         'Disabled' 0
      )A.Default ⍵
      d.Name←n
      d.Content←d.Legend{0=≢⍺:⍵ ⋄ ⍵,⍨A.New'legend'⍺}d.Content

@@ -5,6 +5,7 @@
          'Label' ''
          'Value' 0 ⍝ YYYYMMDD or 0 for null
          'OnChange' ''
+         'Disabled' 0
      )A.Default ⍵
      d.Name←n
      d.class←'DateInput'

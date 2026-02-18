@@ -8,6 +8,7 @@
          'PickerCaption' ''
          'OnPicker' ''
          'OnChange' ''
+         'Disabled' 0
      )A.Default ⍵
      d.Name←n
      d.class←'TextInput'

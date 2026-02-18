@@ -5,6 +5,7 @@
          'Label' ''
          'Value' ''
          'OnChange' ''
+         'Disabled' 0
      )A.Default ⍵
      w.PickerCaption←'Browse...'
      w.OnPicker←A.FQP'OnPicker'

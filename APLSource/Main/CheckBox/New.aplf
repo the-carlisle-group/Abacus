@@ -5,6 +5,7 @@
          'Label' ''
          'Value' 0
          'OnChange' ''
+         'Disabled' 0
      )A.Default ⍵
      d.Name←n
      d.class←'CheckBox'
