@@ -4,7 +4,8 @@
          'Title' 'Confirmation'
          'Message' 'Continue?'
          'Buttons'('Yes' 'No')
-         '_width' '20rem'
+         '_min_width' '20rem'
+         '_max_width' '40rem'
      )A.Default ⍵
      w.MainContent←A.New¨{'p'⍵}¨⊆w.Message
      w.OnClick←A.FQP'OnSelect'
