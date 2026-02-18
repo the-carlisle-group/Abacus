@@ -2,7 +2,7 @@
      h←⍺
      ⍝ ************* Try out a toolbar
      b1←A.Button.New('Name' 'SortDown')('Caption' 'Down')('Icon' 'SortDescending')('OnClick' 'OnDropDownOp1')
-     b1.ToolTip←'This is the sort down button'
+     b1.ToolTip←⊂⊂'This is <br> the <b>sort down</b> button'
      b11←A.Button.New('Name' 'SortUp')('Caption' 'Up')('Icon' 'SortAscending')('OnClick' 'OnDropDownOp1')
      b11.ToolTip←'This is the sort up button what if it is reallly really long?'
      b2←A.Button.New('Name' 'SortUp2')('Icon' 'SortAscending')

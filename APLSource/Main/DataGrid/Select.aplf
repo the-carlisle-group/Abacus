@@ -6,5 +6,5 @@
      ∨/⍺.DataSize=1⊃s:0
      ⍺.Selection←s
      _←c AdjustWindow ⍺
-     Refresh ⍺
+     0⊣Focus Refresh ⍺
  }
