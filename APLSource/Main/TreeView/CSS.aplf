@@ -2,29 +2,12 @@
      Rule←##.NewRule
      ⍝ *********************
      s←Rule'.treeview'
+
+
+
+
+
+
      ⍝ *****************
-     r←s Rule'nav'
-     r.padding←'3px'
-     r.display←'flex'
-     r.gap←'.25rem'
-     ⍝ *********************
-     r←s Rule'>nav>button'
-     ⍝ r.display←'flex'
-     r.gap←'.5rem'
-     r.border←'none'
-     r.border_radius←'5px'
-     r.background_color←'DimGray' ⍝ 'DarkSlateGray'
-     r.min_width←'15rem'
-     ⍝ r.text_align←'left'
-     ⍝ ******************
-     r←s Rule'>section'
-     r.flex←1
-     ⍝ Active button
-     r←s Rule'.active-tab'
-     r.font_size←'larger'
-     r.border←'1px solid gray'
-     r.color←'white' ⍝  'var(--selected-text-color)'
-     r.background_color←'steelblue' ⍝ 'var(--selected-background-color)'
-     ⍝ **************
      A.UnNestCSS s
  }

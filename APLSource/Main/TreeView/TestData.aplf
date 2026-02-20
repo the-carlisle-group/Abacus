@@ -1,0 +1,12 @@
+ TestData←{
+     ['Fruit' 0
+         'Apples' 1
+         'Honey Crisp' 2
+         'Golden Delicious' 2
+         'Pears' 1
+         'Vegetables' 0
+         'Carrots' 1
+         'Celery' 1
+         'Tomatoes' 1
+     ]
+ }

@@ -1,4 +1,5 @@
  OnContextMenu←{
+     ⎕←'OnContextMenu!'
      NewMenu←##.Menu.New
      NewItem←##.Menu.NewItem
      m←NewMenu''

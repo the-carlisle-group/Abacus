@@ -1,0 +1,11 @@
+ BuildTree←{
+     ⍝ ⍵ ←→ Items,Depth matrix
+     ⍝ ← ←→ <ul>
+     ⍺←A.New'ul'
+     0=≢⍵:⍺
+     ul←⍺ A.New'ul'
+     (i d)←↓⍉⍵
+     b←d=⊃d
+     li←ul A.New¨{'li'⍵}¨b/i
+     ul⊣li ∇¨1↓¨b⊂[0]⍵
+ }

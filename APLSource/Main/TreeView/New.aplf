@@ -1,18 +1,13 @@
  New←{
      ⍺←0
-     d←(⍺ A.New'ul')⎕NS(
+     p←(
          'Items' ''
          'Depth' ''
          'OnSelect' ''
      )A.Default ⍵
-     d.class←'treeview'
-     d.Class←⎕THIS
-
-     New
-
-     A.New'li'
-
-
-
-     d
+     t←BuildTree⍉↑p.Items p.Depth
+     t←t ⎕NS p
+     t.class←'treeview'
+     t.Class←⎕THIS
+     t
  }
