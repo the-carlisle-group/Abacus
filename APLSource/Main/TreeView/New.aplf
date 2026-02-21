@@ -5,9 +5,20 @@
          'Depth' ''
          'OnSelect' ''
      )A.Default ⍵
+     p.Items←A.New¨{'div'⍵}¨p.Items
+     p.Items.class←⊂''
+     f←⊃p.Items
+     f.class←'Active'
+     p.Items.Onclick←⊂A.FQP'OnClick'
      t←BuildTree⍉↑p.Items p.Depth
+     t←EnhanceTree t
+     t.Expanded←(≢p.Items)⍴0
+     t.ActiveIndex←0
+     t.tabindex←0
+     t._display←'block'
+     t.Onkeydown←A.FQP'OnKeyDown'
      t←t ⎕NS p
-     t.class←'treeview'
+     t.class←'TreeView'
      t.Class←⎕THIS
      t
  }

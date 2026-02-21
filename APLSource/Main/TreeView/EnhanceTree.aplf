@@ -1,0 +1,10 @@
+ EnhanceTree←{
+     ⍝ ⍵ ←→ Result of BuildTree
+     ⍝ ← ←→ passed through
+     li←⍵ A.GetElementsByTag'li'
+     0=≢li:⍵
+     li.Index←⍳≢li
+     n←(~li.Leaf)/li
+     n←EnhanceParentNode¨n
+     ⍵
+ }

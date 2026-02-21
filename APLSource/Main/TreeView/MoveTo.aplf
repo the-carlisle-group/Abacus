@@ -1,0 +1,10 @@
+ MoveTo←{
+     ⍝ ⍺ ←→ TreeView
+     ⍝ ⍵ ←→ Index
+     ⍵<0:0
+     ⍵=≢⍺.Items:0
+     ni←⍵⊃⍺.Items
+     oi←⍺.ActiveIndex⊃⍺.Items
+     ⍺.ActiveIndex←⍵
+     oi ni A.MoveClass'Active'
+ }

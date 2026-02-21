@@ -1,0 +1,9 @@
+ EnhanceParentNode←{
+     b←A.New'div'(⊂⊂(A.Icons 0).ChevronRight)
+     b.class←'Chevron'
+     b.Onclick←A.FQP'OnToggle'
+     ic ul←⍵.Content
+     d←A.New'div'(b,ic)
+     ⍵.Content←d,ul
+     ⍵
+ }

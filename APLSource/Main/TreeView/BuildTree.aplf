@@ -2,8 +2,10 @@
      ⍝ ⍵ ←→ Items,Depth matrix
      ⍝ ← ←→ <ul>
      ⍺←A.New'ul'
-     0=≢⍵:⍺
+     ⍺.Leaf←0=≢⍵
+     ⍺.Leaf:⍺
      ul←⍺ A.New'ul'
+     ul._display←'none'
      (i d)←↓⍉⍵
      b←d=⊃d
      li←ul A.New¨{'li'⍵}¨b/i

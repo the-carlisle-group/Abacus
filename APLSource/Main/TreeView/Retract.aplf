@@ -1,0 +1,10 @@
+ Retract←{
+     ~⍵⊃⍺.Expanded:0
+     li←⍵⊃⍺ A.GetElementsByTag'li'
+     li.Leaf:0
+     ⍺.Expanded[⍵]←0
+     ul←li A.GetElementByTag'ul'
+     b←li A.GetElementByClass'Chevron'
+     _←b A.SetProperty'innerHTML'((A.Icons 0).ChevronRight)
+     ul A.SetStyle'display' 'none'
+ }

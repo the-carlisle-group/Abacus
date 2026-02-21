@@ -1,0 +1,9 @@
+ OnToggle←{
+     b←⍵.CurrentTarget
+     li←b A.GetNearest'li'
+     tv←GetTreeView li
+     i←li.Index
+     e←i⊃tv.Expanded
+     e:tv Retract i
+     tv Expand i
+ }

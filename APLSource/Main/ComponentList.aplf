@@ -27,5 +27,6 @@
      l,←⊂'ButtonGroup'
      l,←⊂'Button'
      l,←⊂'Flex'
+     l,←⊂'TreeView'
      l
  }

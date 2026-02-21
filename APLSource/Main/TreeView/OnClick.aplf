@@ -1,0 +1,6 @@
+ OnClick←{
+     e←⍵.Target
+     li←e A.GetNearest'li'
+     tv←GetTreeView li
+     tv MoveTo li.Index
+ }

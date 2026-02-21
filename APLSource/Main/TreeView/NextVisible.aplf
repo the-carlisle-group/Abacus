@@ -1,0 +1,5 @@
+ NextVisible←{
+     i←⍵.ActiveIndex
+     v←⍸⍵.Expanded IsVisible ⍵.Depth
+     (1+v⍳i)⊃v,i
+ }

@@ -1,0 +1,4 @@
+ GetTreeView←{
+     'TreeView'≡⍵ ⎕VGET⊂'class' '':⍵
+     ∇ ⍵.Parent
+ }
