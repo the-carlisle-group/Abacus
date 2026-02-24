@@ -1,0 +1,13 @@
+ P2D←{
+     ⍝ ⍵ ←→ Parent Vector
+     ⍝ ← ←→ Depth Vector
+     ⍝ From: https://asherbhs.github.io/apl-site/trees/relating-depth-and-parent-vectors.html
+     p←⍵
+     d←(≢p)⍴0
+     StepUp←{
+         q←p[⍵]
+         d+←⍵≠q
+         q
+     }
+     d⊣StepUp⍣≡⍳≢p
+ }

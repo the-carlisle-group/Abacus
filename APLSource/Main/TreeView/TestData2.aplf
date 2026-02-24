@@ -1,0 +1,21 @@
+ TestData2←{
+     ['Fruit' 0
+         'Organic' 1
+         'Apples' 2
+         'Honey Crisp' 3
+         'Gala' 3
+         'Braeburn' 3
+         'Strawberries' 2
+         'Bananas' 2
+         'Non-Organic' 1
+         'Apples' 2
+         'Red Delicious' 3
+         'Golden Delicious' 3
+         'Granny Smith' 3
+         'Pears' 2
+         'Vegetables' 0
+         'Carrots' 1
+         'Celery' 1
+         'Tomatoes' 1
+     ]
+ }

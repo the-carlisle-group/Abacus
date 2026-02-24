@@ -6,9 +6,9 @@
          'OnSelect' ''
      )A.Default ⍵
      p.Items←A.New¨{'div'⍵}¨p.Items
-     p.Items.class←⊂''
+     p.Items.class←⊂'Item'
      f←⊃p.Items
-     f.class←'Active'
+     f.class←'Item Active'
      p.Items.Onclick←⊂A.FQP'OnClick'
      t←BuildTree⍉↑p.Items p.Depth
      t←EnhanceTree t

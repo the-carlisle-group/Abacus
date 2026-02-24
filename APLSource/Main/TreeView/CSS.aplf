@@ -2,43 +2,42 @@
      Rule←##.NewRule
      ⍝ *********************
      s←Rule'.TreeView'
-     ⍝ s.padding←'.5rem'
      s.overflow←'auto'
      s.list_style_type←'none'
-
-     r←s Rule'&:focus'
-     r.border←'3px solid white'
-
-
+     ⍝ r←s Rule'&:focus'
+     ⍝ r.border←'3px solid white'
 
      ⍝ All uls below
      r←s Rule'ul'
-     r.padding_left←'1rem'
+     r.padding_left←'.2rem'
      r.list_style_type←'none'
+
+     ⍝ The item in any state
+     r←s Rule'.Item'
+     r.border←'2px solid var(--background-color)'
+     r.border_radius←'10px'
+     ⍝ r.padding←'.2rem .5rem' ⍝ NO Padding, leave up to caller
+     r.width←'100%'
 
      ⍝ Active Item
      r←s Rule'.Active'
-     r.border←'3px solid white'
+     r.border←'2px solid gray'
 
      ⍝ Active and focused Item
      r←s Rule'&:focus .Active'
-     r.border←'3px solid green'
+     r.border←'2px solid steelblue'
 
      ⍝ Chevron
      r←s Rule'.Chevron>svg'
      r.height←'1.5rem'
      r.width←'auto'
-
-
-
-
+     r.stroke_width←3
 
      ⍝ ******* Parent Node: <li> with <ul> below
      r←s Rule'li:has(ul)'
-     r.padding_top←'.5rem'
-     r.padding_bottom←'.5rem'
-     r.color←'yellow'
-     r.padding_left←'1rem'
+     ⍝ r.padding_top←'.5rem'
+     ⍝ r.padding_bottom←'.5rem'
+     ⍝ r.padding_left←'.2rem'
      ⍝ ******* Parent Node: <li> with <ul> below
      ⍝r←s Rule'li:has(ul)>div'
 ⍝     r.display←'flex'
@@ -48,68 +47,16 @@
      sr←r Rule'>div'
      sr.display←'flex'
      sr.align_items←'center'
-     sr.gap←'1rem'
+     ⍝ sr.gap←'1rem'
 ⍝
      ⍝ ******* Leaf Node: <li> with no <ul> below
      r←s Rule'li:not(:has(ul))'
-     r.color←'red'
-     r.padding_left←'4rem'
-     r.padding_top←'.5rem'
-     r.padding_bottom←'.5rem'
+     r.padding_left←'2rem'
      r←s Rule'.retracted>ul'
      r.display←'none'
 
 
-⍝
-⍝
-⍝     r←s Rule'.node-button-item'
-⍝     r.display←'flex'
-⍝     r.align_items←'center'
-⍝     r.gap←'1rem'
-⍝
-⍝
-⍝
-⍝     r←s Rule'.node-button'
-⍝     r.min_width←'2rem'
-⍝
-⍝     r←s Rule'.node-item'
-⍝     r.padding←'1rem .5rem'
-⍝     r.min_height←'4rem'
-⍝     r.background_color←'hsl(230, 10%, 20%)'
-⍝     r.width←'100%'
-⍝
-⍝
-⍝     r←s Rule'.node-item>span'
-⍝     r.font_size←'larger'
-⍝
-⍝
-⍝     r←s Rule'.node-item>div'
-⍝     r.display←'flex'
-⍝     r.justify_content←'space-between'
-⍝     r.padding_left←'1rem'
-⍝     ⍝ r.font_size←'smaller'
-⍝
-⍝
-⍝
-⍝     r←s Rule'.leaf-item'
-⍝     ⍝r.margin_left←'2rem'
-⍝     r.padding←'.25rem .5rem .25rem 5rem'
-⍝     r.background_color←'hsl(230, 10%, 20%)'
-⍝     r.display←'flex'
-⍝     r.justify_content←'space-between'
-⍝     ⍝ #.Abacus.Main.Flex.New
-⍝
-⍝
-⍝     ⍝
-⍝     r←s Rule'.current-item'
-⍝     r.border←'3px solid steelblue'
-⍝
-⍝
-⍝
-⍝
-⍝
-⍝
-⍝
+
 
      ⍝ *****************
      s

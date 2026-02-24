@@ -1,0 +1,7 @@
+ D2P←{
+     ⍝ ⍵ ←→ Depth Vector
+     ⍝ ← ←→ Parent Vector
+     ⍝ From: https://asherbhs.github.io/apl-site/trees/relating-depth-and-parent-vectors.html
+     p←⍳≢⍵
+     p⊣2{p[⍵]←⍺[⍺⍸⍵]}/⊂⍤⊢⌸⍵
+ }

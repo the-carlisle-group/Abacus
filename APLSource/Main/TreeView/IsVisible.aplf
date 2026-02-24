@@ -1,14 +1,9 @@
  IsVisible←{
-     ⍝ ⍺ ←→ Expanded  (is parent node expanded)
-     ⍝ ⍵ ←→ Depth     (ala ⎕WC TreeView)
-     ⍝ ← ←→ Is Item visible
-     i←⍳≢⍵
-     i∊1{
-         e d i←↓⍉⍵
-         ⍺=0:⍬
-         0=≢⍵:⍬
-         b←d=⊃d
-         v←⍺∧b
-         (v/i),∊(v/v∧e)∇¨1↓¨b⊂[0]⍵
-     }⍉↑⍺ ⍵ i
+     ⍝ ⍺ ←→ Exanded Vector
+     ⍝ ⍵ ←→ Depth Vector
+     ⍝ ← ←→ Is item visible
+     ⍝ Hat tip: B. Wilson on the APL Orchard.
+     p←D2P ⍵
+     e←{⍵∧⍵[p]}⍣≡⍺
+     e[p]∨⍵=0
  }
