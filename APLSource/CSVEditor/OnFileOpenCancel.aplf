@@ -1,4 +1,4 @@
  OnFileOpenCancel←{
-     r←⍵.Document A.ConfirmBox.Show'Cancel' 'OK to cancel?'
+     r←⍵.Document A.Confirm'Cancel' 'OK to cancel?'
      r≡'No'
  }

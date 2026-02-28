@@ -2,5 +2,6 @@
      e←⍵.Target
      li←e A.GetNearest'li'
      tv←GetTreeView li
-     tv MoveTo li.Index
+     _←tv MoveTo li.Index
+     tv FireSelect 0
  }

@@ -1,0 +1,7 @@
+ DebounceSelect←{
+     ⍝ ⍺←TreeView
+     d←⍺.OnSelect.DebounceDelay
+     d=0:⍺ FireSelect 0
+     _←'tmT'⎕WC'Timer'd 1('FireOnce' 1)('Event' 'Timer' 'FireSelect'⍺)
+     0
+ }

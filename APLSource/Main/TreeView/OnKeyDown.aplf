@@ -4,8 +4,8 @@
      k⊂⍛∊'Control' 'Shift' 'Alt' 'Process':0
      b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
      p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
-     p≡'ArrowUp':t MoveTo PreviousVisible t
-     p≡'ArrowDown':t MoveTo NextVisible t
+     p≡'ArrowUp':t DebounceSelect t MoveTo PreviousVisible t
+     p≡'ArrowDown':t DebounceSelect t MoveTo NextVisible t
      p≡'ArrowRight':t Expand t.ActiveIndex
      p≡'ArrowLeft':t Retract t.ActiveIndex
      0

@@ -1,4 +1,5 @@
  OnMouseEnterTimer←{
+     ⎕←'On mouse enter timer!'
      _←A.RepositionMouseAnchor ⍺
      e←⍺.CurrentTarget
      t←⍺.Document.ToolTip

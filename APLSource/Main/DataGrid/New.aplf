@@ -30,6 +30,8 @@
          'CustomColumnInserts'⍬
          'OnKeyDown' ''
          'Autofocus' 0
+         ⍝ Events
+         'OnCellMove' ''
      )A.Default ⍵
      g←⍺ A.New'div'
      g.(Width Height)←0

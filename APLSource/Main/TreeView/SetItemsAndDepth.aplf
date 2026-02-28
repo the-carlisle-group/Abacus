@@ -1,0 +1,8 @@
+ SetItemsAndDepth←{
+     t←⍺
+     t.(Items Depth)←⍵
+     _←Init t
+     e←A.Elements t
+     _←t.Document A.SetDefaultId e
+     t A.SetInnerHTML t.Content
+ }

@@ -1,0 +1,10 @@
+ FireSelect←{
+     t←⍺
+     f←t.OnSelect.CallbackFunction
+     0=≢f:0
+     e←()
+     e.Event←'Select'
+     e.Document←t.Document
+     e.Component←t
+     (⍎f)e
+ }

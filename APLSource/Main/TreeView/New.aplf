@@ -1,24 +1,25 @@
  New←{
      ⍺←0
-     p←(
+     t←(⍺ A.New'ul')⎕NS(
          'Items' ''
-         'Depth' ''
-         'OnSelect' ''
+         'Depth'⍬
+         'OnSelect'('' 0)
      )A.Default ⍵
-     p.Items←A.New¨{'div'⍵}¨p.Items
-     p.Items.class←⊂'Item'
-     f←⊃p.Items
-     f.class←'Item Active'
-     p.Items.Onclick←⊂A.FQP'OnClick'
-     t←BuildTree⍉↑p.Items p.Depth
-     t←EnhanceTree t
-     t.Expanded←(≢p.Items)⍴0
+     t.OnSelect←(
+         'CallbackFunction' ''
+         'DebounceDelay' 0
+     )A.Default t.OnSelect
      t.ActiveIndex←0
      t.tabindex←0
-     t._display←'block'
-     t.Onkeydown←A.FQP'OnKeyDown'
-     t←t ⎕NS p
      t.class←'TreeView'
      t.Class←⎕THIS
+     t.Onkeydown←A.FQP'OnKeyDown'
+     ⍝ Only need below if DebounceDelay>0
+     t.Unqueued←'keydown'
+     ⍝ ↑↑↑
+     ⍝ Why ????!!!! Is this OK? Investigate!
+     ⍝ What is the deep meaning of unqueued?!
+     ⍝ Are unqueued events handled serially?
+     _←Init t
      t
  }

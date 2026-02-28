@@ -1,7 +1,7 @@
  Test←{
-     tv1←New↓⍉TestData2 0
-     tv2←New↓⍉TestData 0
-     tv3←New↓⍉TestData 0
+     tv1←New(↓⍉TestData2 0),⊂(A.FQP'TestClick')0
+     tv2←New(↓⍉TestData 0),⊂(A.FQP'TestClick')200
+     tv3←New(↓⍉TestData 0),⊂(A.FQP'TestClick')1000
      p←A.New'div'(tv1 tv2 tv3)
      p._display←'flex'
      d←A.NewDocument p

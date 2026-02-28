@@ -1,0 +1,22 @@
+ OnSelect←{
+     ⍝ ⍵ ←→ Item
+     ⍝ Go to
+
+
+
+
+     DebounceSelect ⍵
+
+
+
+     e←⍵.Target
+     li←e A.GetNearest'li'
+     tv←GetTreeView li
+     _←tv MoveTo li.Index
+     f←tv.OnSelect
+     0=≢f:0
+     e.Event←'Click'
+     e.Document←⍵.Document
+     e.Component←tv
+     (⍎f)e
+ }

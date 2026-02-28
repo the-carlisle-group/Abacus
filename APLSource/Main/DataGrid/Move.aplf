@@ -9,6 +9,8 @@
      ∨/(⍵<0)∨⍵≥⍺.DataSize:0
      e←⎕NS''
      e.Event←'CellMove'
+     e.Document←⍺.Document
+     e.Component←⍺.Parent
      e.OldCellIndex←⍺.ActiveCell
      e.NewCellIndex←⍵
      ⍺.ActiveCell←⍵

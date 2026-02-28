@@ -9,7 +9,7 @@
 
      ⍝ All uls below
      r←s Rule'ul'
-     r.padding_left←'.2rem'
+     r.padding_left←'1rem'
      r.list_style_type←'none'
 
      ⍝ The item in any state
@@ -51,7 +51,7 @@
 ⍝
      ⍝ ******* Leaf Node: <li> with no <ul> below
      r←s Rule'li:not(:has(ul))'
-     r.padding_left←'2rem'
+     r.padding_left←'1.5rem'
      r←s Rule'.retracted>ul'
      r.display←'none'
 

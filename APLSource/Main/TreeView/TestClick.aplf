@@ -1,0 +1,4 @@
+ TestClick←{
+     ⎕←'Select Fired!'
+     0
+ }
