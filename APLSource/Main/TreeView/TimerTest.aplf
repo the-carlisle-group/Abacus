@@ -1,0 +1,6 @@
+ TimerTest←{
+     _←'tmT'⎕WC'Timer' 1000 1('FireOnce' 1)
+     tmT.onTimer←'OnTimerTest'
+     _←⎕DL 10
+     0
+ }

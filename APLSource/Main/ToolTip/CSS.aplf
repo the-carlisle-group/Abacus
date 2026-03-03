@@ -1,17 +1,28 @@
  CSS←{
      Rule←##.NewRule
-     s←Rule'.tool-tip'
-     s.position←'absolute'
-     s.z_index←'99'
-     s.background_color←'LemonChiffon'
-     s.color←'black'
-     s.font_size←'1.5rem'
-     s.padding←'10px'
-     s.border_radius←'5px'
-     s.position_anchor←'--mouse-anchor'
-     s.position_area←'bottom right'
-     s.position_try_fallbacks←'flip-block, flip-inline, flip-block flip-inline'
-     s.opacity←0
-     s.transition←'opacity .5s'
+     s←Rule''
+     r←s Rule'.tool-tip'
+     ⍝ r.position←'absolute'   ⍝ Don't need this?
+     r.background_color←'LemonChiffon'
+     r.color←'black'
+     r.font_size←'1.5rem'
+     r.padding←'10px'
+     r.border_radius←'5px'
+     r.position_anchor←'--mouse-anchor'
+     r.position_area←'bottom right'
+     r.position_try_fallbacks←'flip-block, flip-inline, flip-block flip-inline'
+     r.opacity←'0'
+     r.transform←'scale(0.95)'
+     r.transition←'opacity 400ms ease, transform 400ms ease, display 400ms allow-discrete'
+     ⍝ *******************************
+     r←s Rule'.tool-tip:popover-open'
+     r.opacity←'1'
+     r.transform←'scale(1)'
+     ⍝ **********************************
+     r←s Rule'@starting-style'
+     r2←r Rule'.tool-tip:popover-open'
+     r2.opacity←'0'
+     r2.transform←'scale(0.95)'
+     ⍝ ********************************
      s
  }

@@ -1,6 +1,4 @@
  OnMouseLeave←{
-     tmT.Active←0
      t←⍵.Document.ToolTip
-     _←t A.SetStyle'opacity' '0'
-     0
+     t A.ExecuteOnElement'hidePopover()'
  }

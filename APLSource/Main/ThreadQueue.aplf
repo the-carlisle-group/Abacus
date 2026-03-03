@@ -1,6 +1,14 @@
  ThreadQueue←{
      ⍝ Queued Event Loop for Session/Document
      c←⊃⎕TGET ⎕TID
+
+     ⍝ We could check here for timeout
+     ⍝ and if so, see if there is some function to run....
+     ⍝ Debounced events can put something in a "debounce queue"...
+     ⍝  c← TimeOut ⎕TGET ⎕TGET
+     ⍝  0=≢c:Run debounced function
+
+
      _←(⍎c.CurrentTarget⍎'On',c.Event)c
      _←PutDoneToken c
      ∇ ⍵

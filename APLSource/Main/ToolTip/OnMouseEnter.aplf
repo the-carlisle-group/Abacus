@@ -1,6 +1,8 @@
  OnMouseEnter←{
      ~⍵.Document.ToolTipsVisible:0
-     t←⍎'tmT'⎕WC'Timer' 200 1('FireOnce' 1)
-     t.onTimer←'OnMouseEnterTimer'⍵
-     0
+     _←A.RepositionMouseAnchor ⍵
+     e←⍵.CurrentTarget
+     t←⍵.Document.ToolTip
+     _←t A.SetInnerHTML A.New'p'e.ToolTip
+     t A.ExecuteOnElement'showPopover()'
  }

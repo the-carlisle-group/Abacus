@@ -1,9 +1,0 @@
- OnMouseEnterTimer←{
-     ⎕←'On mouse enter timer!'
-     _←A.RepositionMouseAnchor ⍺
-     e←⍺.CurrentTarget
-     t←⍺.Document.ToolTip
-     _←t A.SetInnerHTML A.New'p'e.ToolTip
-     _←t A.SetStyle'opacity' '1'
-     0
- }

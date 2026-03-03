@@ -1,4 +1,5 @@
  TestClick←{
+     ⎕←'Thread: ',⍕⎕TID
      ⎕←'Select Fired!'
      0
  }
