@@ -1,5 +1,5 @@
  FireSelect←{
-     t←⍺
+     t←⍵
      f←t.OnSelect.CallbackFunction
      0=≢f:0
      e←()

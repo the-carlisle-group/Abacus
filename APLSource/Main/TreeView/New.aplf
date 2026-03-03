@@ -14,12 +14,6 @@
      t.class←'TreeView'
      t.Class←⎕THIS
      t.Onkeydown←A.FQP'OnKeyDown'
-     ⍝ Only need below if DebounceDelay>0
-     t.Unqueued←'keydown'
-     ⍝ ↑↑↑
-     ⍝ Why ????!!!! Is this OK? Investigate!
-     ⍝ What is the deep meaning of unqueued?!
-     ⍝ Are unqueued events handled serially?
      _←Init t
      t
  }

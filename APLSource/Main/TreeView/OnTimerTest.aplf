@@ -1,4 +1,0 @@
- OnTimerTest←{
-     ⎕←'Timer fired!'
-     0
- }

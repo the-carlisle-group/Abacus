@@ -1,0 +1,8 @@
+ Debounce←{
+     ⍝ ⍵ ←→ Document
+     0=≢⍵.DebounceQueue:0
+     f a←⍵.DebounceQueue
+     ⍵.DebounceQueue←⍬
+     ⍵.Timeout←⍵.DefaultTimeout
+     (⍎f)a
+ }

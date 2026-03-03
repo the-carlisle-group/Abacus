@@ -26,6 +26,9 @@
      d.AutoComplete←a
      d.ToolTipsVisible←1
      d.MouseAnchor←ma
-     d.QueuedThread←ThreadQueue&0
+     d.DebounceQueue←⍬
+     d.DefaultTimeout←2147483
+     d.Timeout←d.DefaultTimeout
+     d.QueuedThread←d ThreadQueue&0
      d
  }

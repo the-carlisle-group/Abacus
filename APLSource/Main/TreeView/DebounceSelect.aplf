@@ -1,16 +1,9 @@
  DebounceSelect←{
      ⍝ ⍺←TreeView
-
-
-     ⍝ What if, instead of a timer,
-     ⍝ We put the timer callback function in the quue?
-     ⍝ In ##.ThreadQueue
-     ⍝ We can even make it variable timeout!
-
-
-
-     d←⍺.OnSelect.DebounceDelay
-     d=0:⍺ FireSelect 0
-     _←'tmT'⎕WC'Timer'd 1('FireOnce' 1)('Event' 'Timer' 'FireSelect'⍺)
+     d←⍺.Document
+     l←⍺.OnSelect.DebounceDelay
+     l=0:FireSelect ⍺
+     d.Timeout←l÷1000
+     d.DebounceQueue←(A.FQP'FireSelect')⍺
      0
  }
