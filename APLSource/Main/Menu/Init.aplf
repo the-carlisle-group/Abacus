@@ -8,7 +8,7 @@
      m.Onmouseover←A.FQP'OnMouseOver'
      m.Ontoggle←A.FQP'OnToggle'
      m.Context←⍺
+
      b←A.GetBody d
-     _←d A.SetDefaultId A.Elements m
      b A.AppendChild m
  }

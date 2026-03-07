@@ -2,7 +2,6 @@
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ dialog element
      b←GetBody ⍺
-     _←⍺ SetDefaultId Elements ⍵
      _←b AppendChild ⍵
      ⍝ _←⍵ ExecuteOnElement'style.(maxHeight=offsetHeight)'
      ⍝ Only do this ↓↓↓ if the content has a grid

@@ -1,0 +1,10 @@
+ InitDOM←{
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ DOM node(s)
+     ⍺←⍵
+     e←∊GetElements¨⍵
+     e.Document←⍺
+     _←⍺ SetDefaultId e
+     _←ToolTip.Init e
+     ⍵
+ }

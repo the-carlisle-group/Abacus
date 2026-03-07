@@ -1,15 +1,12 @@
  SetOuterHTML←{
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ DOM or HTML
-     d h←DOMandHTML ⍵
+     d h←⍺.Document DOMandHTML ⍵
      _←⍺ SetProperty'outerHTML'(Sanitize h)
      _←⍺.Document SetResizeObserver ⍺
      p←⍺.Parent
      _←SetParent p
      i←p.Content⍳⍺
      p.Content←(i↑p.Content),d,(i+1)↓p.Content
-     0=≢d:0
-     e←Elements¨d
-     e.Document←⍺.Document
      0
  }

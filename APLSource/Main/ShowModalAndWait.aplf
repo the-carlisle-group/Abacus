@@ -2,7 +2,6 @@
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ dialog element
      b←GetBody ⍺
-     _←⍺ SetDefaultId Elements ⍵
      _←b AppendChild ⍵
      _←⍵ ExecuteOnElement'showModal()'
      _←PutDoneToken ⍵ ⍝ Needed if running in test mode

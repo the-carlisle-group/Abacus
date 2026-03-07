@@ -12,9 +12,6 @@
      ⍝ For now!
      b←A.GetBody d
      k←{⍵.Tag≡'td':b ⋄ ⍵}⍺.Target
-
-
-     _←d A.SetDefaultId A.Elements p
      _←k A.AppendChild p
      _←p A.ExecuteOnElement'showPopover()'
      ##.SetFocus p

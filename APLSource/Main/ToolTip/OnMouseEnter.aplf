@@ -2,7 +2,7 @@
      ~⍵.Document.ToolTipsVisible:0
      _←A.RepositionMouseAnchor ⍵
      e←⍵.CurrentTarget
-     t←⍵.Document.ToolTip
+     t←⍵.Document.ToolTipElement
      _←t A.SetInnerHTML A.New'p'e.ToolTip
      t A.ExecuteOnElement'showPopover()'
  }

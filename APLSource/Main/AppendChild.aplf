@@ -2,6 +2,7 @@
      ⍝ ⍺ ←→ Parent
      ⍝ ⍵ ←→ Element
      ⍵=0:0
+     _←⍺.Document SetDefaultId Elements ⍵
      r←⍺ GetElementsWhere'id'⍵.id
      1=≢r:⊃r ⍝ Already Exists
      ⍝ _←⍺ ExecuteOnElement'appendChild(document.createElement("',⍵.Tag,'"))'

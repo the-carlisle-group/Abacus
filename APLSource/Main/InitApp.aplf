@@ -17,12 +17,8 @@
      a←AutoComplete.New''
      ma←New'div'('id' 'MouseAnchor')
      b.Content←b.Content,⍨ma,a,t
-     e←Elements d
-     _←ToolTip.Init e
-     e.Document←d
-     _←d SetDefaultId e
-     _←SetParent d
-     d.ToolTip←t
+     _←InitDOM d
+     d.ToolTipElement←t
      d.AutoComplete←a
      d.ToolTipsVisible←1
      d.MouseAnchor←ma

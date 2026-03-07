@@ -1,7 +1,8 @@
  DOMandHTML←{
+     ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ DOM or HTML
      ⍝ ← ←→ DOM and HTML
-     326=⎕DR ⍵:⍵(DOM2HTML ⍵)
+     326=⎕DR ⍵:⍵(DOM2HTML ⍺ InitDOM ⍵)
      ''≡⍵:⍵ ⍵
      '<'≢⊃⍵:(,⊂⍵)⍵
      (HTML2DOM ⍵)⍵

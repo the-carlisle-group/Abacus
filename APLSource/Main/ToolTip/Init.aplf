@@ -5,11 +5,5 @@
      0=≢e:0
      e.Onmouseenter←⊂A.FQP'OnMouseEnter'
      e.Onmouseleave←⊂A.FQP'OnMouseLeave'
-     ⍝ e.Unqueued←⊂'mouseenter' 'mouseleave'  ⍝ DONT NEED?!
-     ⍝ Or maybe we want if a MODAL dyalog is waiting!
-     ⍝ Like ConfirmBox
-     ⍝ Ah, we probably needed it when we where using the ⎕WC Timer!
-     ⍝ Like the TreeView debounce.... So its the timer that causes issues
-     ⍝ Now we don't need it.
      0
  }

@@ -9,7 +9,6 @@
      d←p.Context.Document
      ⍝ _←p.Context.Target A.SetAnchorName'--pick-list'
      b←A.GetBody d
-     _←d A.SetDefaultId A.Elements p
      _←b A.AppendChild p
 
      id←p.Context.Target.id

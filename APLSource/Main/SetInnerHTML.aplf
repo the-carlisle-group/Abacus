@@ -1,13 +1,9 @@
  SetInnerHTML←{
      ⍝ ⍺ ←→ Element
      ⍝ ⍵ ←→ DOM or HTML
-     d h←DOMandHTML ⍵
+     d h←⍺.Document DOMandHTML ⍵
      _←⍺ SetProperty'innerHTML'(Sanitize h)
      _←⍺.Document SetResizeObserver ⍺
      ⍺.Content←d
-     _←SetParent ⍺
-     e←∊Elements¨d
-     0=≢e:0
-     e.Document←⍺.Document
-     0
+     0⊣SetParent ⍺
  }
