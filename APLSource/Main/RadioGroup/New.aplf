@@ -1,19 +1,29 @@
  New←{
-     ⍝ ⍺ ←→ Parent
-     ⍝ ⍵ ←→ Legend, Options
-     c o←⍵
-     id←o~¨' '
-     ⍺←⊢
-     A←##
-     g←A.New'legend'c
-     d←⍺ A.New'fieldset'g
+     ⍺←0
+     (p n)←A.DefaultParentAndName ⍺
+     d←(p A.New'fieldset')⎕NS(
+         'Legend' ''
+         'Labels' ''
+         'Options' ''
+         'Value' ''
+         'Border' 1
+         'Disabled' 0
+         'OnChange' ''
+     )A.Default ⍵
+     d.Name←n
      d.class←'radio-group'
-     i←A.New¨{'input' ''}¨o
+     id←d.Labels~¨' '
+     _←d A.New'legend'd.Legend
+     i←A.New¨{'input' ''}¨d.Labels
+     c←(d.Options⍳⊂d.Value)⊃i,i
+     c.checked←'checked'
+     i.Value←d.Options
+     i.name←⊂n
      i.type←⊂'radio'
-     i.name←⊂c~''
      i.id←id
-     l←A.New¨{'label'⍵}¨o
+     l←A.New¨{'label'⍵}¨d.Labels
      l.for←id
      d.Content,←A.New¨{'div'⍵}¨↓⍉↑i l
+     d.Onchange←A.FQP'OnChange'
      d
  }

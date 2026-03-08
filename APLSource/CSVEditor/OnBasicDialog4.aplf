@@ -1,0 +1,17 @@
+ OnBasicDialog4←{
+     d←⍵.Document
+     o←'Bach' 'Beethoven' 'Mozart'
+
+     Composer←A.RadioGroup.New'Composer'o o'Mozart'
+     Composer.OnChange←A.FQP'OnInputChange'
+
+
+     p←⎕NS''
+     p.Title←'Basic Dialog Component'
+     p.Subtitle←'Showing RadioGroup'
+     p.MainContent←Composer
+     p.Buttons←'OK' 'Cancel'
+     p.OnClick←'' ''
+     p._width←'30rem'
+     d A.DialogBox.Show p
+ }

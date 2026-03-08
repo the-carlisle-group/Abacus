@@ -1,0 +1,9 @@
+ SetValue←{
+     ⍝ ⍺ ←→ Component
+     ⍝ ⍵ ←→ Value
+     ⍺.Value←⍵
+     i←⍺ A.GetElementsByTag'input'
+     j←i.Value⍳⊂⍵
+     j=≢i:0
+     (j⊃i)##.ExecuteOnElement'checked = true'
+ }

@@ -7,13 +7,12 @@
      s.align_items←'flex-start'
      s.gap←'.5em'
      s.font_family←'Arial'
-     s.font_size←'1.5em'
      s.padding←'.5em'
      s.margin←'1em'
      ⍝ *******************************
      r←s Rule'input'
-     r.width←'30px'
-     r.height←'30px'
+     r.width←'1rem'
+     r.height←'1rem'
      r.accent_color←'steelblue'
      ⍝ ******************************
      r←s Rule'>div'
