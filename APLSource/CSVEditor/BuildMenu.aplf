@@ -18,7 +18,7 @@
      i←s NewItem'Cut' 'Ctrl+X' 'OnCut'
      i←s NewItem'Copy' 'Ctrl+C' 'OnCopy'
      i←s NewItem'Paste' 'Ctrl+V' 'OnPaste'
-     s←m NewMenu⊂'Sample'
+     s←m NewMenu⊂'Samples'
      i←s NewItem'Alert box' '' 'OnAlertBox'
      i←s NewItem'Prompt box' '' 'OnPromptBox'
      i←s NewItem'Confirm box' '' 'OnConfirmBox'
@@ -33,6 +33,7 @@
      i←s NewItem'Progress bar 3' '' 'OnProgressBar3'
      i←s NewItem'Progress bar 4' '' 'OnProgressBar4'
      i←s NewItem'Progress bar 5' '' 'OnProgressBar5'
+     i←s NewItem'Tabs' '' 'OnTabs'
      s←m NewMenu⊂'View'
      i←s NewItem'Find and Replace...' 'Ctrl+F' 'OnFindAndReplace'('Checked' 1)
      m

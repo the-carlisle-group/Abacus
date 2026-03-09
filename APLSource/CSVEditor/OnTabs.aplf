@@ -1,0 +1,30 @@
+ OnTabs←{
+     d←⍵.Document
+
+     cb←'OnChange'(A.FQP'OnInputChange')
+
+     s←A.FieldSet.New⊂'Border' 0
+     FileInput←s A.FileInput.New'File input:'cb
+     TextInput←s A.TextInput.New'Text input:'cb
+     NumericInput←s A.NumberInput.New'Numeric input:' 256 'CI15'cb
+
+     o←'Bach' 'Beethoven' 'Mozart'
+     Composer←A.RadioGroup.New'Composer'o o'Mozart'
+     Composer.OnChange←A.FQP'OnInputChange'
+
+     tc←A.Tabs.New(s Composer)('Captions'('Settings' 'Options'))
+
+     p←⎕NS''
+     p.Title←'Tabs on a Dialog box'
+     p.Subtitle←'blah blah blah'
+     p.MainContent←tc
+     p.Buttons←'OK' 'Cancel'
+     p.OnClick←'' ''
+     p._width←'40rem'
+     p._height←'30rem'
+     d A.DialogBox.Show p
+
+
+
+
+ }
