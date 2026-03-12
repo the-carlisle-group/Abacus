@@ -12,7 +12,12 @@
      Composer←A.RadioGroup.New'Composer'o o'Mozart'
      Composer.OnChange←A.FQP'OnInputChange'
 
-     tc←A.Tabs.New(s Composer)('Captions'('Settings' 'Options'))
+     o←'One' 'Two' 'Three' 'Four'
+     Op2←A.RadioGroup.New'Composer'o o'Mozart'
+     Op2.OnChange←A.FQP'OnInputChange'
+
+
+     tc←A.Tabs.New(s Composer Op2)('Captions'('Settings' 'Options' 'Properties'))
 
      p←⎕NS''
      p.Title←'Tabs on a Dialog box'

@@ -1,8 +1,11 @@
  OnBasicDialog4←{
      d←⍵.Document
-     o←'Bach' 'Beethoven' 'Mozart'
 
-     Composer←A.RadioGroup.New'Composer'o o'Mozart'
+     o←'Bach' 'Beethoven' 'Mozart'
+     l←'JS Bach' 'L.V Beethoven' 'W.A. Mozart'
+
+
+     Composer←A.RadioGroup.New'Composer'l o
      Composer.OnChange←A.FQP'OnInputChange'
 
 
