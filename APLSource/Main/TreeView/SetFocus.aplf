@@ -1,0 +1,4 @@
+ SetFocus←{
+     ⍺←⍵
+     ⍺ A.ExecuteOnElement'focus()'
+ }

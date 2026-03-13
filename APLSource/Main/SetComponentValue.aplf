@@ -1,5 +1,5 @@
  SetComponentValue←{
      ⍝ ⍺ ←→ Component
      ⍝ ⍵ ←→ Value
-     ⍺(⍎⍺.class).SetValue ⍵
+     ⍺.Class.SetValue ⍵
  }

@@ -1,7 +1,7 @@
  CSS←{
      Rule←##.NewRule
      ⍝ ************************
-     s←Rule'.radio-group'
+     s←Rule'.RadioGroup'
      s.display←'inline-flex'
      s.flex_direction←'column'
      s.align_items←'flex-start'

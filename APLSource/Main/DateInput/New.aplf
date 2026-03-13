@@ -1,14 +1,13 @@
  New←{
      ⍺←0
      p n←A.DefaultParentAndName ⍺
-     d←(p A.New'div')⎕NS(
+     d←A.InitComp(p A.New'div')⎕NS(
          'Label' ''
          'Value' 0 ⍝ YYYYMMDD or 0 for null
          'OnChange' ''
          'Disabled' 0
      )A.Default ⍵
      d.Name←n
-     d.class←'DateInput'
      l←d A.New'label'd.Label
      l.for←d.Name
      i←d A.New'input'

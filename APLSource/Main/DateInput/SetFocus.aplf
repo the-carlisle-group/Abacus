@@ -1,0 +1,5 @@
+ SetFocus←{
+     ⍺←⍵
+     i←⍺ A.GetElementByTag'input'
+     i A.ExecuteOnElement'focus()'
+ }

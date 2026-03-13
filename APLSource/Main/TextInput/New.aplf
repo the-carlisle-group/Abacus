@@ -1,7 +1,7 @@
  New←{
      ⍺←0
      (p n)←A.DefaultParentAndName ⍺
-     d←(p A.New'div')⎕NS(
+     d←A.InitComp(p A.New'div')⎕NS(
          'Label' ''
          'Value' ''
          'Options' ''
@@ -11,7 +11,6 @@
          'Disabled' 0
      )A.Default ⍵
      d.Name←n
-     d.class←'TextInput'
      d.Oninput←A.FQP'OnInput'
      d.Onchange←A.FQP'OnChange'
      l←d A.New'label'd.Label

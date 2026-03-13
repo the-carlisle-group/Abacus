@@ -1,0 +1,7 @@
+ InitComp←{
+     s←0⊃⎕NSI
+     c←⊃⌽'.'(≠⊆⊢)s
+     ⍵.class←c
+     ⍵.Class←⍎s
+     ⍵⊣⍵.⎕DF c
+ }

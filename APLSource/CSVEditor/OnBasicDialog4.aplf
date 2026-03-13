@@ -1,18 +1,25 @@
  OnBasicDialog4←{
      d←⍵.Document
 
-     o←'Bach' 'Beethoven' 'Mozart'
-     l←'JS Bach' 'L.V Beethoven' 'W.A. Mozart'
-
-
+     o←'Bach' 'Beethoven' 'Mozart' 'Brahms' 'Handel'
+     l←'JS Bach' 'L.V Beethoven' 'W.A. Mozart' 'Brahms' 'Handle'
      Composer←A.RadioGroup.New'Composer'l o
      Composer.OnChange←A.FQP'OnInputChange'
+
+     cb←'OnChange'(A.FQP'OnInputChange')
+
+     TextInput←A.TextInput.New'Text input:'cb
+     DropListInput←A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')cb
+     Checkbox←A.CheckBox.New'Check box input'cb
+
+
+
 
 
      p←⎕NS''
      p.Title←'Basic Dialog Component'
      p.Subtitle←'Showing RadioGroup'
-     p.MainContent←Composer
+     p.MainContent←TextInput Composer DropListInput Checkbox
      p.Buttons←'OK' 'Cancel'
      p.OnClick←'' ''
      p._width←'30rem'

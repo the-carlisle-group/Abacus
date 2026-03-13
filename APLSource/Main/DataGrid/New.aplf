@@ -33,11 +33,9 @@
          ⍝ Events
          'OnCellMove' ''
      )A.Default ⍵
-     g←⍺ A.New'div'
+     g←A.InitComp ⍺ A.New'div'
      g.(Width Height)←0
      g.OnResize←A.FQP'OnResize'
-     g.class←⊃⌽'.'(≠⊆⊢)⍕⎕THIS
-     g.Class←⎕THIS
      g.Table←w ⎕NS⍨g NewTable''
      v←g NewScrollBar'v-scrollbar'
      h←g NewScrollBar'h-scrollbar'

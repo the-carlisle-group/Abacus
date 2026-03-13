@@ -1,7 +1,7 @@
  New←{
      ⍺←0
      (p n)←A.DefaultParentAndName ⍺
-     d←(p A.New'fieldset')⎕NS(
+     d←A.InitComp(p A.New'fieldset')⎕NS(
          'Legend' ''
          'Labels' ''
          'Options' ''
@@ -11,7 +11,6 @@
          'OnChange' ''
      )A.Default ⍵
      d.Name←n
-     d.class←'radio-group'
      id←d.Labels~¨' '
      _←d A.New'legend'd.Legend
      i←A.New¨{'input' ''}¨d.Labels

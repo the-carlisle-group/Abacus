@@ -1,4 +1,4 @@
  SetComponentFocus←{
      ⍺←⍵
-     (⍎⍺.class).SetFocus ⍺
+     ⍺.Class.SetFocus ⍺
  }

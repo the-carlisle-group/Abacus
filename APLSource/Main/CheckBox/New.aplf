@@ -1,14 +1,13 @@
  New←{
      ⍺←0
      (p n)←A.DefaultParentAndName ⍺
-     d←(p A.New'div')⎕NS(
+     d←A.InitComp(p A.New'div')⎕NS(
          'Label' ''
          'Value' 0
          'OnChange' ''
          'Disabled' 0
      )A.Default ⍵
      d.Name←n
-     d.class←'CheckBox'
      i←d A.New'input'
      i.type←'checkbox'
      i.id←d.Name

@@ -1,6 +1,6 @@
  New←{
      ⍺←0
-     t←(⍺ A.New'ul')⎕NS(
+     t←A.InitComp(⍺ A.New'ul')⎕NS(
          'Items' ''
          'Depth'⍬
          'OnSelect'('' 0)
@@ -11,8 +11,6 @@
      )A.Default t.OnSelect
      t.ActiveIndex←0
      t.tabindex←0
-     t.class←'TreeView'
-     t.Class←⎕THIS
      t.Onkeydown←A.FQP'OnKeyDown'
      _←Init t
      t

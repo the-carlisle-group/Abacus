@@ -1,7 +1,7 @@
  New←{
      ⍺←0
      p n←A.DefaultParentAndName ⍺
-     d←(p A.New'div')⎕NS(
+     d←A.InitComp(p A.New'div')⎕NS(
          'Label' ''
          'Value' 0
          'Format' 'I10'
@@ -9,10 +9,6 @@
          'Disabled' 0
      )A.Default ⍵
      d.Name←n
-     c←'NumberInput'
-     _←d.⎕DF c
-     d.class←c
-     d.Class←⎕THIS
      l←d A.New'label'd.Label
      l.for←d.Name
      i←d A.New'input'

@@ -7,6 +7,6 @@
      n v←↓⍉↑{9=⎕NC'⍵':⍵ ⎕VGET ¯2 ⋄ ⍵}⍵
      i j←m n⍳¨⊂m∩n
      0=≢i:0
-     c←⎕VGET e[i].class
+     c←e[i].Class
      0⊣e[i]c.SetValue v[j]
  }
