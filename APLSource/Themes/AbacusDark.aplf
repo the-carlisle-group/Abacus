@@ -9,6 +9,10 @@
      r.__code_font_family←'APL385 Unicode'
      ⍝ Borders
      r.__border_radius←'.5rem'
+     r.__border←'2px solid #E5E7EB'
+     r.__border_focused←'2px solid #60A5FA'
+     r.__border_box_shadow_focused←'0 0 0 3px rgba(96,165,250,0.35)'
+
 
      ⍝ Colors
      r.__text_color←'hsl(0, 0%, 90%)'
@@ -16,6 +20,8 @@
      r.__selected_background_color←'hsl(0, 0%, 60%)'
      r.__selected_text_color←'white'
      r.__border_color←'hsl(0, 0%, 80%)' ⍝ Compute from background?
+     r.__border_focused_color←'#3B82F6'
+
      r.__accent_color_1←'steelblue'
      r.__accent_color_2←'orange'
      ⍝ ***********************

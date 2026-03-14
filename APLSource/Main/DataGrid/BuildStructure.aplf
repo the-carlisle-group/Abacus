@@ -21,7 +21,7 @@
      o.(Header Body).id←t.Content.id
      o.Header.Rows.id←(##.HeaderRows t).id
      ⍝ o.Body.Cells.tabindex←'0'     ⍝ Not for first column if RowNumbers
-     o.Body.Cells.tabindex←↑r⍴⊂(⊂t.RowNumbers⊃,¨'0' '-1'),(c-1)⍴⊂,'0'
+     ⍝ o.Body.Cells.tabindex←↑r⍴⊂(⊂t.RowNumbers⊃,¨'0' '-1'),(c-1)⍴⊂,'0'
      ⍝ o.Header.Cells.tabindex←'0' ⍝ Maybe needed for editable column headers!
      0
  }

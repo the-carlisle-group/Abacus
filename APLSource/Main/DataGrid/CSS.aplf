@@ -4,7 +4,7 @@
      Padding←'0 .5em'
      Border←'solid 1px var(--border-color)'
      ⍝ ************************
-     s←Rule'.',⊃⌽'.'(≠⊆⊢)⍕⎕THIS ⍝ .DataGrid
+     s←Rule'.DataGrid'
      s.contain←'strict'
      s.display←'grid'
      s.grid_auto_flow←'row'
@@ -69,9 +69,10 @@
      r.border←Border
      r.position←'relative'
      ⍝ *************************
-     r←s Rule'td:focus'
+     ⍝ OBSOLETE
+     ⍝ r←s Rule'td:focus'
      ⍝ r.color←'red'
-     r.border←'solid 3px var(--border-color)'
+     ⍝ r.border←'solid 3px var(--border-color)'
      ⍝ *****************************
      r←s Rule'.selected-range'
      r.color←'var(--selected-text-color)'
@@ -81,9 +82,18 @@
      r←s Rule'.selected-range-all'
      r.background_color←'steelblue'
      ⍝ *********************************
-     ⍝r←s Rule'.active-cell'
-     ⍝r.border←'solid 3px var(--border-color)'
-     ⍝ r.background_color←'orange'
+     r←s Rule'.active-cell'
+     r.border←'solid 3px var(--border-color)'
+     r.background_color←'orange'
+     ⍝
+     ⍝ Active and focused Item
+     r←s Rule'table:focus .active-cell'
+     r.border←'2px solid steelblue'
+     r.background_color←'red'
+
+
+
+
      ⍝ *********************************
      r←s Rule'.in-cell'
      r.padding←0
@@ -177,5 +187,6 @@
      ⍝ r.inset←'0'
      ⍝ r.margin←'auto'
 
-     ##.UnNestCSS s
+     s
+     ⍝ ##.UnNestCSS s
  }

@@ -8,12 +8,20 @@
      ⍝ ************************
      r←s Rule'>div'
      r.display←'flex'
-     r.border←'2px solid'
+     r.border←'var(--border)'
      r.border_radius←'var(--border-radius)'
      ⍝ **********************
      r←s Rule'input'
      r.border←'none'
      r.flex←1
+     r.font_family←'var(--user-input-font-family)'
+     r.font_size←'1rem'
+     r.color←'inherit'
+     r.background_color←'inherit'
+     r.padding←'.5rem'
+     ⍝
+
+
      ⍝ **********************
      r←s Rule'button'
      r.border←'none'

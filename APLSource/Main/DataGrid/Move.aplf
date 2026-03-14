@@ -15,11 +15,10 @@
      e.NewCellIndex←⍵
      ⍺.ActiveCell←⍵
      ⍺.Selection←2⍴⊂⍵
-     ⍵ AdjustWindow ⍺:(Focus Refresh ⍺)Fire e
+     ⍵ AdjustWindow ⍺:(Refresh ⍺)Fire e
      lc←tc GetTableCell ⍺
      nc←GetTableCell ⍺
      _←⍺ RefreshActiveCellClass lc nc
-     _←nc Focus ⍺
      _←⍺ Fire e
      0
  }

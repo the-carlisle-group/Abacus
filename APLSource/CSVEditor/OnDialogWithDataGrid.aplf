@@ -1,7 +1,5 @@
  OnDialogWithDataGrid←{
      d←⍵.Document
-     eg←d A.GetElementByClass'DataGrid'
-     ⍝ c←eg.Table.Columns
 
 
      c←⎕NS¨3⍴⊂''
@@ -18,11 +16,19 @@
          19991231 20010101 2250101
      )
 
+
+     cb←'OnChange'(A.FQP'OnInputChange')
+     TextInput←A.TextInput.New'Text input:'cb
+     DropListInput←A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')cb
+     Checkbox←A.CheckBox.New'Check box input'cb
+
+
+
      g←A.DataGrid.New('Columns'c)('Autofocus' 1)
      p←⎕NS''
      p.Title←'Dialog Box'
      p.Subtitle←'Showing a DataGrid.'
-     p.MainContent←g
+     p.MainContent←TextInput g Checkbox
      p.Buttons←'OK' 'Cancel'
      p.OnClick←'' ''
      p._width←'60rem'

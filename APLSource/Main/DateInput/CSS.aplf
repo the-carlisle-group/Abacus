@@ -8,6 +8,17 @@
      ⍝ ************************
      r←s Rule'input'
      r.text_align←'right'
+     r.font_family←'var(--user-input-font-family)'
+     r.font_size←'1rem'
+     r.color←'inherit'
+     r.background_color←'inherit'
+     r.padding←'.5rem'
+     r.border←'var(--border)'
+     r.border_radius←'var(--border-radius)'
+     ⍝
+     r←s Rule':focus'
+     r.border←'var(--border-focused)'
+     r.box_shadow←'var(--border-box-shadow-focused)'
      ⍝ ************************
-     A.UnNestCSS s
+     s
  }

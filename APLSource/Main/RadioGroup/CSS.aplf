@@ -11,9 +11,32 @@
      s.margin←'1em'
      ⍝ *******************************
      r←s Rule'input'
-     r.width←'1rem'
-     r.height←'1rem'
-     r.accent_color←'steelblue'
+     r.width←'1.5rem'
+     r.height←'1.5rem'
+     r.appearance←'none'
+     r.border_radius←'50%'
+     r.border←'var(--border)'
+     r.position←'relative'
+     ⍝ ***************************
+     r←s Rule'input:focus'
+     r.border←'var(--border-focused)'
+     r.box_shadow←'var(--border-box-shadow-focused)'
+
+     ⍝ ************************
+     r←s Rule'input:checked::before'
+     r.content←'""'
+     r.width←'10px'
+     r.height←'10px'
+     r.background_color←'red'
+     r.border_radius←'50%'
+     r.position←'absolute'
+     r.top←'50%'
+     r.left←'50%'
+     r.transform←'translate(-50%, -50%)'
+
+
+
+
      ⍝ ******************************
      r←s Rule'>div'
      r.display←'flex'

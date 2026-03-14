@@ -1,5 +1,5 @@
  SetFocus←{
      ⍝ ⍺|⍵ ←→ Grid
      ⍺←⍵
-     Focus ⍺.Table
+     ⍺.Table A.ExecuteOnElement'focus()'
  }

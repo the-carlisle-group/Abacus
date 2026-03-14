@@ -1,9 +1,9 @@
  NewTable←{
      t←⍺ A.NewTable''
+     t.tabindex←0
      t.OptiTable←A.NewOptiTable ⍬
      t.LastAnchor←0
      t.EntryError←0
-     ⍝ t.tabindex←0 ⍝ NOT USED?
      t.CellMode←0   ⍝ 0←→ReadyMode, 1←→EnterMode, 2←→EditMode
      t.Changed←0
      t.LastChangeTime←2 ⎕DT⊂⎕TS

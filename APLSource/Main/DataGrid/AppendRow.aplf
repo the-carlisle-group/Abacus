@@ -1,7 +1,7 @@
  AppendRow←{
      t←⍵
      t.ReadOnly:0
-     ~t.InsertRows:0
+     ~t.CanInsertRows:0
      c←t.Columns
      c.Value←c.Value{1=≢⍴⍺:⍺,⊂⍵ ⋄ ⍺⍪(1⊃⍴⍺)↑⍵}¨c.Default
      t.RowIndices,←⊃t.DataSize

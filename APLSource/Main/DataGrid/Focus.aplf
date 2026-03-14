@@ -2,6 +2,13 @@
      ⍝ ⍺ ←→ Cell element
      ⍝ ⍵ ←→ Table
      ⍝ ← ←→ Pass thru table for convenience
+
+
+     ⎕←'OBSOLETE CALL to FOCUS'
+     ⍵
+
+
+
      ⍺←GetTableCell ⍵
      _←⍺ A.FireEvent'focus'
      ⍵

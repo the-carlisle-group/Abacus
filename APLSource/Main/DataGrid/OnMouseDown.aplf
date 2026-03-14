@@ -19,5 +19,6 @@
      t.ActiveCell←t TableCell2ActiveCell i
      t.Selection←2⍴⊂t.ActiveCell
      _←t RefreshActiveCellClass lc e
-     e A.FireEvent'focus'
+     0
+     ⍝ e A.FireEvent'focus'
  }

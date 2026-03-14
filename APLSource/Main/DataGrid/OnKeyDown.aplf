@@ -12,8 +12,9 @@
      p≡'Escape':Escape t
      p≡'Enter':t Move t.ActiveCell+1 0
      p≡'ShiftEnter':t Move t.ActiveCell-1 0
-     p≡'Tab':t Move t.ActiveCell+0 1
-     p≡'ShiftTab':t Move t.ActiveCell-0 1
+     ⍝ DONT DO THIS ... should move to next control
+     ⍝ p≡'Tab':t Move t.ActiveCell+0 1
+     ⍝ p≡'ShiftTab':t Move t.ActiveCell-0 1
      m=2:0
      p≡'ArrowRight':t Move t.ActiveCell+0 1
      p≡'ArrowLeft':t Move t.ActiveCell-0 1
