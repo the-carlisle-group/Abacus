@@ -79,7 +79,26 @@
      s.display←'flex'
      s.align_items←'center'
      s.gap←'1rem'
+     s.color←'inherit'
+     s.background_color←'inherit'
+     s.border←'var(--border)'
+     s.font_size←'1rem'
+     s.min_width←'6rem'
+     s.border_radius←'var(--border-radius)'⍝
+     s.padding←'.5rem'
+
+
      z,←s
+
+     s←Rule'.dropdown-menu:focus'
+     s.border←'var(--border-focused)'
+     s.box_shadow←'var(--border-box-shadow-focused)'
+
+     z,←s
+
+
+
+
 
      ⍝
      z

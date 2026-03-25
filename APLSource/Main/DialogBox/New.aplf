@@ -1,20 +1,21 @@
  New←{
      ⍺←0
-     d←(A.New'dialog')⎕NS(
+     d←A.InitComp(A.New'dialog')⎕NS(
          'Title' ''
          'Subtitle' ''
          'MainContent'⍬
          'Buttons'('OK' 'Cancel')
+         'Icons' 'none'
          'OnClick' ''
          'OnClose' ''
      )A.Default ⍵
      d.Document←⍺
      d.Buttons←⊆d.Buttons
      d.OnClick←(≢d.Buttons)⍴⊆d.OnClick
-     d.class←'DialogBox'
+     d.Icons←(≢d.Buttons)⍴⊆d.Icons
      h←d A.New'header'(A.New¨'h1' 'h2'{⍺ ⍵}¨d.Title d.Subtitle)
      m←d A.New'section'd.MainContent
-     b←A.New¨{'button'⍵}¨d.Buttons
+     b←d.Buttons A.Button.New¨d.Buttons{⍺ ⍵}¨d.Icons
      b.Name←d.Buttons
      f←d A.New'footer'b
      f.Onclick←A.FQP'OnClick'

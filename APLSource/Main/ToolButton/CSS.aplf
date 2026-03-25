@@ -1,0 +1,22 @@
+ CSS←{
+     Rule←A.NewRule
+     ⍝ ******************
+     s←Rule'.ToolButton'
+     s.display←'flex'
+     s.justify_content←'center'
+     s.gap←'.5rem'
+
+     s.border_radius←'var(--border-radius)'⍝
+     s.padding←'.5rem'
+     s.color←'inherit'
+     s.background_color←'inherit'
+     s.border←'none'
+     ⍝ s.border←'var(--border)'
+     s.font_size←'1rem'
+     ⍝ s.min_width←'6rem'
+     ⍝ *****************************************
+     r←s Rule'&:focus'
+     r.border←'var(--border-focused)'
+     r.box_shadow←'var(--border-box-shadow-focused)'
+     s
+ }

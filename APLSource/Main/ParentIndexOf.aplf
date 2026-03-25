@@ -1,0 +1,6 @@
+ ParentIndexOf←{
+ ⍝ ⍺ ←→ Array of elements
+ ⍝ ⍵ ←→ Element
+ ⍝ ← ←→ Loccation of ⍵ in ⍺ or in children of ⍺
+     1⍳⍨⍵∊¨(GetElements¨⍺)
+ }

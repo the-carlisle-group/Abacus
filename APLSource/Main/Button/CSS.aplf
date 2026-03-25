@@ -1,11 +1,37 @@
  CSS←{
      Rule←A.NewRule
      ⍝ ******************
-     s←Rule'.button'
+     s←Rule'.Button'
      s.display←'flex'
      s.justify_content←'center'
-     s.gap←'.5rem'     ⍝   ##.Flex.New
+     s.gap←'.5rem'
+     s.border_radius←'var(--border-radius)'⍝
+     s.padding←'.5rem'
+     s.color←'inherit'
+     s.background_color←'inherit'
+     s.border←'var(--border)'
+     s.font_size←'1rem'
+     s.min_width←'6rem'
+     ⍝ *****************************************
+     r←s Rule'&:focus'
+     r.border←'var(--border-focused)'
+     r.box_shadow←'var(--border-box-shadow-focused)'
+
+     ⍝ *****************************************
+     s2←Rule'.ToolButton'
+     s2←Rule'.Button'
+     s2.display←'flex'
+     s2.justify_content←'center'
+     s2.gap←'.5rem'
+     s2.padding←'.5rem'
+     s2.color←'inherit'
+     s2.background_color←'inherit'
+     s2.font_size←'1rem'
+     ⍝ *****************************************
+     r←s2 Rule'&:focus'
+     r.border←'2px solid red'
+     ⍝ r.border←'var(--border-focused)'
+     r.box_shadow←'var(--border-box-shadow-focused)'
+
      s
-     ⍝
-     A.UnNestCSS s
  }

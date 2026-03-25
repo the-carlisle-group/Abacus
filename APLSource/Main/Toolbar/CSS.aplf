@@ -1,9 +1,73 @@
  CSS←{
      Rule←A.NewRule
      ⍝ *********************
-     s←Rule'.toolbar'
+     s←Rule'.Toolbar'
      s.display←'flex'
      s.gap←'.5rem'
-     ⍝ *********************
+     s.padding←'0'
+     s.background←'#2b2b2b'
+     s.border_top←'3px solid #555'
+     s.border_left←'3px solid #555'
+     s.border_bottom←'3px solid #111'
+     s.border_right←'3px solid #111'
+     ⍝ Active Item
+     r←s Rule'.Active'
+     r.border←'2px solid gray'
+
+
+     ⍝ Or tweak components here?
+     r←s Rule'.Button,.CheckBox,.DropList,.dropdown-menu'
+     ⍝ r←s Rule'.Toolbar > *'
+     r.min_width←'0'
+     r.border←'3px solid #2b2b2b'
+     r.border_radius←'0'
+
+
+     ⍝ All Direct Children
+     r←s Rule'>*:hover'
+     r.border_left←'3px solid #555'
+     r.border_right←'3px solid #111'
+
+
+     ⍝ All Direct Children
+     r←s Rule'.dropdown-menu:hover'
+     r.border_left←'3px solid #555'
+     r.border_right←'3px solid #111'
+
+
+     r←s Rule'.Button:focus'
+     r.border_radius←'var(--border-radius)'
+
+
+
+
+
+     ⍝
+     r←s Rule'.CheckBox'
+     r.padding←'0 .5rem'
+
+     ⍝
+     r←s Rule'.DropList'
+     ⍝ r.border_radius←'var(--border-radius)'
+     r.padding←'0 .5rem'
+     r.flex_direction←'row'
+     r.gap←'.1REM'
+     r.align_items←'center'
+
+     r←s Rule'.DropList select'
+     r.border←'3px solid #2b2b2b'
+     r.padding←'.5rem 0'
+     ⍝ r.border←'none'
+
+
+     r←s Rule'.DropList select:focus,.dropdown-menu:focus'
+     r.border←'var(--border-focused)'
+     r.box_shadow←'var(--border-box-shadow-focused)'
+
+
+     r←s Rule'.dropdown-menu'
+     r.border←'3px solid #2b2b2b'
+
+
      s
  }

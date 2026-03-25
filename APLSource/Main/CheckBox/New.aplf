@@ -9,6 +9,7 @@
      )A.Default ⍵
      d.Name←n
      i←d A.New'input'
+     i.class←''
      i.type←'checkbox'
      i.id←d.Name
      l←d A.New'label'd.Label

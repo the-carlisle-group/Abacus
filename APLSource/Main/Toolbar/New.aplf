@@ -1,9 +1,17 @@
  New←{
      ⍺←0
-     d←(⍺ A.New'div')⎕NS(
+     d←A.InitComp(⍺ A.New'div')⎕NS(
          'Content' ''
      )A.Default ⍵
-     d.class←'toolbar'
-     d.Class←⎕THIS
+     e←A.GetElements d
+     d.FocusContent←e/⍨e.Tag∊'button' 'select' 'input'
+     d.FocusContent.tabindex←⊂'-1'
+     f←⊃d.FocusContent
+     f.class,←' Active'
+     d.ActiveIndex←0
+     d.tabindex←'0'
+     d.Onclick←A.FQP'OnClick'
+     d.Onfocus←A.FQP'OnFocus'
+     d.Onkeydown←A.FQP'OnKeyDown'
      d
  }

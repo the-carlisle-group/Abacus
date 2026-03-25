@@ -7,8 +7,17 @@
      s.align_items←'flex-start'
      s.gap←'.5em'
      s.font_family←'Arial'
-     s.padding←'.5em'
-     s.margin←'1em'
+     s.padding←'1rem'
+     s.border←'var(--border)'
+     s.border_radius←'var(--border-radius)'
+
+     ⍝ s.margin←'1em'  ?
+
+     ⍝ ****************************
+     r←s Rule'div'
+     r.display←'flex'
+     r.align_items←'center'
+
      ⍝ *******************************
      r←s Rule'input'
      r.width←'1.5rem'
@@ -25,9 +34,9 @@
      ⍝ ************************
      r←s Rule'input:checked::before'
      r.content←'""'
-     r.width←'10px'
-     r.height←'10px'
-     r.background_color←'red'
+     r.width←'1rem'
+     r.height←'1rem'
+     r.background_color←'white'
      r.border_radius←'50%'
      r.position←'absolute'
      r.top←'50%'

@@ -1,0 +1,4 @@
+ OnShowToolTips←{
+     ⍵.Document.ToolTipsVisible←⍵.Value
+     0
+ }

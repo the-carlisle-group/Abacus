@@ -8,9 +8,7 @@
      r.margin←0
      r.padding←0
      r.box_sizing←'border-box'
-
      r.outline←'none'
-
      ⍝ Flex Containers
      r←s Rule'body, main, .tabs, .flex'
      r.display←'flex'
@@ -26,34 +24,19 @@
      r.background_color←'var(--background-color)'
      ⍝ Header
      r←s Rule'body>header'
-     r.border←'solid 1px var(--border-color)'
-     r.padding←'1rem'
+     ⍝ r.border←'solid 1px var(--border-color)'
+     ⍝ r.padding←'1rem'
      ⍝ Main
      r←s Rule'main'
-     r.border←'solid 1px var(--border-color)'
+     ⍝ r.border←'solid 1px var(--border-color)'
      ⍝ Footer
      r←s Rule'body>footer'
      r.border←'solid 1px var(--border-color)'
      r.padding←'.5rem'
      r.height←'5rem'
-     ⍝ Input
-     r←s Rule' '
-⍝     r.font_family←'var(--user-input-font-family)'
-⍝     r.font_size←'1rem'
-⍝     r.color←'inherit'
-⍝     r.background_color←'inherit'
-⍝     r.padding←'.5rem'
-⍝     r.border←'2px solid'
-⍝     r.border_radius←'var(--border-radius)'
-     ⍝ Button
-     r←s Rule'button'
-     r.border_radius←'var(--border-radius)'
-     r.padding←'.5rem'
-     r.color←'inherit'
-     r.background_color←'inherit'
-     r.border←'2px solid var(--accent-color-1)'
-     r.font_size←'1rem'
-     r.min_width←'6rem'
+
+
+
      ⍝ Icons
      r←s Rule'.icon-tabler'
      r.color←'lightgray'
@@ -65,8 +48,6 @@
      r←s Rule'.aui-IconButton>svg'
      r.height←'48px'
      r.width←'auto'
-
-
      ⍝ **************
      r←s Rule'#MouseAnchor'
      r.anchor_name←'--mouse-anchor'

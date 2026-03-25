@@ -1,0 +1,7 @@
+ OnClick←{
+     ⎕←'Clicked the toolbar!'
+     t←⍵.CurrentTarget
+     i←1⍳⍨⍵.Target∊¨A.GetElements¨t.Content
+     t.ActiveIndex←i
+     0
+ }

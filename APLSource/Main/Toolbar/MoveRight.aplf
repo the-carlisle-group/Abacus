@@ -1,0 +1,11 @@
+ MoveRight←{
+     ⍝ ⍺ ←→ Toolbar
+     i←⍺.ActiveIndex+1
+     c←⍺.FocusContent
+     i=≢c:0
+     nb←i⊃c
+     ob←⍺.ActiveIndex⊃c
+     ⍺.ActiveIndex←i
+     _←ob nb A.MoveClass'Active'
+     nb A.FireEvent'focus'
+ }

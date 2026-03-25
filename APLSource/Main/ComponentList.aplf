@@ -24,9 +24,8 @@
      l,←⊂'Panels'
      l,←⊂'Tabs'
      l,←⊂'Toolbar'
-     l,←⊂'ButtonGroup'
-     l,←⊂'Button'
      l,←⊂'Flex'
      l,←⊂'TreeView'
+     l,←⊂'Button'
      l
  }

@@ -10,6 +10,10 @@
      r.display←'flex'
      r.border←'var(--border)'
      r.border_radius←'var(--border-radius)'
+     ⍝
+     r←s Rule'>div:focus-within'
+     r.border←'var(--border-focused)'
+     r.box_shadow←'var(--border-box-shadow-focused)'
      ⍝ **********************
      r←s Rule'input'
      r.border←'none'
@@ -19,13 +23,21 @@
      r.color←'inherit'
      r.background_color←'inherit'
      r.padding←'.5rem'
-     ⍝
-
-
      ⍝ **********************
      r←s Rule'button'
      r.border←'none'
-     r.min_width←0
+     r.padding←'.5rem'
+     r.color←'inherit'
+     r.background_color←'inherit'
+     r.border_radius←'var(--border-radius)'
+
+     ⍝ r.border_left←'var(--border)'
+     r.font_size←'1rem'
+
+     ⍝
+     r←r Rule'&:focus'
+     r.color←'#60A5FA'  ⍝#.Abacus.Themes.AbacusDark
+
      ⍝ **********************
-     A.UnNestCSS s
+     s
  }

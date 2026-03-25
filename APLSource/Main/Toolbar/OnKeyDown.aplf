@@ -1,0 +1,10 @@
+ OnKeyDown←{
+     t←⍵.CurrentTarget
+     k←⍵.Key
+     k⊂⍛∊'Control' 'Shift' 'Alt' 'Process':0
+     b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
+     p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
+     p≡'ArrowRight':t MoveRight 0
+     p≡'ArrowLeft':t MoveLeft 0
+     0
+ }

@@ -10,9 +10,18 @@
      r.border←'2px solid var(--border-color)'
      r.appearance←'base-select'
      r.padding←'.5rem'
+     ⍝ ***************************
+     r←s Rule'select:focus'
+     r.border←'var(--border-focused)'
+     r.box_shadow←'var(--border-box-shadow-focused)'
+
+
      ⍝ **********************************
      r←s Rule'option:focus'
      r.background_color←'var(--accent-color-1)'
+
+
+
      ⍝ *****************************
      r←s Rule'select::picker-icon'
      r.color←'#999'

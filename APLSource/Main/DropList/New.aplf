@@ -13,6 +13,7 @@
      l.for←d.Name
      op←A.New¨{'option'⍵}¨d.Options
      s←d A.New'select'op
+     s.class←''
      s.id←d.Name
      _←s ⎕VSET d.Disabled/⊂2⍴⊂'disabled'
      d.Onchange←A.FQP'OnChange'

@@ -1,0 +1,10 @@
+ MoveLeft←{
+     i←⍺.ActiveIndex-1
+     i=¯1:0
+     c←⍺.FocusContent
+     nb←i⊃c
+     ob←⍺.ActiveIndex⊃c
+     ⍺.ActiveIndex←i
+     _←ob nb A.MoveClass'Active'
+     nb A.FireEvent'focus'
+ }

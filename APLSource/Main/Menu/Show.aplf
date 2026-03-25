@@ -8,5 +8,7 @@
      ⍝ For the DataGrid context menu it need to be Target
      ⍝      #.Abacus.Main.DataGrid.OnContextMenu
      ⍝ RESOLVE THIS PROBLEM!
+     ⍵ ShowMenu ⍺.CurrentTarget   ⍝ Target or CUrrent Target!?
+
      ⍵ ShowMenu ⍺.Target   ⍝ Target or CUrrent Target!?
  }
