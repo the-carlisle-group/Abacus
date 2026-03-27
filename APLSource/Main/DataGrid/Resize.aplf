@@ -5,7 +5,7 @@
      c←t.Columns[t.ColumnIndices]
      a←c,⍨t.RowNumbers/t.RowNumberColumn
      t.AvailableWidth←g.Width-+/t.FixedColumns↑a.Width
-     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex a.Width
+     t.ColumnsPerIndex←t.AvailableWidth ComputeColumnsPerIndex t.FixedColumns↓a.Width
      0∊t.ColumnsPerIndex:0
      t.ScrollIntoViewIndex←ComputeScrollIntoViewIndex t.ColumnsPerIndex
      t.RowsToDisplay←⌊t.RowHeight÷⍨g.Height-t.HeaderHeight
