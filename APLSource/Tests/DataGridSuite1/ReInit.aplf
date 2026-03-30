@@ -4,5 +4,5 @@
      t←Init GetTable 0
      ⍺←≢(⊃t.Columns).Value
      t.Columns.Value←⍺↑¨t.Columns.Value
-     t⊣t.Parent A.DataGrid.Resize 0
+     t⊣t.Parent A.DataGrid.SetColumns t.Columns
  }

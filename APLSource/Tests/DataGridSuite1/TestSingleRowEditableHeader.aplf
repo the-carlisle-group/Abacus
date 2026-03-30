@@ -2,6 +2,6 @@
      ⎕TID=0:∇&0
      t←Init GetTable 0
      t.HeaderReadOnly←0
-     _←t.Parent A.DataGrid.Resize 0
+     _←t.Parent A.DataGrid.SetColumns t.Columns
      0
  }

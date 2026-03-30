@@ -4,5 +4,5 @@
      n m←t.DataSize-1
      t.Selection←(0 0)(n m)
      t.SelectType←'All'
-     0⊣Focus Refresh t
+     0⊣Refresh t
  }

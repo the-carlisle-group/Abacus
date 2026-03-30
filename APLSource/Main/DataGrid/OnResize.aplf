@@ -8,6 +8,6 @@
      t←g.Table
      b←t.Autofocus
      t.Autofocus←0
-     b:Focus t
+     b:t
      0
  }

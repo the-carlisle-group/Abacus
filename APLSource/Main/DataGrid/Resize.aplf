@@ -2,6 +2,7 @@
      g←⍺
      t←g.Table
      0=≢t.Columns:0
+     t.ActiveCell⌊←0⌈t.DataSize-1
      c←t.Columns[t.ColumnIndices]
      a←c,⍨t.RowNumbers/t.RowNumberColumn
      t.AvailableWidth←g.Width-+/t.FixedColumns↑a.Width
@@ -11,7 +12,7 @@
      t.WindowSize←t.RowsToDisplay,(1⊃t.WindowIndex)⊃t.ColumnsPerIndex
      t.DataWidth←+/a.Width
      t.DataHeight←t.RowHeight×⊃t.DataSize
-     t.MaxWindowIndex←t.DataSize-t.WindowSize[0],1++/∧\2</⌽t.ColumnsPerIndex
+     t.MaxWindowIndex←0⌈t.DataSize-t.WindowSize[0],1++/∧\2</⌽t.ColumnsPerIndex
      ∨/t.WindowSize<1:0
      t.TableCell←t ActiveCell2TableCell t.ActiveCell
      _←g ResizeScrollBars''

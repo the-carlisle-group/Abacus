@@ -14,5 +14,5 @@
      n m←t.DataSize-1
      b←r⊃(1⊃t.ActiveCell)m
      t.Selection←t.ActiveCell(n,b)
-     0⊣Focus Refresh t
+     0⊣Refresh t
  }

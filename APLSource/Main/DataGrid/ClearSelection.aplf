@@ -3,5 +3,5 @@
      ⍵.Selection←2⍴⊂⍵.ActiveCell
      ⍵.SelectType←'Cell'
      _←⍵.ActiveCell AdjustWindow ⍵
-     0⊣Focus Refresh ⍵
+     0⊣Refresh ⍵
  }

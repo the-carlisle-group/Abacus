@@ -9,5 +9,5 @@
      g←⍺ ReSort ⍺.RowIndices
      c.Value←g∘(⊂⍛⌷)¨c.Value
      c.HeaderClass←ComputeHeaderClass c
-     Focus Refresh ⍺
+     Refresh ⍺
  }

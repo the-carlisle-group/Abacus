@@ -8,5 +8,5 @@
      t.ActiveCell[0]←(0⊃t.DataSize)⌊i+0⊃t.ActiveCell
      t.Selection←2⍴⊂t.ActiveCell
      t.TableCell[0]←t.ActiveCell[0]-t.WindowIndex[0]
-     0⊣Focus Refresh t
+     0⊣Refresh t
  }

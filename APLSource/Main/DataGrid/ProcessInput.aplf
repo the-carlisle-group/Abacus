@@ -26,6 +26,8 @@
      t.CellMode←0
      _←t SetChanged 0
      e.Event←'CellChange'
+     _←t A.FireEvent'focus'
      _←t Fire e
+
      0
  }

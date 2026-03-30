@@ -1,5 +1,9 @@
  HasClass←{
      ⍝ ⍺←→Element
      ⍝ ⍵←→Class Name(s)
-     ∧/(⊆⍵)∊' '(≠⊆⊢)⍺.class
+     2=⍺.⎕NC'class':∧/(⊆⍵)∊' '(≠⊆⊢)⍺.class
+     0=⍺.⎕NC'Attributes':0
+     s←()⎕VSET↓⍺.Attributes
+     0=s.⎕NC'class':0
+     ∧/(⊆⍵)∊' '(≠⊆⊢)s.class
  }

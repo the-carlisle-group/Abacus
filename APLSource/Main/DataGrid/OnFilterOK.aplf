@@ -16,7 +16,7 @@
 
      t.DataSize←(≢t.RowIndices),≢t.Columns
      _←g Resize 0
-     0⊣Focus t
+     0⊣t
      ⍝t.DataHeight←t.RowHeight×⊃t.DataSize
      ⍝_←g ResizeScrollBars''
      ⍝Refresh t

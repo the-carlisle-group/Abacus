@@ -7,5 +7,5 @@
      t←⍺.Table
      ci←{##.IsString ⍵:t.Columns.Name⍳⊂⍵ ⋄ ⍵}c
      _←t SetCellValues(⍪⊆v)(r ci)
-     0⊣Focus Refresh t
+     0⊣Refresh t
  }

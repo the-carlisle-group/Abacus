@@ -12,11 +12,5 @@
      t.DataSize-←k 0
      t.RowIndices←⍳⊃t.DataSize
      t.Change←1
-     l←⊃t.WindowIndex=t.MaxWindowIndex
-     t.ActiveCell-←l 0
-     t.Selection←2⍴⊂t.ActiveCell
-     t.WindowIndex-←l 0
-     t.MaxWindowIndex-←1 0
-     _←t.Parent ResizeScrollBars''
-     0⊣Focus Refresh t
+     t.Parent Resize 0
  }

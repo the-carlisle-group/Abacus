@@ -3,6 +3,7 @@
      t.ActiveCell←0 0
      t.WindowIndex←0 0
      t.RowNumbers←1
+     t.RowMinimum←0
      t.InsertRows←1
      t.InsertColumns←1
      t.ColumnIndices←⍬
@@ -18,7 +19,7 @@
      (2⊃⌽c).FormatString←'F20.2'
      (2⊃⌽c).Null←⎕NULL
      (6⊃c).FormatString←'Q< mb>K¯6CF12.2'
-     (9⊃c).FormatString←'CF20.5'
+     ⍝ (9⊃c).FormatString←'CF20.5'
 
      ⍝ Try a custom type
      ct←13⊃c
@@ -36,7 +37,7 @@
 
 
      n←5
-     t.RowMinimum←10
+     ⍝ t.RowMinimum←10
      v←⊂n⍴1 0 0
      v,←⊂↑n⍴'Alabama' '' 'Alabama' 'New York' '' 'California'
      v,←⊂↑n⍴'Onions' 'Spinach',n⍴⊂''

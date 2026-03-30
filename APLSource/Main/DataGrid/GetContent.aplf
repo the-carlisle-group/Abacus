@@ -13,6 +13,7 @@
      h.Cells.style←(t.HeaderRowCount nc)⍴a.HeaderStyle[q]
      h.Cells.class←(t.HeaderRowCount nc)⍴a.HeaderClass[q]
      _←{
+         0=⊃t.DataSize:0
          t.TableCell≡¯1 ¯1:0
          ∧/t.TableCell≥0:0
          r c←t.TableCell
@@ -26,6 +27,7 @@
      bc←t Highlight i q(nr nc⍴a.ColumnClass[q])
      bc←t Selection bc
      _←{
+         0=⊃t.DataSize:0
          ∨/t.TableCell<0:0
          0=≢bc:0
          bc[⊂t.TableCell]←⊂((⊂t.TableCell)⊃bc),' active-cell'

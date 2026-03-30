@@ -1,5 +1,7 @@
  SetValue←{
      ⍺.Table.Columns←⍵
+     ⍺.Table.RowMask←1          ⍝Should be in init?
+     ⍺.Table.DisplayColumns←''
      _←Init ⍺
      0 0≡⍺.(Width Height):0
      ⍺ Resize 0

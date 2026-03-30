@@ -9,5 +9,5 @@
      s≡t.Selection:0
      t.Selection←s
      _←(⊃s)AdjustWindow t
-     0⊣Focus Refresh t
+     0⊣Refresh t
  }

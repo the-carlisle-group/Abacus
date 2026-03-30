@@ -15,5 +15,5 @@
      t.DataSize+←1 0
      t.RowIndices←⍳⊃t.DataSize
      _←t SetChanged 0
-     0⊣Focus Refresh t
+     0⊣Refresh t
  }

@@ -4,5 +4,5 @@
      n m←t.DataSize-1
      t.Selection←0 n,¨1⊃¨t.Selection
      t.SelectType←(t.SelectType≡'Row')⊃'Column' 'All'
-     0⊣Focus Refresh t
+     0⊣Refresh t
  }
