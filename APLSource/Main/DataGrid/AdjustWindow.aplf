@@ -13,6 +13,7 @@
      ⍵.WindowIndex+←x
      ⍝x≡0 0:0
      ⍵.WindowIndex[1]←(x[1]>0)⊃(⍵.WindowIndex[1])((1⊃⍺)⊃⍵.ScrollIntoViewIndex)
+     ⍵.WindowIndex⌈←0
      r c←⍵.WindowIndex
      ⍵.WindowSize[1]←c⊃⍵.ColumnsPerIndex
      ⍵.TableCell←⍵ ActiveCell2TableCell ⍵.ActiveCell

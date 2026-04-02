@@ -10,7 +10,10 @@
      c.Value←b∘⌿¨c.Value
      c.Value←c.Value{k:⍺ ⋄ 1=≢⍴⍺:⍺,⊂⍵ ⋄ ⍺⍪(1⊃⍴⍺)↑⍵}¨c.Default
      t.DataSize-←k 0
+     t.ActiveCell⌊←t.DataSize-1
+     t.Selection←2⍴⊂t.ActiveCell
+     t.SelectionType←'Cell'
      t.RowIndices←⍳⊃t.DataSize
-     t.Change←1
+     _←t SetChanged 0
      t.Parent Resize 0
  }

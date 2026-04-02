@@ -83,13 +83,17 @@
      r.background_color←'steelblue'
      ⍝ *********************************
      r←s Rule'.active-cell'
-     r.border←'solid 1px var(--border-color)'
-     r.background_color←'orange'
+     ⍝ r.border←'solid 1px var(--border-color)'
+     r.outline←'2px solid var(--border-color)'
+     ⍝ r.background_color←'orange'
      ⍝
      ⍝ Active and focused Item
      r←s Rule'table:focus .active-cell'
-     r.border←'1px solid steelblue'
-     r.background_color←'red'
+     ⍝ r.border←'1px solid steelblue'
+     r.outline←'none'
+
+
+     r.background_color←'steelblue'
 
 
 

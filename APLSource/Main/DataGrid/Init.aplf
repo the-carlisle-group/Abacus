@@ -13,7 +13,7 @@
      _←g InitRowMask t.RowMask
      c.HeaderValues←↓↑,¨⊆¨c.HeaderValues  ⍝ V of V, same length
      t.HeaderRowCount←≢⊃c.HeaderValues
-     t.HeaderRowTitles←{⍵↑⊆t.HeaderRowTitles,⍵⍴⊂''}t.HeaderRowCount
+     r.HeaderValues←{⍵↑(⊆t.HeaderRowTitles),⍵⍴⊂''}t.HeaderRowCount
      t.HeaderReadOnly←{⍵↑t.HeaderReadOnly,⍵⍴1}t.HeaderRowCount
      ⍝ For now: Total header height....
      t.HeaderHeight←t.HeaderRowCount×3×t.FontSize ⍝ Number of header rows ...
@@ -22,10 +22,9 @@
      t.DataSize←≢¨t.RowIndices t.ColumnIndices
      c.MaxLength←1⊃¨2↑¨⍴¨c.Value
      a.Width←t ComputeWidths t.Columns.Width
-     a.ColumnTitle←(t.HeaderRowTitles),c.HeaderValues
      t.FixedColumns←t.RowNumbers+t.FreezeColumns
      t.WindowIndex←0,t.FreezeColumns
-     t.ActiveCell←0 0
+     t.ActiveCell←0 0-0=t.DataSize
      t.Selection←2⍴⊂t.ActiveCell
      a.HeaderStyle←ComputeHeaderStyles a
      a.HeaderClass←ComputeHeaderClass a

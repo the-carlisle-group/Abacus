@@ -13,6 +13,7 @@
      t.DataWidth←+/a.Width
      t.DataHeight←t.RowHeight×⊃t.DataSize
      t.MaxWindowIndex←0⌈t.DataSize-t.WindowSize[0],1++/∧\2</⌽t.ColumnsPerIndex
+     t.WindowIndex⌊←t.MaxWindowIndex
      ∨/t.WindowSize<1:0
      t.TableCell←t ActiveCell2TableCell t.ActiveCell
      _←g ResizeScrollBars''

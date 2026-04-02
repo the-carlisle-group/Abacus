@@ -6,6 +6,6 @@
      Press'F2':
      Enter'Colorado':
      Press'Enter':
-     Assert'DenverColorado'≡GetValues 0 6:
+     Assert'DenverColorado'≡⊃GetValues(0 1)6:
      0
  }

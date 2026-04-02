@@ -2,11 +2,13 @@
      t←⍵
      t.ReadOnly:0
      ~t.CanInsertRows:0
+     HandleInput t:0
+     _←ClearSelection t
      c←t.Columns
      c.Value←c.Value{1=≢⍴⍺:⍺,⊂⍵ ⋄ ⍺⍪(1⊃⍴⍺)↑⍵}¨c.Default
      t.RowIndices,←⊃t.DataSize
      t.DataSize+←1 0
-     t.MaxWindowIndex+←1 0
-     _←t Move t.ActiveCell+1 0
-     0⊣Refresh t
+     _←t SetChanged 0
+     _←t.Parent Resize 0
+     t Move t.ActiveCell+1 0
  }

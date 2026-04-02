@@ -3,9 +3,9 @@
      t←ReInit 0
      Press'Ctrl' 'Home':
      Assert(⊃BrowserValues)≡'aardsda01':
-     Press'Ctrl' 'Shift' 'Delete':
+     Press'Ctrl' 'Shift' 'F10':
      Assert(⊃BrowserValues)≡'1981':
-     ⊃Press¨6⍴⊂'Ctrl' 'Shift' 'Delete':
+     ⊃Press¨6⍴⊂'Ctrl' 'Shift' 'F10':
      Assert(⊃BrowserValues)≡,'0':
      0
  }

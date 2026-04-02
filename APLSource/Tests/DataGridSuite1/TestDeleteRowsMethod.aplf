@@ -1,0 +1,20 @@
+ TestDeleteRowsMethod←{
+     ⎕TID=0:∇&0
+     t←ReInit 0
+     g←t.Parent
+     n←⊃t.DataSize
+     b←n↑20000⍴1
+     _←g A.DataGrid.DeleteRows b
+     Assert t.DataSize≡81 24:
+     Press'Ctrl' 'End':
+     b←¯81↑10⍴1
+     _←g A.DataGrid.DeleteRows b
+     Assert t.DataSize≡71 24:
+     b←71⍴1
+     _←g A.DataGrid.DeleteRows b
+     Assert t.DataSize≡0 24:
+
+
+
+     0
+ }

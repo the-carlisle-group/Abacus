@@ -1,0 +1,19 @@
+ TestEmptyDataGrid←{
+     ⎕TID=0:∇&0
+     t←ReInitAllDataTypes 0
+     Press'Ctrl' 'Delete':
+     Press'Ctrl' 'Delete':
+     Press'Ctrl' 'Delete':
+     Press'Ctrl' 'Delete':
+     Press'Ctrl' 'Delete':
+     Press'ArrowDown':
+     Press'ArrowRight':
+     Press'Ctrl' 'Delete':
+     Assert t.ActiveCell≡¯1 1:
+     Press'ArrowRight':
+     0
+     Assert t.ActiveCell≡¯1 2:
+
+
+     0
+ }

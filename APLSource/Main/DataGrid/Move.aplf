@@ -5,7 +5,6 @@
      _←ClearSelection ⍺
      tc←⍺.TableCell
      0>0⊃⍵:⍺ GoToHeaderRow ⍵
-     (⊃⍵)=⊃⍺.DataSize:AppendRow ⍺
      ∨/(⍵<0)∨⍵≥⍺.DataSize:0
      e←⎕NS''
      e.Event←'CellMove'

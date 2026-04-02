@@ -4,7 +4,7 @@
      ⍝ ← ←→ ActiveCell index
      ⍝ SIMPLIFY!!!!
      wc←⍵-0,⍺.FixedColumns
-     ac←wc+⍺.WindowIndex
+     ac←wc+⍺.WindowIndex-0=⍺.DataSize
      wc[1]≥0:ac
      ac[1]←⍺.FreezeColumns+wc[1]
      ac

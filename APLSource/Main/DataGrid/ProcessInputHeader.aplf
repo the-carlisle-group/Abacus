@@ -10,9 +10,6 @@
      j←TableCell2HeaderIndex t
      t.OptiTable.Header.Values[⊂j]←⊂i.value
      _←t SetCellValue e.NewValue
-     ⍝ Encapsulate this from Init:
-     t.ColumnTitles←(t.RowNumbers/t.HeaderRowTitles),t.HeaderValues ⍝
-     ⍝
      c←i A.GetNearest'th'
      _←i A.RemoveAttribute'onblur'
      _←c A.SetInnerHTML e.NewValue
@@ -20,6 +17,7 @@
      t.CellMode←0
      _←t SetChanged 0
      e.Event←'HeaderCellChange'
+     _←t A.FireEvent'focus'
      _←t Fire e
      0
  }

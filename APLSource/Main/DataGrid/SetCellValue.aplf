@@ -1,7 +1,7 @@
  SetCellValue←{
      t v←⍺ ⍵
      i j←t.ActiveCell
-     i<0:0⊣t.HeaderValues[⊂i j+t.HeaderRowCount 0]←⊂v
+     i<0:SetCellValueHeader t v
      k←i⊃t.RowIndices
      c←j⊃t.Columns
      d←c.Value

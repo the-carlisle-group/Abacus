@@ -7,13 +7,11 @@
      c.Value←b∘⌿¨c.Value
      t.DataSize[0]←+/b
      t.RowIndices←⍳⊃t.DataSize
-     i j←t.ActiveCell
      n m←t.DataSize
      k←n>t.RowMinimum
      c.Value←c.Value{k:⍺ ⋄ 1=≢⍴⍺:⍺,⊂⍵ ⋄ ⍺⍪(1⊃⍴⍺)↑⍵}¨c.Default
-     t.Change←1
+     _←t SetChanged 0
      t.ActiveCell⌊←t.DataSize-1
-     t.WindowIndex[0]←t.WindowIndex[0]⌊t.DataSize[0]-t.WindowSize[0]
      t.Selection←2⍴⊂t.ActiveCell
      ⍺ Resize 0
  }

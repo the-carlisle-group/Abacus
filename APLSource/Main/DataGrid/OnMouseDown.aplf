@@ -1,5 +1,4 @@
  OnMouseDown←{
-     ⎕←'OnMouseDown!'
      e←⍵.Target
      t←⍵.CurrentTarget
      ~(⊂e.Tag)∊'td' 'th':0

@@ -10,7 +10,9 @@
      p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
      p OnKeyDownCustom t:0
      p≡'Escape':Escape t
+     (p≡'Enter')∧0=⊃t.DataSize:AppendRow t
      p≡'Enter':t Move t.ActiveCell+1 0
+
      p≡'ShiftEnter':t Move t.ActiveCell-1 0
      ⍝ DONT DO THIS ... should move to next control
      ⍝ p≡'Tab':t Move t.ActiveCell+0 1
@@ -19,6 +21,7 @@
      p≡'ArrowRight':t Move t.ActiveCell+0 1
      p≡'ArrowLeft':t Move t.ActiveCell-0 1
      p≡'ArrowUp':t Move t.ActiveCell-1 0
+     (p≡'ArrowDown')∧⊃t.ActiveCell=t.DataSize-1:AppendRow t
      p≡'ArrowDown':t Move t.ActiveCell+1 0
      p≡'CtrlArrowUp':t Move 0,t.ActiveCell[1]
      p≡'CtrlArrowDown':t Move(t.DataSize[0]-1),t.ActiveCell[1]

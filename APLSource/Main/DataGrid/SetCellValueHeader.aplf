@@ -1,0 +1,9 @@
+ SetCellValueHeader←{
+     t v←⍵
+     i j←t.ActiveCell
+     c←j⊃t.Columns
+     h←c.HeaderValues
+     h[i+t.HeaderRowCount]←⊂v
+     c.HeaderValues←h
+     0
+ }

@@ -1,5 +1,6 @@
  GoToHeaderRow←{
-     ⊃⌽⍺.HeaderReadOnly:0
+     r←⊃⌽⍺.HeaderReadOnly
+     r∧~0=⊃⍺.DataSize:0
      ¯1≠0⊃⍵:0
      0>1⊃⍵:0
      ∨/⍵≥⍺.DataSize:0

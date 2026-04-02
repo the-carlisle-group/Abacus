@@ -3,6 +3,7 @@
      t←⍵.CurrentTarget
      r c←t.ActiveCell
      c=¯1:0
+     r=¯1:0
      ct←c⊃t.Columns.Type
      ct≡'Select':⍵ ShowPickList t
      ct≡'CheckBox':ToggleCheckBox t

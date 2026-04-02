@@ -9,7 +9,7 @@
      nr nc←⍴v
      o←⍺.OptiTable
      h←o.Header
-     h.Values←⍉↑a.ColumnTitle[q]
+     h.Values←⍉↑a.HeaderValues[q]
      h.Cells.style←(t.HeaderRowCount nc)⍴a.HeaderStyle[q]
      h.Cells.class←(t.HeaderRowCount nc)⍴a.HeaderClass[q]
      _←{

@@ -39,7 +39,7 @@
      r←s Rule'.separator::before'
      r.content←'""'
      r.display←'block'
-     r.border_bottom←'1px solid black'
+     r.border_bottom←'1px solid white'
      r.margin←'.25rem 0'
      ⍝ *********************************
      r←s Rule'span:nth-child(2)'
