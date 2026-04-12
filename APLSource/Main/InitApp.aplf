@@ -3,6 +3,8 @@
      _←Init 0
      d←⍵
      d.TestMode←0
+     d.LogBrowserEvents←0
+     d.LogBrowserEventList←''
      d.Theme←d ⎕VGET⊂'Theme'(##.Themes.AbacusDark 0)
      d.AppStyle←d ⎕VGET⊂'AppStyle'⍬
      d.SessionID←NewGUID'N'

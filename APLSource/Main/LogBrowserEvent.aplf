@@ -1,0 +1,10 @@
+ LogBrowserEvent←{
+     ⍝ ⍵ ←→ Event Message
+     d←⍵.Document
+     ~d.LogBrowserEvents:0
+     l←d.LogBrowserEventList
+     ~(0=≢l)∨⍵.Event⊂⍛∊⊆l:0
+     f←⍵.CurrentTarget⍎'On',⍵.Event
+     ⎕←'Browser event: ',⍵.Event,' ',f
+     0
+ }

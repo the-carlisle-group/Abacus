@@ -3,6 +3,7 @@
      r←⍺.Timeout ⎕TGET ⎕TID
      0=≢r:⍺ ∇ ⍵⊣Debounce ⍺
      c←⊃r
+     _←LogBrowserEvent c
      _←(⍎c.CurrentTarget⍎'On',c.Event)c
      _←PutDoneToken c
      ⍺ ∇ ⍵
