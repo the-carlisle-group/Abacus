@@ -1,0 +1,18 @@
+ Show2←{
+  ⍝ For showing menu under a menu bar
+     m←⍵       ⍝  Menu
+     mb e←⍺
+     d←⍺.Document
+
+     m.Onkeydown←A.FQP'OnKeyDown'
+     m.Onclick←A.FQP'OnClick'
+     m.Onmouseover←A.FQP'OnMouseOver'
+     m.Ontoggle←A.FQP'OnToggle'
+     m.Context←⍺
+
+     ⍝ b←A.GetBody d
+     _←mb A.AppendChild m
+
+     m ShowMenu e.CurrentTarget
+
+ }

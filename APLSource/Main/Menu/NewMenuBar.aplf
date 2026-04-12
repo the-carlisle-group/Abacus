@@ -3,8 +3,12 @@
      ⍝ ⍵ ←→ BuildMenu function
      f←1 A.FQP ⍵
      b←⍺ A.New'menu'
+     b.tabindex←0
+     b.ActiveIndex←0
      b.BuildFunction←f
-     b.class←'menu-bar'
+     b.class←'MenuBar'
+     b.Onkeydown←A.FQP'OnKeyDownMenuBar'
+
      ⍝ b.Onclick←A.FQP'OnClickMenuBar'
 
      ⍝ !!!! We may not have a Document?
@@ -13,7 +17,8 @@
      c←m.Content.Content
      i←1⊃¨(0⊃¨c.Content).Content
      l←b A.New¨{'li'⍵}¨i
+     l.class←⊂''
+     (⊃l).class←'Active'
      l.Onclick←⊂A.FQP'OnClickMenuBar'
-     l.tabindex←0
      b
  }

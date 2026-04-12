@@ -2,10 +2,12 @@
      ⍝ ⍺ ←→ EventMessage
      ⍝ ⍵ ←→ Direction
      c←⍺.Target.Parent.Content
+     c←⍺.Target.Content
      ⍝ b←c.class∊⊂'sel-item'
      b←c.Selected
      i←⍵{(⍸⍵),⍸⍺⌽⍵}b
      _←c[i]A.MoveClass'sel-item'
      c[i].Selected←0 1
-     A.SetFocus 1⊃c[i]
+     0
+     ⍝ A.SetFocus 1⊃c[i]
  }

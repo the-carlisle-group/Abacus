@@ -1,0 +1,12 @@
+ OnKeyDownMenuBar←{
+     k←⍵.Key
+     mb←⍵.CurrentTarget
+     b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
+     p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
+     p≡'Enter':⍵ ShowMenuBarMenu mb
+     p≡'ArrowDown':⍵ ShowMenuBarMenu mb
+     p≡'ArrowLeft':mb MoveMenuBar ¯1
+     p≡'ArrowRight':mb MoveMenuBar 1
+     0
+
+ }

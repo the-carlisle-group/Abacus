@@ -1,11 +1,10 @@
  OnMouseOver←{
-     t←⍵.Target
-     t.Tag≢'li':0
-     m←⍵.CurrentTarget
-     c←t.Parent.Content
-     f←⊃(c.Selected,1)/c,t
-     _←f t ##.MoveClass'sel-item'
-     (f t).Selected←0 1
-     t.Type≡'Menu':ShowMenu t
-     A.SetFocus t
+     i←⍵.CurrentTarget
+     m←i.Parent
+     c←m.Content
+     f←⊃(c.Selected,1)/c,i
+     _←f i ##.MoveClass'sel-item'
+     (f i).Selected←0 1
+     i.Type≡'Menu':ShowSubMenu i
+     0
  }

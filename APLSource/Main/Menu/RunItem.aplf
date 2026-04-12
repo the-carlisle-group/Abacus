@@ -1,12 +1,20 @@
  RunItem←{
-     ⍝ ⍵ ←→ Event Message
-     m←⍵.CurrentTarget
-     i←⍵.Target ##.GetNearest'li'
+     ⍝ ⍵ ←→ <li>
+     i←⍵
      i.Type≡'Menu':ShowMenu i
-     ~i.Active:0
-     f←⍎i.Function
+     m←i.Parent
+     i.Disabled:0
+     f←⍎i.OnClick
      _←##.DeleteElement m
-     _←m.Context.Target A.RemoveProperty'anchor-name'
-     _←##.SetFocus m.Context.Target
-     m.Context f ⍵
+     ⍝ _←m.Context.Target A.RemoveProperty'anchor-name'
+     ⍝ _←##.SetFocus m.Context.Target
+
+
+     e←()
+     e.Event←'Click'
+     e.Component←i
+     e.Document←i.Document
+
+
+     f e
  }

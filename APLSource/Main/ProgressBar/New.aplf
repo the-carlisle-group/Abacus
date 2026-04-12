@@ -32,7 +32,8 @@
      d.(Exit Paused Canceled Truncated)←0
      f←2⊃d.Content
      f.Content.id←b/'progress-'∘,¨'cancel' 'pause' 'truncate'
-     (d f).Unqueued←'close' 'click'
-     d.PauseToken←⎕TID
+     d.Unqueued←'close'
+     f.Content.Unqueued←⊂'click'
+     d.PauseToken←¯1+2*31
      d
  }

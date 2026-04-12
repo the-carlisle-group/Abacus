@@ -1,3 +1,4 @@
  OnClick←{
-     RunItem ⍵
+     i←⍵.Target A.GetNearest'li'
+     RunItem i
  }

@@ -1,0 +1,7 @@
+ OnKeyDownHamburger←{
+     k←⍵.Key
+     b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
+     p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
+     p≡'ArrowDown':OnClickHamburger ⍵
+     0
+ }

@@ -1,0 +1,11 @@
+ MoveMenuBar←{
+     ⍝ ⍺ ←→ MenuBar
+     ⍝ ⍵ ←→ Direction
+     mb←⍺
+     i←mb.ActiveIndex
+     c←mb.Content
+     j←(≢c)|⍵+i
+     _←c[i j]A.MoveClass'Active'
+     mb.ActiveIndex←j
+     0
+ }

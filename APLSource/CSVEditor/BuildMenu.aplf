@@ -14,7 +14,7 @@
      i←s NewItem'Open' 'Ctrl+O' 'OnFileOpen'
      i←s NewItem'Save' 'Ctrl+S' 'OnFileSave'
      i←s NewItem'Save As...' 'Ctrl+A' 'OnFileSaveAs'
-     i←s s←m NewMenu⊂'Edit'
+     s←m NewMenu⊂'Edit'
      i←s NewItem'Cut' 'Ctrl+X' 'OnCut'
      i←s NewItem'Copy' 'Ctrl+C' 'OnCopy'
      i←s NewItem'Paste' 'Ctrl+V' 'OnPaste'
@@ -22,18 +22,19 @@
      i←s NewItem'Alert box' '' 'OnAlertBox'
      i←s NewItem'Prompt box' '' 'OnPromptBox'
      i←s NewItem'Confirm box' '' 'OnConfirmBox'
-     i←s NewItem'Autocomplete' '' 'OnBasicDialogAutoComplete'
+     i←s NewItem'Autocomplete' '' 'OnBasicDialogAutoComplete'('Separator' 1)
      i←s NewItem'Basic dialog' '' 'OnBasicDialog'
-     i←s NewItem'Basic dialog 2' '' 'OnBasicDialog2'
+     i←s NewItem'Basic dialog 2' '' 'OnBasicDialog2'('Separator' 1)
      i←s NewItem'Basic dialog 3' '' 'OnBasicDialog3'
      i←s NewItem'Basic dialog 4' '' 'OnBasicDialog4'
      i←s NewItem'Dialog with DataGrid' '' 'OnDialogWithDataGrid'
-     i←s NewItem'Progress bar 1' '' 'OnProgressBar1'('Separator' 1)
-     i←s NewItem'Progress bar 2' '' 'OnProgressBar2'
-     i←s NewItem'Progress bar 3' '' 'OnProgressBar3'
-     i←s NewItem'Progress bar 4' '' 'OnProgressBar4'
-     i←s NewItem'Progress bar 5' '' 'OnProgressBar5'
-     i←s NewItem'Tabs' '' 'OnTabs'
+     s2←s NewMenu⊂'Progress Bars'
+     i←s2 NewItem'Progress bar 1' '' 'OnProgressBar1'
+     i←s2 NewItem'Progress bar 2' '' 'OnProgressBar2'
+     i←s2 NewItem'Progress bar 3' '' 'OnProgressBar3'
+     i←s2 NewItem'Progress bar 4' '' 'OnProgressBar4'
+     i←s2 NewItem'Progress bar 5' '' 'OnProgressBar5'
+     i←s NewItem'Tabs' '' 'OnTabs'('Separator' 1)
      s←m NewMenu⊂'View'
      i←s NewItem'Find and Replace...' 'Ctrl+F' 'OnFindAndReplace'('Checked' 1)
      m

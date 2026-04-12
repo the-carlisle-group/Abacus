@@ -11,7 +11,7 @@
 
 
      ⍝ s.position_area←'right' ⍝ Done dynamically
-     s.background_color←'inherit'
+     s.background_color←'var(--background-color)'
      s.color←'inherit'
      s.position_try←'flip-block, flip-inline, flip-block flip-inline'
      s.user_select←'none'
@@ -58,21 +58,38 @@
      ⍝ *********************************
      z←A.UnNestCSS s
      ⍝ More for menu-bar
-     s←Rule'.menu-bar'
+     s←Rule'.MenuBar'
      s.user_select←'none'
      s.padding←'.5rem'
      s.list_style←'none'
-     s.display←'flex'
+     s.display←'inline-flex'
      s.gap←'1rem'
      s.font_family←'Arial'
-     ⍝ ⍝ s.font_size←'1.25rem'
      s.text_wrap←'nowrap'
+
+
+     r←s Rule'.Active'
+     r.border_bottom←'1px solid white'
+
+     r←s Rule'&:focus .Active'
+     r.border←'1px solid steelblue'
+
+
      z,←s
      ⍝ More
-     s←Rule'.hamburger-menu'
-     s.width←'100px'
-     s.padding←0
-     s.font_size←'48px'
+     s←Rule'.HamburgerMenu'
+     s.color←'inherit'
+     s.background_color←'inherit'
+     s.padding←'0 5px'
+     s.font_size←'24px'
+     s.border←'none'
+
+     r←s Rule'&:focus'
+     r.border←'var(--border-focused)'
+     r.box_shadow←'var(--border-box-shadow-focused)'
+
+
+
      z,←s
      ⍝ ****************
      s←Rule'.dropdown-menu'

@@ -16,9 +16,9 @@
      h←d A.New'header'(A.New¨'h1' 'h2'{⍺ ⍵}¨d.Title d.Subtitle)
      m←d A.New'section'd.MainContent
      b←d.Buttons A.Button.New¨d.Buttons{⍺ ⍵}¨d.Icons
+     b.Onclick←⊂A.FQP'OnClick'
      b.Name←d.Buttons
      f←d A.New'footer'b
-     f.Onclick←A.FQP'OnClick'
      d.Onclose←A.FQP'OnClose'
      d
  }

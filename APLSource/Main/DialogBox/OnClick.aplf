@@ -1,5 +1,5 @@
  OnClick←{
-     b←⍵.Target
+     b←⍵.CurrentTarget
      d←b A.GetNearest'dialog'
      i←b.Parent.Content⍳b
      f←i⊃d.OnClick

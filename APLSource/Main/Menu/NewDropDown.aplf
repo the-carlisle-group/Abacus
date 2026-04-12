@@ -10,5 +10,6 @@
      b.BuildFunction←f
      b.class←'dropdown-menu'
      b.Onclick←A.FQP'OnClickDropDown'
+     b.Onkeydown←A.FQP'OnKeyDownDropDown'
      b
  }

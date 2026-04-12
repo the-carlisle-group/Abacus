@@ -9,3 +9,4 @@ to the callback function contains:
 |Component | The CheckBox instance                   |
 |Document  | The associated document                 |
 |Value     | The new value, `1` or `0`               |
+

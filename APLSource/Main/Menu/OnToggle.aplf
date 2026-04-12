@@ -1,6 +1,7 @@
  OnToggle←{
      m←⍵.CurrentTarget
      0=m.Toggled:m.Toggled←1
+     m.Submenu:(m.Parent A.GetNearest'menu')A.ExecuteOnElement'focus()'
      _←m.Context.Target A.RemoveProperty'anchor-name'
      m A.DeleteElement m
  }

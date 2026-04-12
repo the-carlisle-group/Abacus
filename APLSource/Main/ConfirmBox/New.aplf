@@ -12,7 +12,8 @@
      w.OnClose←A.FQP'OnClose'
      d←⍺ A.DialogBox.New w
      f←d A.GetElementByTag'footer'
-     f.Unqueued←'click'
+     b←f A.GetElementsByTag'button'
+     b.Unqueued←⊂'click'
      d.Unqueued←'close'
      d.Tid←⎕TID
      d

@@ -2,5 +2,9 @@
      b←⍵.CurrentTarget
      f←b.OnClick
      0=≢f:0
-     (⍎f)⍵
+     e←()
+     e.Event←'Click'
+     e.Component←b
+     e.Document←⍵.Document
+     (⍎f)e
  }

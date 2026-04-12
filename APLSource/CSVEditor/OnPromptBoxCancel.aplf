@@ -2,6 +2,6 @@
      ⍵.OldValue≡⍵.NewValue:0
      p←()
      p.Title←'You have made changes.'
-     p.Caption←'Are you sure you want to discard them?'
+     p.Message←'Are you sure you want to discard them?'
      'Yes'≢⍵.Document A.Confirm p
  }

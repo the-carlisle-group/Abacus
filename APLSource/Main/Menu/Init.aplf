@@ -5,8 +5,10 @@
      m←⍵
      m.Onkeydown←A.FQP'OnKeyDown'
      m.Onclick←A.FQP'OnClick'
-     m.Onmouseover←A.FQP'OnMouseOver'
-     m.Ontoggle←A.FQP'OnToggle'
+     li←m A.ElementsByTag'li'
+     li.Onmouseover←⊂A.FQP'OnMouseOver' ⍝ On <li>
+     sm←m A.ElementsByTag'menu'
+     sm.Ontoggle←⊂A.FQP'OnToggle'
      m.Context←⍺
 
      b←A.GetBody d

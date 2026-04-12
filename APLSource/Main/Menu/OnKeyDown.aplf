@@ -1,13 +1,19 @@
  OnKeyDown←{
+     ⍝ ⎕←'On Key Down!'
      k←⍵.Key
-     t←⍵.Target
+     k⊂⍛∊'Control' 'Shift' 'Alt' 'Process':0
+     k≡'Escape':0
+     t←⍵.Target ⍝ The Menu
+     i←⊃t.Content.Selected/t.Content
      b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
      p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
-     p≡'Enter':RunItem ⍵
+     p≡'Enter':RunItem i
      p≡'ArrowUp':⍵ Move 1
      p≡'ArrowDown':⍵ Move ¯1
-     p≡'ArrowLeft':HideSubMenu ⍵
-     s←t.Type≡'Menu'
-     s∧p≡'ArrowRight':ShowMenu t
+     t.Submenu∧p≡'ArrowLeft':HideSubMenu ⍵
+     p≡'ArrowLeft':⍵ GotoMenu ¯1
+     s←i.Type≡'Menu'
+     s∧p≡'ArrowRight':ShowSubMenu i
+     p≡'ArrowRight':⍵ GotoMenu 1
      0
  }

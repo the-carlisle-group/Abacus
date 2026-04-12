@@ -2,8 +2,9 @@
      ⍝ ⍺ ←→ Parent
      ⍝ ⍵ ←→ Build Function
      b←⍺ ##.New'button'(⎕UCS 9776)
-     b.class←'hamburger-menu'
+     b.class←'HamburgerMenu'
      b.BuildFunction←1 ##.FQP ⍵
      b.Onclick←A.FQP'OnClickHamburger'
+     b.Onkeydown←A.FQP'OnKeyDownHamburger'
      b
  }

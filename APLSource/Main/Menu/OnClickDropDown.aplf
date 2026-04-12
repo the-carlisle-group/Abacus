@@ -2,5 +2,9 @@
      b←⍵.CurrentTarget
      f←⍎b.BuildFunction
      m←⍵.Document f 0
-     ⍵ Show m
+     m.Submenu←0
+     _←⍵ Init m
+     _←m A.SetStyle'positionArea' 'bottom span-right'
+     _←m A.ExecuteOnElement'showPopover({source:document.getElementById("',b.id,'")})'
+     m A.ExecuteOnElement'focus()'
  }

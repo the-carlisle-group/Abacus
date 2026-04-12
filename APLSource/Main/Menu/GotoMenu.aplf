@@ -1,0 +1,7 @@
+ GotoMenu←{
+     m←⍺.CurrentTarget
+     0=m.⎕NC'MenuBar':0
+     mb←m.MenuBar
+     _←mb MoveMenuBar ⍵
+     ⍺ ShowMenuBarMenu mb
+ }

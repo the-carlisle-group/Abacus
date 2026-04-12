@@ -1,4 +1,4 @@
- z←{y}OnProgressBar1 x;d;i;p;r
+ z←OnProgressBar1 x;d;i;p;r
  ⍝ Sample of conventional progress bar in Trad function
  ⍝ With explicit calls to Begin/Update/End
  ⍝ This is deterministic, we know we are going to loop 25 times
@@ -30,3 +30,5 @@
  :Case 'Resume'
      z←d A.Alert'The operation completed.'
  :EndSelect
+
+ z←'asdf'

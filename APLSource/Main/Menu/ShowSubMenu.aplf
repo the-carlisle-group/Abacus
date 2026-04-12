@@ -1,11 +1,10 @@
- ShowMenu←{
+ ShowSubMenu←{
      ⍝ ⍺ ←→ Menu
      ⍝ ⍵ ←→ Anchor
-     h←(⊂⍵.Parent.class)∊'MenuBar' 'toolbar'
      ⍺←⊃⌽⊃⍵.Content.Content
-     _←⍺ A.SetStyle'positionArea'(h⊃'right span-bottom' 'bottom span-right')
+     ⍺.Submenu←1
+     ⍺.Toggled←0
+     _←⍺ A.SetStyle'positionArea' 'right span-bottom'
      _←⍺ A.ExecuteOnElement'showPopover({source:document.getElementById("',⍵.id,'")})'
-
      ⍺ A.ExecuteOnElement'focus()'
-     ⍝ A.SetFocus⊃⍺.Content
  }
