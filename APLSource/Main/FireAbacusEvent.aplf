@@ -1,0 +1,11 @@
+ FireAbacusEvent←{
+     ⍵=0:0
+     _←LogAbacusEvent ⍵
+     n←'On',⍵.Event
+     c←⍵.Component
+     ⍵.Document←c.Document
+     0=c.⎕NC n:0
+     f←c⍎n
+     0=≢f:0
+     (⍎f)⍵
+ }

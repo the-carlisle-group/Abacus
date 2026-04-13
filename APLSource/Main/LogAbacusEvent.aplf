@@ -1,0 +1,11 @@
+ LogAbacusEvent←{
+     c←⍵.Component
+     d←c.Document
+     ~d.LogAbacusEvents:0
+     en←'On',⍵.Event
+     n←en'id' 'Name'
+     v←c ⎕VGET{⍵''}¨n
+     m←¯2↓∊n{⍺,': ',⍵,', '}¨v
+     ⎕←'Abacus event: ',m
+     0
+ }

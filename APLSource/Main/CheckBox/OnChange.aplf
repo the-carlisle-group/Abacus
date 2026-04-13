@@ -6,7 +6,6 @@
      e←⎕NS''
      e.Event←'Change'
      e.Component←c
-     e.Document←⍵.Document
      e.Value←c.Value
-     (⍎f)e
+     A.FireAbacusEvent e
  }

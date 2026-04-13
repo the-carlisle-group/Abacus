@@ -4,17 +4,8 @@
      i.Type≡'Menu':ShowMenu i
      m←i.Parent
      i.Disabled:0
-     f←⍎i.OnClick
      _←##.DeleteElement m
      ⍝ _←m.Context.Target A.RemoveProperty'anchor-name'
      ⍝ _←##.SetFocus m.Context.Target
-
-
-     e←()
-     e.Event←'Click'
-     e.Component←i
-     e.Document←i.Document
-
-
-     f e
+     A.FireAbacusEvent(Event:'Click' ⋄ Component:i)
  }

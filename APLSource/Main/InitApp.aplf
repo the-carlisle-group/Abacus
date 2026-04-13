@@ -3,6 +3,7 @@
      _←Init 0
      d←⍵
      d.TestMode←0
+     d.LogAbacusEvents←0
      d.LogBrowserEvents←0
      d.LogBrowserEventList←''
      d.Theme←d ⎕VGET⊂'Theme'(##.Themes.AbacusDark 0)
