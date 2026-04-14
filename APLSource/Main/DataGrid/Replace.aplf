@@ -6,13 +6,14 @@
      r c←i+⍳¨⍴m
      e←⎕NS''
      e.Event←'BeforeCellChange'
+     e.Component←t
      e.CellIndex←i
      e.OldValue←t GetCellValues r c
      e.NewValue←m
-     t Fire e:1    ⍝ New Value can change
+     A.FireAbacusEvent e:1    ⍝ New Value can change
      _←t SetCellValues e.NewValue i
      _←t SetChanged 0
      _←Refresh t
      e.Event←'CellChange'
-     t Fire e
+     A.FireAbacusEvent e
  }

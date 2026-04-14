@@ -1,11 +1,12 @@
  LogAbacusEvent←{
-     c←⍵.Component
-     d←c.Document
+     d←⍵.Document
      ~d.LogAbacusEvents:0
+     c←⍵.Component
      en←'On',⍵.Event
-     n←en'id' 'Name'
-     v←c ⎕VGET{⍵''}¨n
+     n←en'Type' 'Name' 'Value'
+     v←c ⎕VGET{⍵'{none}'}¨n
+     v[0]←⊂⍺,'{no callback}'/⍨0=≢⍺
      m←¯2↓∊n{⍺,': ',⍵,', '}¨v
-     ⎕←'Abacus event: ',m
+     ⎕←m
      0
  }

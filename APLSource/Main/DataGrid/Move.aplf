@@ -8,16 +8,16 @@
      ∨/(⍵<0)∨⍵≥⍺.DataSize:0
      e←⎕NS''
      e.Event←'CellMove'
-     e.Document←⍺.Document
      e.Component←⍺.Parent
      e.OldCellIndex←⍺.ActiveCell
      e.NewCellIndex←⍵
      ⍺.ActiveCell←⍵
      ⍺.Selection←2⍴⊂⍵
-     ⍵ AdjustWindow ⍺:(Refresh ⍺)Fire e
+     f←⍺.OnCellMove
+     ⍵ AdjustWindow ⍺:f A.FireAbacusEvent e⊣Refresh ⍺
      lc←tc GetTableCell ⍺
      nc←GetTableCell ⍺
      _←⍺ RefreshActiveCellClass lc nc
-     _←⍺ Fire e
+     _←f A.FireAbacusEvent e
      0
  }

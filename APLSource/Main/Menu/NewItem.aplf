@@ -15,7 +15,7 @@
      ⍝ i.tabindex←'0'
      i.Selected←i=⊃⍺.Content
      i.class←i.Selected/'sel-item'
-     i.class,←(~i.Disabled)/' inactive'
+     i.class,←i.Disabled/' inactive'
      i.class,←i.Separator/' separator'
      i
  }

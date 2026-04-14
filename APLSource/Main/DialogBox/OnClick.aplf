@@ -3,13 +3,11 @@
      d←b A.GetNearest'dialog'
      i←b.Parent.Content⍳b
      f←i⊃d.OnClick
-     0=≢f:A.DeleteElement d  ⍝ Do nothing?
      e←()
      e.Event←'Click'
-     e.Document←d.Document
      e.Component←d
      e.Button←b
      e.ButtonCaption←i⊃d.Buttons
-     1≡(⍎f)e:0
+     1≡f A.FireAbacusEvent e:0
      A.DeleteElement d
  }

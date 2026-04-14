@@ -2,6 +2,7 @@
      s←0⊃⎕NSI
      c←⊃⌽'.'(≠⊆⊢)s
      ⍵.class←c
+     ⍵.Type←c
      ⍵.Class←⍎s
      ⍵⊣⍵.⎕DF c
  }

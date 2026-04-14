@@ -1,12 +1,9 @@
  OnChange←{
      c←⍵.CurrentTarget
      c.Value←⍵.Value
-     f←c.OnChange
-     0=≢f:0
      e←⎕NS''
      e.Event←'Change'
      e.Component←c
-     e.Document←⍵.Document
      e.Value←c.Value
-     (⍎f)e
+     A.FireAbacusEvent e
  }

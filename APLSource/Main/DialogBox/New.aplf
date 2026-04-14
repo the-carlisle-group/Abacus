@@ -10,7 +10,7 @@
          'OnClose' ''
      )A.Default ⍵
      d.Document←⍺
-     d.Buttons←⊆d.Buttons
+     d.Buttons←,⊆d.Buttons
      d.OnClick←(≢d.Buttons)⍴⊆d.OnClick
      d.Icons←(≢d.Buttons)⍴⊆d.Icons
      h←d A.New'header'(A.New¨'h1' 'h2'{⍺ ⍵}¨d.Title d.Subtitle)

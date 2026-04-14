@@ -10,10 +10,11 @@
      _←c[i]A.RemoveClass'hidden'
      e←⎕NS''
      e.Event←'Activate'
+     e.Component←t
      e.TabIndex←i
      e.TabButton←i⊃b
      e.TabContent←i⊃c
-     _←t ##.DataGrid.Fire e
+     _←A.FireAbacusEvent e
      j=≢b:A.FireResize d
      b[j].Active←0
      _←b[j]A.RemoveClass'active-tab'

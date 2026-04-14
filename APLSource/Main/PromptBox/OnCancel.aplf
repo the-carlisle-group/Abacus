@@ -1,10 +1,10 @@
  OnCancel←{
      d←⍵.Component
      c←d A.GetComponent'PromptBox'
-     ⍵.Event←'Cancel'
-     ⍵.OldValue←d.Value
-     ⍵.NewValue←c.Value
-     f←d.OnCancel
-     0=≢f:0
-     (⍎f)⍵
+     e←()
+     e.Event←'Cancel'
+     e.Component←d
+     e.OldValue←d.Value
+     e.NewValue←c.Value
+     A.FireAbacusEvent e
  }

@@ -13,11 +13,16 @@
      ¯1=(1⊃i)-t.RowNumbers:t OnMouseDownRow ⍵
      t.SelectType←'Cell'
      i≡t.TableCell:0
+     em←⎕NS''
+     em.Event←'CellMove'
+     em.Component←t.Parent
+     em.OldCellIndex←t.ActiveCell
      lc←t.TableCell⌷c
      t.TableCell←i
      t.ActiveCell←t TableCell2ActiveCell i
      t.Selection←2⍴⊂t.ActiveCell
      _←t RefreshActiveCellClass lc e
-     0
-     ⍝ e A.FireEvent'focus'
+     em.NewCellIndex←t.ActiveCell
+     f←t.OnCellMove
+     f A.FireAbacusEvent em
  }

@@ -1,4 +1,4 @@
  OnInputChange←{
-     ⎕←'OnInputChange: ',⍕⍵.Value
+     ⍝ ⎕←'OnInputChange: ',⍕⍵.Value
      0
  }

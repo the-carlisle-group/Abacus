@@ -11,10 +11,11 @@
      ~b:i ShowDataEntryError em
      e←⎕NS''
      e.Event←'BeforeCellChange'
+     e.Component←t
      e.CellIndex←t.ActiveCell
      e.OldValue←t GetCellValue t.ActiveCell
      e.NewValue←pv
-     t Fire e:1
+     A.FireAbacusEvent e:1
      fmt←⍎s.OnFormat
      fv←⊃s fmt,⊂e.NewValue
      _←t SetCellValue e.NewValue
@@ -27,7 +28,6 @@
      _←t SetChanged 0
      e.Event←'CellChange'
      _←t A.FireEvent'focus'
-     _←t Fire e
-
+     _←A.FireAbacusEvent e
      0
  }

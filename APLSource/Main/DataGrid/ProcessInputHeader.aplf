@@ -3,10 +3,11 @@
      t←i A.GetNearest'table'
      e←⎕NS''
      e.Event←'BeforeHeaderCellChange'
+     e.Component←t
      e.CellIndex←t.ActiveCell
      e.OldValue←'get the old value' ⍝ t GetCellValue t.ActiveCell
      e.NewValue←i.value
-     t Fire e:1
+     A.FireAbacusEvent e:1
      j←TableCell2HeaderIndex t
      t.OptiTable.Header.Values[⊂j]←⊂i.value
      _←t SetCellValue e.NewValue
@@ -18,6 +19,6 @@
      _←t SetChanged 0
      e.Event←'HeaderCellChange'
      _←t A.FireEvent'focus'
-     _←t Fire e
+     _←A.FireAbacusEvent e
      0
  }

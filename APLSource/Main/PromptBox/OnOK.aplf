@@ -2,10 +2,10 @@
      ⍝ ⍵ ←→ Event message from Dialog Click event
      d←⍵.Component
      c←d A.GetComponent'PromptBox'
-     ⍵.Event←'OK'
-     ⍵.OldValue←d.Value
-     ⍵.NewValue←c.Value
-     f←d.OnOK
-     0=≢f:0
-     (⍎f)⍵
+     e←()
+     e.Event←'OK'
+     e.Component←d
+     e.OldValue←d.Value
+     e.NewValue←c.Value
+     A.FireAbacusEvent e
  }

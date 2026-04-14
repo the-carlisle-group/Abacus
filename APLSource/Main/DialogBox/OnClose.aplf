@@ -4,8 +4,7 @@
      0=≢f:A.DeleteElement d
      e←()
      e.Event←'Close'
-     e.Document←d.Document
      e.Component←d
-     1≡(⍎f)e:0
+     1≡A.FireAbacusEvent e:0
      A.DeleteElement d
  }
