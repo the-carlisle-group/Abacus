@@ -1,7 +1,5 @@
  OnClose←{
      d←⍵.Target
-     f←d.OnClose
-     0=≢f:A.DeleteElement d
      e←()
      e.Event←'Close'
      e.Component←d

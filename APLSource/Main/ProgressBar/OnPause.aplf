@@ -6,5 +6,5 @@
      i←d A.GetElementById'progress-paused-indicator'
      _←i A.SetInvisible d.Paused
      ~d.Paused:d.Paused←1
-     1⊣'Resume'⎕TPUT d.PauseToken
+     1⊣'Resume'⎕TPUT d.Document.ProgressToken
  }

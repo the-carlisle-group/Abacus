@@ -1,0 +1,12 @@
+ OnKeyDown←{
+     ⍝ On keydown in body, for menubar
+     d←⍵.Document
+     0<≢d GetElementsByTag'dialog':0
+     k←⍵.Code
+     b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
+     p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
+     i←d.GlobalShortcuts⍳⊂p
+     i=≢d.GlobalShortcuts:0
+     mi←i⊃d.GlobalMenuItems
+     FireAbacusEvent(Event:'Click' ⋄ Component:mi)
+ }

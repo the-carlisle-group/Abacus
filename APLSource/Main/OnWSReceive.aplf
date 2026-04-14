@@ -5,9 +5,10 @@
      c←⍵
      c.Event≡'SJSR':c.result ⎕TPUT c.id
      c.Document←d
-     c.CurrentTargetId≡'':0
-     c.CurrentTarget←d GetElementById c.CurrentTargetId
-     c.Target←d{⍵≡'':0 ⋄ 6::0 ⋄ ⍺ GetElementById ⍵}c.TargetId
+     e←Elements d
+     i←e.id⍳c.CurrentTargetId c.TargetId
+     c.(CurrentTarget Target)←(e,0)[i]
+     0∊c.(CurrentTarget Target):0
      HandleUnqueuedRequest c:0
      _←c ⎕TPUT d.QueuedThread
      0

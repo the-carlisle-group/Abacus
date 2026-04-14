@@ -21,6 +21,7 @@
      ma←New'div'('id' 'MouseAnchor')
      b.Content←b.Content,⍨ma,a,t
      _←InitDOM d
+     _←InitGlobalShortcuts d
      d.ToolTipElement←t
      d.AutoComplete←a
      d.ToolTipsVisible←1
@@ -29,5 +30,7 @@
      d.DefaultTimeout←2147483
      d.Timeout←d.DefaultTimeout
      d.QueuedThread←d ThreadQueue&0
+     d.ProgressToken←{}&0
+     d.ConfirmToken←{}&0
      d
  }

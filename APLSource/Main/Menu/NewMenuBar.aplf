@@ -8,12 +8,8 @@
      b.BuildFunction←f
      b.class←'MenuBar'
      b.Onkeydown←A.FQP'OnKeyDownMenuBar'
-
-     ⍝ b.Onclick←A.FQP'OnClickMenuBar'
-
-     ⍝ !!!! We may not have a Document?
-     ⍝ m←⍺.Document(⍎f)0
-     m←(⍎f)0
+     d←⍺.Document
+     m←d(⍎f)0
      c←m.Content.Content
      i←1⊃¨(0⊃¨c.Content).Content
      l←b A.New¨{'li'⍵}¨i

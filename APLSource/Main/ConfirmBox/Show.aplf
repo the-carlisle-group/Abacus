@@ -1,5 +1,10 @@
  Show←{
      ⍝ ⍺|⍵ ConfirmBox
      ⍺←⍵
-     ⍺.Document ##.ShowModalAndWait ⍺
+     d←⍺.Document
+     b←A.GetBody d
+     _←b A.AppendChild ⍺
+     _←⍺ A.ExecuteOnElement'showModal()'
+     _←A.PutDoneToken ⍵
+     ⊃⎕TGET d.ConfirmToken
  }

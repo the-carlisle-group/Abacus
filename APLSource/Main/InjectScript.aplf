@@ -6,8 +6,8 @@
      v←∪{¯1↓∊⍵,¨','}¨1↓¨l ⍝ Get rid of class for now
      k←(⎕JSON⍠'Compact' 0)v
      d←'var PreventDefaultList = ',k,';' ⍝ Was const
-     i←1⍳⍨'<script></script>'⍷⍵
-     j←i+8
+     i←1⍳⍨'<script id="main-script"></script>'⍷⍵
+     j←i+25
      p←4⍴' '
      nl←⎕UCS 13
      s←⊃,/⍺.Script,¨nl

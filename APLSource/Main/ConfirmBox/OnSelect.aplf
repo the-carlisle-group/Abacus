@@ -2,6 +2,5 @@
      d←⍵.Component
      _←A.DeleteElement d
      v←⍵.Button.Name
-     ⍝ v←⍵.Target.Name
-     0⊣v ⎕TPUT d.Tid
+     0⊣v ⎕TPUT d.Document.ConfirmToken
  }

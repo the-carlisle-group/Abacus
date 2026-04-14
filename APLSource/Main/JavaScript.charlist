@@ -134,6 +134,8 @@ function sendAPLRequest(e){
                 TargetId: e.target.id, 
                 CurrentTargetId: e.currentTarget.id, 
                 Key: e.key, 
+                Code: e.code,
+                MetaKey: e.metaKey,
                 CtrlKey: e.ctrlKey,
                 AltKey: e.altKey,
                 ShiftKey: e.shiftKey,

@@ -10,7 +10,7 @@
      p.Canceled:'Cancel'
      p.Truncated:'Truncate'
      ~p.Paused:'Resume'
-     r←⊃⎕TGET p.PauseToken
+     r←⊃⎕TGET p.Document.ProgressToken
      p.Paused←0
      r
  }

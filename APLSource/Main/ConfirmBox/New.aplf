@@ -15,6 +15,5 @@
      b←f A.GetElementsByTag'button'
      b.Unqueued←⊂'click'
      d.Unqueued←'close'
-     d.Tid←⎕TID
      d
  }

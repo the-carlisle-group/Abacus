@@ -4,7 +4,6 @@
      e←A.New'dialog'
      e.class←'progress-bar'
      e.id←'progress-bar'
-     e.TID←⎕TID
      h1←e A.New'h1'c
      p←e A.New'progress'
      p.id←'progress'

@@ -1,4 +1,4 @@
  OnClose←{
      d←⍵.Component
-     0⊣''⎕TPUT d.Tid
+     0⊣''⎕TPUT d.Document.ConfirmToken
  }

@@ -2,5 +2,7 @@
      ⍵.Tag≢'html':0
      0=⍵.⎕NC'Script':0
      h←⍵ GetElementByTag'head'
-     h New'script'
+     s←h New'script'
+     s.id←'main-script'
+     s
  }

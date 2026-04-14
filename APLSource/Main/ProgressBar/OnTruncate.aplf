@@ -2,5 +2,5 @@
      d←⍵.Component
      ~d.Paused:d.Truncated←1
      d.Paused←0
-     1⊣'Truncate'⎕TPUT d.PauseToken
+     1⊣'Truncate'⎕TPUT d.Document.ProgressToken
  }
