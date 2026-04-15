@@ -1,10 +1,9 @@
  Default←{
-     ⍝ ⍺ ←→ Default name/value pairs
+     ⍝ ⍺ ←→ Default name/value/[required] pairs
      ⍝ ⍵ ←→ Given argument
      ⍝ ← ←→ A new space with ⍺ overiddden by ⍵
-     ⍝ See also DVP
-     d←()⎕VSET ⍺
-     9=⎕NC'⍵':d ⎕NS ⍵
+     d←()⎕VSET 2↑¨⍺
+     9=⎕NC'⍵':d ⎕NS ⍺ Verify ⍵
      w←⊆⍣(0≠≢⍵)⊣⍵
      m←⊃¨⍺
      n←' '~⍨¨(≢w)↑m
@@ -12,5 +11,5 @@
          IsNameValuePair ⍵:⍵
          ⍺≡'':⍺
          ⍺ ⍵}¨w
-     d ⎕NS()⎕VSET p~⊂''
+     d ⎕NS ⍺ Verify()⎕VSET p~⊂''
  }

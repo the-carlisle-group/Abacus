@@ -1,7 +1,0 @@
- New←{
-     ⍺←0
-     p n←##.DefaultParentAndName ⍺
-     e←p ##.New2 ⍵
-     e.Name←n
-     e
- }

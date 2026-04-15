@@ -1,8 +1,0 @@
- DefaultProperties←{
-     d←⎕NS''
-     d.Labels←''
-     d.SVGs←''
-     d.Multi←0
-     d.OnClick←''
-     d⊣'d'⎕NS ⍵
- }

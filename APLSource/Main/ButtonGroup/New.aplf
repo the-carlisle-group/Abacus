@@ -1,9 +1,0 @@
- New←{
-     ⍺←0
-     d←(⍺ A.New'div')⎕NS(
-         'Content' ''
-     )A.Default ⍵
-     d.class←'button-group'
-     d.Class←⎕THIS
-     d
- }

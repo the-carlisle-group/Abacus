@@ -1,6 +1,12 @@
  Verify←{
+     ⍵
+     ⍝ This will not work currently
+     ⍝ As some abacus components (ProgressBar, etc.)are wrappers for other components
+     ⍝ and add additional names.
      (n v r)←↓⍉↑3↑¨⍺,¨0
-     m←⍵.⎕NL ¯2
+     n←n,⊂'Name'
+     r←r,0
+     m←⎕A ⍵.⎕NL ¯2
      ~∧/m∊⍨r/n:11 ⎕SIGNAL⍨'Required parameter: ',⊃r/n
      0≠≢m~n:11 ⎕SIGNAL⍨'Invalid parameter name: ',⊃m~n
      ⍵
