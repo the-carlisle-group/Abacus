@@ -21,7 +21,33 @@ Either parameter may be provided, or both. Let's create a checkbox component:
 The right argument to `New` is a set of properties that may 
 be specified by position or by name, and will vary by component.
 The checkbox component takes a label, a value, and callback function
-for handling changes.
+for handling changes.  
+
+The `New` function will throw an error if an invalid property name
+is supplied:
+
+~~~
+      CheckBox.New (Label:'Check here' ⋄ VaLue:1)
+Invalid parameter name: VaLue
+~~~
+
+Component property names always start with an uppercase letter.
+Only names that start with an uppercase letter are checked for validity.
+Thus names that begin with a lowercase letter (HTML attributes) or an `_`
+(a css style) may be provided to the `New` function and will not throw an error.
+You can also prefix custom properties with a `∆`:
+
+~~~
+      CheckBox.New(Label:'Check here' ⋄ Value:1 ⋄ ∆Val:1)
+CheckBox
+~~~
+
+Once a component is created, you can stuff in anything you want:
+
+~~~
+      B←CheckBox.New(Label:'Check here' ⋄ Value:1 ⋄ ∆Val:1)
+      B.MyOwnName←0
+~~~
 
 By inspection we see that the checkbox component is implemented as a div containing an
 input and label. Each component has an eponymously named class associated with it.
