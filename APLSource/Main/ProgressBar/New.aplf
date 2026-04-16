@@ -21,12 +21,14 @@
      fp←A.New'p'(w A.Translate'Paused')
      fp.id←'progress-paused-indicator'
      fp.class←'pulse invisible'
-     w.MainContent←s,((0<w.Iterations)/p),fp
+     ps←()
+     ps.Title←w.Title
+     ps.MainContent←s,((0<w.Iterations)/p),fp
      b←w.(Cancel Pause Truncate)
-     w.Buttons←b/w A.Translate'Cancel' 'Pause' 'Truncate'
-     w.OnClose←A.FQP'OnClose'
-     w.OnClick←A.FQP¨b/'OnCancel' 'OnPause' 'OnTruncate'
-     d←⍺ A.DialogBox.New w
+     ps.Buttons←b/w A.Translate'Cancel' 'Pause' 'Truncate'
+     ps.OnCancel←A.FQP'OnClose'
+     ps.OnClick←A.FQP¨b/'OnCancel' 'OnPause' 'OnTruncate'
+     d←⍺ A.DialogBox.New ps
      d.id←'progress-bar'
      d.(Iteration Result)←¯1 ⍬
      d.(Exit Paused Canceled Truncated)←0
@@ -34,5 +36,5 @@
      f.Content.id←b/'progress-'∘,¨'cancel' 'pause' 'truncate'
      d.Unqueued←'close'
      f.Content.Unqueued←⊂'click'
-     d
+     d ⎕NS w⊣w.⎕EX d.⎕NL 2
  }

@@ -1,7 +1,7 @@
  OnClose←{
      d←⍵.Target
      e←()
-     e.Event←'Close'
+     e.Event←'Cancel'
      e.Component←d
      1≡A.FireAbacusEvent e:0
      A.DeleteElement d

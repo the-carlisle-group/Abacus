@@ -1,8 +1,4 @@
  Verify←{
-     ⍵
-     ⍝ This will not work currently
-     ⍝ As some abacus components (ProgressBar, etc.)are wrappers for other components
-     ⍝ and add additional names.
      (n v r)←↓⍉↑3↑¨⍺,¨0
      n←n,⊂'Name'
      r←r,0

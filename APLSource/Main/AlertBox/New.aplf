@@ -6,7 +6,10 @@
          '_min_width' '20rem'
          '_max_width' '40rem'
      )A.Default ⍵
-     w.MainContent←A.New¨{'p'⍵}¨⊆w.Message
-     w.Buttons←'OK'
-     ⍺ A.DialogBox.New w
+     p←()
+     p.MainContent←A.New¨{'p'⍵}¨⊆w.Message
+     p.Buttons←'OK'
+     p.Title←w.Title
+     d←⍺ A.DialogBox.New p
+     d ⎕NS w⊣w.⎕EX d.⎕NL 2
  }

@@ -7,13 +7,16 @@
          '_min_width' '20rem'
          '_max_width' '40rem'
      )A.Default ⍵
-     w.MainContent←A.New¨{'p'⍵}¨⊆w.Message
-     w.OnClick←A.FQP'OnSelect'
-     w.OnClose←A.FQP'OnClose'
-     d←⍺ A.DialogBox.New w
+     p←()
+     p.Title←w.Title
+     p.Buttons←w.Buttons
+     p.MainContent←A.New¨{'p'⍵}¨⊆w.Message
+     p.OnClick←A.FQP'OnSelect'
+     p.OnCancel←A.FQP'OnClose'
+     d←⍺ A.DialogBox.New p
      f←d A.GetElementByTag'footer'
      b←f A.GetElementsByTag'button'
      b.Unqueued←⊂'click'
      d.Unqueued←'close'
-     d
+     d ⎕NS w⊣w.⎕EX d.⎕NL 2
  }

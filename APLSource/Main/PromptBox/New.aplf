@@ -9,8 +9,12 @@
          '_width' '30rem'
      )A.Default ⍵
      PromptBox←A.TextInput.New w.Label w.Value
-     w.MainContent←PromptBox
-     w.OnClick←A.FQP¨'OnOK' 'OnCancel'
-     w.OnClose←A.FQP'OnCancel'
-     ⍺ A.DialogBox.New w
+     p←()
+     p.Title←w.Title
+     p.MainContent←PromptBox
+     p.OnClick←A.FQP¨'OnOK' 'OnCancel'
+     p.OnCancel←A.FQP'OnCancel'
+     d←⍺ A.DialogBox.New p
+     d.OnCancelPromptBox←w.OnCancel
+     d ⎕NS w⊣w.⎕EX d.⎕NL 2
  }

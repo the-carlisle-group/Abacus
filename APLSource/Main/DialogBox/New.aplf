@@ -7,7 +7,7 @@
          'Buttons'('OK' 'Cancel')
          'Icons' 'none'
          'OnClick' ''
-         'OnClose' ''
+         'OnCancel' ''
      )A.Default ⍵
      d.Document←⍺
      d.Buttons←,⊆d.Buttons

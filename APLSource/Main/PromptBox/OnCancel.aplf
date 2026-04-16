@@ -6,5 +6,6 @@
      e.Component←d
      e.OldValue←d.Value
      e.NewValue←c.Value
-     A.FireAbacusEvent e
+     f←d.OnCancelPromptBox
+     f A.FireAbacusEvent e
  }
