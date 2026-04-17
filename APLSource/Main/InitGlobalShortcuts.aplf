@@ -14,6 +14,8 @@
      i.Document←d
      d.GlobalShortcuts←k/s
      d.GlobalMenuItems←k/i
+     0
+     ⍝ Do this in InitApp
      b←GetBody d
      b.Onkeydown←'OnKeyDown'
      0

@@ -1,0 +1,10 @@
+ OnKeyDownGlobal←{
+     ⍝ ⍵
+     ⍝ ← ←→ 1 for handled, 0 for not handled
+     d←⍵.Document
+     0<≢d GetElementsByTag'dialog':0
+     i←d.GlobalShortcuts⍳⊂⍵.FQK
+     i=≢d.GlobalShortcuts:0
+     mi←i⊃d.GlobalMenuItems
+     1⊣FireAbacusEvent(Event:'Click' ⋄ Component:mi)
+ }

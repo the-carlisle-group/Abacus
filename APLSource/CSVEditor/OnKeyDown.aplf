@@ -1,0 +1,4 @@
+ OnKeyDown←{
+     ⎕←'On Document.KeyDown: ',⍵.Key
+     0
+ }

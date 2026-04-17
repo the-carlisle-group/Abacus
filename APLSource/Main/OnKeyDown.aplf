@@ -5,8 +5,12 @@
      k←⍵.Code
      b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
      p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
-     i←d.GlobalShortcuts⍳⊂p
-     i=≢d.GlobalShortcuts:0
-     mi←i⊃d.GlobalMenuItems
-     FireAbacusEvent(Event:'Click' ⋄ Component:mi)
+     ⍵.FQK←p
+     _←OnKeyDownGlobal ⍵  ⍝ 0  ⍝ Handle main menu shortcuts
+     d←⍵.Document
+     e←⎕NS''
+     e.Event←'KeyDown'
+     e.Component←d
+     e.Key←⍵.FQK
+     FireAbacusEvent e
  }
