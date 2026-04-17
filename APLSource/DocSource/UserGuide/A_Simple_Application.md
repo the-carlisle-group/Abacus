@@ -47,8 +47,8 @@ Finally we need to create an Application object to run the app:
 
 ~~~
       a←A.NewApplication '' 
-      a.BuildFunction←A.FQP 'BuildClickCounter'
-      d←a A.StartDesktopApplication ''
+      a.OnBuild←A.FQP 'BuildClickCounter'
+      d←a A.StartDesktopApplication 0
 ~~~
 
 The final result `d` is the [HTMLDocument]() object created by our build function.
@@ -78,6 +78,6 @@ OnIncrement←{
       p A.SetInnerHTML ⍕'Clicked' b._Count 'times'
 }
       a←A.NewApplication '' 
-      a.BuildFunction←A.FQP 'BuildClickCounter'
-      d←a A.StartDesktopApplication ''
+      a.OnBuild←A.FQP 'BuildClickCounter'
+      d←a A.StartDesktopApplication 0
 ~~~

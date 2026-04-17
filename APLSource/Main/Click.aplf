@@ -5,7 +5,7 @@
      ⍝ ⍵ ←→ Element (clientY clientX offsetX offsetY)
      ~IsString ⍵:(0⊃⍵)MouseDownAt(1⊃⍵)
      a←⌽Elements ⍺
-     o←,↓⍉↑a ⎕VGET('id' '')('Name' '')
+     o←,⍉↑a ⎕VGET('id' '')('Name' '')
      e←(o⍳⊂⍵)⊃a,a
      b←2=e.⎕NC'Onclick'
      v←b⊃'mousedown' 'click'

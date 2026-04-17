@@ -1,0 +1,11 @@
+ Test1←{
+     ⎕TID=0:∇&0
+     b←GetElementById'increment'
+     Assert b._Count=0:
+     Click'increment':
+     Assert b._Count=1:
+     Click'increment':
+     Click'increment':
+     Assert b._Count=3:
+     0
+ }

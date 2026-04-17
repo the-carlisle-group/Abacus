@@ -1,0 +1,7 @@
+ OnIncrement←{
+     d←⍵.Document
+     b←⍵.Target
+     b._Count+←1
+     p←d A.GetElementById'click-status'
+     p A.SetInnerHTML'Clicked ',(⍕b._Count),' times'
+ }

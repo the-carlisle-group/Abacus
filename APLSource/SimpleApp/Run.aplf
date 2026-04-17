@@ -1,0 +1,6 @@
+ Run←{
+     ⎕THIS.A←#.Abacus.Main
+     a←A.NewApplication''
+     a.OnBuild←A.FQP'BuildClickCounter'
+     a A.StartDesktopApplication 0
+ }

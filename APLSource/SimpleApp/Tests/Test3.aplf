@@ -1,0 +1,11 @@
+ Test3←{
+     ⎕TID=0:∇&0
+     Click'increment':
+     Click'increment':
+     Click'increment':
+     Assert ContentIs'Clicked 3 times':
+     Click'increment':
+     Click'increment':
+     Assert ContentIs'Clicked 5 times':
+     0
+ }
