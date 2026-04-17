@@ -135,19 +135,19 @@ Test2←{
      Assert ContentIs'Clicked 5 times':
      0
  }
- ~~~
+~~~
 
- This test makes use of an application-specific helper function:
- 
- ~~~
- ContentIs←{
+This test makes use of an application-specific helper function:
+
+~~~
+ContentIs←{
      n←'click-status'
      se←GetElementById n
      ce←GetElementFromBrowser n
      ⍵ ⍵≡⊃¨(ce se).Content
- }
- ~~~
+}
+~~~
 
- Here we get the corresponding elements from APLDOM and from 
- the HTMLRenderer, and check that the relevant content matches 
- the argument. Functions like this make your tests much more readable and maintainable.
+Here we get the corresponding elements from APLDOM and from 
+the HTMLRenderer, and check that the relevant content matches 
+the argument. Functions like this make your tests much more readable and maintainable.

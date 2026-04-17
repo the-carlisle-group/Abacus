@@ -19,5 +19,5 @@ defaults to the current test element.
 'Ctrl' 'Shift' 'ArrowRight'
 'Alt' 'F7'
 ~~~
- 
+
 `R` is `0`.

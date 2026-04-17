@@ -6,7 +6,7 @@ This is a function injected to a test suite.
 
 ~~~
 R←GetElementByName X
-~~~ 
+~~~
 
 `X` is a Name. R is an element.
 
