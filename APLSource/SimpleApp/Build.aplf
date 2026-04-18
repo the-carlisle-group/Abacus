@@ -1,0 +1,15 @@
+ Build←{
+     _←A.Init 0
+     d←A.NewDocument''
+     d.AppStyle←CSS 0
+     d._Count←0
+     b←A.GetBody d
+     h←b A.New'header'
+     m←b A.New'main'
+     Increment←h A.Button.New'Increment'('OnClick' 'OnIncrement')
+     Decrement←h A.Button.New'Decrement'('OnClick' 'OnDecrement')
+     Reset←h A.Button.New'Reset'('OnClick' 'OnReset')
+     h1←m A.New'h1' 'Counter value is 0'
+     h1.id←'click-status'
+     d
+ }

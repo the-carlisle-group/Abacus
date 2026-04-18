@@ -1,0 +1,17 @@
+ CSS←{
+     Rule←A.NewRule
+     s←Rule''
+     ⍝ ******************
+     r←s Rule'header'
+     r.display←'flex'
+     r.justify_content←'center'
+     r.padding←'2rem'
+     r.gap←'.5rem'
+     ⍝
+     r←s Rule'main'
+     r.flex_direction←'row'
+     r.justify_content←'center'
+     r.padding←'2rem'
+     r.gap←'.5rem'
+     s
+ }

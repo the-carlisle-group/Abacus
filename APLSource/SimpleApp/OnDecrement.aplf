@@ -1,6 +1,6 @@
- OnIncrement←{
+ OnDecrement←{
      d←⍵.Document
-     d._Count+←1
+     d._Count←0⌈d._Count-1
      p←d A.GetElementById'click-status'
      p A.SetInnerHTML'Counter value is ',⍕d._Count
  }

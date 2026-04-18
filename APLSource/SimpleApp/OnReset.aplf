@@ -1,0 +1,6 @@
+ OnReset←{
+     d←⍵.Document
+     d._Count←0
+     p←d A.GetElementById'click-status'
+     p A.SetInnerHTML'Counter value is 0'
+ }

@@ -1,15 +1,12 @@
  Test2←{
      ⎕TID=0:∇&0
-     ss←GetElementById'click-status'
-     ServerContentIs←{⍵≡⊃ss.Content}
-     ClientContentIs←{⍵≡⊃(GetElementFromBrowser'click-status').Content}
-     Click'increment':
-     Click'increment':
-     Click'increment':
-     Assert ServerContentIs'Clicked 3 times':
-     Assert ClientContentIs'Clicked 3 times':
-     Click'increment':
-     Assert ServerContentIs'Clicked 4 times':
-     Assert ClientContentIs'Clicked 4 times':
+     Click'Reset':
+     Click'Increment':
+     Click'Increment':
+     Click'Increment':
+     Assert ContentIs'Counter value is 3':
+     Click'Increment':
+     Click'Increment':
+     Assert ContentIs'Counter value is 5':
      0
  }

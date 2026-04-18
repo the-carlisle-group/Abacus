@@ -1,9 +1,0 @@
- BuildClickCounter←{
-     bn←A.New'button' 'Click Me'
-     bn.Onclick←A.FQP'OnIncrement'
-     bn.id←'increment'
-     bn._Count←0
-     p←A.New'p' 'Clicked 0 times'
-     p.id←'click-status'
-     A.NewDocument bn,p
- }
