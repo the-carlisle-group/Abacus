@@ -1,16 +1,11 @@
 # Enter
 
-Test utility function.
-
-Enters a character string on an input element.
+Enters a character string on an input element in a test suite.
 
 ~~~
-r←[X] Enter Y
+R←Enter X
 ~~~
 
-`X` is an optional element. If omitted, it
-defaults to the current test element.
+`X` is a character vector. `R` is `0`. 
 
-`Y` is a character vector.
-
-`R` is `0`. 
+The global `Element` variable is an implicit argument.

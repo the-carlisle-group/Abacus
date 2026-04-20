@@ -1,7 +1,7 @@
  Test2←{
      ⎕TID=0:∇&0
-     Click'Reset':
-     Click'Increment':
+     Click On'Reset':
+     Click On'Increment':
      Click'Increment':
      Click'Increment':
      Assert ContentIs'Counter value is 3':

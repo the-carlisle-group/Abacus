@@ -5,12 +5,21 @@
      ⍺.Document←⍵
      ⍺.Element←⍵
      ⍵.TestMode←1
-     fx←{⍺.⎕FX,⊂⍵,'←{⍺←Element ⋄ ⍺ A.',⍵,' ⍵}'}
-     fx1←{⍺.⎕FX,⊂⍵,'←{⍺←Document ⋄ ⍺ A.',⍵,' ⍵}'}
-     _←⍺ fx¨'Press' 'Enter'
-     _←⍺ fx1¨'Click' 'GetElementFromBrowser'
-     fx2←{⍺.⎕FX,⊂⍵,'←{⎕THIS.Element←Document A.',⍵,' ⍵}'}
-     _←⍺ fx2'GetElementById'
+     ⍝ fx←{⍺.⎕FX,⊂⍵,'←{⍺←Element ⋄ ⍺ A.',⍵,' ⍵}'}
+     ⍝ fx1←{⍺.⎕FX,⊂⍵,'←{⍺←Document ⋄ ⍺ A.',⍵,' ⍵}'}
+     ⍝ _←⍺ fx¨'Press' 'Enter'
+     ⍝ _←⍺ fx1¨'Click' 'GetElementFromBrowser'
+     ⍝ fx2←{⍺.⎕FX,⊂⍵,'←{⎕THIS.Element←Document A.',⍵,' ⍵}'}
+     ⍝ _←⍺ fx2'GetElementById'
+
+     _←⍺.⎕FX,⊂'Focus←{0⊣⎕THIS.Element←Document A.GetElementByIdOrName ⍵}'
+     _←⍺.⎕FX,⊂'On←{⍺←⍵ ⋄ ⍺⊣Focus ⍵}'
+     _←⍺.⎕FX,⊂'Click←{Document A.Click ⍵⊣Focus ⍵}'
+     _←⍺.⎕FX,⊂'Press←{Element A.Press ⍵}'
+     _←⍺.⎕FX,⊂'Enter←{Element A.Enter ⍵}'
+     _←⍺.⎕FX,⊂'GetElement←{Document A.GetElementByIdOrName ⍵}'
+     _←⍺.⎕FX,⊂'GetElementFromBrowser←{Document A.GetElementFromBrowser ⍵}'
+
      ⍺.At←{⍺ ⍵}
      0
  }

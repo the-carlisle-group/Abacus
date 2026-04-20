@@ -1,15 +1,10 @@
 # Click
 
-Test function.
-
-Fires a click on an element.
+Fires a click on an element in a test suite. 
 
 ~~~
-R←[X] Click Y
+R←Click X
 ~~~
 
-`X` is the current document.
-
-Y is the `id` or `Name` of the element.
-
-`R` is `0`.
+`X` is the `id` or `Name` of the element. `R` is `0`.
+The global `Document` variable is an implicit argument.

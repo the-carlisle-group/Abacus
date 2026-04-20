@@ -1,6 +1,6 @@
  ContentIs←{
      n←'click-status'
-     se←GetElementById n
+     se←GetElement n
      ce←GetElementFromBrowser n
      ⍵ ⍵≡⊃¨(ce se).Content
  }

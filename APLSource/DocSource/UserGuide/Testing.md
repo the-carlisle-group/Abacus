@@ -1,6 +1,6 @@
 # Testing
 
-Abacus provides a built-in UI testing framework. It is based on
+Abacus provides a UI testing framework built on top of
 [Provanto](https://github.com/the-carlisle-group/Provanto),
 which must be present in the workspace.
 
@@ -14,26 +14,28 @@ The `Start` function builds the application and returns a document.
 The `Teardown` function does any cleanup in addition to closing
 the main application form, which is provided by the framework. 
 
-Typically a test function will instigate some action in the HTMLRenderer
-, like button click, and then examine the state of the APLDOM (the APL side)
+Typically a test function will instigate some action in the HTMLRenderer,
+like button click, and then examine the state of the APLDOM (the APL side)
 and perhaps also some state in the HTMLRenderer.
 
 The [RunTests]() function (in #.Abacus.Main) initializes and 
-executes the test suite.
+executes the test suite. It establishes two global variables in the test suite
+namespace: `Document`, which remains unchanged, and `Element` which specifies
+the current, focused element. `Element` is initially set to `Document` 
 
 The initialization process injects several utility functions 
 into the test space. These include:
 
 |Function|Description|
 |:======|:==================|
-|[Click](FunctionReference/Click)|Click on an element|
-|[Press](FunctionReference/Press)|Press a key on an element|
-|[Enter](FunctionReference/Enter)|Enter a text string on an input element| 
-|[GetElementById](FunctionReference/GetElementById)|Get an element from the APLDOM by id|
-|[GetElementByName](FunctionReference/GetElementByName)|Get an element from the APLDOM by name|
+|[Focus](FunctionReference/Focus)|Focus on a partiular element by `id` or `Name`|
+|[Click](FunctionReference/Click)|Focus and click on an element by `id` or `Name`|
+|[Press](FunctionReference/Press)|Press a key on an the focused element|
+|[Enter](FunctionReference/Enter)|Enter a text string on an the focused element| 
+|[On](FunctionReference/Enter)|Specfies the focused element for in-lining with `Press` and `Enter`)
 |[GetElementFromBrowser](FunctionReference/GetElementFromBrowser)| Get an element from the browser by id| 
 
-These functions are document-aware. 
+These functions are document-aware. Tests can of course use any function in Abacus as well. 
 
 The `SimpleApp` namespace in Abacus contains a simple application and associated
 test suite in the subspace `Tests`. The start function simply starts the
@@ -72,13 +74,13 @@ Let's look at `Test1` in detail:
 ~~~
 Test1←{
      ⎕TID=0:∇&0
-     b←GetElementById'increment'
-     Assert b._Count=0:
-     Click'increment':
-     Assert b._Count=1:
-     Click'increment':
-     Click'increment':
-     Assert b._Count=3:
+     Click'Reset':
+     Assert Document._Count=0:
+     Click'Increment':
+     Assert Document._Count=1:
+     Click'Increment':
+     Click'Increment':
+     Assert Document._Count=3:
      0
  }
 ~~~
@@ -91,48 +93,39 @@ It is useful, though not required, to start each test function with the idiom:
 
 This is because tests must be run in a thread, separate from the root.
 The `RunTests` function threads test functions automatically, but if we want to 
-run a single test independently it must be threaded.
-If not, the system will hang. This idiom ensures that a test is not run
+run a single test independently it must be threaded or the system will hang.
+This idiom ensures that a test is not run
 in the root thread.
 
-The `GetElementById` function is test utitlity function, injected into the test
-suite namespace by the test framework. It is document-aware, so it knows
-what document to search. In addition to returning the element,
-it creates a global variable in the test suite namespace named `Element`.
-This is so subsequent calls to element-aware functions like `Press` know
-what elements to operate on.  
+The `Click` function is injected into the test
+suite namespace by the test framework. As the name implies, it fires a click
+on an element. It is document-aware, so it knows
+what document to search for either an `id` or a `Name`.
+The result of `Click` is always `0`, and since we are in using a dfn, we must
+either assign it, or use the naked guard to continue execution.
+You can of course use a trad function to avoid both the superfluous
+assingment and the naked guard.
 
-The `Assert` function is provided by `Provanto`. An assertion is
-followed by a naked guard. `Assert` returns a `0` if the condition is true,
-else it signals an error, so it never returns a `1`, thus there is no 
-reason to have anything after the guard.
-You can always write your tests using trad functions it the naked guard bothers you. 
+The `Document` reference is avaiable globally in the test suite namespace,
+for easy access and verifying state.
 
-Next we run the `Click` function to dispatch a click event on the the element
-whose id is `increment`. We could also write `Click b`.
-The click function is document-aware, to if we pass an id as its right argument,
-it knows what document to search. This function is also run to the left
-of a naked guard. This is because in a dfn, every line must return a result,
-and have an assignment (or the function terminates)
-and we want to avoid superfluous assignments. Once the click is processed
-we can assert that the counter has increased.
-
-You can think of the naked guard as a required line-ending for any line
-that does not have an assignment. You can of course avoid the guard
-by either adding a throw-away assignment, or using a trad function.
+The `Assert` function is provided by `Provanto`. An assertion is also
+followed by a naked guard for the same reason as above.
+`Assert` returns a `0` if the condition is true, else it signals an error.
 
 Now lets look at `Test2`:
 
 ~~~
 Test2←{
      ⎕TID=0:∇&0
-     Click'increment':
-     Click'increment':
-     Click'increment':
-     Assert ContentIs'Clicked 3 times':
-     Click'increment':
-     Click'increment':
-     Assert ContentIs'Clicked 5 times':
+     Click'Reset':
+     Click'Increment':
+     Click'Increment':
+     Click'Increment':
+     Assert ContentIs'Counter value is 3':
+     Click'Increment':
+     Click'Increment':
+     Assert ContentIs'Counter value is 5':
      0
  }
 ~~~
@@ -142,10 +135,10 @@ This test makes use of an application-specific helper function:
 ~~~
 ContentIs←{
      n←'click-status'
-     se←GetElementById n
+     se←GetElement n
      ce←GetElementFromBrowser n
      ⍵ ⍵≡⊃¨(ce se).Content
-}
+ }
 ~~~
 
 Here we get the corresponding elements from APLDOM and from 

@@ -1,0 +1,5 @@
+ GetElementByIdOrName←{
+     a←⌽Elements ⍺
+     o←,⍉↑a ⎕VGET('id' '')('Name' '')
+     (o⍳⊂⍵)⊃a,a
+ }
