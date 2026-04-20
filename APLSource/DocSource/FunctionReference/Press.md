@@ -1,16 +1,10 @@
 # Press
 
-Test utility function.
-
-Fires a key press on an element in the browser
-for testing purposes.
+Fires a key press on an input element in a test suite.
 
 ~~~
-   R←[X] Press Y
+   R←Press Y
 ~~~
-
-`X` is an optional element. If omitted, it
-defaults to the current test element.
 
 `Y` is a JavaScript key specification, for example:
 
@@ -21,3 +15,5 @@ defaults to the current test element.
 ~~~
 
 `R` is `0`.
+
+The global `Element` variable is an implicit argument.

@@ -33,6 +33,7 @@ into the test space. These include:
 |[Press](FunctionReference/Press)|Press a key on an the focused element|
 |[Enter](FunctionReference/Enter)|Enter a text string on an the focused element| 
 |[On](FunctionReference/Enter)|Specfies the focused element for in-lining with `Press` and `Enter`)
+|[GetElement](FunctionReference/GetElementFromBrowser)| Get an element from the APLDOM| 
 |[GetElementFromBrowser](FunctionReference/GetElementFromBrowser)| Get an element from the browser by id| 
 
 These functions are document-aware. Tests can of course use any function in Abacus as well. 
@@ -67,7 +68,7 @@ Now we may run and trace `Test1`:
 
 ~~~
       Test1 0 
-~~~ 
+~~~
 
 Let's look at `Test1` in detail:  
 
