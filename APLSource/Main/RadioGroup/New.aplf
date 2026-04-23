@@ -11,7 +11,6 @@
          'OnChange' ''
      )A.Default ⍵
      d.Name←n
-     id←d.Labels~¨' '
      _←d A.New'legend'd.Legend
      i←A.New¨{'input' ''}¨d.Labels
      c←(d.Options⍳⊂d.Value)⊃i,i
@@ -19,9 +18,9 @@
      i.Value←d.Options
      i.name←⊂n
      i.type←⊂'radio'
-     i.id←id
+     i.id←A.GetId¨0⍴⍨≢i
      l←A.New¨{'label'⍵}¨d.Labels
-     l.for←id
+     l.for←i.id
      d.Content,←A.New¨{'div'⍵}¨↓⍉↑i l
      d.Onchange←A.FQP'OnChange'
      d

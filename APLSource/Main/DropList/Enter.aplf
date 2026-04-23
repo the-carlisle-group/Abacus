@@ -1,0 +1,5 @@
+ Enter←{
+     _←⍺ SetValue ⍵
+     op←1⊃⍺.Content
+     op A.FireChangeAndWait''
+ }

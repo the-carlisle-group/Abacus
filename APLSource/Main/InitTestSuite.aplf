@@ -10,7 +10,9 @@
      ⍝ _←⍺.⎕FX,⊂'Click←{Document A.Click ⍵⊣Focus ⍵}'
      _←⍺.⎕FX,⊂'Click←{Document A.Click ⍵}'
      _←⍺.⎕FX,⊂'Press←{Element A.Press ⍵}'
-     _←⍺.⎕FX,⊂'Enter←{Element A.Enter ⍵}'
+     ⍝ _←⍺.⎕FX,⊂'Enter←{Element A.Enter ⍵}'
+     _←⍺.⎕FX,⊂'Enter←{Element Element.Class.Enter ⍵}'
+
      _←⍺.⎕FX,⊂'GetElement←{Document A.GetElementByIdOrName ⍵}'
      _←⍺.⎕FX,⊂'GetElementFromBrowser←{Document A.GetElementFromBrowser ⍵}'
 

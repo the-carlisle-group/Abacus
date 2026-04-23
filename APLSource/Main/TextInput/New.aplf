@@ -14,10 +14,10 @@
      d.Oninput←A.FQP'OnInput'
      d.Onchange←A.FQP'OnChange'
      l←d A.New'label'd.Label
-     l.for←d.Name
+     l.for←A.GetId 0
      n←d A.New'div'
      i←n A.New'input'
-     i.id←d.Name
+     i.id←l.for
      _←i A.AutoComplete.Init d.Options
      _←d InitValue d.Value
      0=≢d.OnPicker:d

@@ -1,0 +1,9 @@
+ Enter←{
+     ⍝ ⍺ ←→ DataGrid
+     ⍝ ⍵ ←→ Text
+     t←⍺.Table
+     t.CellMode=2:0⊣(t A.GetElementById'grid-input')A.EnterOnInputAccumulate ⍵
+     _←t A.FireKeyDownAndWait⊃⍵
+     i←t A.GetElementById'grid-input'
+     i A.EnterOnInputAccumulate 1↓⍵
+ }

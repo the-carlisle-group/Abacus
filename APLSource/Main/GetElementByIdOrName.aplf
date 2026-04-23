@@ -1,5 +1,7 @@
  GetElementByIdOrName←{
      a←⌽Elements ⍺
      o←,⍉↑a ⎕VGET('id' '')('Name' '')
-     (o⍳⊂⍵)⊃a,a
+     e←(o⍳⊂⍵)⊃a,a
+     _←e.Class.SetFocus e
+     e
  }

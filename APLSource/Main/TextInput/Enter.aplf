@@ -1,0 +1,5 @@
+ Enter←{
+     _←⍺ SetValue ⍵
+     i←GetInputElement ⍺
+     i A.FireChangeAndWait''
+ }

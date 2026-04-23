@@ -10,7 +10,7 @@
      Assert c[⍳3;¯3+1⊃⍴c]≡'2015/08/23' '1976/10/03' '1971/09/26':
      Enter'1999 12 31':
      Press'Enter':
-     Enter'2000/1/1':GetElementById
+     Enter'2000/1/1':
      Press'Enter':
      Enter'2024-12-1':
      Press'Enter':

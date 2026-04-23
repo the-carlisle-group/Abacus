@@ -1,0 +1,6 @@
+ FireChangeAndWait←{
+     ⍝ ⍺ Element
+     ⍺.Document.Waiting←1
+     _←⍺ ExecuteOnElement'dispatchEvent(new Event(''change'', {bubbles: true }))'
+     0⊣⎕TGET DoneToken
+ }

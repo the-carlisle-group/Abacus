@@ -8,5 +8,5 @@
      j←⎕JSON n
      ⍺.Document.Waiting←1
      _←⍺ ExecuteOnElement'dispatchEvent(new KeyboardEvent(''keydown'',',j,'))'
-     ⎕TGET DoneToken
+     0⊣⎕TGET DoneToken
  }

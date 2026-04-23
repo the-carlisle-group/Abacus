@@ -1,0 +1,22 @@
+ TestOnChangeCallback←{
+     ⎕TID=0:∇&⍵
+     Enter'Hello world!'On'TextInput':
+     Assert Element.NewValue≡'Hello world!':
+     Enter 127 On'NumericInput':
+     Assert Element.NewValue≡127:
+     Enter 20271231 On'DateInput':
+     Assert Element.NewValue≡20271231:
+     Enter'Pipe'On'DropListInput':
+     Assert Element.NewValue≡'Pipe':
+     Enter'c:/MyFolder/MyFile.csv'On'FileInput':
+     Assert Element.NewValue≡'c:/MyFolder/MyFile.csv':
+     Enter On'Checkbox':
+     Assert Element.NewValue≡1:
+     Enter On'Checkbox':
+     Assert Element.NewValue≡0:
+     Enter'Two'On'RadioGroup':
+     Assert Element.NewValue≡'Two':
+     Enter'Three'On'RadioGroup':
+     Assert Element.NewValue≡'Three':
+     0
+ }

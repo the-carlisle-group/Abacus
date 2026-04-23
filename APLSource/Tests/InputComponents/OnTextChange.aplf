@@ -1,0 +1,6 @@
+ OnTextChange←{
+     ⎕←'OnChange!'
+     c←⍵.Component
+     c.Value←
+     0
+ }

@@ -1,0 +1,19 @@
+ Start←{
+     ⎕THIS.A←#.Abacus.Main
+     _←A.Init 0
+     d←A.NewDocument''
+     b←A.GetBody d
+     h←b A.New'header'
+     m←b A.New'main'
+     cb←'OnChange'(A.FQP'OnChange')
+     TextInput←m A.TextInput.New'Text input:'cb
+     NumericInput←m A.NumberInput.New'Numeric input:' 256 'CI15'cb
+     DateInput←m A.DateInput.New'Date input:' 20261231 cb
+     DropListInput←m A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')cb
+     FileInput←m A.FileInput.New'File input:'cb
+     Checkbox←m A.CheckBox.New'Check box input'cb
+     RadioGroup←m A.RadioGroup.New('A radio group')('Value' 'One')('Labels'('One' 'Two' 'Three'))('Options'('One' 'Two' 'Three'))cb
+     _←A.NewForm d
+
+     d
+ }

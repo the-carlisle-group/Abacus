@@ -1,3 +1,5 @@
  Press←{
-     0⊣⍺ FireKeyDownAndWait ⍵
+     c←⍺.⎕VGET⊂'class' ''
+     c≡'DataGrid':⍺.Table FireKeyDownAndWait ⍵
+     ⍺ FireKeyDownAndWait ⍵
  }

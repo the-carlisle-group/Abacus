@@ -1,0 +1,4 @@
+ GetInputElement←{
+     ⍺←⍵
+     1 0⊃⍺.Content.Content
+ }

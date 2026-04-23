@@ -11,9 +11,9 @@
      i←d A.New'input'
      i.class←''
      i.type←'checkbox'
-     i.id←d.Name
+     i.id←A.GetId 0
      l←d A.New'label'd.Label
-     l.for←d.Name
+     l.for←i.id
      d.Onchange←A.FQP'OnChange'
      _←d InitValue d.Value
      d

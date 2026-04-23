@@ -1,0 +1,5 @@
+ OnChange←{
+     c←⍵.Component
+     c.NewValue←⍵.Value
+     0
+ }

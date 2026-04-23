@@ -3,6 +3,6 @@
      ⍝ ⍵ ←→ Value
      ~A.IsConnected ⍺:⍺ InitValue ⍵
      ⍺.Value←⍵
-     i←1 0⊃⍺.Content.Content
+     i←GetInputElement ⍺
      i A.SetValue ⍵
  }

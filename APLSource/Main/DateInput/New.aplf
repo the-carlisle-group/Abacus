@@ -9,10 +9,10 @@
      )A.Default ⍵
      d.Name←n
      l←d A.New'label'd.Label
-     l.for←d.Name
+     l.for←A.GetId 0
      i←d A.New'input'
      i.type←'date'
-     i.id←d.Name
+     i.id←l.for
      d.Onchange←A.FQP'OnChange'
      _←d InitValue d.Value
      d

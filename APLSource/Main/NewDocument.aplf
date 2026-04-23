@@ -6,5 +6,6 @@
      mt.charset←'utf-8'
      b←h New'body'⍵
      h.OnKeyDown←''
+     h.Caption←''
      h
  }

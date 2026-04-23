@@ -1,7 +1,0 @@
- RowCountChange←{
-     OBSOLETE
-     t←⍵
-     t.DataSize[0]←Init
-     AppendRow
-
- }

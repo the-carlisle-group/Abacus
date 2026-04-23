@@ -10,11 +10,11 @@
      )A.Default ⍵
      d.Name←n
      l←d A.New'label'd.Label
-     l.for←d.Name
+     l.for←A.GetId 0
      op←A.New¨{'option'⍵}¨d.Options
      s←d A.New'select'op
      s.class←''
-     s.id←d.Name
+     s.id←l.for
      _←s ⎕VSET d.Disabled/⊂2⍴⊂'disabled'
      d.Onchange←A.FQP'OnChange'
      _←d InitValue d.Value

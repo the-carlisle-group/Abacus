@@ -1,5 +1,4 @@
  GetValues←{
-     ⍺←Element
-
+     ⍺←Element.Table
      ⍉↑{2=⍴⍴⍵:A.ntbs ⍵ ⋄ ⍵}¨⍺ A.DataGrid.IndexValues ⍵
  }

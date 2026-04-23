@@ -1,0 +1,4 @@
+ Enter←{
+     i←0⊃⍺.Content
+     i A.FireChangeAndWait''
+ }

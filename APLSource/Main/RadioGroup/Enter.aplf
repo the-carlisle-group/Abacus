@@ -1,0 +1,6 @@
+ Enter←{
+     _←⍺ SetValue ⍵
+     i←⍺ A.GetElementsByTag'input'
+     j←(i.Value⍳⊂⍵)⊃i
+     j A.FireChangeAndWait''
+ }
