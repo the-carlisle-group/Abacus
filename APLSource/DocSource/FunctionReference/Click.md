@@ -8,3 +8,6 @@ R←Click X
 
 `X` is the `id` or `Name` of the element. `R` is `0`.
 The global `Document` variable is an implicit argument.
+
+Use the [Enter]() function to check or uncheck a [CheckBox](),
+or to select an option in a [RadioGroup]() or [DropList]().
