@@ -1,22 +1,16 @@
  InitGlobalShortcuts←{
      d←⍵
-     d.GlobalShortcuts←''
-     d.GlobalMenuItems←''
-     b←⊃,/d GetElementsByClass¨'MenuBar' 'HamburgerMenu'
-     0=≢b:0
-     f←(⊃b).BuildFunction
-     m←d(⍎f)0
-     i←{⍵/⍨⍵.Type∊⊂'Item'}m GetElementsByTag'li'
-     s←∊¨2⊃¨i.Content.Content.Content
+     e←GetElements d
+     e,←{
+         b←⊃,/d GetElementsByClass¨'MenuBar' 'HamburgerMenu'
+         0=≢b:⍬
+         f←(⊃b).BuildFunction
+         GetElements d(⍎f)0
+     }0
+     s←e ⎕VGET⊂'Shortcut' ''
      s←{r←'+'(≠⊆⊢)⍵ ⋄ b←r∊,¨⎕A ⋄ ∊r,⍨¨b/¨⊂'Key'}¨s
      k←~s∊⊂''
-     ~∨/k:0
-     i.Document←d
      d.GlobalShortcuts←k/s
-     d.GlobalMenuItems←k/i
-     0
-     ⍝ Do this in InitApp
-     b←GetBody d
-     b.Onkeydown←'OnKeyDown'
+     d.GlobalComponents←k/e
      0
  }

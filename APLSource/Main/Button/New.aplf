@@ -5,20 +5,16 @@
          'Caption' ''
          'Icon' 'none'
          'OnClick' ''
+         'Shortcut' ''
          'Disabled' 0
      )A.Default ⍵
      b.Name←n
      b.OnClick←1 A.FQP b.OnClick
      b.Onclick←A.FQP'OnClick'
-
      i←(##.Icons 0)⎕VGET⊂b.Icon''
      b.Content,←(0<≢i)/A.New'div'(⊂⊂i)  ⍝ Need div only because DOM2HTML does not handle ...
-
      ⍝i←A.HTML2DOM(##.Icons 0)⎕VGET⊂b.Icon''
      ⍝b.Content,←(0<≢i)/A.New'div'i  ⍝ Need div only because DOM2HTML does not handle ...
-
-
-
      b.Content,←(0<≢b.Caption)/A.New'p'b.Caption
      b
  }

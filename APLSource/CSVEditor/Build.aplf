@@ -1,7 +1,6 @@
  Build←{
      d←A.NewDocument''
      b←A.GetBody d
-     b.OnKeyDown←A.FQP'OnKeyDown'
      h←b A.New'header'
      h.Document←d
      hm←h A.Menu.NewHamburgerMenu'BuildMenu'

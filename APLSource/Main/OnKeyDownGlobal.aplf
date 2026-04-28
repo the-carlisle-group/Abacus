@@ -4,7 +4,8 @@
      d←⍵.Document
      0<≢d GetElementsByTag'dialog':0
      i←d.GlobalShortcuts⍳⊂⍵.FQK
-     i=≢d.GlobalShortcuts:0
-     mi←i⊃d.GlobalMenuItems
-     1⊣FireAbacusEvent(Event:'Click' ⋄ Component:mi)
+     i=≢d.GlobalComponents:0
+     e←i⊃d.GlobalComponents
+     e.Document←d
+     1⊣FireAbacusEvent(Event:'Click' ⋄ Component:e)
  }
