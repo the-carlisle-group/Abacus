@@ -2,10 +2,13 @@
 
 This property defines the autocomplete values.
 
+You must use the [SetOptions]() method to set this property
+after after the input has been created.
+
 For simple autocomplete it may be a list of items:
 
 ~~~
-t.Options←'Bach' 'Beethoven' 'Mozart'
+      'Bach' 'Beethoven' 'Mozart'
 ~~~
 
 Or, for hierarchical autocomplete, or to provide

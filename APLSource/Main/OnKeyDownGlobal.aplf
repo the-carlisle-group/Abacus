@@ -6,6 +6,7 @@
      i←d.GlobalShortcuts⍳⊂⍵.FQK
      i=≢d.GlobalComponents:0
      e←i⊃d.GlobalComponents
+     e.Disabled:0
      e.Document←d
      1⊣FireAbacusEvent(Event:'Click' ⋄ Component:e)
  }

@@ -6,7 +6,7 @@
      b1.ToolTip←⊂⊂'This is <br> the <b>sort down</b> button'
      b11←A.Button.New('Name' 'SortUp')('Caption' 'Up')('Icon' 'SortAscending')('OnClick' 'OnDropDownOp1')
      b11.ToolTip←'This is the sort up button what if it is reallly really long? (Ctrl+Q)'
-     b11.Shortcut←'Ctrl+Q'
+     b11.Shortcut←'Ctrl+F'
      b2←A.Button.New('Name' 'SortUp2')('Icon' 'SortAscending')
      b2.ToolTip←'This is the tooltip for the sort up button'
      b3←A.Button.New('Icon' 'Search')('OnClick' 'OnDropDownOp1')

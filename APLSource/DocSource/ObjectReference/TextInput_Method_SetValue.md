@@ -1,3 +1,3 @@
 # TextInput SetValue Method
 
-TODO
+Sets the [Value](TextInput/Properties/Value) property dynamically.

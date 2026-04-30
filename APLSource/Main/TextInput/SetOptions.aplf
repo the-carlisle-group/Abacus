@@ -1,0 +1,6 @@
+ SetOptions←{
+     ⍝ ⍺ ←→ Component
+     ⍝ ⍵ ←→ Options
+     i←GetInputElement ⍺
+     i A.AutoComplete.Init ⍵
+ }
