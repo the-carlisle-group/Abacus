@@ -1,0 +1,21 @@
+ New←{
+     ⍺←0
+     (p n)←A.DefaultParentAndName ⍺
+     d←A.InitComp(p A.New'div')⎕NS(
+         'Label' ''
+         'Value' ''
+         'Options' ''
+         'OnChange' ''
+         'Disabled' 0
+     )A.Default ⍵
+     d.Name←n
+     d.Oninput←A.FQP'OnInput'
+     d.Onchange←A.FQP'OnChange'
+     l←d A.New'label'd.Label
+     l.for←A.GetId 0
+     i←d A.New'textarea'd.Value
+     i.rows←10
+     i.id←l.for
+     _←i A.AutoComplete.Init d.Options
+     d
+ }

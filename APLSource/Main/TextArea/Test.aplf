@@ -1,0 +1,9 @@
+ Test←{
+     _←##.Init 0
+
+     TextBox←New('Label' 'Comment')('Value' 'Hello world')('Options'('One' 'Two' 'Three'))
+
+     ⎕THIS.TTT←TextBox
+     d←A.NewDocument TextBox
+     A.StartDesktopApplication d
+ }

@@ -24,5 +24,6 @@
      l,←⊂'Flex'
      l,←⊂'TreeView'
      l,←⊂'Button'
+     l,←⊂'TextArea'
      l
  }

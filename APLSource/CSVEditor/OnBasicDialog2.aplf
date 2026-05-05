@@ -14,6 +14,7 @@
      NumericInput←s A.NumberInput.New'Numeric input:' 256 'CI15'
      DateInput←s A.DateInput.New'Date input:' 20261231
      DropListInput←s A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')
+     TextArea←s A.TextArea.New'A Text Area:'('Line 1',(⎕UCS 10),'Line 2')
      _←d.FileSettings A.InitValues s
      p←⎕NS''
      p.Title←'Basic Dialog Box 2'

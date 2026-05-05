@@ -1,0 +1,5 @@
+ OnInput←{
+     i←⍵.CurrentTarget
+     i.Value←⍵.Value
+     0
+ }

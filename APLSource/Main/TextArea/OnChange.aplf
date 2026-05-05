@@ -1,0 +1,5 @@
+ OnChange←{
+     c←⍵.CurrentTarget
+     c.Value←⍵.Value
+     FireChangeEvent c
+ }

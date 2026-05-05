@@ -1,0 +1,8 @@
+ FireChangeEvent←{
+     ⍺←⍵
+     e←⎕NS''
+     e.Event←'Change'
+     e.Component←⍺
+     e.Value←⍺.Value
+     A.FireAbacusEvent e
+ }
