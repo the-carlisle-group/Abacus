@@ -5,9 +5,9 @@
      0=≢t.Items:0
      t.Items←A.New¨{'div'⍵}¨t.Items  ⍝ Wrapper?, Needed?
      t.Items.class←⊂'Item'
-     f←⊃t.Items
-     f.class←'Item Active'
      t.Items.Onclick←⊂A.FQP'OnClick'
+     i←t.ActiveIndex⊃t.Items
+     i.class←'Item Active'
      r←BuildTree⍉↑t.Items t.Depth
      r←EnhanceTree r
      t.Content←r.Content

@@ -6,15 +6,12 @@ Represents a tree.
 
 ## Commentary
 
-The TreeView object
+The TreeView object is modelled on the `⎕WC` TreeView object. 
 
-The [Items]() property specifies
+The [Items]() property specifies an array of text vectors,
+or an array of arbitrary DOM content.  
 
-The [Depth]() property.... 
+The [Depth]() property specifies the corresponding depth of each item. 
 
-Alternatively the [Parent] (property) may be used....
-
-
-
-
-
+The TreeView supports debouncing the [Select]() event for keyboard
+navigation.

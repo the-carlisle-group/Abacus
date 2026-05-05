@@ -45,11 +45,11 @@ Note well the case sensitivity when specifying `Onclick`: the upper case `O` in 
 name `click` is all lower case. If we were to write:
 
 ~~~
-      b.onclick←'some string'
+      b.onclick←'SomeString'
 ~~~
 
 we would be specifying an HTML attribute, and be delegating everything to the browser, which would expect
-'some string` to be `JavaScript` to be executed.
+`'SomeString'` to be JavaScript to be executed.
 
 Futhermore components will often have events that begin with an upper case letter,
 like `Click`, in which case the callback is specified as:   
