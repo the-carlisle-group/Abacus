@@ -1,7 +1,9 @@
  Test←{
      _←##.Init 0
 
-     TextBox←New('Label' 'Comment')('Value' 'Hello world')('Options'('One' 'Two' 'Three'))
+     v←'Hello world line 1',(⎕UCS 10),'Hello world line 2'
+
+     TextBox←New('Label' 'Comment')('Value'v)('Options'('One' 'Two' 'Three'))
 
      ⎕THIS.TTT←TextBox
      d←A.NewDocument TextBox

@@ -1,0 +1,9 @@
+ SetValue←{
+     ⍝ ⍺ ←→ Element (Component)
+     ⍝ ⍵ ←→ Value
+     v←⍵
+     ⍺.Value←⍵
+     v[⍸v=⎕UCS 10]←⊂'\n'
+     t←1⊃⍺.Content
+     t A.SetProperty'value'(∊v)
+ }

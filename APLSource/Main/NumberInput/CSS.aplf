@@ -5,6 +5,9 @@
      s.display←'flex'
      s.flex_direction←'column'
      s.gap←'.5rem'
+     ⍝ **********************
+     r←s Rule'label'
+     r.padding_top←'.5rem'
      ⍝ ************************
      r←s Rule'input'
      r.text_align←'right'

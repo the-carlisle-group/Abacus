@@ -18,7 +18,7 @@
      ⍝ Grid
      r←s Rule'.fieldset-inline'
      r.display←'grid'
-     r.align_items←'center'
+     ⍝ r.align_items←'center'
      r.grid_auto_flow←'row'
      r.grid_template_columns←'auto 1fr'
      r.gap←'1rem'
