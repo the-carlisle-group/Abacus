@@ -1,0 +1,14 @@
+ PublicFunctions←{
+     (
+         'Add'
+         'Alert'
+         'AppendChild'
+         'Button'
+         'Confirm'
+         'New'
+         'NewApplication'
+         'NewLink'
+         'NewDocument'
+         'NewRule'
+     )
+ }
