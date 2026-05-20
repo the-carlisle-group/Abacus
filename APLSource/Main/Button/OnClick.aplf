@@ -2,8 +2,11 @@
      b←⍵.CurrentTarget
      f←b.OnClick
      0=≢f:0
+     _←b A.SetBoolean'disabled'b.AutoDisable
      e←()
      e.Event←'Click'
      e.Component←b
-     A.FireAbacusEvent e
+     _←A.FireAbacusEvent e
+     _←b A.SetBoolean'disabled' 0
+     SetFocus b
  }

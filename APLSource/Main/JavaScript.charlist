@@ -101,7 +101,6 @@ const pdKeys = ['F1','F2','F3','F4','F5','F6','F7','F8','F9','F10','F11','F12'];
    
    document.addEventListener('keydown', function(event) {
     
-
     if (pdKeys.includes(event.key)) {
         event.preventDefault(); 
     }
@@ -157,3 +156,4 @@ function sendAPLRequest(e){
       const m = JSON.stringify(b); 
       ws.send (m)
 }
+

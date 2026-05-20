@@ -1,0 +1,6 @@
+ OnLongButtonProcess←{
+     ⎕←'Running 5 second process'
+     _←⎕DL 5
+     ⎕←⍕⎕TS
+     0
+ }

@@ -12,6 +12,11 @@
      s.border←'var(--border)'
      s.font_size←'1rem'
      s.min_width←'6rem'
+
+     ⍝ Shouldn't need this, but we do!
+     r←s Rule'svg'
+     r.pointer_events←'none'
+
      ⍝ *****************************************
      r←s Rule'&:focus'
      r.border←'var(--border-focused)'
