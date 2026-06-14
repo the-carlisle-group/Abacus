@@ -1,4 +1,5 @@
  OnMouseDownMenuBar←{
+     OBSOLETE
      mb←⍵.CurrentTarget
      mi←⍵.Target
      i←mb.Content⍳mi

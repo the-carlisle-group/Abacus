@@ -2,8 +2,9 @@
      ⍝ ⍺ ←→ Parent
      ⍝ ⍵ ←→ Label, BuildMenu function
      ⍺←0
-     l←0⊃⍵
-     f←1 A.FQP 1⊃⍵
+     f←1 A.FQP ⍵
+     m←(⍎f)0
+     l←m.Label
      c←A.New'div'l
      c,←A.New'div'(⊂⊂(A.Icons 0).ChevronDown)
      b←⍺ A.New'button'c

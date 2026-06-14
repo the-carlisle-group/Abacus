@@ -4,21 +4,17 @@
          'Label' ''
          'Separator' 0
      )A.Default ⍵
-     m.Content←m.Label
      m.class←'menu'
      m.popover←'auto'
      m.Toggled←0
      m.tabindex←'-1'
-     m.OnkeyDown←A.FQP'OnKeyDownMenu'
      0=⍺:m  ⍝ Top Level menu
      b←'&gt;'
-     c←A.New¨{'span'⍵}¨''(m.Content)''(⊂⊂b)
+     c←A.New¨{'span'⍵}¨''(m.Label)''(⊂⊂b)
      i←⍺ A.New'li'(A.New'div'(c,m))
      i.Type←'Menu'
-     ⍝ i.tabindex←0
      i.Selected←i=⊃⍺.Content
      i.class←i.Selected/'sel-item'
      i.class,←m.Separator/' separator'
-     m.Content←''
      m
  }

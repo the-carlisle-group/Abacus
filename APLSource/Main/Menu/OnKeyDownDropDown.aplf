@@ -2,6 +2,6 @@
      k←⍵.Key
      b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
      p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
-     p≡'ArrowDown':OnClickDropDown ⍵
+     p≡'ArrowDown':ShowDropdownMenu ⍵
      0
  }

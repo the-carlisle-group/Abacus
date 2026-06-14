@@ -2,15 +2,7 @@
      Rule←A.NewRule
      ⍝ ************************
      s←Rule'.menu'
-
-     ⍝ s.position←'fixed'
-     ⍝ s.margin←0     ⍝ MDD says these needed, but apparently not
-     ⍝ s.inset←'auto'
-
-     ⍝ s.inset←'1rem 0 0 -1rem' ⍝ We can shift around
-
-
-     ⍝ s.position_area←'right' ⍝ Done dynamically
+     s.position_area←'right span-bottom'
      s.background_color←'var(--background-color)'
      s.color←'inherit'
      s.position_try←'flip-block, flip-inline, flip-block flip-inline'
@@ -18,7 +10,6 @@
      s.padding←'.5rem 0'
      s.list_style←'none'
      s.border←'1px solid var(--border-color)'
-
      s.border_radius←'.5em'
      ⍝ s.font_family←'Arial'
      ⍝ s.font_size←'1.25rem'
@@ -103,20 +94,11 @@
      s.min_width←'6rem'
      s.border_radius←'var(--border-radius)'⍝
      s.padding←'.5rem'
-
-
      z,←s
-
      s←Rule'.dropdown-menu:focus'
      s.border←'var(--border-focused)'
      s.box_shadow←'var(--border-box-shadow-focused)'
-
      z,←s
-
-
-
-
-
      ⍝
      z
  }

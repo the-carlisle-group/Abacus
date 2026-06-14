@@ -1,11 +1,9 @@
  RunItem←{
      ⍝ ⍵ ←→ <li>
      i←⍵
-     i.Type≡'Menu':ShowMenu i
+     i.Type≡'Menu':ShowSubMenu i
      m←i.Parent
      i.Disabled:0
      _←##.DeleteElement m
-     ⍝ _←m.Context.Target A.RemoveProperty'anchor-name'
-     ⍝ _←##.SetFocus m.Context.Target
      A.FireAbacusEvent(Event:'Click' ⋄ Component:i)
  }

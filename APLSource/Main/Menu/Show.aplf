@@ -1,6 +1,0 @@
- Show←{
-     ⍝ ⍺ ←→ Event Message
-     ⍝ ⍵ ←→ Menu Component
-     _←⍺ Init ⍵
-     ⍵ ShowMenu ⍺.Target
- }

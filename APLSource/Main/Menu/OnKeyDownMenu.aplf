@@ -1,4 +1,0 @@
- OnKeyDownMenu←{
-     ⎕←'OnKeyDownMenu!'
-     0
- }

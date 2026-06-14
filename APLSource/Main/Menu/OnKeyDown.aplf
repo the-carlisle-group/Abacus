@@ -1,5 +1,4 @@
  OnKeyDown←{
-     ⍝ ⎕←'On Key Down!'
      k←⍵.Key
      k⊂⍛∊'Control' 'Shift' 'Alt' 'Process':0
      k≡'Escape':0

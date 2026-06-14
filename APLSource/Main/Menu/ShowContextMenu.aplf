@@ -1,0 +1,5 @@
+ ShowContextMenu←{
+     ⍝ ⍺ ←→ Menu Component
+     ⍝ ⍵ ←→ Anchor Element
+     ⍺ ShowMenu ⍵'right span-bottom'
+ }

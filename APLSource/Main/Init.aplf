@@ -3,5 +3,5 @@
  s←⍎¨ComponentList''
  s.A←⎕THIS
  a←'API'#.Abacus.⎕NS''
- a∘{⍎⍺,'.',⍵,'←⍎⍵'}¨PublicFunctions''
+ a∘{⍎⍺,'.',⍵,'←⍎⍵'}¨PublicNames''
  z←0

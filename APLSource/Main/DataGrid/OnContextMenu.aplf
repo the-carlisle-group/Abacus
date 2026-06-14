@@ -46,5 +46,9 @@
      fm←m NewMenu⊂'Font'
      i←fm NewItem'Increase font size' 'Ctrl +' ''
      i←fm NewItem'Decrease font size' 'Ctrl +' ''
-     ⍵ ##.Menu.Show m
+     m.Submenu←0
+
+     t←⍵.Target
+     td←GetTableCell ⍵.Target
+     m A.Menu.ShowContextMenu td
  }

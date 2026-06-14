@@ -4,7 +4,6 @@
      ⍺←⊃⌽⊃⍵.Content.Content
      ⍺.Submenu←1
      ⍺.Toggled←0
-     _←⍺ A.SetStyle'positionArea' 'right span-bottom'
      _←⍺ A.ExecuteOnElement'showPopover({source:document.getElementById("',⍵.id,'")})'
      ⍺ A.ExecuteOnElement'focus()'
  }

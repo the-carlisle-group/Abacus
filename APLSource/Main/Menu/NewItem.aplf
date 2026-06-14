@@ -11,8 +11,8 @@
      c←A.New¨{'span'⍵}¨cm i.Label i.Shortcut''
      i.Content←A.New'div'c
      i.OnClick←1 A.FQP i.OnClick
+     i.Onmouseover←A.FQP'OnMouseOver'
      i.Type←'Item'
-     ⍝ i.tabindex←'0'
      i.Selected←i=⊃⍺.Content
      i.class←i.Selected/'sel-item'
      i.class,←i.Disabled/' inactive'

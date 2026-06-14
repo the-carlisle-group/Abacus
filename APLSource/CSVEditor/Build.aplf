@@ -18,6 +18,6 @@
      ⍝ l2.id←'FileDimensions'
      d.FileSettings←()
      d.BrowseFolder←''
-     d.OnKeyDown←A.FQP'OnKeyDown'
+     ⍝d.OnKeyDown←A.FQP'OnKeyDown'
      d
  }

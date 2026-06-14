@@ -3,13 +3,9 @@
      i←mb.ActiveIndex
      f←⍎mb.BuildFunction
      m←f 0
-     s←⊃⌽i⊃m.Content.Content.Content
      s←4⊃⊃i⊃m.Content.Content.Content
      s.MenuBar←mb
      s.Submenu←0
-     _←⍺ Init s
      a←i⊃mb.Content
-     _←s A.SetStyle'positionArea' 'bottom span-right'
-     _←s A.ExecuteOnElement'showPopover({source:document.getElementById("',a.id,'")})'
-     s A.ExecuteOnElement'focus()'
+     s ShowMenu a
  }
