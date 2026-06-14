@@ -4,7 +4,6 @@
      a p←2↑⍵,⊂'bottom span-right'
      ⍺.Onkeydown←A.FQP'OnKeyDown'
      ⍺.Onclick←A.FQP'OnClick'
-     ⍺.Ontoggle←A.FQP'OnToggle'
      b←A.GetBody a.Document
      _←b A.AppendChild ⍺
      _←⍺ A.SetStyle'positionArea'p
