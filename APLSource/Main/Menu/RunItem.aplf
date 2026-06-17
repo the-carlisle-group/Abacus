@@ -2,8 +2,12 @@
      ⍝ ⍵ ←→ <li>
      i←⍵
      i.Type≡'Menu':ShowSubMenu i
-     m←i.Parent
      i.Disabled:0
-     _←##.DeleteElement m
-     A.FireAbacusEvent(Event:'Click' ⋄ Component:i)
+     _←A.DeleteElement i.Parent
+     A.FireAbacusEvent(
+         Event:'Click'
+         Component:i
+         Menu:i.Menu
+         Anchor:i.Anchor
+     )
  }

@@ -1,4 +1,4 @@
  OnFindAndReplace←{
-     t←⍺.CurrentTarget
+     t←⍵.Menu.Table
      t.Document A.FindAndReplace.Show t.Parent
  }

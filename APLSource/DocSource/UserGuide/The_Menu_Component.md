@@ -84,7 +84,7 @@ And then added to the document:
 ## Context Menus
 
 A context menu is created and displayed in your own callback function,
-usually attached to the `onContextMenu` event.
+usually attached to the `oncontextmenu` event.
 A context menu is usually associated with another element
 called the anchor element, and the menu is displayed near the anchor.
 
@@ -101,5 +101,15 @@ the `ShowContextMenu` function:
      m M.ShowContextMenu a
 ~~~
 
-If a zero is supplied rather than an anchor element, then the 
-popup menu is displayed in the center of the screen.
+Note that unlike the case of a menubar, hamburger menu, or dropdown menu,
+the programmer is required to create the actual menu component, as opposed
+to supplying the name of a function that will in turn create the menu component.
+
+It is often the case that it will be useful to add some user-defined
+data to the menu for later use when a menu item is selected for 
+execution. For example, you may want to provide
+a reference to some parent element of the anchor, or even the entire
+event message from the `oncontexmenu` event. A reference to the root menu
+is provided in the [Click](/objectreference/menuitem/events/click) event.
+
+

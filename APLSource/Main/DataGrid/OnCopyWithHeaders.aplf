@@ -1,5 +1,5 @@
  OnCopyWithHeaders←{
-     t←⍺.CurrentTarget
+     t←⍵.Menu.Table
      s←t.Selection
      r c←(0⊃s)+⍳¨1+⊃-/⌽s
      v←0 t.RowNumbers↓t GetFormattedValues r c

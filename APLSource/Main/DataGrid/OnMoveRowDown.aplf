@@ -1,0 +1,3 @@
+ OnMoveRowDown←{
+     MoveRowDown ⍵.Menu.Table
+ }

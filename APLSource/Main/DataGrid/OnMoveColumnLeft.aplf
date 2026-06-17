@@ -1,0 +1,3 @@
+ OnMoveColumnLeft←{
+     ¯1 MoveColumn ⍵.Menu.Table
+ }

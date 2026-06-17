@@ -1,0 +1,3 @@
+ OnDeleteRow←{
+     DeleteRow ⍵.Menu.Table
+ }

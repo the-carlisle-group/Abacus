@@ -1,0 +1,3 @@
+ OnInsertRow←{
+     InsertRow ⍵.Menu.Table
+ }

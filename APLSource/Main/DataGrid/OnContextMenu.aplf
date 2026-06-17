@@ -48,7 +48,10 @@
      i←fm NewItem'Decrease font size' 'Ctrl +' ''
      m.Submenu←0
 
-     t←⍵.Target
-     td←GetTableCell ⍵.Target
+     t←⍵.CurrentTarget
+     m.Table←t        ⍝ Stick anything we want in here
+                      ⍝ Could be entire event message ⍵
+                      ⍝ Menu
+     td←GetTableCell t
      m A.Menu.ShowContextMenu td
  }

@@ -1,3 +1,3 @@
  OnCopy←{
-     ⍺.CurrentTarget Copy 0
+     ⍵.Menu.Table Copy 0
  }

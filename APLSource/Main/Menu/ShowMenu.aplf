@@ -4,6 +4,9 @@
      a p←2↑⍵,⊂'bottom span-right'
      ⍺.Onkeydown←A.FQP'OnKeyDown'
      ⍺.Onclick←A.FQP'OnClick'
+     e←⍺ A.GetElementsByTag'li'
+     e.Anchor←a
+     e.Menu←⍺
      b←A.GetBody a.Document
      _←b A.AppendChild ⍺
      _←⍺ A.SetStyle'positionArea'p
