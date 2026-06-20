@@ -46,7 +46,7 @@
      fm←m NewMenu⊂'Font'
      i←fm NewItem'Increase font size' 'Ctrl +' ''
      i←fm NewItem'Decrease font size' 'Ctrl +' ''
-     m.Submenu←0
+
 
      t←⍵.CurrentTarget
      m.Table←t        ⍝ Stick anything we want in here

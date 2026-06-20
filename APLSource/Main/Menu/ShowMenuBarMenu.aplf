@@ -2,10 +2,9 @@
      mb←⍵
      i←mb.ActiveIndex
      f←⍎mb.BuildFunction
-     m←f 0
+     m←f ⍵.Document
      s←4⊃⊃i⊃m.Content.Content.Content
      s.MenuBar←mb
-     s.Submenu←0
      a←i⊃mb.Content
      s ShowMenu a
  }

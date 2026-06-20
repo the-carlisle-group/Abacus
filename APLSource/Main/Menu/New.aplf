@@ -9,6 +9,7 @@
      m.Toggled←0
      m.tabindex←'-1'
      m.Ontoggle←A.FQP'OnToggle'
+     m.Submenu←0
      0=⍺:m  ⍝ Top Level menu
      b←'&gt;'
      c←A.New¨{'span'⍵}¨''(m.Label)''(⊂⊂b)

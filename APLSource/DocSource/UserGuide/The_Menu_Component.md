@@ -14,12 +14,12 @@ at a simple example:
         M←A.Menu
         m←M.New''
         File←m M.New 'File'  
-        _←File M.NewItem 'Open'
-        _←File M.NewItem 'Save'
+        _←File M.NewItem 'Open' 'OnOpen'
+        _←File M.NewItem 'Save' 'OnSave'
         Edit←m M.New 'Edit'  
-        _←Edit M.NewItem 'Cut'
-        _←Edit M.NewItem 'Copy'
-        _←Edit M.NewItem 'Paste'
+        _←Edit M.NewItem 'Cut' 'OnCut' 
+        _←Edit M.NewItem 'Copy' 'OnCopy'
+        _←Edit M.NewItem 'Paste' 'OnPaste'
         m
    }
 ~~~
@@ -112,4 +112,18 @@ a reference to some parent element of the anchor, or even the entire
 event message from the `oncontexmenu` event. A reference to the root menu
 is provided in the [Click](/objectreference/menuitem/events/click) event.
 
+## Checked and Disabled Menu Items
 
+Menus are created on demand and discarded when visually dismissed.
+This means all menu state must be specied in the build function for the 
+menu, when NewItem is called. When Abacus calls the build function
+it provides a reference to the document as the right argument. From there
+any document state may be accessed to specify if a menu item should be
+checked or disabled. For example, if an application is in, say, 
+a read-only mode, and this is tracked in the root of the document
+with a variable, then we might do:    
+
+~~~
+     b←⍵.ReadOnly
+     i←NewItem  'Paste' 'OnPaste' ('Disabled' b) 
+~~~

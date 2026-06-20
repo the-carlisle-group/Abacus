@@ -1,7 +1,6 @@
  ShowDropdownMenu←{
      b←⍵.CurrentTarget
      f←⍎b.BuildFunction
-     m←⍵.Document f 0
-     m.Submenu←0
+     m←f ⍵.Document
      m ShowMenu b
  }
