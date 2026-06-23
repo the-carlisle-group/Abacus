@@ -1,6 +1,6 @@
 # DataGrid SetMask Method
 
-Sets the [RowsMask]() and [ColumnMask]() property.
+Sets the [RowMask]() and [ColumnMask]() property.
 
 ~~~
    R←I SetMask R C
@@ -9,10 +9,7 @@ Sets the [RowsMask]() and [ColumnMask]() property.
 `I` is a DataGrid instance. `R` is a Boolean vector the same length
 as the number of rows in `I`, marking rows to be dislayed.  
 
-`C` is either a Boolean vector, or a list of column names.
-If a Boolean, it must be the same length as the number of columns
-in `I`, marking columns to be dislayed. If a list of column names,
-it indicates the columns to be displayed and their order.
+`C` is a list of column names indicating the columns to be displayed and their order.
 
 `R` is `0`
 

@@ -3,7 +3,7 @@
      ⍝ ⍵ ←→ RowMask ColumnMask
      t←⍺.Table
      _←⍺ InitRowMask 0⊃⍵
-     _←⍺ InitDisplayColumns(1⊃⍵)/t.Columns.Name
+     _←⍺ InitColumnMask 1⊃⍵
      t.DataSize←≢¨t.RowIndices t.ColumnIndices
      t.ActiveCell[0]←0
      t.WindowIndex[0]←0

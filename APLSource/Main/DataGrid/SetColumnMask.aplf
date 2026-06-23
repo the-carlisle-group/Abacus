@@ -1,7 +1,7 @@
- SetDisplayColumns←{
+ SetColumnMask←{
      ⍝ ⍺ ←→ DataGrid
      ⍝ ⍵ ←→ List of column names
-     _←⍺ InitDisplayColumns ⍵
+     _←⍺ InitColumnMask ⍵
      t←⍺.Table
      t.DataSize←≢¨t.RowIndices t.ColumnIndices
      t.ActiveCell[1]←0

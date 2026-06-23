@@ -46,12 +46,8 @@
      fm←m NewMenu⊂'Font'
      i←fm NewItem'Increase font size' 'Ctrl +' ''
      i←fm NewItem'Decrease font size' 'Ctrl +' ''
-
-
      t←⍵.CurrentTarget
-     m.Table←t        ⍝ Stick anything we want in here
-                      ⍝ Could be entire event message ⍵
-                      ⍝ Menu
+     m.Table←t
      td←GetTableCell t
      m A.Menu.ShowContextMenu td
  }

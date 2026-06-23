@@ -1,10 +1,6 @@
  SetComponentValue←{
-     ⍝ ⍺ ←→ Component or  Document  Name
+     ⍝ ⍺ ←→ Component | Document Name
      ⍝ ⍵ ←→ Value
-
-     ⍝ 1=≢⍺:⍺ ⍺.Class.SetValue ⍵
-     ⍝ d n←⍺
-
      c←GetComponent/⍺
      c c.Class.SetValue ⍵
  }

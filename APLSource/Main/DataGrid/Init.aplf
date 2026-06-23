@@ -9,7 +9,7 @@
      r←(Align:'r' ⋄ Class:'r' ⋄ SortDirection:0)    ⍝ For row numbers
      t.RowNumberColumn←r
      a←r,c   ⍝ All columns, inlcuding row numbers
-     _←g InitDisplayColumns t.DisplayColumns
+     _←g InitColumnMask t.ColumnMask
      _←g InitRowMask t.RowMask
      c.HeaderValues←↓↑,¨⊆¨c.HeaderValues  ⍝ V of V, same length
      t.HeaderRowCount←≢⊃c.HeaderValues

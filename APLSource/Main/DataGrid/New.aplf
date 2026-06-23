@@ -22,7 +22,7 @@
          'CanFilterColumns' 1
          'CanSortColumns' 1
          'RowMask' 1
-         'DisplayColumns' ''
+         'ColumnMask' ''
          ⍝ Always applicable:
          'FreezeColumns' 0      ⍝ Non negative integer
          'HeaderRowTitles' ''

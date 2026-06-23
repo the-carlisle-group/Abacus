@@ -68,7 +68,7 @@ All of these changes affect the [Columns]() property of the DataGrid,
 and of course the `Value` property of the DataGridColumn objects that
 compose it.
 
-When ReadOnly is `1`, none of the above features are supported.
+When `ReadOnly` is `1`, none of the above features are supported.
 The user may not edit, cut, paste or delete, may not move, add or delete
 rows or columns, etc.
 However, the user may sort the grid, based on any column or set of columns,
@@ -78,10 +78,19 @@ to suit their needs at the moment.
 
 None of these changes to the visible values affect the Columns property.
 
-The [SetRowMask]() method allows you to specify the 
-the rows to be viewed under program control. 
-The [SetDisplayColumns]() method allows you to specify the order and
-visibilty of the the columns.
+## Changing the View
+
+The Abacus `DataGrid` is highly efficient at displaying large
+data sets, as only the rows and columns on the screen are rendered in HTML.
+In addition, when `ReadOnly` is `1`, the row and columns displayed may be restricted
+without altering the or regenerating the `Columns` property. 
+
+The [RowMask]() and [ColumnMask]() properties specify the rows and columns
+to be displayed. To set these properties after the the grid is in a connected state,
+use the [SetRowMask](), [SetColumnMask]() or [SetMask]() methods. 
+
+In addition to the programmer setting the row and column mask,
+the user may futher filter and sort rows and columns interactivly. 
 
 ## Column Types
 
