@@ -3,7 +3,9 @@
      ⍝ ⍵ ←→ Component Name (or already a component (pass through)
      9=⎕NC'⍵':⍵
      e←⍺ GetElementsWith'Name'
-     i←e.Name⍳⊂⍵
-     i=≢e:6 ⎕SIGNAL⍨'Component "',⍵,'" not found'
-     i⊃e
+     0=≢e:6 ⎕SIGNAL⍨'Component "',⍵,'" not found'
+     i←⍸e.Name∊⊂⍵
+     0=≢i:6 ⎕SIGNAL⍨'Component "',⍵,'" not found'
+     1≠≢i:6 ⎕SIGNAL⍨'Duplicate components with name "',⍵,'"'
+     (⊃i)⊃e
  }

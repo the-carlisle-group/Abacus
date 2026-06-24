@@ -37,7 +37,7 @@ Component property names always start with an uppercase letter.
 Only names that start with an uppercase letter are checked for validity.
 Thus names that begin with a lowercase letter (HTML attributes) or an underscore
 (a css style) may be provided to the `New` function and will not throw an error.
-You can also prefix custom properties with a `∆`:
+You can also create custom properties by prefixing their name with a `∆`:
 
 ~~~
       CheckBox.New(Label:'Check here' ⋄ Value:1 ⋄ ∆Val:1)
@@ -67,7 +67,7 @@ Inline styles can be added to components, just like basic HTML elements:
 
 ## Names and Ids
 
-The component `Name` should be a valid APL indentifier, and is accessible under the `Name`
+The component's `Name` should be a valid APL identifier, and is accessible under the `Name`
 property:
 
 ~~~
@@ -75,7 +75,7 @@ property:
 MyCheckBox 
 ~~~
 
-The component `Name` is strictly a part of the APLDOM, and plays no part
+The component's `Name` is strictly a part of the APLDOM, and plays no part
 in the browswer DOM. It is not the same as the HTML `name` attribute (note the lower case), 
 used when submitting forms, which generally does not play a role in Abacus.  
  
@@ -117,8 +117,8 @@ finds a specific component by name:
 The left argument may be the entire document, or some child node.
 As component names do not need to be unique, it is up to the programmer
 to know where to look for components in case duplicate names exist.
-If duplicate names exist under the node being searched, `GetComponent`
-will return the first one found.
+The `GetComponent` function will throw an error if the
+name is not found, or if there are duplicate component names under the node.
 
 The [GetComponents]() method returns the names and references to all
 of the components below a specified node as a vector of name/value pairs:
