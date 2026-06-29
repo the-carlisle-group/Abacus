@@ -1,0 +1,7 @@
+ NoColumns←{
+     ⍝ No columns to display, clear the screen
+     g←⍵
+     t←g.Table
+     _←t A.SetProperty'innerHTML' '<div class="nocols">No columns to display</div>'
+     0
+ }

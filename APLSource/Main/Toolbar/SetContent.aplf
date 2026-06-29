@@ -1,0 +1,6 @@
+ SetContent←{
+     ⍝ ⍺ ←→ Toolbar instance
+     ⍝ ⍵ ←→ Content
+     _←⍺ InitContent ⍵
+     ⍺ A.SetInnerHTML ⍵
+ }

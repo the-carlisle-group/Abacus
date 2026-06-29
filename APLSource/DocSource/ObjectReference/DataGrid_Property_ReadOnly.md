@@ -8,4 +8,5 @@ If ReadOnly is `0`, then the following properties are applicable:
 [MoveRows](), [MoveColumns](), [RenameColumns](), [RowMinimum]().
 
 If ReadOnly is `1`, then the following properies are applicable:
-[FilterRows](), [FilterColumns](), [SortRows](), [RowMask](), [ColumnMask](), [Mask]()
+[FilterRows](), [FilterColumns](), [SortRows](), [RowMask](), [ColumnMask](),
+[Mask](), [Highlight]().

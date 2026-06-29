@@ -1,8 +1,11 @@
  Highlight←{
-     t←⍺
+     t a←⍺
      i q c←⍵
-     0≡t.Highlight:c
-     h←t.Highlight[i;q]
+     h←⍉↑a[q].Highlight
+     1=⍴⍴h:c
+     h←h[i;]
+     ⍝ 0≡t.Highlight:c
+     ⍝ h←t.Highlight[i;q]
      ~0∊0=h:c
      v←(⊂''),' highlight'∘,¨⍕¨1+⍳⌈/,h
      c,¨v[h]

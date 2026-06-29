@@ -13,6 +13,7 @@
      d.CanDelete←1
      d.CanRename←1
      d.Width←0
+     d.Highlight←0
      d.Options←⊂''
      _←d ⎕NS¨c
      d.Value←⍵.RowMinimum DefaultColumnValue¨d

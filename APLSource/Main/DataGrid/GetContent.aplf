@@ -24,7 +24,7 @@
      h.Cells.id←(t.HeaderRowCount nc)↑t.HeaderCells.id
      o.Body.Values←v
      o.Body.Cells.id←(nr nc)↑t.BodyCells.id
-     bc←t Highlight i q(nr nc⍴a.ColumnClass[q])
+     bc←t a Highlight i q(nr nc⍴a.ColumnClass[q])
      bc←t Selection bc
      _←{
          0=⊃t.DataSize:0

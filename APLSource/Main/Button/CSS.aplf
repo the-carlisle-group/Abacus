@@ -22,21 +22,23 @@
      r.border←'var(--border-focused)'
      r.box_shadow←'var(--border-box-shadow-focused)'
 
-     ⍝ *****************************************
-     s2←Rule'.ToolButton'
-     s2←Rule'.Button'
-     s2.display←'flex'
-     s2.justify_content←'center'
-     s2.gap←'.5rem'
-     s2.padding←'.5rem'
-     s2.color←'inherit'
+     ⍝ Icon button
+     s2←Rule'.IconButton'
      s2.background_color←'inherit'
-     s2.font_size←'1rem'
-     ⍝ *****************************************
-     r←s2 Rule'&:focus'
-     r.border←'2px solid red'
-     ⍝ r.border←'var(--border-focused)'
-     r.box_shadow←'var(--border-box-shadow-focused)'
+     s2.border←'none'
 
-     s
+     r←s2 Rule'&:focus'
+     r←r Rule'svg'
+     r.color←'#60A5FA'
+
+
+     r←s2 Rule'svg'
+     r.height←'48px'
+     r.width←'auto'
+     r.pointer_events←'none'
+
+
+     ⍝
+
+     s,s2
  }

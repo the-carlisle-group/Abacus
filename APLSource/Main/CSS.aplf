@@ -52,5 +52,15 @@
      r←s Rule'#MouseAnchor'
      r.anchor_name←'--mouse-anchor'
      r.position←'absolute'
+
+
+     ⍝
+     r←s Rule'button'
+     r.color←'inherit'
+     r.background_color←'inherit'
+
+
+
+
      s
  }

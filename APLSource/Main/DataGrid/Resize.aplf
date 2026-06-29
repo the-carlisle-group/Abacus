@@ -1,7 +1,9 @@
  Resize←{
+
      g←⍺
      t←g.Table
      0=≢t.Columns:0
+     0=1⊃t.DataSize:NoColumns g
      t.ActiveCell⌊←0⌈t.DataSize-1
      c←t.Columns[t.ColumnIndices]
      a←c,⍨t.RowNumbers/t.RowNumberColumn

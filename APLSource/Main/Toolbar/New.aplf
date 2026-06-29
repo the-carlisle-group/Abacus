@@ -3,11 +3,7 @@
      d←A.InitComp(⍺ A.New'div')⎕NS(
          'Content' ''
      )A.Default ⍵
-     e←A.GetElements d
-     d.FocusContent←e/⍨e.Tag∊'button' 'select' 'input'
-     d.FocusContent.tabindex←⊂'-1'
-     f←⊃d.FocusContent
-     f.class,←' Active'
+     _←d InitContent d.Content
      d.ActiveIndex←0
      d.tabindex←'0'
      d.Onclick←A.FQP'OnClick'

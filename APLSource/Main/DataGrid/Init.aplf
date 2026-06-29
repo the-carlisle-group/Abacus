@@ -6,7 +6,7 @@
      0=≢t.Columns:1
      t.Columns←DefaultColumnProperties t
      c←t.Columns
-     r←(Align:'r' ⋄ Class:'r' ⋄ SortDirection:0)    ⍝ For row numbers
+     r←(Align:'r' ⋄ Class:'r' ⋄ SortDirection:0 ⋄ Highlight:0)    ⍝ For row numbers
      t.RowNumberColumn←r
      a←r,c   ⍝ All columns, inlcuding row numbers
      _←g InitColumnMask t.ColumnMask
@@ -29,7 +29,7 @@
      a.HeaderStyle←ComputeHeaderStyles a
      a.HeaderClass←ComputeHeaderClass a
      a.ColumnClass←(a.Class),¨' ',¨'a',¨a.Align
-     t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight ⍝ Move into a (column spaces)
+     ⍝ t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight ⍝ Move into a (column spaces)
      t.WindowPadding←3 5
      t.Init←1
      0

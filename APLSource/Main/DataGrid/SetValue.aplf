@@ -1,7 +1,7 @@
  SetValue←{
      ⍺.Table.Columns←⍵
      ⍺.Table.RowMask←1
-     ⍺.Table.ColumnMask←''
+     ⍺.Table.ColumnMask←1
      _←Init ⍺
      0 0≡⍺.(Width Height):0
      ⍺ Resize 0

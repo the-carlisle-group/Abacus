@@ -1,11 +1,11 @@
  InitColumnMask←{
      ⍝ ⍺ ←→ DataGrid
-     ⍝ ⍵ ←→ List of column names
+     ⍝ ⍵ ←→ Boolean vec or 1 for all columns 0 for none
+     ⍝      Or an ordered list of column names, '' for none.
      t←⍺.Table
-     l←⊆⍵
      n←t.Columns.Name
-     t.ColumnMask←l
-     i←(n⍳l)~≢n
-     t.ColumnIndices←(0=≢i)⊃i(⍳≢n)
+     t.ColumnMask←⍵
+     i←{(⎕DR ⍵)∊11 83:⍸(≢n)⍴⍵ ⋄ (n⍳⍵)~≢n}⍵
+     t.ColumnIndices←i
      0
  }

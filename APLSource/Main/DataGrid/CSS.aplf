@@ -191,6 +191,15 @@
      ⍝ r.inset←'0'
      ⍝ r.margin←'auto'
 
+     ⍝
+     r←s Rule'.nocols'
+     r.color←'yellow'
+     r.font_size←'2rem'
+     r.position←'absolute'
+     r.top←'50%'
+     r.left←'50%'
+     r.transform←'translate(-50%, -50%)'
+
      s
      ⍝ ##.UnNestCSS s
  }

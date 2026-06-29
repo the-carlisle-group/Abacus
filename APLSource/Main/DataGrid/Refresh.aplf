@@ -4,8 +4,16 @@
      t←⍵
      o←t GetContent''
      h←##.RenderOptiTable o
+
+
+     h←h,(t.ReadOnly∧0=⊃t.DataSize)/'<div class="nocols">No rows to display</div>'
+
+
      _←t ##.SetProperty'innerHTML'(##.Sanitize h)
      _←RefreshScrollBars t
+
+
+
      ⍝ Need to move this somewhere↓↓↓↓
      ⍝ Maybe GoToHeaderRow?
      ⍝ t.TableCell≡¯1 ¯1:t A.FireEvent'focus'
