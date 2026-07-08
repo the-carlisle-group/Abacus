@@ -1,5 +1,6 @@
  OnFocus←{
      ⎕←'Onfocus!'
      t←⍵.CurrentTarget
+     0=≢t.Content:0
      A.SetComponentFocus t.ActiveIndex⊃t.Content
  }

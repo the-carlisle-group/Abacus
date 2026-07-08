@@ -5,7 +5,7 @@
      _←⍺ InitRowMask 0⊃⍵
      _←⍺ InitColumnMask 1⊃⍵
      t.DataSize←≢¨t.RowIndices t.ColumnIndices
-     t.ActiveCell[0]←0
-     t.WindowIndex[0]←0
+     ⍝ t.ActiveCell[0]←0
+     ⍝ t.WindowIndex[0]←0
      ⍺ Resize 0
  }

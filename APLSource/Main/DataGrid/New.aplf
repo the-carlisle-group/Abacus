@@ -22,7 +22,7 @@
          'CanFilterColumns' 1
          'CanSortColumns' 1
          'RowMask' 1
-         'ColumnMask' ''
+         'ColumnMask' 1
          ⍝ Always applicable:
          'FreezeColumns' 0      ⍝ Non negative integer
          'HeaderRowTitles' ''
@@ -32,6 +32,10 @@
          'Autofocus' 0
          ⍝ Events
          'OnCellMove' ''
+         'OnCellChange' ''
+         'OnBeforeCellChange' ''
+         'OnHeaderCellChange' ''
+         'OnBeforeHeaderCellChange' ''
      )A.Default ⍵
      g←A.InitComp ⍺ A.New'div'
      g.(Width Height)←0

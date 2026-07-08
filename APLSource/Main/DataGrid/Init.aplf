@@ -23,13 +23,12 @@
      c.MaxLength←1⊃¨2↑¨⍴¨c.Value
      a.Width←t ComputeWidths t.Columns.Width
      t.FixedColumns←t.RowNumbers+t.FreezeColumns
-     t.WindowIndex←0,t.FreezeColumns
-     t.ActiveCell←0 0-0=t.DataSize
+     t.WindowIndex⌈←0,t.FreezeColumns
+     t.ActiveCell⌊←t.DataSize-1   ⍝  'ActiveCell'(0 0-0=t.DataSize)
      t.Selection←2⍴⊂t.ActiveCell
      a.HeaderStyle←ComputeHeaderStyles a
      a.HeaderClass←ComputeHeaderClass a
      a.ColumnClass←(a.Class),¨' ',¨'a',¨a.Align
-     ⍝ t.Highlight←{0≡⍵:⍵ ⋄ ⍵↑⍨-0 t.RowNumbers+⍴⍵}t.Highlight ⍝ Move into a (column spaces)
      t.WindowPadding←3 5
      t.Init←1
      0
