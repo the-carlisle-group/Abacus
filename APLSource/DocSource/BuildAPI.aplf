@@ -1,0 +1,22 @@
+ BuildAPI←{
+     n←ObjectReference.⎕NL ¯2
+     t←↑'_'(≠⊆⊢)¨n
+     _←'API'##.⎕NS''
+     _←{
+         o←⍵
+         s←⍎⍵ ##.API.⎕NS''
+         s.A←#.Abacus.Main
+         e←s.A.⎕NC o
+         m←t[;2]⌿⍨(↓t[;0 1])∊⊂⍵'Method'
+         c←⊂'     ⍝ ⍺ ←→ ',⍵,' instance'
+         c,←⊂'     ⍝ ⍵ ←→ method argument'
+         _←s.⎕FX¨{
+             d←'     ⍝ Documentation: #.Abacus.DocSource.ObjectReference.',o,'_Method_',⍵
+             (⊂⍵,'←{'),c,d('⍺ A.',(e/o,'.'),⍵,' ⍵')'}'}¨m
+         b←(↓t[;0 1])∊⊂⍵'Property'
+         v←ObjectReference ⎕VGET b/n
+         _←s ⎕VSET(b/t[;2]){⍺ ⍵}¨v
+         0
+     }¨∪t[;0]
+     0
+ }

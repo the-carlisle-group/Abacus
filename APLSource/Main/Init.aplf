@@ -1,7 +1,6 @@
- z←Init x;s;a
+ z←Init x;s;a;_
  ⍝ s←1⊃⎕VGET 9 ⍝ Must work in 18.2 for now
  s←⍎¨ComponentList''
  s.A←⎕THIS
- a←'API'#.Abacus.⎕NS''
- a∘{⍎⍺,'.',⍵,'←⍎⍵'}¨PublicNames''
+ #.Abacus.DocSource.BuildAPI 0
  z←0
