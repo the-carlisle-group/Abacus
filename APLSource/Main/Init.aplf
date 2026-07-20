@@ -2,5 +2,5 @@
  ⍝ s←1⊃⎕VGET 9 ⍝ Must work in 18.2 for now
  s←⍎¨ComponentList''
  s.A←⎕THIS
- #.Abacus.DocSource.BuildAPI 0
+ _←#.Abacus.DocSource.BuildAPI 0
  z←0
