@@ -6,7 +6,7 @@
          o←⍵
          s←⍎⍵ ##.API.⎕NS''
          s.A←#.Abacus.Main
-         e←s.A.⎕NC o
+         e←9=s.A.⎕NC o
          m←t[;2]⌿⍨(↓t[;0 1])∊⊂⍵'Method'
          c←⊂'     ⍝ ⍺ ←→ ',⍵,' instance'
          c,←⊂'     ⍝ ⍵ ←→ method argument'
