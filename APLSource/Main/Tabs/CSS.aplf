@@ -4,27 +4,43 @@
      s←Rule'.tabs'
      ⍝ *****************
      r←s Rule'nav'
-     r.padding←'3px'
      r.display←'flex'
      r.gap←'.25rem'
+     r.padding←'.35rem .5rem 0 .5rem' ⍝ top+side room; no bottom so tabs meet the content's top edge
+     r.border_bottom←'1px solid var(--border-color)' ⍝ the tab strip owns its baseline (stable, independent of the panel's own border)
      ⍝ *********************
+     ⍝ Every tab: a boxed "folder" with rounded top corners (not an all-round button)
      r←s Rule'>nav>button'
-     ⍝ r.display←'flex'
-     r.gap←'.5rem'
-     r.border←'none'
-     r.border_radius←'5px'
-     r.background_color←'DimGray' ⍝ 'DarkSlateGray'
-     r.min_width←'15rem'
-     ⍝ r.text_align←'left'
+     r.font←'inherit'               ⍝ constant size, matches page text (no small inactive tab)
+     r.padding←'.4rem 1rem'
+     r.border←'1px solid var(--border-color)'
+     r.border_bottom←'none'
+     r.border_top_left_radius←'7px'
+     r.border_top_right_radius←'7px'
+     r.margin_bottom←'-1px'         ⍝ overlap the content's top border
+     r.background_color←'color-mix(in srgb, currentColor 10%, transparent)' ⍝ subtle raised chip, theme-adaptive
+     r.color←'inherit'              ⍝ take the theme's text colour (dark & light)
+     r.opacity←'.8'                 ⍝ muted while inactive
+     r.cursor←'pointer'
+     ⍝ ******************
+     r←s Rule'>nav>button:hover'
+     r.opacity←'1'
+     r.background_color←'color-mix(in srgb, currentColor 18%, transparent)'
      ⍝ ******************
      r←s Rule'>section'
      r.flex←1
-     ⍝ Active button
+     ⍝ A DataGrid used as a tab panel must not draw its own top edge: the tab strip's
+     ⍝ baseline is that line, and the active tab connects into the grid across it.
+     r←s Rule'section .DataGrid thead th'
+     r.border_top_color←'transparent'
+     ⍝ Active tab: connects into the content (never a bigger font)
      r←s Rule'.active-tab'
-     r.font_size←'larger'
-     r.border←'1px solid gray'
-     r.color←'white' ⍝  'var(--selected-text-color)'
-     r.background_color←'steelblue' ⍝ 'var(--selected-background-color)'
+     r.opacity←'1'
+     r.color←'var(--text-color)' ⍝  'var(--selected-text-color)'
+     r.background_color←'var(--background-color)'    ⍝ merge with the panel below
+     r.position←'relative'          ⍝ lift above the panel, which is painted later in the DOM…
+     r.z_index←'1'                  ⍝ …so the cover below actually lands on top of the grid's line
+     r.border_bottom←'1px solid var(--background-color)' ⍝ cut the line under the active tab
      ⍝ **************
      A.UnNestCSS s
  }

@@ -39,6 +39,7 @@
      r.overflow←'hidden'
      r.width←'fit-content'
      r.height←'fit-content'
+     r.align_self←'start' ⍝ pin to top; default 'stretch' + overflow:hidden clips the collapsed top border once the table overflows (populated grid)
      ⍝ **********************
      r←s Rule'tbody'
      r.cursor←'cell'
