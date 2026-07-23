@@ -1,6 +1,7 @@
  SetItemsAndDepth←{
      t←⍺
      t.(Items Depth)←⍵
+     t.ActiveIndex⌊←¯1+≢t.Items
      _←Init t
      e←A.Elements t
      t A.SetInnerHTML t.Content

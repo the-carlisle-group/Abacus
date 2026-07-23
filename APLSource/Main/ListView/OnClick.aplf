@@ -1,0 +1,8 @@
+ OnClick←{
+     ⎕←'OnClick!'
+     e←⍵.Target
+     li←e A.GetNearest'li'
+     lv←li.Parent
+     _←lv MoveTo lv.Content⍳li
+     FireSelect lv
+ }

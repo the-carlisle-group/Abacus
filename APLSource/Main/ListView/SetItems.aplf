@@ -1,0 +1,7 @@
+ SetItems←{
+     l←⍺
+     l.Items←⍵
+     l.ActiveIndex←0⌈l.ActiveIndex⌊¯1+≢⍵
+     _←Init l
+     l A.SetInnerHTML l.Content
+ }

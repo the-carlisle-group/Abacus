@@ -5,6 +5,7 @@
      0=≢li:⍵
      li.Index←⍳≢li
      n←(~li.Leaf)/li
+     0=≢n:⍵
      n←EnhanceParentNode¨n
      ⍵
  }

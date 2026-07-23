@@ -3,7 +3,8 @@
      ⍝ ⍵ ←→ DOM or HTML
      d h←⍺.Document DOMandHTML ⍵
      _←⍺ SetProperty'innerHTML'(Sanitize h)
-     _←⍺.Document SetResizeObserver ⍺
      ⍺.Content←d
-     0⊣SetParent ⍺
+     _←SetParent ⍺
+     _←⍺.Document SetResizeObserver ⍺
+     0
  }

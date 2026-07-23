@@ -1,0 +1,6 @@
+ SetActiveItem←{
+     ⍝ ⍺ ←→ ListView
+     ⍝ ⍵ ←→ ItemNumber
+     _←⍺ MoveTo ⍵
+     FireSelect ⍺
+ }

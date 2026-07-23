@@ -1,0 +1,12 @@
+ Init←{
+     l←⍵
+     l.Content←''
+     0=≢l.Items:0
+     c←A.New¨{'li'⍵}¨l.Items
+     c.class←⊂''
+     c.Onclick←⊂A.FQP'OnClick'
+     i←l.ActiveIndex⊃c
+     i.class←'Active'
+     l.Content←c
+     0
+ }

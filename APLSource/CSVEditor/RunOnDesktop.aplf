@@ -1,10 +1,8 @@
  RunOnDesktop←{
      ⍝ ← ←→  Document
      ⎕THIS.A←##.Main
+     ⎕THIS.API←##.API
      _←A.Init 0
      a←CreateApplication 0
      a A.StartDesktopApplication 0
-
-
-
  }

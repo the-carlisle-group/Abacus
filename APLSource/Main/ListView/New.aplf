@@ -1,0 +1,16 @@
+ New←{
+     ⍺←0
+     t←A.InitComp(⍺ A.New'ul')⎕NS(
+         'Items' ''
+         'ActiveIndex' 0
+         'OnSelect'('' 0)
+     )A.Default ⍵
+     t.OnSelect←(
+         'CallbackFunction' ''
+         'DebounceDelay' 0
+     )A.Default t.OnSelect
+     t.tabindex←0
+     t.Onkeydown←A.FQP'OnKeyDown'
+     _←Init t
+     t
+ }

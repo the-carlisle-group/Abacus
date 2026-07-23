@@ -1,5 +1,6 @@
  OnResize←{
      ⍝ ⍵ ←→ Event message space
+     ⎕←'OnGridResize!'
      g←⍵.CurrentTarget
      0 0≡⍵.(Width Height):0                ⍝ Not visible
      g.(Width Height)←¯20+⍵.Width ⍵.Height ⍝ ¯20 for scroll bars

@@ -1,0 +1,8 @@
+ FireSelect←{
+     t←⍵
+     e←()
+     e.Event←'Select'
+     e.Component←t
+     f←t.OnSelect.CallbackFunction
+     f A.FireAbacusEvent e
+ }

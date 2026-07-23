@@ -3,8 +3,16 @@
      b←A.GetBody d
      h←b A.New'header'
      h.Document←d
-     hm←h A.Menu.NewHamburgerMenu'BuildMenu'
-     mb←h A.Menu.NewMenuBar'BuildMenu'
+
+     ⍝ hm←h A.Menu.NewHamburgerMenu'BuildMenu'
+     ⍝ mb←h A.Menu.NewMenuBar'BuildMenu'
+
+     hm←h API.Menu.NewHamburgerMenu A.FQP'BuildMenu'
+     mb←h API.Menu.NewMenuBar A.FQP'BuildMenu'
+
+
+
+
      tb←h BuildToolbar 0
      ⍝ *******************
      m←b A.New'main'

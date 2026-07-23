@@ -55,10 +55,11 @@
      r←s Rule'.retracted>ul'
      r.display←'none'
 
-
-
-
+     ⍝
+     s2←Rule'.TabStyle'
+     s2.display←'flex'
+     s2.padding←'1rem'
      ⍝ *****************
-     s
+     s,s2
      ⍝ A.UnNestCSS s
  }

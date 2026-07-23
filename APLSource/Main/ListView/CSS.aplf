@@ -1,0 +1,24 @@
+ CSS←{
+     Rule←##.NewRule
+     ⍝ *********************
+     s←Rule'.ListView'
+     s.display←'flex'
+     ⍝ s.overflow_x←'auto'
+     s.list_style_type←'none'
+
+     ⍝ The item in any state
+     r←s Rule'li'
+     r.border←'2px solid var(--background-color)'
+     r.border_radius←'10px'
+
+     ⍝ Active Item
+     r←s Rule'.Active'
+     r.border←'2px solid gray'
+
+     ⍝ Active and focused Item
+     r←s Rule'&:focus .Active'
+     r.border←'2px solid steelblue'
+
+     ⍝
+     s
+ }

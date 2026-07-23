@@ -6,9 +6,17 @@
          'Value' ''
          'OnOK' ''
          'OnCancel' ''
+         'Type' 'Text' ⍝ Text Date File Number
          '_width' '30rem'
      )A.Default ⍵
-     PromptBox←A.TextInput.New w.Label w.Value
+
+     c←A⍎w.Type,'Input'
+     ⍝ PromptBox←A.TextInput.New w.Label w.Value
+
+     ⍝ PromptBox←A.FileInput.New w.Label w.Value
+     PromptBox←c.New w.Label w.Value
+
+
      p←()
      p.Title←w.Title
      p.MainContent←PromptBox

@@ -25,5 +25,6 @@
      l,←⊂'TreeView'
      l,←⊂'Button'
      l,←⊂'TextArea'
+     l,←⊂'ListView'
      l
  }

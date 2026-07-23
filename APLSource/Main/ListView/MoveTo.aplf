@@ -1,0 +1,10 @@
+ MoveTo←{
+     ⍝ ⍺ ←→ ListView
+     ⍝ ⍵ ←→ Index
+     ⍵<0:0
+     ⍵=≢⍺.Content:0
+     ni←⍵⊃⍺.Content
+     oi←⍺.ActiveIndex⊃⍺.Content
+     ⍺.ActiveIndex←⍵
+     oi ni A.MoveClass'Active'
+ }
