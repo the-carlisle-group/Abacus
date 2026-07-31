@@ -7,6 +7,8 @@
      p≡'ArrowDown':⍵ ShowMenuBarMenu mb
      p≡'ArrowLeft':mb MoveMenuBar ¯1
      p≡'ArrowRight':mb MoveMenuBar 1
+     ⍝ Escape deactivates the bar: blur it and hand focus back to wherever F10 took it from:
+     p≡'Escape':mb.Document A.ExecuteJavaScript'var e=document.getElementById("',mb.id,'");e.blur();if(e._prevFocus&&e._prevFocus!==document.body){e._prevFocus.focus();}'
      0
 
  }
