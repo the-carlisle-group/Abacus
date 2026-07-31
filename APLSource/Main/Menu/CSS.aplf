@@ -58,12 +58,16 @@
      s.font_family←'Arial'
      s.text_wrap←'nowrap'
 
+     ⍝ Reserve the border box on every caption so gaining the focus indicator only
+     ⍝ changes the border *colour*, never the layout (otherwise the active caption
+     ⍝ widens and shoves the captions to its right 1-2px sideways).
+     r←s Rule'li'
+     r.border←'1px solid transparent'
 
-     r←s Rule'.Active'
-     r.border_bottom←'1px solid white'
-
+     ⍝ Only show the active-item indicator while the menu bar actually has focus;
+     ⍝ at rest the first caption must not carry a standing underline.
      r←s Rule'&:focus .Active'
-     r.border←'1px solid steelblue'
+     r.border_color←'steelblue'
 
 
      z,←s
