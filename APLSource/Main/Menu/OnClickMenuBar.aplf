@@ -2,6 +2,17 @@
      mi←⍵.CurrentTarget
      mb←mi.Parent
      i←mb.Content⍳mi
+     ⍝ The clicked caption is the open popover's invoker, so clicking it is exempt from the
+     ⍝ browser's light-dismiss - the menu will not close by itself. Without the guard below
+     ⍝ the click would fall straight through to ShowMenuBarMenu and re-show it, so the menu
+     ⍝ would never appear to close. So when this caption's menu is already open, hide it
+     ⍝ here instead - giving a proper click-to-open / click-to-close toggle.
+     o←mb.Document A.GetElementsByClass'menu'
+     mine←{0=≢⍵:⍬ ⋄ ⍵/⍨mb∘{6::0 ⋄ ⍺≡⍵.MenuBar}¨⍵}o
+     (i=mb.ActiveIndex)∧0<≢mine:mine A.ExecuteOnElement¨⊂'hidePopover()'
+     ⍝ Keep the 'Active' class in step with ActiveIndex (as MoveMenuBar does for the keyboard);
+     ⍝ otherwise a mouse click leaves the highlight stranded on the previously-active caption.
+     _←mb.Content[mb.ActiveIndex i]A.MoveClass'Active'
      mb.ActiveIndex←i
      ShowMenuBarMenu mb
  }
