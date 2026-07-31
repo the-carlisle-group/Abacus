@@ -1,0 +1,12 @@
+ InitSelectOnFocus←{
+     ⍝ ⍺ ←→ Element (Component)
+     ⍝ ⍵ ←→ 1 = browser selects all text on focus (default) | 0 = drop the caret at the end
+     ⍝ Always returns 0
+     ⍺.SelectOnFocus←⍵
+     ⍵:0
+     i←1 0⊃⍺.Content.Content
+     ⍝ Defer: the browser applies its own focus-time selection (select-all) after this handler,
+     ⍝ so a same-tick setSelectionRange is overridden; setTimeout runs it afterwards.
+     i.onfocus←'var t=this;setTimeout(function(){t.setSelectionRange(t.value.length,t.value.length)},0)'
+     0
+ }
