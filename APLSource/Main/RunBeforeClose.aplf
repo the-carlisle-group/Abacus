@@ -1,0 +1,12 @@
+ RunBeforeClose←{
+     ⍝ Runs the application's OnBeforeClose handler on a thread of its own (spawned from OnClose),
+     ⍝ off the ⎕DQ/UI thread. That frees the handler to use Abacus' own modal dialogs (A.Confirm,
+     ⍝ ...): they block on ⎕TGET and rely on the UI thread staying free to deliver the click.
+     ⍝ ⍵ ←→ HTMLRenderer (Client). Always returns 0.
+     h←⍵
+     d←h.Document
+     f←d.Application.OnBeforeClose
+     (⍎f)d:0 ⍝ handler returned 1 → keep the window open, do nothing
+     d.CloseConfirmed←1 ⍝ handler returned 0 → approve the close ...
+     0⊣Close h ⍝ ... and re-issue it; OnClose now sees the flag and lets it through
+ }

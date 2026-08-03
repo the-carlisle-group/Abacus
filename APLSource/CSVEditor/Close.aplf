@@ -1,5 +1,5 @@
  Close←{
-     ~A.Query'Close' 'Are you sure you want to close?'
-     ⍝ This will not work:
-     ⍝ 'No'≡⍵ A.Confirm'Close' 'Are you sure you want to close?'
+     ⍝ Application OnBeforeClose handler (⍵ ←→ Document). Return 0 to close, 1 to keep open.
+     ⍝ Runs off the UI thread (see Main.RunBeforeClose), so Abacus' own modal dialogs work here.
+     'Yes'≢⍵ A.Confirm'Close' 'Are you sure you want to close?'
  }
