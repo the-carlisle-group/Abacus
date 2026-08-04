@@ -1,5 +1,6 @@
  OnClick←{
      b←⍵.CurrentTarget
+     b.Active:0            ⍝ already the active tab → no-op (else Activate hides it)
      n←b.Parent
      i←n.Content⍳b
      t←n.Parent
