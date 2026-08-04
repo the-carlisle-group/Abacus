@@ -4,17 +4,22 @@ This describes a real, reproducible (if intermittent) crash in `#.Abacus.Main`, 
 
 ## TL;DR
 
-`OnWSReceive` builds `e←Elements d` (every element in the APLDOM) and then evaluates the distributed
-reference `e.id`. If any element in `e` has no `id`, that reference throws
+`OnWSReceive` builds `e←Elements d` (every element in the **server-side APLDOM**) and then evaluates the
+distributed reference `e.id`. If any element in `e` has no `id`, that reference throws
 `VALUE ERROR: Undefined name: id` and the incoming event is lost.
 
 The offenders are DataGrid table cells (`thead`/`tr`/`th`/`tbody`/`td`). They do get ids — but
-`DataGrid.BuildStructure` creates them first and stamps the ids a few lines later, so there is a brief
-window in which they are in the tree without ids. 
+`DataGrid.BuildStructure` builds the cell subtree into the APLDOM first and stamps the ids a few lines
+later, so there is a brief window in which they hang in the APLDOM without ids.
 
-Because events are dispatched on more than one
-thread, an incoming event can land in `OnWSReceive` during that window, walk the un-id'd cells, and
-crash. That is the "fails every now and then for no apparent reason".
+**This is purely a server-side APLDOM window — it has nothing to do with writing the browser DOM.**
+`BuildStructure` never touches the browser DOM; the grid is rendered to the browser separately and later
+(`DataGrid.Refresh` → `RenderOptiTable` → `innerHTML`, a plain HTML string). What crashes `OnWSReceive`
+is walking the transient, not-yet-id'd cells that live in the in-memory APLDOM tree.
+
+Because events are dispatched on more than one thread, an incoming event can land in `OnWSReceive` during
+that window, walk the un-id'd cells, and crash. That is the "fails every now and then for no apparent
+reason".
 
 **Fix:** in `OnWSReceive`, restrict the lookup to id-bearing elements. An element with no `id` can never
 be an event target anyway, so excluding it is both robust and correct.
@@ -34,7 +39,7 @@ a DataGrid). The event that crashes is not the culprit; a lingering/transient un
 
 ## Root cause
 
-Two pieces of `#.Abacus.Main` combine:
+Two pieces of `#.Abacus.Main` combine.
 
 1. `OnWSReceive` requires every element to have an `id`.
 
@@ -46,19 +51,19 @@ Two pieces of `#.Abacus.Main` combine:
         c.(CurrentTarget Target)←(e,0)[i]
         …
     }
-    ```
+   ```
 
+   `Elements` recurses the whole `Content` tree, so `e` includes the DataGrid's cell elements.
 
-    `Elements` recurses the whole `Content` tree, so `e` includes the DataGrid's cell elements.
+2. `DataGrid.BuildStructure` puts the cell subtree into the APLDOM before it stamps their ids.
 
-2. `DataGrid.BuildStructure` inserts cells before it stamps their ids.
- 
    ```
     BuildStructure←{
         t←⍵
         …
-        t.Content←{⍵.Content}A.NewTable(r c⍴⊂'')(t.HeaderRowCount c⍴⊂'')   ⍝ [1] cells now in the tree…
+        t.Content←{⍵.Content}A.NewTable(r c⍴⊂'')(t.HeaderRowCount c⍴⊂'')   ⍝ [1] cells now reachable via .Content…
         …
+        _←A.SetParent t
         e←A.Elements t
         e.Document←d
         e.class←⊂''
@@ -67,15 +72,26 @@ Two pieces of `#.Abacus.Main` combine:
     }
    ```
 
-   Between `[1]` and `[2]` the cells exist in the APLDOM without an `id`.
+   Between `[1]` and `[2]` the cells exist in the APLDOM without an `id`. Note that `[1]` alone makes them
+   observable: `Elements` walks `.Content`, and `t` is already parented, so the freshly-built cells are
+   reachable from `Elements d` the moment `t.Content` is assigned — well before `SetDefaultId`.
 
-3. Threading makes the window observable
+   **`BuildStructure` does not write to the browser DOM.** It only mutates the in-memory APLDOM (build the
+   cell subtree, `SetParent`, `SetDefaultId`). The grid reaches the browser afterwards, in the sibling
+   step `Refresh t` (`DataGrid.Resize` calls `BuildStructure t` then `Refresh t`), which does
+   `RenderOptiTable`→`SetProperty 'innerHTML'`. So the browser's grid cells are injected as an HTML string
+   and are *not* these APLDOM elements at all. The crash is therefore entirely a server-side APLDOM
+   phenomenon; the DOM render is irrelevant to it.
 
-   Abacus dispatches events across threads (the worker `ThreadQueue` thread and the `⎕DQ`/HTMLRenderer callback thread). A grid (re)render running `BuildStructure` on one thread can overlap an incoming event running `OnWSReceive` on another. 
+3. Threading makes the window observable.
+
+   Abacus dispatches events across threads (the worker `ThreadQueue` thread and the `⎕DQ`/HTMLRenderer
+   callback thread). A grid (re)render running `BuildStructure` on the worker thread can overlap an
+   incoming event running `OnWSReceive` on the `⎕DQ` thread.
 
    When `OnWSReceive` evaluates `e.id` while a grid is mid-`BuildStructure`, `e` contains the not-yet-stamped
-cells → crash. Hence the intermittency: it depends purely on thread timing, and it correlates with a
-DataGrid (re)rendering (e.g. right after a search populates one).
+   cells → crash. Hence the intermittency: it depends purely on thread timing, and it correlates with a
+   DataGrid (re)rendering (e.g. right after a search populates one).
 
 ## Evidence
 
@@ -102,7 +118,6 @@ In `OnWSReceive`, filter to id-bearing elements before the lookup:
  c.(CurrentTarget Target)←(e,0)[i]
 ```
 
-
 ### Why this is correct, not just defensive
 
 Browser events are routed by `id`: the page's `sendAPLRequest` sends `CurrentTargetId`/`TargetId`, which
@@ -113,11 +128,9 @@ id-less element (grid cells being the obvious example), not just this particular
 
 ## Optional additional hardening (defence in depth)
 
-The `OnWSReceive` fix above fully resolves the crash. 
+The `OnWSReceive` fix above fully resolves the crash.
 
-However, the window could also be closed at the source:
-
-`DataGrid.BuildStructure` (and any similar create-then-stamp code) could assign ids before inserting
-the new subtree into the live `Content` tree, so an id-less grid subtree is never observable by a
-concurrent `Elements` walk. This is secondary; the `OnWSReceive` filter is the primary, general fix.
-
+However, the window could also be closed at the source: `DataGrid.BuildStructure` (and any similar
+build-then-stamp code) could assign ids to the new cell subtree *before* attaching it to the live
+`Content` tree, so an id-less subtree is never observable by a concurrent `Elements` walk. This is
+secondary; the `OnWSReceive` filter is the primary, general fix.
