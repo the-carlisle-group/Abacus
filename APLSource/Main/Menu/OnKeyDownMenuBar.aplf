@@ -7,8 +7,11 @@
      p≡'ArrowDown':⍵ ShowMenuBarMenu mb
      p≡'ArrowLeft':mb MoveMenuBar ¯1
      p≡'ArrowRight':mb MoveMenuBar 1
-     ⍝ Escape deactivates the bar: blur it and hand focus back to wherever F10 took it from:
-     p≡'Escape':mb.Document A.ExecuteJavaScript'var e=document.getElementById("',mb.id,'");e.blur();if(e._prevFocus&&e._prevFocus!==document.body){e._prevFocus.focus();}'
+     ⍝ Escape deactivates the bar: blur it and hand focus back to wherever F10 took it from, and
+     ⍝ put the caret/selection back exactly where it was (captured as _prevSel on F10/mouse entry).
+     ⍝ _keepSelection stops a SelectOnFocus:0 input from collapsing to the end first (see
+     ⍝ TextInput.InitSelectOnFocus); then setSelectionRange restores the precise range/direction.
+     p≡'Escape':mb.Document A.ExecuteJavaScript'var e=document.getElementById("',mb.id,'");e.blur();if(e._prevFocus&&e._prevFocus!==document.body){e._prevFocus._keepSelection=true;e._prevFocus.focus();if(e._prevSel){try{e._prevFocus.setSelectionRange(e._prevSel[0],e._prevSel[1],e._prevSel[2]);}catch(x){}}}'
      0
 
  }

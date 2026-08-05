@@ -17,7 +17,7 @@
      ⍝ the MenuBar's own key handlers then navigate (arrows) and open menus (Enter/↓).
      ⍝ Only consume F10 when a menu bar exists, so apps without one still receive the key.
      mb←{p≢'F10':⍬ ⋄ ⍵ GetElementsByClass'MenuBar'}d
-     0<≢mb:{⍵.Document ExecuteJavaScript'var e=document.getElementById("',⍵.id,'");e._prevFocus=document.activeElement;e.focus();'}⊃mb
+     0<≢mb:{⍵.Document ExecuteJavaScript'var e=document.getElementById("',⍵.id,'");var a=document.activeElement;e._prevFocus=a;e._prevSel=(a&&a.selectionStart!=null)?[a.selectionStart,a.selectionEnd,a.selectionDirection]:null;e.focus();'}⊃mb
      _←OnKeyDownGlobal ⍵  ⍝ 0  ⍝ Handle main menu shortcuts
      d←⍵.Document
      e←⎕NS''
