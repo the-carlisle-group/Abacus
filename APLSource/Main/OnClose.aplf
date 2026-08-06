@@ -2,12 +2,15 @@
      ⍝ OnClose of HTMLRenderer created here: NewForm
      h←0⊃⍵
      d←h.Document
+     d.CloseConfirmed:1⊣CloseApp h ⍝ re-close approved by RunBeforeClose → let the native close through
      m←d GetElementsByClass'DialogBox'
-     0<≢m:0
+     0<≢m:0 ⍝ a modal is open (incl. a confirm we may be showing) → keep the window
      a←d.Application
      f←a.OnBeforeClose
-     0=≢f:1⊣CloseApp h
-     r←(⍎f)d
-     r:0
-     1⊣CloseApp h
+     0=≢f:1⊣CloseApp h ⍝ no handler → close
+     ⍝ Run OnBeforeClose on a *separate* thread, off this ⎕DQ/UI thread, so it may use Abacus'
+     ⍝ own modal dialogs (A.Confirm etc.): those block on ⎕TGET and need this thread free to
+     ⍝ deliver the button click. See RunBeforeClose.
+     _←RunBeforeClose&h
+     0 ⍝ veto for now; RunBeforeClose re-issues Close if the handler agrees
  }
