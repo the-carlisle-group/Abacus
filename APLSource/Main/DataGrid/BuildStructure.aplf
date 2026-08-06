@@ -2,7 +2,13 @@
      t←⍵
      d←t.Document
      (r c)←t.WindowPadding+t.RowsToDisplay(⌈/t.ColumnsPerIndex)
-     t.Content←{⍵.Content}A.NewTable(r c⍴⊂'')(t.HeaderRowCount c⍴⊂'')
+     nt←A.NewTable(r c⍴⊂'')(t.HeaderRowCount c⍴⊂'')
+     _←A.SetParent nt
+     e←A.Elements nt
+     e.Document←d
+     e.class←⊂''
+     _←d A.SetDefaultId e
+     t.Content←nt.Content
      bc←##.BodyCells t
      bc.Selected←0
      bc.Index←⍳r c
@@ -11,15 +17,12 @@
      hc.Selected←0
      hc.Index←(⊂¯1 1)×(⊂1 0)+⊖⍳⍴hc
      t.HeaderCells←hc
-     _←A.SetParent t
-     e←A.Elements t
-     e.Document←d
-     e.class←⊂''
-     _←d A.SetDefaultId e
      o←t.OptiTable
      o.id←t.id
      o.(Header Body).id←t.Content.id
      o.Header.Rows.id←(##.HeaderRows t).id
+
+
      ⍝ o.Body.Cells.tabindex←'0'     ⍝ Not for first column if RowNumbers
      ⍝ o.Body.Cells.tabindex←↑r⍴⊂(⊂t.RowNumbers⊃,¨'0' '-1'),(c-1)⍴⊂,'0'
      ⍝ o.Header.Cells.tabindex←'0' ⍝ Maybe needed for editable column headers!
