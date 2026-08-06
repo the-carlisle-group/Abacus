@@ -3,6 +3,14 @@
      ⍝ ⍵ ←→ Data to send
      ⍝ Client is HTMLRenderer, or Rumba Connection
      c←⍺.Client
+     ⍝ The Client's HTMLRenderer can already be torn down (window closed / GUI rebuilt) while a
+     ⍝ queued worker-thread handler is still trying to send - e.g. an AutoComplete popover clearing
+     ⍝ its innerHTML as it closes. `Type` is an intrinsic ⎕WC property, present for the whole life
+     ⍝ of the object, so it only vanishes once the object is gone (assigned vars like Document /
+     ⍝ WebSocketID linger in the dead namespace). Treat a missing Type as "no renderer" and drop
+     ⍝ the message rather than crash the worker thread with a VALUE ERROR on c.Type.
+     0=c.⎕NC⊂'Type':0
      c.Type≡'HTMLRenderer':c.WebSocketSend c.WebSocketID ⍵ 1 1
+     6::0
      c.Server.DRC.Send(c.Server.Name,'.',c.Name)(⍵ 1 1)
  }
