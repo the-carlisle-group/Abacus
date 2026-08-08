@@ -1,5 +1,12 @@
  Close←{
-     ~A.Query'Close' 'Are you sure you want to close?'
-     ⍝ This will not work:
-     ⍝ 'No'≡⍵ A.Confirm'Close' 'Are you sure you want to close?'
+   ⍝ Using Confirm:
+   ⍝ Confirm blocks. We can exit, or then close
+     r←⍵.Document A.Confirm'Close' 'Are you sure you want to close?'
+     r≢'Yes':0
+     A.Close ⍵.Document
+   ⍝ Using Prompt, Alert or a DialogBox:
+   ⍝ In the call back OnCloseOK we explicly close
+  ⍝   ⍵.Document A.Prompt'Close' 'Save as:' 'some text'(A.FQP'OnCloseOK') ⍝ (A.FQP 'OnCloseCancel')
+   ⍝ In any case:
+   ⍝ Result does not matter, thrown away
  }

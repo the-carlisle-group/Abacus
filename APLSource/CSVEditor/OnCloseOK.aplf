@@ -1,0 +1,4 @@
+ OnCloseOK←{
+     d←⍵.Document
+     A.Close d
+ }

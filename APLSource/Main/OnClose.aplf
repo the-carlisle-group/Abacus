@@ -1,13 +1,16 @@
  OnClose←{
      ⍝ OnClose of HTMLRenderer created here: NewForm
+     ⍝ ⎕WC callback for Close event on HTMLRenderer Form
      h←0⊃⍵
      d←h.Document
-     m←d GetElementsByClass'DialogBox'
-     0<≢m:0
+     0<≢d GetElementsByClass'DialogBox':0
      a←d.Application
      f←a.OnBeforeClose
+     e←⎕NS''
+     e.Event←'BeforeClose'
+     e.Component←a
+     e.Document←d
+     _←f LogAbacusEvent e
      0=≢f:1⊣CloseApp h
-     r←(⍎f)d
-     r:0
-     1⊣CloseApp h
+     0⊣(⍎f)&e
  }

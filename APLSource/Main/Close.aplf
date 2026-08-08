@@ -1,3 +1,7 @@
  Close←{
-     ⎕NQ ⍵'Close'
+     ⍝ ⍺ ←→ Document
+     ⍺←⍵
+     _←⍺.Client.Close
+     _←CloseApp ⍺.Client
+     0
  }
