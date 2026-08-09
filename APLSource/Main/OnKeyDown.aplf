@@ -2,10 +2,22 @@
      ⍝ On keydown in body, for menubar
      d←⍵.Document
      0<≢d GetElementsByTag'dialog':0
+     ⍝ An open dropdown menu owns the keyboard (it light-dismisses on Escape itself). Don't
+     ⍝ let its keystrokes bubble on and fire the app's KeyDown handler - e.g. Escape must
+     ⍝ close the menu only, not reach a user handler that might read it as "close the app" (#82).
+     0<≢d GetElementsByClass'menu':0
+     ⍝ Likewise once the menu bar is activated (F10) but no menu is dropped down yet: its own
+     ⍝ handler deals with Escape (deactivate) / arrows / Enter, so the key must not leak either.
+     {2≠⍵.⎕NC'class':0 ⋄ (⊂'MenuBar')∊' '(≠⊆⊢)⍵.class}⍵.Target:0
      k←⍵.Code
      b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
      p←k,⍨∊b/'Ctrl' 'Shift' 'Alt'
      ⍵.FQK←p
+     ⍝ F10 activates the menu bar (Windows/Linux standard): move keyboard focus onto it;
+     ⍝ the MenuBar's own key handlers then navigate (arrows) and open menus (Enter/↓).
+     ⍝ Only consume F10 when a menu bar exists, so apps without one still receive the key.
+     mb←{p≢'F10':⍬ ⋄ ⍵ GetElementsByClass'MenuBar'}d
+     0<≢mb:{⍵.Document ExecuteJavaScript'var e=document.getElementById("',⍵.id,'");var a=document.activeElement;e._prevFocus=a;e._prevSel=(a&&a.selectionStart!=null)?[a.selectionStart,a.selectionEnd,a.selectionDirection]:null;e.focus();'}⊃mb
      _←OnKeyDownGlobal ⍵  ⍝ 0  ⍝ Handle main menu shortcuts
      d←⍵.Document
      e←⎕NS''
