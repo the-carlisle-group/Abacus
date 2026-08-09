@@ -6,6 +6,7 @@
      c.Event≡'SJSR':c.result ⎕TPUT c.id
      c.Document←d
      e←Elements d
+     e←(0≠⊃¨e.⎕NC⊂'id')/e ⍝ keep only id-bearing elements; an id-less one can't be an event target
      i←e.id⍳c.CurrentTargetId c.TargetId
      c.(CurrentTarget Target)←(e,0)[i]
      0∊c.(CurrentTarget Target):0
