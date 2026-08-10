@@ -1,6 +1,6 @@
  OnScrollBarMouseDown←{
      tr←⍵.CurrentTarget
-     tr=⍵.Target:ScrollBarMovePage ⍵
+     tr=⍵.Target:ScrollBarMovePage ⍵ ⊣ tr.⎕EX'StartDragMousePosition'   ⍝ track click = page move, not a drag: clear any stale drag origin
      n←⍵.MouseViewportPosition
      m←⍵.CurrentTargetPosition
      tr.StartDragMousePosition←n-m
