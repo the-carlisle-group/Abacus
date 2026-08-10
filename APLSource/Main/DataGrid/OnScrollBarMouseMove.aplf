@@ -1,6 +1,7 @@
  OnScrollBarMouseMove←{
      ⍵.MouseButtons≠1:0
      tr←⍵.CurrentTarget
+     0=tr.⎕NC⊂'StartDragMousePosition':0   ⍝ no thumb-drag active (e.g. a page-click on the track) → ignore
      th←⍵.Target
      t←tr.Parent.Table
      n←⍵.MouseViewportPosition
