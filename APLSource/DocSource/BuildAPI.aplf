@@ -12,7 +12,7 @@
          c,←⊂'     ⍝ ⍵ ←→ method argument'
          _←s.⎕FX¨{
              d←'     ⍝ Documentation: #.Abacus.DocSource.ObjectReference.',o,'_Method_',⍵
-             (⊂⍵,'←{'),c,d('⍺ A.',(e/o,'.'),⍵,' ⍵')'}'}¨m
+             (⊂⍵,'←{'),c,d('     ⍺←⊢    ⍝ default ⍺ so a monadic call passes straight through')('⍺ A.',(e/o,'.'),⍵,' ⍵')'}'}¨m
          b←(↓t[;0 1])∊⊂⍵'Property'
          v←ObjectReference ⎕VGET b/n
          _←s ⎕VSET(b/t[;2]){⍺ ⍵}¨v
