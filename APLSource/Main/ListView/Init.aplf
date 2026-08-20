@@ -3,6 +3,8 @@
      l.Content←''
      0=≢l.Items:0
      c←A.New¨{'li'⍵}¨l.Items
+     l.Items.Parent←c
+     c.Parent←⍵
      c.class←⊂''
      c.Onclick←⊂A.FQP'OnClick'
      i←l.ActiveIndex⊃c

@@ -2,13 +2,13 @@
      t←⍵
      d←t.Document
      (r c)←t.WindowPadding+t.RowsToDisplay(⌈/t.ColumnsPerIndex)
-     nt←A.NewTable(r c⍴⊂'')(t.HeaderRowCount c⍴⊂'')
-     _←A.SetParent nt
-     e←A.Elements nt
+     nc←{⍵.Content}A.NewTable(r c⍴⊂'')(t.HeaderRowCount c⍴⊂'')
+     e←∊A.Elements¨nc
      e.Document←d
      e.class←⊂''
      _←d A.SetDefaultId e
-     t.Content←nt.Content
+     t.Content←nc
+     _←A.SetParent t
      bc←##.BodyCells t
      bc.Selected←0
      bc.Index←⍳r c

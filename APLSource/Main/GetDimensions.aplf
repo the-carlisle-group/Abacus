@@ -1,0 +1,4 @@
+ GetDimensions←{
+     ⍺←⍵
+     ⍺ ExecuteOnElementSync¨'clientHeight' 'clientWidth'
+ }

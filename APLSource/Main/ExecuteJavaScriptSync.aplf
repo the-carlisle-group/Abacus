@@ -2,8 +2,9 @@
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ Javascript
      ⍝ ← ←→ Result
+     t←{}&0
      c←'"',⍵,'"'
-     j←'execCode(',(⍕⎕TID),',',c,')' ⍝ ⎕TID here conflicts with server event loop
-     _←⍺ ExecuteJavaScript j         ⍝ Maybe?? Maybe not?
-     ⊃⎕TGET ⎕TID
+     j←'execCode(',(⍕t),',',c,')'
+     _←⍺ ExecuteJavaScript j
+     ⊃⎕TGET t
  }

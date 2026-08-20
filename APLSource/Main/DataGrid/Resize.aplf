@@ -1,5 +1,5 @@
  Resize←{
-
+     ⎕←'Resize!'
      g←⍺
      t←g.Table
      0=≢t.Columns:NoColumns g

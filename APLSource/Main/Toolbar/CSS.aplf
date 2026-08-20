@@ -3,7 +3,7 @@
      ⍝ *********************
      s←Rule'.Toolbar'
      s.display←'flex'
-     s.gap←'.5rem'
+     ⍝s.gap←'.5rem'
      ⍝ s.padding←'0'
      s.padding_left←'.5rem'
      s.background←'#2b2b2b'

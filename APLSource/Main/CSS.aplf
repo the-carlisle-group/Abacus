@@ -11,6 +11,8 @@
      r.outline←'none'
      ⍝ Flex Containers
      r←s Rule'body, main, .tabs, .flex'
+     ⍝ r←s Rule'main, .tabs, .flex'
+
      r.display←'flex'
      r.flex_direction←'column'
      r.flex←1
