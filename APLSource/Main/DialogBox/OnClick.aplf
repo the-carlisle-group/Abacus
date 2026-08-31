@@ -1,6 +1,7 @@
  OnClick←{
      b←⍵.CurrentTarget
      d←b A.GetNearest'dialog'
+     _←d A.SetHidden 1
      i←b.Parent.Content⍳b
      f←i⊃d.OnClick
      e←()
@@ -8,6 +9,8 @@
      e.Component←d
      e.Button←b
      e.ButtonCaption←i⊃d.Buttons
-     1≡f A.FireAbacusEvent e:0
-     A.DeleteElement d
+     _←d A.SetHidden 1
+     r←f A.FireAbacusEvent e
+     r≡0:A.DeleteElement d
+     d A.SetHidden 0
  }

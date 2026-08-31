@@ -3,15 +3,16 @@
      ⍝ *********************
      s←Rule'.Toolbar'
      s.display←'flex'
+     s.align_items←'center'
      ⍝s.gap←'.5rem'
      ⍝ s.padding←'0'
-     s.padding_left←'.5rem'
-     s.background←'#2b2b2b'
-     s.border_top←'3px solid #555'
-     s.border_left←'3px solid #555'
-     s.border_bottom←'3px solid #111'
-     s.border_right←'3px solid #111'
-     ⍝ Active Item
+     s.padding_left←'.25rem'
+     ⍝s.background←'#2b2b2b'
+⍝     s.border_top←'3px solid #555'
+⍝     s.border_left←'3px solid #555'
+⍝     s.border_bottom←'3px solid #111'
+⍝     s.border_right←'3px solid #111'
+⍝     ⍝ Active Item
      r←s Rule'.Active'
      r.border←'2px solid gray'
 
@@ -19,16 +20,22 @@
      ⍝ Or tweak components here?
      r←s Rule'.Button,.CheckBox,.DropList,.dropdown-menu'
      ⍝ r←s Rule'.Toolbar > *'
+     r.padding←'.2rem'
      r.min_width←'0'
-     r.border←'3px solid #2b2b2b'
-     r.border_radius←'0'
+     ⍝ r.border←'3px solid black' ⍝  #2b2b2b'
+
+     r.border←'3px solid var(--background-color)'
+     ⍝ r.border_radius←'10px'
+
+
+     ⍝ r.border_radius←'0'
 
 
      ⍝ All Direct Children
-     r←s Rule'>*:hover'
-     r.border_left←'3px solid #555'
-     r.border_right←'3px solid #111'
-
+    ⍝ r←s Rule'>*:hover'
+⍝     r.border_left←'3px solid #555'
+⍝     r.border_right←'3px solid #111'
+⍝
 
      ⍝ All Direct Children
      r←s Rule'.dropdown-menu:hover'
@@ -50,9 +57,9 @@
      ⍝
      r←s Rule'.DropList'
      ⍝ r.border_radius←'var(--border-radius)'
-     r.padding←'0 .5rem'
+     r.padding←'0 .25rem'
      r.flex_direction←'row'
-     r.gap←'.1REM'
+     r.gap←'.1rem'
      r.align_items←'center'
 
      r←s Rule'.DropList select'

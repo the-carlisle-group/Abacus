@@ -90,7 +90,7 @@
      s←Rule'.dropdown-menu'
      s.display←'flex'
      s.align_items←'center'
-     s.gap←'1rem'
+     s.gap←'.1rem'
      s.color←'inherit'
      s.background_color←'inherit'
      s.border←'var(--border)'

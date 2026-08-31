@@ -1,0 +1,17 @@
+ Busy←{
+     ⍵≡'':DeleteElement ⍺ GetElementById'busy-indicator'
+     d←New'dialog'
+     d._margin←'auto'
+     d.id←'busy-indicator'
+     d._border_radius←'10px'
+     d._border←'2px solid gray'
+
+
+     d._padding←'2rem'
+     d._background_color←'inherit'
+     h1←d New'h1'⍵
+     h1.class←'pulse'
+
+     _←⍺ ShowModal d
+     0
+ }

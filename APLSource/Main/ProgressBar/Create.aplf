@@ -1,6 +1,7 @@
  Create←{
      ⍝ ⍺ ←→ Document
      ⍝ See New function for argument
+     ⍺=0:0
      p←⍺ New ⍵
      p⊣Show p
  }

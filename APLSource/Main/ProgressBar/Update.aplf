@@ -2,6 +2,7 @@
      ⍝ ⍺ ←→ ProgressBar instance
      ⍝ ⍵ ←→ Message
      ⍝ ← ←→ 'Cancel'|'Resume'|'Truncate'
+     ⍺=0:'Resume'
      p←⍺
      p.Status←(2=≡p.Status)⊃⍵ p.Status
      p.Iteration+←1

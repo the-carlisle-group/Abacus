@@ -1,3 +1,4 @@
  Close←{
+     ⍺=0:0
      A.DeleteElement ⍺
  }

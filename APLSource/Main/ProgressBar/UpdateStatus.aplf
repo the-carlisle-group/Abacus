@@ -3,7 +3,7 @@
      _←s A.SetInnerHTML ⍵
      0=⍺.Iterations:0
      p←⍺ A.ElementById'progress'
-     n←⍕⍺.UpdatePeriod+⍎p.value
+     n←⍕⍺.UpdatePeriod+⍎p.value ⍝ ???
      p.value←n  ⍝ why doesn't SetProperty do this?
      p A.SetProperty'value'n
  }

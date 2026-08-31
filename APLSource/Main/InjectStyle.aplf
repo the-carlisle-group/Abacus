@@ -1,6 +1,6 @@
  InjectStyle←{
      e←Elements ⍺
-     s←∊{6::⍬ ⋄ ⍵.Style}¨e
+     s←∊e ⎕VGET⊂'Style'⍬
      0=≢s:⍵
      i←1⍳⍨'<style id="main-style"></style>'⍷⍵
      j←i+23
