@@ -11,5 +11,10 @@
      p,←⊂'Dec1' 'n' 'r' 'FMT_Num' 'LK¯1CF20.1' 'VFI_Dec1' 'Validate'⎕NULL ⎕NULL 0 '' 1
      p,←⊂'Dec2' 'n' 'r' 'FMT_Num' 'LK¯2CF20.2' 'VFI_Dec2' 'Validate'⎕NULL ⎕NULL 0 '' 1
      p,←⊂'Dec3' 'n' 'r' 'FMT_Num' 'LK¯3CF20.3' 'VFI_Dec3' 'Validate'⎕NULL ⎕NULL 0 '' 1
+     p,←⊂'Dec4' 'n' 'r' 'FMT_Num' 'LK¯1CF20.1' 'VFI_Dec4' 'Validate'⎕NULL ⎕NULL 0 '' 1
+     p,←⊂'Dec5' 'n' 'r' 'FMT_Num' 'LK¯2CF20.2' 'VFI_Dec5' 'Validate'⎕NULL ⎕NULL 0 '' 1
+     p,←⊂'Dec6' 'n' 'r' 'FMT_Num' 'LK¯3CF20.3' 'VFI_Dec6' 'Validate'⎕NULL ⎕NULL 0 '' 1
+
+
      ↑p
  }

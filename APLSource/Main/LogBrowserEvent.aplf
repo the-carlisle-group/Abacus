@@ -4,7 +4,6 @@
      ~d.LogBrowserEvents:0
      l←d.LogBrowserEventList
      ~(0=≢l)∨⍵.Event⊂⍛∊⊆l:0
-     f←⍵.CurrentTarget⍎'On',⍵.Event
-     ⎕←⍵.Event,': ',f
+     ⎕←GetEventLogItem ⍵
      0
  }

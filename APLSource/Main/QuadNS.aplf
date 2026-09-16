@@ -1,0 +1,5 @@
+ QuadNS←{
+     ⍝ Cover for simple case of s1 ⎕NS s2
+     n←⍵.⎕NL 2 9
+     ⍺ ⎕VSET n(⍵ ⎕VGET n)
+ }

@@ -3,7 +3,7 @@
      ⍝ This needs major work
      t←⍺
      r←4+2×1<≢⊃t.Columns.HeaderValues
-     c←t.FontSize×r,12⌈1⊃¨2↑¨⍴¨t.Columns.Value
+     c←t.FontSize×r,48⌊12⌈1⊃¨2↑¨⍴¨t.Columns.Value
      w←0,⍵
      w+(w=0)×c
  }

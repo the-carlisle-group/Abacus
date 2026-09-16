@@ -16,6 +16,9 @@
      r.display←'flex'
      r.flex_direction←'column'
      r.flex←1
+
+     r.overflow←'auto'
+
      ⍝ Body
      r←s Rule'body'
      r.border←0

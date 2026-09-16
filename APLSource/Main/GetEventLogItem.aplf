@@ -1,0 +1,9 @@
+ GetEventLogItem←{
+     f←⍵.CurrentTarget⍎'On',⍵.Event
+     csv←{1↓∊',',¨⍵}
+     e←⍵.Event ⍵.CurrentTarget.id f
+     ⍵.Event≢'keydown':csv e
+     b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
+     k←(b/'Ctrl' 'Shift' 'Alt'),⊂⍵.Key
+     csv e,⊂k
+ }

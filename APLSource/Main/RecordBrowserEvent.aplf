@@ -1,0 +1,8 @@
+ RecordBrowserEvent←{
+     d←⍵.Document
+     ~d.RecordBrowserEvents:0
+     e←GetEventLogItem ⍵
+     d←⍵.Document
+     d.BrowserEventLog,←⊂e
+     0
+ }

@@ -4,7 +4,7 @@
          'Title' 'Confirmation'
          'Message' 'Continue?'
          'Buttons'('Yes' 'No')
-         '_min_width' '20rem'
+         '_min_width' '30rem'
          '_max_width' '40rem'
      )A.Default ⍵
      p←()

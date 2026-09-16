@@ -6,6 +6,8 @@
      d.LogAbacusEvents←0
      d.LogBrowserEvents←0
      d.LogBrowserEventList←''
+     d.RecordBrowserEvents←0
+     d.BrowserEventLog←⍬
      d.Theme←d ⎕VGET⊂'Theme'(##.Themes.AbacusDark 0)
      d.AppStyle←d ⎕VGET⊂'AppStyle'⍬
      d.SessionID←NewGUID'N'

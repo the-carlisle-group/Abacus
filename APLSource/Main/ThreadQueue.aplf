@@ -4,6 +4,7 @@
      0=≢r:⍺ ∇ ⍵⊣Debounce ⍺
      c←⊃r
      _←LogBrowserEvent c
+     _←RecordBrowserEvent c
      _←(⍎c.CurrentTarget⍎'On',c.Event)c
      _←PutDoneToken c
      ⍺ ∇ ⍵

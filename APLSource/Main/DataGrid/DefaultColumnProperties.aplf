@@ -15,7 +15,8 @@
      d.Width←0
      d.Highlight←0
      d.Options←⊂''
-     _←d ⎕NS¨c
+     ⍝  _←d ⎕NS¨c    SLOW on big nested data!
+     _←d ##.QuadNS¨c  ⍝ Cover for slow
      d.Value←⍵.RowMinimum DefaultColumnValue¨d
      d.HeaderValues←{⍵ ⎕VGET⊂'HeaderValues'⍵.Name}¨c
      d

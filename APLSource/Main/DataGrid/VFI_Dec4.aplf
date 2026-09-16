@@ -1,0 +1,4 @@
+ VFI_Dec4←{
+     0=≢⍵:1 ⍺.Null''
+     4 VFI_Dec ⍵
+ }
