@@ -1,0 +1,62 @@
+ CSS←{
+     Rule←A.NewRule
+     ⍝ ************************
+     s←Rule'.TextInputEx'
+
+     s.display←'flex'
+     s.gap←'.5rem'
+     ⍝s.border←'2px solid gray'
+     s.border_radius←'var(--border-radius)'
+     s.align_items←'center'
+
+     s.padding←'.5em'
+     s.background_color←'hsl(235, 14%, 20%)'
+
+     ⍝ r←s Rule':focus-within'
+     ⍝ r.border←'2px solid ','yellow'
+
+     ⍝ Label
+     r←s Rule'>label'
+     r.font_family←'Arial'
+     r.font_size←'1.1rem'
+     ⍝ r.flex←'1 1 0'
+     ⍝ r.padding←'.5em'
+     r.color←'var(--accent-color-1)'
+     ⍝ r.background_color←'hsl(235, 14%, 20%)'
+     ⍝ r.border_radius←'var(--border-radius)'
+
+     ⍝ r.background_color←'black'
+     r.font_weight←'bold'
+
+     ⍝ Input
+     r←s Rule'>input'
+     r.flex←'1'
+     ⍝ r.border_radius←'var(--border-radius)'
+     r.font_family←'var(--user-input-font-family)'
+     r.font_size←'1.2rem'
+     ⍝ r.padding←'.5rem'
+     r.color←'white'
+     r.border←'none'
+     ⍝ r.background_color←'var(--background-color)'
+     ⍝ r.background_color←'hsl(230, 10%, 15%)'
+     r.background_color←'hsl(235, 14%, 20%)'
+
+     ⍝ r.background_color←'black' ⍝ 'var(--background-color)'
+
+
+     ⍝ Buttons
+     r←s Rule'>button'
+     r.font_family←'Arial'
+     r.font_size←'1rem'
+     r.padding←'.25em'
+     r.border←'none'
+     r.border_radius←'var(--border-radius)'
+     ⍝ r.min_width←'3em'
+     ⍝ r.color←''
+     ⍝ r.background_color←'var(--background-color)'
+     ⍝ Hover
+     r←s Rule'>button:hover'
+     r.background_color←'gray'
+
+     A.UnNestCSS s
+ }

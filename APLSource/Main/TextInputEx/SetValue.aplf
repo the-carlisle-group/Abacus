@@ -1,0 +1,6 @@
+ SetValue←{
+     ~A.IsConnected ⍺:⍺ InitValue ⍵
+     ⍺.Value←⍵
+     i←0⊃⍺.Content
+     i A.SetValue ⍵
+ }

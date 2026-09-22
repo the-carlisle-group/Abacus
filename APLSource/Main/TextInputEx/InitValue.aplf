@@ -1,0 +1,6 @@
+ InitValue←{
+     ⍺.Value←⍵
+     i←0⊃⍺.Content
+     i.value←⍵
+     0
+ }

@@ -1,0 +1,6 @@
+ OnClear←{
+     b←⍵.CurrentTarget
+     c←b.Parent
+     _←c SetValue''
+     FireChangeEvent c
+ }

@@ -1,0 +1,39 @@
+ New←{
+     ⍺←0
+     (p n)←A.DefaultParentAndName ⍺
+     d←A.InitComp(p A.New'div')⎕NS(
+         'Label' ''
+         'Value' ''
+         'Placeholder' ''
+         'Options' ''
+         'History' ''
+         'OnEnter' ''
+         'OnChange' ''    ⍝ For now
+         'OnClear' ''
+     )A.Default ⍵
+     d.Name←n
+
+     ⍝ l←d A.New'label'd.Label
+     ⍝ l.for←A.GetId 0
+
+
+
+     i←d A.New'input'
+     i.placeholder←d.Placeholder
+     ⍝ i.id←l.for
+     i.History←d.History
+     i.HistoryIndex←⍬
+     _←i A.AutoComplete.Init d.Options
+
+     l←d A.New'label'd.Label
+     ⍝ l.for←A.GetId 0
+
+
+
+     _←d InitValue d.Value
+     d.Oninput←A.FQP'OnInput'
+     d.Onchange←A.FQP'OnChange'
+     b←d A.New'button' 'X'
+     b.Onclick←A.FQP'OnClear'
+     d
+ }
