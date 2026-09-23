@@ -1,8 +1,10 @@
  DefaultParentAndName←{
      IsString ⍵:0 ⍵
      2=≢⍵:⍵
-     3>≢⎕LC:⍵''
-     c←⎕LC[2]⊃⎕NR 2⊃⎕XSI
+     a←(⍕##),'.API.'
+     i←2++/∧\a∘{⍺≡(≢⍺)↑⍵}¨2↓⎕XSI
+     i≥≢⎕LC:⍵''
+     c←{⍵↑⍨⍵⍳'⍝'}⎕LC[i]⊃⎕NR i⊃⎕XSI
      n←' '~⍨⊃¯2↑('←'≠c)⊆c
      ⍵ n
  }
