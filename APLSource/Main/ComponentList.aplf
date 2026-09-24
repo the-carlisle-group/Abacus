@@ -27,5 +27,6 @@
      l,←⊂'TextArea'
      l,←⊂'ListView'
      l,←⊂'TextInputEx'
+     l,←⊂'TextInputPlus'
      l
  }

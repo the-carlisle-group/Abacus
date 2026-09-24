@@ -1,0 +1,19 @@
+ OnClick←{
+     d←⍵.Document
+     s←⍵.CurrentTarget         ⍝ span  with formatted value
+     c←⍵.CurrentTarget.Parent
+
+     v←c.Value                 ⍝ Full value
+     ⍝ta←⊃c.Content             ⍝ Text area
+     ⍝ StartEditMode c
+
+     db←⊃c.Content
+     ⍝ _←ta A.ExecuteOnElement'showPopover()'
+     ⍝ id←c.id
+
+     _←db A.ExecuteOnElement'showModal()'
+
+     ⍝ _←ta A.ExecuteOnElement'showPopover({source:document.getElementById("',id,'")})'
+     _←A.SetFocus⊃db.Content
+     0
+ }

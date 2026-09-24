@@ -1,0 +1,15 @@
+ OnEnter←{
+     d←⍵.Document
+     ta←⍵.CurrentTarget  ⍝ Thiaia the text area
+     db←ta.Parent
+     c←db.Parent
+     s←1⊃c.Content       ⍝ Span for desc
+     e←()
+     e.Event←'Enter'
+     e.Component←c
+     e.Value←c.Value
+     _←A.FireAbacusEvent e
+     _←c SetValue e.Value
+     _←db A.ExecuteOnElement'close()'
+     0
+ }

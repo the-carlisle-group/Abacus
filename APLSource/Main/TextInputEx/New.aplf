@@ -10,30 +10,30 @@
          'OnEnter' ''
          'OnChange' ''    ⍝ For now
          'OnClear' ''
+         'Buttons' ''
+         'OnClick' ''
+         'HideOnClear' 0
      )A.Default ⍵
      d.Name←n
-
-     ⍝ l←d A.New'label'd.Label
-     ⍝ l.for←A.GetId 0
-
-
+     d.HideOnClear←1,⍨d.HideOnClear⍴⍨≢d.Buttons
 
      i←d A.New'input'
      i.placeholder←d.Placeholder
-     ⍝ i.id←l.for
      i.History←d.History
      i.HistoryIndex←⍬
      _←i A.AutoComplete.Init d.Options
-
      l←d A.New'label'd.Label
-     ⍝ l.for←A.GetId 0
-
-
-
      _←d InitValue d.Value
      d.Oninput←A.FQP'OnInput'
      d.Onchange←A.FQP'OnChange'
-     b←d A.New'button' 'X'
-     b.Onclick←A.FQP'OnClear'
+
+     b←AddButtons d
+     cb←d A.New'button' 'x'
+     cb.Onclick←A.FQP'OnClear'
+
+     ab←b,cb
+     ab.class←'' 'hidden'[d.HideOnClear∧d.Value≡'']
+     cb.Onclick←A.FQP'OnClear'
+
      d
  }

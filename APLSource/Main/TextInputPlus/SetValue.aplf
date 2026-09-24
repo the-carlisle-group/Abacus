@@ -1,0 +1,12 @@
+ SetValue←{
+     ~A.IsConnected ⍺:⍺ InitValue ⍵
+     b←3↓⍺.Content
+     _←b A.SetHidden¨⍺.HideOnClear∧⍵≡''
+     ⍺.Value←⍵
+     i←1⊃⍺.Content
+     _←i A.SetInnerHTML(⍵≡'')⊃⍵ ⍺.Placeholder
+     db←0⊃⍺.Content
+     ta←⊃db.Content
+     _←ta A.SetValue ⍵
+     0
+ }

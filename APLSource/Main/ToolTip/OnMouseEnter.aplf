@@ -1,7 +1,8 @@
  OnMouseEnter←{
      ~⍵.Document.ToolTipsVisible:0
-     _←A.RepositionMouseAnchor ⍵
      e←⍵.CurrentTarget
+     0=≢e.ToolTip:0
+     _←A.RepositionMouseAnchor ⍵
      t←⍵.Document.ToolTipElement
      _←t A.SetInnerHTML A.New'p'e.ToolTip
      t A.ExecuteOnElement'showPopover()'

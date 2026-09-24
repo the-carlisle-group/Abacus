@@ -1,0 +1,7 @@
+ AddButtons←{
+     d←⍵
+     0=≢d.Buttons:''
+     b←{d A.New'button'⍵}¨d.Buttons
+     b.Onclick←⊆d.OnClick
+     b
+ }

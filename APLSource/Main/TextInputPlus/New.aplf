@@ -1,0 +1,77 @@
+ New←{
+     ⍺←0
+     (p n)←A.DefaultParentAndName ⍺
+     d←A.InitComp(p A.New'div')⎕NS(
+         'Label' ''
+         'Value' ''
+         'Placeholder' ''
+         'Options' ''
+         'History' ''
+         'OnEnter' ''
+         'OnChange' ''    ⍝ For now
+         'OnClear' ''
+         'OnFormat' ''
+         'Buttons' ''
+         'OnClick' ''
+         'HideOnClear' 0
+         'Tip1' ''
+         'Tip2' ''
+     )A.Default ⍵
+     ⍝ d.tabindex←0
+     d.Name←n
+     d.HideOnClear←1,⍨d.HideOnClear⍴⍨≢d.Buttons
+
+     ⍝ d.FormattedValue←0⊃d(⍎d.OnFormat)d.Value
+
+     ⍝ ****************
+     ⍝ Hidden Text Area
+     ⍝ ****************
+     db←d A.New'dialog'
+     ta←db A.New'textarea'd.Value
+
+
+
+
+     ⍝ ta.popover←'auto'
+     ta.rows←3
+     d.Oninput←A.FQP'OnInput'
+     ta.OnEnter←A.FQP'OnEnter' ⍝ d.OnEnter   ⍝ Onkeydown←A.FQP'OnKeyDownTextArea'
+
+     ta.History←d.History
+     ta.HistoryIndex←⍬
+
+
+     _←ta A.AutoComplete.Init d.Options
+
+     ⍝ *********************************
+     ⍝ A span for formatted, truncated value
+     ⍝ *********************************
+
+     ⍝ s←d A.New'span'd.FormattedValue
+     s←d A.New'span'((''≡d.Value)⊃d.Value d.Placeholder)
+     s.tabindex←0
+     s.ToolTip←d.Tip1
+
+
+     s.Onkeydown←A.FQP'OnKeyDown'
+     s.Onclick←A.FQP'OnClick'
+
+     ⍝ A label for additional info
+     l←d A.New'label'd.Label
+     l.ToolTip←d.Tip2
+     ⍝ _←d InitValue d.Value
+     ⍝ d.Oninput←A.FQP'OnInput'
+     ⍝ d.Onchange←A.FQP'OnChange'
+
+     ⍝ *************************
+     ⍝ Buttons
+     ⍝ **************************
+     b←AddButtons d
+     cb←d A.New'button' 'x'
+     cb.Onclick←A.FQP'OnClear'
+     ab←b,cb
+     ab.class←'' 'hidden'[d.HideOnClear∧d.Value≡'']
+     cb.Onclick←A.FQP'OnClear'
+
+     d
+ }

@@ -1,12 +1,18 @@
  CSS←{
      Rule←A.NewRule
      ⍝ ************************
-     s←Rule'.TextInputEx'
+     s←Rule'.TextInputPlus'
+
+     r←s Rule':focus-within'
+     r.border←'var(--border-focused)'
+
 
      s.display←'flex'
      s.gap←'.5rem'
      ⍝s.border←'2px solid gray'
      s.border_radius←'var(--border-radius)'
+     s.anchor_name←'--text-input-plus'
+     s.anchor_scope←'all'
      ⍝ s.align_items←'center'
 
      s.padding←'.5em'
@@ -15,19 +21,43 @@
      ⍝ r←s Rule':focus-within'
      ⍝ r.border←'2px solid ','yellow'
 
-     ⍝ *********************************
-     r←s Rule'>textarea'
+     r←s Rule'>dialog'
      r.position←'absolute'
-     r.position_area←'bottom'
+     r.position_anchor←'--text-input-plus'
+     r.top←'anchor(top)'
+     r.left←'anchor(left)'
+     ⍝ r.position_area←'top left'
+     r.color←'inherit'
+     r.background_color←'inherit'
+     r.border_radius←'var(--border-radius)'
+
+     r.transform_origin←'top left'
+     ⍝ r.transform←'scale(0)'
+     ⍝ r.opacity←'0'
+     r.transition←'transform 300ms ease,opacity 150ms ease'
+
+     r←s Rule'>dialog[open]'
+     r.transform←'scale(1)'
+     r.opacity←'1'
+
+     ⍝ r←s Rule '@starting-style'
+
+
+     ⍝ *********************************
+     r←s Rule'>dialog>textarea'
+     ⍝ r.position←'absolute'
+     ⍝ r.position_area←'bottom'
+
      r.resize←'none'
      r.font_family←'var(--user-input-font-family)'
      r.font_size←'1rem'
      r.color←'inherit'
      r.background_color←'inherit'
      r.padding←'.5rem'
-     r.border←'var(--border)'
-     r.border_radius←'var(--border-radius)'
-
+     r.border←'none'
+     ⍝ r.border←'var(--border)'
+     ⍝ r.border_radius←'var(--border-radius)'
+     r.width←'40rem'
 
 
 
@@ -36,9 +66,10 @@
 
 
      r←s Rule'>label'
+
      r.font_family←'Arial'
      r.font_size←'1.1rem'
-     r.flex←'1 1 auto'
+
      ⍝ r.flex←'1 1 0'
      ⍝ r.padding←'.5em'
      r.color←'var(--accent-color-1)'
@@ -48,11 +79,9 @@
      ⍝ r.background_color←'black'
      r.font_weight←'bold'
 
-     ⍝ Input
-     r←s Rule'>input'
-     r.width←'10rem'
-     ⍝ r.flex←'1 1 auto' ⍝  1 auto'
-
+     r←s Rule'>span'
+     r.white_space←'nowrap'
+     r.flex←'1'
      ⍝ r.border_radius←'var(--border-radius)'
      r.font_family←'var(--user-input-font-family)'
      r.font_size←'1.2rem'

@@ -1,0 +1,4 @@
+ OnKeyDownTextArea←{
+     ⎕←'OnKeyDownTextArea!'
+     0
+ }

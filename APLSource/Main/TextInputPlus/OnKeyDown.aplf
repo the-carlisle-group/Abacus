@@ -1,0 +1,10 @@
+ OnKeyDown←{
+     ⎕←'OnKeyDown!!!'
+     k←⍵.Key
+     c←⍵.CurrentTarget.Parent
+     k≡'F2':StartEditMode c
+     ~(⊂k)∊,¨⎕A:0
+     _←StartEditMode c
+     ta←0 0⊃c.Content.Content
+     ta A.FireKeyDownOnInput k
+ }

@@ -1,0 +1,8 @@
+ FireEnterEvent←{
+     ⍺←⍵
+     e←⎕NS''
+     e.Event←'Enter'
+     e.Component←⍺
+     e.Value←⍺.Value
+     A.FireAbacusEvent e
+ }

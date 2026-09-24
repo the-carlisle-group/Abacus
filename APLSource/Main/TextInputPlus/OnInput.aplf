@@ -1,0 +1,5 @@
+ OnInput←{
+     i←⍵.CurrentTarget
+     i.Value←⍵.Value~⎕UCS 10 13
+     0
+ }
