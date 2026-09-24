@@ -12,7 +12,7 @@
      s.grid_template_rows←'auto 20px'
      s.height←'100%'
      s.width←'100%'
-     s.overflow←'hidden' ⍝ clip?
+     s.overflow←'clip' ⍝ clip (not hidden): trims the windowed table's overflow with no scroll box and no sub-pixel seam
      ⍝ ************************
      r←s Rule'.scrollbar'
      r.padding←0
@@ -20,6 +20,11 @@
      r.width←'100%'
      r.height←'100%'
      r.position←'relative'
+     ⍝ Bottom scrollbar: reach ~2px past its row so it covers the sub-pixel seam where the
+     ⍝ windowed table's next (clipped) row would otherwise peek below it; the grid's
+     ⍝ overflow:clip trims the excess so nothing shows outside the grid.
+     r←s Rule'.h-scrollbar'
+     r.height←'calc(100% + 2px)'
      ⍝ *************************
      r←s Rule'.thumb'
      r.padding←0
