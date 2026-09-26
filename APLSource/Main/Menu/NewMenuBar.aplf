@@ -8,6 +8,11 @@
      b.BuildFunction←f
      b.class←'MenuBar'
      b.Onkeydown←A.FQP'OnKeyDownMenuBar'
+     ⍝ Opening a menu with the MOUSE must remember the outgoing focus too, so Escape restores it
+     ⍝ just as it does for F10 (Main.OnKeyDown stores _prevFocus there). Capture at pointerdown -
+     ⍝ before the click shifts focus onto the bar - and only when focus is coming from outside a
+     ⍝ menu (not the bar itself, not an already-open dropdown), so re-clicks don't clobber it.
+     b.onpointerdown←'if(document.activeElement!==this&&!document.activeElement.closest(''.menu'')){var a=document.activeElement;this._prevFocus=a;this._prevSel=(a.selectionStart!=null)?[a.selectionStart,a.selectionEnd,a.selectionDirection]:null;}'
      d←⍺.Document
      m←d(⍎f)0
      c←m.Content.Content
