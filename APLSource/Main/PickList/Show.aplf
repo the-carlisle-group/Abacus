@@ -8,7 +8,7 @@
      i.class←'' 'sel-item'[b]
      d←p.Context.Document
      ⍝ _←p.Context.Target A.SetAnchorName'--pick-list'
-     b←A.GetBody d
+     b←d{0≡⍵:A.GetBody ⍺ ⋄ ⍵}p.Context.Target A.GetNearest'dialog'
      _←b A.AppendChild p
 
      id←p.Context.Target.id
