@@ -7,7 +7,7 @@
      e←⍺ A.GetElementsByTag'li'
      e.Anchor←a
      e.Menu←⍺
-     b←A.GetBody a.Document
+     b←a{0≡⍵:A.GetBody ⍺.Document ⋄ ⍵}a A.GetNearest'dialog'
      _←b A.AppendChild ⍺
      _←⍺ A.SetStyle'positionArea'p
      _←⍺ A.ExecuteOnElement'showPopover({source:document.getElementById("',a.id,'")})'
