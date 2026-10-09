@@ -113,6 +113,12 @@ const pdKeys = ['F1','F2','F3','F4','F5','F6','F7','F8','F9','F10','F11','F12'];
 
 
 function sendAPLRequest(e){
+      // A modifier key on its own means nothing to APL, and holding it down - as
+      // for a Ctrl+click - repeats its keydown many times a second. Each would be
+      // a round trip to APL, queued ahead of whatever the user does next.
+      if (e.type==="keydown"&&["Control","Shift","Alt","AltGraph","Meta","CapsLock","NumLock","ScrollLock"].includes(e.key)){
+                return;
+       }
       // const ce=[e.currentTarget.className,e.currentTarget.tagName,e.type,e.key].join();
       const ce=[e.target.tagName,e.type,e.key].join();
       const pd=PreventDefaultList.includes(ce);
