@@ -71,6 +71,13 @@ function execCode(id,code) {
 // Create a single ResizeObserver (efficient for multiple elements)
 const resizeObserver = new ResizeObserver(entries => {
 
+  // Collect the elements across calls: each observe() reports separately, and so
+  // does each element resizing on its own, but the timeout below fires only once
+  const pending = resizeObserver.pending || (resizeObserver.pending = new Set());
+  for (const entry of entries) {
+       pending.add(entry.target);
+  }
+
 if (resizeObserver.timeoutId) {
     clearTimeout(resizeObserver.timeoutId);
   }
@@ -80,8 +87,7 @@ if (resizeObserver.timeoutId) {
   resizeObserver.timeoutId = setTimeout(() => {
   // This runs only after 150ms of no new resize events
 
-  for (const entry of entries) {
-       const e = entry.target;
+  for (const e of pending) {
        const b = {Event: "Resize",
                   TargetId: e.id, 
                   CurrentTargetId: e.id, 
@@ -91,6 +97,7 @@ if (resizeObserver.timeoutId) {
        ws.send (m)
   }
     // Clean up
+    pending.clear();
     resizeObserver.timeoutId = null;
   }, 150);
 });
