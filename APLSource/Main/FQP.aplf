@@ -1,5 +1,7 @@
  FQP←{
      ⍺←0
      '# '∊⍨⊃⍵:⍵
-     (⍺⊃⎕NSI),'.',⍵
+     n←⎕NSI
+     i←⍺+NoOfAPIFrames n
+     ((i+NoOfAPIFrames i↓n)⊃n),'.',⍵
  }
