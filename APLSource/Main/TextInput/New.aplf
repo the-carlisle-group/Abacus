@@ -9,6 +9,7 @@
          'OnPicker' ''
          'OnChange' ''
          'Disabled' 0
+         'SelectOnFocus' 1
      )A.Default ⍵
      d.Name←n
      d.Oninput←A.FQP'OnInput'
@@ -20,6 +21,7 @@
      i.id←l.for
      _←i A.AutoComplete.Init d.Options
      _←d InitValue d.Value
+     _←d InitSelectOnFocus d.SelectOnFocus
      0=≢d.OnPicker:d
      b←n A.New'button'd.PickerCaption
      b.Onclick←A.FQP'OnPicker'
