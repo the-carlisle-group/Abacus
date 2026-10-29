@@ -1,0 +1,8 @@
+ SetClickGuard←{
+     ⍝ ⍺ ←→ Document
+     ⍝ ⍵ ←→ Milliseconds for which a click is swallowed after the window
+     ⍝      comes to the front; 0 switches the guard off
+     j←'clickGuardPeriod=',(⍕⍵),';'
+     _←⍺.Document ExecuteJavaScript j
+     0
+ }
