@@ -175,10 +175,13 @@ function sendAPLRequest(e){
 // off a button or a grid cell nobody meant to touch. Word and Excel swallow
 // that click, and so does Abacus: while the window is not at the front, and
 // for a short while after it comes back, a press is taken away from the
-// element under the mouse, and the click that follows it goes the same way,
-// however long the button is held. The window still comes to the front,
-// because that happens outside the browser. clickGuardPeriod is that while,
-// in milliseconds; 0 switches the guard off, see the HTMLDocument method
+// element under the mouse, and so is the click it ends in, however long the
+// button is held, and a double-click either of whose clicks was taken away.
+// Whether a press is swallowed is settled when it arrives, so one that never
+// ends in a click, because the mouse was dragged off the window, costs the
+// next click nothing. The window still comes to the front, because that
+// happens outside the browser. clickGuardPeriod is that while, in
+// milliseconds; 0 switches the guard off, see the HTMLDocument method
 // SetClickGuard. Only the mouse is guarded, and of it only what the user
 // does: a click the keyboard makes, where detail is 0, is let through, a
 // keystroke not being a way to bring a window to the front, and so is an
@@ -186,10 +189,17 @@ function sendAPLRequest(e){
 var clickGuardPeriod=250;
 var clickGuardUntil=0;
 var clickGuardPress=false;
+var clickGuardThrough=2;
 function clickGuard(e){
       if (!e.isTrusted||!clickGuardPeriod||!e.detail) return;
-      const eat=clickGuardPress||Date.now()<clickGuardUntil;
-      clickGuardPress=eat&&e.type==="mousedown";
+      const guarding=Date.now()<clickGuardUntil;
+      if (e.type==="mousedown") clickGuardPress=guarding;
+      let eat=clickGuardPress||guarding;
+      if (e.type==="click"){
+            clickGuardPress=false;
+            clickGuardThrough=eat?0:Math.min(2,clickGuardThrough+1);
+      }
+      else if (e.type==="dblclick") eat=eat||clickGuardThrough<2;
       if (!eat) return;
       e.stopPropagation();
       e.preventDefault();
