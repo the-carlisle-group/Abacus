@@ -179,24 +179,27 @@ function sendAPLRequest(e){
 // button is held, and a double-click either of whose clicks was taken away.
 // Whether a press is swallowed is settled when it arrives, so one that never
 // ends in a click, because the mouse was dragged off the window, costs the
-// next click nothing. The window still comes to the front, because that
-// happens outside the browser. clickGuardPeriod is that while, in
-// milliseconds; 0 switches the guard off, see the HTMLDocument method
-// SetClickGuard. Only the mouse is guarded, and of it only what the user
-// does: a click the keyboard makes, where detail is 0, is let through, a
-// keystroke not being a way to bring a window to the front, and so is an
-// event dispatched by JavaScript, as the test suite does to simulate a click.
+// next click nothing. clickGuardPress holds a bit per button, so pressing a
+// second button while the first is held does not let the first one through.
+// The window still comes to the front, because that happens outside the
+// browser. clickGuardPeriod is that while, in milliseconds; 0 switches the
+// guard off, see the HTMLDocument method SetClickGuard. Only the mouse is
+// guarded, and of it only what the user does: a click the keyboard makes,
+// where detail is 0, is let through, a keystroke not being a way to bring a
+// window to the front, and so is an event dispatched by JavaScript, as the
+// test suite does to simulate a click.
 var clickGuardPeriod=250;
 var clickGuardUntil=0;
-var clickGuardPress=false;
+var clickGuardPress=0;
 var clickGuardThrough=2;
 function clickGuard(e){
       if (!e.isTrusted||!clickGuardPeriod||!e.detail) return;
       const guarding=Date.now()<clickGuardUntil;
-      if (e.type==="mousedown") clickGuardPress=guarding;
-      let eat=clickGuardPress||guarding;
+      const b=1<<e.button;
+      if (e.type==="mousedown") clickGuardPress=guarding?clickGuardPress|b:clickGuardPress&~b;
+      let eat=0<(clickGuardPress&b)||guarding;
       if (e.type==="click"){
-            clickGuardPress=false;
+            clickGuardPress&=~b;
             clickGuardThrough=eat?0:Math.min(2,clickGuardThrough+1);
       }
       else if (e.type==="dblclick") eat=eat||clickGuardThrough<2;
@@ -204,6 +207,6 @@ function clickGuard(e){
       e.stopPropagation();
       e.preventDefault();
 }
-window.addEventListener("blur",()=>{clickGuardUntil=Infinity;clickGuardPress=false;});
-window.addEventListener("focus",()=>{clickGuardUntil=Date.now()+clickGuardPeriod;clickGuardPress=false;});
+window.addEventListener("blur",()=>{clickGuardUntil=Infinity;clickGuardPress=0;});
+window.addEventListener("focus",()=>{clickGuardUntil=Date.now()+clickGuardPeriod;clickGuardPress=0;});
 for (const t of ["mousedown","click","dblclick"]) window.addEventListener(t,clickGuard,true);
