@@ -170,3 +170,24 @@ function sendAPLRequest(e){
       ws.send (m)
 }
 
+// A click on a window that is not at the front activates it, and Windows
+// then passes the click on to whatever sits under the mouse, which can set
+// off a button or a grid cell nobody meant to touch. Word and Excel swallow
+// that click, and so does Abacus: while the window is not at the front, and
+// for a short while after it comes back, a press is taken away from the
+// element under the mouse. The window still comes to the front, because that
+// happens outside the browser. clickGuardPeriod is that while, in
+// milliseconds; 0 switches the guard off, see the HTMLDocument method
+// SetClickGuard. Only the mouse is guarded: a keystroke does not bring a
+// window to the front, and only what the user does: an event dispatched by
+// JavaScript, as the test suite does to simulate a click, is let through.
+var clickGuardPeriod=250;
+var clickGuardUntil=0;
+function clickGuard(e){
+      if (!e.isTrusted||!clickGuardPeriod||Date.now()>=clickGuardUntil) return;
+      e.stopPropagation();
+      e.preventDefault();
+}
+window.addEventListener("blur",()=>{clickGuardUntil=Infinity;});
+window.addEventListener("focus",()=>{clickGuardUntil=Date.now()+clickGuardPeriod;});
+for (const t of ["mousedown","click","dblclick"]) window.addEventListener(t,clickGuard,true);
