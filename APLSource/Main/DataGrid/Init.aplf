@@ -30,6 +30,7 @@
      a.HeaderClass←ComputeHeaderClass a
      a.ColumnClass←(a.Class),¨' ',¨'a',¨a.Align
      t.WindowPadding←3 5
+     t.class←t.LightWeight/'LightWeight'
      t.Init←1
      0
  }

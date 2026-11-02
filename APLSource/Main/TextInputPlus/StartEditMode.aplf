@@ -1,6 +1,0 @@
- StartEditMode←{
-     c←⍵
-     db←⊃c.Content
-     _←db A.ExecuteOnElement'showModal()'
-     A.SetFocus⊃db.Content
- }

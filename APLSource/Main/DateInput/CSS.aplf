@@ -18,7 +18,6 @@
      ⍝
      r←s Rule':focus'
      r.border←'var(--border-focused)'
-     r.box_shadow←'var(--border-box-shadow-focused)'
      ⍝ ************************
      s
  }

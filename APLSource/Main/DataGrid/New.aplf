@@ -1,7 +1,7 @@
  New←{
-     ⍺←⊣
+     ⍺←0
+     (p n)←A.DefaultParentAndName ⍺
      w←(
-         'Name' ''
          'Columns'⍬
          'RowNumbers' 1
          'ReadOnly' 0
@@ -30,14 +30,18 @@
          'CustomColumnInserts'⍬
          'OnKeyDown' ''
          'Autofocus' 0
+         'LightWeight' 0
          ⍝ Events
          'OnCellMove' ''
          'OnCellChange' ''
          'OnBeforeCellChange' ''
          'OnHeaderCellChange' ''
          'OnBeforeHeaderCellChange' ''
+
+
      )A.Default ⍵
-     g←A.InitComp ⍺ A.New'div'
+     g←A.InitComp p A.New'div'
+     g.Name←n
      g.(Width Height)←0
      g.OnResize←A.FQP'OnResize'
      g.Table←w ⎕NS⍨g NewTable''

@@ -2,7 +2,7 @@
      ⍝ ⍺ ←→ Parent (Body)
      ⍺←0
      t←⍺ A.New'div'
-     t.popover←'auto'
+     t.popover←'hint'
      t.class←'tool-tip'
      t
  }

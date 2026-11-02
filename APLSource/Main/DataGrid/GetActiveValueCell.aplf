@@ -1,0 +1,5 @@
+ GetActiveValueCell←{
+     ⍺←⍵
+     t←⍺.Table
+     t.ActiveCell⊃¨t.(RowIndices ColumnIndices)
+ }

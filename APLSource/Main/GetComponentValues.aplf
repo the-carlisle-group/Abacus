@@ -4,7 +4,7 @@
      ⍺←⍵
      e←⍺ GetElementsWith'Name'
      0=≢e:0/⊂'' ''
-     c←e/⍨2.1=e.⎕NC⊂⊂'Value'
+     c←e/⍨(2.1=e.⎕NC⊂⊂'Value')∨e.Class=DataGrid
      0=≢c:0/⊂'' ''
-     c.Name{⍺ ⍵}¨c.Value
+     c.Name{⍺ ⍵}¨GetComponentValue¨c
  }

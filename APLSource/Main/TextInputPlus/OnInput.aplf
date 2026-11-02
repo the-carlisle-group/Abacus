@@ -1,5 +1,5 @@
  OnInput←{
      i←⍵.CurrentTarget
-     i.Value←⍵.Value~⎕UCS 10 13
+     i.Value[0]←⊂⍵.Value~⎕UCS 10 13
      0
  }

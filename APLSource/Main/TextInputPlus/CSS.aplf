@@ -3,111 +3,70 @@
      ⍝ ************************
      s←Rule'.TextInputPlus'
 
-     r←s Rule':focus-within'
+     r←s Rule'&:focus-within'
      r.border←'var(--border-focused)'
-
 
      s.display←'flex'
      s.gap←'.5rem'
-     ⍝s.border←'2px solid gray'
+     s.border←'2px solid var(--background-color)'
      s.border_radius←'var(--border-radius)'
      s.anchor_name←'--text-input-plus'
      s.anchor_scope←'all'
-     ⍝ s.align_items←'center'
-
      s.padding←'.5em'
      s.background_color←'hsl(235, 14%, 20%)'
-
-     ⍝ r←s Rule':focus-within'
-     ⍝ r.border←'2px solid ','yellow'
-
-     r←s Rule'>dialog'
+     ⍝ *************************************
+     r←s Rule'dialog'
      r.position←'absolute'
      r.position_anchor←'--text-input-plus'
-     r.top←'anchor(top)'
-     r.left←'anchor(left)'
-     ⍝ r.position_area←'top left'
+     r.position_area←'bottom span-right'
      r.color←'inherit'
      r.background_color←'inherit'
      r.border_radius←'var(--border-radius)'
-
-     r.transform_origin←'top left'
-     ⍝ r.transform←'scale(0)'
-     ⍝ r.opacity←'0'
-     r.transition←'transform 300ms ease,opacity 150ms ease'
-
-     r←s Rule'>dialog[open]'
-     r.transform←'scale(1)'
-     r.opacity←'1'
-
-     ⍝ r←s Rule '@starting-style'
-
-
-     ⍝ *********************************
-     r←s Rule'>dialog>textarea'
-     ⍝ r.position←'absolute'
-     ⍝ r.position_area←'bottom'
-
+     r.border←'var(--border-focused)'
+     ⍝ *************************************
+     r←s Rule'dialog>textarea'
+     r.color←'inherit'
+     r.background_color←'inherit'
+     r.border←'none'
      r.resize←'none'
      r.font_family←'var(--user-input-font-family)'
      r.font_size←'1rem'
-     r.color←'inherit'
-     r.background_color←'inherit'
      r.padding←'.5rem'
-     r.border←'none'
-     ⍝ r.border←'var(--border)'
-     ⍝ r.border_radius←'var(--border-radius)'
      r.width←'40rem'
-
-
-
-
-
-
-
-     r←s Rule'>label'
-
-     r.font_family←'Arial'
-     r.font_size←'1.1rem'
-
-     ⍝ r.flex←'1 1 0'
-     ⍝ r.padding←'.5em'
-     r.color←'var(--accent-color-1)'
-     ⍝ r.background_color←'hsl(235, 14%, 20%)'
-     ⍝ r.border_radius←'var(--border-radius)'
-
-     ⍝ r.background_color←'black'
-     r.font_weight←'bold'
-
-     r←s Rule'>span'
+     ⍝ All buttons
+     r←s Rule'button'
+     r.border←'none'
+     ⍝ ************************************
+     r←s Rule'button>span'
      r.white_space←'nowrap'
      r.flex←'1'
-     ⍝ r.border_radius←'var(--border-radius)'
      r.font_family←'var(--user-input-font-family)'
      r.font_size←'1.2rem'
-     ⍝ r.padding←'.5rem'
      r.color←'white'
      r.border←'none'
-     ⍝ r.background_color←'var(--background-color)'
-     ⍝ r.background_color←'hsl(230, 10%, 15%)'
      r.background_color←'hsl(235, 14%, 20%)'
-
-     ⍝ r.background_color←'black' ⍝ 'var(--background-color)'
-
-
-     ⍝ Buttons
-     r←s Rule'>button'
+     r.text_align←'left'
+     r.display←'block'
+     ⍝ **************************************
+     r←s Rule'button>label'
      r.font_family←'Arial'
-     r.font_size←'1rem'
-     ⍝ r.padding←'.2em'
+     r.font_size←'1.2rem'
+     r.color←'var(--accent-color-1)'
+     r.font_weight←'bold'
+     ⍝ Buttons
+     r←s Rule'button:focus'
+     r.outline←'none'
      r.border←'none'
-     r.border_radius←'var(--border-radius)'
-     ⍝ r.min_width←'3em'
-     ⍝ r.color←''
-     ⍝ r.background_color←'var(--background-color)'
-     ⍝ Hover
-     r←s Rule'>button:hover'
-     r.background_color←'gray'
+     ⍝ Buttons
+     ⍝ r←s Rule'button'
+     ⍝ r.padding←'.2rem'
+     ⍝ r.min_width←'0'
 
-     A.UnNestCSS s
+
+     ⍝ r.border_radius←'var(--border-radius)'
+     ⍝ r←s Rule'>button:hover'
+     ⍝ r.background_color←'gray'
+     ⍝
+     s
+
  }

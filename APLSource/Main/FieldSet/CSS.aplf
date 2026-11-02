@@ -23,9 +23,17 @@
      r.grid_template_columns←'auto 1fr'
      r.gap←'1rem'
      r.border←'none'
+     ⍝ ****************************
+     r←s Rule'.fieldset-inline-row'
+     r.display←'flex'
+     r.gap←'1rem'
+     r.border←'none'
      ⍝ *************************
      r←s Rule'.fieldset-inline>div'
      r.display←'contents'
+     ⍝ *************************
+     r←s Rule'.fieldset-inline-row>div'
+     r.flex_direction←'row'
      ⍝ ************************
      r←s Rule'.fieldset-border'
      r.border←'2px solid'

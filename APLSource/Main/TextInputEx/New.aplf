@@ -2,7 +2,6 @@
      ⍺←0
      (p n)←A.DefaultParentAndName ⍺
      d←A.InitComp(p A.New'div')⎕NS(
-         'Label' ''
          'Value' ''
          'Placeholder' ''
          'Options' ''
@@ -16,24 +15,21 @@
      )A.Default ⍵
      d.Name←n
      d.HideOnClear←1,⍨d.HideOnClear⍴⍨≢d.Buttons
-
      i←d A.New'input'
      i.placeholder←d.Placeholder
      i.History←d.History
      i.HistoryIndex←⍬
      _←i A.AutoComplete.Init d.Options
-     l←d A.New'label'd.Label
      _←d InitValue d.Value
      d.Oninput←A.FQP'OnInput'
      d.Onchange←A.FQP'OnChange'
-
-     b←AddButtons d
-     cb←d A.New'button' 'x'
-     cb.Onclick←A.FQP'OnClear'
-
-     ab←b,cb
-     ab.class←'' 'hidden'[d.HideOnClear∧d.Value≡'']
-     cb.Onclick←A.FQP'OnClear'
-
+     ⍝ ********************
+     ⍝ Add Buttons
+     ⍝ ********************
+     b←d{⍺ ##.Button.New('Icon'(0⊃⍵))('OnClick'(1⊃⍵))}¨↓⍉↑(d.Buttons,⊂'CircleX')(d.OnClick,⊂A.FQP'OnClear')
+     b._min_width←'0'
+     b._padding←'0'
+     b.class←b.class,¨'' ' hidden'[d.HideOnClear∧''≡d.Value]
+     b.tabindex←⊂'-1'
      d
  }

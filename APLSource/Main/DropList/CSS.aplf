@@ -13,7 +13,6 @@
      ⍝ ***************************
      r←s Rule'select:focus'
      r.border←'var(--border-focused)'
-     r.box_shadow←'var(--border-box-shadow-focused)'
 
 
      ⍝ **********************************

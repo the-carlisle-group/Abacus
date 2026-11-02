@@ -1,7 +1,7 @@
  OnChange←{
      c←⍵.CurrentTarget
      _←c.Value←⍵.Value
-     b←2↓c.Content
+     b←1↓c.Content
      _←b A.SetHidden¨c.HideOnClear∧''≡⍵.Value
      FireChangeEvent c
  }

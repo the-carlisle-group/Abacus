@@ -1,7 +1,7 @@
  New←{
      ⍺←0
      (p n)←A.DefaultParentAndName ⍺
-     d←(p A.New'fieldset')⎕NS(
+     d←A.InitComp(p A.New'fieldset')⎕NS(
          'Content' ''
          'Legend' ''
          'Format' 'stacked'     ⍝ stacked|inline|inline-row|stacked-row inputs

@@ -1,12 +1,17 @@
  SetValue←{
+     ⍝ ⍵ ←→ Actual Value, Display Value
+     av dv lv←⍵
      ~A.IsConnected ⍺:⍺ InitValue ⍵
-     b←3↓⍺.Content
-     _←b A.SetHidden¨⍺.HideOnClear∧⍵≡''
-     ⍺.Value←⍵
-     i←1⊃⍺.Content
-     _←i A.SetInnerHTML(⍵≡'')⊃⍵ ⍺.Placeholder
+     b←2↓⍺.Content
+     _←b A.SetHidden¨⍺.HideOnClear∧av≡''
+     ⍝ _←b{⍺ A.SetStyle'display'(⍵⊃'block' 'none')}¨⍺.HideOnClear∧av≡''
+     ⍺.Value←av dv lv
+     db bn←2↑⍺.Content
      db←0⊃⍺.Content
      ta←⊃db.Content
-     _←ta A.SetValue ⍵
+     _←ta A.SetValue av
+     sp lb←bn.Content
+     _←sp A.SetInnerHTML(av≡'')⊃dv ⍺.Placeholder
+     _←lb A.SetInnerHTML lv
      0
  }

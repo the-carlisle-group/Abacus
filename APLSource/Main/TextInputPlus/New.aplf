@@ -2,76 +2,60 @@
      ⍺←0
      (p n)←A.DefaultParentAndName ⍺
      d←A.InitComp(p A.New'div')⎕NS(
-         'Label' ''
-         'Value' ''
+         'Value'('' '' '')  ⍝ Actual Val, Display Val, Label Val
          'Placeholder' ''
          'Options' ''
          'History' ''
          'OnEnter' ''
-         'OnChange' ''    ⍝ For now
          'OnClear' ''
-         'OnFormat' ''
-         'Buttons' ''
-         'OnClick' ''
+         'Buttons' '' ⍝ In addition to x for clear (these are icon names)
+         'OnClick' '' ⍝ For each button
          'HideOnClear' 0
-         'Tip1' ''
-         'Tip2' ''
+         'Tip' ''
+         'Rows' 5
      )A.Default ⍵
-     ⍝ d.tabindex←0
      d.Name←n
      d.HideOnClear←1,⍨d.HideOnClear⍴⍨≢d.Buttons
-
-     ⍝ d.FormattedValue←0⊃d(⍎d.OnFormat)d.Value
-
-     ⍝ ****************
-     ⍝ Hidden Text Area
-     ⍝ ****************
+     ⍝ **********************************
+     ⍝ Hidden Text Area with actual value
+     ⍝ **********************************
      db←d A.New'dialog'
-     ta←db A.New'textarea'd.Value
-
-
-
-
-     ⍝ ta.popover←'auto'
-     ta.rows←3
+     db.closedby←'any'
+     ta←db A.New'textarea'(0⊃d.Value)
+     ta.rows←d.Rows
      d.Oninput←A.FQP'OnInput'
-     ta.OnEnter←A.FQP'OnEnter' ⍝ d.OnEnter   ⍝ Onkeydown←A.FQP'OnKeyDownTextArea'
-
      ta.History←d.History
      ta.HistoryIndex←⍬
-
-
+     ta.OnEnter←A.FQP'OnEnter'  ⍝ used by autocomplete!
      _←ta A.AutoComplete.Init d.Options
-
-     ⍝ *********************************
+     ⍝ *************************************
+     ⍝ Main Single button to contain a span and a label
+     ⍝ *************************************
+     mb←d A.New'button'
+     mb.ToolTip←d.Tip
+     mb._display←'flex'
+     mb._border←'none'
+     ⍝ mb._padding←'5px'
+     mb._flex←'1'
+     mb._align_items←'center'
+     mb.Onclick←A.FQP'OnClick'
+     ⍝ *************************************
      ⍝ A span for formatted, truncated value
-     ⍝ *********************************
-
-     ⍝ s←d A.New'span'd.FormattedValue
-     s←d A.New'span'((''≡d.Value)⊃d.Value d.Placeholder)
-     s.tabindex←0
-     s.ToolTip←d.Tip1
-
-
-     s.Onkeydown←A.FQP'OnKeyDown'
-     s.Onclick←A.FQP'OnClick'
-
+     ⍝ *************************************
+     s←mb A.New'span'((''≡(0⊃d.Value))⊃(1⊃d.Value)d.Placeholder)
+     ⍝ *************************************
      ⍝ A label for additional info
-     l←d A.New'label'd.Label
-     l.ToolTip←d.Tip2
-     ⍝ _←d InitValue d.Value
-     ⍝ d.Oninput←A.FQP'OnInput'
-     ⍝ d.Onchange←A.FQP'OnChange'
-
+     ⍝ *************************************
+     l←mb A.New'label'(2⊃d.Value)
      ⍝ *************************
-     ⍝ Buttons
+     ⍝ Other Buttons
      ⍝ **************************
-     b←AddButtons d
-     cb←d A.New'button' 'x'
-     cb.Onclick←A.FQP'OnClear'
-     ab←b,cb
-     ab.class←'' 'hidden'[d.HideOnClear∧d.Value≡'']
-     cb.Onclick←A.FQP'OnClear'
+     b←d{⍺ ##.Button.New('Icon'(0⊃⍵))('OnClick'(1⊃⍵))}¨↓⍉↑(d.Buttons,⊂'CircleX')(d.OnClick,⊂A.FQP'OnClear')
+     b._min_width←'0'
+     b._padding←'0'
 
+
+     b.class←b.class,¨'' ' hidden'[d.HideOnClear∧''≡0⊃d.Value]
+     b.tabindex←⊂'-1'
      d
  }

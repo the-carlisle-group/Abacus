@@ -1,6 +1,6 @@
  SetValue←{
      ~A.IsConnected ⍺:⍺ InitValue ⍵
-     b←2↓⍺.Content
+     b←1↓⍺.Content
      _←b A.SetHidden¨⍺.HideOnClear∧⍵≡''
      ⍺.Value←⍵
      i←0⊃⍺.Content

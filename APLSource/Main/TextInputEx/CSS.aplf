@@ -2,15 +2,23 @@
      Rule←A.NewRule
      ⍝ ************************
      s←Rule'.TextInputEx'
-
      s.display←'flex'
-     s.gap←'.5rem'
-     ⍝s.border←'2px solid gray'
+     s.gap←'.2rem'
+     s.border←'2px solid var(--background-color)'
      s.border_radius←'var(--border-radius)'
-     ⍝ s.align_items←'center'
+
+
+
+
+
+
 
      s.padding←'.5em'
      s.background_color←'hsl(235, 14%, 20%)'
+
+     r←s Rule':focus-within'
+     r.border←'var(--border-focused)'
+
 
      ⍝ r←s Rule':focus-within'
      ⍝ r.border←'2px solid ','yellow'

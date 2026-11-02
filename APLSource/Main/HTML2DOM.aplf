@@ -2,7 +2,8 @@
      ⍝ ⍵ ←→ HTML
      ⍝ ← ←→ DOM
      0=≢⍵:⍬
-     o←⊂'Whitespace' 'Preserve'
+     ⍺←1
+     o←⍺/⊂'Whitespace' 'Preserve'
      o,←⊂'UnknownEntity' 'Preserve'
      xml←⎕XML⍠o
      {⍵⌷⍨⍳1=⍴⍵}0{

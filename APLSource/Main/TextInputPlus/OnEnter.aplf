@@ -1,9 +1,8 @@
  OnEnter←{
      d←⍵.Document
-     ta←⍵.CurrentTarget  ⍝ Thiaia the text area
+     ta←⍵.CurrentTarget
      db←ta.Parent
      c←db.Parent
-     s←1⊃c.Content       ⍝ Span for desc
      e←()
      e.Event←'Enter'
      e.Component←c

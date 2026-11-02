@@ -85,16 +85,20 @@
      ⍝ *********************************
      r←s Rule'.active-cell'
      ⍝ r.border←'solid 1px var(--border-color)'
-     r.outline←'2px solid var(--border-color)'
+     r.outline←'4px solid var(--border-color)'
+     ⍝ r.outline←'var(--border-focused)'
+
      ⍝ r.background_color←'orange'
      ⍝
      ⍝ Active and focused Item
      r←s Rule'table:focus .active-cell'
-     ⍝ r.border←'1px solid steelblue'
-     r.outline←'none'
+     r.border←'1px solid steelblue'
+     ⍝ r.outline←'none'
+
+     r.outline←'4px solid steelblue'
 
 
-     r.background_color←'steelblue'
+     ⍝ r.background_color←'steelblue'
 
 
 
@@ -201,6 +205,20 @@
      r.left←'50%'
      r.transform←'translate(-50%, -50%)'
 
+     ⍝ LightWeight Grid
+     ⍝ r←s Rule'.LightWeight td, .LightWeight th'
+     ⍝ r.border_bottom←'2px solid var(--background-color)'
+
+     ⍝ r←s Rule'.LightWeight thead, .LightWeight tr'
+     ⍝ r.border_bottom←'1px solid var(--border-color)'
+
+
+     r←s Rule'.LightWeight .active-cell'
+     r.outline←'none'
+
      s
+
+
+
      ⍝ ##.UnNestCSS s
  }

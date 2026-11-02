@@ -13,7 +13,6 @@
      ⍝
      r←s Rule'>div:focus-within'
      r.border←'var(--border-focused)'
-     r.box_shadow←'var(--border-box-shadow-focused)'
      ⍝ **********************
      r←s Rule'label'
      r.padding_top←'.5rem'

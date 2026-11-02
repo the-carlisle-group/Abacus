@@ -29,7 +29,6 @@
      ⍝ ***************************
      r←s Rule'input:focus'
      r.border←'var(--border-focused)'
-     r.box_shadow←'var(--border-box-shadow-focused)'
 
      ⍝ ************************
      r←s Rule'input:checked::before'
