@@ -11,6 +11,7 @@
      _←e.⎕DF e.Tag
      e.Tag←,e.Tag
      e.Parent←⍺
+     e.Document←{⍵=0:0 ⋄ ⍵.Document}⍺
      c←e.Content
      e.Content←''
      e⊣Add/⍺ e c
