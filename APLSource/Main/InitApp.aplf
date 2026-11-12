@@ -17,7 +17,10 @@
      d.Waiting←0
      d.Connected←0
      b←GetBody d
+
+
      b.Onkeydown←'OnKeyDown'
+
      b.oncontextmenu←'return false;'
      t←ToolTip.New''
      a←AutoComplete.New''

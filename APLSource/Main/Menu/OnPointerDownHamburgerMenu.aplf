@@ -1,0 +1,5 @@
+ OnPointerDownHamburgerMenu←{
+     b←⍵.CurrentTarget
+     b.LastFocusedId←⍵.ActiveId
+     0
+ }

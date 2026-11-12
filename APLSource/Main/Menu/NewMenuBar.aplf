@@ -3,6 +3,7 @@
      ⍝ ⍵ ←→ BuildMenu function
      f←1 A.FQP ⍵
      b←⍺ A.New'menu'
+     b.LastFocusedId←''
      b.tabindex←0
      b.ActiveIndex←0
      b.BuildFunction←f
@@ -16,5 +17,6 @@
      l.class←⊂''
      (⊃l).class←'Active'
      l.Onclick←⊂A.FQP'OnClickMenuBar'
+     l.Onpointerdown←⊂A.FQP'OnPointerDownMenuBar'
      b
  }

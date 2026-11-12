@@ -1,0 +1,9 @@
+ OnEnter←{
+     c←⍵.Target.Parent
+     c.Value←⍵.Value
+     e←⎕NS''
+     e.Event←'Enter'
+     e.Component←c
+     e.Value←c.Value
+     A.FireAbacusEvent e
+ }

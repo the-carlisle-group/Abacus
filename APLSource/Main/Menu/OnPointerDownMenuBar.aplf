@@ -1,0 +1,7 @@
+ OnPointerDownMenuBar←{
+     d←⍵.Document
+     mi←⍵.CurrentTarget
+     mb←mi.Parent
+     mb.LastFocusedId←⍵.ActiveId
+     0
+ }

@@ -1,0 +1,6 @@
+ GetFQK←{
+    ⍝ ⍵ ←→ Abacus Event Message
+     k←⍵ ⎕VGET⊂'Key' ''
+     b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'
+     k,⍨∊b/'Ctrl' 'Shift' 'Alt'
+ }

@@ -1,0 +1,11 @@
+ FocusMenuBar←{
+     ⍵.FQK≢'F10':0
+     d←⍵.Document
+     e←d GetElementsByClass'MenuBar'
+     e,←d GetElementsByClass'HamburgerMenu'
+     0=≢e:0
+     m←⊃e
+     m.LastFocusedId←⍵.ActiveId
+     m.LastSelection←⍵ ⎕VGET('SelectionStart' 0)('SelectionEnd' 0)('SelectionDirection' '')
+     1⊣m ExecuteOnElement'focus()'
+ }

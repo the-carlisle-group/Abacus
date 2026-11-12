@@ -3,8 +3,10 @@
      ⍝ ⍵ ←→ Build Function
      b←⍺ A.New'button'(⎕UCS 9776)
      b.class←'HamburgerMenu'
+     b.LastFocusedId←''
      b.BuildFunction←1 ##.FQP ⍵
      b.Onclick←A.FQP'OnClickDropDown'
-     b.Onkeydown←A.FQP'OnKeyDownDropDown'
+     b.Onkeydown←A.FQP'OnKeyDownHamburgerMenu'
+     b.Onpointerdown←A.FQP'OnPointerDownHamburgerMenu'
      b
  }

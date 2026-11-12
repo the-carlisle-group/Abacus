@@ -1,0 +1,13 @@
+ ReturnFocusAfterMenu←{
+     m←⍵
+     d←m.Document
+     id←m.LastFocusedId
+     id≡'':0
+     m.LastFocusedId←''
+     _←d id A.ExecuteOnElement'focus()'
+     ls←m.LastSelection
+     ls≡0 0 '':0
+     m.LastSelection←0 0 ''
+     t←¯1↓1↓⎕JSON ls
+     d id A.ExecuteOnElement'setSelectionRange(',t,')'
+ }

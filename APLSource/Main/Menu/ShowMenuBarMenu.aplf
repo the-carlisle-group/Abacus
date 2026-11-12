@@ -1,8 +1,9 @@
  ShowMenuBarMenu←{
      mb←⍵
+     d←⍵.Document
      i←mb.ActiveIndex
      f←⍎mb.BuildFunction
-     m←⍵.Document f 0
+     m←d f 0
      s←4⊃⊃i⊃m.Content.Content.Content
      s.MenuBar←mb
      a←i⊃mb.Content

@@ -13,8 +13,16 @@ function APLInit(){
    ws.onerror = function(evt) { onError(evt) };
    
    // ****** window.addEventListener ("resize",debounce((event) => sendAPLResize(event)));
+   
+   
+   
       
  }
+
+
+   window.addEventListener ("blur", () => {
+                         ws.send (JSON.stringify({Event: "WindowBlur"}));
+                         });
  
 //function  debounce (func, timeout = 100){
 //          let timer;
@@ -114,7 +122,7 @@ const pdKeys = ['F1','F2','F3','F4','F5','F6','F7','F8','F9','F10','F11','F12'];
 });
 
 
-
+   
 
 
 
@@ -154,6 +162,8 @@ function sendAPLRequest(e){
                 MouseButton: e.button,
                 MouseButtons: e.buttons,
                 SelectionStart: e.target.selectionStart, 
+                SelectionEnd: e.target.selectionEnd, 
+                SelectionDirection: e.target.selectionDirection, 
                 NewState: e.newState,
                 FontSize: s['font-size'],
                 FontFamily: s['font-family'],
@@ -164,9 +174,11 @@ function sendAPLRequest(e){
                 CurrentTargetPosition: [q.top,q.left],
                 CurrentTargetSize: [q.height,q.width],
                 TargetPosition: [r.top,r.left],
-                TargetSize: [r.height,r.width]
+                TargetSize: [r.height,r.width],
+                ActiveId: document.activeElement.id
                 };
       const m = JSON.stringify(b); 
       ws.send (m)
 }
+
 

@@ -1,7 +1,12 @@
  OnClickMenuBar←{
+     d←⍵.Document
      mi←⍵.CurrentTarget
      mb←mi.Parent
      i←mb.Content⍳mi
+     om←mb.Document A.GetElementsByClass'menu'
+     mm←mb∊om ⎕VGET⊂'MenuBar' 0
+     mm∧i=mb.ActiveIndex:0
+     _←mb.Content[mb.ActiveIndex i]A.MoveClass'Active'
      mb.ActiveIndex←i
      ShowMenuBarMenu mb
  }

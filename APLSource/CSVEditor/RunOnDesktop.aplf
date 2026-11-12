@@ -1,5 +1,6 @@
  RunOnDesktop←{
      ⍝ ← ←→  Document
+     _←##.Main.Init 0
      ⎕THIS.A←##.Main
      ⎕THIS.API←##.API
      _←A.Init 0

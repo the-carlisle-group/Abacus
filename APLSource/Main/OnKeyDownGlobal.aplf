@@ -2,7 +2,6 @@
      ⍝ ⍵
      ⍝ ← ←→ 1 for handled, 0 for not handled
      d←⍵.Document
-     0<≢d GetElementsByTag'dialog':0
      i←d.GlobalShortcuts⍳⊂⍵.FQK
      i=≢d.GlobalComponents:0
      e←i⊃d.GlobalComponents

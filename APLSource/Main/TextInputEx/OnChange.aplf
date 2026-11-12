@@ -1,4 +1,5 @@
  OnChange←{
+     ⎕←'On Change!'
      c←⍵.CurrentTarget
      _←c.Value←⍵.Value
      b←1↓c.Content

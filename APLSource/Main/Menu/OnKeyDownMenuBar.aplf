@@ -7,6 +7,6 @@
      p≡'ArrowDown':⍵ ShowMenuBarMenu mb
      p≡'ArrowLeft':mb MoveMenuBar ¯1
      p≡'ArrowRight':mb MoveMenuBar 1
+     p≡'Escape':ReturnFocusAfterMenu mb
      0
-
  }
