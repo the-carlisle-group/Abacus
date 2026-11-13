@@ -1,6 +1,7 @@
  OnKeyDown←{
      ⍝ On keydown in body, for menubar
      d←⍵.Document
+     d.LastInputMethod←'keyboard'
      0<≢d GetElementsByClass'DialogBox':0
      k←⍵.Code
      b←⍵.(CtrlKey ShiftKey AltKey)∊⊂⊂'true'

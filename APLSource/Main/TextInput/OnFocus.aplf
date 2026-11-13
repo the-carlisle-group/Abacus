@@ -1,0 +1,12 @@
+ OnFocus←{
+     i←⍵.Target
+     d←⍵.Document
+     d.LastInputMethod≡'mouse':0
+     c←i.Parent.Parent
+     b←d.IgnoreSelectOnFocus
+     d.IgnoreSelectOnFocus←0
+     b:0
+     c.SelectOnFocus:i A.ExecuteOnElement'select()'
+     l←⍕≢c.Value
+     i A.ExecuteOnElement'setSelectionRange(',l,',',l,')'
+ }

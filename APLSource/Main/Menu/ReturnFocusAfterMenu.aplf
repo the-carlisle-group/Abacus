@@ -4,6 +4,7 @@
      id←m.LastFocusedId
      id≡'':0
      m.LastFocusedId←''
+     d.IgnoreSelectOnFocus←1
      _←d id A.ExecuteOnElement'focus()'
      ls←m.LastSelection
      ls≡0 0 '':0

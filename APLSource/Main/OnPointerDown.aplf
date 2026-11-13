@@ -1,0 +1,5 @@
+ OnPointerDown←{
+     d←⍵.Document
+     d.LastInputMethod←'mouse'
+     0
+ }

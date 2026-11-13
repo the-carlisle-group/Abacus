@@ -1,10 +1,12 @@
  ShowModalAndWait←{
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ dialog element
+     ⍺.Document.LastInputMethod←''
      b←GetBody ⍺
      _←b AppendChild ⍵
      _←⍵ ExecuteOnElement'showModal()'
      _←PutDoneToken ⍵ ⍝ Needed if running in test mode
                       ⍝ because modal form would have been popped up by Click function
+     ⍝ I have the feeling I changed this to ⍵.Tid but it was not saved.
      ⊃⎕TGET ⎕TID      ⍝ Should be ⍵.Tid?
  }

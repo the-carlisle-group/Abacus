@@ -16,5 +16,6 @@
      cb←A.CheckBox.New'Show tool tips' 1
      cb.OnChange←A.FQP'OnShowToolTips'
      dd←A.Menu.NewDropDown'BuildDropDown'
-     ⍺ A.Toolbar.New⊂b1 b11 b2 pl cb dd ⍝dd
+
+     ⍺ A.Toolbar.New⊂b1 b11 b2 pl cb dd
  }

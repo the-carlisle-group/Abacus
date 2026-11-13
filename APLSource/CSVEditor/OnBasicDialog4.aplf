@@ -23,5 +23,6 @@
      p.Buttons←'OK' 'Cancel'
      p.OnClick←'' ''
      p._width←'30rem'
+
      d A.DialogBox.Show p
  }

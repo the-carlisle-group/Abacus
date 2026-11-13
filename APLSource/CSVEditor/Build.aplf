@@ -16,6 +16,8 @@
      tb←h BuildToolbar 0
      ⍝ *******************
      m←b A.New'main'
+     ed←m A.TextInput.New'Text Edit' 'SomeText'
+
      t←m A.Tabs.New''
      t.OnActivate←A.FQP'OnActivate'
      t.id←'MainTabControl'

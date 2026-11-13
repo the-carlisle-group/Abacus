@@ -16,11 +16,11 @@
      d.NextId←0
      d.Waiting←0
      d.Connected←0
+     d.IgnoreSelectOnFocus←0
+     d.LastInputMethod←''
      b←GetBody d
-
-
      b.Onkeydown←'OnKeyDown'
-
+     b.Onpointerdown←'OnPointerDown'
      b.oncontextmenu←'return false;'
      t←ToolTip.New''
      a←AutoComplete.New''

@@ -2,6 +2,7 @@
      d←⍵.Document
      mi←⍵.CurrentTarget
      mb←mi.Parent
+     mb.LastFocusedId←''
      i←mb.Content⍳mi
      om←mb.Document A.GetElementsByClass'menu'
      mm←mb∊om ⎕VGET⊂'MenuBar' 0

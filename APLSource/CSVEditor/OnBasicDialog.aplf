@@ -3,7 +3,7 @@
      s←A.FieldSet.New⊂'Border' 0
      cb←'OnChange'(A.FQP'OnInputChange')
      FileInput←s A.FileInput.New'File input:'cb
-     TextInput←s A.TextInput.New'Text input:'cb
+     TextInput←s A.TextInput.New'Text input:'cb('SelectOnFocus' 0)
      NumericInput←s A.NumberInput.New'Numeric input:' 256 'CI15'cb
      DateInput←s A.DateInput.New'Date input:' 20261231 cb
      DropListInput←s A.DropList.New'Drop list input:' ''('Comma' 'Pipe' 'Tab')cb

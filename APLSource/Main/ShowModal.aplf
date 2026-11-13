@@ -1,6 +1,7 @@
  ShowModal←{
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ dialog element
+     ⍺.Document.LastInputMethod←''
      b←GetBody ⍺
      _←b AppendChild ⍵
      ⍵ ExecuteOnElement'showModal()'
