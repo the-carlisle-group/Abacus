@@ -1,8 +1,10 @@
  DefaultParentAndName←{
      IsString ⍵:0 ⍵
      2=≢⍵:⍵
-     3>≢⎕LC:⍵''
-     c←⎕LC[2]⊃⎕NR 2⊃⎕XSI
+     x←⎕XSI
+     i←2+NoOfAPIFrames 2↓x
+     i≥≢⎕LC:⍵''
+     c←{⍵↑⍨⍵⍳'⍝'}⎕LC[i]⊃⎕NR i⊃x
      n←' '~⍨⊃¯2↑('←'≠c)⊆c
      ⍵ n
  }
