@@ -9,6 +9,9 @@
      r.padding←0
      r.box_sizing←'border-box'
      r.outline←'none'
+
+
+
      ⍝ Flex Containers
      r←s Rule'body, main, .tabs, .flex'
      ⍝ r←s Rule'main, .tabs, .flex'
@@ -57,8 +60,15 @@
      r←s Rule'#MouseAnchor'
      r.anchor_name←'--mouse-anchor'
      r.position←'absolute'
-
-
+     ⍝ ***************************
+     r←s Rule'#ClickToFocus'
+     r.position←'fixed'
+     ⍝ ***************************
+     r←s Rule'.ClickToFocus'
+     r.inset←'0'
+     r.z_index←'999999'
+     r.background←'transparent'
+     r.cursor←'default'
      ⍝
      r←s Rule'button'
      r.color←'inherit'

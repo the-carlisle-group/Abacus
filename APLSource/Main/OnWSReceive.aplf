@@ -6,6 +6,7 @@
      c.Event≡'SJSR':c.result ⎕TPUT c.id
      c.Document←d
      c.Event≡'WindowBlur':OnWindowBlur c
+     c.Event≡'WindowFocus':OnWindowFocus c
      e←Elements d
      i←e.id⍳c.CurrentTargetId c.TargetId
      c.(CurrentTarget Target)←(e,0)[i]

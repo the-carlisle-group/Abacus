@@ -24,6 +24,12 @@ function APLInit(){
                          ws.send (JSON.stringify({Event: "WindowBlur"}));
                          });
  
+   window.addEventListener ("focus", () => {
+                         ws.send (JSON.stringify({Event: "WindowFocus"}));
+                         });
+ 
+
+
 //function  debounce (func, timeout = 100){
 //          let timer;
 //          return (...args) => {

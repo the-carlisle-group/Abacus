@@ -3,6 +3,7 @@
      _←Init 0
      d←⍵
      d.TestMode←0
+     d.ClickToFocus←0
      d.LogAbacusEvents←0
      d.LogBrowserEvents←0
      d.LogBrowserEventList←''
@@ -24,8 +25,9 @@
      b.oncontextmenu←'return false;'
      t←ToolTip.New''
      a←AutoComplete.New''
+     cf←New'div'('id' 'ClickToFocus')
      ma←New'div'('id' 'MouseAnchor')
-     b.Content←b.Content,⍨ma,a,t
+     b.Content←b.Content,⍨cf,ma,a,t
      _←InitDOM d
      _←InitGlobalShortcuts d
      d.ToolTipElement←t

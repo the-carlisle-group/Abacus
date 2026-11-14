@@ -1,0 +1,5 @@
+ OnWindowFocus←{
+     d←⍵.Document
+     e←d GetElementById'ClickToFocus'
+     e RemoveClass'ClickToFocus'
+ }

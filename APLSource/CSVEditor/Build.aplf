@@ -1,8 +1,10 @@
  Build←{
      d←A.NewDocument''
      b←A.GetBody d
+
      h←b A.New'header'
      h.Document←d
+     d.AppStyle←CSS 0
 
      ⍝ hm←h A.Menu.NewHamburgerMenu'BuildMenu'
      ⍝ mb←h A.Menu.NewMenuBar'BuildMenu'

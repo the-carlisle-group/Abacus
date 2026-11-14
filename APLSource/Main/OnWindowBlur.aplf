@@ -3,6 +3,8 @@
      ⍝ Close any and all popovers, (Menus, AutoComplete)
      ⍝ ... and Selects
      d←⍵.Document
+     e←d GetElementById'ClickToFocus'
+     _←e AddClass d.ClickToFocus/'ClickToFocus'
      d.IgnoreSelectOnFocus←1
      e←d GetElementsByClass'menu'
      _←{0=≢⍵:0 ⋄ DeleteElement¨⍵}e
