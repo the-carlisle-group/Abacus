@@ -1,5 +1,7 @@
  OnWindowFocus←{
      d←⍵.Document
-     e←d GetElementById'ClickToFocus'
-     e RemoveClass'ClickToFocus'
+     d.HasFocus←1
+     e←⊃⌽(GetBody d),d GetElementsByTag'dialog'
+     _←e ExecuteOnElement'inert = false'
+     0
  }

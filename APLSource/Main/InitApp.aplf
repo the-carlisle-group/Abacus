@@ -2,8 +2,9 @@
      ⍝ ⍵ ←→ Document
      _←Init 0
      d←⍵
+     d.HasFocus←1
      d.TestMode←0
-     d.ClickToFocus←0
+     d.ClickToFocusOnly←0
      d.LogAbacusEvents←0
      d.LogBrowserEvents←0
      d.LogBrowserEventList←''

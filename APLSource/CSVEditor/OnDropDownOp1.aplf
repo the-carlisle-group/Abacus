@@ -1,4 +1,6 @@
  OnDropDownOp1←{
-     ⎕←'On drop down option 1'
+     d←⍵.Document
+     _←⎕DL 5
+     _←d A.Alert'Pops up after 5 second delay'
      0
  }

@@ -1,8 +1,12 @@
  ShowModal←{
      ⍝ ⍺ ←→ Document
      ⍝ ⍵ ←→ dialog element
-     ⍺.Document.LastInputMethod←''
+     ⍺.LastInputMethod←''
      b←GetBody ⍺
      _←b AppendChild ⍵
-     ⍵ ExecuteOnElement'showModal()'
+     _←⍵ ExecuteOnElement'showModal()'
+     ⍺.HasFocus∨~⍺.ClickToFocusOnly:0
+     _←b ExecuteOnElement'inert = false'
+     _←⍵ ExecuteOnElement'inert = true'
+     0
  }

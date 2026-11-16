@@ -1,6 +1,7 @@
  ExecuteOnElement←{
      ⍝ ⍺ ←→ Element or Document and Id
      ⍝ ⍵ ←→ Javascript
+     0=≢⍵:0
      d i←{2=≢⍵:⍵ ⋄ ⍵.Document ⍵.id}⍺
      j←'document.getElementById("',i,'").',⍵
      d ExecuteJavaScript j
