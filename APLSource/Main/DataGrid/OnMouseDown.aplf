@@ -17,7 +17,7 @@
      em.Event←'CellMove'
      em.Component←t.Parent
      em.OldCellIndex←t.ActiveCell
-     lc←t.TableCell⌷c
+     lc←{0≤1⊃t.TableCell:GetTableCell t⋄e}0 ⍝ old active cell may be in the header (row ¯1, via GoToHeaderRow) or off-window; GetTableCell routes ¯1 rows to HeaderCells - a raw t.TableCell⌷c INDEX-errors. Fall back to the clicked cell when fully off-window (col ¯1)
      t.TableCell←i
      t.ActiveCell←t TableCell2ActiveCell i
      t.Selection←2⍴⊂t.ActiveCell
