@@ -1,7 +1,7 @@
  OnWindowFocus←{
      d←⍵.Document
      d.HasFocus←1
-     e←⊃⌽(GetBody d),d GetElementsByTag'dialog'
-     _←e ExecuteOnElement'inert = false'
+     e←(GetBody d),d GetElementsByTag'dialog'
+     _←e ExecuteOnElement¨⊂'inert = false'
      0
  }

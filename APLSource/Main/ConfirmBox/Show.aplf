@@ -2,9 +2,7 @@
      ⍝ ⍺|⍵ ConfirmBox
      ⍺←⍵
      d←⍺.Document
-     b←A.GetBody d
-     _←b A.AppendChild ⍺
-     _←⍺ A.ExecuteOnElement'showModal()'
+     _←d A.ShowModal ⍺
      _←A.PutDoneToken ⍵
      ⊃⎕TGET d.ConfirmToken
  }

@@ -11,14 +11,7 @@ function APLInit(){
    ws.onclose = function(evt) { onClose(evt) };
    ws.onmessage = function(evt) { onMessage(evt) };
    ws.onerror = function(evt) { onError(evt) };
-   
-   // ****** window.addEventListener ("resize",debounce((event) => sendAPLResize(event)));
-   
-   
-   
-      
  }
-
 
    window.addEventListener ("blur", () => {
                          ws.send (JSON.stringify({Event: "WindowBlur"}));
@@ -28,16 +21,6 @@ function APLInit(){
                          ws.send (JSON.stringify({Event: "WindowFocus"}));
                          });
  
-
-
-//function  debounce (func, timeout = 100){
-//          let timer;
-//          return (...args) => {
-//          clearTimeout(timer);
-//          timer = setTimeout(()=>{func.apply(this,args);},timeout);
-//          };
-//}
-
 function onClose(evt){
          console.log(evt);
 }
@@ -65,32 +48,15 @@ function execCode(id,code) {
          ws.send (m)
 }
 
-//function sendAPLResize(e){
-//       var b = {Event: e.type,
-//                  DataGrids: [] };
-//       const dg = Array.from (document.getElementsByClassName ('DataGrid'));
-//
-//            dg.forEach ((x)=>{
-//            b.DataGrids.push ({
-//               Id:x.id,
-//               Height:x.clientHeight, 
-//               Width:x.clientWidth,
-//                })
-//            })
-//
-//      const m = JSON.stringify(b); 
-//      ws.send (m)
-//}
-
 // Create a single ResizeObserver (efficient for multiple elements)
 const resizeObserver = new ResizeObserver(entries => {
 
   // Collect the elements across calls: each observe() reports separately, and so
   // does each element resizing on its own, but the timeout below fires only once
-  const pending = resizeObserver.pending || (resizeObserver.pending = new Set());
-  for (const entry of entries) {
-       pending.add(entry.target);
-  }
+  // const pending = resizeObserver.pending || (resizeObserver.pending = new Set());
+  // for (const entry of entries) {
+  //    pending.add(entry.target);
+  // }
 
 if (resizeObserver.timeoutId) {
     clearTimeout(resizeObserver.timeoutId);
@@ -101,7 +67,10 @@ if (resizeObserver.timeoutId) {
   resizeObserver.timeoutId = setTimeout(() => {
   // This runs only after 150ms of no new resize events
 
-  for (const e of pending) {
+  //for (const e of pending) {
+  for (const entry of entries) {
+       const e = entry.target;
+  
        const b = {Event: "Resize",
                   TargetId: e.id, 
                   CurrentTargetId: e.id, 
@@ -111,7 +80,7 @@ if (resizeObserver.timeoutId) {
        ws.send (m)
   }
     // Clean up
-    pending.clear();
+    // pending.clear();
     resizeObserver.timeoutId = null;
   }, 150);
 });
@@ -126,11 +95,6 @@ const pdKeys = ['F1','F2','F3','F4','F5','F6','F7','F8','F9','F10','F11','F12'];
         event.preventDefault(); 
     }
 });
-
-
-   
-
-
 
 
 function sendAPLRequest(e){
