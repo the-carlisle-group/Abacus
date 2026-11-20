@@ -60,15 +60,6 @@
      r←s Rule'#MouseAnchor'
      r.anchor_name←'--mouse-anchor'
      r.position←'absolute'
-     ⍝ ***************************
-     r←s Rule'#ClickToFocus'
-     r.position←'fixed'
-     ⍝ ***************************
-     r←s Rule'.ClickToFocus'
-     r.inset←'0'
-     r.z_index←'999999'
-     r.background←'transparent'
-     r.cursor←'default'
      ⍝
      r←s Rule'button'
      r.color←'inherit'
