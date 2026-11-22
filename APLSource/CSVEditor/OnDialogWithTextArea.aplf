@@ -1,0 +1,16 @@
+ OnDialogWithTextArea←{
+     d←⍵.Document
+     s←A.FieldSet.New⊂'Border' 0
+     cb←'OnChange'(A.FQP'OnInputChange')
+     TextInput←s A.TextInput.New'Text input:'cb('SelectOnFocus' 0)
+     TextArea1←s A.TextArea.New'Text area' '' ''
+     TextArea2←s A.TextArea.New'Text area with auto complete' ''('One' 'Two' 'Three' 'Four')
+     p←⎕NS''
+     p.Title←'Basic Dialog Component'
+     p.Subtitle←'Showing all the input component types.'
+     p.MainContent←s
+     p.Buttons←'OK' 'Cancel'
+     p.OnClick←'' ''
+     p._width←'30rem'
+     d A.DialogBox.Show p
+ }

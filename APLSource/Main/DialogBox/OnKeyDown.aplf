@@ -1,0 +1,6 @@
+ OnKeyDown←{
+     d←⍵.Document
+     k←##.GetFQK ⍵
+     (⊂k)∊'Enter' 'CtrlEnter':k OnEnter ⍵
+     0
+ }

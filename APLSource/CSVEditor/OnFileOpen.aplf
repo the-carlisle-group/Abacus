@@ -28,8 +28,7 @@
      p.Title←'Open'
      p.Buttons←'Open' 'Cancel'
      p.MainContent←FileName AllOptions
-     p.OnClick←(A.FQP'OnFileOpenOK')(A.FQP'OnFileOpenCancel')
+     p.OnClick←A.FQP¨'OnFileOpenOK' 'OnFileOpenCancel'
      b←A.DialogBox.New p
-
      d A.ShowModal b
  }

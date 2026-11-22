@@ -1,0 +1,23 @@
+ OnEnter←{
+     d←⍵.Document
+     db←⍵.CurrentTarget
+     t←⍵.Target.Tag
+     e←⍺≡'Enter'
+     t≡'option':0
+     e∧t≡'table':0
+     e∧t≡'textarea':0
+     e∧⍵.Target.Parent.Tag≡'td':0
+     a←d.AutoComplete
+     a.StopPropagation:a.StopPropagation←0
+     _←db A.SetHidden 1
+     f←⊃db.OnClick
+     e←()
+     e.Event←'Click'
+     e.Component←db
+     e.Button←⊃(⊃⌽db A.GetElementsByTag'footer').Content
+     e.ButtonCaption←⊃db.Buttons
+     _←db A.SetHidden 1
+     r←f A.FireAbacusEvent e
+     r≡0:A.DeleteElement db
+     db A.SetHidden 0
+ }

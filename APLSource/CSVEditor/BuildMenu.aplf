@@ -28,6 +28,7 @@
      i←s NewItem'Basic dialog 3' '' 'OnBasicDialog3'
      i←s NewItem'Basic dialog 4' '' 'OnBasicDialog4'
      i←s NewItem'Dialog with DataGrid' '' 'OnDialogWithDataGrid'
+     i←s NewItem'Dialog with Text Area' '' 'OnDialogWithTextArea'
      s2←s NewMenu⊂'Progress Bars'
      i←s2 NewItem'Progress bar 1' '' 'OnProgressBar1'
      i←s2 NewItem'Progress bar 2' '' 'OnProgressBar2'

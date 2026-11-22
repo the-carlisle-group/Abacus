@@ -4,6 +4,7 @@
      a.Active:0
      a.StopPropagation:a.StopPropagation←0
      m←t.CellMode
+     k←⍵.Key
      p←A.GetFQK ⍵
      p OnKeyDownCustom t:0
      p≡'Escape':Escape t

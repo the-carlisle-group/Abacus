@@ -11,7 +11,7 @@
      (~a)∧k≡'ArrowUp':1 History ⍵
      ⍝ ck∧k≡'Enter':(⍎e.OnCtrlEnter)⍵ ⍝ WHERE DID WE USE THIS?
      a∧k≡'ArrowRight':SelectItem ⍵    ⍝ Not like VS Code
-     ⍝a∧k≡'Enter':Hide l
+     a∧k≡'Enter':l.StopPropagation←1⊣SelectItem ⍵
      a∧k≡'Tab':SelectItem ⍵
      a∧k≡'ArrowDown':ResetCursor ⍵⊣1 OnArrowUpDown ⍵
      a∧k≡'ArrowUp':ResetCursor ⍵⊣¯1 OnArrowUpDown ⍵

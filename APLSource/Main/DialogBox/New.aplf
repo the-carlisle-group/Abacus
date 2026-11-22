@@ -13,6 +13,7 @@
      d.Buttons←,⊆d.Buttons
      d.OnClick←(≢d.Buttons)⍴⊆d.OnClick
      d.Icons←(≢d.Buttons)⍴⊆d.Icons
+     d.Onkeydown←A.FQP'OnKeyDown'
      h←d A.New'header'(A.New¨'h1' 'h2'{⍺ ⍵}¨d.Title d.Subtitle)
      m←d A.New'section'd.MainContent
      b←d.Buttons A.Button.New¨d.Buttons{⍺ ⍵}¨d.Icons
