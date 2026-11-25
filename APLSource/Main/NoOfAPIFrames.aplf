@@ -1,0 +1,5 @@
+ NoOfAPIFrames←{
+     ⍝ ⍵ ←→ ⎕NSI or ⎕XSI, captured by the caller
+     ⍝ ← ←→ Number of leading frames belonging to the generated API covers
+     +/∧\((⍕##),'.API.')∘{⍺≡(≢⍺)↑⍵,'.'}¨⍵
+ }
