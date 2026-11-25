@@ -2,6 +2,7 @@
      ⍝ ⍺ ←→Table
      ⍝ ⍵  ←→ ActiveCell
      HandleInput ⍺:0
+     2≠⍺.⎕NC'TableCell':⍺{∨/⍵<0:0⋄⍺.(ActiveCell Selection)←⍵(2⍴⊂⍵)⋄0}⍵ ⍝ grid not rendered yet: store a valid (non-negative) cell so Resize/GetContent shows it; ignore header/negative targets (can't nav pre-render)
      _←ClearSelection ⍺
      tc←⍺.TableCell
      0>0⊃⍵:⍺ GoToHeaderRow ⍵
