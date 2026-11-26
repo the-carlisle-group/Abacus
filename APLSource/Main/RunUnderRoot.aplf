@@ -1,0 +1,7 @@
+ RunUnderRoot←{
+     ⍝ Runs a function under the root thread
+     ⍝ ⍵ ←→ Function, Argument
+     _←⎕FX,⊂'∆RUR←{(⍎2⊃⍵)3⊃⍵}'
+     #.on9999←'∆RUR'
+     ⎕NQ # 9999,⍵
+ }
