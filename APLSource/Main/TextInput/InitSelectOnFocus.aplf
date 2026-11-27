@@ -1,0 +1,19 @@
+ InitSelectOnFocus←{
+     ⍝ ⍺ ←→ Element (Component)
+     ⍝ ⍵ ←→ 1 = select all text on focus (default) | 0 = drop the caret at the end
+     ⍝ Always returns 0
+     ⍺.SelectOnFocus←⍵
+     i←1 0⊃⍺.Content.Content
+     ⍝ Do the focus-time action *explicitly* rather than leaning on the browser's native
+     ⍝ select-on-focus: that only fires for keyboard/Tab focus, NOT for programmatic focus
+     ⍝ (A.SetFocus) or autofocus - so a field focused on start-up would otherwise land the caret
+     ⍝ at the end instead of selecting all. Defer via setTimeout so it runs after the browser's
+     ⍝ own same-tick focus handling, which would override an immediate call.
+     act←{⍵:'t.select()' ⋄ 't.setSelectionRange(t.value.length,t.value.length)'}⍵
+     ⍝ Two one-shot escape hatches skip the focus action so an existing selection/caret survives:
+     ⍝  • _keepSelection - set by a focus-restoring caller (e.g. Menu Escape).
+     ⍝  • window return - switching to another app and back re-fires focus (CEF); a self-installing
+     ⍝    window blur/focus tracker marks _winBlurred while inactive, consumed on the return focus.
+     i.onfocus←'var t=this;if(!window._sofInit){window._sofInit=1;addEventListener(''blur'',function(){window._winBlurred=1;});addEventListener(''focus'',function(){setTimeout(function(){window._winBlurred=0;},0);});}if(t._keepSelection){t._keepSelection=false;return;}if(window._winBlurred){window._winBlurred=0;return;}setTimeout(function(){',act,'},0)'
+     0
+ }
